@@ -1,5 +1,5 @@
 setup:
-	pip install mkdocs mkdocs-material pymdown-extensions markdown-include pymdownx.highlight
+	pip install -r requirements.txt
 
 serve:
 	mkdocs serve
