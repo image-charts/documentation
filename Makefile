@@ -1,11 +1,10 @@
 deploy: setup build
 
 setup:
-	pip --version
-	python --version
-	pip install urllib3[secure]
-	pip install --upgrade pip
-	pip install --no-cache-dir -r deps.txt
+	pip3 --version
+	python3 --version
+	pip3 install --upgrade pip
+	pip3 install --no-cache-dir -r deps.txt
 
 serve:
 	mkdocs serve
