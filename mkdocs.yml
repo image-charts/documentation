@@ -1,4 +1,4 @@
-site_name: Image-Charts
+site_name: Image-Charts documentation
 site_description: Image-Charts documentation
 site_author: François-Guillaume Ribreau
 site_url: https://documentation.image-charts.com
@@ -60,7 +60,7 @@ theme:
     text: Roboto
     code: Roboto Mono
   favicon: logo/rgb-rect-white@32.png
-  logo: logo/rgb-rect-transparent@64.png
+  logo: logo/rgb-bw@256.png
 
 extra:
   social:
