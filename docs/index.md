@@ -1,8 +1,10 @@
 # Welcome to Image-Charts documentation
 
-You might want to start by the [getting started](/getting_started) guide and then take a look at [Image-Charts API reference](/reference/Chart_Size).
+Welcome to the Image-charts developer hub. You'll find comprehensive guides and documentation to help you start working with Image-charts as quickly as possible, as well as support if you get stuck. Let's jump right in!
 
-Wondering what kind of charts Image-Charts can generated? Take a look at our [gallery](/gallery).
+First you might want to start with the [getting started](/getting_started) guide and then take a look at [Image-Charts API reference](/reference/Chart_Size).
+
+If you wonder what kind of charts Image-Charts can generate? Take a look at our [gallery](/gallery).
 
 We are constantly updating Image-Charts, check out our [changelog](https://headwayapp.co/image-charts-changelog) for the latest updates.
 

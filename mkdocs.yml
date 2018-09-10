@@ -72,6 +72,7 @@ extra:
 
 # facelessuser.github.io/pymdown-extensions
 # https://www.mkdocs.org/user-guide/configuration/#formatting-options
+# https://github.com/facelessuser/pymdown-extensions/blob/master/mkdocs.yml#L96
 markdown_extensions:
   - pymdownx.highlight:
       css_class: codehilite
