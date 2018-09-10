@@ -3,6 +3,7 @@ deploy: setup build
 setup:
 	pip --version
 	python --version
+	pip install urllib3[secure]
 	pip install --upgrade pip
 	pip install --no-cache-dir -r deps.txt
 
