@@ -93,7 +93,7 @@ You can specify the colors of a specific series, or all series, using the chco p
 chco=<color_1>, ... <color_n>
 ```
 
-- **`<color>`** An [RRGGBB[AA] hexadecimal format](#color-format) format hexadecimal number. Specify a single value to apply the same color to all series. Specify different colors for different series by adding color values separated by a comma. If you have fewer colors than you have series, the unspecified series will cycle through the specified colors from the beginning.
+- **`<color>`** An [RRGGBB[AA] hexadecimal format](/reference/color-format) format hexadecimal number. Specify a single value to apply the same color to all series. Specify different colors for different series by adding color values separated by a comma. If you have fewer colors than you have series, the unspecified series will cycle through the specified colors from the beginning.
 
 
 #### Example
@@ -167,7 +167,7 @@ chm=
 ```
 
 - **`<B>`** Fill to the bottom of the chart, fill from <start_line_index> to the bottom of the chart
-- **`<color>`** An [RRGGBB format hexadecimal](#color-format) number of the fill color
+- **`<color>`** An [RRGGBB format hexadecimal](/reference/color-format) number of the fill color
 - **`<serie_index>`** The index of the line at which the fill starts. The first data series specified in chd has an index of zero (`0`), the second data series has an index of `1`, and so on
 
 #### Examples

@@ -32,7 +32,7 @@ Negative values display as empty slices of the appropriate size.
 
 #### Slice gradient fill
 
-It also possible to use [gradient fill](#gradient-fills) `chf=ps<index>-<sliceIndex>` to specify a gradient per pie slice.
+It also possible to use [gradient fill](/reference/background-fill/#gradient-fills) `chf=ps<index>-<sliceIndex>` to specify a gradient per pie slice.
 
 ![chart](https://image-charts.com/chart?chs=700x200&chd=t:60,40,20&cht=pa&chdl=Image|Charts|Rocks&chf=ps0-0,lg,45,ffeb3b,0.2,f44336,1|ps0-1,lg,45,8bc34a,0.2,009688,1|ps0-2,lg,45,EA469E,0.2,03A9F4,1)
 
@@ -45,7 +45,7 @@ chf=ps0-0,lg,45,ffeb3b,0.2,f44336,1|ps0-1,lg,45,8bc34a,0.2,009688,1|ps0-2,lg,45,
 
 #### Display axis labels
 
-Because axis labels are behind pie slices, leverage [serie color transparency](#color-format) to let the value visible.
+Because axis labels are behind pie slices, leverage [serie color transparency](/reference/color-format) to let the value visible.
 
 ![chart](https://image-charts.com/chart?chs=700x200&chxt=x,y&chd=t:60,40,20&cht=pa&chdl=Image|Charts|Rocks&chf=ps0-0,lg,45,ffeb3b,0.2,f443367C,1|ps0-1,lg,45,8bc34a,0.2,0096887C,1|ps0-2,lg,45,EA469E,0.2,03A9F47C,1)
 
@@ -60,7 +60,7 @@ chdl=Image|Charts|Rocks
 
 #### Chart animation
 
-Just like the previous example but with `&chan`, see [gif animations](#chart-gif-animation) for deeper configuration.
+Just like the previous example but with `&chan`, see [gif animations](/reference/animation/) for deeper configuration.
 
 ![chart](https://image-charts.com/chart?chs=700x200&chxt=x,y&chd=t:60,40,20&cht=pa&chdl=Image|Charts|Rocks&chf=ps0-0,lg,45,ffeb3b,0.2,f443367C,1|ps0-1,lg,45,8bc34a,0.2,0096887C,1|ps0-2,lg,45,EA469E,0.2,03A9F47C,1&chan)
 
@@ -70,7 +70,7 @@ chan
 
 #### Slice labels
 
-[Chart labels](#chart-labels) also work with polar area charts.
+[Chart labels](/reference/chart-label) also work with polar area charts.
 
 ![chart](https://image-charts.com/chart?chs=700x300&chxt=x,y&chl=2018|2017|2015&chd=t:60,40,20&cht=pa&chdl=Image|Charts|Rocks&chf=ps0-0,lg,45,ffeb3b,0.2,f443367C,1|ps0-1,lg,45,8bc34a,0.2,0096887C,1|ps0-2,lg,45,EA469E,0.2,03A9F47C,1&chan)
 
@@ -92,7 +92,7 @@ Where `<chart_type>` is one of the the following types:
 
 - **`pa`**: Two dimensional polar chart. Supply one or more data serie. Subsequent data series will automatically overlay previous ones.
 
-By default, pie segment colors are interpolated from pink to pale yellow. Specify other colors as described in [Series Colors](#series-colors-3). Specify serie legends with `chdl` as described in [Chart Legend Text and Style](#chart-legend-text-and-style).
+By default, pie segment colors are interpolated from pink to pale yellow. Specify other colors as described in [Series Colors](#series-colors). Specify serie legends with `chdl` as described in [Chart Legend Text and Style](/reference/legend-text-and-style).
 
 ![chart](https://image-charts.com/chart?cht=pa&chd=s:Uf9a&chs=700x200&chdl=January|February|March|April)
 
@@ -111,7 +111,7 @@ You can specify the colors of all values, each value, or some values using the `
 chco=<slice_1>|<slice_2>|<slice_n>,<series_color_1>,...,<series_color_n>
 ```
 
-- **`<color>`** Slice colors in [RRGGBB[AA] hexadecimal format](#color-format). Specify a single series color and all slices in that series will be colored in gradations of that color from darkest (first data member) to lightest (last data member). Specify two or more colors delimited by a | to describe individual slice colors. When you have multiple series (that is, a chart with concentric rings), you can specify values for different series by separating values by a comma. When fewer slice/series colors are given than slices/series displayed, then the chart will cycle through from the beginning of the slice list for the series, or the series list for the chart. You cannot specify a distinct gradient for each series in a multi-series chart.
+- **`<color>`** Slice colors in [RRGGBB[AA] hexadecimal format](/reference/color-format). Specify a single series color and all slices in that series will be colored in gradations of that color from darkest (first data member) to lightest (last data member). Specify two or more colors delimited by a | to describe individual slice colors. When you have multiple series (that is, a chart with concentric rings), you can specify values for different series by separating values by a comma. When fewer slice/series colors are given than slices/series displayed, then the chart will cycle through from the beginning of the slice list for the series, or the series list for the chart. You cannot specify a distinct gradient for each series in a multi-series chart.
 
 
 #### Examples

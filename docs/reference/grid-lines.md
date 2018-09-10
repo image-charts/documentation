@@ -1,5 +1,5 @@
-!!! info
-    Only **[bar](#bar-charts)** and **[line](#line-charts)** charts can leverage grid lines.
+!!! warning
+    Only **[bar](/bar-charts)** and **[line](/line-charts)** charts can leverage grid lines.
 
 You can specify solid or dotted grid lines on your chart using the `chg` parameter.
 
@@ -21,8 +21,8 @@ chg=
 - **`<y_axis_enabled>`** if set to a number between 1 and 100 ([1;100]) enable horizontal grid lines.
 
 
-!!! missing
-    Google Image charts use these two parameters to calculate how many x or y grid lines to show on the chart, we decided not to implement this feature as it was hard to use and **error prone**.
+!!! info
+    Google Image charts use these two parameters to calculate how many x or y grid lines to show on the chart, we decided not to implement this feature as it was **hard to use** and **error prone**.
 
 - **`<opt_dash_length>, <opt_space_length>`** [Optional] Used to define dashed grid lines. The first parameter is the length of each line dash, in pixels. The second parameter is the spacing between dashes, in pixels. Specify 0 for *<opt_space_length>* for a solid line. Default values are `4,1`.
 

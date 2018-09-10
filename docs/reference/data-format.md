@@ -3,7 +3,7 @@ This document explains how to send your chart data to the Image Charts API.
 Data for almost all charts is sent using the `chd` parameter. The data must be sent in one of the following formats:
 
 - [Basic text format](#basic-text-format) is essentially simple floating point numbers from 0—100, inclusive. This format is easy to read and write by hand.
-- [Awesome data format](#image-charts-text-format) (**:star: recommended**)  is the easiest format that we created for you at Image-Charts. It has floating point numbers, **no lower-upper limitation** :heart_eyes: and **automatic scaling**. If you never used Image-Charts before, **start with this one**.
+- [Awesome data format](#awesome-text-format) (**:star: recommended**)  is the easiest format that we created for you at Image-Charts. It has floating point numbers, **no lower-upper limitation** :heart_eyes: and **automatic scaling**. If you never used Image-Charts before, **start with this one**.
 - [Text format with automatic scaling](#text-format-with-automatic-scaling) scales the chart to fit your data.
 - [Text format with custom scaling](#text-format-with-custom-scaling) is similar to basic text format, but it lets you specify a custom range using a second URL parameter.
 - [Simple encoding format](#simple-encoding-format) lets you specify integer values from 0—61, inclusive, encoded by a single alphanumeric character. This encoding results in the shortest data string of any of the data formats (if any values are greater than 9).
@@ -21,7 +21,8 @@ It has floating point numbers, **no lower-upper value limitation** (unlike Googl
 
 If you never used Google Image Charts and Image-Charts before, prefer this one.
 
-> :warning: don't forget that web browser URL maximum length is at ~[2000 characters](https://stackoverflow.com/a/417184/745121). If you have more data than the URL can fit use the [Extended encoding format](extended-encoding-format) instead.
+!!! warning
+    Don't forget that web browser URL maximum length is at ~[2000 characters](https://stackoverflow.com/a/417184/745121). If you have more data than the URL can fit use the [Extended encoding format](#extended-encoding-format) instead.
 
 #### Syntax
 

@@ -54,7 +54,7 @@ Where `<chart_type>` is one of the the following types:
 
 - **`p`**: Two dimensional pie chart. Supply one data series only; subsequent data series will automatically generate a concentric pie chart **`pc`**.
 
-By default, pie segment colors are interpolated from pink to pale yellow. Specify other colors as described in [Series Colors](#series-colors-3). Specify labels with `chl` as described in Pie chart labels.
+By default, pie segment colors are interpolated from pink to pale yellow. Specify other colors as described in [Series Colors](#series-colors). Specify labels with `chl` as described in Pie chart labels.
 
 <!-- The Image-Charts API calculates the circle's radius from the minimum of width and height specified in the chart size (chs) parameter. If you are including labels, you probably need to specify the size of the width to be twice the size of the height, to ensure that your labels are fully visible. -->
 
@@ -111,7 +111,7 @@ You can specify the colors of all values, each value, or some values using the `
 chco=<slice_1>|<slice_2>|<slice_n>,<series_color_1>,...,<series_color_n>
 ```
 
-- **`<color>`** Slice colors in [RRGGBB[AA] hexadecimal format](#color-format). Specify a single series color and all slices in that series will be colored in gradations of that color from darkest (first data member) to lightest (last data member). Specify two or more colors delimited by a | to describe individual slice colors. When you have multiple series (that is, a chart with concentric rings), you can specify values for different series by separating values by a comma. When fewer slice/series colors are given than slices/series displayed, then the chart will cycle through from the beginning of the slice list for the series, or the series list for the chart. You cannot specify a distinct gradient for each series in a multi-series chart.
+- **`<color>`** Slice colors in [RRGGBB[AA] hexadecimal format](/reference/color-format). Specify a single series color and all slices in that series will be colored in gradations of that color from darkest (first data member) to lightest (last data member). Specify two or more colors delimited by a | to describe individual slice colors. When you have multiple series (that is, a chart with concentric rings), you can specify values for different series by separating values by a comma. When fewer slice/series colors are given than slices/series displayed, then the chart will cycle through from the beginning of the slice list for the series, or the series list for the chart. You cannot specify a distinct gradient for each series in a multi-series chart.
 
 
 #### Examples

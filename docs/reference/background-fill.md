@@ -16,7 +16,7 @@ chf=<fill_type>,s,<color>|...
   - `a` - Make the whole chart (including backgrounds) transparent. The first six digits of <color> are ignored, and only the last two (the transparency value) are applied to the whole chart and all fills.
   - `b<index>` - Bar solid fills (bar charts only). Replace <index> with the series index of the bars to fill with a solid color. The effect is similar to specifying `chco` in a bar chart (note that `chf` has precedence over `chco` for each series). See Bar Chart Series Colors for an example.
 - **`s`** Indicates a solid or transparency fill.
-- **`<color>`** The fill color, in [RRGGBB[AA] hexadecimal format](#color-format). For transparencies, the first six digits are ignored, but must be included anyway.
+- **`<color>`** The fill color, in [RRGGBB[AA] hexadecimal format](/reference/color-format). For transparencies, the first six digits are ignored, but must be included anyway.
 
 #### Examples
 
@@ -27,16 +27,6 @@ This example fills the chart background with pale gray (**EFEFEF**).
 ```
 chf=bg,s,EFEFEF
 ```
-
-
-<!-- This example fills the chart background with pale gray (**EFEFEF**) and fills the chart area in black (**000000**).
-
-![chart](https://image-charts.com/chart?cht=lc&chd=s:pqokeYONOMEBAKPOQVTXZdecaZcglprqxuux393ztpoonkeggjp&chco=FF0000&chls=4.0,3.0,0.0&chs=700x125&chxt=x,y&chxl=0:%7CJun%7CJuly%7CAug%7C1:%7C%7C20%7C30%7C40%7C50&chf=c,s,000000%7Cbg,s,EFEFEF)
-
-```
-chf=c,s,000000|
-bg,s,EFEFEF
-``` -->
 
 
 This example applies a 50% transparency to the whole chart (80 in hexadecimal is 128, or about 50% transparency). Notice the table cell background showing through the chart.
@@ -72,7 +62,7 @@ chf=<fill_type>,lg,<angle>,<color_1>,<color_centerpoint_1>
   - `b<index>` gradient fills (valid in bar, line and pie charts unlike Google Image Charts which only supported bar charts). Replace <index> with the series index of the bars to fill with a gradient. See Bar Chart Series Colors for an example.
     - **`lg`** Specifies a gradient fill.
     - **`<angle>`** a number specifying the angle of the gradient from 0 (horizontal) to 90 (vertical).
-    - **`<color>`** the color of the fill, in [RRGGBB[AA] hexadecimal format](#color-format).
+    - **`<color>`** the color of the fill, in [RRGGBB[AA] hexadecimal format](/reference/color-format).
     - **`<color_centerpoint>`** specifies the anchor point for the color. The color will start to fade from this point as it approaches another anchor. The value range is from 0.0 (bottom or left edge) to 1.0 (top or right edge), tilted at the angle specified by <angle>.
   - `ps<index>-<sliceIndex>` (only valid in pie and polar area charts) same as `b<index>` but let you specify a gradient per pie slice. For pie charts, `b<index>` has precedence over `ps<index>-<sliceIndex>`, both can't be combined as would not make much sense.
 

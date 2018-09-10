@@ -37,8 +37,9 @@ Signing your URLs will ensure that no-one beside you created it and Image-Charts
 {!enterprise/hmac_.php!}
 ```
 
-Don't see your favorite language here? [Just ask us :angel:](mailto:support@image-charts.com) !
+!!! tip "Want more?"
+    Don't see your favorite language here? [Just ask us :angel:](mailto:support@image-charts.com) !
 
-### Online Url Generator
+## Online Url Generator
 
 The easiest way to generate a watermark-free Image-Charts is to use our [online url generator](https://codepen.io/FGRibreau/full/ZKoOGo/).

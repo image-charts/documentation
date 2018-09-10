@@ -37,7 +37,7 @@ chdls=<color>,<size>
 
 `chdls` - [Optional] Specifies the color and font size of the legend text.
 
-- **`<color>`** The legend text color, in [RRGGBB[AA] hexadecimal format](#color-format).
+- **`<color>`** The legend text color, in [RRGGBB[AA] hexadecimal format](/reference/color-format).
 - **`<size>`** The point size of the legend text.
 
 

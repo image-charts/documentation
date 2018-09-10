@@ -4,45 +4,44 @@ site_author: François-Guillaume Ribreau
 site_url: https://documentation.image-charts.com
 
 # Repository
-repo_name: image-charts/documentation
-repo_url: https://github.com/image-charts/documentation
-edit_uri: ""
+# repo_name: image-charts/documentation
+# repo_url: https://github.com/image-charts/documentation
+edit_uri: "https://github.com/image-charts/documentation/edit/master/docs"
 
-google_analytics:
-  - !!python/object/apply:os.getenv ["GOOGLE_ANALYTICS_TOKEN"]
-  - auto
+# do not use google analytics parameter, rely on google tag manager instead
 
 # Copyright
 # copyright: 'Copyright &copy; Image-Charts'
 
 nav:
-  - Getting Started: getting_started.md
-  - Pie Charts: pie_charts.md
-  - Line Charts: line_charts.md
-  - Bar Charts: bar_charts.md
-  - Polar Charts: polar_charts.md
-  - Graph Viz Charts: graph_viz_charts.md
+  - Getting started: index.md
+  - Pie Charts: pie-charts.md
+  - Line Charts: line-charts.md
+  - Bar Charts: bar-charts.md
+  - Polar Charts: polar-charts.md
+  - Graph Viz Charts: graph-viz-charts.md
   - Reference:
-    - Chart Size: reference/Chart_Size.md
-    - Chart Type: reference/Chart_Type.md
-    - Data Format: reference/Data_Format.md
-    - Color Format: reference/Color_Format.md
-    - Chart Title: reference/Chart_Title.md
-    - Grid Lines: reference/Grid_Lines.md
-    - Legend Text and Style: reference/LegendTextAndStyle.md
-    - Chart Label: reference/Chart_Label.md
-    - Chart Margin: reference/Chart_Margin.md
-    - Chart Axis: reference/Chart_Axis.md
-    - Background Fill: reference/Background_Fill.md
-    - Animation: reference/Animation.md
-    - Output Format: reference/Output_Format.md
-    - Post requests: reference/Post_requests.md
+    - Chart Size: reference/chart-size.md
+    - Chart Type: reference/chart-type.md
+    - Data Format: reference/data-format.md
+    - Color Format: reference/color-format.md
+    - Chart Title: reference/chart-title.md
+    - Grid Lines: reference/grid-lines.md
+    - Legend Text and Style: reference/legend-text-and-style.md
+    - Chart Label: reference/chart-label.md
+    - Chart Margin: reference/chart-margin.md
+    - Chart Axis: reference/chart-axis.md
+    - Background Fill: reference/background-fill.md
+    - Gif animation: reference/animation.md
+    - Output Format: reference/output-format.md
+    - Post requests: reference/post-requests.md
   - Enterprise: enterprise.md
   - Changelog: https://headwayapp.co/image-charts-changelog
   - Gallery: gallery.md
 
 # Configuration
 theme:
+  # https://github.com/squidfunk/mkdocs-material
   name: 'material'
   custom_dir: 'theme'
 
@@ -69,6 +68,8 @@ extra:
       link: 'https://github.com/image-charts'
     - type: 'twitter'
       link: 'https://twitter.com/imagecharts'
+    - type: 'envelope'
+      link: 'mailto:support@image-charts.com'
 
 # facelessuser.github.io/pymdown-extensions
 # https://www.mkdocs.org/user-guide/configuration/#formatting-options

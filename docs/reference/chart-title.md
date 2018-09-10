@@ -13,7 +13,7 @@ chts=<color>,<font_size>
 
 `chts` [Optional] - Colors and font size for the chtt parameter.
 
-- **`<color>`** The title color, in [RRGGBB[AA] hexadecimal format](#color-format). Default color is black.
+- **`<color>`** The title color, in [RRGGBB[AA] hexadecimal format](/reference/color-format). Default color is black.
 - **`<font_size>`** Font size of the title, in points.
 
 <!-- - **`<opt_alignment>`** [Optional] Alignment of the title. Choose one of the following case-sensitive string values: "l" (left), "c" (centered) "r" (right). Default is "c". -->

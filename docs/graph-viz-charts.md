@@ -8,7 +8,7 @@ GraphViz is a package of open source tools for visualizing connectivity graphs. 
 
 GraphViz charts *support a different set of required parameters*:
 
-- `cht=gv[:<opt_engine>]` **Required**: see [GraphViz chart types](#chart-types-4)
+- `cht=gv[:<opt_engine>]` **Required**: see [GraphViz chart types](#chart-types)
 
 - `chd` *Not used* GraphViz rely on `chl` not `chd` to get its input data, we are following here the (weird) Google Image Charts API.
 
