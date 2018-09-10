@@ -1,7 +1,10 @@
 site_name: Image-Charts documentation
 site_description: Image-Charts documentation
 site_author: François-Guillaume Ribreau
-site_url: https://documentation.image-charts.com
+site_url: "https://documentation.image-charts.com"
+
+main_site_name: Image-Charts
+main_site_url: "https://www.image-charts.com"
 
 # Repository
 # repo_name: image-charts/documentation
@@ -60,7 +63,7 @@ theme:
     text: Roboto
     code: Roboto Mono
   favicon: logo/rgb-rect-white@32.png
-  logo: logo/rgb-bw@256.png
+  logo: logo/rgb-bw@512.png
 
 extra:
   social:
