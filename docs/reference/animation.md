@@ -37,20 +37,20 @@ Let's start with a simple chart that we animate just by adding `chan` to the URL
 /chart?cht=bvg&...&chan
 ```
 
-The animation seems a little too slow, so let's specify a duration to 1 second (`1000`ms):
+The animation seems a little too slow, so let's specify a duration to 1,2 second (`1200`ms):
 
-[![chart](https://image-charts.com/chart?cht=bvg&chs=700x200&chd=s:Monkeys&chxt=x,y&chco=556270&chan=1000)](https://image-charts.com/chart?cht=bvg&chs=700x200&chd=s:Monkeys&chxt=x,y&chco=556270&chan=1000)
+[![chart](https://image-charts.com/chart?cht=bvg&chs=700x200&chd=s:Monkeys&chxt=x,y&chco=556270&chan=1200)](https://image-charts.com/chart?cht=bvg&chs=700x200&chd=s:Monkeys&chxt=x,y&chco=556270&chan=1200)
 
 ```
-/chart?cht=bvg&...&chan=1000
+/chart?cht=bvg&...&chan=1200
 ```
 
 That's better, now let's change the easing to `easeOutBack`:
 
-[![chart](https://image-charts.com/chart?cht=bvg&chs=700x200&chd=s:Monkeys&chxt=x,y&chan=1000,easeOutBack&chco=C44D58)](https://image-charts.com/chart?cht=bvg&chs=700x200&chd=s:Monkeys&chxt=x,y&chan=1000,easeOutBack&chco=C44D58)
+[![chart](https://image-charts.com/chart?cht=bvg&chs=700x200&chd=s:Monkeys&chxt=x,y&chan=1200,easeOutBack&chco=C44D58)](https://image-charts.com/chart?cht=bvg&chs=700x200&chd=s:Monkeys&chxt=x,y&chan=1200,easeOutBack&chco=C44D58)
 
 ```
-/chart?cht=bvg&...&chan=1000,easeOutBack
+/chart?cht=bvg&...&chan=1200,easeOutBack
 ```
 
 Perfect!
