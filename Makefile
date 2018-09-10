@@ -1,8 +1,12 @@
+deploy: setup build
+	
 setup:
 	pip --version
 	python --version
 	pip install --upgrade pip
 	pip install -r deps.txt
+
+
 
 serve:
 	mkdocs serve
