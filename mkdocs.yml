@@ -38,6 +38,8 @@ nav:
     - Gif animation: reference/animation.md
     - Output Format: reference/output-format.md
     - Post requests: reference/post-requests.md
+  - Guides:
+    - How to setup a dependency graph in Google Sheets: guides/graph-in-google-sheets.md
   - Enterprise: enterprise.md
   - Changelog: https://headwayapp.co/image-charts-changelog
   - Gallery: gallery.md
