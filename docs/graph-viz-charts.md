@@ -243,6 +243,33 @@ chl=graph {
 }
 ```
 
+
+#### Advanced graph
+
+The dot language is really powerful, they are lot of ways to customize your graph, if you wish to read more take a look at the [dot guide](https://www.graphviz.org/pdf/dotguide.pdf).
+
+```
+digraph G {
+  size ="4,4";
+  main [shape=box];
+  main -> parse [weight=8];
+  parse -> execute;
+  main -> init [style=dotted];
+  main -> cleanup;
+  execute -> { make_string; printf}
+  init -> make_string;
+  edge [color=red];
+  main -> printf [style=bold,label="100 times"];
+  make_string [label="make a\nstring"];
+  node [shape=box,style=filled,color=".7 .3 1.0"];
+  execute -> compare;
+}
+```
+
+<center>
+![chart](https://image-charts.com/chart?chs=700x200&cht=gv&chl=digraph%20G%20%7Bsize%20%3D%224%2C4%22%3Bmain%20%5Bshape%3Dbox%5D%3Bmain%20-%3E%20parse%20%5Bweight%3D8%5D%3Bparse%20-%3E%20execute%3Bmain%20-%3E%20init%20%5Bstyle%3Ddotted%5D%3Bmain%20-%3E%20cleanup%3Bexecute%20-%3E%20%7B%20make_string%3B%20printf%7Dinit%20-%3E%20make_string%3Bedge%20%5Bcolor%3Dred%5D%3Bmain%20-%3E%20printf%20%5Bstyle%3Dbold%2Clabel%3D%22100%20times%22%5D%3Bmake_string%20%5Blabel%3D%22make%20a%0Astring%22%5D%3Bnode%20%5Bshape%3Dbox%2Cstyle%3Dfilled%2Ccolor%3D%22.7%20.3%201.0%22%5D%3Bexecute%20-%3E%20compare%3B%7D)
+</center>
+
 <!--
 
 Another feature that can make large graphs manageable is to group nodes together at the same rank, the graph above for example is copied from a specific assignment, but doesn't look the same because of how the nodes are shifted around to fit in a more space optimal, but less visually simple way. We can make it look much more similar by grouping the nodes together for display as is done in the assignment with rank, as follows
