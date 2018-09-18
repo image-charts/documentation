@@ -300,8 +300,6 @@ If you want to specify a layout engine, include the semicolon : mark and specify
 
 - `fdp`: "spring model'' layouts similar to those of neato, but does this by reducing forces rather than working with energy.
 
-- `sfdp`: multiscale version of fdp for the layout of large graphs.
-
 - `twopi`: radial layouts, after Graham Wills 97. Nodes are placed on concentric circles depending their distance from a given root node.
 
 - `circo`: circular layout, after Six and Tollis 99, Kauffman and Wiese 02. This is suitable for certain diagrams of multiple cyclic structures, such as certain telecommunications networks.
