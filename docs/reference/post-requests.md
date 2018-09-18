@@ -1,6 +1,6 @@
 Specifying your chart as a URL in your browser or an `<img>` tag is called a `GET` request. Making a GET request is simple, but GET URLs are limited to 2K characters. What if you have more data than that?
 
-Luckily, the Chart API supports HTTP POST for chart requests up to 100 Kilobytes long (*Google Image Charts API limit was 16Ko*). The trade-off is the added complexity of using POST.
+Luckily, the Chart API supports HTTP POST for chart requests up to 300 Kilobytes long (*Google Image Charts API limit was 16Ko*). The trade-off is the added complexity of using POST.
 
 Here's an example of the most basic kind of POST request: using a `<form>` element:
 
@@ -21,8 +21,15 @@ The response to a valid POST request is a PNG chart, the same as a GET request r
 
 There are a number of ways to use POST, and all of them require additional coding either in the page code or on the server hosting the page. To use POST, you will typically create a separate page for each chart, and embed or link to these pages in your main page using `<iframe>` or as an `<img>` tags as shown below.
 
-Here are examples of using POST with both JavaScript and PHP.
+Here is another example of using POST with CURL.
 
+#### Using Curl for POST Requests
+
+```
+curl -X POST https://image-charts.com/chart?cht=bvg&chd=t:10,15,25,30,40,80&chs=700x300&chxt=x,y&chxl=0:%7CMarch%20%2718%7CApril%20%2718%7CMay%20%2718%7CJune%20%2718%7CJuly%20%2718%7CAugust%20%2718%7C&chdl=Visitors%20(in%20thousands%29&chf=b0,lg,90,05B142,1,0CE858,0.2&chxs=1N**K&chtt=Visitors%20report&chma=0,0,10,10 > my-chart.png
+```
+
+Here are examples of using POST with both JavaScript and PHP.
 
 #### Using JavaScript for POST Requests
 
