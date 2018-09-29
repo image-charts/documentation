@@ -29,7 +29,7 @@ So we need to generate an image of a graph chart... Wait. That’s exactly what 
 
 How does it work?
 
-Image-charts graph viz format ([cht=gv](/graph-viz-charts/#chart-types)) is built upon the most well known standard to build graph: the [dot language](https://en.wikipedia.org/wiki/DOT_(graph_description_language) and as you will see, it’s quite easy to start with:
+Image-charts graph viz format ([cht=gv](/graph-viz-charts/#chart-types)) is built upon the most well known standard to build graph: the [dot language](http://bit.ly/2OpHwtW) and as you will see, it’s quite easy to start with:
 
 ```
 https://image-charts.com/chart
