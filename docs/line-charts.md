@@ -14,7 +14,7 @@ There are a variety of line charts that you can create. Specify a line chart wit
 cht=<chart_type>
 ```
 
-Where <chart_type> is one of the the following types:
+Where <chart_type> is one of the following types:
 
 - `lc` A line chart where data points are spaced evenly along the x-axis. Axis lines are shown by default. To show values on the axis lines, you must specify chxt.
 

@@ -22,6 +22,7 @@ nav:
   - Line Charts: line-charts.md
   - Bar Charts: bar-charts.md
   - Polar Charts: polar-charts.md
+  - Bubble Charts: bubble-charts.md
   - Graph Viz Charts: graph-viz-charts.md
   - Reference:
     - Chart Size: reference/chart-size.md
