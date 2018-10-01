@@ -59,12 +59,12 @@ chf=<fill_type>,lg,<angle>,<color_1>,<color_centerpoint_1>
 - **`<fill_type>`** The chart area to fill. One of the following:
   - `bg` background fill
   - `c` chart area fill. (:checkered_flag:, currently same as `bg`, `bg` as precedence over `c`)
-  - `b<index>` gradient fills (valid in bar, line and pie charts unlike Google Image Charts which only supported bar charts). Replace <index> with the series index of the bars to fill with a gradient. See Bar Chart Series Colors for an example.
+  - `b<index>` gradient fills (valid in bar, line, pie and bubble charts unlike Google Image Charts which only supported bar charts). Replace <index> with the series index of the bars to fill with a gradient. See Bar Chart Series Colors for an example.
     - **`lg`** Specifies a gradient fill.
     - **`<angle>`** a number specifying the angle of the gradient from 0 (horizontal) to 90 (vertical).
     - **`<color>`** the color of the fill, in [RRGGBB[AA] hexadecimal format](/reference/color-format).
     - **`<color_centerpoint>`** specifies the anchor point for the color. The color will start to fade from this point as it approaches another anchor. The value range is from 0.0 (bottom or left edge) to 1.0 (top or right edge), tilted at the angle specified by <angle>.
-  - `ps<index>-<sliceIndex>` (only valid in pie and polar area charts) same as `b<index>` but let you specify a gradient per pie slice. For pie charts, `b<index>` has precedence over `ps<index>-<sliceIndex>`, both can't be combined as would not make much sense.
+  - `ps<index>-<sliceIndex>` (only valid in pie, polar area and bubble charts) same as `b<index>` but let you specify a gradient per pie slice. For pie charts, `b<index>` has precedence over `ps<index>-<sliceIndex>`, both can't be combined as would not make much sense.
 
 #### Examples
 

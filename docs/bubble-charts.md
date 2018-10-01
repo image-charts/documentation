@@ -6,11 +6,11 @@ This section describes how to create bubble charts using Image-Chart API.
 
 The bubble chart is designed to visually convey three or four dimensions of data. This means your data needs to have at least three fields on your record that you’ll want to convey graphically all at once. This could be a date field (x-axis), a cost figure (y-axis), and the ROI of the project (bubble size).
 
-Each series describe a set of bubble, and each bubble is defined by a `x` value, `y` value and an optional `r` radius.
+Each series describe a set of bubbles, and each bubble is defined by a `x` value, `y` value and an optional `r` radius.
 
 ## Chart Types
 
-There are a variety of line charts that you can create. Specify a line chart with the following syntax:
+There are a variety of bubble charts that you can create. Specify a bubble chart with the following syntax:
 
 #### Syntax
 
@@ -18,9 +18,9 @@ There are a variety of line charts that you can create. Specify a line chart wit
 cht=<chart_type>
 ```
 
-Where <chart_type> is the following type:
+Where `<chart_type>` is the following type:
 
-- `bb` A bubble chart where data points are composed of `x,y[,r]` bubble. Axis lines are not shown by default. To show values on the axis lines, you must specify chxt (e.g. `chxt=x,y`).
+- `bb` A bubble chart where data points are composed of `x,y[,r]` bubble. Axis lines are not shown by default. To show values on the axis lines, you must specify [visible axes](/reference/chart-axis/#visible-axes) (e.g. `chxt=x,y`).
 
 ![chart](https://image-charts.com/chart?cht=bb&chs=700x300&chd=t:40,60,10,_,47,40,12,_,10,10,20,_,20,40,40&chco=7059EF&chxt=x,y&chma=0,0,20)
 
@@ -45,9 +45,9 @@ chd=a:<serie1_bubble1_x>,<serie1_bubble1_y>[,<serie1_bubble1_r>],_,<serie1_bubbl
 
 Some thing of note concerning `chd:a:<datasets>`:
 
-- `,_,`: delimit a bubble point, `x`, `y` and optionally the radius `r`.
-- if the bubble radius (in pixel) `r` parameter is not defined, a default value of `1` (px) will be used.
-- `|`: delimit data series, in other word a group of bubble point.
+- `,_,` delimits a bubble point, `x`, `y` and optionally the radius `r`.
+- `|` delimits data series, in other word a group of bubble point.
+- when the bubble radius (in pixel) `r` parameter is not defined, a default value of `1` (px) is used.
 
 ![chart](https://image-charts.com/chart?cht=bb&chs=700x300&chd=t:40,60,10,_,47,40,12,_,10,10,20,_,20,40,40|50,30,5,_,5,5,_,20,20,6&chco=7059EF|0CE858&chxt=x,y&chma=0,0,20)
 
@@ -58,14 +58,14 @@ Some thing of note concerning `chd:a:<datasets>`:
 &chma=0,0,20
 ```
 
-The first series (`40,60,10,_,47,40,12,_,10,10,20,_,20,40,40`) as 4 bubbles:
+The first series (`40,60,10,_,47,40,12,_,10,10,20,_,20,40,40`) has 4 bubbles:
 
 - x=`40`, y=`60`, r=`10`
 - x=`47`, y=`40`, r=`12`
 - x=`10`, y=`10`, r=`20`
 - x=`20`, y=`40`, r=`40`
 
-The second and last series (`50,30,5,_,5,5,_,20,20,6`) as 3 bubbles:
+The second and last series (`50,30,5,_,5,5,_,20,20,6`) has 3 bubbles:
 
 - x=`50`, y=`30`, r=`5`
 - x=`5`, y=`5`, r=`1`, note here `r` was not defined, a default value of `1` was set by Image-Charts
@@ -82,14 +82,15 @@ The second and last series (`50,30,5,_,5,5,_,20,20,6`) as 3 bubbles:
 ```
 chco=<series_1_color>, ..., <series_n_color>
     or
-chco=<series_1_bar_1>|<series_1_bar_2>|...|<series_1_bar_n>,<series_2>,...,<series_n>
+chco=<series_1_bubble_1>|<series_1_bubble_2>|...|<series_1_bubble_n>,<series_2>,...,<series_n>
 ```
 
-- `<color>`: An [RRGGBB\[AA\] format hexadecimal number](/reference/color-format) to apply to a series or individual bar. To apply the color to the whole series, it should be comma-delimited. To apply the color to an individual bar, it should be pipe-delimited. You can mix these two formats. See the table below for examples. Whenever you have fewer color values than data points or series, the colors will cycle through the list again, starting from the first color in that group.
+- `<color>`: An [RRGGBB\[AA\] format hexadecimal number](/reference/color-format) to apply to a series or individual bubble. To apply the color to the whole series, it should be comma-delimited. To apply the color to an individual bubble, it should be pipe-delimited. You can mix these two formats. See the table below for examples. Whenever you have fewer color values than data points or series, the colors will cycle through the list again, starting from the first color in that group.
 
-## Bubble colors
+#### Gradient
 
-You can specify fill colors and styles for the chart data area and/or the whole chart background, see [background fill](/reference/background-fill/).
+You can specify fill colors and styles for the chart data area and/or the whole chart background (see [background fill](/reference/background-fill/)).
+
 
 Each bubble series can also be colored with gradients with `chf` (note that `chf` has precedence over `chco`). In the example below the first bubble series has a linear orange gradient `lg,45,ffeb3b,0.2,f443367C,1` and the second one a blue linear gradient `90,03a9f4,0,3f51b5,1`.
 
@@ -101,12 +102,11 @@ Each bubble series can also be colored with gradients with `chf` (note that `chf
 
 There are multiple ways to express gradients see [gradients fills](/reference/background-fill/#gradient-fills) section.
 
-
 ## Gif animation
 
 Gif animation also works with bubble charts:
 
-![chart](https://image-charts.com/chart?cht=bb&chs=700x300&chd=t:40,60,10,_,47,40,12,_,10,10,20,_,20,40,40|50,30,5,_,20,20,6,_,5,5,10,_,15,20,20&chco=7059EF|0CE858&chxt=x,y&chma=0,0,20&chan=1500,easeOutBounce)
+[![chart](https://image-charts.com/chart?cht=bb&chs=700x300&chd=t:40,60,10,_,47,40,12,_,10,10,20,_,20,40,40|50,30,5,_,20,20,6,_,5,5,10,_,15,20,20&chco=7059EF|0CE858&chxt=x,y&chma=0,0,20&chan=1500,easeOutBounce)](https://image-charts.com/chart?cht=bb&chs=700x300&chd=t:40,60,10,_,47,40,12,_,10,10,20,_,20,40,40|50,30,5,_,20,20,6,_,5,5,10,_,15,20,20&chco=7059EF|0CE858&chxt=x,y&chma=0,0,20&chan=1500,easeOutBounce)
 
 ```
 [...]
