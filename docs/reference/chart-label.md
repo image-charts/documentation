@@ -39,7 +39,7 @@ cht=pd
 [...]
 ```
 
-And now a concentric pie charts with labels for each slices.
+And now a concentric [pie charts](/pie-charts) with labels for each slices.
 
 ![chart](https://image-charts.com/chart?cht=pc&chs=700x200&chd=t:1,2,3,4|10,40,100,100&chl=A|B|C|D|E|F|G|H)
 
@@ -50,7 +50,7 @@ chd=t:1,2,3,4|10,40,100,100
 chl=A|B|C|D|E|F|G|H
 ```
 
-Here is an example of a line chart with label on some points, to do that we skip label using `||`.
+Here is an example of a [line chart](/line-charts) with label on some points, to do that we skip label using `||`.
 
 ![chart](https://image-charts.com/chart?cht=ls&chd=s:theresadifferencebetweenknowingthepathandwalkingthepath&chs=700x200&chf=b0,lg,90,03a9f4,0,3f51b5,1&chl=Go!||||||oops||||||Yes!|||||||||not\nagain||||||||||||||oh%20boy)
 
@@ -58,11 +58,20 @@ Here is an example of a line chart with label on some points, to do that we skip
 chl=Go!||||||oops||||||Yes!|||||||||not\nagain||||||||||||||oh boy
 ```
 
-A bar chart with text inside each bar. Note that we only display the Y axis with `chxt=y`.
+A [bar chart](/bar-charts) with text inside each bar. Note that we only display the Y axis with `chxt=y`.
 
 ![chart](https://image-charts.com/chart?cht=bvg&chd=t:50,30,10,60,65,90&chf=b0,lg,90,03a9f47C,0,3f51b57C,1&chls=2.0,0.0,0.0&chxt=y&chs=700x200&chg=20,50&chl=a|b|c|d|e|f)
 
 ```
 chxt=y
 chl=a|b|c|d|e|f
+```
+
+A [bubble chart](/bubble-charts) with text inside each bubble.
+
+![chart](https://image-charts.com/chart?cht=bb&chd=t:10,10,30,_,30,40,35&chf=b0,lg,90,03a9f47C,0,3f51b57C,1&chls=2.0,0.0,0.0&chxt=y,x&chs=700x300&chg=20,50&chl=label%201|label%202&chma=0,50,50)
+
+```
+cht=bb&
+chl=label 1|label 2
 ```
