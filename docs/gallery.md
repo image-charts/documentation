@@ -6,6 +6,10 @@ Here are some examples of what charts you can generate and embed into emails or 
 
 ![chart](https://image-charts.com/chart?chs=700x300&cht=bvs&chxt=y&chf=b0,lg,90,EA469EFF,1,03A9F47C,0.4&chan=1100,easeInCirc&chl=2014|2015|2016|2017|2018&chd=a:30010,-30000,50000,80000,20000&chof=1535403433426&chxs=0N*cEURs*&chdl=Income)
 
+### Bubble charts
+
+![chart](https://image-charts.com/chart?cht=bb&chs=700x300&chd=t:40,60,10,_,47,40,12,_,10,10,20,_,20,40,40|50,30,5,_,20,20,6,_,5,5,10,_,15,20,20&chxt=x,y&chma=0,0,20&chl=||hum|WoW!|&chf=b0,lg,45,ffeb3b,0.2,f443367C,1|b1,lg,90,03a9f4,0,3f51b5,1)
+
 ### Pie charts
 
 ![chart](https://image-charts.com/chart?chs=700x300&chxt=x,y&chl=2018|2017|2015&chd=t:60,40,20&cht=pa&chdl=Image|Charts|Rocks&chf=ps0-0,lg,45,ffeb3b,0.2,f443367C,1|ps0-1,lg,45,8bc34a,0.2,0096887C,1|ps0-2,lg,45,EA469E,0.2,03A9F47C,1&chan)
