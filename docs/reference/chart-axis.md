@@ -182,7 +182,7 @@ chxs=
       - `<number_type>` - The number format, for numeric values. Choose one of the following:
         - `f` - [Default] Floating point format. Consider specifying precision as well with the <decimal_places> value.
         - `p` - Percentage format. A % sign is appended automatically. Note: When using this format, data values from 0.0 — 1.0 map to 0 — 100% (for example, 0.43 will be shown as 43%).
-        - --`e` - Scientific notation format. 🏁 --
+        - `e` - Scientific notation format. 🚧
         - `c<CUR>` - Format the number in the currency specified, with the appropriate currency marker. Replace <CUR> with a three-letter currency code. Example: cEUR for Euros. You can find a list of codes on the [ISO web site](http://www.iso.org/iso/home/store/catalogue_tc/catalogue_detail.htm?csnumber=46121), although not all symbols are supported.
       - `<decimal_places>` - An integer specifying how many decimal places to show. The value is rounded (not truncated) to this length. *Default is 2*.
       - `z` - Display trailing zeros. *Default is no*.
@@ -191,13 +191,14 @@ chxs=
     - `<following_text>` - Literal text to follow each value.
 - **`<opt_label_color>`** *[Optional]* The color to apply to the axis text (but not axis line), in RRGGBB hexadecimal format. Axis line color is specified separately using opt_axis_color. *Default is black*.
 - **`<opt_font_size>`** *[Optional]* specifies the font size in pixels. This parameter is optional.
-- --**`<opt_alignment>`** *[Optional]* Label alignment. 🏁-- <!--For top or bottom axes, this describes how the label aligns to the tick mark above or below it; for left or right axes, this describes how the aligns inside its bounding box, which touches the axis. Specify one of the following numbers:
+- **`<opt_alignment>`** *[Optional]* Label alignment. 🚧 <!--For top or bottom axes, this describes how the label aligns to the tick mark above or below it; for left or right axes, this describes how the aligns inside its bounding box, which touches the axis. Specify one of the following numbers:
 -1 - Top or bottom: labels are to the right of the ticks; Left or right: labels are left-aligned in their area. Default for r-axis labels.
 0 - Top or bottom: labels are centered on the ticks; Left or right: labels are centered in their area. Default for x- and t-axis labels.
 1 - Top or bottom: labels are to the left of the ticks; Left or right: labels are right-aligned in their area. Default for y-axis labels.-->
-- --**`<opt_axis_or_tick>`** *[Optional]* 🏁 Whether to show tick marks and/or axis lines for this axis. .--
+- **`<opt_axis_or_tick>`** *[Optional]* 🚧 Whether to show tick marks and/or axis lines for this axis.
 - **`<tick_color>`** *[Optional]* The tick mark color, in RRGGBB hexadecimal format. *Default is black*.
-- --**`<opt_axis_color>`** *[Optional]* 🏁 The color of this axis line, in RRGGBB hexadecimal format. .--
+- **`<opt_axis_color>`** *[Optional]* 🚧 The color of this axis line, in RRGGBB hexadecimal format.
+- **`<skip_labels>`** *[Optional]*  `1` if some labels should be hidden if there are too many (default `0`)
 
 
 #### Example
