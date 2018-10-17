@@ -168,9 +168,9 @@ Values for multiple axes should be separated using a pipe character ( | ).
 
 ```
 chxs=
- <axis_index><opt_format_string>,<opt_label_color>,<opt_font_size>,<opt_alignment>,<opt_axis_or_tick>,<opt_tick_color>,<opt_axis_color>
+ <axis_index><opt_format_string>,<opt_label_color>,<opt_font_size>,<opt_alignment>,<opt_axis_or_tick>,<opt_tick_color>,<opt_axis_color><skip_labels>
    |...|
- <axis_index><opt_format_string>,<opt_label_color>,<opt_font_size>,<opt_alignment>,<opt_axis_or_tick>,<opt_tick_color>,<opt_axis_color>
+ <axis_index><opt_format_string>,<opt_label_color>,<opt_font_size>,<opt_alignment>,<opt_axis_or_tick>,<opt_tick_color>,<opt_axis_color><skip_labels>
 ```
 
 - **`<axis_index>`** The axis to which this applies. This is a zero-based index into the `chxt` parameter.
@@ -196,9 +196,13 @@ chxs=
 0 - Top or bottom: labels are centered on the ticks; Left or right: labels are centered in their area. Default for x- and t-axis labels.
 1 - Top or bottom: labels are to the left of the ticks; Left or right: labels are right-aligned in their area. Default for y-axis labels.-->
 - **`<opt_axis_or_tick>`** *[Optional]* 🚧 Whether to show tick marks and/or axis lines for this axis.
+      - `l` (lowercase 'L') - Draw axis line only.
+      - `t` - Draw tick marks only. Tick marks are the little lines next to axis labels.
+      - `lt` - [Default] Draw both an axis line and tick marks for all labels.
+      - `_` - (Underscore) Draw neither axis line nor tick marks. If you want to hide an axis line, use this value.
 - **`<tick_color>`** *[Optional]* The tick mark color, in RRGGBB hexadecimal format. *Default is black*.
 - **`<opt_axis_color>`** *[Optional]* 🚧 The color of this axis line, in RRGGBB hexadecimal format.
-- **`<skip_labels>`** *[Optional]*  `1` if some labels should be hidden if there are too many (default `0`)
+- **`<skip_labels>`** *[Optional]*  Specify `s` if labels on this axis should be hidden in case there are too many
 
 
 #### Example
@@ -235,4 +239,21 @@ Chart below has an x-axis with 1 trailing zero (z) colored in black with 10px fo
 ```
 &chxt=x,y
 &chxs=0N*f1z*,000000,10|1N*cUSD*Mil,333333,20
+```
+
+Chart below has too many labels in the x axis:
+
+![chart](https://image-charts.com/chart?chtt=Temperature+last+week&cht=bvg&chs=700x190&chco=FF0000&chxt=x,y&chxs=1N**ºC,000000&chdl=Temperature&chd=a:0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17)
+
+```
+&chxs=1N**ºC,000000
+```
+
+Thus we use `<skip_labels>` (see `0,s`, 0 means x axis and `s` means skip labels) to only let Image-Charts only display some of them:
+
+![chart](https://image-charts.com/chart?chtt=Temperature+last+week&cht=bvg&chs=700x190&chco=FF0000&chxt=x,y&chdl=Temperature&chd=a:0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17&chxs=1N**ºC,000000|0,s)
+
+```
+&chxt=x,y
+&chxs=1N**ºC,000000|0,s
 ```
