@@ -85,7 +85,7 @@ chd=s:Helo,Wrld
 cht=pd
 chd=t:10,40,45
 chdl=Expansion|Payroll|Equipment
-chdil=95K€
+chli=95K€
 chl=10K€|40K€|45K€
 ```
 
@@ -185,7 +185,7 @@ It's always nice to display the overall data summary directly inside the doughnu
 cht=pd
 chd=t:10,40,45
 chdl=Expansion|Payroll|Equipment
-chdil=95K€
+chli=95K€
 chl=10K€|40K€|45K€
 ```
 
@@ -197,7 +197,7 @@ Now, let's animate it. Note how nicely the `easeOutBounce` animation easing is a
 cht=pd
 chd=t:10,40,45
 chdl=Expansion|Payroll|Equipment
-chdil=95K€
+chli=95K€
 chl=10K€|40K€|45K€
 chan=1500,easeOutBounce
 ```
