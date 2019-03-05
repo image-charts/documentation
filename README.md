@@ -7,7 +7,7 @@ Read the documentation [online](https://documentation.image-charts.com/).
 ### dev-env setup
 
 ```
-make install
+make setup
 ```
 
 ### Start local dev environment
