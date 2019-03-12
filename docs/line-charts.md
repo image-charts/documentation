@@ -183,9 +183,9 @@ chm=B,76A4FB,0,0,0
 
 The following example fills 2 datasets with yellow (consumed) and grey (prevision) colors.
 
-![chart](https://image-charts.com/chart?chxl=0:%7CMon%7CTue%7CWed%7CThu%7CFri%7CSat%7CSun%7CMon%7CTue%7CWed%7CThu%7CFri%7CSat&chxs=0,676767,11.5,0,t,676767%7C1,676767,11.5,0,lt,676767&chxt=x,y&chs=700x300&cht=lc&chco=ffc107,9e9e9e&chds=0,69903,0,69903&chd=t:1,2,3,4,5,6,7%7C1,2,3,4,5,6,7,8,9,10,11,12,13&chg=0,20,0,0&chls=3%7C0&chm=B,ffc107,0,0,0%7CB,9e9e9e,1,0,0&chtt=Power%20consumption%20%28mW%29%20and%20prevision)
+![chart](https://image-charts.com/chart?chxl=0:%7CMon%7CTue%7CWed%7CThu%7CFri%7CSat%7CSun%7CMon%7CTue%7CWed%7CThu%7CFri%7CSat&chxs=0,676767,11.5,0,t,676767%7C1,676767,11.5,0,lt,676767&chxt=x,y&chs=700x300&cht=lc&chco=ffc107,9e9e9e&chd=a:1,2,3,4,5,6,7%7C1,2,3,4,5,6,7,8,9,10,11,12,13&chg=0,20,0,0&chls=3%7C0&chm=B,ffc107,0,0,0%7CB,9e9e9e,1,0,0&chtt=Power%20consumption%20%28mW%29%20and%20prevision)
 
 ```
-chd=t:1,2,3,4,5,6,7|1,2,3,4,5,6,7,8,9,10,11,12,13
+chd=a:1,2,3,4,5,6,7|1,2,3,4,5,6,7,8,9,10,11,12,13
 chm=B,ffc107,0,0,0|B,9e9e9e,1,0,0
 ```
