@@ -9,7 +9,7 @@ chts=<color>,<font_size>
 
 `chtt` - Specifies the chart title.
 
-- **`<chart_title>`** Title to show for the chart. You cannot specify where this appears, but you can optionally specify the font size and color. Currently basic latin and latin supplement characters are supported.
+- **`<chart_title>`** Title to show for the chart. You cannot specify where this appears, but you can optionally specify the font size and color. Currently basic latin and latin supplement characters are supported (need more? Ask our support). Use a `+` sign to indicate spaces, and a pipe character ` | ` to indicate line breaks.
 
 `chts` [Optional] - Colors and font size for the chtt parameter.
 
@@ -17,8 +17,6 @@ chts=<color>,<font_size>
 - **`<font_size>`** Font size of the title, in points.
 
 <!-- - **`<opt_alignment>`** [Optional] Alignment of the title. Choose one of the following case-sensitive string values: "l" (left), "c" (centered) "r" (right). Default is "c". -->
-
-Note: Google Image Charts allowed a pipe character ( | ) to indicate line breaks in the chart titles, Image-charts does not support them and silently ignore them.
 
 #### Examples
 
