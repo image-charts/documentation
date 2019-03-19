@@ -179,15 +179,15 @@ chxs=
     Here is the meaning of each element:
     - `<preceding_text>` - Literal text to precede each value.
     - `*...*` - An optional block wrapped in literal asterisks, in which you can specify formatting details for numbers. The following values are supported, and are all optional:
-      - `<number_type>` - The number format, for numeric values. Choose one of the following:
-        - `f` - [Default] Floating point format. Consider specifying precision as well with the <decimal_places> value.
-        - `p` - Percentage format. A % sign is appended automatically. Note: When using this format, data values from 0.0 — 1.0 map to 0 — 100% (for example, 0.43 will be shown as 43%).
-        - `e` - Scientific notation format. 🚧
-        - `c<CUR>` - Format the number in the currency specified, with the appropriate currency marker. Replace <CUR> with a three-letter currency code. Example: cEUR for Euros. You can find a list of codes on the [ISO web site](http://www.iso.org/iso/home/store/catalogue_tc/catalogue_detail.htm?csnumber=46121), although not all symbols are supported.
-      - `<decimal_places>` - An integer specifying how many decimal places to show. The value is rounded (not truncated) to this length. *Default is 2*.
-      - `z` - Display trailing zeros. *Default is no*.
-      - `s` - Display group separators. *Default is no*.
-      - `x or y` -Display the data from the x- or y-coordinate, as specified. The meaning of x data varies by chart type: experiment with your chart to determine what it means. *Default is 'y'*.
+        - `<number_type>` - The number format, for numeric values. Choose one of the following:
+          - `f` - [Default] Floating point format. Consider specifying precision as well with the <decimal_places> value.
+          - `p` - Percentage format. A % sign is appended automatically. Note: When using this format, data values from 0.0 — 1.0 map to 0 — 100% (for example, 0.43 will be shown as 43%).
+          - `e` - Scientific notation format. 🚧
+          - `c<CUR>` - Format the number in the currency specified, with the appropriate currency marker. Replace <CUR> with a three-letter currency code. Example: cEUR for Euros. You can find a list of codes on the [ISO web site](http://www.iso.org/iso/home/store/catalogue_tc/catalogue_detail.htm?csnumber=46121), although not all symbols are supported.
+        - `<decimal_places>` - An integer specifying how many decimal places to show. The value is rounded (not truncated) to this length. *Default is 2*.
+        - `z` - Display trailing zeros. *Default is no*.
+        - `s` - Display group separators. *Default is no*.
+        - `x or y` -Display the data from the x- or y-coordinate, as specified. The meaning of x data varies by chart type: experiment with your chart to determine what it means. *Default is 'y'*.
     - `<following_text>` - Literal text to follow each value.
 - **`<opt_label_color>`** *[Optional]* The color to apply to the axis text (but not axis line), in RRGGBB hexadecimal format. Axis line color is specified separately using opt_axis_color. *Default is black*.
 - **`<opt_font_size>`** *[Optional]* specifies the font size in pixels. This parameter is optional.
