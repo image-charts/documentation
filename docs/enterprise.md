@@ -37,6 +37,10 @@ Signing your URLs will ensure that no-one beside you created it and Image-Charts
 {!enterprise/hmac_.php!}
 ```
 
+```csharp tab="C#" linenums="1"
+{!enterprise/hmac_.cs!}
+```
+
 !!! tip "Want more?"
     Don't see your favorite language here? [Just ask us :angel:](mailto:support@image-charts.com) !
 
