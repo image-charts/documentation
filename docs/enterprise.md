@@ -41,6 +41,10 @@ Signing your URLs will ensure that no-one beside you created it and Image-Charts
 {!enterprise/hmac_.cs!}
 ```
 
+```java tab="Java" linenums="1"
+{!enterprise/java/src/hmac_.java!}
+```
+
 ```ruby tab="Ruby 2.x" linenums="1"
 {!enterprise/hmac_.rb!}
 ```
