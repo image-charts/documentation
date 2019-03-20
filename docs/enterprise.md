@@ -41,6 +41,10 @@ Signing your URLs will ensure that no-one beside you created it and Image-Charts
 {!enterprise/hmac_.cs!}
 ```
 
+```ruby tab="Ruby 2.x" linenums="1"
+{!enterprise/hmac_.rb!}
+```
+
 !!! tip "Want more?"
     Don't see your favorite language here? [Just ask us :angel:](mailto:support@image-charts.com) !
 
