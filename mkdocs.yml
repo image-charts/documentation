@@ -24,6 +24,7 @@ nav:
   - Polar Charts: polar-charts.md
   - Bubble Charts: bubble-charts.md
   - Graph Viz Charts: graph-viz-charts.md
+  - QR Codes: qr-codes.md
   - Reference:
     - Chart Size: reference/chart-size.md
     - Chart Type: reference/chart-type.md
