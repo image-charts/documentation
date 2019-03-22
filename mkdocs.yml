@@ -32,6 +32,7 @@ nav:
     - Color Format: reference/color-format.md
     - Chart Title: reference/chart-title.md
     - Grid Lines: reference/grid-lines.md
+    - Shape Markers: reference/shape-markers.md
     - Legend Text and Style: reference/legend-text-and-style.md
     - Chart Label: reference/chart-label.md
     - Chart Margin: reference/chart-margin.md
@@ -100,6 +101,8 @@ markdown_extensions:
       base_path: docs
   # https://facelessuser.github.io/pymdown-extensions/extensions/superfences/#nested-fence-format
   - pymdownx.superfences
+  - pymdownx.critic
+  - pymdownx.tilde
   - pymdownx.tasklist
   - pymdownx.smartsymbols
   # https://squidfunk.github.io/mkdocs-material/extensions/admonition
