@@ -21,9 +21,9 @@ chdls=<color>,<size>
 
 - **`<opt_position>`** [Optional] Specifies the position of the legend on the chart (:construction: partially supported). To specify additional padding between the legend and the chart area or the image border, use the chma parameter.
   Choose one of the following values:
-  - `b` - [Default] Legend at the bottom of the chart, legend entries in a horizontal row.
+  - `b` - Legend at the bottom of the chart, legend entries in a horizontal row.
   - `t` - Legend at the top of the chart, legend entries in a horizontal row.
-  - `r` - Legend to the right of the chart, legend entries in a vertical column.
+  - `r` - [Default] Legend to the right of the chart, legend entries in a vertical column.
   - `l` - Legend to the left of the chart, legend entries in a vertical column.
 
 <!-- - `bv` - Legend at the bottom of the chart, legend entries in a vertical column.
