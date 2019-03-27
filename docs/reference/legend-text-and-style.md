@@ -9,7 +9,7 @@ The legend is a side section of the chart that gives a small text description of
 
 ```
 chdl=<data_series_1_label>|...|<data_series_n_label>
-chdlp=<opt_position>|<opt_label_order>
+chdlp=<opt_position>
 chdls=<color>,<size>
 ```
 
@@ -30,7 +30,7 @@ chdls=<color>,<size>
   - `tv` - Legend at the top of the chart, legend entries in a vertical column.
  -->
 
-- --**`<opt_label_order>`** [Optional] :checkered_flag:. The order in which the labels are shown in the legend.--
+<!-- - **`<opt_label_order>`** [Optional] :checkered_flag:. The order in which the labels are shown in the legend. -->
 
 <!-- Choose one of the following value:
   - `l` - [Default for vertical legends] Display labels in the order given to chdl.
