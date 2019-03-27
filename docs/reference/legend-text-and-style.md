@@ -72,6 +72,38 @@ How to change legend font color and size:
 chdls=9e9e9e,17
 ```
 
+Here is how to specify a chart with a right legend position:
+
+![a](https://image-charts.com/chart?cht=ls&chd=t:0,30,60,70,90,95,100|20,30,40,50,60,70,80|10,30,40,45,52&chco=2196F3,FF5722,9c27b0&chs=700x150&chdl=NASDAQ|FTSE100|DOW&chdlp=r&chma=0,0,10)
+
+```
+chdlp=r
+```
+
+Here is how to specify a chart with a left legend position:
+
+![a](https://image-charts.com/chart?cht=ls&chd=t:0,30,60,70,90,95,100|20,30,40,50,60,70,80|10,30,40,45,52&chco=2196F3,FF5722,9c27b0&chs=700x150&chdl=NASDAQ|FTSE100|DOW&chdlp=l&chma=10,0,10)
+
+```
+chdlp=l
+```
+
+Here is how to specify a chart with a bottom legend position:
+
+![a](https://image-charts.com/chart?cht=ls&chd=t:0,30,60,70,90,95,100|20,30,40,50,60,70,80|10,30,40,45,52&chco=2196F3,FF5722,9c27b0&chs=700x150&chdl=NASDAQ|FTSE100|DOW&chdlp=b)
+
+```
+chdlp=b
+```
+
+Here is how to specify a chart with a top legend position:
+
+![a](https://image-charts.com/chart?cht=ls&chd=t:0,30,60,70,90,95,100|20,30,40,50,60,70,80|10,30,40,45,52&chco=2196F3,FF5722,9c27b0&chs=700x150&chdl=NASDAQ|FTSE100|DOW&chdlp=t)
+
+```
+chdlp=t
+```
+
 <!-- | The first chart demonstrates horizontal legend entries (chdlp=t, default layout is horizontal), and the second demonstrates bottom vertical legend entries (chdlp=bv). | ![chart](https://image-charts.com/chart?cht=p&chs=700x100&chd=t:100,20,20&chdl=First%7CSecond%7CThird&chco=2196F3,FF5722,9c27b0&chdlp=t) |
 | | ```chdl=First|Second|Third chco=2196F3,FF5722,9c27b0 chdlp=t``` |
 | | ![chart](https://image-charts.com/chart?cht=p&chs=700x100&chd=t:100,20,20&chdl=First%7CSecond%7CThird&chco=2196F3,FF5722,9c27b0&chdlp=bv) |
