@@ -23,13 +23,16 @@ chdls=<color>,<size>
   Choose one of the following values:
   - `b` - [Default] Legend at the bottom of the chart, legend entries in a horizontal row.
   - `t` - Legend at the top of the chart, legend entries in a horizontal row.
-  <!-- - `bv` - Legend at the bottom of the chart, legend entries in a vertical column.
-  - `tv` - Legend at the top of the chart, legend entries in a vertical column.
   - `r` - Legend to the right of the chart, legend entries in a vertical column.
-  - `l` - Legend to the left of the chart, legend entries in a vertical column. -->
+  - `l` - Legend to the left of the chart, legend entries in a vertical column.
+
+<!-- - `bv` - Legend at the bottom of the chart, legend entries in a vertical column.
+  - `tv` - Legend at the top of the chart, legend entries in a vertical column.
+ -->
 
 - --**`<opt_label_order>`** [Optional] :checkered_flag:. The order in which the labels are shown in the legend.--
-  <!-- Choose one of the following value:
+
+<!-- Choose one of the following value:
   - `l` - [Default for vertical legends] Display labels in the order given to chdl.
   - `r` - Display labels in the reverse order as given to chdl. This is useful in stacked bar charts to show the legend in the same order as the bars appear.
   - `a` - [Default for horizontal legends] Automatic ordering: roughly means sorting by length, shortest first, as measured in 10 pixel blocks. When two elements are the same length (divided into 10 pixel blocks), the one listed first will appear first.
