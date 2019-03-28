@@ -17,26 +17,25 @@ chdls=<color>,<size>
 
 - **`<data_series_label>`** The text for the legend entries. Each label applies to the corresponding series in the chd array. Use a + mark for a space. If you do not specify this parameter, the chart will not get a legend. There is no way to specify a line break in a label. The legend will typically expand to hold your legend text, and the chart area will shrink to accommodate the legend.
 
-`chdlp` - [Optional] The position of the legend, and order of the legend entries. You can specify *`<position>`* and/or *`<label_order>`*. If you specify both, separate them with a bar character. You can add an 's' to any value if you want empty legend entries in `chdl` to be skipped in the legend. Examples: `chdlp=bv`, `chdlp=r`, `chdlp=bv|r`, `chdlp=bvs|r`
+`chdlp` [Optional] The position of the legend, and order of the legend entries. You can specify *`<position>`* and/or *`<label_order>`*. If you specify both, separate them with a bar character. You can add an 's' to any value if you want empty legend entries in `chdl` to be skipped in the legend. Examples: `chdlp=bv`, `chdlp=r`, `chdlp=bv|r`, `chdlp=bvs|r`
 
 - **`<opt_position>`** [Optional] Specifies the position of the legend on the chart (:construction: partially supported). To specify additional padding between the legend and the chart area or the image border, use the chma parameter.
   Choose one of the following values:
-  - `b` - Legend at the bottom of the chart, legend entries in a horizontal row.
-  - `t` - Legend at the top of the chart, legend entries in a horizontal row.
-  - `r` - [Default] Legend to the right of the chart, legend entries in a vertical column.
-  - `l` - Legend to the left of the chart, legend entries in a vertical column.
+    - `b` - Legend at the bottom of the chart, legend entries in a horizontal row.
+    - `t` - Legend at the top of the chart, legend entries in a horizontal row.
+    - `r` - [Default] Legend to the right of the chart, legend entries in a vertical column.
+    - `l` - Legend to the left of the chart, legend entries in a vertical column.
 
 <!-- - `bv` - Legend at the bottom of the chart, legend entries in a vertical column.
   - `tv` - Legend at the top of the chart, legend entries in a vertical column.
  -->
 
-<!-- - **`<opt_label_order>`** [Optional] :checkered_flag:. The order in which the labels are shown in the legend. -->
-
-<!-- Choose one of the following value:
-  - `l` - [Default for vertical legends] Display labels in the order given to chdl.
-  - `r` - Display labels in the reverse order as given to chdl. This is useful in stacked bar charts to show the legend in the same order as the bars appear.
-  - `a` - [Default for horizontal legends] Automatic ordering: roughly means sorting by length, shortest first, as measured in 10 pixel blocks. When two elements are the same length (divided into 10 pixel blocks), the one listed first will appear first.
-  - `0,1,2`... - Custom label order. This is a list of zero-based label indexes from chdl, separated by commas. -->
+- **`<opt_label_order>`** [Optional] The order in which the labels are shown in the legend.
+  Choose one of the following value:
+    - `l` - [Default for vertical legends] Display labels in the order given to chdl.
+    - `r` - Display labels in the reverse order as given to chdl. This is useful in stacked bar charts to show the legend in the same order as the bars appear.
+    <!-- - `a` - [Default for horizontal legends] Automatic ordering: roughly means sorting by length, shortest first, as measured in 10 pixel blocks. When two elements are the same length (divided into 10 pixel blocks), the one listed first will appear first. -->
+    - `0,1,2`... - Custom label order. This is a list of zero-based label indexes from chdl, separated by commas.
 
 `chdls` - [Optional] Specifies the color and font size of the legend text.
 
