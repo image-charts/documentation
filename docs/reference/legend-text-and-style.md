@@ -9,7 +9,7 @@ The legend is a side section of the chart that gives a small text description of
 
 ```
 chdl=<data_series_1_label>|...|<data_series_n_label>
-chdlp=<opt_position>
+chdlp=<opt_position>|<opt_label_order>
 chdls=<color>,<size>
 ```
 
