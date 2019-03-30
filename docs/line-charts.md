@@ -161,14 +161,23 @@ You can combine line fills with any other `chm` parameters using a pipe characte
 
 ```
 chm=
-  B,<color>,<serie_index>
+  <b_or_B>,<color>,<start_line_index>,<end_line_index>,<0>
     |...|
-  B,<color>,<serie_index>
+  <b_or_B>,<color>,<start_line_index>,<end_line_index>,<0>
 ```
 
-- **`<B>`** Fill to the bottom of the chart, fill from <start_line_index> to the bottom of the chart
+- **`<b_or_B>`**
+  Whether to fill to the bottom of the chart, or just to the next lower line.
+    - B - Fill from `<start_line_index>` to the bottom of the chart. ~~`<end_line_index>` supports a special syntax to let you fill a segment of the chart. This is easiest if you have a chart with a single line that you want to fill.~~
+    - b - Fill between two lines in a multi-line chart. Start and end lines are indicated by `<start_line_index>` and `<end_line_index>`.
 - **`<color>`** An [RRGGBB format hexadecimal](/reference/color-format) number of the fill color
-- **`<serie_index>`** The index of the line at which the fill starts. The first data series specified in chd has an index of zero (`0`), the second data series has an index of `1`, and so on
+- **`<start_line_index>`** The index of the line at which the fill starts. The first data series specified in chd has an index of zero (0), the second data series has an index of 1, and so on.
+- **`<end_line_index>`**
+    - Fill type 'b' - The line at which to stop the fill. This line must be below the current line.
+    - Fill type 'B' - One of the following choices:
+        - *any value* - Any single number in this parameter is ignored, and the fill will go from the specified line to the base of the chart
+        - ~~start:end - To fill a vertical slice below the chart, specify start:end, where these are data point indices describing where to start and stop the fill. Both values are optional, and default to first_point:last_point. (See example below.)~~
+- **<0>** Reserved — must be zero.
 
 #### Examples
 
@@ -180,6 +189,17 @@ The following example fills the entire area under the line.
 ```
 chm=B,76A4FB,0,0,0
 ```
+
+The following example has 3 series, 3 lines and 2 fills. First serie (`0,1`) has a blue color fill (`#224499`), second serie (`1,2`) has a red color fill (`#FF0000`):
+
+```
+chd=s:cefhjkqwrlgYcfgc,QSSVXXdkfZUMRTUQ,HJJMOOUbVPKDHKLH
+chm=b,224499,0,1,0|b,FF0000,1,2,0
+```
+
+<!-- https://image-charts.com/chart?cht=lc&chs=700x125&chd=s:cefhjkqwrlgYcfgc,QSSVXXdkfZUMRTUQ,HJJMOOUbVPKDHKLH&chls=1,1,0|1,1,0|1,1,0|1,4,0&chxt=x,y&chxl=0:|Sep|Oct|Nov|Dec|1:||50|100&chm=b,224499,0,1,0|b,FF0000,1,2,0|b,80C65A,2,3,0 -->
+![chart](https://image-charts.com/chart?cht=lc&chs=700x300&chd=s:cefhjkqwrlgYcfgc,QSSVXXdkfZUMRTUQ,HJJMOOUbVPKDHKLH&chls=1,1,0|1,1,0|1,1,0|1,4,0&chxt=x,y&chxl=1:||50|100&chm=b,224499,0,1,0|b,FF0000,1,2,0&chxr=0,0,40)
+
 
 The following example fills 2 datasets with yellow (consumed) and grey (prevision) colors.
 
