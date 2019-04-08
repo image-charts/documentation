@@ -1,13 +1,5 @@
-// This script requires two DDL references:
-// - System.Web.dll
-// - System.Web.Services.dll
-//
-// To compile with mono:
-// mcs -reference:System.Web.dll -reference:System.Web.Services.dll hmac_.cs
-
 using System;
 using System.Text;
-using System.Collections.Specialized;
 
 namespace CustomExtensions
 {
@@ -35,18 +27,20 @@ namespace App
             string account_id = "YOUR_ACCOUNT_ID";
             string secret_key = "YOUR_SECRET_KEY";
 
-            // specify you query parameters
-            NameValueCollection query = System.Web.HttpUtility.ParseQueryString(string.Empty);
-            query["icac"] = account_id;
-            query["cht"] = "bvs";
-            query["chd"] = "s:93zyvneTTO";
-            query["chs"] = "400x401";
+            var sbchart = new StringBuilder();
 
-            // we add this at the end of the query string because some email client look at the
-            // end of the querystring to infer the extension
-            query["chof"] = ".png";
+            // specify you querystring
+            // Note: we use Uri.EscapeDataString instead of HttpUtility.UrlEncode,
+            //       learn why there: https://stackoverflow.com/a/47877559/745121
+            sbchart.AppendFormat("cht={0}", Uri.EscapeDataString("pd"));
+            sbchart.AppendFormat("&icac={0}", Uri.EscapeDataString(account_id));
+            sbchart.AppendFormat("&chd={0}", Uri.EscapeDataString("a:124,736,372"));
+            sbchart.AppendFormat("&chs={0}", Uri.EscapeDataString("400x400"));
+            sbchart.AppendFormat("&chdl={0}", Uri.EscapeDataString("Expansion|Payroll|Equipment"));
+            sbchart.AppendFormat("&chli={0}", Uri.EscapeDataString("95K€"));
+            sbchart.AppendFormat("&chl={0}", Uri.EscapeDataString("10K€|40K€|45K€"));
 
-            string querystring = query.ToString();
+            var querystring = sbchart.ToString();
             string signature = querystring.HmacSha256Digest(secret_key);
             Console.WriteLine("https://image-charts.com/chart?ichm="+signature+"&"+querystring);
         }
