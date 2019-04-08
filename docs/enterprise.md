@@ -6,9 +6,11 @@ Once subscribed to the enterprise plan you will receive an `account id` and a `s
 
 ## Remove Image-Charts watermark by signing URLs
 
-Signing request must be done server-side otherwise anyone will be able to reuse your `secret key`. Beside signing there are no other process involved server-side. Image-Charts is still the fastest option compared to server-side charts setup and generation.
+Signing request **must be done server-side** otherwise anyone will be able to reuse your `secret key`. Beside signing there are no other computation involved server-side. Image-Charts is still the fastest option compared to server-side charts setup and generation.
 
 You will need to sign the url using `HMAC-SHA256` hash algorithm. Before hashing the URL add your account id inside it using the `&icac=YOUR_ACCOUNT_ID` parameter, then hash it and at the resulting hash in the `&ichm=GENERATED_HASH` query parameter. **Don't forget to convert URL-unsafe characters** before generating the signature.
+
+Note that Image-Chart supports `ichm` parameter both at the end of the query string (e.g. `https://image-charts.com/chart?{QUERY_STRING}&ichm=GENERATED_HASH`) and at the beginning (e.g `https://image-charts.com/chart?ichm=GENERATED_HASH&{QUERY_STRING}`).
 
 As an example here is a graph signed, without watermark:
 
@@ -21,7 +23,6 @@ As an example here is a graph signed, without watermark:
 ```
 
 Signing your URLs will ensure that no-one beside you created it and Image-Charts will verify the generated hash to be sure you your account created it. Here are some examples in various languages:
-
 
 ```js tab="NodeJS 6+" linenums="1"
 {!enterprise/hmac_.js!}
@@ -38,7 +39,7 @@ Signing your URLs will ensure that no-one beside you created it and Image-Charts
 ```
 
 ```csharp tab="C#" linenums="1"
-{!enterprise/hmac_.cs!}
+{!enterprise/csharp/hmac_.cs!}
 ```
 
 ```java tab="Java" linenums="1"
