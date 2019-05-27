@@ -2,12 +2,6 @@
 
 This section describes how to create a QR Code on the fly with a URL GET request using the Image-Chart API.
 
-!!! warning "No watermark?"
-    QR Code feature is currently in beta, the API **won't change** however once out of beta we will add a watermark at the top right and corner to support our freemium model. The QR Code will still be valid 👌.
-
-    If you wish to be future proof right now, please [take an Enterprise subscription](https://www.image-charts.com/) and [make signed request today](https://documentation.image-charts.com/enterprise/) so even when our QR Code feature will be out of beta you will never see/have the watermark.
-
-
 ## Overview
 
 QR codes are a popular type of two-dimensional barcode. They are also known as hardlinks or physical world hyperlinks. QR Codes store up to 4,296 alphanumeric characters of arbitrary text. This text can be anything, for example a website URL, contact information, a telephone number, even a poem! QR codes can be read by an optical device with the appropriate software. Such devices range from dedicated QR code readers to smartphones.
