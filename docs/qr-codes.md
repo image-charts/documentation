@@ -38,7 +38,7 @@ chs=200x200
 
 `chl=<data>`
 
-The data to encode. Data can be digits (0-9), alphanumeric characters, binary bytes of data, or Kanji. You cannot mix data types within a QR code. The data must be UTF-8 URL-encoded. Note that URLs have a 2K maximum length, so if you want to encode more than 2K bytes (minus the other URL characters), you will have to send your [data using POST](/reference/post-requests).
+The data to encode. Data can be digits (0-9), alphanumeric characters, binary bytes of data, or Kanji. You cannot mix data types within a QR code. The data must be UTF-8 URL-encoded. Note that URLs have a 2K maximum length, so if you want to encode more than 2K bytes (minus the other URL characters), you will have to send your [data using POST](/reference/post-requests). In addition the QRcode has a minimum size of 30px, below it will be presented as empty.
 
 ## Data encoding
 
@@ -59,4 +59,4 @@ How to encode the data in the QR code. Currently only UTF-8 is supported.
     * M - Allows recovery of up to 15% data loss
     * Q - Allows recovery of up to 25% data loss
     * H - Allows recovery of up to 30% data loss
-* *margin* - The width of the white border around the data portion of the code. This is in rows, not in pixels. The default value is 4.
+* *margin* - The width of the white border around the data portion of the code. This is in rows, not in pixels. The default value is 4 for any QRcode less than 140px or it will be 10.
