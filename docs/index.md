@@ -39,12 +39,12 @@ Let's examine the URL above in more detail:
 
 ```
 https://image-charts.com/chart
-  ?cht=p3
-  &chs=700x100
-  &chd=t:60,40
-  &chl=Hello|World
-  &chan
-  &chf=ps0-0,lg,45,ffeb3b,0.2,f44336,1|ps0-1,lg,45,8bc34a,0.2,009688,1
+?cht=p3
+&chs=700x100
+&chd=t:60,40
+&chl=Hello|World
+&chan
+&chf=ps0-0,lg,45,ffeb3b,0.2,f44336,1|ps0-1,lg,45,8bc34a,0.2,009688,1
 ```
 
 - **`https://image-charts.com/chart?`** This is the base URL for all chart requests. (However, see Improving Performance on Pages with Many Charts below for an optional variation for pages with multiple charts.)
