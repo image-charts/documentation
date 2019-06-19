@@ -6,10 +6,10 @@ The maximum graphic size for all graphics, except maps, is 998,001 pixels in tot
 
 
 ```
-icretina=<number>
+icretina=<bit>
 ```
 
-- **`<number>`** number is boolean. 0 for false and 1 for true.
+- **`<bit>`** 0 for false and 1 for true.
 
 #### Example
 
@@ -22,7 +22,7 @@ Here is a graph of 700 pixels x 200 pixels without retina
 icretina=0
 ```
 
-Here is a graph of 700 pixels x 200 pixels with retina
+Here is a graph of 700 pixels x 200 pixels with retina, the generated size as doubled.
 
 
 ![chart](https://image-charts.com/chart?ichm=eee5082545d27af84c7a3f2af95445080b1b1cc3b3d75a141af1d0c18a1fff27&cht=bvs&chd=s%3Atheresadifferencebetweenknowingthepathandwalkingthepath&chs=700x200&chxt=y&chf=b0%2Clg%2C90%2C03a9f4%2C0%2C3f51b5%2C1&icretina=1&icac=fgribreau)
