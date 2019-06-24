@@ -238,7 +238,7 @@ Chart below has an x-axis with 1 trailing zero (z) colored in black with 10px fo
 
 ```
 &chxt=x,y
-&chxs=0N*f1z*,000000,10|1N*cUSD*Mil,333333,20
+&chxs=0N*f1z*,000000,10|1N*cUSD*Mil,007939,20
 ```
 
 Chart below has too many labels in the x axis:
