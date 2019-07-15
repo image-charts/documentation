@@ -49,13 +49,12 @@ Because axis labels are behind pie slices, leverage [serie color transparency](/
 
 ![chart](https://image-charts.com/chart?chs=700x200&chxt=x,y&chd=t:60,40,20&cht=pa&chdl=Image|Charts|Rocks&chf=ps0-0,lg,45,ffeb3b,0.2,f443367C,1|ps0-1,lg,45,8bc34a,0.2,0096887C,1|ps0-2,lg,45,EA469E,0.2,03A9F47C,1)
 
-&chl=2018|2016|2015
-
 ```
 cht=pa
-chxt=x
+chxt=x,y
 chd=t:60,40,20
 chdl=Image|Charts|Rocks
+chf=ps0-0,lg,45,ffeb3b,0.2,f443367C,1|ps0-1,lg,45,8bc34a,0.2,0096887C,1|ps0-2,lg,45,EA469E,0.2,03A9F47C,1
 ```
 
 #### Chart animation
