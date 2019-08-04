@@ -15,7 +15,7 @@ You will need to sign the url using `HMAC-SHA256` hash algorithm. Before hashing
 
     It means you don't have to worry about URL-encoding algorithm and you can generate the signature key based on an unencoded URL-unsafe query string and it will work.
 
-    **Generating a signature based on unencoded URL parameters if the recommended way** as it's much more robust and abstract away the encoding the transportation uses (e.g. webmail proxies, web-browsers, enterprise proxies).
+    **Generating a signature based on unencoded URL parameters is the recommended way** as it's much more robust and abstract away the encoding the transportation uses (e.g. webmail proxies, web-browsers, enterprise proxies).
 
 
 
