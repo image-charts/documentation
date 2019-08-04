@@ -22,6 +22,10 @@ const rawQuerystring = qs.stringify({
   icac: ACCOUNT_ID, // don't forget to add your account id before signing it
   chd: 's:93zyvneTTO',
   chs: '400x401',
+}, null, null, {
+  // not encoding URL parameters to compute the signature is our recommended way as its much more robust
+  // read our documentation for explanations
+  encodeURIComponent: (valueWithoutEncoding) => valueWithoutEncoding
 });
 const signature = sign(SECRET_KEY, rawQuerystring);
 const publicUrl = `https://image-charts.com/chart?${rawQuerystring}&ichm=${signature}`;

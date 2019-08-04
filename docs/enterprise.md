@@ -8,7 +8,18 @@ Once subscribed to the enterprise plan you will receive an `account id` and a `s
 
 Signing request **must be done server-side** otherwise anyone will be able to reuse your `secret key`. Beside signing there are no other computation involved server-side. Image-Charts is still the fastest option compared to server-side charts setup and generation.
 
-You will need to sign the url using `HMAC-SHA256` hash algorithm. Before hashing the URL add your account id inside it using the `&icac=YOUR_ACCOUNT_ID` parameter, then hash it and at the resulting hash in the `&ichm=GENERATED_HASH` query parameter. **Don't forget to convert URL-unsafe characters** before generating the signature.
+You will need to sign the url using `HMAC-SHA256` hash algorithm. Before hashing the URL add your account id inside it using the `&icac=YOUR_ACCOUNT_ID` parameter, then hash it and at the resulting hash in the `&ichm=GENERATED_HASH` query parameter.
+
+~~**Don't forget to convert URL-unsafe characters** before generating the signature.~~
+
+!!! tip "Want more?"
+    In order to be easier to handle, **Image-Charts checks the signature for both encoded and decoded query params**. You do not need to worry about generating a string of the whole query with the right URL-safe characters anymore, if the basic query string check does not work, Image-Charts will also try to decode every query parameter pairs and then check the resulting query string against your signature (`ichm`).
+
+    It means you don't have to worry about URL-encoding algorithm and you can generate the signature key based on an unencoded URL-unsafe query string and it will work.
+
+    **Generating a signature based on unencoded URL parameters if the recommended way** as it's much more robust and abstract away the encoding the transportation uses (e.g. webmail proxies, web-browsers, enterprise proxies).
+
+
 
 Note that Image-Chart supports `ichm` parameter both at the end of the query string (e.g. `https://image-charts.com/chart?{QUERY_STRING}&ichm=GENERATED_HASH`) and at the beginning (e.g `https://image-charts.com/chart?ichm=GENERATED_HASH&{QUERY_STRING}`).
 
