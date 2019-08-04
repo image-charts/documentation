@@ -1,4 +1,6 @@
 using System;
+using System.Globalization;
+using System.Security.Cryptography;
 using System.Text;
 
 namespace CustomExtensions
@@ -29,19 +31,20 @@ namespace App
 
             var sbchart = new StringBuilder();
 
-            // specify you querystring
-            // Note: we use Uri.EscapeDataString instead of HttpUtility.UrlEncode,
-            //       learn why there: https://stackoverflow.com/a/47877559/745121
-            sbchart.AppendFormat("cht={0}", Uri.EscapeDataString("pd"));
-            sbchart.AppendFormat("&icac={0}", Uri.EscapeDataString(account_id));
-            sbchart.AppendFormat("&chd={0}", Uri.EscapeDataString("a:124,736,372"));
-            sbchart.AppendFormat("&chs={0}", Uri.EscapeDataString("400x400"));
-            sbchart.AppendFormat("&chdl={0}", Uri.EscapeDataString("Expansion|Payroll|Equipment"));
-            sbchart.AppendFormat("&chli={0}", Uri.EscapeDataString("95K€"));
-            sbchart.AppendFormat("&chl={0}", Uri.EscapeDataString("10K€|40K€|45K€"));
+            sbchart.AppendFormat("cht={0}", "pd");
+            sbchart.AppendFormat("&icac={0}", account_id);
+            sbchart.AppendFormat("&chd={0}", "a:124,736,372");
+            sbchart.AppendFormat("&chs={0}", "400x400");
+            sbchart.AppendFormat("&chdl={0}", "Expansion|Payroll|Equipment");
+            sbchart.AppendFormat("&chli={0}", "95K€");
+            sbchart.AppendFormat("&chl={0}", "10K€|40K€|45K€");
 
-            var querystring = sbchart.ToString();
-            string signature = querystring.HmacSha256Digest(secret_key);
+            string querystring = sbchart.ToString();
+            var payload = Encoding.UTF8.GetBytes(querystring);
+            var hmacSHA = new HMACSHA256(Encoding.UTF8.GetBytes(secret_key));
+            var hash = hmacSHA.ComputeHash(payload, 0, payload.Length);
+            string signature = BitConverter.ToString(hash).Replace("-", "").ToLower();
+
             Console.WriteLine("https://image-charts.com/chart?ichm="+signature+"&"+querystring);
         }
     }
