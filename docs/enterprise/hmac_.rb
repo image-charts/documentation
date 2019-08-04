@@ -5,10 +5,10 @@ require 'uri'
 SECRET_KEY = "MY_ACCOUNT_ID"
 ACCOUNT_ID = "MY_SECRET_KEY"
 
-# don't forget to add your account id before signing it
 # Then generate the watermark-free url
-# CGI::escape will encode URL-unsafe characters for us
-rawQuerystring = URI.encode("cht=bvs&icac=#{ACCOUNT_ID}&chd=s:93zyvneTTO&chs=400x401")
+# no need to encode the query string, Image-Charts will decode every parameters by itself to check the signature
+# learn why in our documentation https://documentation.image-charts.com/enterprise/
+rawQuerystring = "cht=bvs&icac=#{ACCOUNT_ID}&chtt=Hello world&chd=s:93zyvneTTO&chs=400x401"
 
 signature = OpenSSL::HMAC.hexdigest('SHA256', SECRET_KEY, rawQuerystring)
 publicUrl = "https://image-charts.com/chart?#{rawQuerystring}&ichm=#{signature}"

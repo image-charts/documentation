@@ -31,6 +31,9 @@ namespace App
 
             var sbchart = new StringBuilder();
 
+            // Then generate the watermark-free url
+            // no need to encode the query string, Image-Charts will decode every parameters by itself to check the signature
+            // learn why in our documentation https://documentation.image-charts.com/enterprise/
             sbchart.AppendFormat("cht={0}", "pd");
             sbchart.AppendFormat("&icac={0}", account_id);
             sbchart.AppendFormat("&chd={0}", "a:124,736,372");

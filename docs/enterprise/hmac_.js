@@ -16,15 +16,14 @@ const ACCOUNT_ID = 'MY_ACCOUNT_ID';
 const SECRET_KEY = 'MY_SECRET_KEY';
 
 // Then generate the watermark-free url
-// qs.stringify will encode URL-unsafe characters for us
 const rawQuerystring = qs.stringify({
   cht: 'bvs',
   icac: ACCOUNT_ID, // don't forget to add your account id before signing it
   chd: 's:93zyvneTTO',
   chs: '400x401',
 }, null, null, {
-  // not encoding URL parameters to compute the signature is our recommended way as its much more robust
-  // read our documentation for explanations
+  // no need to encode the query string, Image-Charts will decode every parameters by itself to check the signature
+  // learn why in our documentation https://documentation.image-charts.com/enterprise/
   encodeURIComponent: (valueWithoutEncoding) => valueWithoutEncoding
 });
 const signature = sign(SECRET_KEY, rawQuerystring);
