@@ -33,3 +33,23 @@ Here is a graph of 700 pixels x 200 pixels with retina, image output size as dou
 ```
 icretina=1
 ```
+
+
+### Usage with `srcset`
+
+The ideal solution is to send the high-resolution image chart version to devices that can use them, while maintaining a standard resolution for others, thus reducing bandwidh usage. The `srcset` HTML attribute with the x designator does just that and here is the basic idea:
+
+```
+<img src="image-charts-url.jpg" srcset="image-charts-url.jpg 1x, image-charts-url-with-icretina.jpg 2x" alt="My awesome chart">
+```
+
+- `image-charts-url.jpg` will be loaded on usual, standard-resolution device
+- `image-charts-url-with-icretina.jpg` will be loaded on high-resolution device (e.g. Retina devices)
+
+Considering that Image-Charts does not requires us to store our own image for our own good (it leverages word-wide CDNs), let's change this example to a more production-ready one:
+
+```
+<img src="https://image-charts.com/chart?ichm=68c82618eccc2f0a861473ef93e978beb0b018a3ce2c2b4b609aec1b2726090c&chs=700x300&chxt=x,y&chl=2018|2017|2015&chd=t:60,40,20&cht=pa&chdl=Image|Charts|Rocks&chf=ps0-0,lg,45,ffeb3b,0.2,f443367C,1|ps0-1,lg,45,8bc34a,0.2,0096887C,1|ps0-2,lg,45,EA469E,0.2,03A9F47C,1&chan=&icac=fgribreau" srcset="https://image-charts.com/chart?ichm=68c82618eccc2f0a861473ef93e978beb0b018a3ce2c2b4b609aec1b2726090c&chs=700x300&chxt=x,y&chl=2018|2017|2015&chd=t:60,40,20&cht=pa&chdl=Image|Charts|Rocks&chf=ps0-0,lg,45,ffeb3b,0.2,f443367C,1|ps0-1,lg,45,8bc34a,0.2,0096887C,1|ps0-2,lg,45,EA469E,0.2,03A9F47C,1&chan=&icac=fgribreau 1x, https://image-charts.com/chart?ichm=f3df2861ceb282159805fccea15767e82bf1e4f23b88b3da4b6d3ad3fc6f6ee9&chs=700x300&chxt=x,y&chl=2018|2017|2015&chd=t:60,40,20&cht=pa&chdl=Image|Charts|Rocks&chf=ps0-0,lg,45,ffeb3b,0.2,f443367C,1|ps0-1,lg,45,8bc34a,0.2,0096887C,1|ps0-2,lg,45,EA469E,0.2,03A9F47C,1&chan=&icretina=1&icac=fgribreau 2x" alt="My awesome chart">
+```
+
+:+1:
