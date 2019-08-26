@@ -1,5 +1,5 @@
 !!! note "Enterprise+ plan only"
-    Retina support is only activable for Enterprise+ customers.
+    Retina support is only enabled in **Enterprise+** subscriptions
 
 #### Retina displays
 
