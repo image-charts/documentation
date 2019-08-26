@@ -37,7 +37,7 @@ icretina=1
 
 ### Usage with `srcset`
 
-The ideal solution is to send the high-resolution image chart version to devices that can use them, while maintaining a standard resolution for others, thus reducing bandwidh usage. The `srcset` HTML attribute with the x designator does just that and here is the basic idea:
+The ideal solution is to send the high-resolution image chart version to devices that can use them, while maintaining a standard resolution for others, thus reducing bandwidth usage. The `srcset` HTML attribute with the x designator does just that and here is the basic idea:
 
 ```
 <img src="image-charts-url.jpg" srcset="image-charts-url.jpg 1x, image-charts-url-with-icretina.jpg 2x" alt="My awesome chart">
