@@ -33,6 +33,7 @@ nav:
     - Chart Title: reference/chart-title.md
     - Grid Lines: reference/grid-lines.md
     - Shape Markers: reference/shape-markers.md
+    - Line Markers: reference/line-markers.md
     - Legend Text and Style: reference/legend-text-and-style.md
     - Chart Label: reference/chart-label.md
     - Chart Margin: reference/chart-margin.md
@@ -42,6 +43,7 @@ nav:
     - Output Format: reference/output-format.md
     - Post requests: reference/post-requests.md
     - Retina support: reference/retina.md
+    - Compound Charts: reference/compound-charts.md
   - Guides:
     - How to setup a dependency graph in Google Sheets: guides/graph-in-google-sheets.md
   - Enterprise: enterprise.md
