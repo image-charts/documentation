@@ -2,7 +2,7 @@
 
 Welcome to the Image-charts developer hub. You'll find comprehensive guides and documentation to help you start working with Image-charts as quickly as possible, as well as support if you get stuck. Let's jump right in!
 
-First you might want to start with the [getting started](#getting-started) guide and then take a look at [Image-Charts API reference](/referencechart-size).
+First you might want to start with the [getting started](#getting-started) guide and then take a look at Image-Charts API reference.
 
 If you wonder what kind of charts Image-Charts can generate? Take a look at our [gallery](/gallery).
 
