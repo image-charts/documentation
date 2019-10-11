@@ -2,21 +2,21 @@ Here are some examples of what charts you can generate and embed into emails or 
 
 ### Bar charts
 
-![chart](https://image-charts.com/chart?cht=bvg&chd=t:10,15,25,30,40,80&chs=700x300&chxt=x,y&chxl=0:%7CMarch%20'18%7CApril%20'18%7CMay%20'18%7CJune%20'18%7CJuly%20'18%7CAugust%20'18%7C&chdl=Visitors%20%28in%20thousands%29&chf=b0,lg,90,05B142,1,0CE858,0.2&chxs=1N**K&chtt=Visitors%20report&chma=0,0,10,10&chl=%7C%7C%7C%7C+33%25%20!%7Cx2%20)
+![chart](https://image-charts.com/chart?ichm=0b71cdaf8fc6c3114bf782c62d567cf4d88d6c48c78c65ff72789a226119234a&cht=bvg&chd=t:10,15,25,30,40,80&chs=700x300&chxt=x,y&chxl=0:%7CMarch%20'18%7CApril%20'18%7CMay%20'18%7CJune%20'18%7CJuly%20'18%7CAugust%20'18%7C&chdl=Visitors%20(in%20thousands)&chf=b0,lg,90,05B142,1,0CE858,0.2&chxs=1N**K&chtt=Visitors%20report&chma=0,0,10,10&chl=%7C%7C%7C%7C%2033%25%20!%7Cx2%20&icretina=1&icac=fgribreau)
 
-![chart](https://image-charts.com/chart?chs=700x300&cht=bvs&chxt=y&chf=b0,lg,90,EA469EFF,1,03A9F47C,0.4&chan=1100,easeInCirc&chl=2014|2015|2016|2017|2018&chd=a:30010,-30000,50000,80000,20000&chof=1535403433426&chxs=0N*cEURs*&chdl=Income)
+![chart](https://image-charts.com/chart?ichm=5605b1b1e95892f119b4aff3340c796c87821a5a165c31d99da0c12dbd41d4ea&chs=700x300&cht=bvs&chxt=y&chf=b0,lg,90,EA469EFF,1,03A9F47C,0.4&chl=2014|2015|2016|2017|2018&chd=a:30010,-30000,50000,80000,20000&chof=1535403433426&chxs=0N*cEURs*&chdl=Income&icretina=1&icac=fgribreau)
 
 ### Bubble charts
 
-![chart](https://image-charts.com/chart?cht=bb&chs=700x300&chd=t:40,60,10,_,47,40,12,_,10,10,20,_,20,40,40|50,30,5,_,20,20,6,_,5,5,10,_,15,20,20&chxt=x,y&chma=0,0,20&chl=||hum|WoW!|&chf=b0,lg,45,ffeb3b,0.2,f443367C,1|b1,lg,90,03a9f4,0,3f51b5,1)
+![chart](https://image-charts.com/chart?ichm=b9cc80b2c782cc161b8a5a619162468d0825a3e8e7c387564720e68316b413b2&cht=bb&chs=700x300&chd=t:40,60,10,_,47,40,12,_,10,10,20,_,20,40,40%7C50,30,5,_,20,20,6,_,5,5,10,_,15,20,20&chxt=x,y&chma=0,0,20&chl=%7C%7Chum%7CWoW!%7C&chf=b0,lg,45,ffeb3b,0.2,f443367C,1%7Cb1,lg,90,03a9f4,0,3f51b5,1&icretina=1&icac=fgribreau)
 
 ### Pie charts
 
-![chart](https://image-charts.com/chart?chs=700x300&chxt=x,y&chl=2018|2017|2015&chd=t:60,40,20&cht=pa&chdl=Image|Charts|Rocks&chf=ps0-0,lg,45,ffeb3b,0.2,f443367C,1|ps0-1,lg,45,8bc34a,0.2,0096887C,1|ps0-2,lg,45,EA469E,0.2,03A9F47C,1&chan)
+![chart](https://image-charts.com/chart?ichm=244d9fd08daa4085036a982b5b60247649d043c15faf6667cd05169a8ed0ce39&chs=700x300&chxt=x,y&chl=2018%7C2017%7C2015&chd=t:60,40,20&cht=pa&chdl=Image%7CCharts%7CRocks&chf=ps0-0,lg,45,ffeb3b,0.2,f443367C,1%7Cps0-1,lg,45,8bc34a,0.2,0096887C,1%7Cps0-2,lg,45,EA469E,0.2,03A9F47C,1&icretina=1&icac=fgribreau)
 
 ### Line charts
 
-![chart](https://image-charts.com/chart?cht=lc&chs=700x300&chd=t:10,25,30,40,12,48,100,20,47,29,84,30,27,50,70&chxt=x,y&chxl=0:%7CJun%7CJul%7CAug%7CSep%7COct%7CNov%7CDec%7CJan%7C1:%7C%7C50%7C100&chm=B,FCECF4,0,0,0&chco=E4061C&chdl=Coffee%20consumed&chma=0,0,20,10&chl=%7C%7C%7C%7C%7C%7Csuch%20a%20very%20%20%20big%20project!)
+![chart](https://image-charts.com/chart?ichm=54e1eaf12f3437bbaf079dea49602dc4e600080d5b8b0efae8ae1180f6946384&cht=lc&chs=700x300&chd=t:10,25,30,40,12,48,100,20,47,29,84,30,27,50,70&chxt=x,y&chxl=0:%7CJun%7CJul%7CAug%7CSep%7COct%7CNov%7CDec%7CJan%7C1:%7C%7C50%7C100&chm=B,FCECF4,0,0,0&chco=E4061C&chdl=Coffee%20consumed&chma=0,0,20,10&chl=%7C%7C%7C%7C%7C%7Csuch%20a%20very%20%20%20big%20project!&icretina=1&icac=fgribreau)
 
 ### Graph Viz charts
 
@@ -31,9 +31,9 @@ Here are some examples of what charts you can generate and embed into emails or 
 ### QR codes
 
 <center>
-![qr code static chart](https://image-charts.com/chart?chs=150x150&cht=qr&chl=Hello%20world&choe=UTF-8)
+![qr code static chart](https://image-charts.com/chart?ichm=ddae940392957fc9d28e7e2c2fa295699b0a04e93b6b5d81d50d219d72db4e33&chs=150x150&cht=qr&chl=Hello world&choe=UTF-8&icretina=1&icac=fgribreau)
 </center>
 
 <center>
-![chart](https://image-charts.com/chart?chs=200x200&cht=qr&chl=This%20is%20so%20awesome&choe=UTF-8)
+![chart](https://image-charts.com/chart?ichm=3d4f707a98cd87328725198cbf687a7fd854acafbc3bf16a74a0a5d81f4db4f3&chs=200x200&cht=qr&chl=This is so awesome&choe=UTF-8&icretina=1&icac=fgribreau)
 </center>
