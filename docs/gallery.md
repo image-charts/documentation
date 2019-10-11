@@ -2,7 +2,7 @@ Here are some examples of what charts you can generate and embed into emails or 
 
 ### Bar charts
 
-![chart](https://image-charts.com/chart?ichm=0b71cdaf8fc6c3114bf782c62d567cf4d88d6c48c78c65ff72789a226119234a&cht=bvg&chd=t:10,15,25,30,40,80&chs=700x300&chxt=x,y&chxl=0:%7CMarch%20'18%7CApril%20'18%7CMay%20'18%7CJune%20'18%7CJuly%20'18%7CAugust%20'18%7C&chdl=Visitors%20(in%20thousands)&chf=b0,lg,90,05B142,1,0CE858,0.2&chxs=1N**K&chtt=Visitors%20report&chma=0,0,10,10&chl=%7C%7C%7C%7C%2033%25%20!%7Cx2%20&icretina=1&icac=fgribreau)
+![chart](https://image-charts.com/chart?ichm=0b71cdaf8fc6c3114bf782c62d567cf4d88d6c48c78c65ff72789a226119234a&cht=bvg&chd=t:10,15,25,30,40,80&chs=700x300&chxt=x,y&chxl=0:%7CMarch%20'18%7CApril%20'18%7CMay%20'18%7CJune%20'18%7CJuly%20'18%7CAugust%20'18%7C&chdl=Visitors%20%28in%20thousands%29&chf=b0,lg,90,05B142,1,0CE858,0.2&chxs=1N**K&chtt=Visitors%20report&chma=0,0,10,10&chl=%7C%7C%7C%7C%2033%25%20!%7Cx2%20&icretina=1&icac=fgribreau)
 
 ![chart](https://image-charts.com/chart?ichm=5605b1b1e95892f119b4aff3340c796c87821a5a165c31d99da0c12dbd41d4ea&chs=700x300&cht=bvs&chxt=y&chf=b0,lg,90,EA469EFF,1,03A9F47C,0.4&chl=2014|2015|2016|2017|2018&chd=a:30010,-30000,50000,80000,20000&chof=1535403433426&chxs=0N*cEURs*&chdl=Income&icretina=1&icac=fgribreau)
 
