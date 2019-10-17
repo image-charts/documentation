@@ -26,22 +26,23 @@ nav:
   - Graph Viz Charts: graph-viz-charts.md
   - QR Codes: qr-codes.md
   - Reference:
-    - Chart Size: reference/chart-size.md
     - Chart Type: reference/chart-type.md
+    - Chart Size: reference/chart-size.md
     - Data Format: reference/data-format.md
     - Color Format: reference/color-format.md
-    - Chart Title: reference/chart-title.md
+    - Title: reference/chart-title.md
     - Grid Lines: reference/grid-lines.md
+    - Labels: reference/chart-label.md
+    - Margins: reference/chart-margin.md
+    - Axis: reference/chart-axis.md
+    - Legend: reference/legend-text-and-style.md
+    - Font: reference/chart-font.md
     - Shape Markers: reference/shape-markers.md
     - Line Markers: reference/line-markers.md
-    - Legend Text and Style: reference/legend-text-and-style.md
-    - Chart Label: reference/chart-label.md
-    - Chart Margin: reference/chart-margin.md
-    - Chart Axis: reference/chart-axis.md
-    - Background Fill: reference/background-fill.md
+    - Background: reference/background-fill.md
     - Gif animation: reference/animation.md
     - Output Format: reference/output-format.md
-    - Post requests: reference/post-requests.md
+    - POST requests: reference/post-requests.md
     - Retina support: reference/retina.md
     - Compound Charts: reference/compound-charts.md
   - Guides:
