@@ -7,7 +7,7 @@ You can specify the size of the chart's margins, in pixels. Margins are calculat
 chma=<left_margin>,<right_margin>,<top_margin>,<bottom_margin>
 ```
 
-- **`<left_margin>, <right_margin>, <top_margin>, <bottom_margin>`** Minimum margin size around the chart area, in pixels. Increase this value to include some padding to prevent axis labels from bumping against the borders of the chart.
+- **`<left_margin>, <right_margin>, <top_margin>, <bottom_margin>`** Minimum margin size around the chart area, in pixels. Increase this value to include some padding to prevent axis labels from bumping against the borders of the chart. Unlike the old deprecated Google Image Charts API, **negative margins are also allowed**.
 <!-- - **`<opt_legend_width>, <opt_legend_height>`** [Optional] Width of the margin around the legend, in pixels. Use this to avoid having the legend bump up against the chart area or the edges of the image. -->
 
 
