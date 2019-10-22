@@ -14,7 +14,7 @@ There are three general ways to show multiple series in a bar chart:
 
 - **Grouped vertically** `bvg`
 
-![chart](https://image-charts.com/chart?cht=bvg&chs=700x100&chd=t:5,5,5|10,10,10|15,15,15&chds=0,120&chco=4d89f9,c6d9fd,00B88A&chbh=a&chxs=0,000000,0,0,_&chxt=y&chm=N,000000,0,,10|N,000000,1,,10|N,000000,2,,10)
+![chart](https://image-charts.com/chart?cht=bvg&chs=700x150&chd=t:5,5,5|10,10,10|15,15,15&chds=0,120&chco=4d89f9,c6d9fd,00B88A&chbh=a&chxs=0,000000,0,0,_&chxt=y&chm=N,000000,0,,10|N,000000,1,,10|N,000000,2,,10&chma=0,0,10,10)
 ```
 cht=bvg
 chd=t:5,5,5|10,10,10|15,15,15
@@ -22,7 +22,7 @@ chd=t:5,5,5|10,10,10|15,15,15
 
 - **Grouped horizontally** `bhg`
 
-![chart](https://image-charts.com/chart?cht=bhg&chs=700x100&chd=t:5,5,5|10,10,10|15,15,15&chds=0,120&chco=4d89f9,c6d9fd,00B88A&chbh=a&chxs=0,000000,0,0,_&chxt=y&chm=N,000000,0,,10|N,000000,1,,10|N,000000,2,,10)
+![chart](https://image-charts.com/chart?cht=bhg&chs=700x150&chd=t:5,5,5|10,10,10|15,15,15&chds=0,120&chco=4d89f9,c6d9fd,00B88A&chbh=a&chxs=0,000000,0,0,_&chxt=y&chm=N,000000,0,,10|N,000000,1,,10|N,000000,2,,10&chma=0,0,10,10)
 ```
 cht=bhg
 chd=t:5,5,5|10,10,10|15,15,15
@@ -30,7 +30,7 @@ chd=t:5,5,5|10,10,10|15,15,15
 
 - **Stacked vertically** `bvs`
 
-![chart](https://image-charts.com/chart?cht=bvs&chs=700x100&chd=t:5,5,5|10,10,10|15,15,15&chds=0,120&chco=4d89f9,c6d9fd,00B88A&chbh=20&chm=N,000000,0,0,10|N,000000,0,1,10|N,000000,0,2,10|N,000000,1,0,10|N,000000,1,1,10|N,000000,1,2,10|N,000000,2,0,10|N,000000,2,1,10|N,000000,2,2,10&chxs=0,000000,0,0,_&chxt=y)
+![chart](https://image-charts.com/chart?cht=bvs&chs=700x150&chd=t:5,5,5|10,10,10|15,15,15&chds=0,120&chco=4d89f9,c6d9fd,00B88A&chbh=20&chm=N,000000,0,0,10|N,000000,0,1,10|N,000000,0,2,10|N,000000,1,0,10|N,000000,1,1,10|N,000000,1,2,10|N,000000,2,0,10|N,000000,2,1,10|N,000000,2,2,10&chxs=0,000000,0,0,_&chxt=y&chma=0,0,10,10)
 <!-- ![chart](https://image-charts.com/chart?cht=bvs&chs=100x75&chd=t:5,5,5|10,10,10|15,15,15&chds=0,120&chco=4d89f9,c6d9fd,00B88A&chbh=20&chds=0,40&chm=N,000000,0,0,10|N,000000,0,1,10|N,000000,0,2,10|N,000000,1,0,10|N,000000,1,1,10|N,000000,1,2,10|N,000000,2,0,10|N,000000,2,1,10|N,000000,2,2,10&chxs=0,000000,0,0,_&chxt=y) -->
 
 ```
@@ -40,7 +40,7 @@ chd=t:5,5,5|10,10,10|15,15,15
 
 - **Stacked horizontally** `bhs`
 
-![chart](https://image-charts.com/chart?cht=bhs&chs=700x100&chd=t:5,5,5|10,10,10|15,15,15&chds=0,120&chco=4d89f9,c6d9fd,00B88A&chbh=20&chm=N,000000,0,0,10|N,000000,0,1,10|N,000000,0,2,10|N,000000,1,0,10|N,000000,1,1,10|N,000000,1,2,10|N,000000,2,0,10|N,000000,2,1,10|N,000000,2,2,10&chxs=0,000000,0,0,_&chxt=y)
+![chart](https://image-charts.com/chart?cht=bhs&chs=700x150&chd=t:5,5,5|10,10,10|15,15,15&chds=0,120&chco=4d89f9,c6d9fd,00B88A&chbh=20&chm=N,000000,0,0,10|N,000000,0,1,10|N,000000,0,2,10|N,000000,1,0,10|N,000000,1,1,10|N,000000,1,2,10|N,000000,2,0,10|N,000000,2,1,10|N,000000,2,2,10&chxs=0,000000,0,0,_&chxt=y&chma=0,0,10,10)
 
 ```
 cht=bhs
