@@ -4,13 +4,10 @@ Image-Charts documentation
 Read the documentation [online](https://documentation.image-charts.com/).
 
 
-### dev-env setup
-
-```
-make setup
-```
-
 ### Start local dev environment
+
+Requirements:
+- docker
 
 ```
 make serve
