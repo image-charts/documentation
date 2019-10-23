@@ -1,21 +1,14 @@
 deploy: setup build
 
-setup:
-	pip3 --version
-	python3 --version
-	pip3 install --upgrade pip
-	pip3 install --no-cache-dir -r deps.txt
-
 serve:
-	mkdocs serve
+	docker run -v ${PWD}:/docs -it -p 8000:8000 imagecharts/documentation
 
 build:
-	mkdocs build
+	docker run -v ${PWD}:/docs -it -p 8000:8000 imagecharts/documentation build
 
 update: update-logo
 
 test: test-python
-
 
 test-python:
 	docker run -v $(shell pwd)/docs:/docs python:2.7-slim python /docs/reference/Data_format/encoding.py -v
