@@ -49,8 +49,8 @@ nav:
     - How to setup a dependency graph in Google Sheets: guides/graph-in-google-sheets.md
   - Enterprise: enterprise.md
   - Limits and Quotas: limits-and-quotas.md
-  - API Status: https://status.image-charts.com
-  - API Changelog: https://headwayapp.co/image-charts-changelog
+  - Status Page: https://status.image-charts.com
+  - Changelog: https://headwayapp.co/image-charts-changelog
   - Gallery: gallery.md
 
 # Configuration
