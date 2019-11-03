@@ -47,11 +47,11 @@ nav:
     - Compound Charts: reference/compound-charts.md
   - Guides:
     - How to setup a dependency graph in Google Sheets: guides/graph-in-google-sheets.md
+  - Gallery: gallery.md
   - Enterprise: enterprise.md
   - Limits and Quotas: limits-and-quotas.md
   - Status Page: https://status.image-charts.com
   - Changelog: https://headwayapp.co/image-charts-changelog
-  - Gallery: gallery.md
 
 # Configuration
 theme:
