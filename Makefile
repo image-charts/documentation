@@ -4,6 +4,7 @@ serve:
 	docker run -v ${PWD}:/docs -it -p 8000:8000 imagecharts/documentation
 
 build:
+    curl -s https://image-charts.com/swagger.json | jq -r '(reduce (.paths[].get.parameters[] | select(.name == "icff").enum[]) as $item ([]; . + ["+ " + $item]))[]' > docs/fonts/google-fonts.md
 	docker run -v ${PWD}:/docs -it -p 8000:8000 imagecharts/documentation build
 
 update: update-logo
