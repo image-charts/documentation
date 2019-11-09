@@ -4,7 +4,7 @@
 You can combine several chart types with [line markers](./line-markers.md) <!--or candlestick--> to highlight data trends or show variance. When you add line <!--or candlestick--> markers onto bar, scatter, or other chart types, the resulting chart is called a **compound chart**. Some compound charts look like a combination of two chart types—for instance, a bar chart with a [tracking line](./line-markers.md):
 
 
-![chart](https://image-charts.com/chart?cht=bvs&chbh=5,2&chm=D,0033FF,2,0,5,1&chs=700x200&chd=s2:1XQbnf4,EWoQMUB,9halxp9&chco=4D89F9,C6D9FD)
+![chart](https://image-charts.com/chart?ichm=603295ccdd64d1c07fccc0e98bdd1ed9e7daba065b274f14168b0a6214d153c0&cht=bvs&chbh=5,2&chm=D,0033FF,2,0,5,1&chs=700x200&chd=s2:1XQbnf4,EWoQMUB,9halxp9&chco=4D89F9,C6D9FD&icac=fgribreau)
 
 ```
 chd=s2:1XQbnf4,EWoQMUB,9halxp9
@@ -19,7 +19,7 @@ All compound charts consist of one or more base chart types (line, scatter, bar,
 2. **Hide your extra marker data from the base chart**. If you simply add an extra data series to a bar chart for your tracking line, the chart would show that as a new series of bars. To prevent this, you must hide this extra series. To hide a series, include a single digit after the `chd` format descriptor: for example, `chd=t1:30,10,20|60,40,50`. This `1` digit from `t1` tells the Chart API how many data series to use to draw elements for that base chart type as defined by the cht parameter (bars for bar charts, data points for line charts, and so on). Any additional data series will be ignored by that chart type when drawing the chart. `Note that this is a 1-based number, not 0-based`. So `t1` means "use only the first data series for bars," `t2` means "use only the first two series for bars," etc.
 3. **Use the hidden data series to draw <!--candlestick markers,--> [line markers](./line-markers.md), or other markers**. How to draw markers is covered in the linked sections. Reference the hidden data series as the source for your markers. You can include as many additional hidden data series as you like, and use them for additional chart markers.
 
-![](https://staging-us-central1.image-charts.com/chart?cht=bvg&chm=D,009900,1,0,5,1&chs=700x200&chd=t1:30,10,20|60,40,50&chxt=y&chco=224499)
+![](https://image-charts.com/chart?ichm=d13ef0147274251cf72c1814e32339b7e6a8f59a8716e5186664763d86de90ba&cht=bvg&chm=D,009900,1,0,5,1&chs=700x200&chd=t1:30,10,20|60,40,50&chxt=y&chco=224499&icac=fgribreau)
 
 ```
 cht=bvg
@@ -38,7 +38,7 @@ Here is a bar chart with a [trace line](./line-markers.md). The first two data s
 - `chm=D,0033FF,2,0,5,1` - Trace line (D), blue, data from series index 2, all points (0), line is 5 pixels wide, and has a z-order of 1.
 
 
-![](https://image-charts.com/chart?cht=bvs&chbh=5,2&chm=D,0033FF,2,0,5,1&chs=700x200&chd=s2:1XQbnf4,EWoQMUB,9halxp9&chco=224499,009900&chxt=x,y&chxl=0:|Jan|Feb|Mar|Apr|May|Jun|Jul)
+![](https://image-charts.com/chart?ichm=ad2e1cf9533712eb2c76593bc1e48cd5caab6b56f350d0a16e08ac3b50edf8ab&cht=bvs&chbh=5,2&chm=D,0033FF,2,0,5,1&chs=700x200&chd=s2:1XQbnf4,EWoQMUB,9halxp9&chco=224499,009900&chxt=x,y&chxl=0:|Jan|Feb|Mar|Apr|May|Jun|Jul&icac=fgribreau)
 
 ```
 chm=
@@ -52,7 +52,7 @@ chd=s2:
 ##### Stacked bar chart with an independent line drawn
 
 
-![](https://image-charts.com/chart?cht=bvs&chs=700x200&chbh=15,10&chd=t2:0,10,20,30,20,70,80|0,20,10,5,20,30,10|10,0,20,15,60,40,30&chco=224499,009900&chxt=x,y&chm=D,76A4FB,2,0,3&chxl=0:|Jan|Feb|Mar|Apr|May|Jun|Jul)
+![](https://image-charts.com/chart?ichm=52a3cb35f5b6f08934e7d3244d74778f2afa7f06a33187a0335381a911b7264c&cht=bvs&chs=700x200&chbh=15,10&chd=t2:0,10,20,30,20,70,80|0,20,10,5,20,30,10|10,0,20,15,60,40,30&chco=224499,009900&chxt=x,y&chm=D,76A4FB,2,0,3&chxl=0:|Jan|Feb|Mar|Apr|May|Jun|Jul&icac=fgribreau)
 
 
 ```
