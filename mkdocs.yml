@@ -26,27 +26,26 @@ nav:
   - Graph Viz Charts: graph-viz-charts.md
   - QR Codes: qr-codes.md
   - Reference:
-    - Chart Type: reference/chart-type.md
-    - Chart Size: reference/chart-size.md
-    - Data Format: reference/data-format.md
-    - Color Format: reference/color-format.md
-    - Title: reference/chart-title.md
-    - Grid Lines: reference/grid-lines.md
-    - Labels: reference/chart-label.md
-    - Margins: reference/chart-margin.md
-    - Axis: reference/chart-axis.md
-    - Legend: reference/legend-text-and-style.md
-    - Font: reference/chart-font.md
-    - Shape Markers: reference/shape-markers.md
-    - Line Markers: reference/line-markers.md
-    - Background: reference/background-fill.md
-    - Gif animation: reference/animation.md
-    - Output Format: reference/output-format.md
-    - POST requests: reference/post-requests.md
-    - Retina support: reference/retina.md
-    - Compound Charts: reference/compound-charts.md
+      - Chart Type: reference/chart-type.md
+      - Chart Size: reference/chart-size.md
+      - Data Format: reference/data-format.md
+      - Color Format: reference/color-format.md
+      - Title: reference/chart-title.md
+      - Grid Lines: reference/grid-lines.md
+      - Labels: reference/chart-label.md
+      - Margins: reference/chart-margin.md
+      - Axis: reference/chart-axis.md
+      - Legend: reference/legend-text-and-style.md
+      - Font: reference/chart-font.md
+      - Shape Markers: reference/shape-markers.md
+      - Background: reference/background-fill.md
+      - Gif animation: reference/animation.md
+      - Output Format: reference/output-format.md
+      - POST requests: reference/post-requests.md
+      - Retina support: reference/retina.md
+      - Compound Charts: reference/compound-charts.md
   - Guides:
-    - How to setup a dependency graph in Google Sheets: guides/graph-in-google-sheets.md
+      - How to setup a dependency graph in Google Sheets: guides/graph-in-google-sheets.md
   - Gallery: gallery.md
   - Enterprise: enterprise.md
   - Limits and Quotas: limits-and-quotas.md
@@ -56,8 +55,8 @@ nav:
 # Configuration
 theme:
   # https://github.com/squidfunk/mkdocs-material
-  name: 'material'
-  custom_dir: 'theme'
+  name: "material"
+  custom_dir: "theme"
 
   # Don't include MkDocs' JavaScript
   include_search_page: false
@@ -78,12 +77,12 @@ theme:
 
 extra:
   social:
-    - type: 'github'
-      link: 'https://github.com/image-charts'
-    - type: 'twitter'
-      link: 'https://twitter.com/imagecharts'
-    - type: 'envelope'
-      link: 'mailto:support@image-charts.com'
+    - type: "github"
+      link: "https://github.com/image-charts"
+    - type: "twitter"
+      link: "https://twitter.com/imagecharts"
+    - type: "envelope"
+      link: "mailto:support@image-charts.com"
 
 # facelessuser.github.io/pymdown-extensions
 # https://www.mkdocs.org/user-guide/configuration/#formatting-options
