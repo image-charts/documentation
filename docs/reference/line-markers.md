@@ -1,4 +1,4 @@
-!!! note "Enterprise+ plan only"
+!!! info "Enterprise+ subscription only"
     [Compound charts](https://documentation.image-charts.com/reference/compound-charts/) are only enabled in **Enterprise+** subscriptions
     
 You can add lines to line or bar charts to highlight trends.

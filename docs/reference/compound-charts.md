@@ -1,4 +1,4 @@
-!!! note "Enterprise+ plan only"
+!!! info "Enterprise+ subscription only"
     Compound charts are only enabled in **Enterprise+** subscriptions
 
 You can combine several chart types with line markers <!--or candlestick--> to highlight data trends or show variance. When you add line <!--or candlestick--> markers onto bar, scatter, or other chart types, the resulting chart is called a **compound chart**. Some compound charts look like a combination of two chart types—for instance, a bar chart with a tracking line:
