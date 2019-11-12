@@ -1,3 +1,6 @@
+!!! note "Enterprise+ plan only"
+    [Compound charts](https://documentation.image-charts.com/reference/compound-charts/) are only enabled in **Enterprise+** subscriptions
+    
 You can add lines to line or bar charts to highlight trends.
 
 To add multiple lines (or combine this with any other chm markers), separate the chm parameter sets using a pipe ( | ) delimiter. You cannot make a dashed line marker with this parameter.
@@ -24,7 +27,7 @@ chm=
 This is an example of drawing a marker line on a bar chart. The z-order is set to 1, so the line is drawn on top of the bars.
 This example uses the same data for both the bars and the data line.
 
-![compound chart](https://image-charts.com/chart?cht=bvg&chm=D,0033FF,0,0,5,1&chbh=20&chs=700x200&chd=s:1XQbnf4&chco=76A4FB)
+![compound chart](https://image-charts.com/chart?ichm=6f6c84084cba074285a396b3a71dd8c66ae78df2a0229edc1e48a1a11d3e8a6e&cht=bvg&chm=D,0033FF,0,0,5,1&chbh=20&chs=700x200&chd=s:1XQbnf4&chco=76A4FB&icac=fgribreau)
 
 ```
 chm=D,0033FF,0,0,5,1
@@ -38,7 +41,7 @@ This is the same bar chart, but with an additional data series just for the line
 
 See [Compound Charts](./compound-charts.md) for more information.
 
-![](https://image-charts.com/chart?cht=bvg&chm=D,0033FF,1,0,5,1&chbh=20&chs=700x200&chd=s1:1XQbnf4,43ksfg6&chco=76A4FB)
+![](https://image-charts.com/chart?ichm=b516a6b4c1e98e170fc3c6f2d020fe343d5c155d0800631e37d620cc2352f8ab&cht=bvg&chm=D,0033FF,1,0,5,1&chbh=20&chs=700x200&chd=s1:1XQbnf4,43ksfg6&chco=76A4FB&icac=fgribreau)
 
 ```
 chm=D,0033FF,1,0,5,1
