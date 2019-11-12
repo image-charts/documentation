@@ -407,6 +407,7 @@ Thus we use `<skip_labels>` (see `0,s`, 0 means x axis and `s` means skip labels
 &chxt=x,y
 &chxs=1N**ºC,000000|0,s
 ```
+
 <!--
 !!! info "Enterprise+ subscribers"
     Font size and color are specified for the second x-axis (Jan, Feb, Mar).
