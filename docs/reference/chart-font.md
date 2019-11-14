@@ -1,5 +1,5 @@
 !!! note "Enterprise+ plan only"
-    Custom fonts based are only available to **Enterprise+** subscriptions
+    Custom fonts are only available to **Enterprise+** subscriptions
 
 Specify the font family and font style using `icfs` and `icff` query parameters.
 
@@ -16,7 +16,7 @@ icff=<fontFamily>
 A pie chart with [`icff=Indie Flower`](https://fonts.google.com/specimen/Indie+Flower) font family and default font-style (`normal`):
 Note that `icff=Indie+Flower` and `icff=Indie%20Flower` will also work.
 
-![chart](https://image-charts.com/chart?ichm=21d1633d17741be20e4564378a5b2b83f14645ec48cbefa7eee7b7eea3ce240a&cht=pd&chs=700x400&chd=t:10,20,30&chco=EA469E,03A9F4,FFC00C&chl=Aaaa|Bbbb|Cccc&chdl=A|B|C&chli=95K%E2%82%AC&icff=Indie%20Flower&icretina=1&chtt=This%20is%20a%20test&icac=fgribreau)
+![chart](https://image-charts.com/chart?ichm=21d1633d17741be20e4564378a5b2b83f14645ec48cbefa7eee7b7eea3ce240a&cht=pd&chs=700x400&chd=t:10,20,30&chco=EA469E,03A9F4,FFC00C&chl=Aaaa|Bbbb|Cccc&chdl=A|B|C&chli=95K%E2%82%AC&icff=Indie%20Flower&ic&=1&chtt=This%20is%20a%20test&icac=fgribreau)
 
 
 
@@ -47,9 +47,9 @@ icfs=<fontStyle>
 
 #### Example
 
-A pie chart with `italic` font style
+A pie chart with `icfs=italic` font style
 
-![chart](https://image-charts.com/chart?cht=pd&icac=fgribreau&chd=t:10,20,30&chco=EA469E,03A9F4,FFC00C&chl=Aaaa|Bbbb|Cccc&chdl=A|B|c&chli=95K€&chs=700x200&icfs=italic&icff=Roboto&ichm=b740adda222e046ddae2287bb9fbdff966a88fa580ca3f0afa95cef4efcca6d1)
+![chart](https://image-charts.com/chart?ichm=707debc1a57b09f8eb470694c1325e63666d6ee1aa770dc6c2853718d8ea06dc&cht=pd&icac=fgribreau&chd=t:10,20,30&chco=EA469E,03A9F4,FFC00C&chl=Aaaa|Bbbb|Cccc&chdl=A|B|c&chli=95K%E2%82%AC&chs=700x200&icfs=italic&icff=Roboto&icretina=1)
 
 
 #### Supported open-source fonts
