@@ -1,4 +1,4 @@
-!!! info Looking for line fills?
+!!! info "Looking for line fills?"
     `chm` parameter can also be used for [line fills](/line-charts/#line-fills) in line charts
 
 !!! note "Enterprise+ plan only"
