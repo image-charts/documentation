@@ -109,7 +109,7 @@ chxr=1,-50,50
 
 You can specify custom string axis labels on any axis, using the `chxl` parameter. You can specify as many labels as you like. If you display an axis (using the [`chxt`](#visible-axes) parameter) and do not specify custom labels, the standard, numeric labels will be applied. To specify a custom numeric range, use the [`chxr`](#axis-range) parameter instead.
 
-To set specific locations along the axis for your labels, use the chxp parameter.
+<!-- To set specific locations along the axis for your labels, use the chxp parameter.-->
 
 #### Syntax
 
