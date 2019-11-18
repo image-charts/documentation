@@ -16,7 +16,7 @@ icff=<fontFamily>
 A pie chart with [`icff=Indie Flower`](https://fonts.google.com/specimen/Indie+Flower) font family and default font-style (`normal`):
 Note that `icff=Indie+Flower` and `icff=Indie%20Flower` will also work.
 
-![chart](https://image-charts.com/chart?ichm=21d1633d17741be20e4564378a5b2b83f14645ec48cbefa7eee7b7eea3ce240a&cht=pd&chs=700x400&chd=t:10,20,30&chco=EA469E,03A9F4,FFC00C&chl=Aaaa|Bbbb|Cccc&chdl=A|B|C&chli=95K%E2%82%AC&icff=Indie%20Flower&ic&=1&chtt=This%20is%20a%20test&icac=fgribreau)
+![chart](https://image-charts.com/chart?ichm=0f52973c87b32e3406a974e995a5eddf69243c72345fc29d3c3cdfb331727ee3&cht=pd&chs=700x400&chd=t:10,20,30&chco=EA469E,03A9F4,FFC00C&chl=Aaaa|Bbbb|Cccc&chdl=A|B|C&chli=95K€&icff=Indie Flower&chtt=This is a test&icac=fgribreau)
 
 
 
