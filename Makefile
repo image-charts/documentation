@@ -1,9 +1,14 @@
+.PHONY: build
+
 deploy: setup build
 
 serve:
 	docker run -v ${PWD}:/docs -it -p 8000:8000 imagecharts/documentation
 
 build:
+	mkdir -p docs/fonts
+	# note: we use "$$" below in "$$item" to escape automatic interpolation
+	curl -s https://image-charts.com/swagger.json | jq -r '.paths[].get.parameters[] | select(.name == "icff").enum | reduce .[] as $$item ([]; . + ["`" + $$item + "`"]) | join(", ")' > docs/fonts/google-fonts.md
 	docker run -v ${PWD}:/docs -it -p 8000:8000 imagecharts/documentation build
 
 update: update-logo
