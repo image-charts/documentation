@@ -143,7 +143,7 @@ chs=700x190
 
 Labels also work in [bar charts](/bar-charts):
 
-![chart](https://image-charts.com/chart?cht=bvs&chd=t:10,40,25&chxt=x,y&chxl=0:|Jun|July|Aug|&chs=700x190&chf=b0,lg,90,03a9f4,0,3f51b5,1&chan=1200,easeOutBounce)
+![chart](https://image-charts.com/chart?cht=bvs&chd=t:10,40,25&chxt=x,y&chxl=0:|Jun|July|Aug&chs=700x190&chf=b0,lg,90,03a9f4,0,3f51b5,1&chan=1200,easeOutBounce)
 
 ```
 cht=bvs
