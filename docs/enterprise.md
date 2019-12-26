@@ -62,6 +62,6 @@ Signing your URLs will ensure that no-one beside you created it and Image-Charts
 !!! tip "Want more?"
     Don't see your favorite language here? [Just ask us :angel:](mailto:support@image-charts.com) !
 
-## Online Url Generator
+## Online static chart generator
 
-The easiest way to generate a watermark-free Image-Charts is to use our [online url generator](https://codepen.io/FGRibreau/full/ZKoOGo/).
+The easiest way to generate a watermark-free Image-Charts — that is, to sign generated URL with HMAC algorithm — is to use our [online url generator](https://editor.image-charts.com/?tab_editor=enterprise#https:/image-charts.com/chart?chd=a:30010,-30000,50000,80000,20000&chdl=Income&chf=b0,lg,90,EA469EFF,1,03A9F47C,0.4&chl=2014|2015|2016|2017|2018&chof=1535403433426&chs=700x300&cht=bvs&chxs=0N*cEURs*&chxt=y).
