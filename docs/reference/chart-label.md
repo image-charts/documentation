@@ -58,7 +58,7 @@ Here is an example of a [line chart](/line-charts) with label on some points, to
 chl=Go!||||||oops||||||Yes!|||||||||not\nagain||||||||||||||oh boy
 ```
 
-A [bar chart](/bar-charts) with text inside each bar. Note that we only display the Y axis with `chxt=y`.
+A [bar chart](/bar-charts) with text inside each bar. Note that we only display the Y axis with `chxt=y`. Note that if `chxl` is not defined for the x axis but `chl` is, `chl` will be used instead.
 
 ![chart](https://image-charts.com/chart?cht=bvg&chd=t:50,30,10,60,65,90&chf=b0,lg,90,03a9f47C,0,3f51b57C,1&chls=2.0,0.0,0.0&chxt=y&chs=700x200&chg=20,50&chl=a|b|c|d|e|f)
 
