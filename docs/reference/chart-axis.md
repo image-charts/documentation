@@ -118,20 +118,17 @@ cht=lc:nda
       3:|Low|High
     ```
 
-<!--
-[en attente de fix]
-This example shows a horizontal bar chart with an x-axis, a y-axis, an upper t-axis, and a right r-axis.
+    This example shows a horizontal bar chart with an x-axis, a y-axis, an upper t-axis, and a right r-axis.
 
-Axis labels are omitted, so the Chart API displays a range of 0 to 100 for the x-axis and for the t-axis.
+    Axis labels are omitted, so the Chart API displays a range of 0 to 100 for the x-axis and for the t-axis.
 
-The range for the y-axis and for the r-axis is determined by the number of bars. In this case, there are five bars, so the Chart API displays a range of 0 to 4. The first label is centered at the base of the first bar, the second label is centered at the base of the second bar, and so on.
+    The range for the y-axis and for the r-axis is determined by the number of bars. In this case, there are five bars, so the Chart API displays a range of 0 to 4. The first label is centered at the base of the first bar, the second label is centered at the base of the second bar, and so on.
 
-![](https://image-charts.com/chart?ichm=46973d947f70fb47161e7bf9f75657d70302e96750077a4da4142b738dc271b2&chxt=x,y,r,t&cht=bhs&chd=s:EUjVu&chco=76A4FB&chls=2.0&chs=700x225&icac=fgribreau)
+    ![](https://image-charts.com/chart?ichm=46973d947f70fb47161e7bf9f75657d70302e96750077a4da4142b738dc271b2&chxt=x,y,r,t&cht=bhs&chd=s:EUjVu&chco=76A4FB&chls=2.0&chs=700x225&icac=fgribreau)
 
-```
-chxt=x,y,r,t
-```
--->
+    ```
+    chxt=x,y,r,t
+    ```
 
 
 ### Axis Range
@@ -187,9 +184,6 @@ chds=-100,100
 chxr=1,-50,50
 ```
 
-<!--
-# A CORRIGER
-
 !!! danger "Enterprise+ subscribers"
     This example shows left and right y-axes (y and r) and one x-axis (x).
 
@@ -197,7 +191,7 @@ chxr=1,-50,50
 
     Axis direction is reversed for the r-axis (index 2), because the first value (`1000`) is larger than the last value (0).
 
-    ![](https://image-charts.com/chart?ichm=9661e50821299982d8b30d82efaeb117a168c97295b3094b619b5523e399f306&chxt=x,y,r&chxr=0,0,500|1,0,200|2,1000,0&cht=lc&chd=s:cEAELFJHHHKUju9uuXUc&chco=76A4FB&chls=2.0&chs=700x225&icac=fgribreau)
+    ![](https://image-charts.com/chart?chco=76A4FB&chd=s%3AcEAELFJHHHKUju9uuXUc&chls=2.0&chs=700x225&cht=lc&chxr=1%2C0%2C200%7C2%2C1000%2C0&chxt=x%2Cy%2Cr&icac=fgribreau&icretina=1&ichm=e5b79ac7f50d44bf739afcdc639c1b9b5fab59d276a8adc55c293cd9e9581bef)
 
     ```
     chxt=x,y,r
@@ -206,7 +200,6 @@ chxr=1,-50,50
       1,0,200|
       2,1000,0
     ```
--->
 
 ### Custom Axis Labels
 
@@ -407,15 +400,11 @@ Thus we use `<skip_labels>` (see `0,s`, 0 means x axis and `s` means skip labels
 &chxs=1N**ºC,000000|0,s
 ```
 
-<!--
-# A CORRIGER
 
 !!! info "Enterprise+ subscribers"
     Font size and color are specified for the second x-axis (Jan, Feb, Mar).
 
-    ![](https://image-charts.com/chart?ichm=0d7e2915972d892de9b67baa016a3937e8cc3b7807c6cc91521e9d7fd46a23a9&cht=lc&chd=s:cEAELFJHHHKUju9uuXUc&chco=76A4FB&chls=2.0&chs=700x325&chxt=x,y,r,x&chxr=2,0,4&chxl=3:|Jan|Feb|Mar&chxs=3,0000dd,13,0,t&icac=fgribreau)
-
-    ![](https://chart.apis.google.com/chart?cht=lc&chd=s:cEAELFJHHHKUju9uuXUc&chco=76A4FB&chls=2.0&chs=700x325&chxt=x,y,r,x&chxr=2,0,4&chxl=3:|Jan|Feb|Mar&chxs=3,0000dd,13,0,t)
+    ![](https://image-charts.com/chart?chco=76A4FB&chd=s%3AcEAELFJHHHKUju9uuXUc&chls=2.0&chs=700x325&cht=lc&chxl=3%3A%7CJan%7CFeb%7CMar&chxr=2%2C0%2C4&chxs=3%2C0000dd%2C13%2C0%2Ct&chxt=x%2Cy%2Cr%2Cx&icac=fgribreau&icretina=1&ichm=54f1ebd0fb5d54475e3def9fa699aac47c131d4291bae219308c718ec6d3baa9)
 
     ```
     chxt=x,y,r,x
@@ -425,4 +414,3 @@ Thus we use `<skip_labels>` (see `0,s`, 0 means x axis and `s` means skip labels
     chxp=1,10,35,75
     chxs=3,0000DD,13,0,t
     ```
--->
