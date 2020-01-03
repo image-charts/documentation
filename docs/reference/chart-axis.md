@@ -54,11 +54,14 @@ cht=lc:nda
 
 ### Axis Range
 
-You can specify the range of values that appear on each axis independently using the `chxr` parameter. Unlike in Google Image Charts the axis range is related to the data range, which make sense. Specifying `chxr` will change the scale of the chart elements.
+You can specify the range of values that appear on each axis independently using the `chxr` parameter. Unlike in Google Image Charts the axis range is related to the data range, which make sense. 
+
+!!! info "This is only behavior change between Google Image Charts and Image Charts"
+    In Google Image Charts specifying the `chxr` parameter changed the scale of the axis but not the dataset scale. In Image-Charts — because we think it's was the biggest usage issue with Google Image Charts — changing the axis scale through `chxr` also impact the whole dataset scale.
 
 You must make an axis visible using the `chxt` parameter if you want to specify its range.
 
-<!-- To specify custom axis values, use the `chxl` parameter. -->
+To specify custom axis values, use the `chxl` parameter.
 
 #### Syntax
 
