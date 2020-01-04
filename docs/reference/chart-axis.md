@@ -171,9 +171,9 @@ Values for multiple axes should be separated using a pipe character ( | ).
 
 ```
 chxs=
- <axis_index><opt_format_string>,<opt_label_color>,<opt_font_size>,<opt_alignment>,<opt_axis_or_tick>,<opt_tick_color>,<opt_axis_color><skip_labels>
+ <axis_index><opt_format_string>,<opt_label_color>,<opt_font_size>,<opt_alignment>,<opt_axis_or_tick>,<opt_tick_color>,<opt_axis_color><opt_skip_labels>
    |...|
- <axis_index><opt_format_string>,<opt_label_color>,<opt_font_size>,<opt_alignment>,<opt_axis_or_tick>,<opt_tick_color>,<opt_axis_color><skip_labels>
+ <axis_index><opt_format_string>,<opt_label_color>,<opt_font_size>,<opt_alignment>,<opt_axis_or_tick>,<opt_tick_color>,<opt_axis_color><opt_skip_labels>
 ```
 
 - **`<axis_index>`** The axis to which this applies. This is a zero-based index into the `chxt` parameter.
@@ -205,7 +205,8 @@ chxs=
       - `_` - (Underscore) Draw neither axis line nor tick marks. If you want to hide an axis line, use this value.
 - **`<tick_color>`** *[Optional]* The tick mark color, in RRGGBB hexadecimal format. *Default is black*.
 - **`<opt_axis_color>`** *[Optional]* (not supported, please contact our support) The color of this axis line, in RRGGBB hexadecimal format.
-- **`<skip_labels>`** *[Optional]*  Specify `s` if labels on this axis should be hidden in case there are too many
+- **`<opt_skip_labels>`** *[Optional]*  Specify `s` if labels on this axis should be hidden in case there are too many
+- **`<opt_min_max_rotation>`** *[Optional]*  Specify the mininum (e.g. `min10`) and/or maximum (e.g. (`max45`) rotation labels on this axis could have. Default value is `0` (no rotation) for both.
 
 
 #### Example
