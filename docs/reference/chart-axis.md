@@ -109,7 +109,7 @@ cht=lc:nda
     chxt=x,x,y,y
     ```
 
-    [![chart with multiple labels](https://image-charts.com/chart?chco=76A4FB&chd=s%3AcEAELFJHHHKUju9uuXUc&chls=2.0&chma=40%2C20%2C20%2C30&chs=700x325&cht=lc&chxl=1%3A%7CFreezing%7CHot%7C3%3A%7CLow%7CHigh&chxt=x%2Cx%2Cy%2Cy&icac=fgribreau&icretina=1&ichm=a16fc60339d566c22c7d9987644053209f2d1ecee4325cf8df7f447a744f41dd)](https://editor.image-charts.com/chart?chco=76A4FB&chd=s%3AcEAELFJHHHKUju9uuXUc&chls=2.0&chma=40%2C20%2C20%2C30&chs=700x325&cht=lc&chxl=1%3A%7CFreezing%7CHot%7C3%3A%7CLow%7CHigh&chxt=x%2Cx%2Cy%2Cy&icac=fgribreau&icretina=1&ichm=a16fc60339d566c22c7d9987644053209f2d1ecee4325cf8df7f447a744f41dd)
+    [![chart with multiple labels](https://image-charts.com/chart?chco=3072F3&chd=s%3AcEAELFJHHHKUju9uuXUc&chls=2.0&chm=B%2C03a9f4%2C0%2C0%2C0&chma=40%2C20%2C20%2C30&chs=700x325&cht=lc&chxl=1%3A%7CFreezing%7CHot%7C3%3A%7CLow%7CHigh&chxt=x%2Cx%2Cy%2Cy&icac=fgribreau&icretina=1&ichm=553522eccb8c9dd82fe3233ab8c6e12a5bdb3254467cf1d5413d42ef3c2d487f)](https://editor.image-charts.com/chart?chco=3072F3&chd=s%3AcEAELFJHHHKUju9uuXUc&chls=2.0&chm=B%2C03a9f4%2C0%2C0%2C0&chma=40%2C20%2C20%2C30&chs=700x325&cht=lc&chxl=1%3A%7CFreezing%7CHot%7C3%3A%7CLow%7CHigh&chxt=x%2Cx%2Cy%2Cy&icac=fgribreau&icretina=1&ichm=553522eccb8c9dd82fe3233ab8c6e12a5bdb3254467cf1d5413d42ef3c2d487f)
 
     ```
     chxt=x,x,y,y
