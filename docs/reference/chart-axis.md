@@ -206,7 +206,7 @@ chxs=
 - **`<tick_color>`** *[Optional]* The tick mark color, in RRGGBB hexadecimal format. *Default is black*.
 - **`<opt_axis_color>`** *[Optional]* (not supported, please contact our support) The color of this axis line, in RRGGBB hexadecimal format.
 - **`<opt_skip_labels>`** *[Optional]*  Specify `s` if labels on this axis should be hidden in case there are too many
-- **`<opt_min_max_rotation>`** *[Optional]*  Specify the mininum (e.g. `min10`) or the maximum (e.g. `max45`) or both (`min10max45`) rotation degree labels on this axis could have. Default value is `0` (no rotation at all) for both parameters.
+- **`<opt_min_max_rotation>`** *[Optional]* **(upcoming on January 15th, 2020)**  Specify the mininum (e.g. `min10`) or the maximum (e.g. `max45`) or both (`min10max45`) rotation degree labels on this axis could have. Default value is `0` (no rotation at all) for both parameters.
 
 
 #### Example
