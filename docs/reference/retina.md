@@ -1,4 +1,4 @@
-!!! note "Enterprise+ plan only"
+!!! info "Enterprise+ subscription only"
     Retina support is only enabled in **Enterprise+** subscriptions
 
 #### Retina displays

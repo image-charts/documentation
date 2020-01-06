@@ -36,21 +36,100 @@ chxt=
 ```
 
 - **`<axis>`** An axis to show on the chart. Available axes are:
-  * `x` - Bottom x-axis
-  * `y` - Left y-axis
+    * `x` - Bottom x-axis
+    * `y` - Left y-axis
+    * `t` - Top x-axis (:+1: Enterprise+ subscription, **upcoming on January 15th, 2020**)
+    * `r` - Right y-axis (:+1: Enterprise+ subscription, **upcoming on January 15th, 2020**)
 
-Note: `t` (Top x-axis) and `r` (right y-axis) and multiple axes (e.g. x,x,y) are currently not supported.
+!!! info "Enterprise+ subscribers - **upcoming on January 15th, 2020**"
+    `chxt` up to `x,y` is available for *Free* and *Enterprise* subscriptions. Charts with more than two axis requires the Enterprise+ subscription.
+    You can specify multiple axes of the same type, for example: `cht=x,x,y`. This will stack two sets of x-axes along the bottom of the chart. This is useful when adding custom labels along an axis that shows numeric values (see the example below). Axes are drawn from the inside out, so if you have `x,x`, the first x refers to the innermost copy, the next x refers to the next outwards copy, and so on.
 
 
 #### Example
 
-You can suppress default axes in a line chart by specifying :nda after the chart type.
+For our first example, let's ask to display the y-axis:
+
+![chart](https://image-charts.com/chart?cht=ls&chs=700x125&chd=t:40,60,60,45,47,75,70,72&chxt=y)
+
+```
+cht=ls
+chxt=y
+```
+
+Now let's display the x-axis:
+
+![chart](https://image-charts.com/chart?cht=ls&chs=700x125&chd=t:40,60,60,45,47,75,70,72&chxt=x)
+
+```
+cht=ls
+chxt=y
+```
+
+Why not both?
+
+![chart](https://image-charts.com/chart?cht=ls&chs=700x125&chd=t:40,60,60,45,47,75,70,72&chxt=x,y)
+
+```
+cht=ls
+chxt=x,y
+```
+
+Note that unlike sparklines (`cht=ls`), line-charts (`cht=lc`) automatically display x-axis and y-axis:
+
+![chart](https://image-charts.com/chart?cht=lc&chs=700x125&chd=t:40,60,60,45,47,75,70,72)
+
+```
+cht=lc
+```
+
+... and you can suppress default axes in a line chart (`cht=lc`) by specifying `:nda` after the chart type.
 
 ![chart](https://image-charts.com/chart?cht=lc:nda&chs=700x125&chd=t:40,60,60,45,47,75,70,72)
 
 ```
 cht=lc:nda
 ```
+
+
+!!! info "Enterprise+ subscribers - **upcoming on January 15th, 2020**"
+    This example shows a line chart with an x-axis, a y-axis, a top axis (t), and a right axis (r). Because no labels are specified, the chart defaults to a range of 0 to 100 for all axes. Note that by default, the top and bottom axes don't show tick marks by the labels.
+
+    ![chart url multiple axis](https://image-charts.com/chart?ichm=ad7683b7bcf642f5d19b53df53c18008df1152eb835e96dcadfef95dff0a9c32&chxt=x,y,t,r&cht=lc&chd=s:cEAELFJHHHKUju9uuXUc&chco=76A4FB&chls=2.0&chs=700x125&icac=fgribreau)
+
+    ```
+    chxt=x,y,r,t
+    ```
+
+    You can include multiple sets of labels for each axis by including the same value more than once. This example shows two sets of x and two sets of y-axes. This isn't particularly useful when using only the default axis labels, as is shown here. But you can specify custom labels for each copy of each axis, using the `chxl` parameter.
+
+    ![chart with multiple x and y axis](https://image-charts.com/chart?ichm=5de6e0c5378844300015135f0734cf0943e4c39d3001bff572344ed7a52be268&chxt=x,x,y,y&cht=lc&chd=s:cEAELFJHHHKUju9uuXUc&chco=76A4FB&chls=2.0&chs=700x325&icac=fgribreau)
+
+    ```
+    chxt=x,x,y,y
+    ```
+
+    ![chart with multiple labels](https://image-charts.com/chart?ichm=f08d562c61c0991bf3db518a9cb058ec15b5d80d1c18de101c4cb673f6ef0d87&chxt=x,x,y,y&cht=lc&chd=s:cEAELFJHHHKUju9uuXUc&chco=76A4FB&chls=2.0&chs=700x325&chxl=1:|Freezing|Hot|3:|Low|High&chma=40,20,20,30&icac=fgribreau)
+
+    ```
+    chxt=x,x,y,y
+    chxl=
+      1:|Freezing|Hot|
+      3:|Low|High
+    ```
+
+    This example shows a horizontal bar chart with an x-axis, a y-axis, an upper t-axis, and a right r-axis.
+
+    Axis labels are omitted, so the Chart API displays a range of 0 to 100 for the x-axis and for the t-axis.
+
+    The range for the y-axis and for the r-axis is determined by the number of bars. In this case, there are five bars, so the Chart API displays a range of 0 to 4. The first label is centered at the base of the first bar, the second label is centered at the base of the second bar, and so on.
+
+    ![](https://image-charts.com/chart?ichm=46973d947f70fb47161e7bf9f75657d70302e96750077a4da4142b738dc271b2&chxt=x,y,r,t&cht=bhs&chd=s:EUjVu&chco=76A4FB&chls=2.0&chs=700x225&icac=fgribreau)
+
+    ```
+    chxt=x,y,r,t
+    ```
+
 
 ### Axis Range
 
@@ -108,11 +187,28 @@ chds=-100,100
 chxr=1,-50,50
 ```
 
+!!! info "Enterprise+ subscribers - **upcoming on January 15th, 2020**"
+    This example shows left and right y-axes (y and r) and one x-axis (x).
+
+    Each axis has a defined range. Because no labels or positions are specified, values are taken from the given range, and are evenly spaced within that range. In the line chart, values are evenly spread along the x-axis.
+
+    Axis direction is reversed for the r-axis (index 2), because the first value (`1000`) is larger than the last value (0).
+
+    ![](https://image-charts.com/chart?chco=76A4FB&chd=s%3AcEAELFJHHHKUju9uuXUc&chls=2.0&chs=700x225&cht=lc&chxr=1%2C0%2C200%7C2%2C1000%2C0&chxt=x%2Cy%2Cr&icac=fgribreau&icretina=1&ichm=e5b79ac7f50d44bf739afcdc639c1b9b5fab59d276a8adc55c293cd9e9581bef)
+
+    ```
+    chxt=x,y,r
+    chxr=
+      0,0,500|
+      1,0,200|
+      2,1000,0
+    ```
+
 ### Custom Axis Labels
 
 You can specify custom string axis labels on any axis, using the `chxl` parameter. You can specify as many labels as you like. If you display an axis (using the [`chxt`](#visible-axes) parameter) and do not specify custom labels, the standard, numeric labels will be applied. To specify a custom numeric range, use the [`chxr`](#axis-range) parameter instead.
 
-<!-- To set specific locations along the axis for your labels, use the chxp parameter.-->
+<!-- To set specific locations along the axis for your labels, use the chxp parameter. -->
 
 #### Syntax
 
@@ -157,6 +253,52 @@ chf=b0,lg,90,03a9f4,0,3f51b5,1
 chs=700x190
 chan=1200,easeOutBounce
 ```
+
+This chart shows how to add custom labels to two axes. Note how the values are evenly spaced, and how the last chxl value does not end with a pipe.
+
+![](https://image-charts.com/chart?chxt=x,y&chxl=0:%7CJan%7CFeb%7CMarch%7CApril%7CMay%7C1:%7CMin%7CMid%7CMax&cht=lc&chd=s:cEAELFJHHHKUju9uuXUc&chco=76A4FB&chls=2.0&chs=700x300)
+
+```
+chxt=x,y
+chxl=
+0:|Jan|Feb|March|April|May|
+1:|Min|Mid|Max
+```
+
+!!! info "Enterprise+ subscribers - **upcoming on January 15th, 2020**"
+    The example below includes axis labels on the left and right y-axes (`y` and `r`). It also includes two sets of values for the x-axis (x). You could consider adding tick marks on the y-axis using `chxs`.
+
+    ![](https://image-charts.com/chart?ichm=eb64b5863221a1fc9f8b34fb8a6998f6413d70e78d6a3dcff339bc1982dfaa86&chxt=x,y,r,x&chxl=0:|Jan|July|Jan|July|Jan|1:|0|50|100|2:|A|B|C|3:|2005|2006|2007&cht=lc&chd=s:cEAELFJHHHKUju9uuXUc&chco=76A4FB&chls=2.0&chs=700x325&icac=fgribreau)
+
+    ```
+    chxt=x,y,r,x
+    chxl=
+    0:|Jan|July|Jan|July|Jan|
+    1:|0|50|100|
+    2:|A|B|C|
+    3:|2005|2006|2007
+    ```
+
+    If you want to add a generic label to describe a whole axis (for example, to label one axis "cost" and another "student"), use the chxt property to add an additional axis on each side, then use chxl to add a single custom label to each side.
+
+    ![](https://image-charts.com/chart?ichm=902f7167780d9797046b117448f15bda4d0ea2ed3c1a32c8ad120a1720039fdf&chxt=x,x,y,y&cht=bvs&chd=s:c9ucD&chls=2.0&chs=700x325&chxl=1:|Martinis|3:|Score&icac=fgribreau)
+
+    ```
+    chxt=x,x,y,y
+    chxl=1:|Martinis|3:|Score
+    ```
+
+    This example uses default values for the axis labels on the left y-axis.
+
+    ![](https://image-charts.com/chart?ichm=51c40b04d9b3c7685b60019809339fa6fd00bf4961b637351a3042ca9f1001b2&chxt=x,y,r,x&chxl=0:|Jan|July|Jan|July|Jan|2:|A|B|C|3:|2005||2006||2007&cht=bvs&chd=s:c9uDc&chco=76A4FB&chls=2.0&chs=700x325&chbh=r,0.3&icac=fgribreau)
+
+    ```
+    chxt=x,y,r,x
+    chxl=
+    0:|Jan|July|Jan|July|Jan|
+    2:|A|B|C|
+    3:|2005||2006||2007
+    ```
 
 ### Axis Label Styles
 
@@ -261,3 +403,18 @@ Thus we use `<skip_labels>` (see `0,s`, 0 means x axis and `s` means skip labels
 &chxt=x,y
 &chxs=1N**ºC,000000|0,s
 ```
+
+
+!!! info "Enterprise+ subscribers - **upcoming on January 15th, 2020**"
+    Font size and color are specified for the second x-axis (Jan, Feb, Mar).
+
+    ![](https://image-charts.com/chart?chco=76A4FB&chd=s%3AcEAELFJHHHKUju9uuXUc&chls=2.0&chs=700x325&cht=lc&chxl=3%3A%7CJan%7CFeb%7CMar&chxr=2%2C0%2C4&chxs=3%2C0000dd%2C13%2C0%2Ct&chxt=x%2Cy%2Cr%2Cx&icac=fgribreau&icretina=1&ichm=54f1ebd0fb5d54475e3def9fa699aac47c131d4291bae219308c718ec6d3baa9)
+
+    ```
+    chxt=x,y,r,x
+    chxr=2,0,4
+    chxl=3:|Jan|Feb|Mar|
+         1:|min|average|max
+    chxp=1,10,35,75
+    chxs=3,0000DD,13,0,t
+    ```
