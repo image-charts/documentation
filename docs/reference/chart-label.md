@@ -1,8 +1,4 @@
-You can specify labels for individual slices (in pie, doughnut or polar chart) or bar using the `chl` parameter. You can also display a legend with the same or different values, one legend entry per slice. Use `\n` for multi-line labels.
-
-!!! success "Who said we should just copy Google Image Charts?"
-    Google Image Charts only supported `chl` parameter for pie chart slices.
-    In Image-Charts we've extended support **for every one of our charts**, enjoy :+1::rocket:
+You can specify labels for individual slices (in bar, pie, doughnut or polar chart) or bar using the `chl` parameter. You can also display a legend with the same or different values, one legend entry per slice. Use `\n` for multi-line labels.
 
 !!! note "A Note on String Values"
     Only URL-safe characters are permitted in label strings. To be safe, you should URL-encode any strings containing characters not in the character set `0-9a-zA-Z`.
