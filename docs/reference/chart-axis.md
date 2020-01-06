@@ -184,7 +184,7 @@ chds=-100,100
 chxr=1,-50,50
 ```
 
-!!! danger "Enterprise+ subscribers - **upcoming on January 15th, 2020**"
+!!! info "Enterprise+ subscribers - **upcoming on January 15th, 2020**"
     This example shows left and right y-axes (y and r) and one x-axis (x).
 
     Each axis has a defined range. Because no labels or positions are specified, values are taken from the given range, and are evenly spaced within that range. In the line chart, values are evenly spread along the x-axis.
