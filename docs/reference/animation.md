@@ -31,7 +31,7 @@ The other way is to specify `duration` and `easing`:
 
 Let's start with a simple chart that we animate just by adding `chan` to the URL:
 
-[![chart](https://image-charts.com/chart?cht=bvg&chs=700x200&chd=s:Monkeys&chxt=x,y&chco=4ECDC4&chan)](https://image-charts.com/chart?cht=bvg&chs=700x200&chd=s:Monkeys&chxt=x,y&chco=4ECDC4&chan)
+[![chart](https://image-charts.com/chart?chan&chco=4ECDC4&chd=s%3AMonkeys&chs=700x200&cht=bvg&chxt=x%2Cy&icac=fgribreau&icretina=1&ichm=96c51e8a1cf970f0470c14612be4817347e4d173f532fd9164f87510ca89a291)](https://editor.image-charts.com/chart?chan&chco=4ECDC4&chd=s%3AMonkeys&chs=700x200&cht=bvg&chxt=x%2Cy&icac=fgribreau&icretina=1&ichm=96c51e8a1cf970f0470c14612be4817347e4d173f532fd9164f87510ca89a291)
 
 ```
 /chart?cht=bvg&...&chan
@@ -39,7 +39,7 @@ Let's start with a simple chart that we animate just by adding `chan` to the URL
 
 The animation seems a little too slow, so let's specify a duration to 1,2 second (`1200`ms):
 
-[![chart](https://image-charts.com/chart?cht=bvg&chs=700x200&chd=s:Monkeys&chxt=x,y&chco=556270&chan=1200)](https://image-charts.com/chart?cht=bvg&chs=700x200&chd=s:Monkeys&chxt=x,y&chco=556270&chan=1200)
+[![chart](https://image-charts.com/chart?chan=1200&chco=556270&chd=s%3AMonkeys&chs=700x200&cht=bvg&chxt=x%2Cy&icac=fgribreau&icretina=1&ichm=a8b723eebe0776dee64dd7928aa4c66b14f9cb328131d4e9ad87ab483abe4aef)](https://editor.image-charts.com/chart?chan=1200&chco=556270&chd=s%3AMonkeys&chs=700x200&cht=bvg&chxt=x%2Cy&icac=fgribreau&icretina=1&ichm=a8b723eebe0776dee64dd7928aa4c66b14f9cb328131d4e9ad87ab483abe4aef)
 
 ```
 /chart?cht=bvg&...&chan=1200
@@ -47,7 +47,7 @@ The animation seems a little too slow, so let's specify a duration to 1,2 second
 
 That's better, now let's change the easing to `easeOutBack`:
 
-[![chart](https://image-charts.com/chart?cht=bvg&chs=700x200&chd=s:Monkeys&chxt=x,y&chan=1200,easeOutBack&chco=C44D58)](https://image-charts.com/chart?cht=bvg&chs=700x200&chd=s:Monkeys&chxt=x,y&chan=1200,easeOutBack&chco=C44D58)
+[![chart](https://image-charts.com/chart?chan=1200%2CeaseOutBack&chco=C44D58&chd=s%3AMonkeys&chs=700x200&cht=bvg&chxt=x%2Cy&icac=fgribreau&icretina=1&ichm=3eb93f3b36aecd4c86a7543ed7bb982fbf62d5323eb99b81c881023c3842f08f)](https://editor.image-charts.com/chart?chan=1200%2CeaseOutBack&chco=C44D58&chd=s%3AMonkeys&chs=700x200&cht=bvg&chxt=x%2Cy&icac=fgribreau&icretina=1&ichm=3eb93f3b36aecd4c86a7543ed7bb982fbf62d5323eb99b81c881023c3842f08f)
 
 ```
 /chart?cht=bvg&...&chan=1200,easeOutBack
