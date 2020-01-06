@@ -13,10 +13,15 @@ icff=<fontFamily>
 
 #### Example
 
+A bar chart with [`icff=Dosis`](https://fonts.google.com/specimen/Dosis) font family and default font-style (`normal`):
+
+[![chart](https://image-charts.com/chart?chbh=30%2C20%2C20&chco=FFB754%7CF9B6C5%7CB5D2F4%7CDAEDE9%7CE1DAED&chd=t%3A22%2C32%2C11%2C27%2C8&chds=0%2C40&chl=Jan%7CFeb%7CMar%7CApr%7CMay&chs=400x400&cht=bvg&chxl=1%3A%7CMonths%7C3%3A%7CScore&chxp=1%2C50%7C3%2C50&chxt=x%2Cx%2Cy%2Cy&icac=fgribreau&icff=Dosis&icfs=normal&icretina=1&ichm=11fd2aebcd2104241b75ce4cb8fe380ae5fc4c403705a43fc6c71b9e92d912cf)](https://editor.image-charts.com/chart?chbh=30%2C20%2C20&chco=FFB754%7CF9B6C5%7CB5D2F4%7CDAEDE9%7CE1DAED&chd=t%3A22%2C32%2C11%2C27%2C8&chds=0%2C40&chl=Jan%7CFeb%7CMar%7CApr%7CMay&chs=400x400&cht=bvg&chxl=1%3A%7CMonths%7C3%3A%7CScore&chxp=1%2C50%7C3%2C50&chxt=x%2Cx%2Cy%2Cy&icac=fgribreau&icff=Dosis&icfs=normal&icretina=1&ichm=11fd2aebcd2104241b75ce4cb8fe380ae5fc4c403705a43fc6c71b9e92d912cf)
+
+
 A pie chart with [`icff=Indie Flower`](https://fonts.google.com/specimen/Indie+Flower) font family and default font-style (`normal`):
 Note that `icff=Indie+Flower` and `icff=Indie%20Flower` will also work.
 
-![chart](https://image-charts.com/chart?ichm=0f52973c87b32e3406a974e995a5eddf69243c72345fc29d3c3cdfb331727ee3&cht=pd&chs=700x400&chd=t:10,20,30&chco=EA469E,03A9F4,FFC00C&chl=Aaaa|Bbbb|Cccc&chdl=A|B|C&chli=95K€&icff=Indie Flower&chtt=This is a test&icac=fgribreau)
+[![chart](https://image-charts.com/chart?chco=EA469E%2C03A9F4%2CFFC00C&chd=t%3A10%2C20%2C30&chdl=A%7CB%7CC&chl=Aaaa%7CBbbb%7CCccc&chli=95K%E2%82%AC&chs=700x400&cht=pd&chts=333333%2C20&chtt=This%20is%20a%20test&icac=fgribreau&icff=Indie%20Flower&icretina=1&ichm=4e45ae4260e6a3cd8a38c7f8a0896a8942ae204d88b328669ff5d6eb13370b28)](https://editor.image-charts.com/chart?chco=EA469E%2C03A9F4%2CFFC00C&chd=t%3A10%2C20%2C30&chdl=A%7CB%7CC&chl=Aaaa%7CBbbb%7CCccc&chli=95K%E2%82%AC&chs=700x400&cht=pd&chts=333333%2C20&chtt=This%20is%20a%20test&icac=fgribreau&icff=Indie%20Flower&icretina=1&ichm=4e45ae4260e6a3cd8a38c7f8a0896a8942ae204d88b328669ff5d6eb13370b28)
 
 
 
