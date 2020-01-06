@@ -38,10 +38,10 @@ chxt=
 - **`<axis>`** An axis to show on the chart. Available axes are:
     * `x` - Bottom x-axis
     * `y` - Left y-axis
-    * `t` - Top x-axis (:+1: Enterprise+ subscription)
-    * `r` - Right y-axis (:+1: Enterprise+ subscription)
+    * `t` - Top x-axis (:+1: Enterprise+ subscription, **upcoming on January 15th, 2020**)
+    * `r` - Right y-axis (:+1: Enterprise+ subscription, **upcoming on January 15th, 2020**)
 
-!!! info "Enterprise+ subscribers"
+!!! info "Enterprise+ subscribers - **upcoming on January 15th, 2020**"
     `chxt` up to `x,y` is available for *Free* and *Enterprise* subscriptions. Charts with more than two axis requires the Enterprise+ subscription.
     You can specify multiple axes of the same type, for example: `cht=x,x,y`. This will stack two sets of x-axes along the bottom of the chart. This is useful when adding custom labels along an axis that shows numeric values (see the example below). Axes are drawn from the inside out, so if you have `x,x`, the first x refers to the innermost copy, the next x refers to the next outwards copy, and so on.
 
@@ -92,7 +92,7 @@ cht=lc:nda
 ```
 
 
-!!! info "Enterprise+ subscribers"
+!!! info "Enterprise+ subscribers - **upcoming on January 15th, 2020**"
     This example shows a line chart with an x-axis, a y-axis, a top axis (t), and a right axis (r). Because no labels are specified, the chart defaults to a range of 0 to 100 for all axes. Note that by default, the top and bottom axes don't show tick marks by the labels.
 
     ![chart url multiple axis](https://image-charts.com/chart?ichm=ad7683b7bcf642f5d19b53df53c18008df1152eb835e96dcadfef95dff0a9c32&chxt=x,y,t,r&cht=lc&chd=s:cEAELFJHHHKUju9uuXUc&chco=76A4FB&chls=2.0&chs=700x125&icac=fgribreau)
@@ -184,7 +184,7 @@ chds=-100,100
 chxr=1,-50,50
 ```
 
-!!! danger "Enterprise+ subscribers"
+!!! danger "Enterprise+ subscribers - **upcoming on January 15th, 2020**"
     This example shows left and right y-axes (y and r) and one x-axis (x).
 
     Each axis has a defined range. Because no labels or positions are specified, values are taken from the given range, and are evenly spaced within that range. In the line chart, values are evenly spread along the x-axis.
@@ -262,7 +262,7 @@ chxl=
 1:|Min|Mid|Max
 ```
 
-!!! info "Enterprise+ subscribers"
+!!! info "Enterprise+ subscribers - **upcoming on January 15th, 2020**"
     The example below includes axis labels on the left and right y-axes (`y` and `r`). It also includes two sets of values for the x-axis (x). You could consider adding tick marks on the y-axis using `chxs`.
 
     ![](https://image-charts.com/chart?ichm=eb64b5863221a1fc9f8b34fb8a6998f6413d70e78d6a3dcff339bc1982dfaa86&chxt=x,y,r,x&chxl=0:|Jan|July|Jan|July|Jan|1:|0|50|100|2:|A|B|C|3:|2005|2006|2007&cht=lc&chd=s:cEAELFJHHHKUju9uuXUc&chco=76A4FB&chls=2.0&chs=700x325&icac=fgribreau)
@@ -401,7 +401,7 @@ Thus we use `<skip_labels>` (see `0,s`, 0 means x axis and `s` means skip labels
 ```
 
 
-!!! info "Enterprise+ subscribers"
+!!! info "Enterprise+ subscribers - **upcoming on January 15th, 2020**"
     Font size and color are specified for the second x-axis (Jan, Feb, Mar).
 
     ![](https://image-charts.com/chart?chco=76A4FB&chd=s%3AcEAELFJHHHKUju9uuXUc&chls=2.0&chs=700x325&cht=lc&chxl=3%3A%7CJan%7CFeb%7CMar&chxr=2%2C0%2C4&chxs=3%2C0000dd%2C13%2C0%2Ct&chxt=x%2Cy%2Cr%2Cx&icac=fgribreau&icretina=1&ichm=54f1ebd0fb5d54475e3def9fa699aac47c131d4291bae219308c718ec6d3baa9)
