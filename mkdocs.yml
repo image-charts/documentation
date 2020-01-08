@@ -18,9 +18,9 @@ edit_uri: "https://github.com/image-charts/documentation/edit/master/docs"
 
 nav:
   - Getting started: index.md
-  - Pie Charts: pie-charts.md
-  - Line Charts: line-charts.md
   - Bar Charts: bar-charts.md
+  - Line Charts: line-charts.md
+  - Pie Charts: pie-charts.md
   - Polar Charts: polar-charts.md
   - Bubble Charts: bubble-charts.md
   - Graph Viz Charts: graph-viz-charts.md
