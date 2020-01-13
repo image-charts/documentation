@@ -146,7 +146,9 @@ chds=-80,140
 
 Simple encoding format lets you specify integer values from 0—61, inclusive, encoded by a single alphanumeric character. This results in the shortest data string URL of all the data formats. However, if you have a line or bar chart that is longer than 100 pixels along the data axis, you might want to use another format. This is because, with only 62 data values supported, the data granularity is much bigger than the display granularity, and values will be just little off (not much, but visible on larger charts).
 
-Note that if you use the `chds` parameter with simple encoding, data element size on the chart won't be affected, but any data point marker values will be.
+!!! note "A note on `chds` usage with line markers"
+    Using `chds` with simple encoding format and line markers (e.g. `chd=t1:`) will affect **both** dataset scales and data point marker scale.
+    This is a different behavior than in Google Image-Charts where the `chds` parameter with simple encoding (`chd=t1:`) and line markers only affected the data point marker scale.
 
 
 #### Syntax
@@ -181,7 +183,9 @@ chd=s:BTb19_,Mn5tzb
 
 Extended encoding format lets you specify integer values from 0—4095, inclusive, encoded by two alphanumeric characters. It uses a slightly different syntax from simple encoding.
 
-Note that if you use the chds parameter with simple encoding, data element size on the chart won't be affected, but any data point marker values will be.
+!!! note "A note on `chds` usage with line markers"
+    Using `chds` with simple encoding format and line markers (e.g. `chd=t1:`) will affect **both** dataset scales and data point marker scale.
+    This is a different behavior than in Google Image-Charts where the `chds` parameter with simple encoding (`chd=t1:`) and line markers only affected the data point marker scale.
 
 
 #### Syntax
