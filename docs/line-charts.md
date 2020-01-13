@@ -208,7 +208,7 @@ chd=s:cefhjkqwrlgYcfgc,QSSVXXdkfZUMRTUQ,HJJMOOUbVPKDHKLH
 chm=b,fdb45c,0,1,0|b,ff6e6e,1,2,0
 ```
 
-[![chart](https://image-charts.com/chart?chco=ca7002,cc0000,cc0000&chd=s:cefhjkqwrlgYcfgc,QSSVXXdkfZUMRTUQ,HJJMOOUbVPKDHKLH&chls=1,1,0|1,1,0|1,1,0|1,4,0&chm=b,fdb45c,0,1,0|b,ff6e6e,1,2,1&chs=700x300&cht=lc&chxl=1:||50|100|0:|Jan|Feb|Mar|Apr|May|Jun|&chxt=x,y&icac=fgribreau&icretina=1&ichm=bfa859fa30a68a69f9ac90a713b0ccc12f93af7fe1eab3d32f498d134e37e318))(https://editor.image-charts.com/chart?chco=ca7002,cc0000,cc0000&chd=s:cefhjkqwrlgYcfgc,QSSVXXdkfZUMRTUQ,HJJMOOUbVPKDHKLH&chls=1,1,0|1,1,0|1,1,0|1,4,0&chm=b,fdb45c,0,1,0|b,ff6e6e,1,2,1&chs=700x300&cht=lc&chxl=1:||50|100|0:|Jan|Feb|Mar|Apr|May|Jun|&chxt=x,y&icac=fgribreau&icretina=1&ichm=bfa859fa30a68a69f9ac90a713b0ccc12f93af7fe1eab3d32f498d134e37e318)
+[![chart](https://image-charts.com/chart?chco=ca7002,cc0000,cc0000&chd=s:cefhjkqwrlgYcfgc,QSSVXXdkfZUMRTUQ,HJJMOOUbVPKDHKLH&chls=1,1,0|1,1,0|1,1,0|1,4,0&chm=b,fdb45c,0,1,0|b,ff6e6e,1,2,1&chs=700x300&cht=lc&chxl=1:||50|100|0:|Jan|Feb|Mar|Apr|May|Jun|&chxt=x,y&icac=fgribreau&icretina=1&ichm=bfa859fa30a68a69f9ac90a713b0ccc12f93af7fe1eab3d32f498d134e37e318)](https://editor.image-charts.com/chart?chco=ca7002,cc0000,cc0000&chd=s:cefhjkqwrlgYcfgc,QSSVXXdkfZUMRTUQ,HJJMOOUbVPKDHKLH&chls=1,1,0|1,1,0|1,1,0|1,4,0&chm=b,fdb45c,0,1,0|b,ff6e6e,1,2,1&chs=700x300&cht=lc&chxl=1:||50|100|0:|Jan|Feb|Mar|Apr|May|Jun|&chxt=x,y&icac=fgribreau&icretina=1&ichm=bfa859fa30a68a69f9ac90a713b0ccc12f93af7fe1eab3d32f498d134e37e318)
 
 
 The following example fills 2 datasets with yellow (consumed) and grey (prevision) colors.
