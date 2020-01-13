@@ -36,7 +36,7 @@ chd=a:val,val,val|val,val,val...
 
 A table with five values. The underscore is considered a null value, negative or positive float number are allowed, the chart scaling is automatic.
 
-![chart](https://image-charts.com/chart?chs=700x200&cht=bvs&chxt=y&chf=b0,lg,90,EA469EFF,1,03A9F47C,0.4&chan=1100,easeInCirc&chl=2014|2015|2016|2017|2018&chd=a:30010,-30000.1,50000.5,80000.10,20000)
+[![gif chart](https://image-charts.com/chart?chan=1100,easeInCirc&chd=a:30010,-30000.1,50000.5,80000.10,20000&chf=b0,lg,90,EA469EFF,1,03A9F47C,0.4&chl=2014|2015|2016|2017|2018&chs=700x200&cht=bvs&chxt=y&icac=fgribreau&icretina=1&ichm=482b49c9fa541a1fea0faa510ec2d4115ba3d25d68cd519369e9b418f78e01d0)](https://editor.image-charts.com/chart?chan=1100,easeInCirc&chd=a:30010,-30000.1,50000.5,80000.10,20000&chf=b0,lg,90,EA469EFF,1,03A9F47C,0.4&chl=2014|2015|2016|2017|2018&chs=700x200&cht=bvs&chxt=y&icac=fgribreau&icretina=1&ichm=482b49c9fa541a1fea0faa510ec2d4115ba3d25d68cd519369e9b418f78e01d0)
 
 ```
 chd=a:30010,-30000.1,50000.5,80000.10,20000
@@ -61,7 +61,7 @@ chd=t:val,val,val|val,val,val...
 
 A table with five values. The underscore is considered a null value, the -30 value falls below the minimum value, so it is dropped, and the 200 value is truncated to 100.
 
-![chart](https://image-charts.com/chart?chs=700x200&cht=bvs&chd=t:_,30,-30,50,80,200&chxt=y)
+[![static bar chart](https://image-charts.com/chart?chco=27c9c2&chd=t:_,30,-30,50,80,200&chs=700x200&cht=bvs&chxt=y&icac=fgribreau&icretina=1&ichm=e8af4235455e2f5f39c800d004bbb21c213384124496a67f0c9d90f068bd82aa)](https://editor.image-charts.com/chart?chco=27c9c2&chd=t:_,30,-30,50,80,200&chs=700x200&cht=bvs&chxt=y&icac=fgribreau&icretina=1&ichm=e8af4235455e2f5f39c800d004bbb21c213384124496a67f0c9d90f068bd82aa)
 
 ```
 chd=t:_,30,-30,50,80,200
@@ -90,7 +90,7 @@ chds=a
 
 How to generate a Pie Chart (note that you should not use values < 0 for pie charts):
 
-![chart](https://image-charts.com/chart?chs=700x200&cht=p&chd=t:5,30,50,80,200&chds=a&chl=5\|30\|50\|80\|200)
+[![pie chart api](https://image-charts.com/chart?chco=ffcc00,ff6666,cc0066,66cccc&chd=t:5,30,50,80,200&chds=a&chl=5|30|50|80|200&chs=700x200&cht=p&icac=fgribreau&icretina=1&ichm=b6fa2e149fb9a4e2ce6f208a37e4444febe6078ee126fcbf0b5dde326eb0b490)](https://editor.image-charts.com/chart?chco=ffcc00,ff6666,cc0066,66cccc&chd=t:5,30,50,80,200&chds=a&chl=5|30|50|80|200&chs=700x200&cht=p&icac=fgribreau&icretina=1&ichm=b6fa2e149fb9a4e2ce6f208a37e4444febe6078ee126fcbf0b5dde326eb0b490)
 
 ```
 chd=t:5,30,50,80,200
@@ -99,7 +99,7 @@ chds=a
 
 How to generate a Bar Chart:
 
-![chart](https://image-charts.com/chart?chs=700x200&cht=bvs&chd=t:-5,30,-30,50,80,200&chds=a&chxt=y&chm=N,000000,0,-1,11)
+[![image bar chart](https://image-charts.com/chart?chco=b2dffb|e7a4e4|ffc55c|66cccc|cc0066|ffcc00&chd=t:-5,30,-30,50,80,200&chds=a&chm=N,000000,0,-1,11&chs=700x200&cht=bvs&chxl=1:|Tommy|Jimmy|Henry|Marty|Lucky|Sammy&chxt=y,x&icac=fgribreau&icretina=1&ichm=7f1b9fdb1b7829871c1ce88fc40bddb808d0222cacb93ebab01a1af05da23ef6)](https://editor.image-charts.com/chart?chco=b2dffb|e7a4e4|ffc55c|66cccc|cc0066|ffcc00&chd=t:-5,30,-30,50,80,200&chds=a&chm=N,000000,0,-1,11&chs=700x200&cht=bvs&chxl=1:|Tommy|Jimmy|Henry|Marty|Lucky|Sammy&chxt=y,x&icac=fgribreau&icretina=1&ichm=7f1b9fdb1b7829871c1ce88fc40bddb808d0222cacb93ebab01a1af05da23ef6)
 
 ```
 chd=t:-5,30,-30,50,80,200
@@ -135,7 +135,7 @@ A bar chart with a min/max scale of -80—140. The 30, -60, 50, 140, and 80 valu
 Google Image Charts had a weird --bug-- feature, the default y-axis range was still 0—100, despite the **chds** parameter, so the label values do not reflected the actual data values. In Image-charts we think that its a bug. We are displaying the real-values inside the default y-axis, just as one would think.
 
 
-![chart](https://image-charts.com/chart?chs=700x200&cht=bvs&chd=t:30,-60,50,140,80,-90&chds=-80,140&chxt=y)
+[![bar chart generator](https://image-charts.com/chart?chco=b2dffb|e7a4e4|ffc55c|66cccc|cc0066|ffcc00&chd=t:30,-60,50,140,80,-90&chds=-80,140&chs=700x200&cht=bvs&chxl=1:|Tommy|Jimmy|Henry|Marty|Lucky|Sammy&chxt=y,x&icac=fgribreau&icretina=1&ichm=8ac1da8941aac1c02e629734290a4d35a422e26ddafdbdb573a8dbc8739c9b1d)](https://editor.image-charts.com/chart?chco=b2dffb|e7a4e4|ffc55c|66cccc|cc0066|ffcc00&chd=t:30,-60,50,140,80,-90&chds=-80,140&chs=700x200&cht=bvs&chxl=1:|Tommy|Jimmy|Henry|Marty|Lucky|Sammy&chxt=y,x&icac=fgribreau&icretina=1&ichm=8ac1da8941aac1c02e629734290a4d35a422e26ddafdbdb573a8dbc8739c9b1d)
 
 ```
 chd=t:30,-60,50,140,80,-90
@@ -173,7 +173,7 @@ You can use the [JavaScript code](#javascript-encoding-script) to scale and enco
 
 Equivalent to the text-encoded string `chd=t:1,19,27,53,61,-1|12,39,57,45,51,27`:
 
-![chart](https://image-charts.com/chart?chs=700x200&cht=bvs&chd=s:BTb19_,Mn5tzb&chco=FFCC33,FFE9A4&chxr=0,0,61,5&chxt=y)
+[![chart](https://image-charts.com/chart?chco=ffb677,5f6caf&chd=s:BTb19_,Mn5tzb&chs=700x200&cht=bvs&chxr=0,0,120,20&chxs=1NPlayer n°**&chxt=y,x&icac=fgribreau&icretina=1&ichm=5d0805cb42f8de6e9f74e907a779d4a75ed03a44719fd76e2907093ee8db8c8c)](https://editor.image-charts.com/chart?chco=ffb677,5f6caf&chd=s:BTb19_,Mn5tzb&chs=700x200&cht=bvs&chxr=0,0,120,20&chxs=1NPlayer n°**&chxt=y,x&icac=fgribreau&icretina=1&ichm=5d0805cb42f8de6e9f74e907a779d4a75ed03a44719fd76e2907093ee8db8c8c)
 
 ```
 chd=s:BTb19_,Mn5tzb
@@ -236,7 +236,7 @@ You can use the [JavaScript code](#javascript-encoding-script) to scale and enco
 
 Equivalent to the text-encoded string `chd=t:90,1000,2700,3500|3968,-1,1100,250`:
 
-![chart](https://image-charts.com/chart?chs=700x200&cht=bvs&chd=e:BaPoqM2s,-A__RMD6&chco=FFCC33,FFE9A4&chxt=y)
+[![chart](https://image-charts.com/chart?chco=12cad6,fa163f&chd=e:BaPoqM2s,-A__RMD6&chs=700x200&cht=bvs&chxs=1NSession n°**&chxt=y,x&icac=fgribreau&icretina=1&ichm=b8bdf19c870e1eb8b5fb19259cfa806e495009561fe6d8f8e7dd7c039ec39bb9)](https://editor.image-charts.com/chart?chco=12cad6,fa163f&chd=e:BaPoqM2s,-A__RMD6&chs=700x200&cht=bvs&chxs=1NSession n°**&chxt=y,x&icac=fgribreau&icretina=1&ichm=b8bdf19c870e1eb8b5fb19259cfa806e495009561fe6d8f8e7dd7c039ec39bb9)
 
 ```
 chd=e:BaPoqM2s,-A__RMD6
