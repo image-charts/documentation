@@ -31,6 +31,9 @@ We want that much of our code examples are tested through unit-tests.
 make test
 ```
 
+### deployment
+
+Deployment is done through Netlify ([admin](https://app.netlify.com/sites/image-charts-documentation/overview)), when master branch is updated.
 
 ### Credits
 
