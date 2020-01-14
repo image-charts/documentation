@@ -14,7 +14,7 @@ chd=s2:1XQbnf4,EWoQMUB,9halxp9
 chm=D,0033FF,2,0,5,1
 ```
 
-#### Creating a Compound Chart
+#### Creating a Compound Chart (Mixed Charts)
 
 All compound charts consist of one or more base chart types (line, scatter, bar, or radar) combined with one or more sets of markers. These markers require data to place them on the chart. Sometimes you can use the same data series as used to draw the bars or points on your chart, but typically you want the markers to have their own independent data sets. If you want your chart to have different data series for the base chart and for markers, you must hide the marker data from the base chart (so that it doesn't try to draw more bars or lines with that data). Here's how to do that:
 
