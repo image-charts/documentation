@@ -98,13 +98,12 @@
     e.preventDefault();
     var iframe = document.createElement('iframe');
     iframe.src = a.href;
-    a.replaceWith(iframe);
-
     var dim = a.getBoundingClientRect();
     iframe.width = dim.width  + 'px';
     iframe.height = (dim.height * 2) + 'px';
     iframe.border = '0px';
     iframe.style.border = '0px';
+    a.replaceWith(iframe);
     return false;
   }
 </script>
