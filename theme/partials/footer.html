@@ -3,22 +3,22 @@
 <!-- Application footer -->
 <footer class="md-footer">
 
-  <!-- Link to previous and/or next page -->
-  {% if page.previous_page or page.next_page %}
+    <!-- Link to previous and/or next page -->
+    {% if page.previous_page or page.next_page %}
     <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid">
+        <nav class="md-footer-nav__inner md-grid">
 
-        <!-- Link to previous page -->
-        {% if page.previous_page %}
-          <a href="{{ page.previous_page.url | url }}"
-              title="{{ page.previous_page.title }}"
-              class="md-flex md-footer-nav__link md-footer-nav__link--prev"
-              rel="prev">
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-back
+            <!-- Link to previous page -->
+            {% if page.previous_page %}
+            <a href="{{ page.previous_page.url | url }}"
+               title="{{ page.previous_page.title }}"
+               class="md-flex md-footer-nav__link md-footer-nav__link--prev"
+               rel="prev">
+                <div class="md-flex__cell md-flex__cell--shrink">
+                    <i class="md-icon md-icon--arrow-back
                     md-footer-nav__button"></i>
-            </div>
-            <div class="md-flex__cell md-flex__cell--stretch
+                </div>
+                <div class="md-flex__cell md-flex__cell--stretch
                   md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
@@ -26,17 +26,17 @@
                 </span>
                 {{ page.previous_page.title }}
               </span>
-            </div>
-          </a>
-        {% endif %}
+                </div>
+            </a>
+            {% endif %}
 
-        <!-- Link to next page -->
-        {% if page.next_page %}
-          <a href="{{ page.next_page.url | url }}"
-              title="{{ page.next_page.title }}"
-              class="md-flex md-footer-nav__link md-footer-nav__link--next"
-              rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch
+            <!-- Link to next page -->
+            {% if page.next_page %}
+            <a href="{{ page.next_page.url | url }}"
+               title="{{ page.next_page.title }}"
+               class="md-flex md-footer-nav__link md-footer-nav__link--next"
+               rel="next">
+                <div class="md-flex__cell md-flex__cell--stretch
                   md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
@@ -44,41 +44,69 @@
                 </span>
                 {{ page.next_page.title }}
               </span>
-            </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward
+                </div>
+                <div class="md-flex__cell md-flex__cell--shrink">
+                    <i class="md-icon md-icon--arrow-forward
                     md-footer-nav__button"></i>
+                </div>
+            </a>
+            {% endif %}
+        </nav>
+    </div>
+    {% endif %}
+
+    <!-- Further information -->
+    <div class="md-footer-meta md-typeset">
+        <div class="md-footer-meta__inner md-grid">
+
+            <!-- Copyright and theme information -->
+            <div class="md-footer-copyright">
+                {% if config.copyright %}
+                <div class="md-footer-copyright__highlight">
+                    {{ config.copyright }}
+                </div>
+                {% endif %}
+                <a href="//www.image-charts.com/privacy-policy.html">Privacy Policy</a> -
+                <a href="//www.image-charts.com/terms-of-service.html">Terms of Service</a>
             </div>
-          </a>
-        {% endif %}
-      </nav>
+
+            <!-- Social links -->
+            {% block social %}
+            {% include "partials/social.html" %}
+            {% endblock %}
+        </div>
     </div>
-  {% endif %}
-
-  <!-- Further information -->
-  <div class="md-footer-meta md-typeset">
-    <div class="md-footer-meta__inner md-grid">
-
-      <!-- Copyright and theme information -->
-      <div class="md-footer-copyright">
-        {% if config.copyright %}
-          <div class="md-footer-copyright__highlight">
-            {{ config.copyright }}
-          </div>
-        {% endif %}
-        <a href="//www.image-charts.com/privacy-policy.html">Privacy Policy</a> -
-        <a href="//www.image-charts.com/terms-of-service.html">Terms of Service</a>
-      </div>
-
-      <!-- Social links -->
-      {% block social %}
-        {% include "partials/social.html" %}
-      {% endblock %}
-    </div>
-  </div>
 </footer>
 <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PTHBZLF"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PTHBZLF"
+            height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>
 <!-- End Google Tag Manager (noscript) -->
-<script src="//instant.page/2.0.0" type="module" integrity="sha384-D7B5eODAUd397+f4zNFAVlnDNDtO1ppV8rPnfygILQXhqu3cUndgHvlcJR2Bhig8"></script>
+
+<script>
+  /* Progressive enhancement - Chart Editor */
+  Array.from(document.querySelectorAll('a'))
+    .filter(a => (a.href || '').includes('editor.image-charts.com/?') || (a.href || '').includes('editor.image-charts.com/chart?'))
+    .forEach(a => {
+      a.classList.add('editor_switcher');
+      a.addEventListener("click", openEditor);
+    });
+
+  function openEditor(e) {
+    var a = e.currentTarget;
+    e.preventDefault();
+    var iframe = document.createElement('iframe');
+    iframe.src = a.href;
+    a.replaceWith(iframe);
+
+    var dim = a.getBoundingClientRect();
+    iframe.width = dim.width  + 'px';
+    iframe.height = (dim.height * 2) + 'px';
+    iframe.border = '0px';
+    iframe.style.border = '0px';
+    return false;
+  }
+</script>
+<script src="//instant.page/2.0.0" type="module"
+        integrity="sha384-D7B5eODAUd397+f4zNFAVlnDNDtO1ppV8rPnfygILQXhqu3cUndgHvlcJR2Bhig8"></script>

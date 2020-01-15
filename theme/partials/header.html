@@ -7,6 +7,27 @@ img[src^="https://image-charts.com/chart"] {
   margin: 0 auto;
   display: block;
 }
+
+a.editor_switcher{
+  position:relative;
+  display:block;
+}
+
+a.editor_switcher:hover::before{
+  display: block;
+  content: ' Open chart editor ';
+  text-align:center;
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  height:100%;
+  width:100%;
+  background: #cccccc;
+  color:#ffffff;
+  background: rgba(0,0,0,0.7);
+}
 </style>
 
 <!-- Application header -->
