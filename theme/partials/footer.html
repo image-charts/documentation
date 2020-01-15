@@ -99,8 +99,9 @@
       // remove sidebar
       var sidebar=document.querySelector('.md-sidebar--secondary');
       sidebar.parentElement.removeChild(sidebar);
+      document.querySelector('.md-content').style.marginRight='auto';
     }catch(err){/* silent */}
-    
+
     var a = e.currentTarget;
     e.preventDefault();
     var iframe = document.createElement('iframe');
