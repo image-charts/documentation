@@ -30,7 +30,7 @@ If you never used Google Image Charts and Image-Charts before, prefer this one.
 chd=a:val,val,val|val,val,val...
 ```
 
-**<data>** Each series is one or more comma-separated values. Separate multiple series using a pipe character (`|`). Values are floating point numbers from -∞ to +∞. The underscore character ( _ ) is considered a null value.
+**<data>** Each series is one or more comma-separated values. Separate multiple series using a pipe character (`|`). Values are floating point numbers from -∞ to +∞. Empty value and the underscore character ( `_` ) is considered a `null` value.
 
 #### Example
 
@@ -54,7 +54,7 @@ If your data includes values outside the specified range for text formatting, yo
 chd=t:val,val,val|val,val,val...
 ```
 
-**<data>** Each series is one or more comma-separated values. Separate multiple series using a pipe character (`|`). Values are floating point numbers from 0—100, inclusive. Values less than zero, or the underscore character ( _ ) are considered null values. Values above 100 are truncated to 100.
+**<data>** Each series is one or more comma-separated values. Separate multiple series using a pipe character (`|`). Values are floating point numbers from 0—100, inclusive. Values less than zero, empty values or the underscore character ( _ ) are considered `null` values. Values above 100 are truncated to 100.
 
 
 #### Example
