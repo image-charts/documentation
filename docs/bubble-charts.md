@@ -22,7 +22,7 @@ Where `<chart_type>` is the following type:
 
 - `bb` A bubble chart where data points are composed of `x,y[,r]` bubble. Axis lines are not shown by default. To show values on the axis lines, you must specify [visible axes](/reference/chart-axis/#visible-axes) (e.g. `chxt=x,y`).
 
-![chart](https://image-charts.com/chart?cht=bb&chs=700x300&chd=t:40,60,10,_,47,40,12,_,10,10,20,_,20,40,40&chco=7059EF&chxt=x,y&chma=0,0,20)
+[![bubble chart](https://image-charts.com/chart?chco=7059EF&chd=t:40,60,10,_,47,40,12,_,10,10,20,_,20,40,40&chma=0,0,20&chs=700x300&cht=bb&chxt=x,y&icac=fgribreau&icretina=1&ichm=f56fc1c2725edfd217ef044cabd866bf526c1d68a1553f7ad8ee7cf2994c45a4)](https://editor.image-charts.com/chart?chco=7059EF&chd=t:40,60,10,_,47,40,12,_,10,10,20,_,20,40,40&chma=0,0,20&chs=700x300&cht=bb&chxt=x,y&icac=fgribreau&icretina=1&ichm=f56fc1c2725edfd217ef044cabd866bf526c1d68a1553f7ad8ee7cf2994c45a4)
 
 ```
 ?cht=bb
@@ -49,7 +49,7 @@ Some thing of note concerning `chd:a:<datasets>`:
 - `|` delimits data series, in other word a group of bubble point.
 - when the bubble radius (in pixel) `r` parameter is not defined, a default value of `1` (px) is used.
 
-![chart](https://image-charts.com/chart?cht=bb&chs=700x300&chd=t:40,60,10,_,47,40,12,_,10,10,20,_,20,40,40|50,30,5,_,5,5,_,20,20,6&chco=7059EF|0CE858&chxt=x,y&chma=0,0,20)
+[![bubble chart](https://image-charts.com/chart?chco=7059EF|0CE858&chd=t:40,60,10,_,47,40,12,_,10,10,20,_,20,40,40|50,30,5,_,5,5,_,20,20,6&chma=0,0,20&chs=700x300&cht=bb&chxt=x,y&icac=fgribreau&icretina=1&ichm=03112ba3d5451e9259c1d14c35621d1dd66e9c35d4620f88f95c9100f56a1a19)](https://editor.image-charts.com/chart?chco=7059EF|0CE858&chd=t:40,60,10,_,47,40,12,_,10,10,20,_,20,40,40|50,30,5,_,5,5,_,20,20,6&chma=0,0,20&chs=700x300&cht=bb&chxt=x,y&icac=fgribreau&icretina=1&ichm=03112ba3d5451e9259c1d14c35621d1dd66e9c35d4620f88f95c9100f56a1a19)
 
 ```
 &chd=t:40,60,10,_,47,40,12,_,10,10,20,_,20,40,40|50,30,5,_,5,5,_,20,20,6
@@ -94,7 +94,7 @@ You can specify fill colors and styles for the chart data area and/or the whole 
 
 Each bubble series can also be colored with gradients with `chf` (note that `chf` has precedence over `chco`). In the example below the first bubble series has a linear orange gradient `lg,45,ffeb3b,0.2,f443367C,1` and the second one a blue linear gradient `90,03a9f4,0,3f51b5,1`.
 
-![chart](https://image-charts.com/chart?cht=bb&chs=700x300&chd=t:40,60,10,_,47,40,12,_,10,10,20,_,20,40,40|50,30,5,_,20,20,6,_,5,5,10,_,15,20,20&chxt=x,y&chma=0,0,20&chl=||hum|WoW!|&chf=b0,lg,45,ffeb3b,0.2,f443367C,1|b1,lg,90,03a9f4,0,3f51b5,1)
+[![bubble chart with gradient](https://image-charts.com/chart?chd=t:40,60,10,_,47,40,12,_,10,10,20,_,20,40,40|50,30,5,_,20,20,6,_,5,5,10,_,15,20,20&chf=b0,lg,45,ffeb3b,0.2,f443367C,1|b1,lg,90,03a9f4,0,3f51b5,1&chl=||hum|WoW!|&chma=0,0,20&chs=700x300&cht=bb&chxt=x,y&icac=fgribreau&icretina=1&ichm=25b0f79bc1e53e77a159bad711c4ff658847ccad617400276659e165c7d909da)](https://editor.image-charts.com/chart?chd=t:40,60,10,_,47,40,12,_,10,10,20,_,20,40,40|50,30,5,_,20,20,6,_,5,5,10,_,15,20,20&chf=b0,lg,45,ffeb3b,0.2,f443367C,1|b1,lg,90,03a9f4,0,3f51b5,1&chl=||hum|WoW!|&chma=0,0,20&chs=700x300&cht=bb&chxt=x,y&icac=fgribreau&icretina=1&ichm=25b0f79bc1e53e77a159bad711c4ff658847ccad617400276659e165c7d909da)
 
 ```
 &chf=b0,lg,45,ffeb3b,0.2,f443367C,1|b1,lg,90,03a9f4,0,3f51b5,1
@@ -106,7 +106,7 @@ There are multiple ways to express gradients see [gradients fills](/reference/ba
 
 Gif animation also works with bubble charts:
 
-[![chart](https://image-charts.com/chart?cht=bb&chs=700x300&chd=t:40,60,10,_,47,40,12,_,10,10,20,_,20,40,40|50,30,5,_,20,20,6,_,5,5,10,_,15,20,20&chco=7059EF|0CE858&chxt=x,y&chma=0,0,20&chan=1500,easeOutBounce)](https://image-charts.com/chart?cht=bb&chs=700x300&chd=t:40,60,10,_,47,40,12,_,10,10,20,_,20,40,40|50,30,5,_,20,20,6,_,5,5,10,_,15,20,20&chco=7059EF|0CE858&chxt=x,y&chma=0,0,20&chan=1500,easeOutBounce)
+[![animated bubble chart](https://image-charts.com/chart?chan=1500,easeOutBounce&chco=7059EF|0CE858&chd=t:40,60,10,_,47,40,12,_,10,10,20,_,20,40,40|50,30,5,_,20,20,6,_,5,5,10,_,15,20,20&chma=0,0,20&chs=700x300&cht=bb&chxt=x,y&icac=fgribreau&icretina=1&ichm=70f156b87275d635cfcf7f4c5a9f573a5b587c11cc8e749fb99f96901e853295)](https://editor.image-charts.com/chart?cht=bb&chs=700x300&chd=t:40,60,10,_,47,40,12,_,10,10,20,_,20,40,40|50,30,5,_,20,20,6,_,5,5,10,_,15,20,20&chco=7059EF|0CE858&chxt=x,y&chma=0,0,20&chan=1500,easeOutBounce)
 
 ```
 [...]
