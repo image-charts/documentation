@@ -12,7 +12,7 @@ To display the text associated with a slice, you will have to use a chart legend
 
 #### Simple
 
-![chart](https://image-charts.com/chart?chs=700x200&chd=t:60,40,20&cht=pa&chdl=Image|Charts|Rocks)
+[![static polar chart](https://image-charts.com/chart?chd=t:60,40,20&chdl=Image|Charts|Rocks&chs=700x200&cht=pa&icac=fgribreau&icretina=1&ichm=3dac83b470602e9a4fd18e84fdfc4c493f779311001ed2a6bd61024f2ed7e0aa)](https://editor.image-charts.com/chart?chd=t:60,40,20&chdl=Image|Charts|Rocks&chs=700x200&cht=pa&icac=fgribreau&icretina=1&ichm=3dac83b470602e9a4fd18e84fdfc4c493f779311001ed2a6bd61024f2ed7e0aa)
 
 ```
 cht=pa
@@ -34,7 +34,7 @@ Negative values display as empty slices of the appropriate size.
 
 It also possible to use [gradient fill](/reference/background-fill/#gradient-fills) `chf=ps<index>-<sliceIndex>` to specify a gradient per pie slice.
 
-![chart](https://image-charts.com/chart?chs=700x200&chd=t:60,40,20&cht=pa&chdl=Image|Charts|Rocks&chf=ps0-0,lg,45,ffeb3b,0.2,f44336,1|ps0-1,lg,45,8bc34a,0.2,009688,1|ps0-2,lg,45,EA469E,0.2,03A9F4,1)
+[![polar chart image](https://image-charts.com/chart?chd=t:60,40,20&chdl=Image|Charts|Rocks&chf=ps0-0,lg,45,ffeb3b,0.2,f44336,1|ps0-1,lg,45,8bc34a,0.2,009688,1|ps0-2,lg,45,EA469E,0.2,03A9F4,1&chs=700x200&cht=pa&icac=fgribreau&icretina=1&ichm=89c64ee76abac528539e86b49c3f639d91a53007c193a1066b2f273cf72d62a1)](https://editor.image-charts.com/chart?chd=t:60,40,20&chdl=Image|Charts|Rocks&chf=ps0-0,lg,45,ffeb3b,0.2,f44336,1|ps0-1,lg,45,8bc34a,0.2,009688,1|ps0-2,lg,45,EA469E,0.2,03A9F4,1&chs=700x200&cht=pa&icac=fgribreau&icretina=1&ichm=89c64ee76abac528539e86b49c3f639d91a53007c193a1066b2f273cf72d62a1)
 
 ```
 cht=pa
@@ -47,7 +47,7 @@ chf=ps0-0,lg,45,ffeb3b,0.2,f44336,1|ps0-1,lg,45,8bc34a,0.2,009688,1|ps0-2,lg,45,
 
 Because axis labels are behind pie slices, leverage [serie color transparency](/reference/color-format) to let the value visible.
 
-![chart](https://image-charts.com/chart?chs=700x200&chxt=x,y&chd=t:60,40,20&cht=pa&chdl=Image|Charts|Rocks&chf=ps0-0,lg,45,ffeb3b,0.2,f443367C,1|ps0-1,lg,45,8bc34a,0.2,0096887C,1|ps0-2,lg,45,EA469E,0.2,03A9F47C,1)
+[![polar chart](https://image-charts.com/chart?chd=t:60,40,20&chdl=Image|Charts|Rocks&chf=ps0-0,lg,45,ffeb3b,0.2,f443367C,1|ps0-1,lg,45,8bc34a,0.2,0096887C,1|ps0-2,lg,45,EA469E,0.2,03A9F47C,1&chs=700x200&cht=pa&chxt=x,y&icac=fgribreau&icretina=1&ichm=97de601c560786eec37006ee5c7ebbc8cf2619fb652a769122ed34bcc27d2807)](https://editor.image-charts.com/chart?chd=t:60,40,20&chdl=Image|Charts|Rocks&chf=ps0-0,lg,45,ffeb3b,0.2,f443367C,1|ps0-1,lg,45,8bc34a,0.2,0096887C,1|ps0-2,lg,45,EA469E,0.2,03A9F47C,1&chs=700x200&cht=pa&chxt=x,y&icac=fgribreau&icretina=1&ichm=97de601c560786eec37006ee5c7ebbc8cf2619fb652a769122ed34bcc27d2807)
 
 ```
 cht=pa
@@ -61,7 +61,7 @@ chf=ps0-0,lg,45,ffeb3b,0.2,f443367C,1|ps0-1,lg,45,8bc34a,0.2,0096887C,1|ps0-2,lg
 
 Just like the previous example but with `&chan`, see [gif animations](/reference/animation/) for deeper configuration.
 
-![chart](https://image-charts.com/chart?chs=700x200&chxt=x,y&chd=t:60,40,20&cht=pa&chdl=Image|Charts|Rocks&chf=ps0-0,lg,45,ffeb3b,0.2,f443367C,1|ps0-1,lg,45,8bc34a,0.2,0096887C,1|ps0-2,lg,45,EA469E,0.2,03A9F47C,1&chan)
+[![animated pie chart](https://image-charts.com/chart?chan&chd=t:60,40,20&chdl=Image|Charts|Rocks&chf=ps0-0,lg,45,ffeb3b,0.2,f443367C,1|ps0-1,lg,45,8bc34a,0.2,0096887C,1|ps0-2,lg,45,EA469E,0.2,03A9F47C,1&chs=700x200&cht=pa&chxt=x,y&icac=fgribreau&icretina=1&ichm=c9ecfdae94fa1f6fbee5f3b9f746412caa9f58d75f3a53578a3b836ec541c68b)](https://editor.image-charts.com/chart?chan&chd=t:60,40,20&chdl=Image|Charts|Rocks&chf=ps0-0,lg,45,ffeb3b,0.2,f443367C,1|ps0-1,lg,45,8bc34a,0.2,0096887C,1|ps0-2,lg,45,EA469E,0.2,03A9F47C,1&chs=700x200&cht=pa&chxt=x,y&icac=fgribreau&icretina=1&ichm=c9ecfdae94fa1f6fbee5f3b9f746412caa9f58d75f3a53578a3b836ec541c68b)
 
 ```
 chan
@@ -71,7 +71,7 @@ chan
 
 [Chart labels](/reference/chart-label) also work with polar area charts.
 
-![chart](https://image-charts.com/chart?chs=700x300&chxt=x,y&chl=2018|2017|2015&chd=t:60,40,20&cht=pa&chdl=Image|Charts|Rocks&chf=ps0-0,lg,45,ffeb3b,0.2,f443367C,1|ps0-1,lg,45,8bc34a,0.2,0096887C,1|ps0-2,lg,45,EA469E,0.2,03A9F47C,1&chan)
+[![animated pie slice](https://image-charts.com/chart?chan&chd=t:60,40,20&chdl=Image|Charts|Rocks&chf=ps0-0,lg,45,ffeb3b,0.2,f443367C,1|ps0-1,lg,45,8bc34a,0.2,0096887C,1|ps0-2,lg,45,EA469E,0.2,03A9F47C,1&chl=2018|2017|2015&chs=700x300&cht=pa&chxt=x,y&icac=fgribreau&icretina=1&ichm=879710bd3a30703c7d8427f96d8db150a893a75f5e8e00b8e647e7b643379916)](https://editor.image-charts.com/chart?chan&chd=t:60,40,20&chdl=Image|Charts|Rocks&chf=ps0-0,lg,45,ffeb3b,0.2,f443367C,1|ps0-1,lg,45,8bc34a,0.2,0096887C,1|ps0-2,lg,45,EA469E,0.2,03A9F47C,1&chl=2018|2017|2015&chs=700x300&cht=pa&chxt=x,y&icac=fgribreau&icretina=1&ichm=879710bd3a30703c7d8427f96d8db150a893a75f5e8e00b8e647e7b643379916)
 
 ```
 chl=2018|2017|2015
@@ -93,7 +93,7 @@ Where `<chart_type>` is one of the the following types:
 
 By default, pie segment colors are interpolated from pink to pale yellow. Specify other colors as described in [Series Colors](#series-colors). Specify serie legends with `chdl` as described in [Chart Legend Text and Style](/reference/legend-text-and-style).
 
-![chart](https://image-charts.com/chart?cht=pa&chd=s:Uf9a&chs=700x200&chdl=January|February|March|April)
+[![pie chart segment](https://image-charts.com/chart?chd=s:Uf9a&chdl=January|February|March|April&chs=700x200&cht=pa&icac=fgribreau&icretina=1&ichm=14c34a42ea047db598e4ae9f9328f7da492e63878a57d219b6b79290aab59406)](https://editor.image-charts.com/chart?chd=s:Uf9a&chdl=January|February|March|April&chs=700x200&cht=pa&icac=fgribreau&icretina=1&ichm=14c34a42ea047db598e4ae9f9328f7da492e63878a57d219b6b79290aab59406)
 
 ```
 cht=pa
@@ -117,7 +117,7 @@ chco=<slice_1>|<slice_2>|<slice_n>,<series_color_1>,...,<series_color_n>
 
 Specify a single color to have gradations from darkest (first slice) to lightest (last slice).
 
-![chart](https://image-charts.com/chart?cht=pa&chs=700x200&chd=s:Hellobla&chco=FF00007F)
+[![transparent pie chart](https://image-charts.com/chart?chco=FF00007F&chd=s:Hellobla&chs=700x200&cht=pa&icac=fgribreau&icretina=1&ichm=fd274e82df83c923bc4a0f0e81de930297a5f374bc61a025cd2500bbb02a9c14)](https://editor.image-charts.com/chart?chco=FF00007F&chd=s:Hellobla&chs=700x200&cht=pa&icac=fgribreau&icretina=1&ichm=fd274e82df83c923bc4a0f0e81de930297a5f374bc61a025cd2500bbb02a9c14)
 
 ```
 chco=FF00007F
@@ -125,7 +125,7 @@ chco=FF00007F
 
 Defining a gradient; here, from yellow to red.
 
-![chart](https://image-charts.com/chart?cht=pa&chs=700x200&chd=t:10,20,30,40,50&chco=FFFF10,FF2027)
+[![pie chart with gradient](https://image-charts.com/chart?chco=FFFF10,FF2027&chd=t:10,20,30,40,50&chs=700x200&cht=pa&icac=fgribreau&icretina=1&ichm=b64e62058c258e99e68147607745f1b038468abb4e66d3ec818e75b878fe2de1)](https://editor.image-charts.com/chart?chco=FFFF10,FF2027&chd=t:10,20,30,40,50&chs=700x200&cht=pa&icac=fgribreau&icretina=1&ichm=b64e62058c258e99e68147607745f1b038468abb4e66d3ec818e75b878fe2de1)
 
 ```
 chd=t:10,20,30,40,50
@@ -135,7 +135,7 @@ chco=FFFF10,FF2027
 
 Defining individual slice colors; specify one color per slice.
 
-![chart](https://image-charts.com/chart?cht=pa&chs=700x200&chd=t:10,20,30&chxt=x&chco=EA469E7C|03A9F47C|FFC00C7C)
+[![pie chart with individual slice color](https://image-charts.com/chart?chco=EA469E7C|03A9F47C|FFC00C7C&chd=t:10,20,30&chs=700x200&cht=pa&chxt=x&icac=fgribreau&icretina=1&ichm=c39d76f7d7d9296ab6be40365530b581067fa7d7c37e095a0bf6b8e57b9644d4)](https://editor.image-charts.com/chart?chco=EA469E7C|03A9F47C|FFC00C7C&chd=t:10,20,30&chs=700x200&cht=pa&chxt=x&icac=fgribreau&icretina=1&ichm=c39d76f7d7d9296ab6be40365530b581067fa7d7c37e095a0bf6b8e57b9644d4)
 
 ```
 chd=t:10,20,30
@@ -149,7 +149,7 @@ chco=EA469E|03A9F4|FFC00C
 - orange|yellow|green - One color defined for each slice.
 - blue|pink - Alternating blue and yellow slices.
 
-![](https://image-charts.com/chart?cht=pa&chd=s:eYY,ORVM&chco=FF80087C|FFBF0C7C|11B11B7C,03A9F47C|EA469E7C&chs=700x200&chdl=1|2|3|4|5|6|7)
+[![](https://image-charts.com/chart?chco=FF80087C|FFBF0C7C|11B11B7C,03A9F47C|EA469E7C&chd=s:eYY,ORVM&chdl=1|2|3|4|5|6|7&chs=700x200&cht=pa&icac=fgribreau&icretina=1&ichm=c6fb0915980511a99ffeba917936f093f49ac083459d5a75736f988a36468840)](https://editor.image-charts.com/chart?chco=FF80087C|FFBF0C7C|11B11B7C,03A9F47C|EA469E7C&chd=s:eYY,ORVM&chdl=1|2|3|4|5|6|7&chs=700x200&cht=pa&icac=fgribreau&icretina=1&ichm=c6fb0915980511a99ffeba917936f093f49ac083459d5a75736f988a36468840)
 
 ```
 chd=s:eYY,ORVM
@@ -181,7 +181,7 @@ Note: unlike Google Image Charts you won't need to [anticipate how much room you
 
 Let specify legends for a simple animated polar chart.
 
-![chart](https://image-charts.com/chart?cht=pa&chs=700x200&chd=t:20,20,30,40,50&chdl=20°|20°|30°|40°|50°&chxt=x&chco=FF80087C&chan)
+[![chart](https://image-charts.com/chart?cht=pa&chs=700x200&chd=t:20,20,30,40,50&chdl=20°|20°|30°|40°|50°&chxt=x&chco=FF80087C&chan)](https://editor.image-charts.com/chart?cht=pa&chs=700x200&chd=t:20,20,30,40,50&chdl=20°|20°|30°|40°|50°&chxt=x&chco=FF80087C&chan)
 
 ```
 cht=pa
