@@ -38,10 +38,10 @@ chxt=
 - **`<axis>`** An axis to show on the chart. Available axes are:
     * `x` - Bottom x-axis
     * `y` - Left y-axis
-    * `t` - Top x-axis (:+1: Enterprise+ subscription, **upcoming on January 21th, 2020**)
-    * `r` - Right y-axis (:+1: Enterprise+ subscription, **upcoming on January 21th, 2020**)
+    * `t` - Top x-axis (:+1: Enterprise+ subscription)
+    * `r` - Right y-axis (:+1: Enterprise+ subscription)
 
-!!! info "Enterprise+ subscribers - **upcoming on January 21th, 2020**"
+!!! info "Enterprise+ subscribers"
     `chxt` up to `x,y` is available for *Free* and *Enterprise* subscriptions. Charts with more than two axis requires the Enterprise+ subscription.
     You can specify multiple axes of the same type, for example: `cht=x,x,y`. This will stack two sets of x-axes along the bottom of the chart. This is useful when adding custom labels along an axis that shows numeric values (see the example below). Axes are drawn from the inside out, so if you have `x,x`, the first x refers to the innermost copy, the next x refers to the next outwards copy, and so on.
 
@@ -92,7 +92,7 @@ cht=lc:nda
 ```
 
 
-!!! info "Enterprise+ subscribers - **upcoming on January 21th, 2020**"
+!!! info "Enterprise+ subscribers"
     This example shows a line chart with an x-axis, a y-axis, a top axis (t), and a right axis (r). Because no labels are specified, the chart defaults to a range based on the dataset for all axes. Note that by default, the top and bottom axes don't show tick marks by the labels.
 
     [![chart url multiple axis](https://image-charts.com/chart?chco=76A4FB&chd=s%3AcEAELFJHHHKUju9uuXUc&chls=2.0&chs=700x125&cht=lc&chxt=x%2Cy%2Ct%2Cr&icac=fgribreau&icretina=1&ichm=d31843a681fe882531e763d2ada25b595c6e83a5d8ddf8f607617c106d3ca3ce)](https://editor.image-charts.com/chart?chco=76A4FB&chd=s%3AcEAELFJHHHKUju9uuXUc&chls=2.0&chs=700x125&cht=lc&chxt=x%2Cy%2Ct%2Cr&icac=fgribreau&icretina=1&ichm=d31843a681fe882531e763d2ada25b595c6e83a5d8ddf8f607617c106d3ca3ce)
@@ -187,7 +187,7 @@ chds=-100,100
 chxr=1,-50,50
 ```
 
-!!! info "Enterprise+ subscribers - **upcoming on January 21th, 2020**"
+!!! info "Enterprise+ subscribers"
     This example shows left and right y-axes (y and r) and one x-axis (x).
 
     Each axis has a defined range. Because no labels or positions are specified, values are taken from the given range, and are evenly spaced within that range. In the line chart, values are evenly spread along the x-axis.
@@ -265,7 +265,7 @@ chxl=
 1:|Min|Mid|Max
 ```
 
-!!! info "Enterprise+ subscribers - **upcoming on January 21th, 2020**"
+!!! info "Enterprise+ subscribers"
     The example below includes axis labels on the left and right y-axes (`y` and `r`). It also includes two sets of values for the x-axis (x). You could consider adding tick marks on the y-axis using `chxs`.
 
     [![](https://image-charts.com/chart?chco=76A4FB&chd=s%3AcEAELFJHHHKUju9uuXUc&chls=2.0&chs=700x325&cht=lc&chxl=0%3A%7CJan%7CJuly%7CJan%7CJuly%7CJan%7C1%3A%7C0%7C50%7C100%7C2%3A%7CA%7CB%7CC%7C3%3A%7C2005%7C2006%7C2007&chxt=x%2Cy%2Cr%2Cx&icac=fgribreau&icretina=1&ichm=c8c3a32d4bc2bb6888c6406a46e112cd4163050e8e73275ac6773a9ab57e2192)](https://editor.image-charts.com/chart?chco=76A4FB&chd=s%3AcEAELFJHHHKUju9uuXUc&chls=2.0&chs=700x325&cht=lc&chxl=0%3A%7CJan%7CJuly%7CJan%7CJuly%7CJan%7C1%3A%7C0%7C50%7C100%7C2%3A%7CA%7CB%7CC%7C3%3A%7C2005%7C2006%7C2007&chxt=x%2Cy%2Cr%2Cx&icac=fgribreau&icretina=1&ichm=c8c3a32d4bc2bb6888c6406a46e112cd4163050e8e73275ac6773a9ab57e2192)
@@ -348,7 +348,7 @@ chxs=
 - **`<tick_color>`** *[Optional]* The tick mark color, in RRGGBB hexadecimal format. *Default is black*.
 - **`<opt_axis_color>`** *[Optional]* (not supported, please contact our support) The color of this axis line, in RRGGBB hexadecimal format.
 - **`<opt_skip_labels>`** *[Optional]*  Specify `s` if labels on this axis should be hidden in case there are too many
-- **`<opt_min_max_rotation>`** *[Optional]* **(upcoming on January 21th, 2020)**  Specify the mininum (e.g. `min10`) or the maximum (e.g. `max45`) or both (`min10max45`) rotation degree labels on this axis could have. Default value is `0` (no rotation at all) for both parameters.
+- **`<opt_min_max_rotation>`** *[Optional]* Specify the mininum (e.g. `min10`) or the maximum (e.g. `max45`) or both (`min10max45`) rotation degree labels on this axis could have. Default value is `0` (no rotation at all) for both parameters.
 
 
 #### Example
@@ -405,7 +405,7 @@ Thus we use `<skip_labels>` (see `0,s`, 0 means x axis and `s` means skip labels
 ```
 
 
-!!! info "Enterprise+ subscribers - **upcoming on January 21th, 2020**"
+!!! info "Enterprise+ subscribers -"
     Font size and color are specified for the second x-axis (Jan, Feb, Mar).
 
     [![](https://image-charts.com/chart?chco=76A4FB&chd=s%3AcEAELFJHHHKUju9uuXUc&chls=2.0&chs=700x325&cht=lc&chxl=3%3A%7CJan%7CFeb%7CMar&chxr=2%2C0%2C4&chxs=3%2C0000dd%2C13%2C0%2Ct&chxt=x%2Cy%2Cr%2Cx&icac=fgribreau&icretina=1&ichm=54f1ebd0fb5d54475e3def9fa699aac47c131d4291bae219308c718ec6d3baa9)](https://editor.image-charts.com/chart?chco=76A4FB&chd=s%3AcEAELFJHHHKUju9uuXUc&chls=2.0&chs=700x325&cht=lc&chxl=3%3A%7CJan%7CFeb%7CMar&chxr=2%2C0%2C4&chxs=3%2C0000dd%2C13%2C0%2Ct&chxt=x%2Cy%2Cr%2Cx&icac=fgribreau&icretina=1&ichm=54f1ebd0fb5d54475e3def9fa699aac47c131d4291bae219308c718ec6d3baa9)
