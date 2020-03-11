@@ -226,7 +226,8 @@ chm=
 
 - **`<formatting_string>`** - The value of the data at this point, with optional formatting. If you do not use the `chds` parameter (custom scaling) it gives the exact encoded value; 
 if you do use that parameter with any format type the value will be scaled to the range that you specify. See an example of `chds` with numeric markers below. 
-With this marker type in a [stacked bar chart](/bar-charts), if you specify -1 for *<series_index>* you will get a marker that shows the sum of all values in this stacked bar. 
+
+<!-- With this marker type in a [stacked bar chart](/bar-charts), if you specify -1 for *<series_index>* you will get a marker that shows the sum of all values in this stacked bar. -->
 The formatting string syntax is as follows:  
 `<preceding_text>*<number_type><decimal_places>zs<x or y>*<following_text>`
     - `<preceding_text>` - Text to precede each value.
@@ -248,9 +249,11 @@ The formatting string syntax is as follows:
 - **`<opt_which_points>`**  
 *[Optional]* Which point(s) to draw markers on. Default is all markers. Use one of the following values:
      <!-- - n.d - Which data point to draw the marker on, where n.d is the zero-based index in the series. If you specify a non-integer value, then the fraction indicates a calculated intermediate point. For example, 3.5 means halfway between point 3 and point 4. --> 
-    - `-1` - Draw a marker on all data points. You can also leave this parameter empty to draw on all data points.
-    <!-- - -n - Draw a marker on every n-th data point. -->
+
     - `start:end`<!--:n--> - Draw a marker on every <!--n-th--> data point in a range, from start to end index values, inclusive. All parameters are optional (may be absent), so 3: would be from the fourth element to the last, <!--step 1,--> and omitting this parameter entirely would default to first:last<!--:1-->. All values can be floating point numbers. start and end can be negative, to count backward from the last value. If both start and end are negative, be sure that they are listed in increasing value (for example, -6:-1<!--:1-->). <!--If the n step value is less than 1, it will calculate additional data points by interpolating the data values given. Default values are first:last:1-->
+    
+    - -1 - Draw a marker on all data points. You can also leave this parameter empty to draw on all data points.
+    <!-- - -n - Draw a marker on every n-th data point. -->
     <!-- - `x:y` - [Not supported for N-type markers] Draw a marker at a specific x/y point on the chart. This point does not have to be on a line. Add the at character (@) before the marker type to use this option. Specify the coordinates as floating point values, where 0:0 is the bottom left corner of the chart, 0.5:0.5 is the center of the chart, and 1:1 is the top right corner of the chart. For example, to add a red, 15-pixel diamond to the center of a chart, use @d,FF0000,0,0.5:0.5,15. -->
 
 - **`<size>`** The size of the marker, in pixels. <!-- Most take a single number value for this parameter; the V, H, and S markers support the syntax <size>[:width] where the optional second part specifies the line or marker length. -->
@@ -262,6 +265,9 @@ The formatting string syntax is as follows:
 - **`<font_family>`** one of the [supported open-source font](/reference/chart-font#supported-open-source-fonts). Don't forget to checkout the [font gallery](https://fonts.google.com/)
 
 - **`<font_style>`** one of `normal` or `italic`. Default value used is `normal`
+
+!!! tip "-1 for *series_index* not implemented yet"
+    Do you want this feature ? [Just ask us :angel:](mailto:support@image-charts.com) !  
 
 #### Examples
 
