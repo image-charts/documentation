@@ -269,7 +269,7 @@ Here's an example of value labels on a bar chart.
 
 The first chart (N*p0*) specifies a data value marker, with values shown as a percentage, rounded to zero decimal places, in black, on all values, in 11-point text. Note that the data values are all between 0.0 and 1.0, which, in percentage format, are moved up two decimal places.
 
-[![chart](https://image-charts.com/chart?chbh=17,15&chco=0000FF&chd=t:0.4356,0.3562,0.4834,0.575,0.673,0.6091&chds=0,1&chm=N*p0*,000000,0,-1,11&chs=700x125&cht=bvs&icac=fgribreau&ichm=0a894728bd1c2be09127ba664108901c9370170eb3c645b5682ca0c5680312fc)](https://editor.image-charts.com/chart?chbh=17,15&chco=0000FF&chd=t:0.4356,0.3562,0.4834,0.575,0.673,0.6091&chds=0,1&chm=N*p0*,000000,0,-1,11&chs=700x125&cht=bvs&icac=fgribreau&ichm=0a894728bd1c2be09127ba664108901c9370170eb3c645b5682ca0c5680312fc)
+[![chart](https://image-charts.com/chart?chco=D3F035&chd=a:13,13,10&chg=0,50&chl=12,773,000|12,688,000|10,264,000&chm=N*p0*,000000,0,-1,11&chma=0,0,0,0&chs=744x600&cht=bvg&chtt=iuhss&chxl=0:|Sept|Okt|Nov|1:|Month|3:|Sales&chxs=0,FF0000,28|1,FF0000,28|2N*cIDR0sz*m,FF0000,28|3,FF0000,28&chxt=x,x,y,y&icac=fgribreau&ichm=ae245534e7148ad2ac5690da214b86965f99a1215221e2a84a33caabe127d383)](https://editor.image-charts.com/chart?chco=D3F035&chd=a:13,13,10&chg=0,50&chl=12,773,000|12,688,000|10,264,000&chm=N*p0*,000000,0,-1,11&chma=0,0,0,0&chs=744x600&cht=bvg&chtt=iuhss&chxl=0:|Sept|Okt|Nov|1:|Month|3:|Sales&chxs=0,FF0000,28|1,FF0000,28|2N*cIDR0sz*m,FF0000,28|3,FF0000,28&chxt=x,x,y,y&icac=fgribreau&ichm=ae245534e7148ad2ac5690da214b86965f99a1215221e2a84a33caabe127d383)
 
 ```
 chm=
@@ -280,7 +280,7 @@ chd=t:
 
 The second chart (N*cEUR1*) shows the same values formatted as Euro values, one decimal place, in black, on all values, in 11-point text.
 
-[![chart](https://image-charts.com/chart?chbh=17,15&chco=0000FF&chd=t:43.56,35.62,48.34,57.50,67.30,60.91&chm=N*cEUR1*,000000,0,-1,11&chs=700x125&cht=bvs&icac=fgribreau&ichm=9417b46cbfc71ece531e724ad38cde83d4b84254f1d6e06c1af2b355564f6c1f)](https://editor.image-charts.com/chart?chbh=17,15&chco=0000FF&chd=t:43.56,35.62,48.34,57.50,67.30,60.91&chm=N*cEUR1*,000000,0,-1,11&chs=700x125&cht=bvs&icac=fgribreau&ichm=9417b46cbfc71ece531e724ad38cde83d4b84254f1d6e06c1af2b355564f6c1f)
+[![chart](https://image-charts.com/chart?chco=D3F035&chd=a:13,13,10&chg=0,50&chl=12,773,000|12,688,000|10,264,000&chm=N*cEUR1*,000000,0,-1,11&chma=0,0,0,0&chs=744x600&cht=bvg&chtt=iuhss&chxl=0:|Sept|Okt|Nov|1:|Month|3:|Sales&chxs=0,FF0000,28|1,FF0000,28|2N*cIDR0sz*m,FF0000,28|3,FF0000,28&chxt=x,x,y,y&icac=fgribreau&ichm=2fb9f7955ae0f5ed237a92c25e72eff1dc08210e6c3504834525dafd126f5909)](https://editor.image-charts.com/chart?chco=D3F035&chd=a:13,13,10&chg=0,50&chl=12,773,000|12,688,000|10,264,000&chm=N*cEUR1*,000000,0,-1,11&chma=0,0,0,0&chs=744x600&cht=bvg&chtt=iuhss&chxl=0:|Sept|Okt|Nov|1:|Month|3:|Sales&chxs=0,FF0000,28|1,FF0000,28|2N*cIDR0sz*m,FF0000,28|3,FF0000,28&chxt=x,x,y,y&icac=fgribreau&ichm=2fb9f7955ae0f5ed237a92c25e72eff1dc08210e6c3504834525dafd126f5909)
 
 ```
 chm=
@@ -289,7 +289,7 @@ chm=
 
 Example with font-family and font-style
 
-[![chart](https://image-charts.com/chart?chbh=17,15&chco=0000FF&chd=t:43.56,35.62,48.34,57.50,67.30,60.91&chm=N*cEUR1*,FF0000,0,-1,11,,,Roboto,italic&chs=700x125&cht=bvs&icac=fgribreau&ichm=c0fa49d18b2bb9db87ee440d63acc7a1d95f3140bfe8c88ecb3af241c3a3b008)](https://editor.image-charts.com/chart?chbh=17,15&chco=0000FF&chd=t:43.56,35.62,48.34,57.50,67.30,60.91&chm=N*cEUR1*,FF0000,0,-1,11,,,Roboto,italic&chs=700x125&cht=bvs&icac=fgribreau&ichm=c0fa49d18b2bb9db87ee440d63acc7a1d95f3140bfe8c88ecb3af241c3a3b008)
+[![chart](https://image-charts.com/chart?chco=D3F035&chd=a:13,13,10&chg=0,50&chl=12,773,000|12,688,000|10,264,000&chm=N*cEUR1*,FF0000,0,-1,11,,,Roboto,italic&chma=0,0,0,0&chs=744x600&cht=bvg&chtt=iuhss&chxl=0:|Sept|Okt|Nov|1:|Month|3:|Sales&chxs=0,FF0000,28|1,FF0000,28|2N*cIDR0sz*m,FF0000,28|3,FF0000,28&chxt=x,x,y,y&icac=fgribreau&ichm=dc183de96ceb70f0ed602d5fcf9ffbae10790ae86d9e1764b54af78ec96e564a)](https://editor.image-charts.com/chart?chco=D3F035&chd=a:13,13,10&chg=0,50&chl=12,773,000|12,688,000|10,264,000&chm=N*cEUR1*,FF0000,0,-1,11,,,Roboto,italic&chma=0,0,0,0&chs=744x600&cht=bvg&chtt=iuhss&chxl=0:|Sept|Okt|Nov|1:|Month|3:|Sales&chxs=0,FF0000,28|1,FF0000,28|2N*cIDR0sz*m,FF0000,28|3,FF0000,28&chxt=x,x,y,y&icac=fgribreau&ichm=dc183de96ceb70f0ed602d5fcf9ffbae10790ae86d9e1764b54af78ec96e564a)
 
 ```
 chm=
