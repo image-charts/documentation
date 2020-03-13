@@ -4,7 +4,7 @@ You can specify the title text, color, and font size for your chart.
 
 ```
 chtt=<chart_title>
-chts=<font_color>,<font_size>
+chts=<font_color>,<font_size>[,<opt_alignment>,<opt_font_family>,<opt_font_style>]
 ```
 
 `chtt` - Specifies the chart title.
@@ -15,6 +15,9 @@ chts=<font_color>,<font_size>
 
 - **`<font_color>`** The title color, in [RRGGBB[AA] hexadecimal format](/reference/color-format). Default color is black.
 - **`<font_size>`** Font size of the title, in points.
+- **`<opt_alignment>`** Not implemented yet.
+- **`<opt_font_family>`** [Optional] one of the [supported open-source font](#supported-open-source-fonts). Don't forget to checkout the [font gallery](https://fonts.google.com/).
+- **`<opt_font_style>`** [Optional] one of `normal` or `italic`. Default value used is `normal`.
 
 <!-- - **`<opt_alignment>`** [Optional] Alignment of the title. Choose one of the following case-sensitive string values: "l" (left), "c" (centered) "r" (right). Default is "c". -->
 
@@ -36,4 +39,24 @@ A chart with a blue, 20-point title.
 ```
 chtt=Site+visitors
 chts=FF0000,20,r
+```
+
+A chart with a blue, Indie Flower, 20-point title.
+
+[![chart](https://image-charts.com/chart?chbh=22,4&chco=4ECDC4,C7F464&chd=s:YUVmw1,wellow&chs=700x200&cht=bvs&chts=0000FF,20,r,Indie%20Flower&chtt=Site%20visitors&icac=fgribreau&ichm=71cce7e0ef467fc3b5c9d17892a0c711a87ae4dd05a35cb24c9a77a54f952064)](https://editor.image-charts.com/chart?chbh=22,4&chco=4ECDC4,C7F464&chd=s:YUVmw1,wellow&chs=700x200&cht=bvs&chts=0000FF,20,r,Indie%20Flower&chtt=Site%20visitors&icac=fgribreau&ichm=71cce7e0ef467fc3b5c9d17892a0c711a87ae4dd05a35cb24c9a77a54f952064)
+
+
+```
+chtt=Site+visitors
+chts=FF0000,20,r,Indie+Flower
+```
+
+A chart with a blue, Roboto, italic, 20-point title.
+
+[![chart](https://image-charts.com/chart?chbh=22,4&chco=4ECDC4,C7F464&chd=s:YUVmw1,wellow&chs=700x200&cht=bvs&chts=0000FF,20,r,Roboto,italic&chtt=Site%20visitors&icac=fgribreau&ichm=ee0e254216f437dfb976a47b99ebe314c236169f07ddbc71e5c0e92ab173ba5f)](https://editor.image-charts.com/chart?chbh=22,4&chco=4ECDC4,C7F464&chd=s:YUVmw1,wellow&chs=700x200&cht=bvs&chts=0000FF,20,r,Roboto,italic&chtt=Site%20visitors&icac=fgribreau&ichm=ee0e254216f437dfb976a47b99ebe314c236169f07ddbc71e5c0e92ab173ba5f)
+
+
+```
+chtt=Site+visitors
+chts=FF0000,20,r,Roboto,italic
 ```
