@@ -69,7 +69,7 @@ chm=s,E4061C,0,-1,15.0|B,FCECF4,0,0,0
 ## Line Markers
 
 !!! info "Looking for line fills?"
-    `chm` parameter can also be used for [line fills](/line-charts/#line-fills) in line charts
+    `chm` parameter can also be used for [line fills](#line-fills) in line charts
 
 !!! info "Enterprise+ subscribers"
     Compound charts are only enabled in **Enterprise+** subscriptions

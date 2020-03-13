@@ -3,3 +3,15 @@
   to = "/reference/compound-charts/"
   status = 301
   force = false
+
+[[redirects]]
+  from = "/reference/shape-markers/"
+  to = "/reference/markers/"
+  status = 301
+  force = false
+
+[[redirects]]
+  from = "/reference/compound-charts/"
+  to = "/reference/markers/"
+  status = 301
+  force = false

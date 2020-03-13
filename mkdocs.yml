@@ -22,10 +22,10 @@ nav:
   - Line Charts: line-charts.md
   - Pie Charts: pie-charts.md
   - Polar Charts: polar-charts.md
+  - Radar Charts: radar-charts.md
   - Bubble Charts: bubble-charts.md
   - Graph Viz Charts: graph-viz-charts.md
   - QR Codes: qr-codes.md
-  - Radar Charts: radar-charts.md
   - Reference:
       - Chart Type: reference/chart-type.md
       - Chart Size: reference/chart-size.md
@@ -44,7 +44,6 @@ nav:
       - Output Format: reference/output-format.md
       - POST requests: reference/post-requests.md
       - Retina support: reference/retina.md
-      - Compound Charts: reference/compound-charts.md
   - Guides:
       - How to setup a dependency graph in Google Sheets: guides/graph-in-google-sheets.md
   - Gallery: gallery.md
