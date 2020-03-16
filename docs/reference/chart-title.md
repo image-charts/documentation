@@ -16,7 +16,7 @@ chts=<font_color>,<font_size>[,<opt_alignment>,<opt_font_family>,<opt_font_style
 - **`<font_color>`** The title color, in [RRGGBB[AA] hexadecimal format](/reference/color-format). Default color is black.
 - **`<font_size>`** Font size of the title, in points.
 - **`<opt_alignment>`** Not implemented yet.
-- **`<opt_font_family>`** [Optional] one of the [supported open-source font](/reference/chart-font/#supported-open-source-fonts). Don't forget to checkout the [font gallery](https://fonts.google.com/).
+- **`<opt_font_family>`** [Optional] one of the [supported open-source font](/reference/chart-font/#supported-open-source-fonts).
 - **`<opt_font_style>`** [Optional] one of `normal` or `italic`. Default value used is `normal`.
 
 !!! info "Enterprise+ subscription only"
