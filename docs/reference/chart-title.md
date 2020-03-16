@@ -44,22 +44,22 @@ chtt=Site+visitors
 chts=FF0000,20,r
 ```
 
-A chart with a blue, Indie Flower, 20-point title.
+A chart with a teal, Dancing Script, 20-point title.
 
-[![chart](https://image-charts.com/chart?chbh=22,4&chco=4ECDC4,C7F464&chd=s:YUVmw1,wellow&chs=700x200&cht=bvs&chts=0000FF,20,r,Indie%20Flower&chtt=Site%20visitors&icac=fgribreau&ichm=71cce7e0ef467fc3b5c9d17892a0c711a87ae4dd05a35cb24c9a77a54f952064)](https://editor.image-charts.com/chart?chbh=22,4&chco=4ECDC4,C7F464&chd=s:YUVmw1,wellow&chs=700x200&cht=bvs&chts=0000FF,20,r,Indie%20Flower&chtt=Site%20visitors&icac=fgribreau&ichm=71cce7e0ef467fc3b5c9d17892a0c711a87ae4dd05a35cb24c9a77a54f952064)
-
-
-```
-chtt=Site+visitors
-chts=FF0000,20,r,Indie+Flower
-```
-
-A chart with a blue, Roboto, italic, 20-point title.
-
-[![chart](https://image-charts.com/chart?chbh=22,4&chco=4ECDC4,C7F464&chd=s:YUVmw1,wellow&chs=700x200&cht=bvs&chts=0000FF,20,r,Roboto,italic&chtt=Site%20visitors&icac=fgribreau&ichm=ee0e254216f437dfb976a47b99ebe314c236169f07ddbc71e5c0e92ab173ba5f)](https://editor.image-charts.com/chart?chbh=22,4&chco=4ECDC4,C7F464&chd=s:YUVmw1,wellow&chs=700x200&cht=bvs&chts=0000FF,20,r,Roboto,italic&chtt=Site%20visitors&icac=fgribreau&ichm=ee0e254216f437dfb976a47b99ebe314c236169f07ddbc71e5c0e92ab173ba5f)
+[![chart](https://image-charts.com/chart?chbh=22,4&chco=4ECDC4,C7F464&chd=s:YUVmw1,wellow&chs=700x200&cht=bvs&chts=556270,20,r,Dancing%20Script&chtt=Site visitors&icac=fgribreau&ichm=a23d07f2f21ea4775e67393d5b94e30fb2c018c68ef6613fd1e28c4479c81895)](https://image-charts.com/chart?chbh=22,4&chco=4ECDC4,C7F464&chd=s:YUVmw1,wellow&chs=700x200&cht=bvs&chts=556270,20,r,Dancing Script&chtt=Site visitors&icac=fgribreau&ichm=a23d07f2f21ea4775e67393d5b94e30fb2c018c68ef6613fd1e28c4479c81895)
 
 
 ```
 chtt=Site+visitors
-chts=FF0000,20,r,Roboto,italic
+chts=008080,20,r,Dancing Script
+```
+
+A chart with a teal, Amatic SC, italic, 20-point title.
+
+[![chart](https:/image-charts.com/chart?chbh=22,4&chco=4ECDC4,C7F464&chd=s:YUVmw1,wellow&chs=700x200&cht=bvs&chts=008080,20,r,Amatic%20SC,italic&chtt=Site%20visitors&icac=fgribreau&ichm=9166fb7739c65189cd5cd3fd6b02c15f7f6387bbe733d713e0a24585cba52df2)](https:/image-charts.com/chart?chbh=22,4&chco=4ECDC4,C7F464&chd=s:YUVmw1,wellow&chs=700x200&cht=bvs&chts=008080,20,r,Amatic%20SC,italic&chtt=Site%20visitors&icac=fgribreau&ichm=9166fb7739c65189cd5cd3fd6b02c15f7f6387bbe733d713e0a24585cba52df2)
+
+
+```
+chtt=Site+visitors
+chts=008080,20,r,Amatic SC,italic
 ```
