@@ -12,8 +12,6 @@ build:
 	# note: netlify does not support docker
 	# docker run -v ${PWD}:/docs -it -p 8000:8000 imagecharts/documentation build
 	mkdocs build
-	# don't forget to copy the _redirects file to the publish "site/" folder
-	cp _redirects site/
 
 update: update-logo
 
