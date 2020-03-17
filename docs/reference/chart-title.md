@@ -46,7 +46,7 @@ chts=FF0000,20,r
 
 A chart with a teal, Dancing Script, 20-point title.
 
-[![chart](https://image-charts.com/chart?chbh=22,4&chco=4ECDC4,C7F464&chd=s:YUVmw1,wellow&chs=700x200&cht=bvs&chts=556270,20,r,Dancing%20Script&chtt=Site visitors&icac=fgribreau&ichm=a23d07f2f21ea4775e67393d5b94e30fb2c018c68ef6613fd1e28c4479c81895)](https://image-charts.com/chart?chbh=22,4&chco=4ECDC4,C7F464&chd=s:YUVmw1,wellow&chs=700x200&cht=bvs&chts=556270,20,r,Dancing Script&chtt=Site visitors&icac=fgribreau&ichm=a23d07f2f21ea4775e67393d5b94e30fb2c018c68ef6613fd1e28c4479c81895)
+[![chart](https://image-charts.com/chart?chbh=22%2C4&chco=4ECDC4%2CC7F464&chd=s%3AYUVmw1%2Cwellow&chs=700x200&cht=bvs&chts=008080%2C20%2Cr%2CDancing%20Script&chtt=Site%20visitors&icac=fgribreau&icretina=1&ichm=198e0ce0b3ba27b35fcfa6624b8ec959ac44549585f3178d52a832d3aca40f90)](https://editor.image-charts.com/chart?chbh=22%2C4&chco=4ECDC4%2CC7F464&chd=s%3AYUVmw1%2Cwellow&chs=700x200&cht=bvs&chts=008080%2C20%2Cr%2CDancing%20Script&chtt=Site%20visitors&icac=fgribreau&icretina=1&ichm=198e0ce0b3ba27b35fcfa6624b8ec959ac44549585f3178d52a832d3aca40f90)
 
 
 ```
@@ -56,7 +56,7 @@ chts=008080,20,r,Dancing Script
 
 A chart with a teal, Amatic SC, italic, 20-point title.
 
-[![chart](https:/image-charts.com/chart?chbh=22,4&chco=4ECDC4,C7F464&chd=s:YUVmw1,wellow&chs=700x200&cht=bvs&chts=008080,20,r,Amatic%20SC,italic&chtt=Site%20visitors&icac=fgribreau&ichm=9166fb7739c65189cd5cd3fd6b02c15f7f6387bbe733d713e0a24585cba52df2)](https:/image-charts.com/chart?chbh=22,4&chco=4ECDC4,C7F464&chd=s:YUVmw1,wellow&chs=700x200&cht=bvs&chts=008080,20,r,Amatic%20SC,italic&chtt=Site%20visitors&icac=fgribreau&ichm=9166fb7739c65189cd5cd3fd6b02c15f7f6387bbe733d713e0a24585cba52df2)
+[![chart](https://image-charts.com/chart?chbh=22%2C4&chco=4ECDC4%2CC7F464&chd=s%3AYUVmw1%2Cwellow&chs=700x200&cht=bvs&chts=008080%2C20%2Cr%2CAmatic%20SC%2Citalic&chtt=Site%20visitors&icac=fgribreau&icretina=1&ichm=48ffdf72c5390db9381c6165fb0512b1dbad8f52d4e06253261d64e7837319b3)](https://editor.image-charts.com/chart?chbh=22%2C4&chco=4ECDC4%2CC7F464&chd=s%3AYUVmw1%2Cwellow&chs=700x200&cht=bvs&chts=008080%2C20%2Cr%2CAmatic%20SC%2Citalic&chtt=Site%20visitors&icac=fgribreau&icretina=1&ichm=48ffdf72c5390db9381c6165fb0512b1dbad8f52d4e06253261d64e7837319b3)
 
 
 ```
