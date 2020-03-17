@@ -225,11 +225,9 @@ chm=
 ```
 
 - **`<formatting_string>`** - The value of the data at this point, with optional formatting. If you do not use the `chds` parameter (custom scaling) it gives the exact encoded value; 
-if you do use that parameter with any format type the value will be scaled to the range that you specify. See an example of `chds` with numeric markers below. 
-
-<!-- With this marker type in a [stacked bar chart](/bar-charts), if you specify -1 for *<series_index>* you will get a marker that shows the sum of all values in this stacked bar. -->
-The formatting string syntax is as follows:  
-`<preceding_text>*<number_type><decimal_places>zs<x or y>*<following_text>`
+    if you do use that parameter with any format type the value will be scaled to the range that you specify. See an example of `chds` with numeric markers below. 
+    The formatting string syntax is as follows:
+    `<preceding_text>*<number_type><decimal_places>zs<x or y>*<following_text>`
     - `<preceding_text>` - Text to precede each value.
     - `*...*` - An optional block wrapped in literal asterisks, in which you can specify formatting details for numbers. The following values are supported, and are all optional:
         - `<number_type>` - The number format, for numeric values. Choose one of the following:
@@ -273,31 +271,31 @@ The formatting string syntax is as follows:
 
 Here's an example of value labels on a bar chart.
 
-The first chart (N*p0*) specifies a data value marker, with values shown as a percentage, rounded to zero decimal places, in black, on all values, in 11-point text. Note that the data values are all between 0.0 and 1.0, which, in percentage format, are moved up two decimal places.
+The first chart (N*p0*) specifies a data value marker, with values shown as a percentage, rounded to zero decimal places, in white, on all values, in 13-point text. Note that the data values are all between 0.0 and 1.0, which, in percentage format, are moved up two decimal places.
 
-[![chart](https://image-charts.com/chart?chco=D3F035&chd=a:13,13,10&chg=0,50&chl=12,773,000|12,688,000|10,264,000&chm=N*p0*,000000,0,-1,11&chma=0,0,0,0&chs=744x600&cht=bvg&chtt=iuhss&chxl=0:|Sept|Okt|Nov|1:|Month|3:|Sales&chxs=0,FF0000,28|1,FF0000,28|2N*cIDR0sz*m,FF0000,28|3,FF0000,28&chxt=x,x,y,y&icac=fgribreau&ichm=ae245534e7148ad2ac5690da214b86965f99a1215221e2a84a33caabe127d383)](https://editor.image-charts.com/chart?chco=D3F035&chd=a:13,13,10&chg=0,50&chl=12,773,000|12,688,000|10,264,000&chm=N*p0*,000000,0,-1,11&chma=0,0,0,0&chs=744x600&cht=bvg&chtt=iuhss&chxl=0:|Sept|Okt|Nov|1:|Month|3:|Sales&chxs=0,FF0000,28|1,FF0000,28|2N*cIDR0sz*m,FF0000,28|3,FF0000,28&chxt=x,x,y,y&icac=fgribreau&ichm=ae245534e7148ad2ac5690da214b86965f99a1215221e2a84a33caabe127d383)
+[![chart](https://image-charts.com/chart?chd=t%3A0.7%2C0.25%2C0.18%2C0.15%2C0.115%2C0.100%2C0.30&chf=b0%2Clg%2C90%2C5d62b5%2C0.5%2CA7CDF2%2C1&chm=N%2Ap0%2A%2CFFFFFF%2C0%2C-1%2C13&chma=10%2C10%2C10%2C10&chs=700x300&cht=bvs&chxl=0%3A%7CIreland%7CSaudi%7CCanada%7CIran%7CFrance%7CUS%7CUK%7C1%3A%7CCountry%7C3%3A%7CPercent%7C&chxr=2%2C0%2C1&chxs=2N%2Ap0%2A%2C828080%2C12%7C0%2C828080%2C12&chxt=x%2Cx%2Cy%2Cy&icac=fgribreau&icretina=1&ichm=aeafd7f50cefa8df65943e610094ec8d825644d13c36c25a1a3e0d99530ca35c)](https://editor.image-charts.com/chart?chd=t%3A0.7%2C0.25%2C0.18%2C0.15%2C0.115%2C0.100%2C0.30&chf=b0%2Clg%2C90%2C5d62b5%2C0.5%2CA7CDF2%2C1&chm=N%2Ap0%2A%2CFFFFFF%2C0%2C-1%2C13&chma=10%2C10%2C10%2C10&chs=700x300&cht=bvs&chxl=0%3A%7CIreland%7CSaudi%7CCanada%7CIran%7CFrance%7CUS%7CUK%7C1%3A%7CCountry%7C3%3A%7CPercent%7C&chxr=2%2C0%2C1&chxs=2N%2Ap0%2A%2C828080%2C12%7C0%2C828080%2C12&chxt=x%2Cx%2Cy%2Cy&icac=fgribreau&icretina=1&ichm=aeafd7f50cefa8df65943e610094ec8d825644d13c36c25a1a3e0d99530ca35c)
 
 ```
 chm=
-  N*p0*,000000,0,-1,11
+  N*p0*,FFFFFF,0,-1,13
 chd=t:
-  0.4356,0.3562,0.4834,0.575,0.673,0.6091
+  0.7,0.25,0.18,0.15,0.115,0.100,0.30
 ```
 
-The second chart (N*cEUR1*) shows the same values formatted as Euro values, one decimal place, in black, on all values, in 11-point text.
+The second chart (N*cUSD1*) shows values formatted as Dollar, in white, on all values, in 13-point text.
 
-[![chart](https://image-charts.com/chart?chco=D3F035&chd=a:13,13,10&chg=0,50&chl=12,773,000|12,688,000|10,264,000&chm=N*cEUR1*,000000,0,-1,11&chma=0,0,0,0&chs=744x600&cht=bvg&chtt=iuhss&chxl=0:|Sept|Okt|Nov|1:|Month|3:|Sales&chxs=0,FF0000,28|1,FF0000,28|2N*cIDR0sz*m,FF0000,28|3,FF0000,28&chxt=x,x,y,y&icac=fgribreau&ichm=2fb9f7955ae0f5ed237a92c25e72eff1dc08210e6c3504834525dafd126f5909)](https://editor.image-charts.com/chart?chco=D3F035&chd=a:13,13,10&chg=0,50&chl=12,773,000|12,688,000|10,264,000&chm=N*cEUR1*,000000,0,-1,11&chma=0,0,0,0&chs=744x600&cht=bvg&chtt=iuhss&chxl=0:|Sept|Okt|Nov|1:|Month|3:|Sales&chxs=0,FF0000,28|1,FF0000,28|2N*cIDR0sz*m,FF0000,28|3,FF0000,28&chxt=x,x,y,y&icac=fgribreau&ichm=2fb9f7955ae0f5ed237a92c25e72eff1dc08210e6c3504834525dafd126f5909)
+[![chart](https://image-charts.com/chart?chd=a%3A290%2C250%2C180%2C140%2C115%2C100%2C30&chf=b0%2Clg%2C90%2C76A4FB%2C0.5%2CA7CDF2%2C1&chm=N%2AcUSD1%2A%2CFFFFFF%2C0%2C-1%2C13&chma=10%2C10%2C10%2C10&chs=700x300&cht=bvs&chxl=0%3A%7CIreland%7CSaudi%7CCanada%7CIran%7CFrance%7CUS%7CUK%7C1%3A%7CCountry%7C3%3A%7CAmount%7C&chxs=2N%2AcUSD0sz%2A%2C828080%2C12%7C0%2C828080%2C12&chxt=x%2Cx%2Cy%2Cy&icac=fgribreau&icretina=1&ichm=7093eb970685be9c64e01d8b2cd1e2be95d1910343db70981bf4c118015e9bff)](https://editor.image-charts.com/chart?chd=a%3A290%2C250%2C180%2C140%2C115%2C100%2C30&chf=b0%2Clg%2C90%2C76A4FB%2C0.5%2CA7CDF2%2C1&chm=N%2AcUSD1%2A%2CFFFFFF%2C0%2C-1%2C13&chma=10%2C10%2C10%2C10&chs=700x300&cht=bvs&chxl=0%3A%7CIreland%7CSaudi%7CCanada%7CIran%7CFrance%7CUS%7CUK%7C1%3A%7CCountry%7C3%3A%7CAmount%7C&chxs=2N%2AcUSD0sz%2A%2C828080%2C12%7C0%2C828080%2C12&chxt=x%2Cx%2Cy%2Cy&icac=fgribreau&icretina=1&ichm=7093eb970685be9c64e01d8b2cd1e2be95d1910343db70981bf4c118015e9bff)
 
 ```
 chm=
-  N*cEUR1*,000000,0,-1,11
+  N*cUSD1*,FFFFFF,0,-1,13
 ```
 
 Example with font-family and font-style
 
-[![chart](https://image-charts.com/chart?chco=D3F035&chd=a:13,13,10&chg=0,50&chl=12,773,000|12,688,000|10,264,000&chm=N*cEUR1*,FF0000,0,-1,11,,,Roboto,italic&chma=0,0,0,0&chs=744x600&cht=bvg&chtt=iuhss&chxl=0:|Sept|Okt|Nov|1:|Month|3:|Sales&chxs=0,FF0000,28|1,FF0000,28|2N*cIDR0sz*m,FF0000,28|3,FF0000,28&chxt=x,x,y,y&icac=fgribreau&ichm=dc183de96ceb70f0ed602d5fcf9ffbae10790ae86d9e1764b54af78ec96e564a)](https://editor.image-charts.com/chart?chco=D3F035&chd=a:13,13,10&chg=0,50&chl=12,773,000|12,688,000|10,264,000&chm=N*cEUR1*,FF0000,0,-1,11,,,Roboto,italic&chma=0,0,0,0&chs=744x600&cht=bvg&chtt=iuhss&chxl=0:|Sept|Okt|Nov|1:|Month|3:|Sales&chxs=0,FF0000,28|1,FF0000,28|2N*cIDR0sz*m,FF0000,28|3,FF0000,28&chxt=x,x,y,y&icac=fgribreau&ichm=dc183de96ceb70f0ed602d5fcf9ffbae10790ae86d9e1764b54af78ec96e564a)
+[![chart](https://image-charts.com/chart?chd=a%3A290%2C250%2C180%2C140%2C115%2C100%2C30&chf=b0%2Clg%2C90%2C76A4FB%2C0.5%2CA7CDF2%2C1&chm=N%2AcUSD1%2A%2C4e5399%2C0%2C-1%2C13%2C%2C%2CEconomica%2Citalic&chma=10%2C10%2C10%2C10&chs=700x300&cht=bvs&chxl=0%3A%7CIreland%7CSaudi%7CCanada%7CIran%7CFrance%7CUS%7CUK%7C1%3A%7CCountry%7C3%3A%7CAmount%7C&chxs=2N%2AcUSD0sz%2A%2C828080%2C12%7C0%2C828080%2C12&chxt=x%2Cx%2Cy%2Cy&icac=fgribreau&icretina=1&ichm=cae1795505c49684ef5e53aa10305fc08398646a2d38474f5e431423c07be4f4)](https://editor.image-charts.com/chart?chd=a%3A290%2C250%2C180%2C140%2C115%2C100%2C30&chf=b0%2Clg%2C90%2C76A4FB%2C0.5%2CA7CDF2%2C1&chm=N%2AcUSD1%2A%2C4e5399%2C0%2C-1%2C13%2C%2C%2CEconomica%2Citalic&chma=10%2C10%2C10%2C10&chs=700x300&cht=bvs&chxl=0%3A%7CIreland%7CSaudi%7CCanada%7CIran%7CFrance%7CUS%7CUK%7C1%3A%7CCountry%7C3%3A%7CAmount%7C&chxs=2N%2AcUSD0sz%2A%2C828080%2C12%7C0%2C828080%2C12&chxt=x%2Cx%2Cy%2Cy&icac=fgribreau&icretina=1&ichm=cae1795505c49684ef5e53aa10305fc08398646a2d38474f5e431423c07be4f4)
 
 ```
 chm=
-  N*cEUR1*,FF0000,0,-1,11,,,Roboto,italic
+  N*cUSD1*,4e5399,0,-1,13,,,Economica,italic
 ```
