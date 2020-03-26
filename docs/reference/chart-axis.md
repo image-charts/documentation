@@ -340,7 +340,7 @@ chxs=
 -1 - Top or bottom: labels are to the right of the ticks; Left or right: labels are left-aligned in their area. Default for r-axis labels.
 0 - Top or bottom: labels are centered on the ticks; Left or right: labels are centered in their area. Default for x- and t-axis labels.
 1 - Top or bottom: labels are to the left of the ticks; Left or right: labels are right-aligned in their area. Default for y-axis labels.-->
-- **`<opt_axis_or_tick>`** *[Optional]* Whether to show tick marks and/or axis lines for this axis, note that [the axis visibility parameter (`chxt`)](/referenceeditor./chart-axis/) has precedence over this parameter for axis visibility.
+- **`<opt_axis_or_tick>`** *[Optional]* Whether to show tick marks and/or axis lines for this axis, note that [the axis visibility parameter (`chxt`)](#visible-axes) has precedence over this parameter for axis visibility.
       - `l` (lowercase 'L') - Draw axis line only.
       - `t` - Draw tick marks only. Tick marks are the little lines next to axis labels.
       - `lt` - [Default] Draw both an axis line and tick marks for all labels.
