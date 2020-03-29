@@ -11,6 +11,9 @@ The following quotas apply to Image-Charts API;
 
 - 4 queries per second (QPS) per **IP address**
 
+!!! tip 
+    Please [contact our support team](mailto:support@image-charts.com) if you have special needs.
+
 
 ## Exceeding quota limits
 
