@@ -9,7 +9,7 @@ Image-Charts is used by millions of sites. We put limits and quotas on chart gen
 
 The following quotas apply to Image-Charts API;
 
-- 6 queries per second (QPS) per **IP address**
+- 8 queries per second (QPS) per **IP address**
 
 !!! tip 
     Please [contact our support team](mailto:support@image-charts.com) if you have special needs.
