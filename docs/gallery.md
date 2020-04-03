@@ -1,4 +1,4 @@
-Here are some examples of what charts you can generate and embed into emails or chat bots — without server-side code — using Image-Charts. Don't forget to check out their URLs (right-click + Copy Image Address)!
+Here are some examples of what charts you can generate and embed into emails or chat bots — without server-side code — using Image-Charts.
 
 ### Bar charts
 
