@@ -29,7 +29,6 @@ User-Agent: SEMrushBot-Desktop
 User-Agent: SEMrushBot-Mobile
 User-agent: Twitterbot
 User-agent: Applebot
-User-agent: Ouestfrancebot
 User-agent: Taboolabot
 User-agent: Proximic
 User-agent: upday
