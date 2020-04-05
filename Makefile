@@ -12,6 +12,9 @@ build:
 	# note: netlify does not support docker
 	# docker run -v ${PWD}:/docs -it -p 8000:8000 imagecharts/documentation build
 	mkdocs build
+	# don't forget to copy the robots.txt file to the publish "site/" folder
+	cp -v robots.txt site/
+
 
 update: update-logo
 
