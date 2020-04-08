@@ -99,7 +99,7 @@ chds=a
 
 How to generate a Bar Chart:
 
-[![image bar chart](https://image-charts.com/chart?chco=b2dffb|e7a4e4|ffc55c|66cccc|cc0066|ffcc00&chd=t:-5,30,-30,50,80,200&chds=a&chm=N,000000,0,-1,11&chs=700x200&cht=bvs&chxl=1:|Tommy|Jimmy|Henry|Marty|Lucky|Sammy&chxt=y,x&icac=fgribreau&icretina=1&ichm=7f1b9fdb1b7829871c1ce88fc40bddb808d0222cacb93ebab01a1af05da23ef6)](https://editor.image-charts.com/chart?chco=b2dffb|e7a4e4|ffc55c|66cccc|cc0066|ffcc00&chd=t:-5,30,-30,50,80,200&chds=a&chm=N,000000,0,-1,11&chs=700x200&cht=bvs&chxl=1:|Tommy|Jimmy|Henry|Marty|Lucky|Sammy&chxt=y,x&icac=fgribreau&icretina=1&ichm=7f1b9fdb1b7829871c1ce88fc40bddb808d0222cacb93ebab01a1af05da23ef6)
+[![image bar chart](https://image-charts.com/chart?chco=b2dffb%7Ce7a4e4%7Cffc55c%7C66cccc%7Ccc0066%7Cffcc00&chd=t%3A-5%2C30%2C-30%2C50%2C80%2C200&chds=a&chm=N%2C000000%2C0%2C-1%2C11%2C%2Cc&chs=700x200&cht=bvs&chxl=1%3A%7CTommy%7CJimmy%7CHenry%7CMarty%7CLucky%7CSammy&chxt=y%2Cx&icac=fgribreau&icretina=1&ichm=d9f3648f21df9a7b55298b7c068abe152a1354f57cd8c8135db1a7c8cbdd9bc0)](https://editor.image-charts.com/chart?chco=b2dffb%7Ce7a4e4%7Cffc55c%7C66cccc%7Ccc0066%7Cffcc00&chd=t%3A-5%2C30%2C-30%2C50%2C80%2C200&chds=a&chm=N%2C000000%2C0%2C-1%2C11%2C%2Cc&chs=700x200&cht=bvs&chxl=1%3A%7CTommy%7CJimmy%7CHenry%7CMarty%7CLucky%7CSammy&chxt=y%2Cx&icac=fgribreau&icretina=1&ichm=d9f3648f21df9a7b55298b7c068abe152a1354f57cd8c8135db1a7c8cbdd9bc0)
 
 ```
 chd=t:-5,30,-30,50,80,200
