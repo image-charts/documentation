@@ -259,7 +259,7 @@ chm=
 - **`<opt_z_order>`** Not supported yet
 
 - **`<opt_placement>`** [Optional] Additional placement details describing where to put this marker, in relation to the data point. 
-    - Bar-relative placement [Bar charts only]: 's', 'c', 'e' - Base, center, or top of a bar. For stacked charts, this is relative to the section of the bar for each series, not for the whole bar. If the series index given is -1 (stack total) it is in relation to the whole bar. This can be combined with vertical placement values: for example, 'be' or 'vs'. Default value is 'e'.
+    - Bar-relative placement [Bar charts only]: 's', 'c', 'e' - Base, center, or top of a bar. For stacked charts, this is relative to the section of the bar for each series, not for the whole bar. If the series index given is -1 (stack total) it is in relation to the whole bar. Default value is 'c'.
 
 - **`<font_family>`** one of the [supported open-source font](/reference/chart-font#supported-open-source-fonts). Don't forget to checkout the [font gallery](https://fonts.google.com/)
 
@@ -274,7 +274,7 @@ Here's an example of value labels on a bar chart.
 
 The first chart (N*p0*) specifies a data value marker, with values shown as a percentage, rounded to zero decimal places, in white, on all values, in 13-point text. Note that the data values are all between 0.0 and 1.0, which, in percentage format, are moved up two decimal places.
 
-[![chart](https://image-charts.com/chart?chd=t%3A0.7%2C0.25%2C0.18%2C0.15%2C0.115%2C0.100%2C0.30&chf=b0%2Clg%2C90%2C5d62b5%2C0.5%2CA7CDF2%2C1&chm=N%2Ap0%2A%2C000000%2C0%2C-1%2C13&chma=10%2C10%2C10%2C10&chs=700x300&cht=bvs&chxl=0%3A%7CIreland%7CSaudi%7CCanada%7CIran%7CFrance%7CUS%7CUK%7C1%3A%7CCountry%7C3%3A%7CPercent%7C&chxr=2%2C0%2C1&chxs=2N%2Ap0%2A%2C828080%2C12%7C0%2C828080%2C12&chxt=x%2Cx%2Cy%2Cy&icac=fgribreau&icretina=1&ichm=ef52ff840f13596b9534faaf1029e4851e47bcb09de537967a6ebd6c082546b3)](https://editor.image-charts.com/chart?chd=t%3A0.7%2C0.25%2C0.18%2C0.15%2C0.115%2C0.100%2C0.30&chf=b0%2Clg%2C90%2C5d62b5%2C0.5%2CA7CDF2%2C1&chm=N%2Ap0%2A%2C000000%2C0%2C-1%2C13&chma=10%2C10%2C10%2C10&chs=700x300&cht=bvs&chxl=0%3A%7CIreland%7CSaudi%7CCanada%7CIran%7CFrance%7CUS%7CUK%7C1%3A%7CCountry%7C3%3A%7CPercent%7C&chxr=2%2C0%2C1&chxs=2N%2Ap0%2A%2C828080%2C12%7C0%2C828080%2C12&chxt=x%2Cx%2Cy%2Cy&icac=fgribreau&icretina=1&ichm=ef52ff840f13596b9534faaf1029e4851e47bcb09de537967a6ebd6c082546b3)
+[![chart](https://image-charts.com/chart?chd=t%3A0.7%2C0.25%2C0.18%2C0.15%2C0.115%2C0.100%2C0.30&chf=b0%2Clg%2C90%2C5d62b5%2C0.5%2CA7CDF2%2C1&chm=N%2Ap0%2A%2CFFFFFF%2C0%2C-1%2C13&chma=10%2C10%2C10%2C10&chs=700x300&cht=bvs&chxl=0%3A%7CIreland%7CSaudi%7CCanada%7CIran%7CFrance%7CUS%7CUK%7C1%3A%7CCountry%7C3%3A%7CPercent%7C&chxr=2%2C0%2C1&chxs=2N%2Ap0%2A%2C828080%2C12%7C0%2C828080%2C12&chxt=x%2Cx%2Cy%2Cy&icac=fgribreau&icretina=1&ichm=aeafd7f50cefa8df65943e610094ec8d825644d13c36c25a1a3e0d99530ca35c)](https://editor.image-charts.com/chart?chd=t%3A0.7%2C0.25%2C0.18%2C0.15%2C0.115%2C0.100%2C0.30&chf=b0%2Clg%2C90%2C5d62b5%2C0.5%2CA7CDF2%2C1&chm=N%2Ap0%2A%2CFFFFFF%2C0%2C-1%2C13&chma=10%2C10%2C10%2C10&chs=700x300&cht=bvs&chxl=0%3A%7CIreland%7CSaudi%7CCanada%7CIran%7CFrance%7CUS%7CUK%7C1%3A%7CCountry%7C3%3A%7CPercent%7C&chxr=2%2C0%2C1&chxs=2N%2Ap0%2A%2C828080%2C12%7C0%2C828080%2C12&chxt=x%2Cx%2Cy%2Cy&icac=fgribreau&icretina=1&ichm=aeafd7f50cefa8df65943e610094ec8d825644d13c36c25a1a3e0d99530ca35c)
 
 ```
 chm=
@@ -285,20 +285,20 @@ chd=t:
 
 The second chart (N*cUSD1*) shows values formatted as Dollar, in white, on all values, in 13-point text.
 
-[![chart](https://image-charts.com/chart?chd=a%3A290%2C250%2C180%2C140%2C115%2C100%2C30&chf=b0%2Clg%2C90%2C76A4FB%2C0.5%2CA7CDF2%2C1&chm=N%2AcUSD1%2A%2C000000%2C0%2C-1%2C13&chma=10%2C10%2C10%2C10&chs=700x300&cht=bvs&chxl=0%3A%7CIreland%7CSaudi%7CCanada%7CIran%7CFrance%7CUS%7CUK%7C1%3A%7CCountry%7C3%3A%7CAmount%7C&chxs=2N%2AcUSD0sz%2A%2C828080%2C12%7C0%2C828080%2C12&chxt=x%2Cx%2Cy%2Cy&icac=fgribreau&icretina=1&ichm=fe0283b300eb4242a089e587e4414c7f1a15ce62882ba82f96c4f411f1c34463)](https://editor.image-charts.com/chart?chd=a%3A290%2C250%2C180%2C140%2C115%2C100%2C30&chf=b0%2Clg%2C90%2C76A4FB%2C0.5%2CA7CDF2%2C1&chm=N%2AcUSD1%2A%2C000000%2C0%2C-1%2C13&chma=10%2C10%2C10%2C10&chs=700x300&cht=bvs&chxl=0%3A%7CIreland%7CSaudi%7CCanada%7CIran%7CFrance%7CUS%7CUK%7C1%3A%7CCountry%7C3%3A%7CAmount%7C&chxs=2N%2AcUSD0sz%2A%2C828080%2C12%7C0%2C828080%2C12&chxt=x%2Cx%2Cy%2Cy&icac=fgribreau&icretina=1&ichm=fe0283b300eb4242a089e587e4414c7f1a15ce62882ba82f96c4f411f1c34463)
+[![chart](https://image-charts.com/chart?chd=a%3A290%2C250%2C180%2C140%2C115%2C100%2C30&chf=b0%2Clg%2C90%2C76A4FB%2C0.5%2CA7CDF2%2C1&chm=N%2AcUSD1%2A%2CFFFFFF%2C0%2C-1%2C13&chma=10%2C10%2C10%2C10&chs=700x300&cht=bvs&chxl=0%3A%7CIreland%7CSaudi%7CCanada%7CIran%7CFrance%7CUS%7CUK%7C1%3A%7CCountry%7C3%3A%7CAmount%7C&chxs=2N%2AcUSD0sz%2A%2C828080%2C12%7C0%2C828080%2C12&chxt=x%2Cx%2Cy%2Cy&icac=fgribreau&icretina=1&ichm=7093eb970685be9c64e01d8b2cd1e2be95d1910343db70981bf4c118015e9bff)](https://editor.image-charts.com/chart?chd=a%3A290%2C250%2C180%2C140%2C115%2C100%2C30&chf=b0%2Clg%2C90%2C76A4FB%2C0.5%2CA7CDF2%2C1&chm=N%2AcUSD1%2A%2CFFFFFF%2C0%2C-1%2C13&chma=10%2C10%2C10%2C10&chs=700x300&cht=bvs&chxl=0%3A%7CIreland%7CSaudi%7CCanada%7CIran%7CFrance%7CUS%7CUK%7C1%3A%7CCountry%7C3%3A%7CAmount%7C&chxs=2N%2AcUSD0sz%2A%2C828080%2C12%7C0%2C828080%2C12&chxt=x%2Cx%2Cy%2Cy&icac=fgribreau&icretina=1&ichm=7093eb970685be9c64e01d8b2cd1e2be95d1910343db70981bf4c118015e9bff)
 
 ```
 chm=
-  N*cUSD1*,000000,0,-1,13
+  N*cUSD1*,FFFFFF,0,-1,13
 ```
 
 Example with font-family and font-style
 
-[![chart](https://image-charts.com/chart?chd=a%3A290%2C250%2C180%2C140%2C115%2C100%2C30&chf=b0%2Clg%2C90%2C76A4FB%2C0.5%2CA7CDF2%2C1&chm=N%2AcUSD1%2A%2C000000%2C0%2C-1%2C13%2C%2C%2CEconomica%2Citalic&chma=10%2C10%2C10%2C10&chs=700x300&cht=bvs&chxl=0%3A%7CIreland%7CSaudi%7CCanada%7CIran%7CFrance%7CUS%7CUK%7C1%3A%7CCountry%7C3%3A%7CAmount%7C&chxs=2N%2AcUSD0sz%2A%2C828080%2C12%7C0%2C828080%2C12&chxt=x%2Cx%2Cy%2Cy&icac=fgribreau&icretina=1&ichm=19e51b08e4d81a170aac0721c5a0b31a30585ca20e4dae31f914cae04c9e0e82)](https://editor.image-charts.com/chart?chd=a%3A290%2C250%2C180%2C140%2C115%2C100%2C30&chf=b0%2Clg%2C90%2C76A4FB%2C0.5%2CA7CDF2%2C1&chm=N%2AcUSD1%2A%2C000000%2C0%2C-1%2C13%2C%2C%2CEconomica%2Citalic&chma=10%2C10%2C10%2C10&chs=700x300&cht=bvs&chxl=0%3A%7CIreland%7CSaudi%7CCanada%7CIran%7CFrance%7CUS%7CUK%7C1%3A%7CCountry%7C3%3A%7CAmount%7C&chxs=2N%2AcUSD0sz%2A%2C828080%2C12%7C0%2C828080%2C12&chxt=x%2Cx%2Cy%2Cy&icac=fgribreau&icretina=1&ichm=19e51b08e4d81a170aac0721c5a0b31a30585ca20e4dae31f914cae04c9e0e82)
+[![chart](https://image-charts.com/chart?chd=a%3A290%2C250%2C180%2C140%2C115%2C100%2C30&chf=b0%2Clg%2C90%2C76A4FB%2C0.5%2CA7CDF2%2C1&chm=N%2AcUSD1%2A%2C4e5399%2C0%2C-1%2C13%2C%2C%2CEconomica%2Citalic&chma=10%2C10%2C10%2C10&chs=700x300&cht=bvs&chxl=0%3A%7CIreland%7CSaudi%7CCanada%7CIran%7CFrance%7CUS%7CUK%7C1%3A%7CCountry%7C3%3A%7CAmount%7C&chxs=2N%2AcUSD0sz%2A%2C828080%2C12%7C0%2C828080%2C12&chxt=x%2Cx%2Cy%2Cy&icac=fgribreau&icretina=1&ichm=cae1795505c49684ef5e53aa10305fc08398646a2d38474f5e431423c07be4f4)](https://editor.image-charts.com/chart?chd=a%3A290%2C250%2C180%2C140%2C115%2C100%2C30&chf=b0%2Clg%2C90%2C76A4FB%2C0.5%2CA7CDF2%2C1&chm=N%2AcUSD1%2A%2C4e5399%2C0%2C-1%2C13%2C%2C%2CEconomica%2Citalic&chma=10%2C10%2C10%2C10&chs=700x300&cht=bvs&chxl=0%3A%7CIreland%7CSaudi%7CCanada%7CIran%7CFrance%7CUS%7CUK%7C1%3A%7CCountry%7C3%3A%7CAmount%7C&chxs=2N%2AcUSD0sz%2A%2C828080%2C12%7C0%2C828080%2C12&chxt=x%2Cx%2Cy%2Cy&icac=fgribreau&icretina=1&ichm=cae1795505c49684ef5e53aa10305fc08398646a2d38474f5e431423c07be4f4)
 
 ```
 chm=
-  N*cUSD1*,000000,0,-1,13,,,Economica,italic
+  N*cUSD1*,4e5399,0,-1,13,,,Economica,italic
 ```
 
 Show the stacked series values with the center positioning option
@@ -308,6 +308,15 @@ Show the stacked series values with the center positioning option
 ```
 chm=
   N,000000,0,-1,10,,c|N,000000,1,-1,10,,c|N,000000,2,-1,10,,c
+```
+
+Show the stacked series values with the top positioning option
+
+[![chart](https://image-charts.com/chart?chbh=20&chco=fdb45c%2C27c9c2%2C1869b7&chd=t%3A5%2C5%2C5%7C10%2C10%2C10%7C15%2C15%2C15&chds=0%2C120&chm=N%2C000000%2C0%2C-1%2C10%2C%2Ce%7CN%2C000000%2C1%2C-1%2C10%2C%2Ce%7CN%2C000000%2C2%2C-1%2C10%2C%2Ce&chma=0%2C0%2C10%2C10&chs=700x150&cht=bvs&chxs=0%2C000000%2C0%2C0%2C_&chxt=y&icac=fgribreau&icretina=1&ichm=79e967104d5b057a3010b4ccc0400728a5f7c9f2457d649a24f05c7c2ce1de55)](https://editor.image-charts.com/chart?chbh=20&chco=fdb45c%2C27c9c2%2C1869b7&chd=t%3A5%2C5%2C5%7C10%2C10%2C10%7C15%2C15%2C15&chds=0%2C120&chm=N%2C000000%2C0%2C-1%2C10%2C%2Ce%7CN%2C000000%2C1%2C-1%2C10%2C%2Ce%7CN%2C000000%2C2%2C-1%2C10%2C%2Ce&chma=0%2C0%2C10%2C10&chs=700x150&cht=bvs&chxs=0%2C000000%2C0%2C0%2C_&chxt=y&icac=fgribreau&icretina=1&ichm=79e967104d5b057a3010b4ccc0400728a5f7c9f2457d649a24f05c7c2ce1de55)
+
+```
+chm=
+  N,000000,0,-1,10,,e|N,000000,1,-1,10,,e|N,000000,2,-1,10,,e
 ```
 
 Show a bar-chart with bottom positioning option
