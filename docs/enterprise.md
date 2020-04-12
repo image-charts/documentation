@@ -37,6 +37,10 @@ Signing your URLs will ensure that no-one beside you created it and Image-Charts
 {!enterprise/hmac_.js!}
 ```
 
+```js tab="Google Sheets (via Google Apps Script)" linenums="1"
+{!enterprise/hmac_.googlesheets.js!}
+```
+
 
 ```python tab="Python 3" linenums="1"
 {!enterprise/hmac_.py!}
