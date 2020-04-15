@@ -2,7 +2,7 @@
 
 ## Shape Markers
 
-You can specify graphical markers for all <!-- or individual -->data points on a chart. If two or more markers occupy the same point, the markers are drawn in the order ~~in which they appear in the chm parameter~~ of the data series definition. <!--You can also create text markers on data points, which is covered in Data Point Markers.-->
+You can specify graphical markers for all or individual data points on a chart. If two or more markers occupy the same point, the markers are drawn in the order <!--in which they appear in the chm parameter--> of the data series definition. <!--You can also create text markers on data points, which is covered in Data Point Markers.-->
 
 You can combine shape markers with any other `chm` parameters using a pipe character (` | `) to separate the `chm` parameters.
 
@@ -221,7 +221,7 @@ You can label specific points on your chart with custom text, or with formatted 
 
 ```
 chm=
-  N<formatting_string>,<color>,<series_index>,<which_points>,<width>,<opt_z_order>,<font_family>,<font_style>
+  N<formatting_string>,<color>,<series_index>,<opt_which_points>,<size>,<opt_z_order>,<opt_placement>,<opt_font_family>,<opt_font_style>
 ```
 
 - **`<formatting_string>`** - The value of the data at this point, with optional formatting. If you do not use the `chds` parameter (custom scaling) it gives the exact encoded value; 
@@ -261,9 +261,9 @@ chm=
 - **`<opt_placement>`** [Optional] Additional placement details describing where to put this marker, in relation to the data point. 
     - Bar-relative placement [[Bar charts only]](/reference/bar-charts): 's', 'c', 'e' - Base, center, or top of a bar. For stacked charts, this is relative to the section of the bar for each series, not for the whole bar. If the series index given is -1 (stack total) it is in relation to the whole bar. Default value is 'c'.
 
-- **`<font_family>`** one of the [supported open-source font](/reference/chart-font#supported-open-source-fonts). Don't forget to checkout the [font gallery](https://fonts.google.com/)
+- **`<opt_font_family>`** [Optional] one of the [supported open-source font](/reference/chart-font#supported-open-source-fonts). Don't forget to checkout the [font gallery](https://fonts.google.com/)
 
-- **`<font_style>`** one of `normal` or `italic`. Default value used is `normal`
+- **`<opt_font_style>`** [Optional] one of `normal` or `italic`. Default value used is `normal`
 
 !!! tip "-1 for *series_index* not implemented yet"
     Do you want this feature ? [Just ask us :angel:](mailto:support@image-charts.com) !  
