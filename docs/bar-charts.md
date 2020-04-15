@@ -15,6 +15,7 @@ There are three general ways to show multiple series in a bar chart:
 - **Grouped vertically** `bvg`
 
 [![chart](https://image-charts.com/chart?chbh=a&chco=fdb45c%2C27c9c2%2C1869b7&chd=t%3A5%2C5%2C5%7C10%2C10%2C10%7C15%2C15%2C15&chds=0%2C120&chm=N%2C000000%2C0%2C%2C10%7CN%2C000000%2C1%2C%2C10%7CN%2C000000%2C2%2C%2C10&chma=0%2C0%2C10%2C10&chs=700x150&cht=bvg&chxs=0%2C000000%2C0%2C0%2C_&chxt=y&icac=fgribreau&icretina=1&ichm=2bf5da8d8c9307933d26513f883a19b6dc68545bf381ee27fa1001111509d1fe)](https://editor.image-charts.com/chart?chbh=a&chco=fdb45c%2C27c9c2%2C1869b7&chd=t%3A5%2C5%2C5%7C10%2C10%2C10%7C15%2C15%2C15&chds=0%2C120&chm=N%2C000000%2C0%2C%2C10%7CN%2C000000%2C1%2C%2C10%7CN%2C000000%2C2%2C%2C10&chma=0%2C0%2C10%2C10&chs=700x150&cht=bvg&chxs=0%2C000000%2C0%2C0%2C_&chxt=y&icac=fgribreau&icretina=1&ichm=2bf5da8d8c9307933d26513f883a19b6dc68545bf381ee27fa1001111509d1fe)
+
 ```
 cht=bvg
 chd=t:5,5,5|10,10,10|15,15,15
@@ -23,6 +24,7 @@ chd=t:5,5,5|10,10,10|15,15,15
 - **Grouped horizontally** `bhg`
 
 [![chart](https://image-charts.com/chart?chbh=a&chco=fdb45c%2C27c9c2%2C1869b7&chd=t%3A5%2C5%2C5%7C10%2C10%2C10%7C15%2C15%2C15&chds=0%2C120&chm=N%2C000000%2C0%2C%2C10%7CN%2C000000%2C1%2C%2C10%7CN%2C000000%2C2%2C%2C10&chma=0%2C0%2C10%2C10&chs=700x150&cht=bhg&chxs=0%2C000000%2C0%2C0%2C_&chxt=y&icac=fgribreau&icretina=1&ichm=9f53fe17316ca209b408a06d541a2c9388c354051272cea788add167fc8636c4)](https://editor.image-charts.com/chart?chbh=a&chco=fdb45c%2C27c9c2%2C1869b7&chd=t%3A5%2C5%2C5%7C10%2C10%2C10%7C15%2C15%2C15&chds=0%2C120&chm=N%2C000000%2C0%2C%2C10%7CN%2C000000%2C1%2C%2C10%7CN%2C000000%2C2%2C%2C10&chma=0%2C0%2C10%2C10&chs=700x150&cht=bhg&chxs=0%2C000000%2C0%2C0%2C_&chxt=y&icac=fgribreau&icretina=1&ichm=9f53fe17316ca209b408a06d541a2c9388c354051272cea788add167fc8636c4)
+
 ```
 cht=bhg
 chd=t:5,5,5|10,10,10|15,15,15

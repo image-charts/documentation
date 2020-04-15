@@ -258,7 +258,8 @@ chm=
 
 - **`<opt_z_order>`** Not supported yet
 
-- **`<opt_placement>`** Not supported yet
+- **`<opt_placement>`** [Optional] Additional placement details describing where to put this marker, in relation to the data point. 
+    - Bar-relative placement [[Bar charts only]](/reference/bar-charts): 's', 'c', 'e' - Base, center, or top of a bar. For stacked charts, this is relative to the section of the bar for each series, not for the whole bar. If the series index given is -1 (stack total) it is in relation to the whole bar. Default value is 'c'.
 
 - **`<font_family>`** one of the [supported open-source font](/reference/chart-font#supported-open-source-fonts). Don't forget to checkout the [font gallery](https://fonts.google.com/)
 
@@ -298,4 +299,31 @@ Example with font-family and font-style
 ```
 chm=
   N*cUSD1*,4e5399,0,-1,13,,,Economica,italic
+```
+
+Stacked-chart with labels positioned at the center
+
+[![chart](https://image-charts.com/chart?chbh=20&chco=fdb45c%2C27c9c2%2C1869b7&chd=t%3A5%2C5%2C5%7C10%2C10%2C10%7C15%2C15%2C15&chds=0%2C120&chm=N%2C000000%2C0%2C-1%2C10%2C%2Cc%7CN%2C000000%2C1%2C-1%2C10%2C%2Cc%7CN%2C000000%2C2%2C-1%2C10%2C%2Cc&chma=0%2C0%2C10%2C10&chs=700x150&cht=bvs&chxs=0%2C000000%2C0%2C0%2C_&chxt=y&icac=fgribreau&icretina=1&ichm=011d347c17b86192df29ed0657af0703c6e07bf3571b5e0e936b5d820c39bc20)](https://editor.image-charts.com/chart?chbh=20&chco=fdb45c%2C27c9c2%2C1869b7&chd=t%3A5%2C5%2C5%7C10%2C10%2C10%7C15%2C15%2C15&chds=0%2C120&chm=N%2C000000%2C0%2C-1%2C10%2C%2Cc%7CN%2C000000%2C1%2C-1%2C10%2C%2Cc%7CN%2C000000%2C2%2C-1%2C10%2C%2Cc&chma=0%2C0%2C10%2C10&chs=700x150&cht=bvs&chxs=0%2C000000%2C0%2C0%2C_&chxt=y&icac=fgribreau&icretina=1&ichm=011d347c17b86192df29ed0657af0703c6e07bf3571b5e0e936b5d820c39bc20)
+
+```
+chm=
+  N,000000,0,-1,10,,c|N,000000,1,-1,10,,c|N,000000,2,-1,10,,c
+```
+
+Bar-chart with labels positioned at the top
+
+[![chart](https://image-charts.com/chart?chbh=20&chco=fdb45c%2C27c9c2%2C1869b7&chd=t%3A5%2C5%2C5%7C10%2C10%2C10%7C15%2C15%2C15&chds=0%2C120&chm=N%2C000000%2C0%2C-1%2C10%2C%2Ce%7CN%2C000000%2C1%2C-1%2C10%2C%2Ce%7CN%2C000000%2C2%2C-1%2C10%2C%2Ce&chma=0%2C0%2C10%2C10&chs=700x150&cht=bvs&chxs=0%2C000000%2C0%2C0%2C_&chxt=y&icac=fgribreau&icretina=1&ichm=79e967104d5b057a3010b4ccc0400728a5f7c9f2457d649a24f05c7c2ce1de55)](https://editor.image-charts.com/chart?chbh=20&chco=fdb45c%2C27c9c2%2C1869b7&chd=t%3A5%2C5%2C5%7C10%2C10%2C10%7C15%2C15%2C15&chds=0%2C120&chm=N%2C000000%2C0%2C-1%2C10%2C%2Ce%7CN%2C000000%2C1%2C-1%2C10%2C%2Ce%7CN%2C000000%2C2%2C-1%2C10%2C%2Ce&chma=0%2C0%2C10%2C10&chs=700x150&cht=bvs&chxs=0%2C000000%2C0%2C0%2C_&chxt=y&icac=fgribreau&icretina=1&ichm=79e967104d5b057a3010b4ccc0400728a5f7c9f2457d649a24f05c7c2ce1de55)
+
+```
+chm=
+  N,000000,0,-1,10,,e|N,000000,1,-1,10,,e|N,000000,2,-1,10,,e
+```
+
+Bar-chart with labels positioned at the bottom
+
+[![chart](https://image-charts.com/chart?chd=a%3A290%2C250%2C180%2C140%2C115%2C100%2C30&chf=b0%2Clg%2C90%2C76A4FB%2C0.5%2CA7CDF2%2C1&chm=N%2AcUSD1%2A%2CFFFFFF%2C0%2C-1%2C13%2C%2Cs&chma=10%2C10%2C10%2C10&chs=700x300&cht=bvs&chxl=0%3A%7CIreland%7CSaudi%7CCanada%7CIran%7CFrance%7CUS%7CUK%7C1%3A%7CCountry%7C3%3A%7CAmount%7C&chxs=2N%2AcUSD0sz%2A%2C828080%2C12%7C0%2C828080%2C12&chxt=x%2Cx%2Cy%2Cy&icac=fgribreau&icretina=1&ichm=a2498d2c9c81184521a7e365d2deb12bc9954cfa9e37ab447ad0cbacf048d990)](https://editor.image-charts.com/chart?chd=a%3A290%2C250%2C180%2C140%2C115%2C100%2C30&chf=b0%2Clg%2C90%2C76A4FB%2C0.5%2CA7CDF2%2C1&chm=N%2AcUSD1%2A%2CFFFFFF%2C0%2C-1%2C13%2C%2Cs&chma=10%2C10%2C10%2C10&chs=700x300&cht=bvs&chxl=0%3A%7CIreland%7CSaudi%7CCanada%7CIran%7CFrance%7CUS%7CUK%7C1%3A%7CCountry%7C3%3A%7CAmount%7C&chxs=2N%2AcUSD0sz%2A%2C828080%2C12%7C0%2C828080%2C12&chxt=x%2Cx%2Cy%2Cy&icac=fgribreau&icretina=1&ichm=a2498d2c9c81184521a7e365d2deb12bc9954cfa9e37ab447ad0cbacf048d990)
+
+```
+chm=
+  N*cUSD1*,FFFFFF,0,-1,13,,s
 ```
