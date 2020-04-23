@@ -18,12 +18,12 @@ Font support is currently unavailable in Image-Charts On Premise.
 
 First contact [our support](support@image-charts.com) with your needs in term of traffic volume and number of deployments (replicas) wanted. Once subscribed to the On Premise plan you will receive a `license_file`. It contains the license expiration date as well as the serial number, it's mandatory to start the API. The email will also contains a **download link**.
 
-!!! info "Download link expiration"
-    Image-Charts download link will only be active for **7 days**
-
 ```
 curl "[download_link]" | docker load
 ```
+
+!!! info "Download link expiration"
+    Image-Charts download link will only be active for **7 days**
 
 ## Run the Image Charts service
 
