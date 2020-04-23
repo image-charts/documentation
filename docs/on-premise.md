@@ -1,0 +1,50 @@
+# On Premise Virtual Appliance
+
+This section is dedicated to the Image-Charts paying On Premise version. This virtual appliance is a special docker image that can be deployed on your own server.
+
+## Features
+
+- Every Enterprise and Enterprise+ plan features :
+    - [retina mode](/reference/retina/)
+    - [compound charts](/reference/compound-charts/)
+    - [multiple axis](/reference/chart-axis/#visible-axes)
+- **Removes** the need to sign URL with `ichm` and `icac` that exists for SaaS [Enterprise plans](/enterprise).
+
+## Limitation
+
+Font support is currently unavailable in Image-Charts On Premise.
+
+## How to download the container image
+
+First contact [our support](support@image-charts.com) with your needs in term of traffic volume and number of deployments (replicas) wanted. Once subscribed to the On Premise plan you will receive a `license_file`. It contains the license expiration date as well as the serial number, it's mandatory to start the API. The email will also contains a **download link**.
+
+!!! info "Download link expiration"
+    Image-Charts download link will only be active for **7 days**
+
+```
+curl "[download_link]" | docker load
+```
+
+## How to run the Image Charts service
+
+```
+docker run -it \
+        -p 8080:8080 \
+        -v /path/to/your_license.lic:/license.lic \
+        -e LICENSE_FILE_PATH=/license.lic \
+        --entrypoint=/usr/src/app/image-charts \
+        image-charts-on-premise:X.X.X
+```
+
+## How to monitor the API
+
+- Health check is available at `http://localhost:8080/_health`
+- If the container receive a `SIGTERM` (e.g. `docker stop {container_id}`) `http://localhost:8080/_health` will yield a `500` HTTP error code but will still serve chart generation requests
+
+## How to stop the container
+
+Send a `SIGKILL` to stop the container
+
+```
+docker kill {container_id}
+```

@@ -7,7 +7,7 @@ Specify the chart type using the `cht` parameter. See the individual chart docum
 cht=<type>[:nda]
 ```
 
-- **`<type>`** one of the chart type values. Full list of supported values [are available in the API tester](#api).
+- **`<type>`** one of the chart type values. Full list of supported values [are available in the chart editor](https://editor.image-charts.com).
 - **`:nda`** *[Optional, line charts only]* You can add `:nda` after the chart type in line charts to hide the default axes.
 
 
