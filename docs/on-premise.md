@@ -14,7 +14,7 @@ This section is dedicated to the Image-Charts paying On Premise version. This vi
 
 Font support is currently unavailable in Image-Charts On Premise.
 
-## How to download the container image
+## Download the container image
 
 First contact [our support](support@image-charts.com) with your needs in term of traffic volume and number of deployments (replicas) wanted. Once subscribed to the On Premise plan you will receive a `license_file`. It contains the license expiration date as well as the serial number, it's mandatory to start the API. The email will also contains a **download link**.
 
@@ -25,7 +25,7 @@ First contact [our support](support@image-charts.com) with your needs in term of
 curl "[download_link]" | docker load
 ```
 
-## How to run the Image Charts service
+## Run the Image Charts service
 
 ```
 docker run -it \
@@ -36,12 +36,12 @@ docker run -it \
         image-charts-on-premise:X.X.X
 ```
 
-## How to monitor the API
+## Monitor the API
 
 - Health check is available at `http://localhost:8080/_health`
 - If the container receive a `SIGTERM` (e.g. `docker stop {container_id}`) `http://localhost:8080/_health` will yield a `500` HTTP error code but will still serve chart generation requests
 
-## How to stop the container
+## Stop the container
 
 Send a `SIGKILL` to stop the container
 
