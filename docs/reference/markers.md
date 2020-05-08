@@ -259,7 +259,7 @@ chm=
 - **`<opt_z_order>`** Not supported yet
 
 - **`<opt_placement>`** [Optional] Additional placement details describing where to put this marker, in relation to the data point. 
-    - Bar-relative placement [[Bar charts only]](/reference/bar-charts): 's', 'c', 'e' - Base, center, or top of a bar. For stacked charts, this is relative to the section of the bar for each series, not for the whole bar. If the series index given is -1 (stack total) it is in relation to the whole bar. Default value is 'c'.
+    - Bar-relative placement [[Bar charts only]](/bar-charts): 's', 'c', 'e' - Base, center, or top of a bar. For stacked charts, this is relative to the section of the bar for each series, not for the whole bar. If the series index given is -1 (stack total) it is in relation to the whole bar. Default value is 'c'.
 
 - **`<opt_font_family>`** [Optional] one of the [supported open-source font](/reference/chart-font#supported-open-source-fonts). Don't forget to checkout the [font gallery](https://fonts.google.com/)
 
