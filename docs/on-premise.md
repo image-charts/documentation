@@ -16,7 +16,7 @@ Font support is currently unavailable in Image-Charts On Premise.
 
 ## Download the container image
 
-First contact [our support](support@image-charts.com) with your needs in term of traffic volume and number of deployments (replicas) wanted. Once subscribed to the On Premise plan you will receive a `license_file`. It contains the license expiration date as well as the serial number, it's mandatory to start the API. The email will also contains a **download link**.
+First contact [our support](mailto:support@image-charts.com) with your needs in term of traffic volume and number of deployments (replicas) wanted. Once subscribed to the On Premise plan you will receive a `license_file`. It contains the license expiration date as well as the serial number, it's mandatory to start the API. The email will also contains a **download link**.
 
 ```
 curl "[download_link]" | docker load
