@@ -16,6 +16,8 @@ cht=<chart_type>
 
 Where <chart_type> is one of the following types:
 
+##### Line
+
 - `lc` A line chart where data points are spaced evenly along the x-axis. Axis lines are shown by default. To show values on the axis lines, you must specify chxt.
 
 [![chart](https://image-charts.com/chart?chd=t:40,60,60,45,47,75,70,72&chs=700x125&cht=lc&icac=fgribreau&icretina=1&ichm=59c36610c8edad756bf774a9b879581a7c22fb17ce3935edca863f74f2cc510d
@@ -27,16 +29,6 @@ cht=lc
 chd=t:40,60,60,45,47,75,70,72
 ```
 
-- `ls` Similar to `lc` charts, but by default does not display axis lines. These are also known as sparklines.
-
-[![chart](https://image-charts.com/chart?chco=0077CC&chd=t:27,25,60,31,25,39,25,31,26,28,80,28,27,31,27,29,26,35,70,25&chs=700x125&cht=ls&icac=fgribreau&icretina=1&ichm=82fea4e8c773e2c3d09b4e5f53468e6a12b37403bf9685f0065774d9e5376211
-)](https://editor.image-charts.com/chart?chco=0077CC&chd=t:27,25,60,31,25,39,25,31,26,28,80,28,27,31,27,29,26,35,70,25&chs=700x125&cht=ls&icac=fgribreau&icretina=1&ichm=82fea4e8c773e2c3d09b4e5f53468e6a12b37403bf9685f0065774d9e5376211
-)
-
-```
-cht=ls
-chd=t:27,25,60,31,25,39,25,31,26,28,80,28,27,31,27,29,26,35,70,25
-```
 
 - `lxy` Lets you specify both x- and y-coordinates for each point, rather just the y values.
 
@@ -63,6 +55,19 @@ chd=t:
   20,30,40,50,60,70,80|
   -1|
   5,10,22,35,85
+```
+
+##### Sparklines
+
+- `ls` Similar to `lc` charts, but by default does not display axis lines. These are also known as sparklines.
+
+[![chart](https://image-charts.com/chart?chco=0077CC&chd=t:27,25,60,31,25,39,25,31,26,28,80,28,27,31,27,29,26,35,70,25&chs=700x125&cht=ls&icac=fgribreau&icretina=1&ichm=82fea4e8c773e2c3d09b4e5f53468e6a12b37403bf9685f0065774d9e5376211
+)](https://editor.image-charts.com/chart?chco=0077CC&chd=t:27,25,60,31,25,39,25,31,26,28,80,28,27,31,27,29,26,35,70,25&chs=700x125&cht=ls&icac=fgribreau&icretina=1&ichm=82fea4e8c773e2c3d09b4e5f53468e6a12b37403bf9685f0065774d9e5376211
+)
+
+```
+cht=ls
+chd=t:27,25,60,31,25,39,25,31,26,28,80,28,27,31,27,29,26,35,70,25
 ```
 
 

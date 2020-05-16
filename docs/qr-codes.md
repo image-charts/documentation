@@ -1,6 +1,6 @@
 # QR Codes
 
-This section describes how to create a QR Code on the fly with a URL GET request using the Image-Chart API.
+This section describes how to create a QR Code on the fly with a URL GET request using the Image-Chart QRCode web service generation.
 
 ## Overview
 

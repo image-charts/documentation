@@ -101,7 +101,6 @@ chm=D,0033FF,1,0,5,1
 ```
 
 #### Syntax
-
 ```
 chm=
   D,<color>,<series_index>,<which_points>,<width>,<opt_z_order>
@@ -119,6 +118,30 @@ chm=
 To add multiple lines (or combine this with any other `chm` markers), separate the `chm` parameter sets using a pipe ( | ) delimiter. You cannot make a dashed line marker with this parameter.
 
 #### Examples
+
+
+This is an example of drawing a marker line on a bar chart. The z-order is set to 1, so the line is drawn on top of the bars.
+This example uses the same data for both the bars and the data line.
+
+![compound chart](https://image-charts.com/chart?ichm=6f6c84084cba074285a396b3a71dd8c66ae78df2a0229edc1e48a1a11d3e8a6e&cht=bvg&chm=D,0033FF,0,0,5,1&chbh=20&chs=700x200&chd=s:1XQbnf4&chco=76A4FB&icac=fgribreau)
+
+```
+chm=D,0033FF,0,0,5,1
+chd=s:1XQbnf4
+```
+
+
+---
+
+This is the same bar chart, but with an additional data series just for the line. This is an example of a compound chart. Compound charts are drawn by adding additional data series to the chd parameter, plus a value to chd telling the chart to "ignore" the additional data series.
+
+![](https://image-charts.com/chart?ichm=b516a6b4c1e98e170fc3c6f2d020fe343d5c155d0800631e37d620cc2352f8ab&cht=bvg&chm=D,0033FF,1,0,5,1&chbh=20&chs=700x200&chd=s1:1XQbnf4,43ksfg6&chco=76A4FB&icac=fgribreau)
+
+```
+chm=D,0033FF,1,0,5,1
+chd=s1:1XQbnf4,43ksfg6
+```
+
 
 ##### Bar line with line serie
 
@@ -224,8 +247,8 @@ chm=
   N<formatting_string>,<color>,<series_index>,<opt_which_points>,<size>,<opt_z_order>,<opt_placement>,<opt_font_family>,<opt_font_style>
 ```
 
-- **`<formatting_string>`** - The value of the data at this point, with optional formatting. If you do not use the `chds` parameter (custom scaling) it gives the exact encoded value; 
-    if you do use that parameter with any format type the value will be scaled to the range that you specify. See an example of `chds` with numeric markers below. 
+- **`<formatting_string>`** - The value of the data at this point, with optional formatting. If you do not use the `chds` parameter (custom scaling) it gives the exact encoded value;
+    if you do use that parameter with any format type the value will be scaled to the range that you specify. See an example of `chds` with numeric markers below.
     The formatting string syntax is as follows:
     `<preceding_text>*<number_type><decimal_places>zs<x or y>*<following_text>`
     - `<preceding_text>` - Text to precede each value.
@@ -246,10 +269,10 @@ chm=
 
 - **`<opt_which_points>`**  
 *[Optional]* Which point(s) to draw markers on. Default is all markers. Use one of the following values:
-     <!-- - n.d - Which data point to draw the marker on, where n.d is the zero-based index in the series. If you specify a non-integer value, then the fraction indicates a calculated intermediate point. For example, 3.5 means halfway between point 3 and point 4. --> 
+     <!-- - n.d - Which data point to draw the marker on, where n.d is the zero-based index in the series. If you specify a non-integer value, then the fraction indicates a calculated intermediate point. For example, 3.5 means halfway between point 3 and point 4. -->
 
     - `start:end`<!--:n--> - Draw a marker on every <!--n-th--> data point in a range, from start to end index values, inclusive. All parameters are optional (may be absent), so 3: would be from the fourth element to the last, <!--step 1,--> and omitting this parameter entirely would default to first:last<!--:1-->. All values can be floating point numbers. start and end can be negative, to count backward from the last value. If both start and end are negative, be sure that they are listed in increasing value (for example, -6:-1<!--:1-->). <!--If the n step value is less than 1, it will calculate additional data points by interpolating the data values given. Default values are first:last:1-->
-    
+
     - -1 - Draw a marker on all data points. You can also leave this parameter empty to draw on all data points.
     <!-- - -n - Draw a marker on every n-th data point. -->
     <!-- - `x:y` - [Not supported for N-type markers] Draw a marker at a specific x/y point on the chart. This point does not have to be on a line. Add the at character (@) before the marker type to use this option. Specify the coordinates as floating point values, where 0:0 is the bottom left corner of the chart, 0.5:0.5 is the center of the chart, and 1:1 is the top right corner of the chart. For example, to add a red, 15-pixel diamond to the center of a chart, use @d,FF0000,0,0.5:0.5,15. -->
@@ -258,7 +281,7 @@ chm=
 
 - **`<opt_z_order>`** Not supported yet
 
-- **`<opt_placement>`** [Optional] Additional placement details describing where to put this marker, in relation to the data point. 
+- **`<opt_placement>`** [Optional] Additional placement details describing where to put this marker, in relation to the data point.
     - Bar-relative placement [[Bar charts only]](/bar-charts): 's', 'c', 'e' - Base, center, or top of a bar. For stacked charts, this is relative to the section of the bar for each series, not for the whole bar. If the series index given is -1 (stack total) it is in relation to the whole bar. Default value is 'c'.
 
 - **`<opt_font_family>`** [Optional] one of the [supported open-source font](/reference/chart-font#supported-open-source-fonts). Don't forget to checkout the [font gallery](https://fonts.google.com/)

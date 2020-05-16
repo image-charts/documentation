@@ -46,6 +46,8 @@ Specify a pie chart with the following syntax:
 
 #### Syntax
 
+##### Pie
+
 ```
 cht=<chart_type>
 ```
@@ -76,7 +78,9 @@ cht=pc
 chd=s:Helo,Wrld
 ```
 
-- **`pd`**: A doughnut pie chart.
+##### Doughnut
+
+- **`pd`**: A doughnut pie chart is a good option when you need to display data at its center.
 
 
 [![chart](https://image-charts.com/chart?chan=1200&chd=t%3A10%2C40%2C45&chdl=Expansion%7CPayroll%7CEquipment&chdlp=b&chf=b0%2Clg%2C90%2C68cefd%2C0%2C96a6ff%2C1&chl=10K%E2%82%AC%7C40K%E2%82%AC%7C45K%E2%82%AC&chli=95K%E2%82%AC&chma=0%2C0%2C0%2C10&chs=700x300&cht=pd&chtt=Expenses&icac=fgribreau&icretina=1&ichm=e9111219b5a00167e5eb659567baa297f9143e7a1e4231f210c99c30596f0a40)](https://image-charts.com/chart?chan=1200&chd=t%3A10%2C40%2C45&chdl=Expansion%7CPayroll%7CEquipment&chdlp=b&chf=b0%2Clg%2C90%2C68cefd%2C0%2C96a6ff%2C1&chl=10K%E2%82%AC%7C40K%E2%82%AC%7C45K%E2%82%AC&chli=95K%E2%82%AC&chma=0%2C0%2C0%2C10&chs=700x300&cht=pd&chtt=Expenses&icac=fgribreau&icretina=1&ichm=e9111219b5a00167e5eb659567baa297f9143e7a1e4231f210c99c30596f0a40)

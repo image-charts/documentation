@@ -20,7 +20,9 @@ nav:
   - Getting started: index.md
   - Bar Charts: bar-charts.md
   - Line Charts: line-charts.md
+  - Sparkline Charts: /line-charts/#sparklines
   - Pie Charts: pie-charts.md
+  - Doughnut Charts: /pie-charts#doughnut
   - Polar Charts: polar-charts.md
   - Radar Charts: radar-charts.md
   - Bubble Charts: bubble-charts.md
