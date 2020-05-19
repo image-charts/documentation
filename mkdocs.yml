@@ -21,6 +21,7 @@ nav:
   - Bar Charts: bar-charts.md
   - Line Charts: line-charts.md
   - Sparkline Charts: /line-charts/#sparklines
+  - Scatter Charts: /line-charts/#scatter
   - Pie Charts: pie-charts.md
   - Doughnut Charts: /pie-charts#doughnut
   - Polar Charts: polar-charts.md

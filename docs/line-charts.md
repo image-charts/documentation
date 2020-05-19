@@ -29,8 +29,9 @@ cht=lc
 chd=t:40,60,60,45,47,75,70,72
 ```
 
+##### Scatter
 
-- `lxy` Lets you specify both x- and y-coordinates for each point, rather just the y values.
+- `lxy` Lets you specify both x- and y-coordinates for each point, rather just the y values. Also known as a scatter chart.
 
 To specify data points for `lxy` charts, you must specify series in multiples of two. The first series in each pair is the x coordinates for that line, and the second series is the corresponding y coordinates for that line. For example:
 
