@@ -25,3 +25,6 @@ Here is a 700 pixel x 200 pixel chart.
 ```
 chs=700x200
 ```
+
+!!! info "Want high-resolution, retina-ready charts?"
+    Enterprise and Enterprise+ customers can leverage [high resolution](/reference/retina/) Image Chart support.
