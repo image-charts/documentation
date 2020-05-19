@@ -27,4 +27,4 @@ chs=700x200
 ```
 
 !!! info "Want high-resolution, retina-ready charts?"
-    Enterprise and Enterprise+ customers can leverage [high resolution](/reference/retina/) Image Chart support.
+    Enterprise+ customers can leverage [high resolution](/reference/retina/) Image Chart support.
