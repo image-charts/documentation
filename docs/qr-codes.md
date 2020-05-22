@@ -56,6 +56,25 @@ How to encode the data in the QR code. Currently only UTF-8 is supported.
 * Shift_JIS
 * ISO-8859-1 -->
 
+## SVG format
+`chof=.svg`
+
+You may optionally set the query parameter `chof=.svg` for SVG format.
+
+## Background color
+`icqrb=<color>`
+
+`<color>` : The background color, in [RRGGBB[AA] hexadecimal format](/reference/color-format)
+
+[![chart](https://image-charts.com/chart?chs=200x200&cht=qr&chl=This%20is%20so%20awesome&choe=UTF-8&icqrb=CAF3C37C)](https://editor.image-charts.com/chart?chs=200x200&cht=qr&chl=This%20is%20so%20awesome&choe=UTF-8&icqrb=CAF3C37C)
+
+## Foreground Color
+`icqrb=<color>`
+
+`<color>` : The foreground color, in [RRGGBB[AA] hexadecimal format](/reference/color-format)
+
+[![chart](https://image-charts.com/chart?chs=200x200&cht=qr&chl=This%20is%20so%20awesome&choe=UTF-8&icqrf=0096887C)](https://editor.image-charts.com/chart?chs=200x200&cht=qr&chl=This%20is%20so%20awesome&choe=UTF-8&icqrf=0096887C)
+
 ## Error correction level and margin
 
 `chld=<error_correction_level>|<margin>`
