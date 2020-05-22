@@ -8,7 +8,7 @@ QR codes are a popular type of two-dimensional barcode. They are also known as h
 
 #### Example
 
-[![chart](https://image-charts.com/chart?chs=150x150&cht=qr&chl=Hello%20world&choe=UTF-8)](https://editor.image-charts.com/chart?chs=150x150&cht=qr&chl=Hello%20world&choe=UTF-8)
+[![chart](https://image-charts.com/chart?chs=150x150&cht=qr&chl=Hello%20world&choe=UTF-8)](https://editor.image-charts.com/?tab_viewer=image&tab_editor=form#https:/image-charts.com/chart?chs=150x150&cht=qr&chl=Hello%20world&choe=UTF-8)
 <center>
 [https://image-charts.com/chart?<br/>
 chs=150x150&cht=qr&chl=Hello%20world&choe=UTF-8](https://image-charts.com/chart?chs=150x150&cht=qr&chl=Hello%20world&choe=UTF-8)
@@ -30,7 +30,7 @@ cht=qr
 
 The QR Code chart type (`cht=qr`), size parameter (`chs=<width>x<height>`) and data (`chl=<data>`) are all required parameters.
 
-[![chart](https://image-charts.com/chart?chs=200x200&cht=qr&chl=This%20is%20so%20awesome&choe=UTF-8)](https://editor.image-charts.com/chart?chs=200x200&cht=qr&chl=This%20is%20so%20awesome&choe=UTF-8)
+[![chart](https://image-charts.com/chart?chs=200x200&cht=qr&chl=This%20is%20so%20awesome&choe=UTF-8)](https://editor.image-charts.com/?tab_viewer=image&tab_editor=form#https:/image-charts.com/chart?chs=200x200&cht=qr&chl=This%20is%20so%20awesome&choe=UTF-8)
 <center>
 [https://image-charts.com/chart?
 chs=200x200&cht=qr&chl=This%20is%20so%20awesome&choe=UTF-8](https://image-charts.com/chart?chs=200x200&cht=qr&chl=This%20is%20so%20awesome&choe=UTF-8)
@@ -61,19 +61,28 @@ How to encode the data in the QR code. Currently only UTF-8 is supported.
 
 You may optionally set the query parameter `chof=.svg` for SVG format.
 
+[![chart](https://image-charts.com/chart?chs=200x200&cht=qr&chl=This%20is%20so%20awesome&choe=UTF-8&chof=.svg)](https://editor.image-charts.com/?tab_viewer=image&tab_editor=form#https:/image-charts.com/chart?chs=200x200&cht=qr&chl=This%20is%20so%20awesome&choe=UTF-8&chof=.svg)
+```
+chs=200x200
+cht=qr
+chl=This is so awesome
+choe=UTF-8
+chof=.svg
+```
+
 ## Background color
 `icqrb=<color>`
 
 `<color>` : The background color, in [RRGGBB[AA] hexadecimal format](/reference/color-format)
 
-[![chart](https://image-charts.com/chart?chs=200x200&cht=qr&chl=This%20is%20so%20awesome&choe=UTF-8&icqrb=CAF3C37C)](https://editor.image-charts.com/chart?chs=200x200&cht=qr&chl=This%20is%20so%20awesome&choe=UTF-8&icqrb=CAF3C37C)
+[![chart](https://image-charts.com/chart?chs=200x200&cht=qr&chl=This%20is%20so%20awesome&choe=UTF-8&icqrb=CAF3C37C)](https://editor.image-charts.com/?tab_viewer=image&tab_editor=form#https:/image-charts.com/chart?chs=200x200&cht=qr&chl=This%20is%20so%20awesome&choe=UTF-8&icqrb=CAF3C37C)
 
 ## Foreground Color
 `icqrb=<color>`
 
 `<color>` : The foreground color, in [RRGGBB[AA] hexadecimal format](/reference/color-format)
 
-[![chart](https://image-charts.com/chart?chs=200x200&cht=qr&chl=This%20is%20so%20awesome&choe=UTF-8&icqrf=0096887C)](https://editor.image-charts.com/chart?chs=200x200&cht=qr&chl=This%20is%20so%20awesome&choe=UTF-8&icqrf=0096887C)
+[![chart](https://image-charts.com/chart?chs=200x200&cht=qr&chl=This%20is%20so%20awesome&choe=UTF-8&icqrf=0096887C)](https://editor.image-charts.com/?tab_viewer=image&tab_editor=form#https:/image-charts.com/chart?chs=200x200&cht=qr&chl=This%20is%20so%20awesome&choe=UTF-8&icqrf=0096887C)
 
 ## Error correction level and margin
 
