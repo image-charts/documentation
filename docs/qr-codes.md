@@ -56,10 +56,17 @@ How to encode the data in the QR code. Currently only UTF-8 is supported.
 * Shift_JIS
 * ISO-8859-1 -->
 
-## SVG format
-`chof=.svg`
+## Output format
 
-You may optionally set the query parameter `chof=.svg` for SVG format.
+QRCode image can be generated in two format:
+
+- (default) `png` bitmap image file format 
+- `svg` vector image file format 
+
+Select the output format you want with the query parameter `chof`:
+
+- `chof=.svg` will output QRCode in svg format
+- `chof=.png` will output QRCode in png format
 
 [![chart](https://image-charts.com/chart?chs=200x200&cht=qr&chl=This%20is%20so%20awesome&choe=UTF-8&chof=.svg)](https://editor.image-charts.com/?tab_viewer=image&tab_editor=form#https:/image-charts.com/chart?chs=200x200&cht=qr&chl=This%20is%20so%20awesome&choe=UTF-8&chof=.svg)
 ```
@@ -71,16 +78,24 @@ chof=.svg
 ```
 
 ## Background color
-`icqrb=<color>`
 
-`<color>` : The background color, in [RRGGBB[AA] hexadecimal format](/reference/color-format)
+Specify the background color for QRCode with the following syntax :
+
+#### Syntax
+```icqrb=<color>```
+
+`<color>` : QRCode background color, in [RRGGBB[AA] hexadecimal format](/reference/color-format). Default is `FFFFFF` (white)
 
 [![chart](https://image-charts.com/chart?chs=200x200&cht=qr&chl=This%20is%20so%20awesome&choe=UTF-8&icqrb=CAF3C37C)](https://editor.image-charts.com/?tab_viewer=image&tab_editor=form#https:/image-charts.com/chart?chs=200x200&cht=qr&chl=This%20is%20so%20awesome&choe=UTF-8&icqrb=CAF3C37C)
 
 ## Foreground Color
-`icqrb=<color>`
 
-`<color>` : The foreground color, in [RRGGBB[AA] hexadecimal format](/reference/color-format)
+Specify the foreground color for QRCode with the following syntax :
+
+#### Syntax
+```icqrb=<color>```
+
+`<color>` : QRCode foreground color, in [RRGGBB[AA] hexadecimal format](/reference/color-format). Default is `000000` (black)
 
 [![chart](https://image-charts.com/chart?chs=200x200&cht=qr&chl=This%20is%20so%20awesome&choe=UTF-8&icqrf=0096887C)](https://editor.image-charts.com/?tab_viewer=image&tab_editor=form#https:/image-charts.com/chart?chs=200x200&cht=qr&chl=This%20is%20so%20awesome&choe=UTF-8&icqrf=0096887C)
 
