@@ -82,7 +82,8 @@ chof=.svg
 Specify the background color for QRCode with the following syntax :
 
 #### Syntax
-```icqrb=<color>```
+
+`icqrb=<color>`
 
 `<color>` : QRCode background color, in [RRGGBB[AA] hexadecimal format](/reference/color-format). Default is `FFFFFF` (white)
 
@@ -93,7 +94,8 @@ Specify the background color for QRCode with the following syntax :
 Specify the foreground color for QRCode with the following syntax :
 
 #### Syntax
-```icqrb=<color>```
+
+`icqrf=<color>`
 
 `<color>` : QRCode foreground color, in [RRGGBB[AA] hexadecimal format](/reference/color-format). Default is `000000` (black)
 
