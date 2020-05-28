@@ -1,4 +1,4 @@
-# Graph Viz Charts
+# GraphViz Charts
 
 This section describes how to create graph charts using Image-Chart API.
 
