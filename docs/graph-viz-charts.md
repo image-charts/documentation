@@ -243,7 +243,6 @@ chl=graph {
 }
 ```
 
-
 #### Advanced graph
 
 The dot language is really powerful, they are lot of ways to customize your graph, if you wish to read more take a look at the [dot guide](https://www.graphviz.org/pdf/dotguide.pdf).
@@ -297,18 +296,6 @@ chl=graph {
 
 -->
 
-## Known limitations
-
-Here are some tips and known limitations in the current GraphViz charts:
-
-- Output image format is `svg` format, not png.
-- Animation through `chan` are not supported.
-- The `graph` attribute size should be not be used; `chs` is also not supported.
-- The maximum number of nodes is 200, and the maximum for edges is 400.
-- Anti-aliasing, transparency, and alternate fonts are not supported.
-- The `node` attributes `image` and `shapefile` are not supported, and will be silently ignored <!--result in an error--> if present.
-- The graph attributes ratio, margin, and pad are not supported, and will be ignored if present.
-
 ## Chart Types
 
 Specifies a GraphViz chart. You can optionally specify a GraphViz engine (default is `dot` layout engine).
@@ -330,3 +317,29 @@ If you want to specify a layout engine, include the semicolon : mark and specify
 - `twopi`: radial layouts, after Graham Wills 97. Nodes are placed on concentric circles depending their distance from a given root node.
 
 - `circo`: circular layout, after Six and Tollis 99, Kauffman and Wiese 02. This is suitable for certain diagrams of multiple cyclic structures, such as certain telecommunications networks.
+
+## Output format
+
+Graphs can be rendered in different format using `chof` query parameter:  
+
+- `chof=.png`: `png` bitmap image file format (default)   
+- `chof=.svg`: `svg` vector image file format
+
+Example below is a graph generated as a png image:
+
+![Dependency graph as a png image](https://image-charts.com/chart?chl=graph%20%7Ba%20--%20b%3Bb%20--%20c%3Bc%20--%20d%3Bd%20--%20e%3Be%20--%20f%3Ba%20--%20f%3Ba%20--%20c%3Ba%20--%20d%3Ba%20--%20e%3Bb%20--%20d%3Bb%20--%20e%3Bb%20--%20f%3Bc%20--%20e%3Bc%20--%20f%3Bd%20--%20f%3B%7D&chof=.svg&chs=700x200&cht=gv&icac=fgribreau&ichm=dbdad1e1c89308587ac41d2c176a47980a0e4d1019390d77c9bb02c179fa85e4)
+
+Here is the same graph generated as an svg image:
+
+![Dependency graph as a svg image](https://image-charts.com/chart?chl=graph%20%7Ba%20--%20b%3Bb%20--%20c%3Bc%20--%20d%3Bd%20--%20e%3Be%20--%20f%3Ba%20--%20f%3Ba%20--%20c%3Ba%20--%20d%3Ba%20--%20e%3Bb%20--%20d%3Bb%20--%20e%3Bb%20--%20f%3Bc%20--%20e%3Bc%20--%20f%3Bd%20--%20f%3B%7D&chof=.svg&chs=700x200&cht=gv&icac=fgribreau&ichm=dbdad1e1c89308587ac41d2c176a47980a0e4d1019390d77c9bb02c179fa85e4)
+
+## Known limitations
+
+Here are some tips and known limitations in the current GraphViz charts:
+
+- Animation through `chan` is not supported
+- The `graph` attribute size should be not be used; `chs` is also not supported
+- The maximum number of nodes is 200, and the maximum for edges is 400. [Contact us if you need more](mailto:support@image-charts.com)
+- Anti-aliasing, transparency, and alternate fonts are not supported
+- The `node` attributes `image` and `shapefile` are not supported and will be silently ignored <!--result in an error--> if present
+- The graph attributes ratio, margin, and pad are not supported and will be ignored if present

@@ -69,6 +69,7 @@ Select the output format you want with the query parameter `chof`:
 - `chof=.png` will output QRCode in png format
 
 [![chart](https://image-charts.com/chart?chs=200x200&cht=qr&chl=This%20is%20so%20awesome&choe=UTF-8&chof=.svg)](https://editor.image-charts.com/?tab_viewer=image&tab_editor=form#https:/image-charts.com/chart?chs=200x200&cht=qr&chl=This%20is%20so%20awesome&choe=UTF-8&chof=.svg)
+
 ```
 chs=200x200
 cht=qr
