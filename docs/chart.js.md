@@ -2,7 +2,8 @@
 
 This section describes how to use [chart.js](https://www.chartjs.org/docs/latest/charts/) Image Chart API.
 
-[icac](/enterprise) and [icretina](/reference/retina) works with this configuration
+!!! info "Enterprise+ subscription only"
+    [icac](/enterprise) works with this configuration
 
 ## Overview
 
