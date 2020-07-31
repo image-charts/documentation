@@ -5,16 +5,20 @@ deploy: setup build
 serve:
 	docker run -v ${PWD}:/docs -it -p 8000:8000 imagecharts/documentation
 
-build:
+build: build-gallery
 	mkdir -p docs/fonts
 	# note: we use "$$" below in "$$item" to escape automatic interpolation
 	curl -s https://image-charts.com/swagger.json | jq -r '.paths[].get.parameters[] | select(.name == "icff").enum | reduce .[] as $$item ([]; . + ["`" + $$item + "`"]) | join(", ")' > docs/fonts/google-fonts.md
 	# note: netlify does not support docker
-	# docker run -v ${PWD}:/docs -it -p 8000:8000 imagecharts/documentation build
-	mkdocs build
+	docker run -v ${PWD}:/docs -it -p 8000:8000 imagecharts/documentation build
+	# mkdocs build
 	# don't forget to copy the robots.txt file to the publish "site/" folder
 	cp -v robots.txt site/
 
+build-gallery:
+	npm install
+	curl -s https://image-charts.com/gallery.json > ./scripts/gallery.json
+	node scripts/generate-gallery.js > ./docs/gallery.md
 
 update: update-logo
 
