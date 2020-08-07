@@ -17,7 +17,7 @@ build: build-gallery
 
 build-gallery:
 	npm install
-	curl -s https://image-charts.com/gallery.json > ./scripts/gallery.json
+	# curl -s https://image-charts.com/gallery.json > ./scripts/gallery.json
 	node scripts/generate-gallery.js > ./docs/gallery.md
 
 update: update-logo
