@@ -14,7 +14,7 @@ There are three general ways to show multiple series in a bar chart:
 
 - **Grouped vertically** `bvg`
 
-[![chart](https://image-charts.com/chart?chbh=a&chco=fdb45c%2C27c9c2%2C1869b7&chd=t%3A5%2C5%2C5%7C10%2C10%2C10%7C15%2C15%2C15&chds=0%2C120&chm=N%2C000000%2C0%2C%2C10%7CN%2C000000%2C1%2C%2C10%7CN%2C000000%2C2%2C%2C10&chma=0%2C0%2C10%2C10&chs=700x150&cht=bvg&chxs=0%2C000000%2C0%2C0%2C_&chxt=y&icac=fgribreau&icretina=1&ichm=2bf5da8d8c9307933d26513f883a19b6dc68545bf381ee27fa1001111509d1fe)](https://editor.image-charts.com/chart?chbh=a&chco=fdb45c%2C27c9c2%2C1869b7&chd=t%3A5%2C5%2C5%7C10%2C10%2C10%7C15%2C15%2C15&chds=0%2C120&chm=N%2C000000%2C0%2C%2C10%7CN%2C000000%2C1%2C%2C10%7CN%2C000000%2C2%2C%2C10&chma=0%2C0%2C10%2C10&chs=700x150&cht=bvg&chxs=0%2C000000%2C0%2C0%2C_&chxt=y&icac=fgribreau&icretina=1&ichm=2bf5da8d8c9307933d26513f883a19b6dc68545bf381ee27fa1001111509d1fe)
+[![chart](https://image-charts.com/chart?chbh=a&chbr=10&chco=fdb45c%2C27c9c2%2C1869b7&chd=t%3A5%2C5%2C5%7C10%2C10%2C10%7C15%2C15%2C15&chds=0%2C120&chm=N%2C000000%2C0%2C%2C10%7CN%2C000000%2C1%2C%2C10%7CN%2C000000%2C2%2C%2C10&chma=0%2C0%2C10%2C10&chs=700x150&cht=bvg&chxs=0%2C000000%2C0%2C0%2C_&chxt=y&icac=fgribreau&icretina=1&ichm=56b9845e7bedf23a1325d9267ae47ed6b6525ebbbf15294ba3c7064ceb27d64b)](https://editor.image-charts.com/chart?chbh=a&chbr=10&chco=fdb45c%2C27c9c2%2C1869b7&chd=t%3A5%2C5%2C5%7C10%2C10%2C10%7C15%2C15%2C15&chds=0%2C120&chm=N%2C000000%2C0%2C%2C10%7CN%2C000000%2C1%2C%2C10%7CN%2C000000%2C2%2C%2C10&chma=0%2C0%2C10%2C10&chs=700x150&cht=bvg&chxs=0%2C000000%2C0%2C0%2C_&chxt=y&icac=fgribreau&icretina=1&ichm=56b9845e7bedf23a1325d9267ae47ed6b6525ebbbf15294ba3c7064ceb27d64b)
 
 ```
 cht=bvg
@@ -23,7 +23,7 @@ chd=t:5,5,5|10,10,10|15,15,15
 
 - **Grouped horizontally** `bhg`
 
-[![chart](https://image-charts.com/chart?chbh=a&chco=fdb45c%2C27c9c2%2C1869b7&chd=t%3A5%2C5%2C5%7C10%2C10%2C10%7C15%2C15%2C15&chds=0%2C120&chm=N%2C000000%2C0%2C%2C10%7CN%2C000000%2C1%2C%2C10%7CN%2C000000%2C2%2C%2C10&chma=0%2C0%2C10%2C10&chs=700x150&cht=bhg&chxs=0%2C000000%2C0%2C0%2C_&chxt=y&icac=fgribreau&icretina=1&ichm=9f53fe17316ca209b408a06d541a2c9388c354051272cea788add167fc8636c4)](https://editor.image-charts.com/chart?chbh=a&chco=fdb45c%2C27c9c2%2C1869b7&chd=t%3A5%2C5%2C5%7C10%2C10%2C10%7C15%2C15%2C15&chds=0%2C120&chm=N%2C000000%2C0%2C%2C10%7CN%2C000000%2C1%2C%2C10%7CN%2C000000%2C2%2C%2C10&chma=0%2C0%2C10%2C10&chs=700x150&cht=bhg&chxs=0%2C000000%2C0%2C0%2C_&chxt=y&icac=fgribreau&icretina=1&ichm=9f53fe17316ca209b408a06d541a2c9388c354051272cea788add167fc8636c4)
+[![chart](https://image-charts.com/chart?chbh=a&chbr=5&chco=fdb45c%2C27c9c2%2C1869b7&chd=t%3A5%2C5%2C5%7C10%2C10%2C10%7C15%2C15%2C15&chds=0%2C120&chm=N%2C000000%2C0%2C%2C10%7CN%2C000000%2C1%2C%2C10%7CN%2C000000%2C2%2C%2C10&chma=0%2C0%2C10%2C10&chs=700x150&cht=bhg&chxs=0%2C000000%2C0%2C0%2C_&chxt=y&icac=fgribreau&icretina=1&ichm=78c7d39bbe0360dfa95e0db59776eaebcb45f0082eeb26415e7c03e7ed634593)](https://editor.image-charts.com/chart?chbh=a&chbr=5&chco=fdb45c%2C27c9c2%2C1869b7&chd=t%3A5%2C5%2C5%7C10%2C10%2C10%7C15%2C15%2C15&chds=0%2C120&chm=N%2C000000%2C0%2C%2C10%7CN%2C000000%2C1%2C%2C10%7CN%2C000000%2C2%2C%2C10&chma=0%2C0%2C10%2C10&chs=700x150&cht=bhg&chxs=0%2C000000%2C0%2C0%2C_&chxt=y&icac=fgribreau&icretina=1&ichm=78c7d39bbe0360dfa95e0db59776eaebcb45f0082eeb26415e7c03e7ed634593)
 
 ```
 cht=bhg
@@ -32,7 +32,7 @@ chd=t:5,5,5|10,10,10|15,15,15
 
 - **Stacked vertically** `bvs`
 
-[![chart](https://image-charts.com/chart?chbh=20&chco=fdb45c%2C27c9c2%2C1869b7&chd=t%3A5%2C5%2C5%7C10%2C10%2C10%7C15%2C15%2C15&chds=0%2C120&chm=N%2C000000%2C0%2C0%2C10%7CN%2C000000%2C0%2C1%2C10%7CN%2C000000%2C0%2C2%2C10%7CN%2C000000%2C1%2C0%2C10%7CN%2C000000%2C1%2C1%2C10%7CN%2C000000%2C1%2C2%2C10%7CN%2C000000%2C2%2C0%2C10%7CN%2C000000%2C2%2C1%2C10%7CN%2C000000%2C2%2C2%2C10&chma=0%2C0%2C10%2C10&chs=700x150&cht=bvs&chxs=0%2C000000%2C0%2C0%2C_&chxt=y&icac=fgribreau&icretina=1&ichm=f3530475e449ef24f96b92884590e6ca527736b224bc3dbfa8545accb19be4a7)](https://editor.image-charts.com/?tab_viewer=image&tab_editor=form#https:/image-charts.com/chart?chbh=20&chco=fdb45c%2C27c9c2%2C1869b7&chd=t%3A5%2C5%2C5%7C10%2C10%2C10%7C15%2C15%2C15&chds=0%2C120&chm=N%2C000000%2C0%2C0%2C10%7CN%2C000000%2C0%2C1%2C10%7CN%2C000000%2C0%2C2%2C10%7CN%2C000000%2C1%2C0%2C10%7CN%2C000000%2C1%2C1%2C10%7CN%2C000000%2C1%2C2%2C10%7CN%2C000000%2C2%2C0%2C10%7CN%2C000000%2C2%2C1%2C10%7CN%2C000000%2C2%2C2%2C10&chma=0%2C0%2C10%2C10&chs=700x150&cht=bvs&chxs=0%2C000000%2C0%2C0%2C_&chxt=y&icac=fgribreau&icretina=1&ichm=f3530475e449ef24f96b92884590e6ca527736b224bc3dbfa8545accb19be4a7)
+[![chart](https://image-charts.com/chart?chbh=20&chbr=5&chco=fdb45c%2C27c9c2%2C1869b7&chd=t%3A5%2C5%2C5%7C10%2C10%2C10%7C15%2C15%2C15&chds=0%2C120&chm=N%2C000000%2C0%2C0%2C10%7CN%2C000000%2C0%2C1%2C10%7CN%2C000000%2C0%2C2%2C10%7CN%2C000000%2C1%2C0%2C10%7CN%2C000000%2C1%2C1%2C10%7CN%2C000000%2C1%2C2%2C10%7CN%2C000000%2C2%2C0%2C10%7CN%2C000000%2C2%2C1%2C10%7CN%2C000000%2C2%2C2%2C10&chma=0%2C0%2C10%2C10&chs=700x150&cht=bvs&chxs=0%2C000000%2C0%2C0%2C_&chxt=y&icac=fgribreau&icretina=1&ichm=8bae6af5f958a70b9d0f9395b519805cff9224059c98a11a86aaaa87b8352fbd)](https://editor.image-charts.com/chart?chbh=20&chbr=5&chco=fdb45c%2C27c9c2%2C1869b7&chd=t%3A5%2C5%2C5%7C10%2C10%2C10%7C15%2C15%2C15&chds=0%2C120&chm=N%2C000000%2C0%2C0%2C10%7CN%2C000000%2C0%2C1%2C10%7CN%2C000000%2C0%2C2%2C10%7CN%2C000000%2C1%2C0%2C10%7CN%2C000000%2C1%2C1%2C10%7CN%2C000000%2C1%2C2%2C10%7CN%2C000000%2C2%2C0%2C10%7CN%2C000000%2C2%2C1%2C10%7CN%2C000000%2C2%2C2%2C10&chma=0%2C0%2C10%2C10&chs=700x150&cht=bvs&chxs=0%2C000000%2C0%2C0%2C_&chxt=y&icac=fgribreau&icretina=1&ichm=8bae6af5f958a70b9d0f9395b519805cff9224059c98a11a86aaaa87b8352fbd)
 
 ```
 cht=bvs
@@ -41,7 +41,7 @@ chd=t:5,5,5|10,10,10|15,15,15
 
 - **Stacked horizontally** `bhs`
 
-[![chart](https://image-charts.com/chart?chbh=20&chco=fdb45c%2C27c9c2%2C1869b7&chd=t%3A5%2C5%2C5%7C10%2C10%2C10%7C15%2C15%2C15&chds=0%2C120&chm=N%2C000000%2C0%2C0%2C10%7CN%2C000000%2C0%2C1%2C10%7CN%2C000000%2C0%2C2%2C10%7CN%2C000000%2C1%2C0%2C10%7CN%2C000000%2C1%2C1%2C10%7CN%2C000000%2C1%2C2%2C10%7CN%2C000000%2C2%2C0%2C10%7CN%2C000000%2C2%2C1%2C10%7CN%2C000000%2C2%2C2%2C10&chma=0%2C0%2C10%2C10&chs=700x150&cht=bhs&chxr=1%2C0%2C50&chxt=y%2Cx&icac=fgribreau&icretina=1&ichm=c1708c03542d952a2dfd668d4463eaf3591daa20fba18244fcdcb2630b89097b)](https://editor.image-charts.com/chart?chbh=20&chco=fdb45c%2C27c9c2%2C1869b7&chd=t%3A5%2C5%2C5%7C10%2C10%2C10%7C15%2C15%2C15&chds=0%2C120&chm=N%2C000000%2C0%2C0%2C10%7CN%2C000000%2C0%2C1%2C10%7CN%2C000000%2C0%2C2%2C10%7CN%2C000000%2C1%2C0%2C10%7CN%2C000000%2C1%2C1%2C10%7CN%2C000000%2C1%2C2%2C10%7CN%2C000000%2C2%2C0%2C10%7CN%2C000000%2C2%2C1%2C10%7CN%2C000000%2C2%2C2%2C10&chma=0%2C0%2C10%2C10&chs=700x150&cht=bhs&chxr=1%2C0%2C50&chxt=y%2Cx&icac=fgribreau&icretina=1&ichm=c1708c03542d952a2dfd668d4463eaf3591daa20fba18244fcdcb2630b89097b)
+[![chart](https://image-charts.com/chart?chbh=20&chbr=4&chco=fdb45c%2C27c9c2%2C1869b7&chd=t%3A5%2C5%2C5%7C10%2C10%2C10%7C15%2C15%2C15&chds=0%2C120&chm=N%2C000000%2C0%2C0%2C10%7CN%2C000000%2C0%2C1%2C10%7CN%2C000000%2C0%2C2%2C10%7CN%2C000000%2C1%2C0%2C10%7CN%2C000000%2C1%2C1%2C10%7CN%2C000000%2C1%2C2%2C10%7CN%2C000000%2C2%2C0%2C10%7CN%2C000000%2C2%2C1%2C10%7CN%2C000000%2C2%2C2%2C10&chma=0%2C0%2C10%2C10&chs=700x150&cht=bhs&chxr=1%2C0%2C50&chxt=y%2Cx&icac=fgribreau&icretina=1&ichm=c8f0bb4ed939dd322d288f702d1f9dab5c7669f1095a3381e30711809a589212)](https://editor.image-charts.com/chart?chbh=20&chbr=4&chco=fdb45c%2C27c9c2%2C1869b7&chd=t%3A5%2C5%2C5%7C10%2C10%2C10%7C15%2C15%2C15&chds=0%2C120&chm=N%2C000000%2C0%2C0%2C10%7CN%2C000000%2C0%2C1%2C10%7CN%2C000000%2C0%2C2%2C10%7CN%2C000000%2C1%2C0%2C10%7CN%2C000000%2C1%2C1%2C10%7CN%2C000000%2C1%2C2%2C10%7CN%2C000000%2C2%2C0%2C10%7CN%2C000000%2C2%2C1%2C10%7CN%2C000000%2C2%2C2%2C10&chma=0%2C0%2C10%2C10&chs=700x150&cht=bhs&chxr=1%2C0%2C50&chxt=y%2Cx&icac=fgribreau&icretina=1&ichm=c8f0bb4ed939dd322d288f702d1f9dab5c7669f1095a3381e30711809a589212)
 
 ```
 cht=bhs
@@ -51,6 +51,22 @@ chd=t:5,5,5|10,10,10|15,15,15
 !!! missing
     Google Image Charts supported the `bvo` chart type in which vertical bars were stacked in front of one another. This type of chart is not planned to be supported and will automatically falls back to the **`bvs`** type.
 
+## Rounded Bar
+
+It's always nice to display bar charts with rounded corner. Specify a corner radius (in pixel) with the `chbr` query parameter.
+
+
+```
+chbr=10
+```
+
+[![rounded bar chart](https://image-charts.com/chart?chbr=10&chd=t%3A10%2C40%2C60%2C80%2C30%2C20&chf=b0%2Clg%2C0%2Cfdb45c%2C0%2Ced7e30%2C1&chs=700x125&cht=bvs&chxt=y%2Cx&icac=fgribreau&icretina=1&ichm=32462fe6397843dedeeb25a08643f89146e38660d54f5c3cf692b2a33979038a)](https://editor.image-charts.com/chart?chbr=10&chd=t%3A10%2C40%2C60%2C80%2C30%2C20&chf=b0%2Clg%2C0%2Cfdb45c%2C0%2Ced7e30%2C1&chs=700x125&cht=bvs&chxt=y%2Cx&icac=fgribreau&icretina=1&ichm=32462fe6397843dedeeb25a08643f89146e38660d54f5c3cf692b2a33979038a)
+
+```
+chbr=20
+```
+
+[![chart](https://image-charts.com/chart?chbh=20&chbr=20&chco=CFECF7%2C27c9c2&chd=a%3A10000%2C50000%2C60000%2C80000%2C40000%7C50000%2C60000%2C100000%2C40000%2C20000&chdl=N%7CN-1&chdlp=r&chl=10%7C50%7C60%7C80%7C40%7C50%7C60%7C100%7C40%7C20&chs=700x300&cht=bvs&chtt=Revenue%20per%20month&chxl=0%3A%7CJan%7CFev%7CMar%7CAvr%7CMay&chxs=1N%2AcUSD0sz%2A%2C000000%2C14&chxt=x%2Cy&icac=fgribreau&iclocale=en&icretina=1&ichm=ebb2c1cb976c7cd45881bc35cf663a7283e99a01c32cf2aa3c7db0e309ee2864)](https://editor.image-charts.com/chart?chbh=20&chbr=20&chco=CFECF7%2C27c9c2&chd=a%3A10000%2C50000%2C60000%2C80000%2C40000%7C50000%2C60000%2C100000%2C40000%2C20000&chdl=N%7CN-1&chdlp=r&chl=10%7C50%7C60%7C80%7C40%7C50%7C60%7C100%7C40%7C20&chs=700x300&cht=bvs&chtt=Revenue%20per%20month&chxl=0%3A%7CJan%7CFev%7CMar%7CAvr%7CMay&chxs=1N%2AcUSD0sz%2A%2C000000%2C14&chxt=x%2Cy&icac=fgribreau&iclocale=en&icretina=1&ichm=ebb2c1cb976c7cd45881bc35cf663a7283e99a01c32cf2aa3c7db0e309ee2864)
 
 ## Series Colors
 
@@ -91,7 +107,7 @@ A combination of series colors and individual bar colors.
 
 This example shows a bar chart with two series. The first series all black (000000,) and comma-delimited. The second series is pipe-delimited, and assigns a different color for each point (FF0000|00FF00|0000FF).
 
-[![chart](https://image-charts.com/chart?chco=000000%2C8AC1E7%7C7f3f98%7Cfdb45c&chd=s%3AFOE%2Celo&chs=700x125&cht=bvs&chxl=0%3A%7CDec%7CNov%7COct%7C1%3A%7C20K%7C60K%7C100K%7C&chxt=x%2Cy&icac=fgribreau&icretina=1&ichm=188807d62dfa1ce578441d2fe0b8f8181c6280d5217a2e68d879022ce4d784d3)](https://editor.image-charts.com/?tab_viewer=image&tab_editor=form#https:/image-charts.com/chart?chco=000000%2C8AC1E7%7C7f3f98%7Cfdb45c&chd=s%3AFOE%2Celo&chs=700x125&cht=bvs&chxl=0%3A%7CDec%7CNov%7COct%7C1%3A%7C20K%7C60K%7C100K%7C&chxt=x%2Cy&icac=fgribreau&icretina=1&ichm=188807d62dfa1ce578441d2fe0b8f8181c6280d5217a2e68d879022ce4d784d3)
+[![chart](https://image-charts.com/chart?chbr=3&chco=000000%2C8AC1E7%7C7f3f98%7Cfdb45c&chd=s%3AFOE%2Celo&chs=700x125&cht=bvs&chxl=0%3A%7CDec%7CNov%7COct%7C1%3A%7C20K%7C60K%7C100K%7C&chxt=x%2Cy&icac=fgribreau&icretina=1&ichm=0bf480edfb474ea8ed81ef0d46197f68e4a85546d5959bcf534a6f74bafed66d)](https://editor.image-charts.com/chart?chbr=3&chco=000000%2C8AC1E7%7C7f3f98%7Cfdb45c&chd=s%3AFOE%2Celo&chs=700x125&cht=bvs&chxl=0%3A%7CDec%7CNov%7COct%7C1%3A%7C20K%7C60K%7C100K%7C&chxt=x%2Cy&icac=fgribreau&icretina=1&ichm=0bf480edfb474ea8ed81ef0d46197f68e4a85546d5959bcf534a6f74bafed66d)
 
 ```
 chco=000000,8AC1E7|7f3f98|fdb45c
@@ -101,13 +117,13 @@ chd=s:FOE,elo
 
 This example demonstrates setting different colors for every bar in a multi-series chart.
 
-[![chart](https://image-charts.com/chart?chco=FF0000%7C00FF00%7C0000FF%2CFFC6A5%7CDEF3BD%7CC6EFF7&chd=s%3AFOE%2Celo&chs=700x125&cht=bvs&chxl=0%3A%7CDec%7CNov%7COct%7C1%3A%7C20K%7C60K%7C100K&chxt=x%2Cy&icac=fgribreau&icretina=1&ichm=e1903e688916566f7bf797898342483b5419c9f1d959d407b47eb0d4b3d22734)](https://editor.image-charts.com/chart?chco=FF0000%7C00FF00%7C0000FF%2CFFC6A5%7CDEF3BD%7CC6EFF7&chd=s%3AFOE%2Celo&chs=700x125&cht=bvs&chxl=0%3A%7CDec%7CNov%7COct%7C1%3A%7C20K%7C60K%7C100K&chxt=x%2Cy&icac=fgribreau&icretina=1&ichm=e1903e688916566f7bf797898342483b5419c9f1d959d407b47eb0d4b3d22734)
+[![chart](https://image-charts.com/chart?chbr=2&chco=FF0000%7C00FF00%7C0000FF%2CFFC6A5%7CDEF3BD%7CC6EFF7&chd=s%3AFOE%2Celo&chs=700x125&cht=bvs&chxl=0%3A%7CDec%7CNov%7COct%7C1%3A%7C20K%7C60K%7C100K&chxt=x%2Cy&icac=fgribreau&icretina=1&ichm=0e64b37d2ef25ba2da91a7ab90621794df550f9f0700f623cafb7f39b2d78e66)](https://editor.image-charts.com/chart?chbr=2&chco=FF0000%7C00FF00%7C0000FF%2CFFC6A5%7CDEF3BD%7CC6EFF7&chd=s%3AFOE%2Celo&chs=700x125&cht=bvs&chxl=0%3A%7CDec%7CNov%7COct%7C1%3A%7C20K%7C60K%7C100K&chxt=x%2Cy&icac=fgribreau&icretina=1&ichm=0e64b37d2ef25ba2da91a7ab90621794df550f9f0700f623cafb7f39b2d78e66)
 
 You can also specify fills to color a series with solid or gradient colors. [Solid fills](/reference/background-fill/#solid-fills) look the same as using chco, but [gradients](/reference/background-fill/#gradient-fills) (`chf=b<index>,lg,...`) create unique effects.
 
 Gradient fills:
 
-[![chart](https://image-charts.com/chart?chd=t%3A10%2C40%2C60%2C80%2C30%2C20&chf=b0%2Clg%2C0%2Cfdb45c%2C0%2Ced7e30%2C1&chs=700x125&cht=bvs&chxt=y%2Cx&icac=fgribreau&icretina=1&ichm=3e641c2c2f10969384b2278a645684450e3560bfae26827f1bbc2782aee928c8)](https://editor.image-charts.com/?tab_viewer=image&tab_editor=form#https:/image-charts.com/chart?chd=t%3A10%2C40%2C60%2C80%2C30%2C20&chf=b0%2Clg%2C0%2Cfdb45c%2C0%2Ced7e30%2C1&chs=700x125&cht=bvs&chxt=y%2Cx&icac=fgribreau&icretina=1&ichm=3e641c2c2f10969384b2278a645684450e3560bfae26827f1bbc2782aee928c8)
+[![chart](https://image-charts.com/chart?chbr=5&chd=t%3A10%2C40%2C60%2C80%2C30%2C20&chf=b0%2Clg%2C0%2Cfdb45c%2C0%2Ced7e30%2C1&chs=700x125&cht=bvs&chxt=y%2Cx&icac=fgribreau&icretina=1&ichm=e60e1b75afd598dd7925062e6662cd684df102a35f15ac2ee38b86189338d489)](https://editor.image-charts.com/chart?chbr=5&chd=t%3A10%2C40%2C60%2C80%2C30%2C20&chf=b0%2Clg%2C0%2Cfdb45c%2C0%2Ced7e30%2C1&chs=700x125&cht=bvs&chxt=y%2Cx&icac=fgribreau&icretina=1&ichm=e60e1b75afd598dd7925062e6662cd684df102a35f15ac2ee38b86189338d489)
 
 ```
 chd=t:10,40,60,80,30,20
@@ -122,3 +138,6 @@ Solid fills:
 chd=t:40,40,60,80|30,50,55,86
 chf=b0,ls,0,72BD60,.3,517D47,.1|b1,ls,0,2F5627,.3,E67233,.1
 ```
+
+There are a variety of bar charts that you can create, including vertical, horizontal, grouped, stacked versions of each.
+
