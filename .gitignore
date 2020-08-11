@@ -3,3 +3,6 @@ site
 hmac_.exe
 Program.class
 java.iml
+node_modules
+gallery.md
+gallery.json
