@@ -3,7 +3,7 @@
 deploy: setup build
 
 serve:
-	docker run -v ${PWD}:/docs -it -p 8000:8000 imagecharts/documentation
+	docker run -v ${PWD}:/docs -it -p 8090:8000 imagecharts/documentation
 
 build: build-gallery
 	mkdir -p docs/fonts

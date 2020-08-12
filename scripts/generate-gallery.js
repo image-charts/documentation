@@ -6,12 +6,12 @@ const querystring = require('querystring');
 
 const global_style = `
 <style>
-  .flex{
+  .gallery-flex{
     display:flex;
     flex-wrap: wrap;
   }
 
-  .items{
+  .gallery-items{
     flex-basis: 30%;
     position: relative;
     border: 1px solid #ccc;
@@ -21,7 +21,7 @@ const global_style = `
     z-index: 1;
   }
 
-  .label{
+  .gallery-label{
     width: 100%;
     background-color: aliceblue;
     color: #000;
@@ -31,9 +31,10 @@ const global_style = `
     border-bottom-right-radius: 5px;
   }
 
-  .items__img{
+  .gallery-items__img{
     border-radius: 5px;
-    width: 100%;
+    max-height: 135px;
+    max-width: 100% !important;
   }
 
 </style>`;
@@ -51,20 +52,13 @@ const html = Object.keys(chartByCategory)
 
     return (
       `## ${category_name}
-<div class="flex">` +
+<div class="gallery-flex">` +
       chartByCategory[category_name]
         .map((chart) => {
           const {protocol, hostname, pathname, search} = Url.parse(chart.url);
           const query = querystring.stringify(querystring.parse(decodeURIComponent(search.substring(1))), '&', '=',{encodeURIComponent: (v) => fixedEncodeURIComponent(v)});
           const url = `${protocol}//${hostname}${pathname}?${query}`;
-          return `
-<a class="items" 
-   href="${url}">
-    <img
-        class="items__img" 
-        src="${url}">
-    <p class="label">${chart.title}</p>
-</a>`
+          return `<a class="gallery-items" href="${url}"><img class="gallery-items__img"  src="${url}"><p class="gallery-label">${chart.title}</p></a>`;
         })
         .join("\n") +
       `</div>`
