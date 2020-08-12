@@ -1,5 +1,8 @@
 const charts = require("./gallery.json");
 const _ = require("lodash");
+const Url = require('url');
+const querystring = require('querystring');
+
 
 const global_style = `
 <style>
@@ -35,14 +38,34 @@ const global_style = `
 
 </style>`;
 
+function fixedEncodeURIComponent(str) {
+  return encodeURIComponent(str).replace(/[!'()*]/g, function(c) {
+    return '%' + c.charCodeAt(0).toString(16);
+  });
+}
+
 const chartByCategory = _.groupBy(charts, (chart) => chart.category);
 const html = Object.keys(chartByCategory)
   .map((category_name) => {
+
+
     return (
       `## ${category_name}
 <div class="flex">` +
       chartByCategory[category_name]
-        .map((chart) => `<a class="items" href="${chart.url}"><img class="items__img" src="${chart.url}"><p class="label">${chart.title}</p></a>`)
+        .map((chart) => {
+          const {protocol, hostname, pathname, search} = Url.parse(chart.url);
+          const query = querystring.stringify(querystring.parse(decodeURIComponent(search.substring(1))), '&', '=',{encodeURIComponent: (v) => fixedEncodeURIComponent(v)});
+          const url = `${protocol}//${hostname}${pathname}?${query}`;
+          return `
+<a class="items" 
+   href="${url}">
+    <img
+        class="items__img" 
+        src="${url}">
+    <p class="label">${chart.title}</p>
+</a>`
+        })
         .join("\n") +
       `</div>`
     );
@@ -50,3 +73,4 @@ const html = Object.keys(chartByCategory)
   .join("\n");
 
 console.log(global_style + html);
+
