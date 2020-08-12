@@ -8,7 +8,7 @@ Image Charts is compatible with Chart.js configuration object. Put your Chart.js
 
 ```
 https://image-charts.com/chart.js/2.8.0?bkg=white&c={"type": "bar","data": {"labels": ["January","February","March"],"datasets": [{"data": [-31,-70,-30]}]},"options": {"legend": {"display": false}}}
-````
+```
 
 ![chart](https://image-charts.com/chart.js/2.8.0?backgroundColor=white&c=%7B%22type%22%3A%22bar%22%2C%22data%22%3A%7B%22labels%22%3A%5B%22January%22%2C%22February%22%2C%22March%22%5D%2C%22datasets%22%3A%5B%7B%22data%22%3A%5B-31%2C-70%2C-30%5D%7D%5D%7D%2C%22options%22%3A%7B%22legend%22%3A%7B%22display%22%3Afalse%7D%7D%7D)
 
