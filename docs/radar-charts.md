@@ -26,7 +26,7 @@ For instance, a chart with 8 data points and no labels will have its data points
 
 A radar chart can support multiple series. Each series is a line in the chart.
 
-**Examples**
+#### Examples
 
 A radar chart where the first and last point of each series is the same:
 
@@ -54,7 +54,7 @@ chd=t:81,65,50,67,59|77,67,10,79,65
 ## Series Colors
 Optionally specify the colors of the lines using the `chco` parameter.
 
-**Syntax**
+#### Syntax
 ```
 chco=<color_1>,...,<color_n>
 ```
