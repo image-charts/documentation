@@ -135,3 +135,8 @@ c=ewogIHR5cGU6ICdyYWRhcicsCiAgZGF0YTogewogICAgbGFiZWxzOiBbCiAgICAgIFsnRWF0aW5nJy
 encoding=base64
 ```
 
+### Plugins
+
+Here is the list of available chart.js plugins in ImageCharts:
+
+- datalabels: [Display labels on data for any type of charts](https://chartjs-plugin-datalabels.netlify.app/)
