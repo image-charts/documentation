@@ -71,3 +71,235 @@ A [bubble chart](/bubble-charts) with text inside each bubble.
 cht=bb&
 chl=label 1|label 2
 ```
+
+## Positionning and formatting
+
+Labels appearance (font color, font size) and position (anchoring, alignement, rotation) is fully and dynamically controllable.
+
+#### Syntax
+
+```
+chlps=<option_name>,<option_value>|<option_name>,<option_value>|...
+```
+
+### Formatting
+
+#### `color` - Label text color
+
+Define the text color of each label with the `color` option. The example below defines a pink label color:
+
+```
+chlps=color,FF00FF
+```
+
+#### `font.size` - Font size
+
+Define the font size of each label with `font.size`. The example below defines a font size of 15px:
+
+```
+chlps=font.size,15
+```
+
+#### `opacity` - Opacity
+
+Define the opacity (between 0 and 1) of each label with `opacity`. The example below defines an opacity of 50%:
+
+```
+chlps=opacity,0.5
+```
+
+#### `padding.top` - Top padding
+
+Define the padding of each label with `padding.top`:
+
+```
+chlps=padding.top,10
+```
+
+#### `padding.right` - Right padding
+
+Define the padding of each label with `padding.right`:
+
+```
+chlps=padding.right,10
+```
+
+#### `padding.bottom` - Bottom padding
+
+Define the padding of each label with `padding.bottom`:
+
+```
+chlps=padding.bottom,10
+```
+
+#### `padding.left` - Left padding
+
+Define the padding of each label with `padding.left`:
+
+```
+chlps=padding.left,10
+```
+
+#### `textStrokeColor` - Text Stroke Color
+
+Define the textStrokeColor of each label with `textStrokeColor`:
+
+```
+chlps=textStrokeColor,f7f7f7
+```
+
+#### `textStrokeWidth` - Text Stroke Width
+
+Define the textStrokeWidth of each label with `textStrokeWidth`:
+
+```
+chlps=textStrokeWidth,10
+```
+
+#### `textShadowBlur` - Text Shadow Blur
+
+Define the textShadowBlur of each label with `textShadowBlur`:
+
+```
+chlps=textShadowBlur,10
+```
+
+#### `textShadowColor` - Text Shadow Color
+
+Define the textShadowColor of each label with `textShadowColor`:
+
+```
+chlps=textShadowColor,cecece
+```
+
+#### `backgroundColor` - Background color
+
+Define the background color of each label with `backgroundColor`
+
+```
+chlps=backgroundColor,00FF00
+```
+
+
+#### `borderColor` - Border color
+
+Define the border color of each label with `borderColor`. The example below defines a green border around the label:
+
+```
+chlps=borderColor,00FF00
+```
+
+#### `borderRadius` - Border radius
+
+Define the border radius of each label with `borderRadius`. The example below defines a 5px border radius around the label:
+
+```
+chlps=borderRadius,5
+```
+
+#### `borderWidth` - Border width
+
+Define the border width of each label with `borderWidth`. The example below defines a 10px border width around the label:
+
+```
+chlps=borderWidth,10
+```
+
+#### `textAlign` - Text alignment
+
+The `textAlign` option only applies to multiline labels and specifies the text alignment being used when drawing the label text.
+
+Supported values for `textAlign`:
+
+- `'start'` (default): the text is left-aligned
+- `'center'`: the text is centered
+- `'end'`: the text is right-aligned
+- `'left'`: alias of `'start'`
+- `'right'`: alias of `'end'`
+
+```
+chlps=textAlign=center
+```
+
+### Positionning
+
+#### `align` - Alignement
+
+The `align` option defines the position of the label relative to the anchor point position and orientation. Its value can be expressed either by a number representing the clockwise angle (in degree) or by one of the following string presets:
+
+- `'center'` (default): the label is centered on the anchor point
+- `'start'`: the label is positioned before the anchor point, following the same direction
+- `'end'`: the label is positioned after the anchor point, following the same direction
+- `'right'`: the label is positioned to the right of the anchor point (0°)
+- `'bottom'`: the label is positioned to the bottom of the anchor point (90°)
+- `'left'`: the label is positioned to the left of the anchor point (180°)
+- `'top'`: the label is positioned to the top of the anchor point (270°)
+
+```
+chlps=align,top
+```
+
+#### `offset` - Offset
+
+The `offset` represents the distance (in pixels) to pull the label *away* from the anchor point. This option is **not applicable** when `align` is `'center'`. Also note that if `align` is `'start'`, the label is moved in the opposite direction. The default value is `4`.
+
+```
+chlps=offset,start
+```
+
+[image charts alignement and offset](https://i.imgur.com/VTJ0ldn.png)
+
+#### `anchor` - Anchoring
+
+An `anchor` option is defined by an orientation vector and a position on the data element. The orientation depends on the scale type (vertical, horizontal or radial). The position is calculated based on the `anchor` option and the orientation vector.
+
+Supported values for `anchor`:
+- `'center'` (default): element center
+- `'start'`: lowest element boundary
+- `'end'`: highest element boundary
+
+```
+chlps=anchor,start
+```
+
+[image charts  anchoring](https://i.imgur.com/hJpMkps.png)
+
+#### `rotation` - Rotation
+
+This option controls the clockwise rotation angle (in degrees) of the label, the rotation center point being the label center. The default value is `0` (no rotation).
+
+```
+chlps=rotation,4
+```
+
+#### `clamp` - Clamping
+
+The `clamp` option, when `true`(or `1`), enforces the anchor position to be calculated based on the *visible geometry* of the associated element (i.e. part inside the chart area).
+
+```
+chlps=clamp,true
+```
+
+[image charts clamp](https://i.imgur.com/JSma3IC.png)
+
+!!! tip
+    If the element is fully hidden (i.e. entirely outside the chart area), anchor points will **not** be adjusted and thus will also be outside the viewport.
+
+#### `clip` - Clipping
+
+When the `clip` option is `true` (or `1`), the part of the label which is outside the chart area will be masked.
+
+```
+chlps=clip,1
+```
+
+#### `display` - Visibility
+
+The `display` option controls the visibility of labels and accepts the following values:
+
+- `true` (default): the label is drawn
+- `false`: the label is hidden
+
+```
+chlps=display,false
+```
