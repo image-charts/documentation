@@ -249,7 +249,7 @@ The `offset` represents the distance (in pixels) to pull the label *away* from t
 chlps=offset,start
 ```
 
-[image charts alignement and offset](https://i.imgur.com/VTJ0ldn.png)
+![image charts alignement and offset](dr.com/VTJ0ldn.png)
 
 #### Anchoring
 
@@ -264,7 +264,7 @@ Supported values for `anchor`:
 chlps=anchor,start
 ```
 
-[image charts  anchoring](https://i.imgur.com/hJpMkps.png)
+![image charts  anchoring](dr.com/hJpMkps.png)
 
 #### Rotation
 
@@ -282,7 +282,7 @@ The `clamp` option, when `true`(or `1`), enforces the anchor position to be calc
 chlps=clamp,true
 ```
 
-[image charts clamp](https://i.imgur.com/JSma3IC.png)
+![image charts clamp](dr.com/JSma3IC.png)
 
 !!! tip
     If the element is fully hidden (i.e. entirely outside the chart area), anchor points will **not** be adjusted and thus will also be outside the viewport.
