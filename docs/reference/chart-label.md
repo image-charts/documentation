@@ -83,9 +83,10 @@ chlps=<option_name>,<option_value>|<option_name>,<option_value>|...
 ```
 
 
+
 ### Formatting
 
-#### `color`
+#### Text Color
 
 Define the text color of each label with the `color` option. The example below defines a pink label color:
 
@@ -93,7 +94,7 @@ Define the text color of each label with the `color` option. The example below d
 chlps=color,FF00FF
 ```
 
-#### `font.size`
+#### Font size
 
 Define the font size of each label with `font.size`. The example below defines a font size of 15px:
 
@@ -101,7 +102,7 @@ Define the font size of each label with `font.size`. The example below defines a
 chlps=font.size,15
 ```
 
-#### `opacity`
+#### Text Opacity
 
 Define the opacity (between 0 and 1) of each label with `opacity`. The example below defines an opacity of 50%:
 
@@ -109,7 +110,7 @@ Define the opacity (between 0 and 1) of each label with `opacity`. The example b
 chlps=opacity,0.5
 ```
 
-#### `padding.top`
+#### Top padding
 
 Define the padding of each label with `padding.top`:
 
@@ -117,7 +118,7 @@ Define the padding of each label with `padding.top`:
 chlps=padding.top,10
 ```
 
-#### `padding.right`
+#### Right padding
 
 Define the padding of each label with `padding.right`:
 
@@ -125,7 +126,7 @@ Define the padding of each label with `padding.right`:
 chlps=padding.right,10
 ```
 
-#### `padding.bottom`
+#### Bottom padding
 
 Define the padding of each label with `padding.bottom`:
 
@@ -133,7 +134,7 @@ Define the padding of each label with `padding.bottom`:
 chlps=padding.bottom,10
 ```
 
-#### `padding.left`
+#### Left padding
 
 Define the padding of each label with `padding.left`:
 
@@ -141,7 +142,7 @@ Define the padding of each label with `padding.left`:
 chlps=padding.left,10
 ```
 
-#### `textStrokeColor`
+#### Text Stroke Color
 
 Define the textStrokeColor of each label with `textStrokeColor`:
 
@@ -149,7 +150,7 @@ Define the textStrokeColor of each label with `textStrokeColor`:
 chlps=textStrokeColor,f7f7f7
 ```
 
-#### `textStrokeWidth`
+#### Text Stroke Width
 
 Define the textStrokeWidth of each label with `textStrokeWidth`:
 
@@ -157,7 +158,7 @@ Define the textStrokeWidth of each label with `textStrokeWidth`:
 chlps=textStrokeWidth,10
 ```
 
-#### `textShadowBlur`
+#### Text Shadow Blur
 
 Define the textShadowBlur of each label with `textShadowBlur`:
 
@@ -165,7 +166,7 @@ Define the textShadowBlur of each label with `textShadowBlur`:
 chlps=textShadowBlur,10
 ```
 
-#### `textShadowColor`
+#### Text Shadow Color
 
 Define the textShadowColor of each label with `textShadowColor`:
 
@@ -173,7 +174,7 @@ Define the textShadowColor of each label with `textShadowColor`:
 chlps=textShadowColor,cecece
 ```
 
-#### `backgroundColor`
+#### Background Color
 
 Define the background color of each label with `backgroundColor`
 
@@ -182,7 +183,7 @@ chlps=backgroundColor,00FF00
 ```
 
 
-#### `borderColor`
+#### Border color
 
 Define the border color of each label with `borderColor`. The example below defines a green border around the label:
 
@@ -190,7 +191,7 @@ Define the border color of each label with `borderColor`. The example below defi
 chlps=borderColor,00FF00
 ```
 
-#### `borderRadius`
+#### Border radius
 
 Define the border radius of each label with `borderRadius`. The example below defines a 5px border radius around the label:
 
@@ -198,7 +199,7 @@ Define the border radius of each label with `borderRadius`. The example below de
 chlps=borderRadius,5
 ```
 
-#### `borderWidth`
+#### Border width
 
 Define the border width of each label with `borderWidth`. The example below defines a 10px border width around the label:
 
@@ -206,7 +207,7 @@ Define the border width of each label with `borderWidth`. The example below defi
 chlps=borderWidth,10
 ```
 
-#### `textAlign`
+#### Text alignement
 
 The `textAlign` option only applies to multiline labels and specifies the text alignment being used when drawing the label text.
 
@@ -224,7 +225,7 @@ chlps=textAlign=center
 
 ### Positionning
 
-#### `align`
+#### Aglinement
 
 The `align` option defines the position of the label relative to the anchor point position and orientation. Its value can be expressed either by a number representing the clockwise angle (in degree) or by one of the following string presets:
 
@@ -240,7 +241,7 @@ The `align` option defines the position of the label relative to the anchor poin
 chlps=align,top
 ```
 
-#### `offset`
+#### Offset
 
 The `offset` represents the distance (in pixels) to pull the label *away* from the anchor point. This option is **not applicable** when `align` is `'center'`. Also note that if `align` is `'start'`, the label is moved in the opposite direction. The default value is `4`.
 
@@ -250,7 +251,7 @@ chlps=offset,start
 
 [image charts alignement and offset](https://i.imgur.com/VTJ0ldn.png)
 
-#### `anchor`
+#### Anchoring
 
 An `anchor` option is defined by an orientation vector and a position on the data element. The orientation depends on the scale type (vertical, horizontal or radial). The position is calculated based on the `anchor` option and the orientation vector.
 
@@ -265,7 +266,7 @@ chlps=anchor,start
 
 [image charts  anchoring](https://i.imgur.com/hJpMkps.png)
 
-#### `rotation`
+#### Rotation
 
 This option controls the clockwise rotation angle (in degrees) of the label, the rotation center point being the label center. The default value is `0` (no rotation).
 
@@ -273,7 +274,7 @@ This option controls the clockwise rotation angle (in degrees) of the label, the
 chlps=rotation,4
 ```
 
-#### `clamp`
+#### Clamping
 
 The `clamp` option, when `true`(or `1`), enforces the anchor position to be calculated based on the *visible geometry* of the associated element (i.e. part inside the chart area).
 
@@ -286,7 +287,7 @@ chlps=clamp,true
 !!! tip
     If the element is fully hidden (i.e. entirely outside the chart area), anchor points will **not** be adjusted and thus will also be outside the viewport.
 
-#### `clip`
+#### Clipping
 
 When the `clip` option is `true` (or `1`), the part of the label which is outside the chart area will be masked.
 
@@ -294,7 +295,7 @@ When the `clip` option is `true` (or `1`), the part of the label which is outsid
 chlps=clip,1
 ```
 
-#### `display`
+#### Visibility
 
 The `display` option controls the visibility of labels and accepts the following values:
 
