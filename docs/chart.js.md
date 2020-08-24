@@ -98,7 +98,8 @@ height=400
 
 #### Examples
 
-![chart](https://image-charts.com/chart.js/2.8.0?bkg=white&c=%7B"type"%3A"bar"%2C"data"%3A%7B"labels"%3A%5B"January"%2C"February"%2C"March"%2C"April"%2C"May"%2C"June"%2C"July"%5D%2C"datasets"%3A%5B%7B"backgroundColor"%3A"rgba(54%2C162%2C235%2C0.5)"%2C"borderColor"%3A"rgb(54%2C162%2C235)"%2C"borderWidth"%3A1%2C"data"%3A%5B73%2C41%2C29%2C61%2C-65%2C59%2C38%5D%7D%5D%7D%2C"options"%3A%7B"legend"%3A%7B"display"%3Afalse%7D%7D%7D&width=300&height=200)
+![chart](https://image-charts.com/chart.js/2.8.0?bkg=white&c=%7B%22type%22%3A%22bar%22%2C%22data%22%3A%7B%22labels%22%3A%5B%22January%22%2C%22February%22%2C%22March%22%2C%22April%22%2C%22May%22%2C%22June%22%2C%22July%22%5D%2C%22datasets%22%3A%5B%7B%22backgroundColor%22%3A%22rgba(54%2C162%2C235%2C0.5)%22%2C%22borderColor%22%3A%22rgb(54%2C162%2C235)%22%2C%22borderWidth%22%3A1%2C%22data%22%3A%5B73%2C41%2C29%2C61%2C-65%2C59%2C38%5D%7D%5D%7D%2C%22options%22%3A%7B%22legend%22%3A%7B%22display%22%3Afalse%7D%7D%7D&width=300&height=200)
+
 ```
 bkg=white
 c={"type":"bar","data":{"labels":["January","February","March","April","May","June","July"],"datasets":[{"backgroundColor":"rgba(54,162,235,0.5)","borderColor":"rgb(54,162,235)","borderWidth":1,"data":[73,41,29,61,-65,59,38]}]},"options":{"legend":{"display":false}}}
