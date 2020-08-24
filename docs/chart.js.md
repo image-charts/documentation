@@ -142,9 +142,10 @@ Here is the list of available chart.js plugins in ImageCharts:
 
 - datalabels: [Display labels on data for any type of charts](https://chartjs-plugin-datalabels.netlify.app/)
 
-### How to create/add the hash key to remove the watermark from Chart.js version?
+### Remove watermark
 
-Here is the process to remove watermark : [Enterprise version](/enterprise)
+!!! info "How to create/add the hash key to remove the watermark from Chart.js version?"
+    Here is the process to remove watermark : [Enterprise version](/enterprise)
 
 #### Syntax
 
