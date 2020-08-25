@@ -29,6 +29,7 @@ nav:
   - Bubble Charts: bubble-charts.md
   - GraphViz Charts: graph-viz-charts.md
   - QR Codes: qr-codes.md
+  - Chart.js: chart.js.md
   - Reference:
       - Chart Type: reference/chart-type.md
       - Chart Size: reference/chart-size.md
