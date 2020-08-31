@@ -61,3 +61,13 @@ Finally let's hide the vertical grid lines from previous example:
 ```
 chg=0,50,1,5
 ```
+
+Oh, and let's also change the axis colors. The y axis is the second displayed axis (so the 1 index) and we want the axis to have the `7FA5F4` color:
+
+[![chart](https://image-charts.com/chart?chco=76A4FB&chd=s%3AcEAELFJHHHKUju9uuXUcd&chg=0%2C50%2C1%2C5&chls=2.0%2C0.0%2C0.0&chs=700x200&cht=lc&chxr=0%2C0%2C20%2C1%7C1%2C0%2C100%2C20&chxs=1%2C33333%2C14%2C-1%2Cl%2CFFFFFF%2C000000&chxt=x%2Cy&icac=fgribreau&icretina=1&ichm=b1676d1f09c573d3623ea010dd923e672c36469964d0ccf860b70041d1a96410](https://editor.image-charts.com/chart?chco=76A4FB&chd=s%3AcEAELFJHHHKUju9uuXUcd&chg=0%2C50%2C1%2C5&chls=2.0%2C0.0%2C0.0&chs=700x200&cht=lc&chxr=0%2C0%2C20%2C1%7C1%2C0%2C100%2C20&chxs=1%2C33333%2C14%2C-1%2Cl%2CFFFFFF%2C000000&chxt=x%2Cy&icac=fgribreau&icretina=1&ichm=b1676d1f09c573d3623ea010dd923e672c36469964d0ccf860b70041d1a96410)
+
+```
+chg=0,50,1,5
+chxt=x,y
+chxs=1,33333,14,-1,l,FFFFFF,7FA5F4
+```
