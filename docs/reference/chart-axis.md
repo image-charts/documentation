@@ -336,7 +336,7 @@ chxs=
     - `<following_text>` - Literal text to follow each value.
 - **`<opt_label_color>`** *[Optional]* The color to apply to the axis text (but not axis line), in RRGGBB hexadecimal format. Axis line color is specified separately using opt_axis_color. *Default is black*.
 - **`<opt_font_size>`** *[Optional]* specifies the font size in pixels. This parameter is optional.
-- **`<opt_alignment>`** *[Optional]* (not supported, please contact our support) Label alignment. <!--For top or bottom axes, this describes how the label aligns to the tick mark above or below it; for left or right axes, this describes how the aligns inside its bounding box, which touches the axis. Specify one of the following numbers:
+- **`<opt_alignment>`** (not supported, please contact our support) Label alignment. Use `-1`. <!--For top or bottom axes, this describes how the label aligns to the tick mark above or below it; for left or right axes, this describes how the aligns inside its bounding box, which touches the axis. Specify one of the following numbers:
 -1 - Top or bottom: labels are to the right of the ticks; Left or right: labels are left-aligned in their area. Default for r-axis labels.
 0 - Top or bottom: labels are centered on the ticks; Left or right: labels are centered in their area. Default for x- and t-axis labels.
 1 - Top or bottom: labels are to the left of the ticks; Left or right: labels are right-aligned in their area. Default for y-axis labels.-->
