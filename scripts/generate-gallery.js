@@ -37,6 +37,15 @@ const global_style = `
     max-width: 100% !important;
   }
 
+  @media (max-width: 425px) {
+    .gallery-items{
+      flex-basis: 100%;
+      margin-right: 0px;
+    }
+    .gallery-items__img{
+      max-height: inherit;
+    }
+  }
 </style>`;
 
 function fixedEncodeURIComponent(str) {
