@@ -48,6 +48,7 @@ nav:
       - Output Format: reference/output-format.md
       - POST requests: reference/post-requests.md
       - Retina support: reference/retina.md
+      - Iclocale support: reference/iclocale.md
   - Guides:
       - How to setup a dependency graph in Google Sheets: guides/graph-in-google-sheets.md
       - How to send charts to a Slack channel: guides/send-charts-to-slack.md
