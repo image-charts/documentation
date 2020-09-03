@@ -65,9 +65,11 @@ const html = Object.keys(chartByCategory)
       chartByCategory[category_name]
         .map((chart) => {
           const {protocol, hostname, pathname, search} = Url.parse(chart.url);
-          const query = querystring.stringify(querystring.parse(decodeURIComponent(search.substring(1))), '&', '=',{encodeURIComponent: (v) => fixedEncodeURIComponent(v)});
+          if (search.includes("ichm")) {
+          const query = querystring.stringify(querystring.parse(decodeURIComponent(search.substring(1))),"&","=",{ encodeURIComponent: (v) => fixedEncodeURIComponent(v) });
           const url = `${protocol}//${hostname}${pathname}?${query}`;
-          return `<a class="gallery-items" href="${url}"><img class="gallery-items__img"  src="${url}"><p class="gallery-label">${chart.title}</p></a>`;
+          return `<a class="gallery-items" href="${chart.url}"><img class="gallery-items__img" src="${chart.url}"><p class="gallery-label">${chart.title}</p></a>`;
+          }
         })
         .join("\n") +
       `</div>`
