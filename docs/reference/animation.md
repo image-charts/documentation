@@ -31,7 +31,7 @@ The other way is to specify `duration` and `easing`:
 
 Let's start with a simple chart that we animate just by adding `chan` to the URL:
 
-[![chart](https://image-charts.com/chart?chan&chco=4ECDC4&chd=s%3AMonkeys&chs=700x200&cht=bvg&chxt=x%2Cy&icac=fgribreau&icretina=1&ichm=96c51e8a1cf970f0470c14612be4817347e4d173f532fd9164f87510ca89a291)](https://editor.image-charts.com/chart?chan&chco=4ECDC4&chd=s%3AMonkeys&chs=700x200&cht=bvg&chxt=x%2Cy&icac=fgribreau&icretina=1&ichm=96c51e8a1cf970f0470c14612be4817347e4d173f532fd9164f87510ca89a291)
+[![chart](https://image-charts.com/chart?chan&chco=4ECDC4&chd=s%3AMonkeys&chs=700x200&cht=bvg&chxt=x%2Cy&icac=documentation&ichm=cd9837d3c8e924d435bac9c957de2ea26e74818d5cae9b6c856d2358d16e69b7)](https://editor.image-charts.com/chart?chan&chco=4ECDC4&chd=s%3AMonkeys&chs=700x200&cht=bvg&chxt=x%2Cy&icac=documentation&ichm=cd9837d3c8e924d435bac9c957de2ea26e74818d5cae9b6c856d2358d16e69b7)
 
 ```
 /chart?cht=bvg&...&chan
@@ -39,7 +39,7 @@ Let's start with a simple chart that we animate just by adding `chan` to the URL
 
 The animation seems a little too slow, so let's specify a duration to 1,2 second (`1200`ms):
 
-[![chart](https://image-charts.com/chart?chan=1200&chco=556270&chd=s%3AMonkeys&chs=700x200&cht=bvg&chxt=x%2Cy&icac=fgribreau&icretina=1&ichm=a8b723eebe0776dee64dd7928aa4c66b14f9cb328131d4e9ad87ab483abe4aef)](https://editor.image-charts.com/chart?chan=1200&chco=556270&chd=s%3AMonkeys&chs=700x200&cht=bvg&chxt=x%2Cy&icac=fgribreau&icretina=1&ichm=a8b723eebe0776dee64dd7928aa4c66b14f9cb328131d4e9ad87ab483abe4aef)
+[![chart](https://image-charts.com/chart?chan=1200&chco=556270&chd=s%3AMonkeys&chs=700x200&cht=bvg&chxt=x%2Cy&icac=documentation&icretina=1&ichm=348b3014785554ef5dcff7db4d7794986ceced1a488c750af5762d0e5551ef2a)](https://editor.image-charts.com/chart?chan=1200&chco=556270&chd=s%3AMonkeys&chs=700x200&cht=bvg&chxt=x%2Cy&icac=documentation&icretina=1&ichm=348b3014785554ef5dcff7db4d7794986ceced1a488c750af5762d0e5551ef2a)
 
 ```
 /chart?cht=bvg&...&chan=1200
@@ -47,7 +47,7 @@ The animation seems a little too slow, so let's specify a duration to 1,2 second
 
 That's better, now let's change the easing to `easeOutBack`:
 
-[![chart](https://image-charts.com/chart?chan=1200%2CeaseOutBack&chco=C44D58&chd=s%3AMonkeys&chs=700x200&cht=bvg&chxt=x%2Cy&icac=fgribreau&icretina=1&ichm=3eb93f3b36aecd4c86a7543ed7bb982fbf62d5323eb99b81c881023c3842f08f)](https://editor.image-charts.com/chart?chan=1200%2CeaseOutBack&chco=C44D58&chd=s%3AMonkeys&chs=700x200&cht=bvg&chxt=x%2Cy&icac=fgribreau&icretina=1&ichm=3eb93f3b36aecd4c86a7543ed7bb982fbf62d5323eb99b81c881023c3842f08f)
+[![chart](https://image-charts.com/chart?chan=1200%2CeaseOutBack&chco=C44D58&chd=s%3AMonkeys&chs=700x200&cht=bvg&chxt=x%2Cy&icac=documentation&icretina=1&ichm=8bff0f6f95054317410ddb7691729e8ad52ee368cd37234c2a93a17b67e94aba)](https://editor.image-charts.com/chart?chan=1200%2CeaseOutBack&chco=C44D58&chd=s%3AMonkeys&chs=700x200&cht=bvg&chxt=x%2Cy&icac=documentation&icretina=1&ichm=8bff0f6f95054317410ddb7691729e8ad52ee368cd37234c2a93a17b67e94aba)
 
 ```
 /chart?cht=bvg&...&chan=1200,easeOutBack

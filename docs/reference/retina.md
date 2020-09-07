@@ -20,7 +20,7 @@ icretina=<retina_activation>
 Here is a graph of 700 pixels x 200 pixels without retina
 
 
-![chart](https://image-charts.com/chart?ichm=1cb6c47a7083c89618fe7b073cf5ce8a2c73665b72db2119b9dac434baeed8eb&cht=bvs&chd=s%3Atheresadifferencebetweenknowingthepathandwalkingthepath&chs=700x200&chxt=y&chf=b0%2Clg%2C90%2C03a9f4%2C0%2C3f51b5%2C1&icretina=0&icac=fgribreau)
+![chart](https://image-charts.com/chart?chd=s%3Atheresadifferencebetweenknowingthepathandwalkingthepath&chf=b0%2Clg%2C90%2C03a9f4%2C0%2C3f51b5%2C1&chs=700x200&cht=bvs&icac=documentation&icretina=0&ichm=34d089caad211c330bd64d5a2788f88f580f11534e014962bba30297bee668f2)
 
 ```
 icretina=0
@@ -28,7 +28,7 @@ icretina=0
 
 Here is a graph of 700 pixels x 200 pixels with retina, image output size as doubled and no pixel will be seen on retina displays.
 
-![chart](https://image-charts.com/chart?ichm=eee5082545d27af84c7a3f2af95445080b1b1cc3b3d75a141af1d0c18a1fff27&cht=bvs&chd=s%3Atheresadifferencebetweenknowingthepathandwalkingthepath&chs=700x200&chxt=y&chf=b0%2Clg%2C90%2C03a9f4%2C0%2C3f51b5%2C1&icretina=1&icac=fgribreau)
+![chart](https://image-charts.com/chart?chd=s%3Atheresadifferencebetweenknowingthepathandwalkingthepath&chf=b0%2Clg%2C90%2C03a9f4%2C0%2C3f51b5%2C1&chs=700x200&cht=bvs&icac=documentation&icretina=1&ichm=ae142c920ce8b36c3ac13841160536cbe1f5de1e1cf1869975cbe556d3b2439c)
 
 ```
 icretina=1
@@ -49,7 +49,7 @@ The ideal solution is to send the high-resolution image chart version to devices
 Considering that Image-Charts does not requires us to store our own image for our own good (it leverages word-wide CDNs), let's change this example to a more production-ready one:
 
 ```
-<img src="https://image-charts.com/chart?ichm=68c82618eccc2f0a861473ef93e978beb0b018a3ce2c2b4b609aec1b2726090c&chs=700x300&chxt=x,y&chl=2018|2017|2015&chd=t:60,40,20&cht=pa&chdl=Image|Charts|Rocks&chf=ps0-0,lg,45,ffeb3b,0.2,f443367C,1|ps0-1,lg,45,8bc34a,0.2,0096887C,1|ps0-2,lg,45,EA469E,0.2,03A9F47C,1&chan=&icac=fgribreau" srcset="https://image-charts.com/chart?ichm=68c82618eccc2f0a861473ef93e978beb0b018a3ce2c2b4b609aec1b2726090c&chs=700x300&chxt=x,y&chl=2018|2017|2015&chd=t:60,40,20&cht=pa&chdl=Image|Charts|Rocks&chf=ps0-0,lg,45,ffeb3b,0.2,f443367C,1|ps0-1,lg,45,8bc34a,0.2,0096887C,1|ps0-2,lg,45,EA469E,0.2,03A9F47C,1&chan=&icac=fgribreau 1x, https://image-charts.com/chart?ichm=f3df2861ceb282159805fccea15767e82bf1e4f23b88b3da4b6d3ad3fc6f6ee9&chs=700x300&chxt=x,y&chl=2018|2017|2015&chd=t:60,40,20&cht=pa&chdl=Image|Charts|Rocks&chf=ps0-0,lg,45,ffeb3b,0.2,f443367C,1|ps0-1,lg,45,8bc34a,0.2,0096887C,1|ps0-2,lg,45,EA469E,0.2,03A9F47C,1&chan=&icretina=1&icac=fgribreau 2x" alt="My awesome chart">
+<img src="https://image-charts.com/chart?chan=&chd=t%3A60%2C40%2C20&chdl=Image%7CCharts%7CRocks&chf=ps0-0%2Clg%2C45%2Cffeb3b%2C0.2%2Cf443367C%2C1%7Cps0-1%2Clg%2C45%2C8bc34a%2C0.2%2C0096887C%2C1%7Cps0-2%2Clg%2C45%2CEA469E%2C0.2%2C03A9F47C%2C1&chl=2018%7C2017%7C2015&chs=700x300&cht=pa&chxt=x%2Cy&icac=documentation&ichm=d11aa35a3de75d815c293f31e2baa20e722928d42c4e477144780b94141aa8ea" srcset="https://image-charts.com/chart?chan=&chd=t%3A60%2C40%2C20&chdl=Image%7CCharts%7CRocks&chf=ps0-0%2Clg%2C45%2Cffeb3b%2C0.2%2Cf443367C%2C1%7Cps0-1%2Clg%2C45%2C8bc34a%2C0.2%2C0096887C%2C1%7Cps0-2%2Clg%2C45%2CEA469E%2C0.2%2C03A9F47C%2C1&chl=2018%7C2017%7C2015&chs=700x300&cht=pa&chxt=x%2Cy&icac=documentation&ichm=d11aa35a3de75d815c293f31e2baa20e722928d42c4e477144780b94141aa8ea 1x, https://image-charts.com/chart?chan=&chd=t%3A60%2C40%2C20&chdl=Image%7CCharts%7CRocks&chf=ps0-0%2Clg%2C45%2Cffeb3b%2C0.2%2Cf443367C%2C1%7Cps0-1%2Clg%2C45%2C8bc34a%2C0.2%2C0096887C%2C1%7Cps0-2%2Clg%2C45%2CEA469E%2C0.2%2C03A9F47C%2C1&chl=2018%7C2017%7C2015&chs=700x300&cht=pa&chxt=x%2Cy&icac=documentation&icretina=1&ichm=7e98a359afb92c0bb1bd303719d0f859aac9e2390f70188938fa6f1bad3df496 2x" alt="My awesome chart">
 ```
 
 :+1:

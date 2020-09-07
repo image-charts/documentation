@@ -30,7 +30,7 @@ A radar chart can support multiple series. Each series is a line in the chart.
 
 A radar chart where the first and last point of each series is the same:
 
-[![chart](https://image-charts.com/chart?chco=3092de,027182&chd=t:81,65,50,67,59,81|77,67,10,79,65,77&chdl=First|Second&chdlp=b&chs=480x480&cht=r&chxt=r&icac=fgribreau&icretina=1&ichm=76ec934cfb58c396f5ef4b4b73acd65555ee1b46ea063e54d3f9c7a910cbde46)](https://editor.image-charts.com/chart?chco=3092de,027182&chd=t:81,65,50,67,59,81|77,67,10,79,65,77&chdl=First|Second&chdlp=b&chs=480x480&cht=r&chxt=r&icac=fgribreau&icretina=1&ichm=76ec934cfb58c396f5ef4b4b73acd65555ee1b46ea063e54d3f9c7a910cbde46)
+[![chart](https://image-charts.com/chart?chco=3092de%2C027182&chd=t%3A81%2C65%2C50%2C67%2C59%2C81%7C77%2C67%2C10%2C79%2C65%2C77&chdl=First%7CSecond&chdlp=b&chs=480x480&cht=r&chxt=r&icac=documentation&icretina=1&ichm=7e0df9d21d4ca0c873bf2e843789a6f6128c6378143235ebcfc179ed8cc592cc)](https://editor.image-charts.com/chart?chco=3092de%2C027182&chd=t%3A81%2C65%2C50%2C67%2C59%2C81%7C77%2C67%2C10%2C79%2C65%2C77&chdl=First%7CSecond&chdlp=b&chs=480x480&cht=r&chxt=r&icac=documentation&icretina=1&ichm=7e0df9d21d4ca0c873bf2e843789a6f6128c6378143235ebcfc179ed8cc592cc)
 
 ```
 cht=r
@@ -40,7 +40,7 @@ chd=t:81,65,50,67,59,81|77,67,10,79,65,77
 
 A radar chart where the first and last point of each series is **not** the same:
 
-[![chart](https://image-charts.com/chart?chco=3092de,027182&chd=t:81,65,50,67,59|77,67,10,79,65&chdl=First|Second&chdlp=b&chs=480x480&cht=r&chxt=r&icac=fgribreau&icretina=1&ichm=86d782a35ab56b5cc3ee35e56646283d0368a926f837576133a4a66611650995)](https://editor.image-charts.com/chart?chco=3092de,027182&chd=t:81,65,50,67,59|77,67,10,79,65&chdl=First|Second&chdlp=b&chs=480x480&cht=r&chxt=r&icac=fgribreau&icretina=1&ichm=86d782a35ab56b5cc3ee35e56646283d0368a926f837576133a4a66611650995)
+[![chart](https://image-charts.com/chart?chco=3092de%2C027182&chd=t%3A81%2C65%2C50%2C67%2C59%7C77%2C67%2C10%2C79%2C65&chdl=First%7CSecond&chdlp=b&chs=480x480&cht=r&chxt=r&icac=documentation&icretina=1&ichm=c2bf1f35313eeb9b7d3fc2c5e8c123fda711e1de6bf33596a5516899cd3fddd5)](https://editor.image-charts.com/chart?chco=3092de%2C027182&chd=t%3A81%2C65%2C50%2C67%2C59%7C77%2C67%2C10%2C79%2C65&chdl=First%7CSecond&chdlp=b&chs=480x480&cht=r&chxt=r&icac=documentation&icretina=1&ichm=c2bf1f35313eeb9b7d3fc2c5e8c123fda711e1de6bf33596a5516899cd3fddd5)
 
 ```
 cht=r
