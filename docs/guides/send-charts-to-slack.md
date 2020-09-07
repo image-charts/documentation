@@ -15,7 +15,7 @@ However [Slack block kit API](https://api.slack.com/block-kit) allow an app to s
 			"text": "Chart RUL",
 			"emoji": true
 		},
-		"image_url": "https://image-charts.com/chart?chd=s%3Atheresadifferencebetweenknowingthepathandwalkingthepath&chf=b0%2Clg%2C90%2C03a9f4%2C0%2C3f51b5%2C1&chs=700x200&cht=bvs&chxt=y&icac=documentation&icretina=1&ichm=389f5511f3727fcd1fc4c72e60ca2f4f2ec21fd155e532349a2c5325ec311072",
+		"image_url": "https://image-charts.com/chart?ichm=8ddb1ec5ebcb42389a527872f2f1094e49c6b7785010ad644f5f73fdbb92d9ef&cht=bvs&icac=documentation&chd=s:theresadifferencebetweenknowingthepathandwalkingthepath&chf=b0,lg,90,03a9f4,0,3f51b5,1&chs=700x200&chxt=y&icretina=1&chof=.png",
 		"alt_text": "chart url"
 	}
 ]
