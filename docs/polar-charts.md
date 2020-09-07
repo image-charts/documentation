@@ -149,7 +149,7 @@ chco=EA469E|03A9F4|FFC00C
 - orange|yellow|green - One color defined for each slice.
 - blue|pink - Alternating blue and yellow slices.
 
-[![](https://image-charts.com/chart?chco=FF80087C|FFBF0C7C|11B11B7C,03A9F47C|EA469E7C&chd=s:eYY,ORVM&chdl=1|2|3|4|5|6|7&chs=700x200&cht=pa&icac=fgribreau&icretina=1&ichm=c6fb0915980511a99ffeba917936f093f49ac083459d5a75736f988a36468840)](https://editor.image-charts.com/chart?chco=FF80087C|FFBF0C7C|11B11B7C,03A9F47C|EA469E7C&chd=s:eYY,ORVM&chdl=1|2|3|4|5|6|7&chs=700x200&cht=pa&icac=fgribreau&icretina=1&ichm=c6fb0915980511a99ffeba917936f093f49ac083459d5a75736f988a36468840)
+[![](https://image-charts.com/https://image-charts.com/chart?chco=FF80087C%7CFFBF0C7C%7C11B11B7C%2C03A9F47C%7CEA469E7C&chd=s%3AeYY%2CORVM&chdl=1%7C2%7C3%7C4%7C5%7C6%7C7&chs=700x200&cht=pa&icac=documentation&icretina=1&ichm=55bdd654be23e776658ee4e5a93029df4bd3d7ff9668dcc138e9cbc3582235c4)](https://editor.image-charts.com/chart?chco=FF80087C%7CFFBF0C7C%7C11B11B7C%2C03A9F47C%7CEA469E7C&chd=s%3AeYY%2CORVM&chdl=1%7C2%7C3%7C4%7C5%7C6%7C7&chs=700x200&cht=pa&icac=documentation&icretina=1&ichm=55bdd654be23e776658ee4e5a93029df4bd3d7ff9668dcc138e9cbc3582235c4)
 
 ```
 chd=s:eYY,ORVM

@@ -95,7 +95,7 @@ chl=10K€|40K€|45K€
 
 <!-- Note that for all types, negative numbers in data cause "blank" slices.
 
-[![chart](https://image-charts.com/chart?chd=t%3A10%2C-10%2C10%2C-10%7C5%2C-5%2C5%2C-5%2C5%2C-5%2C5%2C-5%2C5%2C-5&chs=700x200&cht=pc&icac=fgribreau&icretina=1&ichm=b4cc9c860d948de02400328ca06f32189e463a42fb3bcc3c6009293f232443f5)](https://editor.image-charts.com/chart?chd=t%3A10%2C-10%2C10%2C-10%7C5%2C-5%2C5%2C-5%2C5%2C-5%2C5%2C-5%2C5%2C-5&chs=700x200&cht=pc&icac=fgribreau&icretina=1&ichm=b4cc9c860d948de02400328ca06f32189e463a42fb3bcc3c6009293f232443f5)
+[![chart](https://image-charts.com/chart?chd=t%3A10%2C-10%2C10%2C-10%7C5%2C-5%2C5%2C-5%2C5%2C-5%2C5%2C-5%2C5%2C-5&chs=700x200&cht=pc&icac=documentation&icretina=1&ichm=23981c65558c975c4c477d174320f52e44e82da70661b32807a8c1d101161a2c)](https://editor.image-charts.com/chart?chd=t%3A10%2C-10%2C10%2C-10%7C5%2C-5%2C5%2C-5%2C5%2C-5%2C5%2C-5%2C5%2C-5&chs=700x200&cht=pc&icac=documentation&icretina=1&ichm=23981c65558c975c4c477d174320f52e44e82da70661b32807a8c1d101161a2c)
 
 ```
 cht=pc

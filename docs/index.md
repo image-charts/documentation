@@ -35,7 +35,7 @@ All URLs start with `https://image-charts.com/chart?` followed by the parameters
 
 Let's examine the URL above in more detail:
 
-[![chart](https://image-charts.com/chart?chan&chd=t%3A60%2C40&chf=ps0-0%2Clg%2C45%2Cffeb3b%2C0.2%2Cf44336%2C1%7Cps0-1%2Clg%2C45%2C8bc34a%2C0.2%2C009688%2C1&chl=Hello%7CWorld&chs=700x190&cht=p3&icac=fgribreau&icretina=1&ichm=becf6bdc82661dc9b08412c1ca556ad3b1515f920a7074f7521bf5906d07e27e)](https://editor.image-charts.com/chart?chan&chd=t%3A60%2C40&chf=ps0-0%2Clg%2C45%2Cffeb3b%2C0.2%2Cf44336%2C1%7Cps0-1%2Clg%2C45%2C8bc34a%2C0.2%2C009688%2C1&chl=Hello%7CWorld&chs=700x190&cht=p3&icac=fgribreau&icretina=1&ichm=becf6bdc82661dc9b08412c1ca556ad3b1515f920a7074f7521bf5906d07e27e)
+[![chart](https://image-charts.com/chart?chan&chd=t%3A60%2C40&chf=ps0-0%2Clg%2C45%2Cffeb3b%2C0.2%2Cf44336%2C1%7Cps0-1%2Clg%2C45%2C8bc34a%2C0.2%2C009688%2C1&chl=Hello%7CWorld&chs=700x190&cht=p3&icac=documentation&icretina=1&ichm=abebee2af2cf02e577c59bb8516fdabd6ad5e9ec95303e01c3f54f76895225c2)](https://editor.image-charts.com/chart?chan&chd=t%3A60%2C40&chf=ps0-0%2Clg%2C45%2Cffeb3b%2C0.2%2Cf44336%2C1%7Cps0-1%2Clg%2C45%2C8bc34a%2C0.2%2C009688%2C1&chl=Hello%7CWorld&chs=700x190&cht=p3&icac=documentation&icretina=1&ichm=abebee2af2cf02e577c59bb8516fdabd6ad5e9ec95303e01c3f54f76895225c2)
 
 ```
 https://image-charts.com/chart

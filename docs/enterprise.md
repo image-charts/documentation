@@ -29,8 +29,8 @@ As an example here is a graph signed, without watermark:
 
 
 ```
-&icac=fgribreau
-&ichm=0785cf22a0381c2e0239e27c126de4181f501d117c2c81745611e9db928b0376
+&icac=documentation
+&ichm=d824323e74a1caeebd47d994152639728997b9c572774b79f8ebf20f8b31a405
 ```
 
 Signing your URLs will ensure that no-one beside you created it and Image-Charts will verify the generated hash to be sure you your account created it. Here are some examples in various languages:

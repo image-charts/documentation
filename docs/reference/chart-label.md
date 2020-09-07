@@ -18,7 +18,7 @@ chl=
 
 Let specify labels for a simple animated pie chart.
 
-[![chart](https://image-charts.com/chart?chan&chd=t%3A20%2C20%2C30%2C40%2C50&chf=b0%2Clg%2C0%2C8222ff%2C0%2Ceabfff%2C1&chl=20%C2%B0%7C20%C2%B0%7C30%C2%B0%7C40%C2%B0%7C50%C2%B0&chs=700x200&cht=p3&icac=documentation&icretina=1&ichm=097f8af92f9bd0835d92af69c6e95e39d80e02c23f93b0b828acf2e48236871f)](https://editor.image-charts.com/chart?chan&chd=t%3A20%2C20%2C30%2C40%2C50&chf=b0%2Clg%2C0%2C8222ff%2C0%2Ceabfff%2C1&chl=20%C2%B0%7C20%C2%B0%7C30%C2%B0%7C40%C2%B0%7C50%C2%B0&chs=700x200&cht=p3&icac=fgribreau&icretina=1&ichm=0950432c7209bf892580f8ae81cf38689a4982bcd6c331b10226346ab1ad17fe)
+[![chart](https://image-charts.com/chart?chan&chd=t%3A20%2C20%2C30%2C40%2C50&chf=b0%2Clg%2C0%2C8222ff%2C0%2Ceabfff%2C1&chl=20%C2%B0%7C20%C2%B0%7C30%C2%B0%7C40%C2%B0%7C50%C2%B0&chs=700x200&cht=p3&icac=documentation&icretina=1&ichm=097f8af92f9bd0835d92af69c6e95e39d80e02c23f93b0b828acf2e48236871f)](https://editor.image-charts.com/chart?chan&chd=t%3A20%2C20%2C30%2C40%2C50&chf=b0%2Clg%2C0%2C8222ff%2C0%2Ceabfff%2C1&chl=20%C2%B0%7C20%C2%B0%7C30%C2%B0%7C40%C2%B0%7C50%C2%B0&chs=700x200&cht=p3&icac=documentation&icretina=1&ichm=097f8af92f9bd0835d92af69c6e95e39d80e02c23f93b0b828acf2e48236871f)
 
 ```
 cht=p3
