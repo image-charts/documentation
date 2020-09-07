@@ -2,6 +2,19 @@ const charts = require("./gallery.json");
 const _ = require("lodash");
 const Url = require('url');
 const querystring = require('querystring');
+// HMAC Helper
+const crypto = require('crypto');
+const qs = require('querystring');
+
+function sign(secretKey, query) {
+  return crypto
+    .createHmac('sha256', secretKey)
+    .update(query)
+    .digest('hex');
+}
+
+const ACCOUNT_ID = 'fgribreau';
+const SECRET_KEY = '19A84D4F-FD27-4701-88EC-68BDB8A6E14A';
 
 
 const global_style = `
@@ -65,11 +78,28 @@ const html = Object.keys(chartByCategory)
       chartByCategory[category_name]
         .map((chart) => {
           const {protocol, hostname, pathname, search} = Url.parse(chart.url);
-          if (search.includes("ichm")) {
-          const query = querystring.stringify(querystring.parse(decodeURIComponent(search.substring(1))),"&","=",{ encodeURIComponent: (v) => fixedEncodeURIComponent(v) });
-          const url = `${protocol}//${hostname}${pathname}?${query}`;
-          return `<a class="gallery-items" href="${chart.url}"><img class="gallery-items__img" src="${chart.url}"><p class="gallery-label">${chart.title}</p></a>`;
+          const parameters = querystring.parse(decodeURIComponent(search.substring(1)));
+          delete parameters["ichm"];
+          delete parameters["icac"];
+          if (pathname === "/chart") {
+            parameters.icac = ACCOUNT_ID;
+            const rawQuerystring = qs.stringify(parameters, null, null);
+            const signature = sign(SECRET_KEY, rawQuerystring);
+            var publicUrl = `https://image-charts.com/chart?${rawQuerystring}&ichm=${signature}`;
           }
+          if (pathname === "/chart.js/2.8.0") {
+            const queryBase64 = Buffer.from(parameters.c).toString("base64");
+            const queryObject = {
+              bkg: "white",
+              icac: ACCOUNT_ID,
+              c: queryBase64,
+              encoding: "base64",
+            };
+            const rawQuerystring = qs.stringify(queryObject, null, null);
+            const signature = sign(SECRET_KEY, rawQuerystring);
+            var publicUrl = `https://image-charts.com/chart.js/2.8.0?${rawQuerystring}&ichm=${signature}`;
+          }
+        return `<a class="gallery-items" href="${publicUrl}"><img class="gallery-items__img" src="${publicUrl}"><p class="gallery-label">${chart.title}</p></a>`;
         })
         .join("\n") +
       `</div>`
