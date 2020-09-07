@@ -1,11 +1,9 @@
-!!! info "Enterprise+ subscription only"
-    iclocale support is only enabled in **Enterprise+** subscriptions
+!!! info "Enterprise subscription only"
+    Iclocale support is only enabled in **Enterprise** subscriptions
 
-#### iclocale
+#### Iclocale
 
-iclocale is an option that refers to location. The purpose of this option is to define a location for the graphic.
-
-In order to choose the location, Image-Charts sets up iclocale. To activate it just add the parameter `iclocale=fr/en/de/...`.
+Some charts might be rendered for customers over various location with different currency and localization requirements. `iclocale` is a query parameter to specify in what localization the chart should be rendered
 
 #### Syntax
 
@@ -13,7 +11,8 @@ In order to choose the location, Image-Charts sets up iclocale. To activate it j
 iclocale=<iclocale_activation>
 ```
 
-- **`<iclocale_activation>`** set to `fr`, `de`, `en`... to activate iclocale mode and locate the chart.
+- **`<iclocale_activation>`** Currently supported values are: `fr`, `de`, `en`. <br> Need another locale ? [Contact us](mailto:support@image-charts.com)
+
 
 #### Example
 
