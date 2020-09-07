@@ -77,7 +77,7 @@ chm=s,E4061C,0,-1,15.0|B,FCECF4,0,0,0
 You can combine several chart types with line markers <!--or candlestick--> to highlight data trends or show variance. When you add line <!--or candlestick--> markers onto bar, scatter, or other chart types, the resulting chart is called a **compound chart**. Some compound charts look like a combination of two chart types—for instance, a bar chart with a tracking line:
 
 
-[![chart](https://image-charts.com/chart?chbh=5%2C2&chco=4D89F9%2CC6D9FD&chd=s2%3A1XQbnf4%2CEWoQMUB%2C9halxp9&chm=D%2C0033FF%2C2%2C0%2C5%2C1&chs=700x200&cht=bvs&icac=fgribreau&icretina=1&ichm=c60d6466fb050326a113df26d6b472e1da749ee5cae6e6f8999dd8cbd22605a0)](https://editor.image-charts.com/chart?chbh=5%2C2&chco=4D89F9%2CC6D9FD&chd=s2%3A1XQbnf4%2CEWoQMUB%2C9halxp9&chm=D%2C0033FF%2C2%2C0%2C5%2C1&chs=700x200&cht=bvs&icac=fgribreau&icretina=1&ichm=c60d6466fb050326a113df26d6b472e1da749ee5cae6e6f8999dd8cbd22605a0)
+[![chart](https://image-charts.com/chart?chbh=5%2C2&chco=4D89F9%2CC6D9FD&chd=s2%3A1XQbnf4%2CEWoQMUB%2C9halxp9&chm=D%2C0033FF%2C2%2C0%2C5%2C1&chs=700x200&cht=bvs&icac=documentation&icretina=1&ichm=7ff6491f8d1f793aa20714709d714989e9fdd344497e2775270b96e1985f7b5f)](https://editor.image-charts.com/chart?chbh=5%2C2&chco=4D89F9%2CC6D9FD&chd=s2%3A1XQbnf4%2CEWoQMUB%2C9halxp9&chm=D%2C0033FF%2C2%2C0%2C5%2C1&chs=700x200&cht=bvs&icac=documentation&icretina=1&ichm=7ff6491f8d1f793aa20714709d714989e9fdd344497e2775270b96e1985f7b5f)
 
 ```
 chd=s2:1XQbnf4,EWoQMUB,9halxp9
@@ -92,7 +92,7 @@ All compound charts consist of one or more base chart types (line, scatter, bar,
 2. **Hide your extra marker data from the base chart**. If you simply add an extra data series to a bar chart for your tracking line, the chart would show that as a new series of bars. To prevent this, you must hide this extra series. To hide a series, include a single digit after the `chd` format descriptor: for example, `chd=t1:30,10,20|60,40,50`. This `1` digit from `t1` tells the Chart API how many data series to use to draw elements for that base chart type as defined by the cht parameter (bars for bar charts, data points for line charts, and so on). Any additional data series will be ignored by that chart type when drawing the chart. `Note that this is a 1-based number, not 0-based`. So `t1` means "use only the first data series for bars," `t2` means "use only the first two series for bars," etc.
 3. **Use the hidden data series to draw <!--candlestick markers,--> line markers, or other markers**. How to draw markers is covered in the section below. Reference the hidden data series as the source for your markers. You can include as many additional hidden data series as you like, and use them for additional chart markers.
 
-[![static chart](https://image-charts.com/chart?chco=224499&chd=t1%3A30%2C10%2C20%7C60%2C40%2C50&chm=D%2C009900%2C1%2C0%2C5%2C1&chs=700x200&cht=bvg&chxt=y&icac=fgribreau&icretina=1&ichm=ed9f636fffe892f6ca0ddd62ed5e1f24071e1b09f7cc4fb7b8927f82ac331394)](https://editor.image-charts.com/chart?chco=224499&chd=t1%3A30%2C10%2C20%7C60%2C40%2C50&chm=D%2C009900%2C1%2C0%2C5%2C1&chs=700x200&cht=bvg&chxt=y&icac=fgribreau&icretina=1&ichm=ed9f636fffe892f6ca0ddd62ed5e1f24071e1b09f7cc4fb7b8927f82ac331394)
+[![static chart](https://image-charts.com/chart?chco=224499&chd=t1%3A30%2C10%2C20%7C60%2C40%2C50&chm=D%2C009900%2C1%2C0%2C5%2C1&chs=700x200&cht=bvg&chxt=y&icac=documentation&icretina=1&ichm=8e137fdfde48996d03aa32b72a608d083372b083faf9ba5269ab633bbab1720f)](https://editor.image-charts.com/chart?chco=224499&chd=t1%3A30%2C10%2C20%7C60%2C40%2C50&chm=D%2C009900%2C1%2C0%2C5%2C1&chs=700x200&cht=bvg&chxt=y&icac=documentation&icretina=1&ichm=8e137fdfde48996d03aa32b72a608d083372b083faf9ba5269ab633bbab1720f)
 
 ```
 cht=bvg
@@ -123,7 +123,7 @@ To add multiple lines (or combine this with any other `chm` markers), separate t
 This is an example of drawing a marker line on a bar chart. The z-order is set to 1, so the line is drawn on top of the bars.
 This example uses the same data for both the bars and the data line.
 
-![compound chart](https://image-charts.com/chart?ichm=6f6c84084cba074285a396b3a71dd8c66ae78df2a0229edc1e48a1a11d3e8a6e&cht=bvg&chm=D,0033FF,0,0,5,1&chbh=20&chs=700x200&chd=s:1XQbnf4&chco=76A4FB&icac=fgribreau)
+![compound chart](https://image-charts.com/chart?chco=76A4FB&chd=s%3A1XQbnf4&chm=D%2C0033FF%2C0%2C0%2C5%2C1&chs=700x200&cht=bvs&icac=documentation&ichm=4aaabbf58279da59cc8022df4c367835ab3b958b396582e920ec2c721a8d8e54)
 
 ```
 chm=D,0033FF,0,0,5,1
@@ -135,7 +135,7 @@ chd=s:1XQbnf4
 
 This is the same bar chart, but with an additional data series just for the line. This is an example of a compound chart. Compound charts are drawn by adding additional data series to the chd parameter, plus a value to chd telling the chart to "ignore" the additional data series.
 
-![](https://image-charts.com/chart?ichm=b516a6b4c1e98e170fc3c6f2d020fe343d5c155d0800631e37d620cc2352f8ab&cht=bvg&chm=D,0033FF,1,0,5,1&chbh=20&chs=700x200&chd=s1:1XQbnf4,43ksfg6&chco=76A4FB&icac=fgribreau)
+![](https://image-charts.com/chart?chco=76A4FB&chd=s1%3A1XQbnf4%2C43ksfg6&chm=D%2C0033FF%2C1%2C0%2C5%2C1&chs=700x200&cht=bvs&icac=documentation&ichm=5799cf6ef734765d933a238c523829b0d1a95269f417daf9eef1652a1935731d)
 
 ```
 chm=D,0033FF,1,0,5,1
@@ -151,7 +151,7 @@ Here is a bar chart with a trace line. The first two data series are used for th
 - `chm=D,0033FF,2,0,5,1` - Trace line (D), blue, data from series index 2, all points (0), line is 5 pixels wide, and has a z-order of 1.
 
 
-[![chart api](https://image-charts.com/chart?chbh=5%2C2&chco=224499%2C009900&chd=s2%3A1XQbnf4%2CEWoQMUB%2C9halxp9&chm=D%2C0033FF%2C2%2C0%2C5%2C1&chs=700x200&cht=bvs&chxl=0%3A%7CJan%7CFeb%7CMar%7CApr%7CMay%7CJun%7CJul&chxt=x%2Cy&icac=fgribreau&icretina=1&ichm=b3d63a7995a5df2e05e2a90337793e40b17b4bcb0827113dea8f3f159406bc20)](https://editor.image-charts.com/chart?chbh=5%2C2&chco=224499%2C009900&chd=s2%3A1XQbnf4%2CEWoQMUB%2C9halxp9&chm=D%2C0033FF%2C2%2C0%2C5%2C1&chs=700x200&cht=bvs&chxl=0%3A%7CJan%7CFeb%7CMar%7CApr%7CMay%7CJun%7CJul&chxt=x%2Cy&icac=fgribreau&icretina=1&ichm=b3d63a7995a5df2e05e2a90337793e40b17b4bcb0827113dea8f3f159406bc20)
+[![chart api](https://image-charts.com/chart?chbh=5%2C2&chco=224499%2C009900&chd=s2%3A1XQbnf4%2CEWoQMUB%2C9halxp9&chm=D%2C0033FF%2C2%2C0%2C5%2C1&chs=700x200&cht=bvs&chxl=0%3A%7CJan%7CFeb%7CMar%7CApr%7CMay%7CJun%7CJul&chxt=x%2Cy&icac=documentation&icretina=1&ichm=46d00c212caa483692cc9216ef906f000d9a622df45168adb2d7eab785117ee9)](https://editor.image-charts.com/chart?chbh=5%2C2&chco=224499%2C009900&chd=s2%3A1XQbnf4%2CEWoQMUB%2C9halxp9&chm=D%2C0033FF%2C2%2C0%2C5%2C1&chs=700x200&cht=bvs&chxl=0%3A%7CJan%7CFeb%7CMar%7CApr%7CMay%7CJun%7CJul&chxt=x%2Cy&icac=documentation&icretina=1&ichm=46d00c212caa483692cc9216ef906f000d9a622df45168adb2d7eab785117ee9)
 
 ```
 chm=
@@ -165,7 +165,7 @@ chd=s2:
 ##### Stacked bar chart with an independent line drawn
 
 
-[![image chart generator](https://image-charts.com/chart?chbh=15%2C10&chco=224499%2C009900&chd=t2%3A0%2C10%2C20%2C30%2C20%2C70%2C80%7C0%2C20%2C10%2C5%2C20%2C30%2C10%7C10%2C0%2C20%2C15%2C60%2C40%2C30&chm=D%2C76A4FB%2C2%2C0%2C3&chs=700x200&cht=bvs&chxl=0%3A%7CJan%7CFeb%7CMar%7CApr%7CMay%7CJun%7CJul&chxt=x%2Cy&icac=fgribreau&icretina=1&ichm=602820d04bd16f92ddef4892209effe382d244e4a924b7a51baa663abff58a77)](https://editor.image-charts.com/chart?chbh=15%2C10&chco=224499%2C009900&chd=t2%3A0%2C10%2C20%2C30%2C20%2C70%2C80%7C0%2C20%2C10%2C5%2C20%2C30%2C10%7C10%2C0%2C20%2C15%2C60%2C40%2C30&chm=D%2C76A4FB%2C2%2C0%2C3&chs=700x200&cht=bvs&chxl=0%3A%7CJan%7CFeb%7CMar%7CApr%7CMay%7CJun%7CJul&chxt=x%2Cy&icac=fgribreau&icretina=1&ichm=602820d04bd16f92ddef4892209effe382d244e4a924b7a51baa663abff58a77)
+[![image chart generator](https://image-charts.com/chart?chbh=15%2C10&chco=224499%2C009900&chd=t2%3A0%2C10%2C20%2C30%2C20%2C70%2C80%7C0%2C20%2C10%2C5%2C20%2C30%2C10%7C10%2C0%2C20%2C15%2C60%2C40%2C30&chm=D%2C76A4FB%2C2%2C0%2C3&chs=700x200&cht=bvs&chxl=0%3A%7CJan%7CFeb%7CMar%7CApr%7CMay%7CJun%7CJul&chxt=x%2Cy&icac=documentation&icretina=1&ichm=9dcd7bd4fbd9c72b2cc9d47153b4d0cce90588f5fdf565656447f101c4e0e5d9)](https://editor.image-charts.com/chart?chbh=15%2C10&chco=224499%2C009900&chd=t2%3A0%2C10%2C20%2C30%2C20%2C70%2C80%7C0%2C20%2C10%2C5%2C20%2C30%2C10%7C10%2C0%2C20%2C15%2C60%2C40%2C30&chm=D%2C76A4FB%2C2%2C0%2C3&chs=700x200&cht=bvs&chxl=0%3A%7CJan%7CFeb%7CMar%7CApr%7CMay%7CJun%7CJul&chxt=x%2Cy&icac=documentation&icretina=1&ichm=9dcd7bd4fbd9c72b2cc9d47153b4d0cce90588f5fdf565656447f101c4e0e5d9)
 
 
 ```
@@ -210,7 +210,7 @@ chm=
 The following example fills the entire area under the line.
 
 
-[![chart](https://image-charts.com/chart?chco=224499&chd=s:ATSTaVd21981uocA&chm=B,76A4FB,0,0,0&chs=700x125&cht=lc&chxl=0:|Sep|Oct|Nov|Dec|1:||50|100&chxt=x,y&icac=fgribreau&icretina=1&ichm=8d6f8d050e55ac2a1b17c95558615b68433131e541bff6487e6da646aade9e19)](https://editor.image-charts.com/chart?chco=224499&chd=s:ATSTaVd21981uocA&chm=B,76A4FB,0,0,0&chs=700x125&cht=lc&chxl=0:|Sep|Oct|Nov|Dec|1:||50|100&chxt=x,y&icac=fgribreau&icretina=1&ichm=8d6f8d050e55ac2a1b17c95558615b68433131e541bff6487e6da646aade9e19
+[![chart](https://image-charts.com/chart?chco=224499&chd=s%3AATSTaVd21981uocA&chm=B%2C76A4FB%2C0%2C0%2C0&chs=700x125&cht=lc&chxl=0%3A%7CSep%7COct%7CNov%7CDec%7C1%3A%7C%7C50%7C100&chxt=x%2Cy&icac=documentation&icretina=1&ichm=5508a726d1315b21df6c07930bff71a4607ebe7b2bed423d3dda2f42422d5e31)](https://editor.image-charts.com/chart?chco=224499&chd=s%3AATSTaVd21981uocA&chm=B%2C76A4FB%2C0%2C0%2C0&chs=700x125&cht=lc&chxl=0%3A%7CSep%7COct%7CNov%7CDec%7C1%3A%7C%7C50%7C100&chxt=x%2Cy&icac=documentation&icretina=1&ichm=5508a726d1315b21df6c07930bff71a4607ebe7b2bed423d3dda2f42422d5e31
 )
 
 ```
@@ -224,12 +224,12 @@ chd=s:cefhjkqwrlgYcfgc,QSSVXXdkfZUMRTUQ,HJJMOOUbVPKDHKLH
 chm=b,fdb45c,0,1,0|b,ff6e6e,1,2,0
 ```
 
-[![chart](https://image-charts.com/chart?chco=ca7002,cc0000,cc0000&chd=s:cefhjkqwrlgYcfgc,QSSVXXdkfZUMRTUQ,HJJMOOUbVPKDHKLH&chls=1,1,0|1,1,0|1,1,0|1,4,0&chm=b,fdb45c,0,1,0|b,ff6e6e,1,2,1&chs=700x300&cht=lc&chxl=1:||50|100|0:|Jan|Feb|Mar|Apr|May|Jun|&chxt=x,y&icac=fgribreau&icretina=1&ichm=bfa859fa30a68a69f9ac90a713b0ccc12f93af7fe1eab3d32f498d134e37e318)](https://editor.image-charts.com/chart?chco=ca7002,cc0000,cc0000&chd=s:cefhjkqwrlgYcfgc,QSSVXXdkfZUMRTUQ,HJJMOOUbVPKDHKLH&chls=1,1,0|1,1,0|1,1,0|1,4,0&chm=b,fdb45c,0,1,0|b,ff6e6e,1,2,1&chs=700x300&cht=lc&chxl=1:||50|100|0:|Jan|Feb|Mar|Apr|May|Jun|&chxt=x,y&icac=fgribreau&icretina=1&ichm=bfa859fa30a68a69f9ac90a713b0ccc12f93af7fe1eab3d32f498d134e37e318)
+[![chart](https://image-charts.com/chart?chco=ca7002%2Ccc0000%2Ccc0000&chd=s%3AcefhjkqwrlgYcfgc%2CQSSVXXdkfZUMRTUQ%2CHJJMOOUbVPKDHKLH&chls=1%2C1%2C0%7C1%2C1%2C0%7C1%2C1%2C0%7C1%2C4%2C0&chm=b%2Cfdb45c%2C0%2C1%2C0%7Cb%2Cff6e6e%2C1%2C2%2C1&chs=700x300&cht=lc&chxl=1%3A%7C%7C50%7C100%7C0%3A%7CJan%7CFeb%7CMar%7CApr%7CMay%7CJun%7C&chxt=x%2Cy&icac=documentation&icretina=1&ichm=0f213bd2155dc07a239c5a64a9a26028c1ee2bd9ee9a522fe19fc851d3afe1a3)](https://editor.image-charts.com/chart?chco=ca7002%2Ccc0000%2Ccc0000&chd=s%3AcefhjkqwrlgYcfgc%2CQSSVXXdkfZUMRTUQ%2CHJJMOOUbVPKDHKLH&chls=1%2C1%2C0%7C1%2C1%2C0%7C1%2C1%2C0%7C1%2C4%2C0&chm=b%2Cfdb45c%2C0%2C1%2C0%7Cb%2Cff6e6e%2C1%2C2%2C1&chs=700x300&cht=lc&chxl=1%3A%7C%7C50%7C100%7C0%3A%7CJan%7CFeb%7CMar%7CApr%7CMay%7CJun%7C&chxt=x%2Cy&icac=documentation&icretina=1&ichm=0f213bd2155dc07a239c5a64a9a26028c1ee2bd9ee9a522fe19fc851d3afe1a3)
 
 
 The following example fills 2 datasets with yellow (consumed) and grey (prevision) colors.
 
-[![chart](https://image-charts.com/chart?chco=ffc107,cccccc&chd=a:1,2,3,4,5,6,7|1,2,3,4,5,6,7,8,9,10,11,12,13&chg=0,20,0,0&chls=3|0&chm=B,ffc107,0,0,0|B,cccccc,1,0,0&chs=700x300&cht=lc&chtt=Power consumption (mW) and prevision&chxl=0:|Mon|Tue|Wed|Thu|Fri|Sat|Sun|Mon|Tue|Wed|Thu|Fri|Sat&chxs=0,676767,11.5,0,t,676767|1,676767,11.5,0,lt,676767&chxt=x,y&icac=fgribreau&icretina=1&ichm=34fff3faa2673187ec7ec9ead0ef5f13ce68b46621b89644017e44e31eb0110b)](https://editor.image-charts.com/chart?chco=ffc107,cccccc&chd=a:1,2,3,4,5,6,7|1,2,3,4,5,6,7,8,9,10,11,12,13&chg=0,20,0,0&chls=3|0&chm=B,ffc107,0,0,0|B,cccccc,1,0,0&chs=700x300&cht=lc&chtt=Power consumption (mW) and prevision&chxl=0:|Mon|Tue|Wed|Thu|Fri|Sat|Sun|Mon|Tue|Wed|Thu|Fri|Sat&chxs=0,676767,11.5,0,t,676767|1,676767,11.5,0,lt,676767&chxt=x,y&icac=fgribreau&icretina=1&ichm=34fff3faa2673187ec7ec9ead0ef5f13ce68b46621b89644017e44e31eb0110b)
+[![chart](https://image-charts.com/chart?chco=ffc107%2Ccccccc&chd=a%3A1%2C2%2C3%2C4%2C5%2C6%2C7%7C1%2C2%2C3%2C4%2C5%2C6%2C7%2C8%2C9%2C10%2C11%2C12%2C13&chg=0%2C20%2C0%2C0&chls=3%7C0&chm=B%2Cffc107%2C0%2C0%2C0%7CB%2Ccccccc%2C1%2C0%2C0&chs=700x300&cht=lc&chtt=Power%20consumption%20%28mW%29%20and%20prevision&chxl=0%3A%7CMon%7CTue%7CWed%7CThu%7CFri%7CSat%7CSun%7CMon%7CTue%7CWed%7CThu%7CFri%7CSat&chxs=0%2C676767%2C11.5%2C0%2Ct%2C676767%7C1%2C676767%2C11.5%2C0%2Clt%2C676767&chxt=x%2Cy&icac=documentation&icretina=1&ichm=1497a07b86ed6d3e9a690a62b9b5f1bdd3853ab6afae55711e920b55d2d1536a)](https://editor.image-charts.com/chart?chco=ffc107%2Ccccccc&chd=a%3A1%2C2%2C3%2C4%2C5%2C6%2C7%7C1%2C2%2C3%2C4%2C5%2C6%2C7%2C8%2C9%2C10%2C11%2C12%2C13&chg=0%2C20%2C0%2C0&chls=3%7C0&chm=B%2Cffc107%2C0%2C0%2C0%7CB%2Ccccccc%2C1%2C0%2C0&chs=700x300&cht=lc&chtt=Power%20consumption%20%28mW%29%20and%20prevision&chxl=0%3A%7CMon%7CTue%7CWed%7CThu%7CFri%7CSat%7CSun%7CMon%7CTue%7CWed%7CThu%7CFri%7CSat&chxs=0%2C676767%2C11.5%2C0%2Ct%2C676767%7C1%2C676767%2C11.5%2C0%2Clt%2C676767&chxt=x%2Cy&icac=documentation&icretina=1&ichm=1497a07b86ed6d3e9a690a62b9b5f1bdd3853ab6afae55711e920b55d2d1536a) and prevision&chxl=0:|Mon|Tue|Wed|Thu|Fri|Sat|Sun|Mon|Tue|Wed|Thu|Fri|Sat&chxs=0,676767,11.5,0,t,676767|1,676767,11.5,0,lt,676767&chxt=x,y&icac=fgribreau&icretina=1&ichm=34fff3faa2673187ec7ec9ead0ef5f13ce68b46621b89644017e44e31eb0110b)
 
 ```
 chd=a:1,2,3,4,5,6,7|1,2,3,4,5,6,7,8,9,10,11,12,13
@@ -297,7 +297,7 @@ Here's an example of value labels on a bar chart.
 
 The first chart (N*p0*) specifies a data value marker, with values shown as a percentage, rounded to zero decimal places, in white, on all values, in 13-point text. Note that the data values are all between 0.0 and 1.0, which, in percentage format, are moved up two decimal places.
 
-[![chart](https://image-charts.com/chart?chd=t%3A0.7%2C0.25%2C0.18%2C0.15%2C0.115%2C0.100%2C0.30&chf=b0%2Clg%2C90%2C5d62b5%2C0.5%2CA7CDF2%2C1&chm=N%2Ap0%2A%2CFFFFFF%2C0%2C-1%2C13&chma=10%2C10%2C10%2C10&chs=700x300&cht=bvs&chxl=0%3A%7CIreland%7CSaudi%7CCanada%7CIran%7CFrance%7CUS%7CUK%7C1%3A%7CCountry%7C3%3A%7CPercent%7C&chxr=2%2C0%2C1&chxs=2N%2Ap0%2A%2C828080%2C12%7C0%2C828080%2C12&chxt=x%2Cx%2Cy%2Cy&icac=fgribreau&icretina=1&ichm=aeafd7f50cefa8df65943e610094ec8d825644d13c36c25a1a3e0d99530ca35c)](https://editor.image-charts.com/chart?chd=t%3A0.7%2C0.25%2C0.18%2C0.15%2C0.115%2C0.100%2C0.30&chf=b0%2Clg%2C90%2C5d62b5%2C0.5%2CA7CDF2%2C1&chm=N%2Ap0%2A%2CFFFFFF%2C0%2C-1%2C13&chma=10%2C10%2C10%2C10&chs=700x300&cht=bvs&chxl=0%3A%7CIreland%7CSaudi%7CCanada%7CIran%7CFrance%7CUS%7CUK%7C1%3A%7CCountry%7C3%3A%7CPercent%7C&chxr=2%2C0%2C1&chxs=2N%2Ap0%2A%2C828080%2C12%7C0%2C828080%2C12&chxt=x%2Cx%2Cy%2Cy&icac=fgribreau&icretina=1&ichm=aeafd7f50cefa8df65943e610094ec8d825644d13c36c25a1a3e0d99530ca35c)
+[![chart](https://image-charts.com/chart?chd=t%3A0.7%2C0.25%2C0.18%2C0.15%2C0.115%2C0.100%2C0.30&chf=b0%2Clg%2C90%2C5d62b5%2C0.5%2CA7CDF2%2C1&chm=N%2Ap0%2A%2CFFFFFF%2C0%2C-1%2C13&chma=10%2C10%2C10%2C10&chs=700x300&cht=bvs&chxl=0%3A%7CIreland%7CSaudi%7CCanada%7CIran%7CFrance%7CUS%7CUK%7C1%3A%7CCountry%7C3%3A%7CPercent%7C&chxr=2%2C0%2C1&chxs=2N%2Ap0%2A%2C828080%2C12%7C0%2C828080%2C12&chxt=x%2Cx%2Cy%2Cy&icac=documentation&icretina=1&ichm=f1922365fa0b0605835c1cdc2b89ac126541f7343b615869249098ff8a81cce4)](https://editor.image-charts.com/chart?chd=t%3A0.7%2C0.25%2C0.18%2C0.15%2C0.115%2C0.100%2C0.30&chf=b0%2Clg%2C90%2C5d62b5%2C0.5%2CA7CDF2%2C1&chm=N%2Ap0%2A%2CFFFFFF%2C0%2C-1%2C13&chma=10%2C10%2C10%2C10&chs=700x300&cht=bvs&chxl=0%3A%7CIreland%7CSaudi%7CCanada%7CIran%7CFrance%7CUS%7CUK%7C1%3A%7CCountry%7C3%3A%7CPercent%7C&chxr=2%2C0%2C1&chxs=2N%2Ap0%2A%2C828080%2C12%7C0%2C828080%2C12&chxt=x%2Cx%2Cy%2Cy&icac=documentation&icretina=1&ichm=f1922365fa0b0605835c1cdc2b89ac126541f7343b615869249098ff8a81cce4)
 
 ```
 chm=
@@ -308,7 +308,7 @@ chd=t:
 
 The second chart (N*cUSD1*) shows values formatted as Dollar, in white, on all values, in 13-point text.
 
-[![chart](https://image-charts.com/chart?chd=a%3A290%2C250%2C180%2C140%2C115%2C100%2C30&chf=b0%2Clg%2C90%2C76A4FB%2C0.5%2CA7CDF2%2C1&chm=N%2AcUSD1%2A%2CFFFFFF%2C0%2C-1%2C13&chma=10%2C10%2C10%2C10&chs=700x300&cht=bvs&chxl=0%3A%7CIreland%7CSaudi%7CCanada%7CIran%7CFrance%7CUS%7CUK%7C1%3A%7CCountry%7C3%3A%7CAmount%7C&chxs=2N%2AcUSD0sz%2A%2C828080%2C12%7C0%2C828080%2C12&chxt=x%2Cx%2Cy%2Cy&icac=fgribreau&icretina=1&ichm=7093eb970685be9c64e01d8b2cd1e2be95d1910343db70981bf4c118015e9bff)](https://editor.image-charts.com/chart?chd=a%3A290%2C250%2C180%2C140%2C115%2C100%2C30&chf=b0%2Clg%2C90%2C76A4FB%2C0.5%2CA7CDF2%2C1&chm=N%2AcUSD1%2A%2CFFFFFF%2C0%2C-1%2C13&chma=10%2C10%2C10%2C10&chs=700x300&cht=bvs&chxl=0%3A%7CIreland%7CSaudi%7CCanada%7CIran%7CFrance%7CUS%7CUK%7C1%3A%7CCountry%7C3%3A%7CAmount%7C&chxs=2N%2AcUSD0sz%2A%2C828080%2C12%7C0%2C828080%2C12&chxt=x%2Cx%2Cy%2Cy&icac=fgribreau&icretina=1&ichm=7093eb970685be9c64e01d8b2cd1e2be95d1910343db70981bf4c118015e9bff)
+[![chart](https://image-charts.com/chart?chd=a%3A290%2C250%2C180%2C140%2C115%2C100%2C30&chf=b0%2Clg%2C90%2C76A4FB%2C0.5%2CA7CDF2%2C1&chm=N%2AcUSD1%2A%2CFFFFFF%2C0%2C-1%2C13&chma=10%2C10%2C10%2C10&chs=700x300&cht=bvs&chxl=0%3A%7CIreland%7CSaudi%7CCanada%7CIran%7CFrance%7CUS%7CUK%7C1%3A%7CCountry%7C3%3A%7CAmount%7C&chxs=2N%2AcUSD0sz%2A%2C828080%2C12%7C0%2C828080%2C12&chxt=x%2Cx%2Cy%2Cy&icac=documentation&icretina=1&ichm=b646e1f7267344bce0353d1c1a78da4c4aa7c616c4129c0e9c9076f58f00cf85)](https://editor.image-charts.com/chart?chd=a%3A290%2C250%2C180%2C140%2C115%2C100%2C30&chf=b0%2Clg%2C90%2C76A4FB%2C0.5%2CA7CDF2%2C1&chm=N%2AcUSD1%2A%2CFFFFFF%2C0%2C-1%2C13&chma=10%2C10%2C10%2C10&chs=700x300&cht=bvs&chxl=0%3A%7CIreland%7CSaudi%7CCanada%7CIran%7CFrance%7CUS%7CUK%7C1%3A%7CCountry%7C3%3A%7CAmount%7C&chxs=2N%2AcUSD0sz%2A%2C828080%2C12%7C0%2C828080%2C12&chxt=x%2Cx%2Cy%2Cy&icac=documentation&icretina=1&ichm=b646e1f7267344bce0353d1c1a78da4c4aa7c616c4129c0e9c9076f58f00cf85)
 
 ```
 chm=
@@ -317,7 +317,7 @@ chm=
 
 Example with font-family and font-style
 
-[![chart](https://image-charts.com/chart?chd=a%3A290%2C250%2C180%2C140%2C115%2C100%2C30&chf=b0%2Clg%2C90%2C76A4FB%2C0.5%2CA7CDF2%2C1&chm=N%2AcUSD1%2A%2C4e5399%2C0%2C-1%2C13%2C%2C%2CEconomica%2Citalic&chma=10%2C10%2C10%2C10&chs=700x300&cht=bvs&chxl=0%3A%7CIreland%7CSaudi%7CCanada%7CIran%7CFrance%7CUS%7CUK%7C1%3A%7CCountry%7C3%3A%7CAmount%7C&chxs=2N%2AcUSD0sz%2A%2C828080%2C12%7C0%2C828080%2C12&chxt=x%2Cx%2Cy%2Cy&icac=fgribreau&icretina=1&ichm=cae1795505c49684ef5e53aa10305fc08398646a2d38474f5e431423c07be4f4)](https://editor.image-charts.com/chart?chd=a%3A290%2C250%2C180%2C140%2C115%2C100%2C30&chf=b0%2Clg%2C90%2C76A4FB%2C0.5%2CA7CDF2%2C1&chm=N%2AcUSD1%2A%2C4e5399%2C0%2C-1%2C13%2C%2C%2CEconomica%2Citalic&chma=10%2C10%2C10%2C10&chs=700x300&cht=bvs&chxl=0%3A%7CIreland%7CSaudi%7CCanada%7CIran%7CFrance%7CUS%7CUK%7C1%3A%7CCountry%7C3%3A%7CAmount%7C&chxs=2N%2AcUSD0sz%2A%2C828080%2C12%7C0%2C828080%2C12&chxt=x%2Cx%2Cy%2Cy&icac=fgribreau&icretina=1&ichm=cae1795505c49684ef5e53aa10305fc08398646a2d38474f5e431423c07be4f4)
+[![chart](https://image-charts.com/chart?chd=a%3A290%2C250%2C180%2C140%2C115%2C100%2C30&chf=b0%2Clg%2C90%2C76A4FB%2C0.5%2CA7CDF2%2C1&chm=N%2AcUSD1%2A%2C4e5399%2C0%2C-1%2C13%2C%2C%2CEconomica%2Citalic&chma=10%2C10%2C10%2C10&chs=700x300&cht=bvs&chxl=0%3A%7CIreland%7CSaudi%7CCanada%7CIran%7CFrance%7CUS%7CUK%7C1%3A%7CCountry%7C3%3A%7CAmount%7C&chxs=2N%2AcUSD0sz%2A%2C828080%2C12%7C0%2C828080%2C12&chxt=x%2Cx%2Cy%2Cy&icac=documentation&icretina=1&ichm=d46ed7db01cf82da27ff154a6a9148b53e0c335f85a684d051196132dcf29769)](https://editor.image-charts.com/chart?chd=a%3A290%2C250%2C180%2C140%2C115%2C100%2C30&chf=b0%2Clg%2C90%2C76A4FB%2C0.5%2CA7CDF2%2C1&chm=N%2AcUSD1%2A%2C4e5399%2C0%2C-1%2C13%2C%2C%2CEconomica%2Citalic&chma=10%2C10%2C10%2C10&chs=700x300&cht=bvs&chxl=0%3A%7CIreland%7CSaudi%7CCanada%7CIran%7CFrance%7CUS%7CUK%7C1%3A%7CCountry%7C3%3A%7CAmount%7C&chxs=2N%2AcUSD0sz%2A%2C828080%2C12%7C0%2C828080%2C12&chxt=x%2Cx%2Cy%2Cy&icac=documentation&icretina=1&ichm=d46ed7db01cf82da27ff154a6a9148b53e0c335f85a684d051196132dcf29769)
 
 ```
 chm=
@@ -326,7 +326,7 @@ chm=
 
 Stacked-chart with labels positioned at the center
 
-[![chart](https://image-charts.com/chart?chbh=20&chco=fdb45c%2C27c9c2%2C1869b7&chd=t%3A5%2C5%2C5%7C10%2C10%2C10%7C15%2C15%2C15&chds=0%2C120&chm=N%2C000000%2C0%2C-1%2C10%2C%2Cc%7CN%2C000000%2C1%2C-1%2C10%2C%2Cc%7CN%2C000000%2C2%2C-1%2C10%2C%2Cc&chma=0%2C0%2C10%2C10&chs=700x150&cht=bvs&chxs=0%2C000000%2C0%2C0%2C_&chxt=y&icac=fgribreau&icretina=1&ichm=011d347c17b86192df29ed0657af0703c6e07bf3571b5e0e936b5d820c39bc20)](https://editor.image-charts.com/chart?chbh=20&chco=fdb45c%2C27c9c2%2C1869b7&chd=t%3A5%2C5%2C5%7C10%2C10%2C10%7C15%2C15%2C15&chds=0%2C120&chm=N%2C000000%2C0%2C-1%2C10%2C%2Cc%7CN%2C000000%2C1%2C-1%2C10%2C%2Cc%7CN%2C000000%2C2%2C-1%2C10%2C%2Cc&chma=0%2C0%2C10%2C10&chs=700x150&cht=bvs&chxs=0%2C000000%2C0%2C0%2C_&chxt=y&icac=fgribreau&icretina=1&ichm=011d347c17b86192df29ed0657af0703c6e07bf3571b5e0e936b5d820c39bc20)
+[![chart](https://image-charts.com/chart?chbh=20&chco=fdb45c%2C27c9c2%2C1869b7&chd=t%3A5%2C5%2C5%7C10%2C10%2C10%7C15%2C15%2C15&chds=0%2C120&chm=N%2C000000%2C0%2C-1%2C10%2C%2Cc%7CN%2C000000%2C1%2C-1%2C10%2C%2Cc%7CN%2C000000%2C2%2C-1%2C10%2C%2Cc&chma=0%2C0%2C10%2C10&chs=700x150&cht=bvs&chxs=0%2C000000%2C0%2C0%2C_&chxt=y&icac=documentation&icretina=1&ichm=f3f3cd1ae037a79bc760c9dc4fab48821a4fd259a3d6731235adc9fe7d86eb10)](https://editor.image-charts.com/chart?chbh=20&chco=fdb45c%2C27c9c2%2C1869b7&chd=t%3A5%2C5%2C5%7C10%2C10%2C10%7C15%2C15%2C15&chds=0%2C120&chm=N%2C000000%2C0%2C-1%2C10%2C%2Cc%7CN%2C000000%2C1%2C-1%2C10%2C%2Cc%7CN%2C000000%2C2%2C-1%2C10%2C%2Cc&chma=0%2C0%2C10%2C10&chs=700x150&cht=bvs&chxs=0%2C000000%2C0%2C0%2C_&chxt=y&icac=documentation&icretina=1&ichm=f3f3cd1ae037a79bc760c9dc4fab48821a4fd259a3d6731235adc9fe7d86eb10)
 
 ```
 chm=
@@ -335,7 +335,7 @@ chm=
 
 Bar-chart with labels positioned at the top
 
-[![chart](https://image-charts.com/chart?chbh=20&chco=fdb45c%2C27c9c2%2C1869b7&chd=t%3A5%2C5%2C5%7C10%2C10%2C10%7C15%2C15%2C15&chds=0%2C120&chm=N%2C000000%2C0%2C-1%2C10%2C%2Ce%7CN%2C000000%2C1%2C-1%2C10%2C%2Ce%7CN%2C000000%2C2%2C-1%2C10%2C%2Ce&chma=0%2C0%2C10%2C10&chs=700x150&cht=bvs&chxs=0%2C000000%2C0%2C0%2C_&chxt=y&icac=fgribreau&icretina=1&ichm=79e967104d5b057a3010b4ccc0400728a5f7c9f2457d649a24f05c7c2ce1de55)](https://editor.image-charts.com/chart?chbh=20&chco=fdb45c%2C27c9c2%2C1869b7&chd=t%3A5%2C5%2C5%7C10%2C10%2C10%7C15%2C15%2C15&chds=0%2C120&chm=N%2C000000%2C0%2C-1%2C10%2C%2Ce%7CN%2C000000%2C1%2C-1%2C10%2C%2Ce%7CN%2C000000%2C2%2C-1%2C10%2C%2Ce&chma=0%2C0%2C10%2C10&chs=700x150&cht=bvs&chxs=0%2C000000%2C0%2C0%2C_&chxt=y&icac=fgribreau&icretina=1&ichm=79e967104d5b057a3010b4ccc0400728a5f7c9f2457d649a24f05c7c2ce1de55)
+[![chart](https://image-charts.com/chart?chbh=20&chco=fdb45c%2C27c9c2%2C1869b7&chd=t%3A5%2C5%2C5%7C10%2C10%2C10%7C15%2C15%2C15&chds=0%2C120&chm=N%2C000000%2C0%2C-1%2C10%2C%2Ce%7CN%2C000000%2C1%2C-1%2C10%2C%2Ce%7CN%2C000000%2C2%2C-1%2C10%2C%2Ce&chma=0%2C0%2C10%2C10&chs=700x150&cht=bvs&chxs=0%2C000000%2C0%2C0%2C_&chxt=y&icac=documentation&icretina=1&ichm=92ff89cdfbbd04bb5dd3be010b2fa23cf51bdfa2545e2f3acfd4e1676b42049a)](https://editor.image-charts.com/chart?chbh=20&chco=fdb45c%2C27c9c2%2C1869b7&chd=t%3A5%2C5%2C5%7C10%2C10%2C10%7C15%2C15%2C15&chds=0%2C120&chm=N%2C000000%2C0%2C-1%2C10%2C%2Ce%7CN%2C000000%2C1%2C-1%2C10%2C%2Ce%7CN%2C000000%2C2%2C-1%2C10%2C%2Ce&chma=0%2C0%2C10%2C10&chs=700x150&cht=bvs&chxs=0%2C000000%2C0%2C0%2C_&chxt=y&icac=documentation&icretina=1&ichm=92ff89cdfbbd04bb5dd3be010b2fa23cf51bdfa2545e2f3acfd4e1676b42049a)
 
 ```
 chm=
@@ -344,7 +344,7 @@ chm=
 
 Bar-chart with labels positioned at the bottom
 
-[![chart](https://image-charts.com/chart?chd=a%3A290%2C250%2C180%2C140%2C115%2C100%2C30&chf=b0%2Clg%2C90%2C76A4FB%2C0.5%2CA7CDF2%2C1&chm=N%2AcUSD1%2A%2CFFFFFF%2C0%2C-1%2C13%2C%2Cs&chma=10%2C10%2C10%2C10&chs=700x300&cht=bvs&chxl=0%3A%7CIreland%7CSaudi%7CCanada%7CIran%7CFrance%7CUS%7CUK%7C1%3A%7CCountry%7C3%3A%7CAmount%7C&chxs=2N%2AcUSD0sz%2A%2C828080%2C12%7C0%2C828080%2C12&chxt=x%2Cx%2Cy%2Cy&icac=fgribreau&icretina=1&ichm=a2498d2c9c81184521a7e365d2deb12bc9954cfa9e37ab447ad0cbacf048d990)](https://editor.image-charts.com/chart?chd=a%3A290%2C250%2C180%2C140%2C115%2C100%2C30&chf=b0%2Clg%2C90%2C76A4FB%2C0.5%2CA7CDF2%2C1&chm=N%2AcUSD1%2A%2CFFFFFF%2C0%2C-1%2C13%2C%2Cs&chma=10%2C10%2C10%2C10&chs=700x300&cht=bvs&chxl=0%3A%7CIreland%7CSaudi%7CCanada%7CIran%7CFrance%7CUS%7CUK%7C1%3A%7CCountry%7C3%3A%7CAmount%7C&chxs=2N%2AcUSD0sz%2A%2C828080%2C12%7C0%2C828080%2C12&chxt=x%2Cx%2Cy%2Cy&icac=fgribreau&icretina=1&ichm=a2498d2c9c81184521a7e365d2deb12bc9954cfa9e37ab447ad0cbacf048d990)
+[![chart](https://image-charts.com/chart?chd=a%3A290%2C250%2C180%2C140%2C115%2C100%2C30&chf=b0%2Clg%2C90%2C76A4FB%2C0.5%2CA7CDF2%2C1&chm=N%2AcUSD1%2A%2CFFFFFF%2C0%2C-1%2C13%2C%2Cs&chma=10%2C10%2C10%2C10&chs=700x300&cht=bvs&chxl=0%3A%7CIreland%7CSaudi%7CCanada%7CIran%7CFrance%7CUS%7CUK%7C1%3A%7CCountry%7C3%3A%7CAmount%7C&chxs=2N%2AcUSD0sz%2A%2C828080%2C12%7C0%2C828080%2C12&chxt=x%2Cx%2Cy%2Cy&icac=documentation&icretina=1&ichm=f44b88c7b3e4f011d224c9aacb55bcaa724e573d59c2ef305a22fa61900bb94a)](https://editor.image-charts.com/chart?chd=a%3A290%2C250%2C180%2C140%2C115%2C100%2C30&chf=b0%2Clg%2C90%2C76A4FB%2C0.5%2CA7CDF2%2C1&chm=N%2AcUSD1%2A%2CFFFFFF%2C0%2C-1%2C13%2C%2Cs&chma=10%2C10%2C10%2C10&chs=700x300&cht=bvs&chxl=0%3A%7CIreland%7CSaudi%7CCanada%7CIran%7CFrance%7CUS%7CUK%7C1%3A%7CCountry%7C3%3A%7CAmount%7C&chxs=2N%2AcUSD0sz%2A%2C828080%2C12%7C0%2C828080%2C12&chxt=x%2Cx%2Cy%2Cy&icac=documentation&icretina=1&ichm=f44b88c7b3e4f011d224c9aacb55bcaa724e573d59c2ef305a22fa61900bb94a)
 
 ```
 chm=

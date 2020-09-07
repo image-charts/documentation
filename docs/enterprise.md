@@ -25,7 +25,7 @@ Note that Image-Chart supports `ichm` parameter both at the end of the query str
 
 As an example here is a graph signed, without watermark:
 
-![chart](https://image-charts.com/chart?chtt=No%20watermark!&cht=lc&chd=t%3A40%2C20%2C10%2C20%2C40%2C20%2C20%2C40%2C10%2C20%2C40%2C60%7C55%2C35%2C5%2C45%2C25%2C45%2C45%2C45%2C25%2C15%2C55%2C45&chs=700x200&chof=.png&chf=b0%2Clg%2C90%2Cffeb3b%2C0.2%2Cf44336%2C1%7Cb1%2Clg%2C90%2C8bc34a%2C0.2%2C009688%2C1&icac=fgribreau&ichm=0785cf22a0381c2e0239e27c126de4181f501d117c2c81745611e9db928b0376)
+![chart](https://image-charts.com/chart?chd=t%3A40%2C20%2C10%2C20%2C40%2C20%2C20%2C40%2C10%2C20%2C40%2C60%7C55%2C35%2C5%2C45%2C25%2C45%2C45%2C45%2C25%2C15%2C55%2C45&chf=b0%2Clg%2C90%2Cffeb3b%2C0.2%2Cf44336%2C1%7Cb1%2Clg%2C90%2C8bc34a%2C0.2%2C009688%2C1&chof=.png&chs=700x200&cht=lc&chtt=No%20watermark%21&icac=documentation&ichm=d824323e74a1caeebd47d994152639728997b9c572774b79f8ebf20f8b31a405)
 
 
 ```

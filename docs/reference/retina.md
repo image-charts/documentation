@@ -20,7 +20,7 @@ icretina=<retina_activation>
 Here is a graph of 700 pixels x 200 pixels without retina
 
 
-![chart](https://image-charts.com/chart?ichm=1cb6c47a7083c89618fe7b073cf5ce8a2c73665b72db2119b9dac434baeed8eb&cht=bvs&chd=s%3Atheresadifferencebetweenknowingthepathandwalkingthepath&chs=700x200&chxt=y&chf=b0%2Clg%2C90%2C03a9f4%2C0%2C3f51b5%2C1&icretina=0&icac=fgribreau)
+![chart](https://image-charts.com/chart?chd=s%3Atheresadifferencebetweenknowingthepathandwalkingthepath&chf=b0%2Clg%2C90%2C03a9f4%2C0%2C3f51b5%2C1&chs=700x200&cht=bvs&icac=documentation&icretina=0&ichm=34d089caad211c330bd64d5a2788f88f580f11534e014962bba30297bee668f2)
 
 ```
 icretina=0
@@ -28,7 +28,7 @@ icretina=0
 
 Here is a graph of 700 pixels x 200 pixels with retina, image output size as doubled and no pixel will be seen on retina displays.
 
-![chart](https://image-charts.com/chart?ichm=eee5082545d27af84c7a3f2af95445080b1b1cc3b3d75a141af1d0c18a1fff27&cht=bvs&chd=s%3Atheresadifferencebetweenknowingthepathandwalkingthepath&chs=700x200&chxt=y&chf=b0%2Clg%2C90%2C03a9f4%2C0%2C3f51b5%2C1&icretina=1&icac=fgribreau)
+![chart](https://image-charts.com/chart?chd=s%3Atheresadifferencebetweenknowingthepathandwalkingthepath&chf=b0%2Clg%2C90%2C03a9f4%2C0%2C3f51b5%2C1&chs=700x200&cht=bvs&icac=documentation&icretina=1&ichm=ae142c920ce8b36c3ac13841160536cbe1f5de1e1cf1869975cbe556d3b2439c)
 
 ```
 icretina=1

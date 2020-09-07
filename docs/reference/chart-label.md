@@ -18,7 +18,7 @@ chl=
 
 Let specify labels for a simple animated pie chart.
 
-[![chart](https://image-charts.com/chart?chan&chd=t%3A20%2C20%2C30%2C40%2C50&chf=b0%2Clg%2C0%2C8222ff%2C0%2Ceabfff%2C1&chl=20%C2%B0%7C20%C2%B0%7C30%C2%B0%7C40%C2%B0%7C50%C2%B0&chs=700x200&cht=p3&icac=fgribreau&icretina=1&ichm=0950432c7209bf892580f8ae81cf38689a4982bcd6c331b10226346ab1ad17fe)](https://editor.image-charts.com/chart?chan&chd=t%3A20%2C20%2C30%2C40%2C50&chf=b0%2Clg%2C0%2C8222ff%2C0%2Ceabfff%2C1&chl=20%C2%B0%7C20%C2%B0%7C30%C2%B0%7C40%C2%B0%7C50%C2%B0&chs=700x200&cht=p3&icac=fgribreau&icretina=1&ichm=0950432c7209bf892580f8ae81cf38689a4982bcd6c331b10226346ab1ad17fe)
+[![chart](https://image-charts.com/chart?chan&chd=t%3A20%2C20%2C30%2C40%2C50&chf=b0%2Clg%2C0%2C8222ff%2C0%2Ceabfff%2C1&chl=20%C2%B0%7C20%C2%B0%7C30%C2%B0%7C40%C2%B0%7C50%C2%B0&chs=700x200&cht=p3&icac=documentation&icretina=1&ichm=097f8af92f9bd0835d92af69c6e95e39d80e02c23f93b0b828acf2e48236871f)](https://editor.image-charts.com/chart?chan&chd=t%3A20%2C20%2C30%2C40%2C50&chf=b0%2Clg%2C0%2C8222ff%2C0%2Ceabfff%2C1&chl=20%C2%B0%7C20%C2%B0%7C30%C2%B0%7C40%C2%B0%7C50%C2%B0&chs=700x200&cht=p3&icac=fgribreau&icretina=1&ichm=0950432c7209bf892580f8ae81cf38689a4982bcd6c331b10226346ab1ad17fe)
 
 ```
 cht=p3
@@ -28,7 +28,7 @@ chl=20°|20°|30°|40°|50°
 
 Same as the previous chart but this time as an animated donught chart.
 
-[![chart](https://image-charts.com/chart?chan&chd=t%3A20%2C20%2C30%2C40%2C50&chl=20%C2%B0%7C20%C2%B0%7C30%C2%B0%7C40%C2%B0%7C50%C2%B0&chs=700x200&cht=pd&icac=fgribreau&icretina=1&ichm=8178d0498c669a8ddc6211025963e23d770f3986fd47a1bd9c9660f95478717e)](https://editor.image-charts.com/chart?chan&chd=t%3A20%2C20%2C30%2C40%2C50&chl=20%C2%B0%7C20%C2%B0%7C30%C2%B0%7C40%C2%B0%7C50%C2%B0&chs=700x200&cht=pd&icac=fgribreau&icretina=1&ichm=8178d0498c669a8ddc6211025963e23d770f3986fd47a1bd9c9660f95478717e)
+[![chart](https://image-charts.com/chart?chan&chd=t%3A20%2C20%2C30%2C40%2C50&chl=20%C2%B0%7C20%C2%B0%7C30%C2%B0%7C40%C2%B0%7C50%C2%B0&chs=700x200&cht=pd&icac=documentation&icretina=1&ichm=969f404edef096ef8444d3bdbc36cfcc6b696bb9dc183bfe4c7ac1cde6d3e923)](https://editor.image-charts.com/chart?chan&chd=t%3A20%2C20%2C30%2C40%2C50&chl=20%C2%B0%7C20%C2%B0%7C30%C2%B0%7C40%C2%B0%7C50%C2%B0&chs=700x200&cht=pd&icac=documentation&icretina=1&ichm)
 
 ```
 cht=pd
@@ -37,7 +37,7 @@ cht=pd
 
 And now a concentric [pie charts](/pie-charts) with labels for each slices.
 
-[![chart](https://image-charts.com/chart?chd=t%3A1%2C2%2C3%2C4%7C10%2C40%2C100%2C100&chl=A%7CB%7CC%7CD%7CE%7CF%7CG%7CH&chs=700x200&cht=pc&icac=fgribreau&icretina=1&ichm=9df6b979fa91e13a24e8fb09b9f02ce51338499090e612612c13f502a6346bf0)](https://editor.image-charts.com/chart?chd=t%3A1%2C2%2C3%2C4%7C10%2C40%2C100%2C100&chl=A%7CB%7CC%7CD%7CE%7CF%7CG%7CH&chs=700x200&cht=pc&icac=fgribreau&icretina=1&ichm=9df6b979fa91e13a24e8fb09b9f02ce51338499090e612612c13f502a6346bf0)
+[![chart](https://image-charts.com/chart?chd=t%3A1%2C2%2C3%2C4%7C10%2C40%2C100%2C100&chl=A%7CB%7CC%7CD%7CE%7CF%7CG%7CH&chs=700x200&cht=pc&icac=documentation&icretina=1&ichm=f8661d028d4ba6ad6c4e7eeaa4e537670671bd267380447f84df31164eb60ed7)](https://editor.image-charts.com/chart?chd=t%3A1%2C2%2C3%2C4%7C10%2C40%2C100%2C100&chl=A%7CB%7CC%7CD%7CE%7CF%7CG%7CH&chs=700x200&cht=pc&icac=documentation&icretina=1&ichm=f8661d028d4ba6ad6c4e7eeaa4e537670671bd267380447f84df31164eb60ed7)
 
 
 ```
@@ -48,7 +48,7 @@ chl=A|B|C|D|E|F|G|H
 
 Here is an example of a [line chart](/line-charts) with label on some points, to do that we skip label using `||`.
 
-[![chart](https://image-charts.com/chart?chd=s%3Atheresadifferencebetweenknowingthepathandwalkingthepath&chf=b0%2Clg%2C90%2C03a9f4%2C0%2C3f51b5%2C1&chl=Go%21%7C%7C%7C%7C%7C%7Coops%7C%7C%7C%7C%7C%7CYes%21%7C%7C%7C%7C%7C%7C%7C%7C%7Cnot%5Cnagain%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7Coh%20boy&chs=700x200&cht=ls&icac=fgribreau&icretina=1&ichm=32ef0da651fe54759491ad3ad03bd7d4bc011e99f8c08c2cad241ed8f05ca5b8)](https://editor.image-charts.com/chart?chd=s%3Atheresadifferencebetweenknowingthepathandwalkingthepath&chf=b0%2Clg%2C90%2C03a9f4%2C0%2C3f51b5%2C1&chl=Go%21%7C%7C%7C%7C%7C%7Coops%7C%7C%7C%7C%7C%7CYes%21%7C%7C%7C%7C%7C%7C%7C%7C%7Cnot%5Cnagain%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7Coh%20boy&chs=700x200&cht=ls&icac=fgribreau&icretina=1&ichm=32ef0da651fe54759491ad3ad03bd7d4bc011e99f8c08c2cad241ed8f05ca5b8)
+[![chart](https://image-charts.com/chart?chd=s%3Atheresadifferencebetweenknowingthepathandwalkingthepath&chf=b0%2Clg%2C90%2C03a9f4%2C0%2C3f51b5%2C1&chl=Go%21%7C%7C%7C%7C%7C%7Coops%7C%7C%7C%7C%7C%7CYes%21%7C%7C%7C%7C%7C%7C%7C%7C%7Cnot%5Cnagain%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7Coh%20boy&chs=700x200&cht=ls&icac=documentation&icretina=1&ichm=0149fd972df42aac6fd484dbe1f99a2b0bf9c17181c22c4bc3c42a2fb99f7085)](https://editor.image-charts.com/chart?chd=s%3Atheresadifferencebetweenknowingthepathandwalkingthepath&chf=b0%2Clg%2C90%2C03a9f4%2C0%2C3f51b5%2C1&chl=Go%21%7C%7C%7C%7C%7C%7Coops%7C%7C%7C%7C%7C%7CYes%21%7C%7C%7C%7C%7C%7C%7C%7C%7Cnot%5Cnagain%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7C%7Coh%20boy&chs=700x200&cht=ls&icac=documentation&icretina=1&ichm=0149fd972df42aac6fd484dbe1f99a2b0bf9c17181c22c4bc3c42a2fb99f7085)
 
 ```
 chl=Go!||||||oops||||||Yes!|||||||||not\nagain||||||||||||||oh boy
@@ -56,7 +56,7 @@ chl=Go!||||||oops||||||Yes!|||||||||not\nagain||||||||||||||oh boy
 
 A [bar chart](/bar-charts) with text inside each bar. Note that we only display the Y axis with `chxt=y`. Note that if `chxl` is not defined for the x axis but `chl` is, `chl` will be used instead.
 
-[![chart](https://image-charts.com/chart?chd=t%3A50%2C30%2C10%2C60%2C65%2C90&chf=b0%2Clg%2C90%2C03a9f47C%2C0%2C3f51b57C%2C1&chg=20%2C50&chl=a%7Cb%7Cc%7Cd%7Ce%7Cf&chls=2.0%2C0.0%2C0.0&chs=700x200&cht=bvg&chxt=y&icac=fgribreau&icretina=1&ichm=6eb3331c5100571adc7b83d7f9d2ac2fef7df98b49696d0a9c33e0c74a21bda5)](https://editor.image-charts.com/chart?chd=t%3A50%2C30%2C10%2C60%2C65%2C90&chf=b0%2Clg%2C90%2C03a9f47C%2C0%2C3f51b57C%2C1&chg=20%2C50&chl=a%7Cb%7Cc%7Cd%7Ce%7Cf&chls=2.0%2C0.0%2C0.0&chs=700x200&cht=bvg&chxt=y&icac=fgribreau&icretina=1&ichm=6eb3331c5100571adc7b83d7f9d2ac2fef7df98b49696d0a9c33e0c74a21bda5)
+[![chart](https://image-charts.com/chart?chd=t%3A50%2C30%2C10%2C60%2C65%2C90&chf=b0%2Clg%2C90%2C03a9f47C%2C0%2C3f51b57C%2C1&chg=20%2C50&chl=a%7Cb%7Cc%7Cd%7Ce%7Cf&chls=2.0%2C0.0%2C0.0&chs=700x200&cht=bvg&chxt=y&icac=documentation&icretina=1&ichm=704f01a316bc1bfa5bc2fceac77cd6149fa7e27f47d79451acbd09c7d803880e)](https://editor.image-charts.com/chart?chd=t%3A50%2C30%2C10%2C60%2C65%2C90&chf=b0%2Clg%2C90%2C03a9f47C%2C0%2C3f51b57C%2C1&chg=20%2C50&chl=a%7Cb%7Cc%7Cd%7Ce%7Cf&chls=2.0%2C0.0%2C0.0&chs=700x200&cht=bvg&chxt=y&icac=documentation&icretina=1&ichm=704f01a316bc1bfa5bc2fceac77cd6149fa7e27f47d79451acbd09c7d803880e)
 
 ```
 chxt=y
@@ -65,7 +65,7 @@ chl=a|b|c|d|e|f
 
 A [bubble chart](/bubble-charts) with text inside each bubble.
 
-[![chart](https://image-charts.com/chart?chd=t%3A10%2C10%2C30%2C_%2C30%2C40%2C35&chf=b0%2Clg%2C90%2C03a9f47C%2C0%2C3f51b57C%2C1&chg=20%2C50&chl=label%201%7Clabel%202&chls=2.0%2C0.0%2C0.0&chma=0%2C50%2C50&chs=700x300&cht=bb&chxt=y%2Cx&icac=fgribreau&icretina=1&ichm=c0a668b1b1cf089921a0fc3b563cf679677b02edd40936fea75d6566d1f8369c)](https://editor.image-charts.com/chart?chd=t%3A10%2C10%2C30%2C_%2C30%2C40%2C35&chf=b0%2Clg%2C90%2C03a9f47C%2C0%2C3f51b57C%2C1&chg=20%2C50&chl=label%201%7Clabel%202&chls=2.0%2C0.0%2C0.0&chma=0%2C50%2C50&chs=700x300&cht=bb&chxt=y%2Cx&icac=fgribreau&icretina=1&ichm=c0a668b1b1cf089921a0fc3b563cf679677b02edd40936fea75d6566d1f8369c)
+[![chart](https://image-charts.com/chart?chd=t%3A10%2C10%2C30%2C_%2C30%2C40%2C35&chf=b0%2Clg%2C90%2C03a9f47C%2C0%2C3f51b57C%2C1&chg=20%2C50&chl=label%201%7Clabel%202&chls=2.0%2C0.0%2C0.0&chma=0%2C50%2C50&chs=700x300&cht=bb&chxt=y%2Cx&icac=documentation&icretina=1&ichm=071903076ad890952375878581704f2257fd23014a6b8d0b5f5d4c0391985d7e)](https://editor.image-charts.com/chart?chd=t%3A10%2C10%2C30%2C_%2C30%2C40%2C35&chf=b0%2Clg%2C90%2C03a9f47C%2C0%2C3f51b57C%2C1&chg=20%2C50&chl=label%201%7Clabel%202&chls=2.0%2C0.0%2C0.0&chma=0%2C50%2C50&chs=700x300&cht=bb&chxt=y%2Cx&icac=documentation&icretina=1&ichm=071903076ad890952375878581704f2257fd23014a6b8d0b5f5d4c0391985d7e)
 
 ```
 cht=bb&

@@ -327,11 +327,11 @@ Graphs can be rendered in different format using `chof` query parameter:
 
 Example below is a graph generated as a png image:
 
-![Dependency graph as a png image](https://image-charts.com/chart?chl=graph%20%7Ba%20--%20b%3Bb%20--%20c%3Bc%20--%20d%3Bd%20--%20e%3Be%20--%20f%3Ba%20--%20f%3Ba%20--%20c%3Ba%20--%20d%3Ba%20--%20e%3Bb%20--%20d%3Bb%20--%20e%3Bb%20--%20f%3Bc%20--%20e%3Bc%20--%20f%3Bd%20--%20f%3B%7D&chof=.svg&chs=700x200&cht=gv&icac=fgribreau&ichm=dbdad1e1c89308587ac41d2c176a47980a0e4d1019390d77c9bb02c179fa85e4)
+![Dependency graph as a png image](https://image-charts.com/chart?chl=graph%20%7Ba%20--%20b%3Bb%20--%20c%3Bc%20--%20d%3Bd%20--%20e%3Be%20--%20f%3Ba%20--%20f%3Ba%20--%20c%3Ba%20--%20d%3Ba%20--%20e%3Bb%20--%20d%3Bb%20--%20e%3Bb%20--%20f%3Bc%20--%20e%3Bc%20--%20f%3Bd%20--%20f%3B%7D&chof=.png&chs=700x200&cht=gv&icac=documentation&ichm=143d52fab1fcd4694c5c4f8a89b36740263b7e4a82a796fedab9bb6c9c7d3318)
 
 Here is the same graph generated as an svg image:
 
-![Dependency graph as a svg image](https://image-charts.com/chart?chl=graph%20%7Ba%20--%20b%3Bb%20--%20c%3Bc%20--%20d%3Bd%20--%20e%3Be%20--%20f%3Ba%20--%20f%3Ba%20--%20c%3Ba%20--%20d%3Ba%20--%20e%3Bb%20--%20d%3Bb%20--%20e%3Bb%20--%20f%3Bc%20--%20e%3Bc%20--%20f%3Bd%20--%20f%3B%7D&chof=.svg&chs=700x200&cht=gv&icac=fgribreau&ichm=dbdad1e1c89308587ac41d2c176a47980a0e4d1019390d77c9bb02c179fa85e4)
+![Dependency graph as a svg image](https://image-charts.com/chart?chl=graph%20%7Ba%20--%20b%3Bb%20--%20c%3Bc%20--%20d%3Bd%20--%20e%3Be%20--%20f%3Ba%20--%20f%3Ba%20--%20c%3Ba%20--%20d%3Ba%20--%20e%3Bb%20--%20d%3Bb%20--%20e%3Bb%20--%20f%3Bc%20--%20e%3Bc%20--%20f%3Bd%20--%20f%3B%7D&chof=.svg&chs=700x200&cht=gv&icac=documentation&ichm=6eb410d0b3e6ff40053520157edbf202458ed812ba9d030000d572b62a00b4b7)
 
 ## Known limitations
 

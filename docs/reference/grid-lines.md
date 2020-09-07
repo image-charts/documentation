@@ -32,14 +32,14 @@ chg=
 
 These examples use only the `<x_axis_step_size>` and `<y_axis_step_size>` parameters. The Chart API displays a dashed grid line by default.
 
-[![chart](https://image-charts.com/chart?chco=76A4FB&chd=t:50,30,10,60,65,90&chg=20,50&chls=2.0,0.0,0.0&chs=700x200&cht=bvg&chxl=0:|0|1|2|3|4|5|&chxr=1,0,100,25&chxt=x,y&icac=fgribreau&icretina=1&ichm=21f7a26d87c1d80c3cf7bfb89420212f57f9eb989070e1e44a2d22b0a4953f9d)](https://editor.image-charts.com/chart?chco=76A4FB&chd=t:50,30,10,60,65,90&chg=20,50&chls=2.0,0.0,0.0&chs=700x200&cht=bvg&chxl=0:|0|1|2|3|4|5|&chxr=1,0,100,25&chxt=x,y&icac=fgribreau&icretina=1&ichm=21f7a26d87c1d80c3cf7bfb89420212f57f9eb989070e1e44a2d22b0a4953f9d)
+[![chart](https://image-charts.com/chart?chco=76A4FB&chd=t%3A50%2C30%2C10%2C60%2C65%2C90&chg=20%2C50&chls=2.0%2C0.0%2C0.0&chs=700x200&cht=bvg&chxl=0%3A%7C0%7C1%7C2%7C3%7C4%7C5%7C&chxr=1%2C0%2C100%2C25&chxt=x%2Cy&icac=documentation&icretina=1&ichm=dca20a51a1de4d6f4f93bcf1435eace9c38a8cb64627d14191cebd8fd6d1ea57)](https://editor.image-charts.com/chart?chco=76A4FB&chd=t%3A50%2C30%2C10%2C60%2C65%2C90&chg=20%2C50&chls=2.0%2C0.0%2C0.0&chs=700x200&cht=bvg&chxl=0%3A%7C0%7C1%7C2%7C3%7C4%7C5%7C&chxr=1%2C0%2C100%2C25&chxt=x%2Cy&icac=documentation&icretina=1&ichm=dca20a51a1de4d6f4f93bcf1435eace9c38a8cb64627d14191cebd8fd6d1ea57)
 
 ```
 cht=bvg
 chg=20,50
 ```
 
-[![chart](https://image-charts.com/chart?chco=76A4FB&chd=s:cEAELFJHHHKUju9uuXUcd&chg=20,50&chls=2.0,0.0,0.0&chs=700x200&cht=lc&chxr=0,0,20,1|1,0,100,20&chxt=x,y&icac=fgribreau&icretina=1&ichm=c11bfa4834719befa1f16d3ef9c2f93bb5b125fda3a391cee5a22d372006b84d)](https://editor.image-charts.com/chart?chco=76A4FB&chd=s:cEAELFJHHHKUju9uuXUcd&chg=20,50&chls=2.0,0.0,0.0&chs=700x200&cht=lc&chxr=0,0,20,1|1,0,100,20&chxt=x,y&icac=fgribreau&icretina=1&ichm=c11bfa4834719befa1f16d3ef9c2f93bb5b125fda3a391cee5a22d372006b84d)
+[![chart](https://image-charts.com/chart?chco=76A4FB&chd=s%3AcEAELFJHHHKUju9uuXUcd&chg=20%2C50&chls=2.0%2C0.0%2C0.0&chs=700x200&cht=lc&chxr=0%2C0%2C20%2C1%7C1%2C0%2C100%2C20&chxt=x%2Cy&icac=documentation&icretina=1&ichm=5b37d67a286c0978ab3658fa82e6501f0af5c3d012165185b813df76115eada3)](https://editor.image-charts.com/chart?chco=76A4FB&chd=s%3AcEAELFJHHHKUju9uuXUcd&chg=20%2C50&chls=2.0%2C0.0%2C0.0&chs=700x200&cht=lc&chxr=0%2C0%2C20%2C1%7C1%2C0%2C100%2C20&chxt=x%2Cy&icac=documentation&icretina=1&ichm=5b37d67a286c0978ab3658fa82e6501f0af5c3d012165185b813df76115eada3)
 
 ```
 cht=lc
@@ -48,7 +48,7 @@ chg=20,50
 
 The following example uses larger spaces to display lighter grid lines (**1,5**):
 
-[![chart](https://image-charts.com/chart?chco=76A4FB&chd=s:cEAELFJHHHKUju9uuXUcd&chg=20,50,1,5&chls=2.0,0.0,0.0&chs=700x200&cht=lc&chxr=0,0,20,1|1,0,100,20&chxt=x,y&icac=fgribreau&icretina=1&ichm=53c946d2708babd1f29024dab2dc649fdbaab0ff2e082dea5cba42c72baf2b1d)](https://editor.image-charts.com/chart?chco=76A4FB&chd=s:cEAELFJHHHKUju9uuXUcd&chg=20,50,1,5&chls=2.0,0.0,0.0&chs=700x200&cht=lc&chxr=0,0,20,1|1,0,100,20&chxt=x,y&icac=fgribreau&icretina=1&ichm=53c946d2708babd1f29024dab2dc649fdbaab0ff2e082dea5cba42c72baf2b1d)
+[![chart](https://image-charts.com/chart?chco=76A4FB&chd=s%3AcEAELFJHHHKUju9uuXUcd&chg=20%2C50%2C1%2C5&chls=2.0%2C0.0%2C0.0&chs=700x200&cht=lc&chxr=0%2C0%2C20%2C1%7C1%2C0%2C100%2C20&chxt=x%2Cy&icac=documentation&icretina=1&ichm=2b1c0bc4047dfe316edbf5d0e1f40d4ea829001e29e55bb9395fa1d0bb6061f4)](https://editor.image-charts.com/chart?chco=76A4FB&chd=s%3AcEAELFJHHHKUju9uuXUcd&chg=20%2C50%2C1%2C5&chls=2.0%2C0.0%2C0.0&chs=700x200&cht=lc&chxr=0%2C0%2C20%2C1%7C1%2C0%2C100%2C20&chxt=x%2Cy&icac=documentation&icretina=1&ichm=2b1c0bc4047dfe316edbf5d0e1f40d4ea829001e29e55bb9395fa1d0bb6061f4)
 
 ```
 chg=20,50,1,5
@@ -56,7 +56,7 @@ chg=20,50,1,5
 
 Finally let's hide the vertical grid lines from previous example:
 
-[![chart](https://image-charts.com/chart?chco=76A4FB&chd=s:cEAELFJHHHKUju9uuXUcd&chg=0,50,1,5&chls=2.0,0.0,0.0&chs=700x200&cht=lc&chxr=0,0,20,1|1,0,100,20&chxt=x,y&icac=fgribreau&icretina=1&ichm=d0c7f531eace6c5ded91461e09e3b5210c4547a84866917843be737e6fb55c41)](https://editor.image-charts.com/chart?chco=76A4FB&chd=s:cEAELFJHHHKUju9uuXUcd&chg=0,50,1,5&chls=2.0,0.0,0.0&chs=700x200&cht=lc&chxr=0,0,20,1|1,0,100,20&chxt=x,y&icac=fgribreau&icretina=1&ichm=d0c7f531eace6c5ded91461e09e3b5210c4547a84866917843be737e6fb55c41)
+[![chart](https://image-charts.com/chart?chco=76A4FB&chd=s%3AcEAELFJHHHKUju9uuXUcd&chg=0%2C50%2C1%2C5&chls=2.0%2C0.0%2C0.0&chs=700x200&cht=lc&chxr=0%2C0%2C20%2C1%7C1%2C0%2C100%2C20&chxt=x%2Cy&icac=documentation&icretina=1&ichm=bfc6f739dab89fa762369495741fdefeecd847a3bd39cb54b35fa91ba4d487de)](https://editor.image-charts.com/chart?chco=76A4FB&chd=s%3AcEAELFJHHHKUju9uuXUcd&chg=0%2C50%2C1%2C5&chls=2.0%2C0.0%2C0.0&chs=700x200&cht=lc&chxr=0%2C0%2C20%2C1%7C1%2C0%2C100%2C20&chxt=x%2Cy&icac=documentation&icretina=1&ichm=bfc6f739dab89fa762369495741fdefeecd847a3bd39cb54b35fa91ba4d487de)
 
 ```
 chg=0,50,1,5
@@ -64,7 +64,7 @@ chg=0,50,1,5
 
 Oh, and let's also change the axis colors (see [chxs](/reference/chart-axis/#axis-label-styles)). The y axis is the second displayed axis (so the 1 index) and we want the axis to have the `7FA5F4` color:
 
-[![chart](https://image-charts.com/chart?chco=76A4FB&chd=s%3AcEAELFJHHHKUju9uuXUcd&chg=0%2C50%2C1%2C5&chls=2.0%2C0.0%2C0.0&chs=700x200&cht=lc&chxr=0%2C0%2C20%2C1%7C1%2C0%2C100%2C20&chxs=1%2C33333%2C14%2C-1%2Cl%2CFFFFFF%2C7FA5F4&chxt=x%2Cy&icac=fgribreau&icretina=1&ichm=228081a510c4cf83051aea8e04bae6a66cf9c2187dd2f8ae4e3c96166099a562)](https://editor.image-charts.com/chart?chco=76A4FB&chd=s%3AcEAELFJHHHKUju9uuXUcd&chg=0%2C50%2C1%2C5&chls=2.0%2C0.0%2C0.0&chs=700x200&cht=lc&chxr=0%2C0%2C20%2C1%7C1%2C0%2C100%2C20&chxs=1%2C33333%2C14%2C-1%2Cl%2CFFFFFF%2C7FA5F4&chxt=x%2Cy&icac=fgribreau&icretina=1&ichm=228081a510c4cf83051aea8e04bae6a66cf9c2187dd2f8ae4e3c96166099a562
+[![chart](https://image-charts.com/chart?chco=76A4FB&chd=s%3AcEAELFJHHHKUju9uuXUcd&chg=0%2C50%2C1%2C5&chls=2.0%2C0.0%2C0.0&chs=700x200&cht=lc&chxr=0%2C0%2C20%2C1%7C1%2C0%2C100%2C20&chxs=1%2C33333%2C14%2C-1%2Cl%2CFFFFFF%2C7FA5F4&chxt=x%2Cy&icac=documentation&icretina=1&ichm=2b4dc673bbcba70fe8e739805e52a41a62a1038a85dc6706dd8182bb2da5492e)](https://editor.image-charts.com/chart?chco=76A4FB&chd=s%3AcEAELFJHHHKUju9uuXUcd&chg=0%2C50%2C1%2C5&chls=2.0%2C0.0%2C0.0&chs=700x200&cht=lc&chxr=0%2C0%2C20%2C1%7C1%2C0%2C100%2C20&chxs=1%2C33333%2C14%2C-1%2Cl%2CFFFFFF%2C7FA5F4&chxt=x%2Cy&icac=documentation&icretina=1&ichm=2b4dc673bbcba70fe8e739805e52a41a62a1038a85dc6706dd8182bb2da5492e
 )
 
 ```

@@ -50,7 +50,7 @@ chxt=
 
 For our first example, let's ask to display the y-axis:
 
-[![chart](https://image-charts.com/chart?chd=t%3A40%2C60%2C60%2C45%2C47%2C75%2C70%2C72&chs=700x125&cht=ls&chxt=y&icac=fgribreau&icretina=1&ichm=6069c739b38aed16e1aeec88e0e93a9013ce7bc20bbf859906c1a3b99e38c198)](https://editor.image-charts.com/chart?chd=t%3A40%2C60%2C60%2C45%2C47%2C75%2C70%2C72&chs=700x125&cht=ls&chxt=y&icac=fgribreau&icretina=1&ichm=6069c739b38aed16e1aeec88e0e93a9013ce7bc20bbf859906c1a3b99e38c198)
+[![chart](https://image-charts.com/chart?chd=t%3A40%2C60%2C60%2C45%2C47%2C75%2C70%2C72&chs=700x125&cht=ls&chxt=y&icac=documentation&icretina=1&ichm=906aef2ba6d0f9d69244b896dc062994c077dc8b3bc3d839b8d12a37ccc4d530)](https://editor.image-charts.com/chart?chd=t%3A40%2C60%2C60%2C45%2C47%2C75%2C70%2C72&chs=700x125&cht=ls&chxt=y&icac=documentation&icretina=1&ichm=906aef2ba6d0f9d69244b896dc062994c077dc8b3bc3d839b8d12a37ccc4d530)
 
 ```
 cht=ls
@@ -59,7 +59,7 @@ chxt=y
 
 Now let's display the x-axis:
 
-[![chart](https://image-charts.com/chart?chd=t%3A40%2C60%2C60%2C45%2C47%2C75%2C70%2C72&chs=700x125&cht=ls&chxt=x&icac=fgribreau&icretina=1&ichm=0fc031e3e108d1f1195476cd9e0ed990054942cc2d69ab37e71015cb1943f44d)](https://editor.image-charts.com/chart?chd=t%3A40%2C60%2C60%2C45%2C47%2C75%2C70%2C72&chs=700x125&cht=ls&chxt=x&icac=fgribreau&icretina=1&ichm=0fc031e3e108d1f1195476cd9e0ed990054942cc2d69ab37e71015cb1943f44d)
+[![chart](https://image-charts.com/chart?chd=t%3A40%2C60%2C60%2C45%2C47%2C75%2C70%2C72&chs=700x125&cht=ls&chxt=x&icac=documentation&icretina=1&ichm=a677f457ef554c7bf22a8a8c14a315ed85ce63027d2644086b49dc6bd8ca2c32)](https://editor.image-charts.com/chart?chd=t%3A40%2C60%2C60%2C45%2C47%2C75%2C70%2C72&chs=700x125&cht=ls&chxt=x&icac=documentation&icretina=1&ichm=a677f457ef554c7bf22a8a8c14a315ed85ce63027d2644086b49dc6bd8ca2c32)
 
 ```
 cht=ls
@@ -68,7 +68,7 @@ chxt=y
 
 Why not both?
 
-[![chart](https://image-charts.com/chart?chd=t%3A40%2C60%2C60%2C45%2C47%2C75%2C70%2C72&chs=700x125&cht=ls&chxt=x%2Cy&icac=fgribreau&icretina=1&ichm=cf6c75d1dabfcff3076a1fb304a0a55c248357ba639ccf1aaeaf45a599890a9b)](https://editor.image-charts.com/chart?chd=t%3A40%2C60%2C60%2C45%2C47%2C75%2C70%2C72&chs=700x125&cht=ls&chxt=x%2Cy&icac=fgribreau&icretina=1&ichm=cf6c75d1dabfcff3076a1fb304a0a55c248357ba639ccf1aaeaf45a599890a9b)
+[![chart](https://image-charts.com/chart?chd=t%3A40%2C60%2C60%2C45%2C47%2C75%2C70%2C72&chs=700x125&cht=ls&chxt=x%2Cy&icac=documentation&icretina=1&ichm=1b9de0b8a092863a09aac98a2754e176933c0ce04618fa9c15e94fa456dacd3b)](https://editor.image-charts.com/chart?chd=t%3A40%2C60%2C60%2C45%2C47%2C75%2C70%2C72&chs=700x125&cht=ls&chxt=x%2Cy&icac=documentation&icretina=1&ichm=1b9de0b8a092863a09aac98a2754e176933c0ce04618fa9c15e94fa456dacd3b)
 
 ```
 cht=ls
@@ -77,7 +77,7 @@ chxt=x,y
 
 Note that unlike sparklines (`cht=ls`), line-charts (`cht=lc`) automatically display x-axis and y-axis:
 
-[![chart](https://image-charts.com/chart?chd=t%3A40%2C60%2C60%2C45%2C47%2C75%2C70%2C72&chs=700x125&cht=lc&icac=fgribreau&icretina=1&ichm=c14783a235f01e852303f9ea468629bf3845bd51e8d97a9d0938ecc58a1be1f2)](https://editor.image-charts.com/chart?chd=t%3A40%2C60%2C60%2C45%2C47%2C75%2C70%2C72&chs=700x125&cht=lc&icac=fgribreau&icretina=1&ichm=c14783a235f01e852303f9ea468629bf3845bd51e8d97a9d0938ecc58a1be1f2)
+[![chart](https://image-charts.com/chart?chd=t%3A40%2C60%2C60%2C45%2C47%2C75%2C70%2C72&chs=700x125&cht=lc&icac=documentation&icretina=1&ichm=6cf888f4b111e18b9dae2024bfc6075983e26b8f66e37f47265427ef4f5d87bc)](https://editor.image-charts.com/chart?chd=t%3A40%2C60%2C60%2C45%2C47%2C75%2C70%2C72&chs=700x125&cht=lc&icac=documentation&icretina=1&ichm=6cf888f4b111e18b9dae2024bfc6075983e26b8f66e37f47265427ef4f5d87bc)
 
 ```
 cht=lc
@@ -85,7 +85,7 @@ cht=lc
 
 ... and you can suppress default axes in a line chart (`cht=lc`) by specifying `:nda` after the chart type.
 
-[![chart](https://image-charts.com/chart?chd=t%3A40%2C60%2C60%2C45%2C47%2C75%2C70%2C72&chs=700x125&cht=lc%3Anda&icac=fgribreau&icretina=1&ichm=80c72f834a87184f1f768b1a217a11107f57dae32611235b9cd91eca6c63d6e2)](https://editor.image-charts.com/chart?chd=t%3A40%2C60%2C60%2C45%2C47%2C75%2C70%2C72&chs=700x125&cht=lc%3Anda&icac=fgribreau&icretina=1&ichm=80c72f834a87184f1f768b1a217a11107f57dae32611235b9cd91eca6c63d6e2)
+[![chart](https://image-charts.com/chart?chd=t%3A40%2C60%2C60%2C45%2C47%2C75%2C70%2C72&chs=700x125&cht=lc%3Anda&icac=documentation&icretina=1&ichm=05957e4595c4d20548b569294581e589af57077f51ac0fc543bd268384b463eb)](https://editor.image-charts.com/chart?chd=t%3A40%2C60%2C60%2C45%2C47%2C75%2C70%2C72&chs=700x125&cht=lc%3Anda&icac=documentation&icretina=1&ichm=05957e4595c4d20548b569294581e589af57077f51ac0fc543bd268384b463eb)
 
 ```
 cht=lc:nda
@@ -95,7 +95,7 @@ cht=lc:nda
 !!! info "Enterprise+ subscribers"
     This example shows a line chart with an x-axis, a y-axis, a top axis (t), and a right axis (r). Because no labels are specified, the chart defaults to a range based on the dataset for all axes. Note that by default, the top and bottom axes don't show tick marks by the labels.
 
-    [![chart url multiple axis](https://image-charts.com/chart?chco=76A4FB&chd=s%3AcEAELFJHHHKUju9uuXUc&chls=2.0&chs=700x125&cht=lc&chxt=x%2Cy%2Ct%2Cr&icac=fgribreau&icretina=1&ichm=d31843a681fe882531e763d2ada25b595c6e83a5d8ddf8f607617c106d3ca3ce)](https://editor.image-charts.com/chart?chco=76A4FB&chd=s%3AcEAELFJHHHKUju9uuXUc&chls=2.0&chs=700x125&cht=lc&chxt=x%2Cy%2Ct%2Cr&icac=fgribreau&icretina=1&ichm=d31843a681fe882531e763d2ada25b595c6e83a5d8ddf8f607617c106d3ca3ce)
+    [![chart url multiple axis](https://image-charts.com/chart?chco=76A4FB&chd=s%3AcEAELFJHHHKUju9uuXUc&chls=2.0&chs=700x125&cht=lc&chxt=x%2Cy%2Ct%2Cr&icac=documentation&icretina=1&ichm=f6f9ce66b72284a151f61ad2822d0d3f2b68eb41322bfc56b535bb6858795d6d)](https://editor.image-charts.com/chart?chco=76A4FB&chd=s%3AcEAELFJHHHKUju9uuXUc&chls=2.0&chs=700x125&cht=lc&chxt=x%2Cy%2Ct%2Cr&icac=documentation&icretina=1&ichm=f6f9ce66b72284a151f61ad2822d0d3f2b68eb41322bfc56b535bb6858795d6d)
 
     ```
     chxt=x,y,r,t
@@ -103,13 +103,13 @@ cht=lc:nda
 
     You can include multiple sets of labels for each axis by including the same value more than once. This example shows two sets of x and two sets of y-axes. This isn't particularly useful when using only the default axis labels, as is shown here. But you can specify custom labels for each copy of each axis, using the `chxl` parameter.
 
-    [![chart with multiple x and y axis](https://image-charts.com/chart?chco=76A4FB&chd=s%3AcEAELFJHHHKUju9uuXUc&chls=2.0&chs=700x325&cht=lc&chxt=x%2Cx%2Cy%2Cy&icac=fgribreau&icretina=1&ichm=15fee9f965cabc36eca2034bec28a20c65e2a7e93d8e756adfa1e53202460d29)](https://editor.image-charts.com/chart?chco=76A4FB&chd=s%3AcEAELFJHHHKUju9uuXUc&chls=2.0&chs=700x325&cht=lc&chxt=x%2Cx%2Cy%2Cy&icac=fgribreau&icretina=1&ichm=15fee9f965cabc36eca2034bec28a20c65e2a7e93d8e756adfa1e53202460d29)
+    [![chart with multiple x and y axis](https://image-charts.com/chart?chco=76A4FB&chd=s%3AcEAELFJHHHKUju9uuXUc&chls=2.0&chs=700x325&cht=lc&chxt=x%2Cx%2Cy%2Cy&icac=documentation&icretina=1&ichm=a84c1f21a18a8b88f9c436282a0173a6ea2024a08b94d785e440e991f7fab7f8)](https://editor.image-charts.com/chart?chco=76A4FB&chd=s%3AcEAELFJHHHKUju9uuXUc&chls=2.0&chs=700x325&cht=lc&chxt=x%2Cx%2Cy%2Cy&icac=documentation&icretina=1&ichm=a84c1f21a18a8b88f9c436282a0173a6ea2024a08b94d785e440e991f7fab7f8)
 
     ```
     chxt=x,x,y,y
     ```
 
-    [![chart with multiple labels](https://image-charts.com/chart?chco=3072F3&chd=s%3AcEAELFJHHHKUju9uuXUc&chls=2.0&chm=B%2C03a9f4%2C0%2C0%2C0&chma=40%2C20%2C20%2C30&chs=700x325&cht=lc&chxl=1%3A%7CFreezing%7CHot%7C3%3A%7CLow%7CHigh&chxt=x%2Cx%2Cy%2Cy&icac=fgribreau&icretina=1&ichm=553522eccb8c9dd82fe3233ab8c6e12a5bdb3254467cf1d5413d42ef3c2d487f)](https://editor.image-charts.com/chart?chco=3072F3&chd=s%3AcEAELFJHHHKUju9uuXUc&chls=2.0&chm=B%2C03a9f4%2C0%2C0%2C0&chma=40%2C20%2C20%2C30&chs=700x325&cht=lc&chxl=1%3A%7CFreezing%7CHot%7C3%3A%7CLow%7CHigh&chxt=x%2Cx%2Cy%2Cy&icac=fgribreau&icretina=1&ichm=553522eccb8c9dd82fe3233ab8c6e12a5bdb3254467cf1d5413d42ef3c2d487f)
+    [![chart with multiple labels](https://image-charts.com/chart?chco=3072F3&chd=s%3AcEAELFJHHHKUju9uuXUc&chls=2.0&chm=B%2C03a9f4%2C0%2C0%2C0&chma=40%2C20%2C20%2C30&chs=700x325&cht=lc&chxl=1%3A%7CFreezing%7CHot%7C3%3A%7CLow%7CHigh&chxt=x%2Cx%2Cy%2Cy&icac=documentation&icretina=1&ichm=5ea2d55b8470e8eeedde789441afeb974a82c49d0089dc40c381d0497131eaad)](https://editor.image-charts.com/chart?chco=3072F3&chd=s%3AcEAELFJHHHKUju9uuXUc&chls=2.0&chm=B%2C03a9f4%2C0%2C0%2C0&chma=40%2C20%2C20%2C30&chs=700x325&cht=lc&chxl=1%3A%7CFreezing%7CHot%7C3%3A%7CLow%7CHigh&chxt=x%2Cx%2Cy%2Cy&icac=documentation&icretina=1&ichm=5ea2d55b8470e8eeedde789441afeb974a82c49d0089dc40c381d0497131eaad)
 
     ```
     chxt=x,x,y,y
@@ -124,7 +124,7 @@ cht=lc:nda
 
     The range for the y-axis and for the r-axis is determined by the number of bars. In this case, there are five bars, so the Chart API displays a range of 0 to 4. The first label is centered at the base of the first bar, the second label is centered at the base of the second bar, and so on.
 
-    [![](https://image-charts.com/chart?chco=76A4FB&chd=s%3AEUjVu&chls=2.0&chs=700x225&cht=bhs&chxt=x%2Cy%2Cr%2Ct&icac=fgribreau&icretina=1&ichm=5855ea3d26ca77473efeeb1bddecfaac30aa50b68c0e470ff187d89eda3b41fc)](https://editor.image-charts.com/chart?chco=76A4FB&chd=s%3AEUjVu&chls=2.0&chs=700x225&cht=bhs&chxt=x%2Cy%2Cr%2Ct&icac=fgribreau&icretina=1&ichm=5855ea3d26ca77473efeeb1bddecfaac30aa50b68c0e470ff187d89eda3b41fc)
+    [![](https://image-charts.com/chart?chco=76A4FB&chd=s%3AEUjVu&chls=2.0&chs=700x225&cht=bhs&chxt=x%2Cy%2Cr%2Ct&icac=documentation&icretina=1&ichm=42374d7ba37aa0a7a95fda4c91866844f60bb04e4586c17a2e8136c8c19977d0)](https://editor.image-charts.com/chart?chco=76A4FB&chd=s%3AEUjVu&chls=2.0&chs=700x225&cht=bhs&chxt=x%2Cy%2Cr%2Ct&icac=documentation&icretina=1&ichm=42374d7ba37aa0a7a95fda4c91866844f60bb04e4586c17a2e8136c8c19977d0)
 
     ```
     chxt=x,y,r,t
@@ -133,7 +133,7 @@ cht=lc:nda
 
 ### Axis Range
 
-You can specify the range of values that appear on each axis independently using the `chxr` parameter. Unlike in Google Image Charts the axis range is related to the data range, which make sense. 
+You can specify the range of values that appear on each axis independently using the `chxr` parameter. Unlike in Google Image Charts the axis range is related to the data range, which make sense.
 
 !!! info "This is only behavior change between Google Image Charts and Image Charts"
     In Google Image Charts specifying the `chxr` parameter changed the scale of the axis but not the dataset scale. In Image-Charts — because we think it's was the biggest usage issue with Google Image Charts — changing the axis scale through `chxr` also impact the whole dataset scale.
@@ -167,7 +167,7 @@ Each axis has a defined range. Because no step is specified, values are taken fr
 
 Y axis will have a range from 0 to 100 (`chxr`).
 
-[![chart](https://image-charts.com/chart?chco=76A4FB&chd=s%3AcEAELFJHHHKUju9uuXUc&chls=2.0&chs=700x300&cht=lc&chxr=1%2C0%2C100&chxt=x%2Cy&icac=fgribreau&icretina=1&ichm=595706d9c732b4a0c5821516f40afcb1a66bcd17a8e94de25dce6683ef98e740)](https://editor.image-charts.com/chart?chco=76A4FB&chd=s%3AcEAELFJHHHKUju9uuXUc&chls=2.0&chs=700x300&cht=lc&chxr=1%2C0%2C100&chxt=x%2Cy&icac=fgribreau&icretina=1&ichm=595706d9c732b4a0c5821516f40afcb1a66bcd17a8e94de25dce6683ef98e740)
+[![chart](https://image-charts.com/chart?chco=76A4FB&chd=s%3AcEAELFJHHHKUju9uuXUc&chls=2.0&chs=700x300&cht=lc&chxr=1%2C0%2C100&chxt=x%2Cy&icac=documentation&icretina=1&ichm=9304b5e2a02232513de0a2c3631195d89344949236f45e535371358f28a13633)](https://editor.image-charts.com/chart?chco=76A4FB&chd=s%3AcEAELFJHHHKUju9uuXUc&chls=2.0&chs=700x300&cht=lc&chxr=1%2C0%2C100&chxt=x%2Cy&icac=documentation&icretina=1&ichm=9304b5e2a02232513de0a2c3631195d89344949236f45e535371358f28a13633)
 
 ```
 chxt=x,y
@@ -178,7 +178,7 @@ In this example, we are defining values (`chd`) from -30 to 50 and allowing them
 
 The Y axis range (`chxr`) is set from -50 to 50 and both axis are visible (`chxt`).
 
-[![chart](https://image-charts.com/chart?chco=76A4FB&chd=t%3A20%2C30%2C40%2C50%2C-30%2C10&chds=-100%2C100&chls=2.0&chs=700x300&cht=bvs&chxr=1%2C-50%2C50&chxt=x%2Cy&icac=fgribreau&icretina=1&ichm=4f462883ddd99871b286c31020ca848dabf210111423e3af0bc65612df7493f4)](https://editor.image-charts.com/chart?chco=76A4FB&chd=t%3A20%2C30%2C40%2C50%2C-30%2C10&chds=-100%2C100&chls=2.0&chs=700x300&cht=bvs&chxr=1%2C-50%2C50&chxt=x%2Cy&icac=fgribreau&icretina=1&ichm=4f462883ddd99871b286c31020ca848dabf210111423e3af0bc65612df7493f4)
+[![chart](https://image-charts.com/chart?chco=76A4FB&chd=t%3A20%2C30%2C40%2C50%2C-30%2C10&chds=-100%2C100&chls=2.0&chs=700x300&cht=bvs&chxr=1%2C-50%2C50&chxt=x%2Cy&icac=documentation&icretina=1&ichm=23ebe46d8aacea1479ac0a8665900663639f797da7e74ebb63e92e02ba9b8db4)](https://editor.image-charts.com/chart?chco=76A4FB&chd=t%3A20%2C30%2C40%2C50%2C-30%2C10&chds=-100%2C100&chls=2.0&chs=700x300&cht=bvs&chxr=1%2C-50%2C50&chxt=x%2Cy&icac=documentation&icretina=1&ichm=23ebe46d8aacea1479ac0a8665900663639f797da7e74ebb63e92e02ba9b8db4)
 
 ```
 chxt=x,y
@@ -194,7 +194,7 @@ chxr=1,-50,50
 
     Axis direction is reversed for the r-axis (index 2), because the first value (`1000`) is larger than the last value (0).
 
-    [![](https://image-charts.com/chart?chco=76A4FB&chd=s%3AcEAELFJHHHKUju9uuXUc&chls=2.0&chs=700x225&cht=lc&chxr=1%2C0%2C200%7C2%2C1000%2C0&chxt=x%2Cy%2Cr&icac=fgribreau&icretina=1&ichm=e5b79ac7f50d44bf739afcdc639c1b9b5fab59d276a8adc55c293cd9e9581bef)](https://editor.image-charts.com/chart?chco=76A4FB&chd=s%3AcEAELFJHHHKUju9uuXUc&chls=2.0&chs=700x225&cht=lc&chxr=1%2C0%2C200%7C2%2C1000%2C0&chxt=x%2Cy%2Cr&icac=fgribreau&icretina=1&ichm=e5b79ac7f50d44bf739afcdc639c1b9b5fab59d276a8adc55c293cd9e9581bef)
+    [![](https://image-charts.com/chart?chco=76A4FB&chd=s%3AcEAELFJHHHKUju9uuXUc&chls=2.0&chs=700x225&cht=lc&chxr=1%2C0%2C200%7C2%2C1000%2C0&chxt=x%2Cy%2Cr&icac=documentation&icretina=1&ichm=56a06e0dddbf52293d1a68d105ceabddd294e146bfad605922a340a9fd61570c)](https://editor.image-charts.com/chart?chco=76A4FB&chd=s%3AcEAELFJHHHKUju9uuXUc&chls=2.0&chs=700x225&cht=lc&chxr=1%2C0%2C200%7C2%2C1000%2C0&chxt=x%2Cy%2Cr&icac=documentation&icretina=1&ichm=56a06e0dddbf52293d1a68d105ceabddd294e146bfad605922a340a9fd61570c)
 
     ```
     chxt=x,y,r
@@ -228,7 +228,7 @@ chxl=
 
 This example shows how to add custom labels to two axes. Note how the values are evenly spaced, and how the last `chxl` value does not end with a pipe.
 
-[![chart](https://image-charts.com/chart?chco=76A4FB&chd=t%3A10%2C5%2C34%2C10%2C5&chls=2.0&chs=700x190&cht=lc&chxl=0%3A%7CJan%7CFeb%7CMarch%7CApril%7CMay&chxt=x%2Cy&icac=fgribreau&icretina=1&ichm=6c51ae240d2e93e4157418bf65cf4439c347da8cdc00e3d550328c48374df807)](https://editor.image-charts.com/chart?chco=76A4FB&chd=t%3A10%2C5%2C34%2C10%2C5&chls=2.0&chs=700x190&cht=lc&chxl=0%3A%7CJan%7CFeb%7CMarch%7CApril%7CMay&chxt=x%2Cy&icac=fgribreau&icretina=1&ichm=6c51ae240d2e93e4157418bf65cf4439c347da8cdc00e3d550328c48374df807)
+[![chart](https://image-charts.com/chart?chco=76A4FB&chd=t%3A10%2C5%2C34%2C10%2C5&chls=2.0&chs=700x190&cht=lc&chxl=0%3A%7CJan%7CFeb%7CMarch%7CApril%7CMay&chxt=x%2Cy&icac=documentation&icretina=1&ichm=561fad5b9d0e82d47d2ec61eb94e01d019e5184ad1e3c023ed3d36354a198c4d)](https://editor.image-charts.com/chart?chco=76A4FB&chd=t%3A10%2C5%2C34%2C10%2C5&chls=2.0&chs=700x190&cht=lc&chxl=0%3A%7CJan%7CFeb%7CMarch%7CApril%7CMay&chxt=x%2Cy&icac=documentation&icretina=1&ichm=561fad5b9d0e82d47d2ec61eb94e01d019e5184ad1e3c023ed3d36354a198c4d)
 
 ```
 cht=lc
@@ -242,7 +242,7 @@ chs=700x190
 
 Labels also work in [bar charts](/bar-charts):
 
-[![chart](https://image-charts.com/chart?chan=1200%2CeaseOutBounce&chd=t%3A10%2C40%2C25&chf=b0%2Clg%2C90%2C03a9f4%2C0%2C3f51b5%2C1&chs=700x190&cht=bvs&chxl=0%3A%7CJun%7CJuly%7CAug&chxt=x%2Cy&icac=fgribreau&icretina=1&ichm=e0f081c33e778f41bba6276e96696ac8260334c4eb43ac6a06b6c8c2d724812a)](https://editor.image-charts.com/chart?chan=1200%2CeaseOutBounce&chd=t%3A10%2C40%2C25&chf=b0%2Clg%2C90%2C03a9f4%2C0%2C3f51b5%2C1&chs=700x190&cht=bvs&chxl=0%3A%7CJun%7CJuly%7CAug&chxt=x%2Cy&icac=fgribreau&icretina=1&ichm=e0f081c33e778f41bba6276e96696ac8260334c4eb43ac6a06b6c8c2d724812a)
+[![chart](https://image-charts.com/chart?chan=1200%2CeaseOutBounce&chd=t%3A10%2C40%2C25&chf=b0%2Clg%2C90%2C03a9f4%2C0%2C3f51b5%2C1&chs=700x190&cht=bvs&chxl=0%3A%7CJun%7CJuly%7CAug&chxt=x%2Cy&icac=documentation&icretina=1&ichm=a5a7745bcb45f8bdaf8ce6490488e5d4f6bcca071f1dde41fc651e195f1233af)](https://editor.image-charts.com/chart?chan=1200%2CeaseOutBounce&chd=t%3A10%2C40%2C25&chf=b0%2Clg%2C90%2C03a9f4%2C0%2C3f51b5%2C1&chs=700x190&cht=bvs&chxl=0%3A%7CJun%7CJuly%7CAug&chxt=x%2Cy&icac=documentation&icretina=1&ichm=a5a7745bcb45f8bdaf8ce6490488e5d4f6bcca071f1dde41fc651e195f1233af)
 
 ```
 cht=bvs
@@ -256,7 +256,7 @@ chan=1200,easeOutBounce
 
 This chart shows how to add custom labels to two axes. Note how the values are evenly spaced, and how the last chxl value does not end with a pipe.
 
-[![](https://image-charts.com/chart?chco=76A4FB&chd=s%3AcEAELFJHHHKUju9uuXUc&chls=2.0&chs=700x300&cht=lc&chxl=0%3A%7CJan%7CFeb%7CMarch%7CApril%7CMay%7C1%3A%7CMin%7CMid%7CMax&chxt=x%2Cy&icac=fgribreau&icretina=1&ichm=4d06f8fbfa062fe52737ddb9572f77de89481dd0965d7f7a56894f9f2b5b0a71)](https://editor.image-charts.com/chart?chco=76A4FB&chd=s%3AcEAELFJHHHKUju9uuXUc&chls=2.0&chs=700x300&cht=lc&chxl=0%3A%7CJan%7CFeb%7CMarch%7CApril%7CMay%7C1%3A%7CMin%7CMid%7CMax&chxt=x%2Cy&icac=fgribreau&icretina=1&ichm=4d06f8fbfa062fe52737ddb9572f77de89481dd0965d7f7a56894f9f2b5b0a71)
+[![](https://image-charts.com/chart?chco=76A4FB&chd=s%3AcEAELFJHHHKUju9uuXUc&chls=2.0&chs=700x300&cht=lc&chxl=0%3A%7CJan%7CFeb%7CMarch%7CApril%7CMay%7C1%3A%7CMin%7CMid%7CMax&chxt=x%2Cy&icac=documentation&icretina=1&ichm=bf72c9398baf5c1d5423438ecda655ff35133ea0d161bbe843525b7959c7f93a)](https://editor.image-charts.com/chart?chco=76A4FB&chd=s%3AcEAELFJHHHKUju9uuXUc&chls=2.0&chs=700x300&cht=lc&chxl=0%3A%7CJan%7CFeb%7CMarch%7CApril%7CMay%7C1%3A%7CMin%7CMid%7CMax&chxt=x%2Cy&icac=documentation&icretina=1&ichm=bf72c9398baf5c1d5423438ecda655ff35133ea0d161bbe843525b7959c7f93a)
 
 ```
 chxt=x,y
@@ -268,7 +268,7 @@ chxl=
 !!! info "Enterprise+ subscribers"
     The example below includes axis labels on the left and right y-axes (`y` and `r`). It also includes two sets of values for the x-axis (x). You could consider adding tick marks on the y-axis using `chxs`.
 
-    [![](https://image-charts.com/chart?chco=76A4FB&chd=s%3AcEAELFJHHHKUju9uuXUc&chls=2.0&chs=700x325&cht=lc&chxl=0%3A%7CJan%7CJuly%7CJan%7CJuly%7CJan%7C1%3A%7C0%7C50%7C100%7C2%3A%7CA%7CB%7CC%7C3%3A%7C2005%7C2006%7C2007&chxt=x%2Cy%2Cr%2Cx&icac=fgribreau&icretina=1&ichm=c8c3a32d4bc2bb6888c6406a46e112cd4163050e8e73275ac6773a9ab57e2192)](https://editor.image-charts.com/chart?chco=76A4FB&chd=s%3AcEAELFJHHHKUju9uuXUc&chls=2.0&chs=700x325&cht=lc&chxl=0%3A%7CJan%7CJuly%7CJan%7CJuly%7CJan%7C1%3A%7C0%7C50%7C100%7C2%3A%7CA%7CB%7CC%7C3%3A%7C2005%7C2006%7C2007&chxt=x%2Cy%2Cr%2Cx&icac=fgribreau&icretina=1&ichm=c8c3a32d4bc2bb6888c6406a46e112cd4163050e8e73275ac6773a9ab57e2192)
+    [![](https://image-charts.com/chart?chco=76A4FB&chd=s%3AcEAELFJHHHKUju9uuXUc&chls=2.0&chs=700x325&cht=lc&chxl=0%3A%7CJan%7CJuly%7CJan%7CJuly%7CJan%7C1%3A%7C0%7C50%7C100%7C2%3A%7CA%7CB%7CC%7C3%3A%7C2005%7C2006%7C2007&chxt=x%2Cy%2Cr%2Cx&icac=documentation&icretina=1&ichm=18d19be63c842c10ea0f6c27c887e5a87eee9fd075c97e369ff434b855faf509)](https://editor.image-charts.com/chart?chco=76A4FB&chd=s%3AcEAELFJHHHKUju9uuXUc&chls=2.0&chs=700x325&cht=lc&chxl=0%3A%7CJan%7CJuly%7CJan%7CJuly%7CJan%7C1%3A%7C0%7C50%7C100%7C2%3A%7CA%7CB%7CC%7C3%3A%7C2005%7C2006%7C2007&chxt=x%2Cy%2Cr%2Cx&icac=documentation&icretina=1&ichm=18d19be63c842c10ea0f6c27c887e5a87eee9fd075c97e369ff434b855faf509)
 
     ```
     chxt=x,y,r,x
@@ -281,7 +281,7 @@ chxl=
 
     If you want to add a generic label to describe a whole axis (for example, to label one axis "cost" and another "student"), use the chxt property to add an additional axis on each side, then use chxl to add a single custom label to each side.
 
-    [![](https://image-charts.com/chart?chd=s%3Ac9ucD&chls=2.0&chs=700x325&cht=bvs&chxl=1%3A%7CMartinis%7C3%3A%7CScore&chxt=x%2Cx%2Cy%2Cy&icac=fgribreau&icretina=1&ichm=245b949723a85d15129bfca048c6b3cd252a0a44f7a153b39dc2c72715bc9d98)](https://editor.image-charts.com/chart?chd=s%3Ac9ucD&chls=2.0&chs=700x325&cht=bvs&chxl=1%3A%7CMartinis%7C3%3A%7CScore&chxt=x%2Cx%2Cy%2Cy&icac=fgribreau&icretina=1&ichm=245b949723a85d15129bfca048c6b3cd252a0a44f7a153b39dc2c72715bc9d98)
+    [![](https://image-charts.com/chart?chd=s%3Ac9ucD&chls=2.0&chs=700x325&cht=bvs&chxl=1%3A%7CMartinis%7C3%3A%7CScore&chxt=x%2Cx%2Cy%2Cy&icac=documentation&icretina=1&ichm=6a4b3ab6adcd9b5a20c645fb32fb505a6c68d1b4d81f8608546361599ee80f2c)](https://editor.image-charts.com/chart?chd=s%3Ac9ucD&chls=2.0&chs=700x325&cht=bvs&chxl=1%3A%7CMartinis%7C3%3A%7CScore&chxt=x%2Cx%2Cy%2Cy&icac=documentation&icretina=1&ichm=6a4b3ab6adcd9b5a20c645fb32fb505a6c68d1b4d81f8608546361599ee80f2c)
 
     ```
     chxt=x,x,y,y
@@ -290,7 +290,7 @@ chxl=
 
     This example uses default values for the axis labels on the left y-axis.
 
-    [![](https://image-charts.com/chart?chbh=r%2C0.3&chco=76A4FB&chd=s%3Ac9uDc&chls=2.0&chs=700x325&cht=bvs&chxl=0%3A%7CJan%7CJuly%7CJan%7CJuly%7CJan%7C2%3A%7CA%7CB%7CC%7C3%3A%7C2005%7C%7C2006%7C%7C2007&chxt=x%2Cy%2Cr%2Cx&icac=fgribreau&icretina=1&ichm=0dff58a5ff6ba2947cab9ce08bafdfc2479d2adaca4119159b3befdb3c186d24)](https://editor.image-charts.com/chart?chbh=r%2C0.3&chco=76A4FB&chd=s%3Ac9uDc&chls=2.0&chs=700x325&cht=bvs&chxl=0%3A%7CJan%7CJuly%7CJan%7CJuly%7CJan%7C2%3A%7CA%7CB%7CC%7C3%3A%7C2005%7C%7C2006%7C%7C2007&chxt=x%2Cy%2Cr%2Cx&icac=fgribreau&icretina=1&ichm=0dff58a5ff6ba2947cab9ce08bafdfc2479d2adaca4119159b3befdb3c186d24)
+    [![](https://image-charts.com/chart?chbh=r%2C0.3&chco=76A4FB&chd=s%3Ac9uDc&chls=2.0&chs=700x325&cht=bvs&chxl=0%3A%7CJan%7CJuly%7CJan%7CJuly%7CJan%7C2%3A%7CA%7CB%7CC%7C3%3A%7C2005%7C%7C2006%7C%7C2007&chxt=x%2Cy%2Cr%2Cx&icac=documentation&icretina=1&ichm=7289148f80eba957e6c24a0757271a1176e7b8d2a5600191ffcbb88fba721af8)](https://editor.image-charts.com/chart?chbh=r%2C0.3&chco=76A4FB&chd=s%3Ac9uDc&chls=2.0&chs=700x325&cht=bvs&chxl=0%3A%7CJan%7CJuly%7CJan%7CJuly%7CJan%7C2%3A%7CA%7CB%7CC%7C3%3A%7C2005%7C%7C2006%7C%7C2007&chxt=x%2Cy%2Cr%2Cx&icac=documentation&icretina=1&ichm=7289148f80eba957e6c24a0757271a1176e7b8d2a5600191ffcbb88fba721af8)
 
     ```
     chxt=x,y,r,x
@@ -356,14 +356,14 @@ chxs=
 
 Display the x-axis labels in `#FF00FF` with a 13px font-size and `#FF0000` color for the y-axis.
 
-[![chart](https://image-charts.com/chart?chco=76A4FB&chd=s%3AcEAELFJHHHKUju9uuXUc&chls=2.0&chs=700x300&cht=lc&chxr=1%2C0%2C70&chxs=0%2CFF00FF%2C13%2C0%2Ct%7C1%2CFF0000&chxt=x%2Cy&icac=fgribreau&icretina=1&ichm=9bb1101491ce0536278abb8bfb46a0fc3de0285fcf2579495a1dfabe666ca13f)](https://editor.image-charts.com/chart?chco=76A4FB&chd=s%3AcEAELFJHHHKUju9uuXUc&chls=2.0&chs=700x300&cht=lc&chxr=1%2C0%2C70&chxs=0%2CFF00FF%2C13%2C0%2Ct%7C1%2CFF0000&chxt=x%2Cy&icac=fgribreau&icretina=1&ichm=9bb1101491ce0536278abb8bfb46a0fc3de0285fcf2579495a1dfabe666ca13f)
+[![chart](https://image-charts.com/chart?chco=76A4FB&chd=s%3AcEAELFJHHHKUju9uuXUc&chls=2.0&chs=700x300&cht=lc&chxr=1%2C0%2C70&chxs=0%2CFF00FF%2C13%2C0%2Ct%7C1%2CFF0000&chxt=x%2Cy&icac=documentation&icretina=1&ichm=c796a246b112590671e8cc43d6ab7d57c5419b4f525786b6fb154b7d30c58b26)](https://editor.image-charts.com/chart?chco=76A4FB&chd=s%3AcEAELFJHHHKUju9uuXUc&chls=2.0&chs=700x300&cht=lc&chxr=1%2C0%2C70&chxs=0%2CFF00FF%2C13%2C0%2Ct%7C1%2CFF0000&chxt=x%2Cy&icac=documentation&icretina=1&ichm=c796a246b112590671e8cc43d6ab7d57c5419b4f525786b6fb154b7d30c58b26)
 
 ```
 &chxt=x,y
 &chxs=0,FF00FF,13|1,FF0000
 ```
 
-[![chart](https://image-charts.com/chart?chd=s%3A984sttvuvkQIBLKNCAIi%2CDEJPgq0uov17zwopQODS&chs=700x300&cht=ls&chxr=0%2C0%2C100&chxs=1N%2AcUSD2sz%2AMil%2C000000&chxt=x%2Cy&icac=fgribreau&icretina=1&ichm=f96bf9ff292af3916659b2a8d2fa88a3fc82c96d1f227f19b636b400f0228fd9)](https://editor.image-charts.com/chart?chd=s%3A984sttvuvkQIBLKNCAIi%2CDEJPgq0uov17zwopQODS&chs=700x300&cht=ls&chxr=0%2C0%2C100&chxs=1N%2AcUSD2sz%2AMil%2C000000&chxt=x%2Cy&icac=fgribreau&icretina=1&ichm=f96bf9ff292af3916659b2a8d2fa88a3fc82c96d1f227f19b636b400f0228fd9)
+[![chart](https://image-charts.com/chart?chd=s%3A984sttvuvkQIBLKNCAIi%2CDEJPgq0uov17zwopQODS&chs=700x300&cht=ls&chxr=0%2C0%2C100&chxs=1N%2AcUSD2sz%2AMil%2C000000&chxt=x%2Cy&icac=documentation&icretina=1&ichm=e917351fdef2197ce5e3c634ddef2395d5fbb6c633c02e16fb62e7acf16372ff)](https://editor.image-charts.com/chart?chd=s%3A984sttvuvkQIBLKNCAIi%2CDEJPgq0uov17zwopQODS&chs=700x300&cht=ls&chxr=0%2C0%2C100&chxs=1N%2AcUSD2sz%2AMil%2C000000&chxt=x%2Cy&icac=documentation&icretina=1&ichm=e917351fdef2197ce5e3c634ddef2395d5fbb6c633c02e16fb62e7acf16372ff)
 
 ```
 &chxt=x,y
@@ -380,7 +380,7 @@ Display the x-axis labels in `#FF00FF` with a 13px font-size and `#FF0000` color
 
 Chart below has an x-axis with 1 trailing zero (z) colored in black with 10px font-size and an y-axis with a $ currency suffixed by Mil, colored in `#007939` with a 20px font-size.
 
-[![chart](https://image-charts.com/chart?chd=s%3A984sttvuvkQIBLKNCAIi%2CDEJPgq0uov17zwopQODS&chdl=2017%7C2018&chs=700x300&cht=ls&chxr=0%2C0%2C1000000%2C250000%7C1%2C0%2C60%7C2%2C0%2C5000&chxs=0N%2Af1z%2A%2C000000%2C10%7C1N%2AcUSD%2AMil%2C007939%2C20&chxt=x%2Cy&icac=fgribreau&icretina=1&ichm=fef8b1562547b978b74d23a3b78be6f1bc31492a6652f958a4a5cbdc38bcf19e)](https://editor.image-charts.com/chart?chd=s%3A984sttvuvkQIBLKNCAIi%2CDEJPgq0uov17zwopQODS&chdl=2017%7C2018&chs=700x300&cht=ls&chxr=0%2C0%2C1000000%2C250000%7C1%2C0%2C60%7C2%2C0%2C5000&chxs=0N%2Af1z%2A%2C000000%2C10%7C1N%2AcUSD%2AMil%2C007939%2C20&chxt=x%2Cy&icac=fgribreau&icretina=1&ichm=fef8b1562547b978b74d23a3b78be6f1bc31492a6652f958a4a5cbdc38bcf19e)
+[![chart](https://image-charts.com/chart?chd=s%3A984sttvuvkQIBLKNCAIi%2CDEJPgq0uov17zwopQODS&chdl=2017%7C2018&chs=700x300&cht=ls&chxs=0N%2Af1z%2A%2C000000%2C10%7C1N%2AcUSD%2AMil%2C007939%2C20&chxt=x%2Cy&icac=documentation&icretina=1&ichm=18a9b1ef7cb2cb893f76864b918781b65506fd9245cd9013bbdc138c7505f09c)](https://editor.image-charts.com/?tab_viewer=image#https:/image-charts.com/chart?chd=s%3A984sttvuvkQIBLKNCAIi%2CDEJPgq0uov17zwopQODS&chdl=2017%7C2018&chs=700x300&cht=ls&chxs=0N%2Af1z%2A%2C000000%2C10%7C1N%2AcUSD%2AMil%2C007939%2C20&chxt=x%2Cy&icac=documentation&icretina=1&ichm=18a9b1ef7cb2cb893f76864b918781b65506fd9245cd9013bbdc138c7505f09c)
 
 ```
 &chxt=x,y
@@ -389,7 +389,7 @@ Chart below has an x-axis with 1 trailing zero (z) colored in black with 10px fo
 
 Chart below has too many labels in the x axis:
 
-[![chart](https://image-charts.com/chart?chco=FF0000&chd=a%3A0%2C1%2C2%2C3%2C4%2C5%2C6%2C7%2C8%2C9%2C10%2C11%2C12%2C13%2C14%2C15%2C16%2C17%2C18%2C19%2C20%2C21%2C22%2C23%2C24%2C25%2C26%2C27%2C28%2C29%2C0%2C1%2C2%2C3%2C4%2C5%2C6%2C7%2C8%2C9%2C10%2C11%2C12%2C13%2C14%2C15%2C16%2C17%2C18%2C19%2C20%2C21%2C22%2C23%2C24%2C25%2C26%2C27%2C28%2C29%2C0%2C1%2C2%2C3%2C4%2C5%2C6%2C7%2C8%2C9%2C10%2C11%2C12%2C13%2C14%2C15%2C16%2C17%2C18%2C19%2C20%2C21%2C22%2C23%2C24%2C25%2C26%2C27%2C28%2C29%2C0%2C1%2C2%2C3%2C4%2C5%2C6%2C7%2C8%2C9%2C10%2C11%2C12%2C13%2C14%2C15%2C16%2C17%2C18%2C19%2C20%2C21%2C22%2C23%2C24%2C25%2C26%2C27%2C28%2C29%2C0%2C1%2C2%2C3%2C4%2C5%2C6%2C7%2C8%2C9%2C10%2C11%2C12%2C13%2C14%2C15%2C16%2C17%2C18%2C19%2C20%2C21%2C22%2C23%2C24%2C25%2C26%2C27%2C28%2C29%2C0%2C1%2C2%2C3%2C4%2C5%2C6%2C7%2C8%2C9%2C10%2C11%2C12%2C13%2C14%2C15%2C16%2C17&chdl=Temperature&chs=700x190&cht=bvg&chtt=Temperature%20last%20week&chxs=1N%2A%2A%C2%BAC%2C000000&chxt=x%2Cy&icac=fgribreau&icretina=1&ichm=9ee613d417769bb6fce86fc64d7644cff3c8401cb7c316647534df6d602a6634)](https://editor.image-charts.com/chart?chco=FF0000&chd=a%3A0%2C1%2C2%2C3%2C4%2C5%2C6%2C7%2C8%2C9%2C10%2C11%2C12%2C13%2C14%2C15%2C16%2C17%2C18%2C19%2C20%2C21%2C22%2C23%2C24%2C25%2C26%2C27%2C28%2C29%2C0%2C1%2C2%2C3%2C4%2C5%2C6%2C7%2C8%2C9%2C10%2C11%2C12%2C13%2C14%2C15%2C16%2C17%2C18%2C19%2C20%2C21%2C22%2C23%2C24%2C25%2C26%2C27%2C28%2C29%2C0%2C1%2C2%2C3%2C4%2C5%2C6%2C7%2C8%2C9%2C10%2C11%2C12%2C13%2C14%2C15%2C16%2C17%2C18%2C19%2C20%2C21%2C22%2C23%2C24%2C25%2C26%2C27%2C28%2C29%2C0%2C1%2C2%2C3%2C4%2C5%2C6%2C7%2C8%2C9%2C10%2C11%2C12%2C13%2C14%2C15%2C16%2C17%2C18%2C19%2C20%2C21%2C22%2C23%2C24%2C25%2C26%2C27%2C28%2C29%2C0%2C1%2C2%2C3%2C4%2C5%2C6%2C7%2C8%2C9%2C10%2C11%2C12%2C13%2C14%2C15%2C16%2C17%2C18%2C19%2C20%2C21%2C22%2C23%2C24%2C25%2C26%2C27%2C28%2C29%2C0%2C1%2C2%2C3%2C4%2C5%2C6%2C7%2C8%2C9%2C10%2C11%2C12%2C13%2C14%2C15%2C16%2C17&chdl=Temperature&chs=700x190&cht=bvg&chtt=Temperature%20last%20week&chxs=1N%2A%2A%C2%BAC%2C000000&chxt=x%2Cy&icac=fgribreau&icretina=1&ichm=9ee613d417769bb6fce86fc64d7644cff3c8401cb7c316647534df6d602a6634)
+[![chart](https://image-charts.com/chart?chco=FF0000&chd=a%3A0%2C1%2C2%2C3%2C4%2C5%2C6%2C7%2C8%2C9%2C10%2C11%2C12%2C13%2C14%2C15%2C16%2C17%2C18%2C19%2C20%2C21%2C22%2C23%2C24%2C25%2C26%2C27%2C28%2C29%2C0%2C1%2C2%2C3%2C4%2C5%2C6%2C7%2C8%2C9%2C10%2C11%2C12%2C13%2C14%2C15%2C16%2C17%2C18%2C19%2C20%2C21%2C22%2C23%2C24%2C25%2C26%2C27%2C28%2C29%2C0%2C1%2C2%2C3%2C4%2C5%2C6%2C7%2C8%2C9%2C10%2C11%2C12%2C13%2C14%2C15%2C16%2C17%2C18%2C19%2C20%2C21%2C22%2C23%2C24%2C25%2C26%2C27%2C28%2C29%2C0%2C1%2C2%2C3%2C4%2C5%2C6%2C7%2C8%2C9%2C10%2C11%2C12%2C13%2C14%2C15%2C16%2C17%2C18%2C19%2C20%2C21%2C22%2C23%2C24%2C25%2C26%2C27%2C28%2C29%2C0%2C1%2C2%2C3%2C4%2C5%2C6%2C7%2C8%2C9%2C10%2C11%2C12%2C13%2C14%2C15%2C16%2C17%2C18%2C19%2C20%2C21%2C22%2C23%2C24%2C25%2C26%2C27%2C28%2C29%2C0%2C1%2C2%2C3%2C4%2C5%2C6%2C7%2C8%2C9%2C10%2C11%2C12%2C13%2C14%2C15%2C16%2C17&chdl=Temperature&chs=700x190&cht=bvg&chtt=Temperature%20last%20week&chxs=1N%2A%2A%C2%BAC%2C000000&chxt=x%2Cy&icac=documentation&icretina=1&ichm=8ef9513cc56d78455ff0e37b3fc9db31c5ea458c484c843aa409242eb0dee5e9)](https://editor.image-charts.com/chart?chco=FF0000&chd=a%3A0%2C1%2C2%2C3%2C4%2C5%2C6%2C7%2C8%2C9%2C10%2C11%2C12%2C13%2C14%2C15%2C16%2C17%2C18%2C19%2C20%2C21%2C22%2C23%2C24%2C25%2C26%2C27%2C28%2C29%2C0%2C1%2C2%2C3%2C4%2C5%2C6%2C7%2C8%2C9%2C10%2C11%2C12%2C13%2C14%2C15%2C16%2C17%2C18%2C19%2C20%2C21%2C22%2C23%2C24%2C25%2C26%2C27%2C28%2C29%2C0%2C1%2C2%2C3%2C4%2C5%2C6%2C7%2C8%2C9%2C10%2C11%2C12%2C13%2C14%2C15%2C16%2C17%2C18%2C19%2C20%2C21%2C22%2C23%2C24%2C25%2C26%2C27%2C28%2C29%2C0%2C1%2C2%2C3%2C4%2C5%2C6%2C7%2C8%2C9%2C10%2C11%2C12%2C13%2C14%2C15%2C16%2C17%2C18%2C19%2C20%2C21%2C22%2C23%2C24%2C25%2C26%2C27%2C28%2C29%2C0%2C1%2C2%2C3%2C4%2C5%2C6%2C7%2C8%2C9%2C10%2C11%2C12%2C13%2C14%2C15%2C16%2C17%2C18%2C19%2C20%2C21%2C22%2C23%2C24%2C25%2C26%2C27%2C28%2C29%2C0%2C1%2C2%2C3%2C4%2C5%2C6%2C7%2C8%2C9%2C10%2C11%2C12%2C13%2C14%2C15%2C16%2C17&chdl=Temperature&chs=700x190&cht=bvg&chtt=Temperature%20last%20week&chxs=1N%2A%2A%C2%BAC%2C000000&chxt=x%2Cy&icac=documentation&icretina=1&ichm=8ef9513cc56d78455ff0e37b3fc9db31c5ea458c484c843aa409242eb0dee5e9)
 
 ```
 &chxs=1N**ºC,000000
@@ -397,7 +397,7 @@ Chart below has too many labels in the x axis:
 
 Thus we use `<skip_labels>` (see `0,s`, 0 means x axis and `s` means skip labels) to only let Image-Charts only display some of them:
 
-[![chart](https://image-charts.com/chart?chco=FF0000&chd=a%3A0%2C1%2C2%2C3%2C4%2C5%2C6%2C7%2C8%2C9%2C10%2C11%2C12%2C13%2C14%2C15%2C16%2C17%2C18%2C19%2C20%2C21%2C22%2C23%2C24%2C25%2C26%2C27%2C28%2C29%2C0%2C1%2C2%2C3%2C4%2C5%2C6%2C7%2C8%2C9%2C10%2C11%2C12%2C13%2C14%2C15%2C16%2C17%2C18%2C19%2C20%2C21%2C22%2C23%2C24%2C25%2C26%2C27%2C28%2C29%2C0%2C1%2C2%2C3%2C4%2C5%2C6%2C7%2C8%2C9%2C10%2C11%2C12%2C13%2C14%2C15%2C16%2C17%2C18%2C19%2C20%2C21%2C22%2C23%2C24%2C25%2C26%2C27%2C28%2C29%2C0%2C1%2C2%2C3%2C4%2C5%2C6%2C7%2C8%2C9%2C10%2C11%2C12%2C13%2C14%2C15%2C16%2C17%2C18%2C19%2C20%2C21%2C22%2C23%2C24%2C25%2C26%2C27%2C28%2C29%2C0%2C1%2C2%2C3%2C4%2C5%2C6%2C7%2C8%2C9%2C10%2C11%2C12%2C13%2C14%2C15%2C16%2C17%2C18%2C19%2C20%2C21%2C22%2C23%2C24%2C25%2C26%2C27%2C28%2C29%2C0%2C1%2C2%2C3%2C4%2C5%2C6%2C7%2C8%2C9%2C10%2C11%2C12%2C13%2C14%2C15%2C16%2C17&chdl=Temperature&chs=700x190&cht=bvg&chtt=Temperature%20last%20week&chxs=1N%2A%2A%C2%BAC%2C000000%7C0%2Cs&chxt=x%2Cy&icac=fgribreau&icretina=1&ichm=6c4413b5255d878ae218e7ebdbf4ac2b721ca047fd8049fe94d07c8af9b46d87)](https://editor.image-charts.com/chart?chco=FF0000&chd=a%3A0%2C1%2C2%2C3%2C4%2C5%2C6%2C7%2C8%2C9%2C10%2C11%2C12%2C13%2C14%2C15%2C16%2C17%2C18%2C19%2C20%2C21%2C22%2C23%2C24%2C25%2C26%2C27%2C28%2C29%2C0%2C1%2C2%2C3%2C4%2C5%2C6%2C7%2C8%2C9%2C10%2C11%2C12%2C13%2C14%2C15%2C16%2C17%2C18%2C19%2C20%2C21%2C22%2C23%2C24%2C25%2C26%2C27%2C28%2C29%2C0%2C1%2C2%2C3%2C4%2C5%2C6%2C7%2C8%2C9%2C10%2C11%2C12%2C13%2C14%2C15%2C16%2C17%2C18%2C19%2C20%2C21%2C22%2C23%2C24%2C25%2C26%2C27%2C28%2C29%2C0%2C1%2C2%2C3%2C4%2C5%2C6%2C7%2C8%2C9%2C10%2C11%2C12%2C13%2C14%2C15%2C16%2C17%2C18%2C19%2C20%2C21%2C22%2C23%2C24%2C25%2C26%2C27%2C28%2C29%2C0%2C1%2C2%2C3%2C4%2C5%2C6%2C7%2C8%2C9%2C10%2C11%2C12%2C13%2C14%2C15%2C16%2C17%2C18%2C19%2C20%2C21%2C22%2C23%2C24%2C25%2C26%2C27%2C28%2C29%2C0%2C1%2C2%2C3%2C4%2C5%2C6%2C7%2C8%2C9%2C10%2C11%2C12%2C13%2C14%2C15%2C16%2C17&chdl=Temperature&chs=700x190&cht=bvg&chtt=Temperature%20last%20week&chxs=1N%2A%2A%C2%BAC%2C000000%7C0%2Cs&chxt=x%2Cy&icac=fgribreau&icretina=1&ichm=6c4413b5255d878ae218e7ebdbf4ac2b721ca047fd8049fe94d07c8af9b46d87)
+[![chart](https://image-charts.com/chart?chco=FF0000&chd=a%3A0%2C1%2C2%2C3%2C4%2C5%2C6%2C7%2C8%2C9%2C10%2C11%2C12%2C13%2C14%2C15%2C16%2C17%2C18%2C19%2C20%2C21%2C22%2C23%2C24%2C25%2C26%2C27%2C28%2C29%2C0%2C1%2C2%2C3%2C4%2C5%2C6%2C7%2C8%2C9%2C10%2C11%2C12%2C13%2C14%2C15%2C16%2C17%2C18%2C19%2C20%2C21%2C22%2C23%2C24%2C25%2C26%2C27%2C28%2C29%2C0%2C1%2C2%2C3%2C4%2C5%2C6%2C7%2C8%2C9%2C10%2C11%2C12%2C13%2C14%2C15%2C16%2C17%2C18%2C19%2C20%2C21%2C22%2C23%2C24%2C25%2C26%2C27%2C28%2C29%2C0%2C1%2C2%2C3%2C4%2C5%2C6%2C7%2C8%2C9%2C10%2C11%2C12%2C13%2C14%2C15%2C16%2C17%2C18%2C19%2C20%2C21%2C22%2C23%2C24%2C25%2C26%2C27%2C28%2C29%2C0%2C1%2C2%2C3%2C4%2C5%2C6%2C7%2C8%2C9%2C10%2C11%2C12%2C13%2C14%2C15%2C16%2C17%2C18%2C19%2C20%2C21%2C22%2C23%2C24%2C25%2C26%2C27%2C28%2C29%2C0%2C1%2C2%2C3%2C4%2C5%2C6%2C7%2C8%2C9%2C10%2C11%2C12%2C13%2C14%2C15%2C16%2C17&chdl=Temperature&chs=700x190&cht=bvg&chtt=Temperature%20last%20week&chxs=1N%2A%2A%C2%BAC%2C000000%7C0%2Cs&chxt=x%2Cy&icac=documentation&icretina=1&ichm=c8ee19e51c526168ffe10c7d721d6a2516261076ac4befaab0b68085d5b42b0b)](https://editor.image-charts.com/chart?chco=FF0000&chd=a%3A0%2C1%2C2%2C3%2C4%2C5%2C6%2C7%2C8%2C9%2C10%2C11%2C12%2C13%2C14%2C15%2C16%2C17%2C18%2C19%2C20%2C21%2C22%2C23%2C24%2C25%2C26%2C27%2C28%2C29%2C0%2C1%2C2%2C3%2C4%2C5%2C6%2C7%2C8%2C9%2C10%2C11%2C12%2C13%2C14%2C15%2C16%2C17%2C18%2C19%2C20%2C21%2C22%2C23%2C24%2C25%2C26%2C27%2C28%2C29%2C0%2C1%2C2%2C3%2C4%2C5%2C6%2C7%2C8%2C9%2C10%2C11%2C12%2C13%2C14%2C15%2C16%2C17%2C18%2C19%2C20%2C21%2C22%2C23%2C24%2C25%2C26%2C27%2C28%2C29%2C0%2C1%2C2%2C3%2C4%2C5%2C6%2C7%2C8%2C9%2C10%2C11%2C12%2C13%2C14%2C15%2C16%2C17%2C18%2C19%2C20%2C21%2C22%2C23%2C24%2C25%2C26%2C27%2C28%2C29%2C0%2C1%2C2%2C3%2C4%2C5%2C6%2C7%2C8%2C9%2C10%2C11%2C12%2C13%2C14%2C15%2C16%2C17%2C18%2C19%2C20%2C21%2C22%2C23%2C24%2C25%2C26%2C27%2C28%2C29%2C0%2C1%2C2%2C3%2C4%2C5%2C6%2C7%2C8%2C9%2C10%2C11%2C12%2C13%2C14%2C15%2C16%2C17&chdl=Temperature&chs=700x190&cht=bvg&chtt=Temperature%20last%20week&chxs=1N%2A%2A%C2%BAC%2C000000%7C0%2Cs&chxt=x%2Cy&icac=documentation&icretina=1&ichm=c8ee19e51c526168ffe10c7d721d6a2516261076ac4befaab0b68085d5b42b0b)
 
 ```
 &chxt=x,y
@@ -408,7 +408,7 @@ Thus we use `<skip_labels>` (see `0,s`, 0 means x axis and `s` means skip labels
 !!! info "Enterprise+ subscribers -"
     Font size and color are specified for the second x-axis (Jan, Feb, Mar).
 
-    [![](https://image-charts.com/chart?chco=76A4FB&chd=s%3AcEAELFJHHHKUju9uuXUc&chls=2.0&chs=700x325&cht=lc&chxl=3%3A%7CJan%7CFeb%7CMar&chxr=2%2C0%2C4&chxs=3%2C0000dd%2C13%2C0%2Ct&chxt=x%2Cy%2Cr%2Cx&icac=fgribreau&icretina=1&ichm=54f1ebd0fb5d54475e3def9fa699aac47c131d4291bae219308c718ec6d3baa9)](https://editor.image-charts.com/chart?chco=76A4FB&chd=s%3AcEAELFJHHHKUju9uuXUc&chls=2.0&chs=700x325&cht=lc&chxl=3%3A%7CJan%7CFeb%7CMar&chxr=2%2C0%2C4&chxs=3%2C0000dd%2C13%2C0%2Ct&chxt=x%2Cy%2Cr%2Cx&icac=fgribreau&icretina=1&ichm=54f1ebd0fb5d54475e3def9fa699aac47c131d4291bae219308c718ec6d3baa9)
+    [![](https://image-charts.com/chart?chco=76A4FB&chd=s%3AcEAELFJHHHKUju9uuXUc&chls=2.0&chs=700x325&cht=lc&chxl=3%3A%7CJan%7CFeb%7CMar&chxr=2%2C0%2C4&chxs=3%2C0000dd%2C13%2C0%2Ct&chxt=x%2Cy%2Cr%2Cx&icac=documentation&icretina=1&ichm=57fe1c9d1480df6fac5490e4f8887702f6757746fe6ed620e3f493ba7ba28799)](https://editor.image-charts.com/chart?chco=76A4FB&chd=s%3AcEAELFJHHHKUju9uuXUc&chls=2.0&chs=700x325&cht=lc&chxl=3%3A%7CJan%7CFeb%7CMar&chxr=2%2C0%2C4&chxs=3%2C0000dd%2C13%2C0%2Ct&chxt=x%2Cy%2Cr%2Cx&icac=documentation&icretina=1&ichm=57fe1c9d1480df6fac5490e4f8887702f6757746fe6ed620e3f493ba7ba28799)
 
     ```
     chxt=x,y,r,x

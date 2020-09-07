@@ -28,7 +28,7 @@ chts=<font_color>,<font_size>[,<opt_alignment>,<opt_font_family>,<opt_font_style
 
 A chart with a title, using default color and font size. Specify a space with a plus sign (+). `chts` is not specified here.
 
-[![chart](https://image-charts.com/chart?chbh=22,4&chco=FF6B6B,C44D58&chd=s:YUVmw1,wellow&chs=700x200&cht=bvs&chtt=Site visitors by month|January to July&icac=fgribreau&icretina=1&ichm=b4dce55ddf418d5548235763d3722b3bdb2a11c24b8f6f8613d39acfe7bcc8aa)](https://editor.image-charts.com/chart?cht=bvs&chd=s:YUVmw1,wellow&chco=FF6B6B,C44D58&chs=700x200&chtt=Site+visitors+by+month%7CJanuary+to+July&chbh=22,4)
+[![chart](https://image-charts.com/chart?chbh=22%2C4&chco=FF6B6B%2CC44D58&chd=s%3AYUVmw1%2Cwellow&chs=700x200&cht=bvs&chtt=Site%20visitors%20by%20month%7CJanuary%20to%20July&icac=documentation&ichm=244131d1ae07bbd376c78f71c3c80aeca5d8feba2d93bb8bec0ba3f00596ba38)](https://editor.image-charts.com/chart?chbh=22%2C4&chco=FF6B6B%2CC44D58&chd=s%3AYUVmw1%2Cwellow&chs=700x200&cht=bvs&chtt=Site%20visitors%20by%20month%7CJanuary%20to%20July&icac=documentation&ichm=244131d1ae07bbd376c78f71c3c80aeca5d8feba2d93bb8bec0ba3f00596ba38)
 
 ```
 chtt=Site+visitors+by+month+January+to+July
@@ -36,7 +36,7 @@ chtt=Site+visitors+by+month+January+to+July
 
 A chart with a blue, 20-point title.
 
-[![chart](https://image-charts.com/chart?chbh=22,4&chco=4ECDC4,C7F464&chd=s:YUVmw1,wellow&chs=700x200&cht=bvs&chts=556270,20,r&chtt=Site visitors&icac=fgribreau&icretina=1&ichm=947f0740369cf818af39360a765d875be0d1a7fd9c439c418a4272295e52798d)](https://editor.image-charts.com/chart?cht=bvs&chd=s:YUVmw1,wellow&chco=4ECDC4,C7F464&chs=700x200&chtt=Site+visitors&chts=556270,20,r&chbh=22,4)
+[![chart](https://image-charts.com/chart?chbh=22%2C4&chco=4ECDC4%2CC7F464&chd=s%3AYUVmw1%2Cwellow&chs=700x200&cht=bvs&chts=556270%2C20%2Cr&chtt=Site%20visitors&icac=documentation&ichm=5d2d3730940204c67b0a5c168e6f05c928f23830e7b9646dfc9206e7f8f5d610)](https://editor.image-charts.com/chart?chbh=22%2C4&chco=4ECDC4%2CC7F464&chd=s%3AYUVmw1%2Cwellow&chs=700x200&cht=bvs&chts=556270%2C20%2Cr&chtt=Site%20visitors&icac=documentation&ichm=5d2d3730940204c67b0a5c168e6f05c928f23830e7b9646dfc9206e7f8f5d610)
 
 
 ```
@@ -46,7 +46,7 @@ chts=FF0000,20,r
 
 A chart with a teal, Dancing Script, 20-point title.
 
-[![chart](https://image-charts.com/chart?chbh=22%2C4&chco=4ECDC4%2CC7F464&chd=s%3AYUVmw1%2Cwellow&chs=700x200&cht=bvs&chts=008080%2C20%2Cr%2CDancing%20Script&chtt=Site%20visitors&icac=fgribreau&icretina=1&ichm=198e0ce0b3ba27b35fcfa6624b8ec959ac44549585f3178d52a832d3aca40f90)](https://editor.image-charts.com/chart?chbh=22%2C4&chco=4ECDC4%2CC7F464&chd=s%3AYUVmw1%2Cwellow&chs=700x200&cht=bvs&chts=008080%2C20%2Cr%2CDancing%20Script&chtt=Site%20visitors&icac=fgribreau&icretina=1&ichm=198e0ce0b3ba27b35fcfa6624b8ec959ac44549585f3178d52a832d3aca40f90)
+[![chart](https://image-charts.com/chart?chbh=22%2C4&chco=4ECDC4%2CC7F464&chd=s%3AYUVmw1%2Cwellow&chs=700x200&cht=bvs&chts=008080%2C20%2Cr%2CDancing%20Script&chtt=Site%20visitors&icac=documentation&icretina=1&ichm=8b55c3e6f48cba2655aa7d6f79ca28a1ad4fa8165ead6d2d7daa2603f52255f9)](https://editor.image-charts.com/chart?chbh=22%2C4&chco=4ECDC4%2CC7F464&chd=s%3AYUVmw1%2Cwellow&chs=700x200&cht=bvs&chts=008080%2C20%2Cr%2CDancing%20Script&chtt=Site%20visitors&icac=documentation&icretina=1&ichm=8b55c3e6f48cba2655aa7d6f79ca28a1ad4fa8165ead6d2d7daa2603f52255f9)
 
 
 ```
@@ -56,7 +56,7 @@ chts=008080,20,r,Dancing Script
 
 A chart with a teal, Amatic SC, italic, 20-point title.
 
-[![chart](https://image-charts.com/chart?chbh=22%2C4&chco=4ECDC4%2CC7F464&chd=s%3AYUVmw1%2Cwellow&chs=700x200&cht=bvs&chts=008080%2C20%2Cr%2CAmatic%20SC%2Citalic&chtt=Site%20visitors&icac=fgribreau&icretina=1&ichm=48ffdf72c5390db9381c6165fb0512b1dbad8f52d4e06253261d64e7837319b3)](https://editor.image-charts.com/chart?chbh=22%2C4&chco=4ECDC4%2CC7F464&chd=s%3AYUVmw1%2Cwellow&chs=700x200&cht=bvs&chts=008080%2C20%2Cr%2CAmatic%20SC%2Citalic&chtt=Site%20visitors&icac=fgribreau&icretina=1&ichm=48ffdf72c5390db9381c6165fb0512b1dbad8f52d4e06253261d64e7837319b3)
+[![chart](https://image-charts.com/chart?chbh=22%2C4&chco=4ECDC4%2CC7F464&chd=s%3AYUVmw1%2Cwellow&chs=700x200&cht=bvs&chts=008080%2C20%2Cr%2CAmatic%20SC%2Citalic&chtt=Site%20visitors&icac=documentation&icretina=1&ichm=51ed136af930ed9f677b9cdfb0f497e50a965527f93e109e27ef2364922b9237)](https://editor.image-charts.com/chart?chbh=22%2C4&chco=4ECDC4%2CC7F464&chd=s%3AYUVmw1%2Cwellow&chs=700x200&cht=bvs&chts=008080%2C20%2Cr%2CAmatic%20SC%2Citalic&chtt=Site%20visitors&icac=documentation&icretina=1&ichm=51ed136af930ed9f677b9cdfb0f497e50a965527f93e109e27ef2364922b9237)
 
 
 ```

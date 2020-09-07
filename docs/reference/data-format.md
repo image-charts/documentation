@@ -36,7 +36,7 @@ chd=a:val,val,val|val,val,val...
 
 A table with five values. The underscore is considered a null value, negative or positive float number are allowed, the chart scaling is automatic.
 
-[![gif chart](https://image-charts.com/chart?chan=1100,easeInCirc&chd=a:30010,-30000.1,50000.5,80000.10,20000&chf=b0,lg,90,EA469EFF,1,03A9F47C,0.4&chl=2014|2015|2016|2017|2018&chs=700x200&cht=bvs&chxt=y&icac=fgribreau&icretina=1&ichm=482b49c9fa541a1fea0faa510ec2d4115ba3d25d68cd519369e9b418f78e01d0)](https://editor.image-charts.com/chart?chan=1100,easeInCirc&chd=a:30010,-30000.1,50000.5,80000.10,20000&chf=b0,lg,90,EA469EFF,1,03A9F47C,0.4&chl=2014|2015|2016|2017|2018&chs=700x200&cht=bvs&chxt=y&icac=fgribreau&icretina=1&ichm=482b49c9fa541a1fea0faa510ec2d4115ba3d25d68cd519369e9b418f78e01d0)
+[![gif chart](https://image-charts.com/chart?chan=1100%2CeaseInCirc&chd=a%3A30010%2C-30000.1%2C50000.5%2C80000.10%2C20000&chf=b0%2Clg%2C90%2CEA469EFF%2C1%2C03A9F47C%2C0.4&chl=2014%7C2015%7C2016%7C2017%7C2018&chs=700x200&cht=bvs&chxt=y&icac=documentation&icretina=1&ichm=348c92de3542f1a15076e44937b4b22d6088ef4f9682af21a547ce87d38a5b71)](https://editor.image-charts.com/chart?chan=1100%2CeaseInCirc&chd=a%3A30010%2C-30000.1%2C50000.5%2C80000.10%2C20000&chf=b0%2Clg%2C90%2CEA469EFF%2C1%2C03A9F47C%2C0.4&chl=2014%7C2015%7C2016%7C2017%7C2018&chs=700x200&cht=bvs&chxt=y&icac=documentation&icretina=1&ichm=348c92de3542f1a15076e44937b4b22d6088ef4f9682af21a547ce87d38a5b71)
 
 ```
 chd=a:30010,-30000.1,50000.5,80000.10,20000
@@ -61,7 +61,7 @@ chd=t:val,val,val|val,val,val...
 
 A table with five values. The underscore is considered a null value, the -30 value falls below the minimum value, so it is dropped, and the 200 value is truncated to 100.
 
-[![static bar chart](https://image-charts.com/chart?chco=27c9c2&chd=t:_,30,-30,50,80,200&chs=700x200&cht=bvs&chxt=y&icac=fgribreau&icretina=1&ichm=e8af4235455e2f5f39c800d004bbb21c213384124496a67f0c9d90f068bd82aa)](https://editor.image-charts.com/chart?chco=27c9c2&chd=t:_,30,-30,50,80,200&chs=700x200&cht=bvs&chxt=y&icac=fgribreau&icretina=1&ichm=e8af4235455e2f5f39c800d004bbb21c213384124496a67f0c9d90f068bd82aa)
+[![static bar chart](https://image-charts.com/chart?chco=27c9c2&chd=t%3A_%2C30%2C-30%2C50%2C80%2C200&chs=700x200&cht=bvs&chxt=y&icac=documentation&icretina=1&ichm=7d4023dde670896df0b9e1cc5002506136a935443da0d3650eaa4ad158ae5cb9)](https://editor.image-charts.com/chart?chco=27c9c2&chd=t%3A_%2C30%2C-30%2C50%2C80%2C200&chs=700x200&cht=bvs&chxt=y&icac=documentation&icretina=1&ichm=7d4023dde670896df0b9e1cc5002506136a935443da0d3650eaa4ad158ae5cb9)
 
 ```
 chd=t:_,30,-30,50,80,200
@@ -90,7 +90,7 @@ chds=a
 
 How to generate a Pie Chart (note that you should not use values < 0 for pie charts):
 
-[![pie chart api](https://image-charts.com/chart?chco=ffcc00,ff6666,cc0066,66cccc&chd=t:5,30,50,80,200&chds=a&chl=5|30|50|80|200&chs=700x200&cht=p&icac=fgribreau&icretina=1&ichm=b6fa2e149fb9a4e2ce6f208a37e4444febe6078ee126fcbf0b5dde326eb0b490)](https://editor.image-charts.com/chart?chco=ffcc00,ff6666,cc0066,66cccc&chd=t:5,30,50,80,200&chds=a&chl=5|30|50|80|200&chs=700x200&cht=p&icac=fgribreau&icretina=1&ichm=b6fa2e149fb9a4e2ce6f208a37e4444febe6078ee126fcbf0b5dde326eb0b490)
+[![pie chart api](https://image-charts.com/chart?chco=ffcc00%2Cff6666%2Ccc0066%2C66cccc&chd=t%3A5%2C30%2C50%2C80%2C200&chds=a&chl=5%7C30%7C50%7C80%7C200&chs=700x200&cht=p&icac=documentation&icretina=1&ichm=0e6b43e5db2a3b47b9c1500ebb2188da04fec016225f82c3b8158e284f14afdf)](https://editor.image-charts.com/chart?chco=ffcc00%2Cff6666%2Ccc0066%2C66cccc&chd=t%3A5%2C30%2C50%2C80%2C200&chds=a&chl=5%7C30%7C50%7C80%7C200&chs=700x200&cht=p&icac=documentation&icretina=1&ichm=0e6b43e5db2a3b47b9c1500ebb2188da04fec016225f82c3b8158e284f14afdf)
 
 ```
 chd=t:5,30,50,80,200
@@ -99,7 +99,7 @@ chds=a
 
 How to generate a Bar Chart:
 
-[![image bar chart](https://image-charts.com/chart?chco=b2dffb|e7a4e4|ffc55c|66cccc|cc0066|ffcc00&chd=t:-5,30,-30,50,80,200&chds=a&chm=N,000000,0,-1,11&chs=700x200&cht=bvs&chxl=1:|Tommy|Jimmy|Henry|Marty|Lucky|Sammy&chxt=y,x&icac=fgribreau&icretina=1&ichm=7f1b9fdb1b7829871c1ce88fc40bddb808d0222cacb93ebab01a1af05da23ef6)](https://editor.image-charts.com/chart?chco=b2dffb|e7a4e4|ffc55c|66cccc|cc0066|ffcc00&chd=t:-5,30,-30,50,80,200&chds=a&chm=N,000000,0,-1,11&chs=700x200&cht=bvs&chxl=1:|Tommy|Jimmy|Henry|Marty|Lucky|Sammy&chxt=y,x&icac=fgribreau&icretina=1&ichm=7f1b9fdb1b7829871c1ce88fc40bddb808d0222cacb93ebab01a1af05da23ef6)
+[![image bar chart](https://image-charts.com/chart?chco=b2dffb%7Ce7a4e4%7Cffc55c%7C66cccc%7Ccc0066%7Cffcc00&chd=t%3A-5%2C30%2C-30%2C50%2C80%2C200&chds=a&chm=N%2C000000%2C0%2C-1%2C11&chs=700x200&cht=bvs&chxl=1%3A%7CTommy%7CJimmy%7CHenry%7CMarty%7CLucky%7CSammy&chxt=y%2Cx&icac=documentation&icretina=1&ichm=7199d946da58bc227a15cb06616dc93d7bd63c0ee6dc6561048b348f2af93289)](https://editor.image-charts.com/chart?chco=b2dffb%7Ce7a4e4%7Cffc55c%7C66cccc%7Ccc0066%7Cffcc00&chd=t%3A-5%2C30%2C-30%2C50%2C80%2C200&chds=a&chm=N%2C000000%2C0%2C-1%2C11&chs=700x200&cht=bvs&chxl=1%3A%7CTommy%7CJimmy%7CHenry%7CMarty%7CLucky%7CSammy&chxt=y%2Cx&icac=documentation&icretina=1&ichm=7199d946da58bc227a15cb06616dc93d7bd63c0ee6dc6561048b348f2af93289)
 
 ```
 chd=t:-5,30,-30,50,80,200
@@ -135,7 +135,7 @@ A bar chart with a min/max scale of -80—140. The 30, -60, 50, 140, and 80 valu
 Google Image Charts had a weird --bug-- feature, the default y-axis range was still 0—100, despite the **chds** parameter, so the label values do not reflected the actual data values. In Image-charts we think that its a bug. We are displaying the real-values inside the default y-axis, just as one would think.
 
 
-[![bar chart generator](https://image-charts.com/chart?chco=b2dffb|e7a4e4|ffc55c|66cccc|cc0066|ffcc00&chd=t:30,-60,50,140,80,-90&chds=-80,140&chs=700x200&cht=bvs&chxl=1:|Tommy|Jimmy|Henry|Marty|Lucky|Sammy&chxt=y,x&icac=fgribreau&icretina=1&ichm=8ac1da8941aac1c02e629734290a4d35a422e26ddafdbdb573a8dbc8739c9b1d)](https://editor.image-charts.com/chart?chco=b2dffb|e7a4e4|ffc55c|66cccc|cc0066|ffcc00&chd=t:30,-60,50,140,80,-90&chds=-80,140&chs=700x200&cht=bvs&chxl=1:|Tommy|Jimmy|Henry|Marty|Lucky|Sammy&chxt=y,x&icac=fgribreau&icretina=1&ichm=8ac1da8941aac1c02e629734290a4d35a422e26ddafdbdb573a8dbc8739c9b1d)
+[![bar chart generator](https://image-charts.com/chart?chco=b2dffb%7Ce7a4e4%7Cffc55c%7C66cccc%7Ccc0066%7Cffcc00&chd=t%3A30%2C-60%2C50%2C140%2C80%2C-90&chds=-80%2C140&chs=700x200&cht=bvs&chxl=1%3A%7CTommy%7CJimmy%7CHenry%7CMarty%7CLucky%7CSammy&chxt=y%2Cx&icac=documentation&icretina=1&ichm=177afd8eb93b672261087e4b8ddf20eb4f54185cc6025357360295a7168c701b)](https://editor.image-charts.com/chart?chco=b2dffb%7Ce7a4e4%7Cffc55c%7C66cccc%7Ccc0066%7Cffcc00&chd=t%3A30%2C-60%2C50%2C140%2C80%2C-90&chds=-80%2C140&chs=700x200&cht=bvs&chxl=1%3A%7CTommy%7CJimmy%7CHenry%7CMarty%7CLucky%7CSammy&chxt=y%2Cx&icac=documentation&icretina=1&ichm=177afd8eb93b672261087e4b8ddf20eb4f54185cc6025357360295a7168c701b)
 
 ```
 chd=t:30,-60,50,140,80,-90
@@ -173,7 +173,7 @@ You can use the [JavaScript code](#javascript-encoding-script) to scale and enco
 
 Equivalent to the text-encoded string `chd=t:1,19,27,53,61,-1|12,39,57,45,51,27`:
 
-[![chart](https://image-charts.com/chart?chco=ffb677,5f6caf&chd=s:BTb19_,Mn5tzb&chs=700x200&cht=bvs&chxr=0,0,120,20&chxs=1NPlayer n°**&chxt=y,x&icac=fgribreau&icretina=1&ichm=5d0805cb42f8de6e9f74e907a779d4a75ed03a44719fd76e2907093ee8db8c8c)](https://editor.image-charts.com/chart?chco=ffb677,5f6caf&chd=s:BTb19_,Mn5tzb&chs=700x200&cht=bvs&chxr=0,0,120,20&chxs=1NPlayer n°**&chxt=y,x&icac=fgribreau&icretina=1&ichm=5d0805cb42f8de6e9f74e907a779d4a75ed03a44719fd76e2907093ee8db8c8c)
+[![chart](https://image-charts.com/chart?chco=ffb677%2C5f6caf&chd=s%3ABTb19_%2CMn5tzb&chs=700x200&cht=bvs&chxr=0%2C0%2C120%2C20&chxs=1NPlayer%20n%C2%B0%2A%2A&chxt=y%2Cx&icac=documentation&icretina=1&ichm=8f8d87cbc812ae2200def7a90af3290d7da881317872027a90692210f9cf7555)](https://editor.image-charts.com/chart?chco=ffb677%2C5f6caf&chd=s%3ABTb19_%2CMn5tzb&chs=700x200&cht=bvs&chxr=0%2C0%2C120%2C20&chxs=1NPlayer%20n%C2%B0%2A%2A&chxt=y%2Cx&icac=documentation&icretina=1&ichm=8f8d87cbc812ae2200def7a90af3290d7da881317872027a90692210f9cf7555)
 
 ```
 chd=s:BTb19_,Mn5tzb
@@ -236,7 +236,7 @@ You can use the [JavaScript code](#javascript-encoding-script) to scale and enco
 
 Equivalent to the text-encoded string `chd=t:90,1000,2700,3500|3968,-1,1100,250`:
 
-[![chart](https://image-charts.com/chart?chco=12cad6,fa163f&chd=e:BaPoqM2s,-A__RMD6&chs=700x200&cht=bvs&chxs=1NSession n°**&chxt=y,x&icac=fgribreau&icretina=1&ichm=b8bdf19c870e1eb8b5fb19259cfa806e495009561fe6d8f8e7dd7c039ec39bb9)](https://editor.image-charts.com/chart?chco=12cad6,fa163f&chd=e:BaPoqM2s,-A__RMD6&chs=700x200&cht=bvs&chxs=1NSession n°**&chxt=y,x&icac=fgribreau&icretina=1&ichm=b8bdf19c870e1eb8b5fb19259cfa806e495009561fe6d8f8e7dd7c039ec39bb9)
+[![chart](https://image-charts.com/chart?chco=12cad6%2Cfa163f&chd=e%3ABaPoqM2s%2C-A__RMD6&chs=700x200&cht=bvs&chxs=1NSession%20n%C2%B0%2A%2A&chxt=y%2Cx&icac=documentation&icretina=1&ichm=c7dcf35319bb646e56f1ce624dc7b476d6581ce7330b75b7eed9b4381b280c94)](https://editor.image-charts.com/chart?chco=12cad6%2Cfa163f&chd=e%3ABaPoqM2s%2C-A__RMD6&chs=700x200&cht=bvs&chxs=1NSession%20n%C2%B0%2A%2A&chxt=y%2Cx&icac=documentation&icretina=1&ichm=c7dcf35319bb646e56f1ce624dc7b476d6581ce7330b75b7eed9b4381b280c94)
 
 ```
 chd=e:BaPoqM2s,-A__RMD6
