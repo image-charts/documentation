@@ -1,5 +1,5 @@
 !!! warning
-    Only **[bar](/bar-charts)** and **[line](/line-charts)** charts can leverage grid lines.
+    Only **[bar](/bar-charts)**, **[line](/line-charts)** and **[bubble](/bubble-charts)** charts can leverage grid lines.
 
 You can specify solid or dotted grid lines on your chart using the `chg` parameter.
 
