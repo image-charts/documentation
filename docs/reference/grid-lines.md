@@ -2,7 +2,7 @@ You can specify solid or dotted grid lines on your chart using the `chg` paramet
 
 This parameter doesn't let you specify the thickness of the lines, if you need this please [contact us](mailto:support@image-charts.com) with your requirements. 
 
-Grid lines are available on **[bar](/bar-charts)**, **[line](/line-charts)** and **[bubble](/bubble-charts)** charts.
+Grid lines are available on **[bar](/bar-charts)**, **[line](/line-charts)**, **[radar](/radar-charts)** and **[bubble](/bubble-charts)** charts.
 
  <!-- For more ways to make lines across your chart, see shape markers (chm type h, H, v, or V), range markers (chm), and axis tick marks (chxtc). -->
 
