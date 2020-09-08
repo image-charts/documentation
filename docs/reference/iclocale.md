@@ -18,7 +18,7 @@ iclocale=<iclocale_activation>
 
 Here is a graphic with iclocale. Here it has the value "en" defining the english location.
 
-![chart](https://image-charts.com/chart?chd=s%3AAtheresadifferencebetweenknowingthepathandwalkingthepath&chf=b0%2Clg%2C90%2C03a9f4%2C0%2C3f51b5%2C1&chs=700x200&cht=bvs&chxt=y&icac=fgribreau&iclocale=en&ichm=7019a4b2ce7a05935c8107b72af893fefc0a0a4494bd62e99476af7f9ab2c5c5)
+[![chart](https://image-charts.com/chart?chco=76A4FB&chd=s%3AcEAELFJHHHKUju9uuXUc&chls=2.0&chs=500x500&cht=lc&chxr=1%2C0%2C70&chxs=0%2C00000%2C13%2C0%2Ct%7C1N%2AcEUR%2A&chxt=x%2Cy&icac=documentation&iclocale=en&ichm=21e73c8ff464926d8c12f4bd0ed03da25f67541cc9c4dc1ed938ddcf6cde5861)](https://editor.image-charts.com/chart?chco=76A4FB&chd=s%3AcEAELFJHHHKUju9uuXUc&chls=2.0&chs=500x500&cht=lc&chxr=1%2C0%2C70&chxs=0%2C00000%2C13%2C0%2Ct%7C1N%2AcEUR%2A&chxt=x%2Cy&icac=documentation&iclocale=en&ichm=21e73c8ff464926d8c12f4bd0ed03da25f67541cc9c4dc1ed938ddcf6cde5861)
 
 ```
 iclocale=en
@@ -26,7 +26,7 @@ iclocale=en
 
 Here is a graphic with iclocale. Here it has the value "fr" defining the french location.
 
-![chart](https://image-charts.com/chart?chd=s%3AAtheresadifferencebetweenknowingthepathandwalkingthepath&chf=b0%2Clg%2C90%2C03a9f4%2C0%2C3f51b5%2C1&chs=700x200&cht=bvs&chxt=y&icac=fgribreau&iclocale=fr&ichm=452401d98485b806f56d8121af14a43bddae1967f70f86ea76f35f55d483f02f)
+[![chart](https://image-charts.com/chart?chco=76A4FB&chd=s%3AcEAELFJHHHKUju9uuXUc&chls=2.0&chs=500x500&cht=lc&chxr=1%2C0%2C70&chxs=0%2C00000%2C13%2C0%2Ct%7C1N%2AcEUR%2A&chxt=x%2Cy&icac=documentation&iclocale=fr&ichm=8c6efdcbceadd7775def57d84fcf44906b3d5db666e7bd66803c4a98b417b5fd)](https://editor.image-charts.com/chart?chco=76A4FB&chd=s%3AcEAELFJHHHKUju9uuXUc&chls=2.0&chs=500x500&cht=lc&chxr=1%2C0%2C70&chxs=0%2C00000%2C13%2C0%2Ct%7C1N%2AcEUR%2A&chxt=x%2Cy&icac=documentation&iclocale=fr&ichm=8c6efdcbceadd7775def57d84fcf44906b3d5db666e7bd66803c4a98b417b5fd)
 
 ```
 iclocale=fr
