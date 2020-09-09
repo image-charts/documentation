@@ -332,9 +332,9 @@ chxs=
         - `<decimal_places>` - An integer specifying how many decimal places to show. The value is rounded (not truncated) to this length. *Default is 2*.
         - `z` - Display trailing zeros. *Default is no*.
         - `s` - Display group separators. *Default is no*.
-        - `x or y` -Display the data from the x- or y-coordinate, as specified. The meaning of x data varies by chart type: experiment with your chart to determine what it means. *Default is 'y'*.
+        - `x` or `y` -Display the data from the x- or y-coordinate, as specified. The meaning of `x` data varies by chart type: experiment with your chart to determine what it means. *Default is `y`*.
     - `<following_text>` - Literal text to follow each value.
-- **`<opt_label_color>`** *[Optional]* The color to apply to the axis text (but not axis line), in RRGGBB hexadecimal format. Axis line color is specified separately using opt_axis_color. *Default is black*.
+- **`<opt_label_color>`** *[Optional]* The color to apply to the axis text (but not axis line), in RRGGBB hexadecimal format. Axis line color is specified separately using `<opt_axis_color>`. *Default is black*.
 - **`<opt_font_size>`** *[Optional]* specifies the font size in pixels. This parameter is optional.
 - **`<opt_alignment>`** (not supported, please contact our support) Label alignment. Use `-1`. <!--For top or bottom axes, this describes how the label aligns to the tick mark above or below it; for left or right axes, this describes how the aligns inside its bounding box, which touches the axis. Specify one of the following numbers:
 -1 - Top or bottom: labels are to the right of the ticks; Left or right: labels are left-aligned in their area. Default for r-axis labels.
