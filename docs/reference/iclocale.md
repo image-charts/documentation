@@ -1,7 +1,7 @@
 !!! info "Enterprise subscription only"
-    Iclocale support is only enabled in **Enterprise** subscriptions
+    Language localisation is only enabled in **Enterprise** subscriptions
 
-#### Iclocale
+#### Localization
 
 Some charts might be rendered for customers over various location with different currency and localization requirements. `iclocale` is a query parameter to specify in what localization the chart should be rendered.
 
