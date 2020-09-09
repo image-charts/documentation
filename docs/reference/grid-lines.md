@@ -24,7 +24,7 @@ chg=
 
 
 - **`<opt_dash_length>, <opt_space_length>`** [Optional] Used to define dashed grid lines. The first parameter is the length of each line dash, in pixels. The second parameter is the spacing between dashes, in pixels. Specify 0 for *<opt_space_length>* for a solid line. Default values are `4,1`.
-- **`<opt_lines_color>`** [Optional] The [color](/reference/color-format/) of the grid lines.
+- **`<opt_lines_color>`** [Optional] The [color](/reference/color-format/) of the grid lines (default color is black with 50% opacity: `0000001a`)
 
 <!-- - **`<opt_x_offset>,<opt_y_offset>`** [Optional] The number of units, according to the chart scale, to offset the x and y grid lines, respectively. Can be positive or negative values. If you specify this value, you must also specify all preceding values. Default values are 0,0. -->
 
