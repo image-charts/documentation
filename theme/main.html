@@ -1,3 +1,13 @@
+{% block extrahead %}
+  {% set title = config.site_name %}
+    {% if page and page.meta and page.meta.title %}
+      {% set title = title ~ " - " ~ page.meta.title %}
+    {% elif page and page.title and not page.is_homepage %}
+      {% set title = title ~ " - " ~ page.title | striptags %}
+    {% endif %}
+  <meta name="meta_description" content="{{ title }}" />
+{% endblock %}
+
 {% extends "base.html" %} {% block analytics %}
 <link rel="preconnect" href="https://www.googletagmanager.com" />
 <link rel="preconnect" href="https://www.google.fr" />
