@@ -1,3 +1,6 @@
+---
+meta_description: "Image-charts API propose to customize your graphics as for example with retina. This documentation shows you how to use the API url parameters to generate a chart."
+---
 !!! info "Enterprise+ subscription only"
     Retina support is only enabled in **Enterprise+** subscriptions
 

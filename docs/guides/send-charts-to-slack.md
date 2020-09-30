@@ -1,3 +1,6 @@
+---
+meta_description: "Image-charts offers several guides such as send charts to slack with image-charts."
+---
 # Slack
 
 Image-Charts can be integrated with every tool. Slack is a well-known communication tool for teams.

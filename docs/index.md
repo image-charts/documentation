@@ -1,3 +1,6 @@
+---
+meta_description: "📨 Embed charts in emails, pdf reports, blog post or markdown files. 1 url = 1 chart."
+---
 # Welcome to Image-Charts documentation
 
 Welcome to the Image-charts developer hub. You'll find comprehensive guides and documentation to help you start working with Image-charts as quickly as possible, as well as support if you get stuck. Let's jump right in!

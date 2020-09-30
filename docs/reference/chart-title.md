@@ -1,3 +1,6 @@
+---
+meta_description: "Image-charts API propose to customize your graphics as for example with chart title. This documentation shows you how to use the API url parameters to generate a chart."
+---
 You can specify the title text, color, and font size for your chart.
 
 #### Syntax

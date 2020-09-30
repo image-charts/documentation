@@ -1,3 +1,6 @@
+---
+meta_description: "Image-charts API propose to customize your graphics as for example with legend text and style. This documentation shows you how to use the API url parameters to generate a chart."
+---
 The legend is a side section of the chart that gives a small text description of each series. You can specify the text associated with each series in this legend, and specify where on the chart it should appear.
 
 <!-- See also `chma`, to learn how to set the margins around your legend. -->

@@ -1,3 +1,6 @@
+---
+meta_description: "Image-charts API propose to customize your graphics as for example with grid line. This documentation shows you how to use the API url parameters to generate a chart."
+---
 You can specify solid or dotted grid lines on your chart using the `chg` parameter.
 
 This parameter doesn't let you specify the thickness of the lines, if you need this please [contact us](mailto:support@image-charts.com) with your requirements. 

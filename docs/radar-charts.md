@@ -1,3 +1,6 @@
+---
+meta_description: "Image-charts API offers several types of charts such as radar charts. This documentation shows you how to use the API url parameters to generate a chart."
+---
 # Radar Charts
 
 This section describes how to create radar charts using the Image-Chart API.

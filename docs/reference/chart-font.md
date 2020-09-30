@@ -1,3 +1,6 @@
+---
+meta_description: "Image-charts API propose to customize your graphics as for example with chart font. This documentation shows you how to use the API url parameters to generate a chart."
+---
 !!! note "Enterprise+ plan only"
     Custom fonts are only available to **Enterprise+** subscriptions
 

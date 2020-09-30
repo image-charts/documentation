@@ -1,3 +1,6 @@
+---
+meta_description: "Image-charts API propose to customize your graphics as for example with data format. This documentation shows you how to use the API url parameters to generate a chart."
+---
 This document explains how to send your chart data to the Image Charts API.
 
 Data for almost all charts is sent using the `chd` parameter. The data must be sent in one of the following formats:

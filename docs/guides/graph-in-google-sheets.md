@@ -1,3 +1,6 @@
+---
+meta_description: "Image-charts offers several guides such as setup a dependency graph in Google Sheets with image-charts."
+---
 <!-- How to setup a dependency graph in Google Sheets -->
 
 ![Dependency graph in Google Sheets with Image-Charts](assets/dependency-graph-in-google-sheets-with-image-charts.png)

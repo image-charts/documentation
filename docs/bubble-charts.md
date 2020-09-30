@@ -1,3 +1,6 @@
+---
+meta_description: "Image-charts API offers several types of charts such as bubble charts. This documentation shows you how to use the API url parameters to generate a chart."
+---
 # Bubble Charts
 
 This section describes how to create bubble charts using Image-Chart API.

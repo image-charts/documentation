@@ -1,3 +1,6 @@
+---
+meta_description: "Image-charts API propose to customize your graphics as for example with chart axis. This documentation shows you how to use the API url parameters to generate a chart."
+---
 <!-- axis styling (chxtc) is currently unsupported -->
 
 You can specify which axes to display on the chart, and give them custom labels and positions, ranges.

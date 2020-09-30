@@ -1,3 +1,6 @@
+---
+meta_description: "Image-charts API offers several types of charts such as line charts. This documentation shows you how to use the API url parameters to generate a chart."
+---
 # Line Charts
 
 <!-- :wrench: we are currently implementing this feature. -->

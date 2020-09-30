@@ -1,3 +1,6 @@
+---
+meta_description: "Image-charts API propose to customize your graphics as for example with color format. This documentation shows you how to use the API url parameters to generate a chart."
+---
 Specify colors using a 6-character string of hexadecimal values, plus two optional transparency values, in the format **RRGGBB[AA]**. For example:
 
  - FF0000 = Red
