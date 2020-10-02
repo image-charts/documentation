@@ -1,5 +1,5 @@
 ---
-meta_description: "Image-charts API offers several types of charts such as bubble charts. This documentation shows you how to use the API url parameters to generate a chart."
+meta_description: "Generate bubble charts as image and embed them inside your email or pdf reports"
 ---
 # Bubble Charts
 
