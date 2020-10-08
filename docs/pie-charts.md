@@ -1,5 +1,5 @@
 ---
-meta_description: "Image-charts API offers several types of charts such as pie charts. This documentation shows you how to use the API url parameters to generate a chart."
+meta_description: "Generate pie charts as image using Image-charts API. From basic or pie charts to labels or legend, we handle everything!"
 ---
 # Pie Charts
 

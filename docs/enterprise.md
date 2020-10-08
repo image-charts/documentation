@@ -1,5 +1,5 @@
 ---
-meta_description: "This section is dedicated to the paid enterprise version. It will give you all the indications to hash your charts and more."
+meta_description: "Generate watermark-free chart image by signing request URLs with HMAC."
 ---
 # Enterprise version
 

@@ -1,5 +1,5 @@
 ---
-meta_description: "Image-charts API propose to customize your graphics as for example with animation. This documentation shows you how to use the API url parameters to generate a chart."
+meta_description: "Learn how to generate animated gif charts."
 ---
 Animated charts are awesome right? Sadly chart generated images are simple PNGs and our team at Image-Charts was quite sad with that status quo. But then we thought, why don't we generate animated gif? They will perfectly fit inside emails and IM bot and will give **the final wow effect everyone is waiting for**!
 

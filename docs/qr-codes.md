@@ -1,5 +1,5 @@
 ---
-meta_description: "Image-charts API offers several types of charts such as qr code. This documentation shows you how to use the API url parameters to generate a chart."
+meta_description: "Generate qr code charts as image using Image-charts API. From simple or custom qr charts to output format or background color, we handle everything!"
 ---
 # QR Codes
 

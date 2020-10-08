@@ -1,5 +1,5 @@
 ---
-meta_description: "This section is dedicated to the Image-Charts paying On Premise version. It will give you all the functionalities of this subscription."
+meta_description: "Deploy and host Image-Charts inside your own infrastructure with our On-Premise docker container."
 ---
 # On Premise Virtual Appliance
 

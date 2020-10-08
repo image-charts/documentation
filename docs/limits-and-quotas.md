@@ -1,5 +1,5 @@
 ---
-meta_description: "Image-charts gives you a quota limit. In this documentation you will find all the information on this subject."
+meta_description: "Limits brings reliability. Learn what Image-Charts API limits are."
 ---
 # Limits and Quotas on API Requests
 

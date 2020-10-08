@@ -1,5 +1,5 @@
 ---
-meta_description: "Image-charts API propose to customize your graphics as for example with background fill. This documentation shows you how to use the API url parameters to generate a chart."
+meta_description: "Learn how to specify a background color or gradient for your chart"
 ---
 You can specify fill colors and styles for the chart data area and/or the whole chart background. Fill types include solid fills, striped fills, and gradients. You can specify different fills for different areas (for example, the whole chart area, or just the data area). The chart area fill overwrites the background fill. All fills are specified using the `chf` parameter, and you can mix different fill types (solids, stripes, gradients) in the same chart by separating values with pipe character (` | `). Chart area fills overwrite chart background fills.
 

@@ -1,5 +1,5 @@
 ---
-meta_description: "Image-charts API propose to customize your graphics as for example with chart axis. This documentation shows you how to use the API url parameters to generate a chart."
+meta_description: "Learn how to customize your chart axis, from label styling to axis ranges."
 ---
 <!-- axis styling (chxtc) is currently unsupported -->
 

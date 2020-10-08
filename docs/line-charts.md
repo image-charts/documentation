@@ -1,5 +1,5 @@
 ---
-meta_description: "Image-charts API offers several types of charts such as line charts. This documentation shows you how to use the API url parameters to generate a chart."
+meta_description: "Generate line charts as image using Image-charts API. From basic or multi axis line charts to circle, triangle or star, we handle everything!"
 ---
 # Line Charts
 

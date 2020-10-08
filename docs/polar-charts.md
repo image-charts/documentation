@@ -1,5 +1,5 @@
 ---
-meta_description: "Image-charts API offers several types of charts such as polar charts. This documentation shows you how to use the API url parameters to generate a chart."
+meta_description: "Generate polar charts as image using Image-charts API. From simple, slice gradient fill or display axis label pie charts to series colors, we handle everything!"
 ---
 # Polar Area Charts
 

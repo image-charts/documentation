@@ -1,5 +1,5 @@
 ---
-meta_description: "Image-charts API offers several types of charts such as radar charts. This documentation shows you how to use the API url parameters to generate a chart."
+meta_description: "Generate radar charts as image using Image-charts API. From simple or custom radar charts to series colors, we handle everything!"
 ---
 # Radar Charts
 

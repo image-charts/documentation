@@ -1,5 +1,5 @@
 ---
-meta_description: "Image-charts offers several guides such as send charts to slack with image-charts."
+meta_description: "How to send image charts in slack channels using Image-Charts API."
 ---
 # Slack
 

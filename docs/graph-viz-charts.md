@@ -1,5 +1,5 @@
 ---
-meta_description: "Image-charts API offers several types of charts such as graph viz charts. This documentation shows you how to use the API url parameters to generate a chart."
+meta_description: "Generate graph viz charts as image using Image-charts API. Generate graph viz charts as image using Image-charts API. GraphViz graphs using the DOT language and layout engines, we handle everything!"
 ---
 # GraphViz Charts
 
