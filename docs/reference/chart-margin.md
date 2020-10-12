@@ -1,5 +1,5 @@
 ---
-meta_description: "Image-charts API propose to customize your graphics as for example with chart margins. This documentation shows you how to use the API url parameters to generate a chart."
+meta_description: "Learn how to customize your chart margin, from left, right, top or bottom."
 ---
 You can specify the size of the chart's margins, in pixels. Margins are calculated inward from the specified chart size (chs); increasing the margin size does not increase the total chart size, but rather shrinks the chart area, if necessary. The chart margins include the axis labels.
 

@@ -1,5 +1,5 @@
 ---
-meta_description: "Image-charts API propose to customize your graphics as for example with data format. This documentation shows you how to use the API url parameters to generate a chart."
+meta_description: "Learn how to customize your chart data format, from text format to encoding."
 ---
 This document explains how to send your chart data to the Image Charts API.
 

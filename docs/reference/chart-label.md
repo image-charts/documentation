@@ -1,5 +1,5 @@
 ---
-meta_description: "Image-charts API propose to customize your graphics as for example with chart label. This documentation shows you how to use the API url parameters to generate a chart."
+meta_description: "Learn how to customize your chart label, from format to positionning."
 ---
 You can specify labels for individual slices (in bar, pie, doughnut or polar chart) or bar using the `chl` parameter. You can also display a legend with the same or different values, one legend entry per slice. Use `\n` for multi-line labels.
 

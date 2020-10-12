@@ -1,5 +1,5 @@
 ---
-meta_description: "Image-charts API propose to customize your graphics as for example with localization. This documentation shows you how to use the API url parameters to generate a chart."
+meta_description: "Learn how to customize your chart localization, like price format."
 ---
 !!! info "Enterprise subscription only"
     Language localization is only enabled in **Enterprise** subscriptions

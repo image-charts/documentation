@@ -1,5 +1,5 @@
 ---
-meta_description: "Image-charts API propose to customize your graphics as for example with chart size. This documentation shows you how to use the API url parameters to generate a chart."
+meta_description: "Learn how to customize your chart size, from width or height."
 ---
 All charts require the size to be specified. This parameter determines the total width and height of the chart image, including legends, margins, and titles. Legends, margins, and titles are clipped to fit within the total chart size.
 

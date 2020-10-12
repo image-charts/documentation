@@ -1,5 +1,5 @@
 ---
-meta_description: "Image-charts API propose to customize your graphics as for example with chart type. This documentation shows you how to use the API url parameters to generate a chart."
+meta_description: "Learn how to customize your chart type, from bar chart to qr code."
 ---
 Specify the chart type using the `cht` parameter. See the individual chart documentation pages for a list of available chart types.
 

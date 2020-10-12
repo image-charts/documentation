@@ -1,5 +1,5 @@
 ---
-meta_description: "Image-charts API propose to customize your graphics as for example with output format. This documentation shows you how to use the API url parameters to generate a chart."
+meta_description: "Learn how to customize your chart output format, from png, jpg and more."
 ---
 Image Chart API can generate multiple output image format.
 

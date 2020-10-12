@@ -1,5 +1,5 @@
 ---
-meta_description: "Image-Charts supports more than 900+ fonts! Learn how to customize your chart fonts."
+meta_description: "Learn how to customize your chart font, from a multitude of fonts."
 ---
 !!! note "Enterprise+ plan only"
     Custom fonts are only available to **Enterprise+** subscriptions

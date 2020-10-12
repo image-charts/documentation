@@ -1,5 +1,5 @@
 ---
-meta_description: "Image-charts API propose to customize your graphics as for example with markers. This documentation shows you how to use the API url parameters to generate a chart."
+meta_description: "Learn how to customize your chart markers, from color, size to all or individual data points."
 ---
 # Markers
 
