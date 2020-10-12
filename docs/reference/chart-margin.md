@@ -1,3 +1,6 @@
+---
+meta_description: "Learn how to customize your chart margin, from left, right, top or bottom."
+---
 You can specify the size of the chart's margins, in pixels. Margins are calculated inward from the specified chart size (chs); increasing the margin size does not increase the total chart size, but rather shrinks the chart area, if necessary. The chart margins include the axis labels.
 
 #### Syntax

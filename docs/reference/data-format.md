@@ -1,3 +1,6 @@
+---
+meta_description: "Learn how to customize your chart data format, from text format to encoding."
+---
 This document explains how to send your chart data to the Image Charts API.
 
 Data for almost all charts is sent using the `chd` parameter. The data must be sent in one of the following formats:

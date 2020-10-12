@@ -1,3 +1,6 @@
+---
+meta_description: "Generate qr code charts as image using Image-charts API. From simple or custom qr charts to output format or background color, we handle everything!"
+---
 # QR Codes
 
 This section describes how to create a QR Code on the fly with a URL GET request using the Image-Chart QRCode web service generation.

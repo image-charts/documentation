@@ -1,3 +1,6 @@
+---
+meta_description: "Learn how to customize your chart grid lines, from color to width grid."
+---
 You can specify solid or dotted grid lines on your chart using the `chg` parameter.
 
 This parameter doesn't let you specify the thickness of the lines, if you need this please [contact us](mailto:support@image-charts.com) with your requirements. 

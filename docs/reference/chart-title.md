@@ -1,3 +1,6 @@
+---
+meta_description: "Learn how to customize your chart title, from format to alignement."
+---
 You can specify the title text, color, and font size for your chart.
 
 #### Syntax

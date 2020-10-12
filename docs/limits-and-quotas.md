@@ -1,3 +1,6 @@
+---
+meta_description: "Limits brings reliability. Learn what Image-Charts API limits are."
+---
 # Limits and Quotas on API Requests
 
 This document describes the limits and quotas of requesting the Image-Charts API.

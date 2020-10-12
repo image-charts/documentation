@@ -7,3 +7,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 
 {% endblock %}
+
+{% block extrahead %}
+  {% set description = page.meta.meta_description %}
+  <meta name="meta_description" content="{{ description }}" />
+{% endblock %}

@@ -1,3 +1,6 @@
+---
+meta_description: "Learn how to customize your chart markers, from color, size to all or individual data points."
+---
 # Markers
 
 ## Shape Markers

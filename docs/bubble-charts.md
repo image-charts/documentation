@@ -1,3 +1,6 @@
+---
+meta_description: "Generate bubble charts as image and embed them inside your email or pdf reports"
+---
 # Bubble Charts
 
 This section describes how to create bubble charts using Image-Chart API.

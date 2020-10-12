@@ -1,3 +1,6 @@
+---
+meta_description: "Learn how to customize your chart localization, like price format."
+---
 !!! info "Enterprise subscription only"
     Language localization is only enabled in **Enterprise** subscriptions
 

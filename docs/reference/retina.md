@@ -1,3 +1,6 @@
+---
+meta_description: "Learn how to customize your chart retina, you can generate a chart with a doubled size."
+---
 !!! info "Enterprise+ subscription only"
     Retina support is only enabled in **Enterprise+** subscriptions
 

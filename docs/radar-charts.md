@@ -1,3 +1,6 @@
+---
+meta_description: "Generate radar charts as image using Image-charts API. From simple or custom radar charts to series colors, we handle everything!"
+---
 # Radar Charts
 
 This section describes how to create radar charts using the Image-Chart API.

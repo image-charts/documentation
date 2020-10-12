@@ -1,3 +1,6 @@
+---
+meta_description: "Learn how to customize your chart label, from format to positionning."
+---
 You can specify labels for individual slices (in bar, pie, doughnut or polar chart) or bar using the `chl` parameter. You can also display a legend with the same or different values, one legend entry per slice. Use `\n` for multi-line labels.
 
 !!! note "A Note on String Values"

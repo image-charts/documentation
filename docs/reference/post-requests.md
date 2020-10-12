@@ -1,3 +1,6 @@
+---
+meta_description: "Learn how to customize your chart post request, from using curl, JavaScript or PHP."
+---
 Specifying your chart as a URL in your browser or an `<img>` tag is called a `GET` request. Making a GET request is simple, but GET URLs are limited to 2K characters. What if you have more data than that?
 
 Luckily, the Chart API supports HTTP POST for chart requests up to 300 Kilobytes long (*Google Image Charts API limit was 16Ko*). The trade-off is the added complexity of using POST.

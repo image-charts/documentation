@@ -6,4 +6,5 @@ java.iml
 node_modules
 gallery.md
 gallery.json
-.env
+.envrc
+.envrc.dist

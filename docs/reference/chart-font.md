@@ -1,3 +1,6 @@
+---
+meta_description: "Learn how to customize your chart font, from a multitude of fonts."
+---
 !!! note "Enterprise+ plan only"
     Custom fonts are only available to **Enterprise+** subscriptions
 

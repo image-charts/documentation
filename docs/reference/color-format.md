@@ -1,3 +1,6 @@
+---
+meta_description: "Learn how to customize your color format, in the format RRGGBB."
+---
 Specify colors using a 6-character string of hexadecimal values, plus two optional transparency values, in the format **RRGGBB[AA]**. For example:
 
  - FF0000 = Red

@@ -1,3 +1,6 @@
+---
+meta_description: "Generate watermark-free chart image by signing request URLs with HMAC."
+---
 # Enterprise version
 
 This section is dedicated to the paying enterprise version. This plan use the same API but is **watermark free** and you can setup your **own sub-domain** for the perfect integration.

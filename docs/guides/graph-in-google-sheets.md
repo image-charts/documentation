@@ -1,3 +1,6 @@
+---
+meta_description: "Here is how to display a (dependency) graph inside Google Sheets thanks to Image-Charts API."
+---
 <!-- How to setup a dependency graph in Google Sheets -->
 
 ![Dependency graph in Google Sheets with Image-Charts](assets/dependency-graph-in-google-sheets-with-image-charts.png)

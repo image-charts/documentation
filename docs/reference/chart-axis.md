@@ -1,3 +1,6 @@
+---
+meta_description: "Learn how to customize your chart axis, from label styling to axis ranges."
+---
 <!-- axis styling (chxtc) is currently unsupported -->
 
 You can specify which axes to display on the chart, and give them custom labels and positions, ranges.

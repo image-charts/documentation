@@ -1,3 +1,6 @@
+---
+meta_description: "Generate pie charts as image using Image-charts API. From basic or pie charts to labels or legend, we handle everything!"
+---
 # Pie Charts
 
 This section describes how to create pie charts using the Image-Chart API.

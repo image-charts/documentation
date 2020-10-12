@@ -1,3 +1,6 @@
+---
+meta_description: "Generate graph viz charts as image using Image-charts API. Generate graph viz charts as image using Image-charts API. GraphViz graphs using the DOT language and layout engines, we handle everything!"
+---
 # GraphViz Charts
 
 This section describes how to create graph charts using Image-Chart API.

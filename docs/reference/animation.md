@@ -1,3 +1,6 @@
+---
+meta_description: "Learn how to generate animated gif charts."
+---
 Animated charts are awesome right? Sadly chart generated images are simple PNGs and our team at Image-Charts was quite sad with that status quo. But then we thought, why don't we generate animated gif? They will perfectly fit inside emails and IM bot and will give **the final wow effect everyone is waiting for**!
 
 So we did it and we were like:

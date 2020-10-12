@@ -1,3 +1,6 @@
+---
+meta_description: "Learn how to customize your chart output format, from png, jpg and more."
+---
 Image Chart API can generate multiple output image format.
 
 

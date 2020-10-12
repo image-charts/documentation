@@ -1,3 +1,6 @@
+---
+meta_description: "Learn how to customize your chart legend, from format to positionning."
+---
 The legend is a side section of the chart that gives a small text description of each series. You can specify the text associated with each series in this legend, and specify where on the chart it should appear.
 
 <!-- See also `chma`, to learn how to set the margins around your legend. -->

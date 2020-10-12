@@ -1,3 +1,6 @@
+---
+meta_description: "Learn how to customize your chart type, from bar chart to qr code."
+---
 Specify the chart type using the `cht` parameter. See the individual chart documentation pages for a list of available chart types.
 
 #### Syntax

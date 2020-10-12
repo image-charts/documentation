@@ -1,3 +1,6 @@
+---
+meta_description: "Generate bar charts as image using Image-charts API. From stacked or grouped bar charts to horizontal or vertical, we handle everything!"
+---
 # Bar Charts
 
 <!-- :wrench: we are currently implementing this feature. -->

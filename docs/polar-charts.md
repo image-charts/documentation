@@ -1,3 +1,6 @@
+---
+meta_description: "Generate polar charts as image using Image-charts API. From simple, slice gradient fill or display axis label pie charts to series colors, we handle everything!"
+---
 # Polar Area Charts
 
 This section describes how to create polar area charts using the Image-Chart API.

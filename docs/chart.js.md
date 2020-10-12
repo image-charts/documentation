@@ -1,3 +1,6 @@
+---
+meta_description: "We generate chart in image form thanks to the configuration format of chart.js. Chartjs is an open-source charting library? How to use and customize charts with chartjs image-charts? Everything is in this documentation."
+---
 # Chart.js
 
 ## Overview
