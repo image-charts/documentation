@@ -228,7 +228,7 @@ chlps=textAlign=center
 
 ### Positionning
 
-#### Aglinement
+#### Alignment
 
 The `align` option defines the position of the label relative to the anchor point position and orientation. Its value can be expressed either by a number representing the clockwise angle (in degree) or by one of the following string presets:
 
