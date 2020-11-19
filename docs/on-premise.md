@@ -12,6 +12,7 @@ This section is dedicated to the [Image-Charts paying On Premise version](https:
     - [compound charts](/reference/compound-charts/)
     - [multiple axis](/reference/chart-axis/#visible-axes)
 - **Removes** the need to sign URL with `ichm` and `icac` that exists for SaaS [Enterprise plans](/enterprise).
+- No **[rate-limits](https://documentation.image-charts.com/limits-and-quotas/)**, you have full control over your deployment
 
 ## Limitation
 
