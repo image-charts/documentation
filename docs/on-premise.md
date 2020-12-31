@@ -16,7 +16,8 @@ This section is dedicated to the [Image-Charts paying On Premise version](https:
 
 ## Limitation
 
-Font support is currently unavailable in Image-Charts On Premise.
+- There is no trial available for Image-Charts On Premise. Please try out Image-Charts through [our SaaS version](/).
+- Font support is currently unavailable in Image-Charts On Premise.
 
 ## Download the container image
 
