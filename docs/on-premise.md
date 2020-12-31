@@ -3,7 +3,7 @@ meta_description: "Deploy and host Image-Charts inside your own infrastructure w
 ---
 # On Premise Virtual Appliance
 
-This section is dedicated to the [Image-Charts paying On Premise version](https://www.image-charts.com/pricing). This virtual appliance is a special docker image that can be deployed on your own server.
+This section is dedicated to the [Image-Charts paying On Premise version](https://www.image-charts.com/pricing). This virtual appliance is a special docker image that can be deployed on your own server(s) in your own datacenter(s) or infrastructure.
 
 ## Features
 
