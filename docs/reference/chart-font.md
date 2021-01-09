@@ -62,4 +62,4 @@ A pie chart with `icfs=italic` font style
 
 #### Supported open-source fonts
 
-{!fonts/google-fonts.md!}
+{!GENERATED-google-fonts.md!}
