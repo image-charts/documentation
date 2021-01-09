@@ -1,0 +1,5 @@
+- `IS_VALIDATION_ERROR`: There is one or more request parameters that are malformed. Check the associated `x-ic-error-validation` response http header for details.
+- `IC_GRAPHVIZ_INVALID_SYNTAX`: The GraphViz chart could not be generated because of invalid syntax. Check that the [chl](https://documentation.image-charts.com/graph-viz-charts/) request parameter is valid.
+- `IC_GRAPHVIZ_ERROR`: The GraphViz chart could not be generated due to internal GraphViz error.
+- `IC_GRAPHVIZ_MAX_EDGES_REACHED`: The requested Graph has reached the maximum allowed number of edges (`400`). See GraphViz [known limitations](https://documentation.image-charts.com/graph-viz-charts/#known-limitations) for more details.
+- `IC_GRAPHVIZ_MAX_NODES_REACHED`: The requested Graph has reached the maximum allowed number of nodes (`200`). See GraphViz [known limitations](https://documentation.image-charts.com/graph-viz-charts/#known-limitations) for more details.

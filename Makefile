@@ -1,17 +1,26 @@
+#!/usr/bin/make -f
+
 .PHONY: build
+
+ifeq (, $(shell which docker))
+MAKE_DOCS = mkdocs
+else
+MAKE_DOCS = docker run -v ${PWD}:/docs -it -p 8090:8000 imagecharts/documentation
+endif
 
 deploy: setup build
 
 serve:
-	docker run -v ${PWD}:/docs -it -p 8090:8000 imagecharts/documentation
+	$(MAKE_DOCS) serve
 
 build: build-gallery
 	mkdir -p docs/fonts
 	# note: we use "$$" below in "$$item" to escape automatic interpolation
-	curl -s https://image-charts.com/swagger.json | jq -r '.paths[].get.parameters[] | select(.name == "icff").enum | reduce .[] as $$item ([]; . + ["`" + $$item + "`"]) | join(", ")' > docs/fonts/google-fonts.md
-	# note: netlify does not support docker
-	# docker run -v ${PWD}:/docs -it -p 8000:8000 imagecharts/documentation build
-	mkdocs build
+	curl -s https://image-charts.com/swagger.json | jq -r '.paths[].get.parameters[] | select(.name == "icff").enum | reduce .[] as $$item ([]; . + ["`" + $$item + "`"]) | join(", ")' > docs/GENERATED-google-fonts.md
+	curl -s https://image-charts.com/errors.json | jq -r 'reduce .[] as $$item ([]; . + ["- `" + $$item.code + "`: " + $$item.description]) | join("\n")' > docs/GENERATED-error-codes.md
+
+	$(MAKE_DOCS) build
+
 	# don't forget to copy the robots.txt file to the publish "site/" folder
 	cp -v robots.txt site/
 

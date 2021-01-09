@@ -54,6 +54,7 @@ nav:
   - Gallery: gallery.md
   - Enterprise: enterprise.md
   - On Premise: on-premise.md
+  - Errors: errors.md
   - Limits and Quotas: limits-and-quotas.md
   - Status Page: https://status.image-charts.com
   - Changelog: https://headwayapp.co/image-charts-changelog

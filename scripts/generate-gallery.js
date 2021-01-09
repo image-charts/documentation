@@ -5,6 +5,7 @@ const querystring = require('querystring');
 // HMAC Helper
 const crypto = require('crypto');
 const qs = require('querystring');
+const assert = require("assert");
 require('custom-env').env()
 
 function sign(secretKey, query) {
@@ -16,6 +17,8 @@ function sign(secretKey, query) {
 
 const ACCOUNT_ID = process.env.ACCOUNT_ID;
 const SECRET_KEY = process.env.SECRET_KEY;
+assert(ACCOUNT_ID && ACCOUNT_ID.length > 1, 'ACCOUNT_ID env. var. must be specified');
+assert(SECRET_KEY && SECRET_KEY.length > 1, 'SECRET_KEY env. var. must be specified');
 
 const global_style = `
 <style>
