@@ -59,3 +59,9 @@ docker kill {container_id}
 [Environment variables are the perfect way](https://12factor.net/config) to configure Image-Charts On Premise application.
 
 - `PORT` (default `8080`): port to listen to
+
+## Requirements
+
+- CPU: 1 CPU per Image-Charts container
+- Memory: 1Go minimum - 2Go recommended per Image-Charts container
+- Disk: 2Gb
