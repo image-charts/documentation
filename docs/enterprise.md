@@ -3,15 +3,15 @@ meta_description: "Generate watermark-free chart image by signing request URLs w
 ---
 # Enterprise version
 
-This section is dedicated to the paying enterprise version. This plan use the same API but is **watermark free** and you can setup your **own sub-domain** for the perfect integration.
+This section is dedicated to the paying enterprise version. This plan uses the same API but is **watermark free** and you can setup your **own sub-domain** for the perfect integration.
 
 Once subscribed to the enterprise plan you will receive an `account id` and a `secret key`. These two keys are mandatory to sign your request and remove the watermark.
 
 ## Remove Image-Charts watermark by signing URLs
 
-Signing request **must be done server-side** otherwise anyone will be able to reuse your `secret key`. Beside signing there are no other computation involved server-side. Image-Charts is still the fastest option compared to server-side charts setup and generation.
+Signing request **must be done server-side** otherwise anyone will be able to reuse your `secret key`. Beside signing there are no other computations involved server-side. Image-Charts is still the fastest option compared to server-side charts setup and generation.
 
-You will need to sign the url using `HMAC-SHA256` hash algorithm. Before hashing the URL add your account id inside it using the `&icac=YOUR_ACCOUNT_ID` parameter, then hash it and at the resulting hash in the `&ichm=GENERATED_HASH` query parameter.
+You will need to sign the url using `HMAC-SHA256` hash algorithm. Before hashing the URL, add your account id inside it using the `&icac=YOUR_ACCOUNT_ID` parameter, then hash it and add the resulting hash in the `&ichm=GENERATED_HASH` query parameter.
 
 !!! tip "(easy) Prefer to not encode query parameters before computing the signature"
     In order to be easier to handle, **Image-Charts checks the signature for both encoded and decoded query params**. You do not need to worry about generating a string of the whole query with the right URL-safe characters anymore, if the basic query string check does not work, Image-Charts will also try to decode every query parameter pairs and then check the resulting query string against your signature (`ichm`).
@@ -21,12 +21,12 @@ You will need to sign the url using `HMAC-SHA256` hash algorithm. Before hashing
     **Generating a signature based on unencoded URL parameters is the recommended way** as it's much more robust and abstract away the encoding the transportation uses (e.g. webmail proxies, web-browsers, enterprise proxies).
 
 !!! tip "(advanced) What if I want to use special characters like `%` or `&` in my title, labels, legends... ?"
-    If you want to use special characters like `%` or `&` in chart title, labels, legends... You will need to update our code examples below to encode every query parameter values before signing the query string. Image Charts API will detect that the signature (`ichm`) was computed against the already encoded querystring and will work as expected.
+    If you want to use special characters like `%` or `&` in chart title, labels, legends... You will need to update our code examples below to encode every query parameter values before signing the query string. Image Charts API will detect that the signature (`ichm`) was computed against the already encoded query string and will work as expected.
 
 
 Note that Image-Chart supports `ichm` parameter both at the end of the query string (e.g. `https://image-charts.com/chart?{QUERY_STRING}&ichm=GENERATED_HASH`) and at the beginning (e.g `https://image-charts.com/chart?ichm=GENERATED_HASH&{QUERY_STRING}`).
 
-As an example here is a graph signed, without watermark:
+As an example, here is a graph signed without watermark:
 
 ![chart](https://image-charts.com/chart?chd=t%3A40%2C20%2C10%2C20%2C40%2C20%2C20%2C40%2C10%2C20%2C40%2C60%7C55%2C35%2C5%2C45%2C25%2C45%2C45%2C45%2C25%2C15%2C55%2C45&chf=b0%2Clg%2C90%2Cffeb3b%2C0.2%2Cf44336%2C1%7Cb1%2Clg%2C90%2C8bc34a%2C0.2%2C009688%2C1&chof=.png&chs=700x200&cht=lc&chtt=No%20watermark%21&icac=documentation&ichm=d824323e74a1caeebd47d994152639728997b9c572774b79f8ebf20f8b31a405)
 
@@ -36,7 +36,7 @@ As an example here is a graph signed, without watermark:
 &ichm=d824323e74a1caeebd47d994152639728997b9c572774b79f8ebf20f8b31a405
 ```
 
-Signing your URLs will ensure that no-one beside you created it and Image-Charts will verify the generated hash to be sure you your account created it. Here are some examples in various languages:
+Signing your URLs will ensure that no one beside you created it and Image-Charts will verify the generated hash to be sure your account created it. Here are some examples in various languages:
 
 ```js tab="NodeJS 6+" linenums="1"
 {!enterprise/hmac_.js!}
