@@ -198,7 +198,7 @@ Image-Charts comes bundled with production battle-tested extensions.
 
 ### Rounded bar charts
 
-# Examples
+#### Examples
 
 Bar chart below has 3 datasets and each bar has 10px rounded corners:
 
@@ -220,7 +220,7 @@ Bar chart below has 3 datasets and each bar has 10px rounded corners:
 !!! info "Enterprise and Enterprise+ subscription only"
 Background image are only available with **Enterprise** and **Enterprise+** subscriptions
 
-### Syntax
+#### Syntax
 
 Defining a background image for a chart in Chart.js is done through a `backgroundImage` plugin that requires an `url` attribute. The image will take up all the available space. 
 
@@ -236,7 +236,7 @@ Defining a background image for a chart in Chart.js is done through a `backgroun
 }
 ```
 
-### Examples
+#### Examples
 
 The example below displays a bar charts with two series and a full size background image.
 
