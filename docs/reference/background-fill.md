@@ -1,7 +1,7 @@
 ---
 meta_description: "Learn how to specify a background color or gradient for your chart"
 ---
-You can specify fill colors and styles for the chart data area and/or the whole chart background. Fill types include solid fills, striped fills, and gradients. You can specify different fills for different areas (for example, the whole chart area, or just the data area). The chart area fill overwrites the background fill. All fills are specified using the `chf` parameter, and you can mix different fill types (solids, stripes, gradients) in the same chart by separating values with pipe character (` | `). Chart area fills overwrite chart background fills.
+You can specify fill colors and styles for the chart data area and/or the whole chart background. Fill types include solid color, image and gradients fills. You can specify different fills for different areas (for example, the whole chart area, or just the data area). The chart area fill overwrites the background fill. All fills are specified using the `chf` parameter, and you can mix different fill types (solids, stripes, gradients) in the same chart by separating values with pipe character (` | `). Chart area fills overwrite chart background fills.
 
 ### Solid Fills
 
@@ -107,18 +107,38 @@ chf=
   b0,lg,90,03a9f4,0,3f51b5,1
 ```
 
+### Image fills
 
-### Striped fills
+You can specify an image url to use as a background for your chart. URL must be completely encoded in order to be handled
 
-!!! warning
-    We have no plan to support striped fills, if present, a solid fill will be used with the first color value of the stripe.
+#### Syntax
 
-<!-- You can specify a striped background fill for your chart area, or the whole chart. (Pie, Google-o-meter charts: background only.)
+```
+chf=bg,img,<image_url>
+```
 
-Syntax
+- **`bg`** background fill
+- **`img`** an image will be used to fill the background
+- **`<image_url>`** image url to use
 
-chf=
-  <fill_type>,ls,<angle>,<color_1>,<width_1>
-    ,...,
-  <color_n>,<width_n>
-<fill_type> -->
+#### Examples
+
+This example displays a [bar chart](/bar-charts/) with semi-transparent bars (`chco=FFFFFF90`) with an abstract image background (`chf=bg,img,https://i.imgur.com/ltXHn7L.png`): 
+
+[![chart](https://image-charts.com/chart?chco=FFFFFF90&chd=t1%3A10%2C40%2C60%2C80%2C30%2C20%7C60%2C40%2C50%2C100%2C20%2C30&chf=bg%2Cimg%2Chttps%3A%2F%2Fi.imgur.com%2FltXHn7L.png&chm=D%2C03a9f4%2C1%2C0%2C5%2C1&chs=999x600&cht=bvs&chxl=0%3A%7CJan%7CMar%7CApr%7CMay%7CJun%7CJul&chxs=0%2CFFFFFF%2C15%2C-1%2Clt%2CFFFFFF%2CFFFFFF%7C1%2CFFFFFF%2C15%2C-1%2Clt%2CFFFFFF%2CFFFFFF&chxt=x%2Cy&icac=documentation&icretina=1&ichm=73ddea7c939f95e81123f3e4b26f95b35eb900c9b60cb18275602e9d16f29c1b)](https://editor.image-charts.com/chart?chco=FFFFFF90&chd=t1%3A10%2C40%2C60%2C80%2C30%2C20%7C60%2C40%2C50%2C100%2C20%2C30&chf=bg%2Cimg%2Chttps%3A%2F%2Fi.imgur.com%2FltXHn7L.png&chm=D%2C03a9f4%2C1%2C0%2C5%2C1&chs=999x600&cht=bvs&chxl=0%3A%7CJan%7CMar%7CApr%7CMay%7CJun%7CJul&chxs=0%2CFFFFFF%2C15%2C-1%2Clt%2CFFFFFF%2CFFFFFF%7C1%2CFFFFFF%2C15%2C-1%2Clt%2CFFFFFF%2CFFFFFF&chxt=x%2Cy&icac=documentation&icretina=1&ichm=73ddea7c939f95e81123f3e4b26f95b35eb900c9b60cb18275602e9d16f29c1b
+)
+
+```
+chf=bg,img,https://i.imgur.com/ltXHn7L.png
+chco=FFFFFF90
+```
+
+This example displays a [mixed chart](/reference/markers/#creating-a-compound-chart-mixed-charts) with a orange/gold abstract image background:
+
+[![chart](https://image-charts.com/chart?chco=FFFFFF&chd=a1%3A%2C103.7%2C7.23%2C31.02%2C82.22%2C-123.74%2C43.71%2C84.22%2C164.59%2C31.26%2C69.91%2C90.59%2C20.9%2C-51.29%2C-44.29%2C-333.83%2C-452.37%2C35.41%2C24.4%7C1500%2C1603%2C1610%2C1641%2C1723%2C1599%2C1642%2C1726%2C1890%2C1921%2C1990%2C2080%2C2100%2C2048%2C2003%2C1669%2C1216%2C1251%2C1275&chf=bg%2Cimg%2Chttps%3A%2F%2Fi.imgur.com%2F8Gv2GsI.jpg&chg=20%2C50&chlps=textAlign%2Cright%7Calign%2Cbottom%7Cfont.size%2C8&chm=D%2C00AAFF%2C1%2C0%2C5%2C1&chs=800x600&cht=bvs&chxl=0%3A%7C%7C103%7C7%7C31%7C82%7C-124%7C43%7C84%7C164%7C31%7C69%7C90%7C20%7C-52%7C-45%7C-334%7C-453%7C35%7C24&chxr=2%2C-500%2C2500%7C1%2C-500%2C2500%2C100&chxs=1%2C000000%2C0%2C_&chxt=x%2Cy%2Cy&icac=documentation&iclocale=en&icretina=1&ichm=186a950a5a1972f321a5beb25b3c3be31d008c1567680c1485882b435c74cfe5)](https://editor.image-charts.com/chart?chco=FFFFFF&chd=a1%3A%2C103.7%2C7.23%2C31.02%2C82.22%2C-123.74%2C43.71%2C84.22%2C164.59%2C31.26%2C69.91%2C90.59%2C20.9%2C-51.29%2C-44.29%2C-333.83%2C-452.37%2C35.41%2C24.4%7C1500%2C1603%2C1610%2C1641%2C1723%2C1599%2C1642%2C1726%2C1890%2C1921%2C1990%2C2080%2C2100%2C2048%2C2003%2C1669%2C1216%2C1251%2C1275&chf=bg%2Cimg%2Chttps%3A%2F%2Fi.imgur.com%2F8Gv2GsI.jpg&chg=20%2C50&chlps=textAlign%2Cright%7Calign%2Cbottom%7Cfont.size%2C8&chm=D%2C00AAFF%2C1%2C0%2C5%2C1&chs=800x600&cht=bvs&chxl=0%3A%7C%7C103%7C7%7C31%7C82%7C-124%7C43%7C84%7C164%7C31%7C69%7C90%7C20%7C-52%7C-45%7C-334%7C-453%7C35%7C24&chxr=2%2C-500%2C2500%7C1%2C-500%2C2500%2C100&chxs=1%2C000000%2C0%2C_&chxt=x%2Cy%2Cy&icac=documentation&iclocale=en&icretina=1&ichm=186a950a5a1972f321a5beb25b3c3be31d008c1567680c1485882b435c74cfe5)
+
+
+```
+chf=bg,img,https://i.imgur.com/8Gv2GsI.jpg
+chco=FFFFFF
+```
