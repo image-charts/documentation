@@ -218,7 +218,7 @@ Bar chart below has 3 datasets and each bar has 10px rounded corners:
 ### Background image
 
 !!! info "Enterprise and Enterprise+ subscription only"
-Background image are only available with **Enterprise** and **Enterprise+** subscriptions
+    Background image are only available with **Enterprise** and **Enterprise+** subscriptions
 
 #### Syntax
 
