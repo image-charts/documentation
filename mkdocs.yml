@@ -32,6 +32,7 @@ nav:
   - Radar Charts: radar-charts.md
   - Bubble Charts: bubble-charts.md
   - GraphViz Charts: graph-viz-charts.md
+  - Progress Bar Charts: progress-bar-charts.md
   - QR Codes: qr-codes.md
   - Chart.js: chart.js.md
   - Reference:
