@@ -1,6 +1,6 @@
 {
   "name": "documentation",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Image-Charts documentation",
   "main": "index.js",
   "private": true,
