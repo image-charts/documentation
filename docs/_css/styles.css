@@ -1,3 +1,27 @@
+:root, [data-md-color-primary="indigo"] {
+    --md-primary-fg-color:        #293074 !important;
+    --md-primary-fg-color--light: #8481F7 !important;
+    --md-primary-fg-color--dark:  #293074 !important;
+
+    --md-typeset-a-color: #8481F7 !important;
+
+    --md-default-bg-color: #f3f3f7;
+
+    --md-text-font-family: "Roboto",;
+    --md-code-font-family: "Roboto Mono",;
+}
+
+body{
+    font-feature-settings: "kern","liga";
+    font-family: var(--md-text-font-family) -apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif;
+}
+
+.md-content{
+    background-color: #ffffff;
+    border-radius: 6px 6px 0px 0px;
+}
+
+/* customize logo */
 .md-header-nav__button.md-logo img{
     width: 180px;
     height: auto;

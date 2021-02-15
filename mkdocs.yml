@@ -80,8 +80,8 @@ theme:
   feature:
     tabs: false
   palette:
-    primary: blue
-    accent: indigo
+    primary: indigo
+    accent: blue
   font:
     text: Roboto
     code: Roboto Mono
