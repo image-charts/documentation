@@ -2,16 +2,18 @@
 
 .PHONY: build
 
+DOCKER_IMAGE=imagecharts/documentation:2021-02-15-1
+
 ifeq (, $(shell which docker))
 MAKE_DOCS = mkdocs
 else
-MAKE_DOCS = docker run -v ${PWD}:/docs -it -p 8090:8000 imagecharts/documentation
+MAKE_DOCS = docker run -v ${PWD}:/docs -it -p 8000:8000 ${DOCKER_IMAGE}
 endif
 
 deploy: setup build
 
 serve:
-	$(MAKE_DOCS) serve
+	$(MAKE_DOCS) serve -a 0.0.0.0:8000 --livereload
 
 build: build-gallery
 	mkdir -p docs/fonts
@@ -27,7 +29,7 @@ build: build-gallery
 build-gallery:
 	npm install
 	curl -s https://image-charts.com/gallery.json > ./scripts/gallery.json
-	node scripts/generate-gallery.js > ./docs/gallery.md
+	node scripts/generate-gallery.js > ./docs/GENERATED-gallery.md
 
 update: update-logo
 

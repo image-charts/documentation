@@ -1,5 +1,5 @@
-site_name: Image-Charts documentation
-site_author: François-Guillaume Ribreau
+site_name: 'Image-Charts documentation'
+site_author: 'François-Guillaume Ribreau'
 site_url: "https://documentation.image-charts.com"
 
 main_site_name: Image-Charts
@@ -9,6 +9,11 @@ main_site_url: "https://www.image-charts.com"
 # repo_name: image-charts/documentation
 # repo_url: https://github.com/image-charts/documentation
 edit_uri: "https://github.com/image-charts/documentation/edit/master/docs"
+
+
+docs_dir: 'docs'
+extra_css:
+  - _css/styles.css
 
 # do not use google analytics parameter, rely on google tag manager instead
 
@@ -80,17 +85,25 @@ theme:
   font:
     text: Roboto
     code: Roboto Mono
-  favicon: logo/rgb-rect-white@32.png
-  logo: logo/rgb-bw@512.png
+  favicon: 'logo/rgb-rect-white@32.png'
+  logo: 'logo/rgb-bw@512.png'
 
 extra:
   social:
-    - type: "github"
+    - icon: "fontawesome/brands/github-alt"
       link: "https://github.com/image-charts"
-    - type: "twitter"
+    - icon: "fontawesome/brands/twitter"
       link: "https://twitter.com/imagecharts"
-    - type: "envelope"
+    - icon: "fontawesome/solid/envelope"
       link: "mailto:support@image-charts.com"
+
+plugins:
+  - search
+  - minify:
+      minify_html: true
+      minify_js: true
+      htmlmin_opts:
+        remove_comments: true
 
 # facelessuser.github.io/pymdown-extensions
 # https://www.mkdocs.org/user-guide/configuration/#formatting-options

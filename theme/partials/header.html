@@ -2,100 +2,30 @@
 <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PTHBZLF');</script>
 <!-- End Google Tag Manager -->
 
-<style media="screen">
-img[src^="https://image-charts.com/chart"] {
-  margin: 0 auto;
-  display: block;
-}
-
-a.editor_switcher{
-  position:relative;
-  display:block;
-}
-
-a.editor_switcher:hover::before{
-  display: block;
-  content: ' Open chart editor ';
-  text-align:center;
-  position: absolute;
-  left: 0px;
-  right: 0px;
-  top: 0px;
-  bottom: 0px;
-  height:100%;
-  width:100%;
-  background: #cccccc;
-  color:#ffffff;
-  background: rgba(0,0,0,0.7);
-}
-</style>
-
-<!-- Application header -->
+{% set site_url = config.site_url | d(nav.homepage.url, true) | url %}
+{% if not config.use_directory_urls and site_url[0] == site_url[-1] == "." %}
+{% set site_url = site_url ~ "/index.html" %}
+{% endif %}
 <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="{{ lang.t('header.title') }}">
+    <a href="{{ site_url }}" title="{{ config.site_name | e }}" class="md-header-nav__button md-logo" aria-label="{{ config.site_name }}">
+      {% include "partials/logo.html" %}
+    </a>
 
-  <!-- Top-level navigation -->
-  <nav class="md-header-nav md-grid">
-    <div class="md-flex">
-
-      <!-- Link to home -->
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="{{ config.main_site_url }}"
-            title="{{ config.main_site_name }}"
-            class="md-header-nav__button md-logo">
-          {% if config.theme.logo.icon %}
-            <i class="md-icon">{{ config.theme.logo.icon }}</i>
-          {% else %}
-            <img src="{{ config.theme.logo | url }}" width="163" height="30" />
-          {% endif %}
-        </a>
-      </div>
-
-      <!-- Button to toggle drawer -->
-      <div class="md-flex__cell md-flex__cell--shrink">
-        <label class="md-icon md-icon--menu md-header-nav__button"
-            for="__drawer"></label>
-      </div>
-
-      <!-- Header title -->
-      <div class="md-flex__cell md-flex__cell--stretch">
-        <div class="md-flex__ellipsis md-header-nav__title"
-            data-md-component="title">
-          {% block site_name %}
-            {% if config.site_name == page.title %}
-              {{ config.site_name }}
-            {% else %}
-              <span class="md-header-nav__topic">
-
-              </span>
-              <span class="md-header-nav__topic">
-                {{ page.title }}
-              </span>
-            {% endif %}
-          {% endblock %}
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      {% include ".icons/material/menu" ~ ".svg" %}
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      <div class="md-header-nav__ellipsis">
+        <div class="md-header-nav__topic">
         </div>
       </div>
-
-      <!-- Button to open search dialogue -->
-      <div class="md-flex__cell md-flex__cell--shrink">
-        {% block search_box %}
-          {% if "search" in config["plugins"] %}
-            <label class="md-icon md-icon--search md-header-nav__button"
-                for="__search"></label>
-
-            <!-- Search interface -->
-            {% include "partials/search.html" %}
-          {% endif %}
-        {% endblock %}
-      </div>
-
-      <!-- Repository containing source -->
-      {% if config.repo_url %}
-        <div class="md-flex__cell md-flex__cell--shrink">
-          <div class="md-header-nav__source">
-            {% include "partials/source.html" %}
-          </div>
-        </div>
-      {% endif %}
     </div>
+    {% if "search" in config["plugins"] %}
+    <label class="md-header-nav__button md-icon" for="__search">
+      {% include ".icons/material/magnify.svg" %}
+    </label>
+    {% include "partials/search.html" %}
+    {% endif %}
   </nav>
 </header>
