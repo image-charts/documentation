@@ -14,6 +14,8 @@ edit_uri: "https://github.com/image-charts/documentation/edit/master/docs"
 docs_dir: 'docs'
 extra_css:
   - _css/styles.css
+extra_javascript:
+  - _js/editor.js
 
 # do not use google analytics parameter, rely on google tag manager instead
 
@@ -105,6 +107,8 @@ plugins:
       minify_js: true
       htmlmin_opts:
         remove_comments: true
+      js_files:
+        - _js/editor.js
 
 # facelessuser.github.io/pymdown-extensions
 # https://www.mkdocs.org/user-guide/configuration/#formatting-options
