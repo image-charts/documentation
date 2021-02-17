@@ -35,6 +35,8 @@ curl "[download_link]" | docker load
 ```
 docker run -it \
         -p 8080:8080 \
+        --log-opt max-size=10m --log-opt max-file=5 \
+        --restart=always \
         -v /path/to/your_license.lic:/license.lic \
         -e LICENSE_FILE_PATH=/license.lic \
         --entrypoint=/usr/src/app/image-charts \
