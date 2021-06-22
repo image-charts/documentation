@@ -379,6 +379,16 @@ Display the x-axis labels in `#FF00FF` with a 13px font-size and `#FF0000` color
 - `z`: Display trailing zeros
 - `s` Display group separators
 - `Mil`: append "Mil" to each label
+ 
+The chart below is the same as above but has a label rotation of 40 degres on the x axis (the first axis declared, zero indexed, on `chxt`).
+  
+```
+chxt=x,y
+chxs=0,min40
+```
+  
+[![chart](https://image-charts.com/chart?chco=76A4FB&chd=s%3AcEAELFJHHHKUju9uuXUc&chls=2.0&chs=700x300&cht=lc&chxl=0%3A%7CJan%7CFeb%7CMarch%7CApril%7CMay%7C1%3A%7CMin%7CMid%7CMax&chxs=0%2Cmin40&chxt=x%2Cy&icac=documentation&icretina=1&ichm=a7d4fd4dfaaeb5cb156fdf9c579efa4c435f0d168c9ea7f6e4f12035194ec7c0)](https://editor.image-charts.com/chart?chco=76A4FB&chd=s%3AcEAELFJHHHKUju9uuXUc&chls=2.0&chs=700x300&cht=lc&chxl=0%3A%7CJan%7CFeb%7CMarch%7CApril%7CMay%7C1%3A%7CMin%7CMid%7CMax&chxs=0%2Cmin40&chxt=x%2Cy&icac=documentation&icretina=1&ichm=a7d4fd4dfaaeb5cb156fdf9c579efa4c435f0d168c9ea7f6e4f12035194ec7c0)
+
 
 
 Chart below has an x-axis with 1 trailing zero (z) colored in black with 10px font-size and an y-axis with a $ currency suffixed by Mil, colored in `#007939` with a 20px font-size.
