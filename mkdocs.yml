@@ -59,11 +59,14 @@ nav:
   - Guides:
       - How to setup a dependency graph in Google Sheets: guides/graph-in-google-sheets.md
       - How to send charts to a Slack channel: guides/send-charts-to-slack.md
+      - How to generate image charts from Salesforce Apex language: guides/salesforce-apex-charts.md
   - Gallery: gallery.md
   - Enterprise: enterprise.md
+  - SDK & libraries: sdk-and-libraries.md
   - On Premise: on-premise.md
   - Errors: errors.md
   - Limits and Quotas: limits-and-quotas.md
+
   - Status Page: https://status.image-charts.com
   - Changelog: https://headwayapp.co/image-charts-changelog
   - Static Chart Editor: https://editor.image-charts.com
@@ -114,24 +117,17 @@ plugins:
 # https://www.mkdocs.org/user-guide/configuration/#formatting-options
 # https://github.com/facelessuser/pymdown-extensions/blob/master/mkdocs.yml#L96
 markdown_extensions:
-  - pymdownx.highlight:
-      css_class: codehilite
-      extend_pygments_lang:
-        - name: php-inline
-          lang: php
-          options:
-            startinline: true
-        - name: pycon3
-          lang: pycon
-          options:
-            python3: true
-      linenums_style: pymdownx-inline
+  - pymdownx.inlinehilite
   - pymdownx.emoji
   # https://github.com/mkdocs/mkdocs/issues/777#issuecomment-308266201
   - markdown_include.include:
       base_path: docs
   # https://facelessuser.github.io/pymdown-extensions/extensions/superfences/#nested-fence-format
-  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.snippets:
+      base_path: docs/
+  - pymdownx.superfences:
+      preserve_tabs: true
   - pymdownx.critic
   - pymdownx.tilde
   - pymdownx.tasklist

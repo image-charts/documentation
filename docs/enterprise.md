@@ -36,41 +36,80 @@ As an example, here is a graph signed without watermark:
 &ichm=d824323e74a1caeebd47d994152639728997b9c572774b79f8ebf20f8b31a405
 ```
 
-Signing your URLs will ensure that no one beside you created it and Image-Charts will verify the generated hash to be sure your account created it. Here are some examples in various languages:
+Signing your URLs will ensure that no one beside you created it and Image-Charts will verify the generated hash to be sure your account created it. 
 
-```js tab="NodeJS 6+" linenums="1"
-{!enterprise/hmac_.js!}
-```
+--8<--
+./sdk-and-libraries.md
+--8<--
 
-```js tab="Google Sheets (via Google Apps Script)" linenums="1"
-{!enterprise/hmac_.googlesheets.js!}
-```
+### Code snippets
 
+Here are some code examples in various programming languages that rely mainly on their standard library:
 
-```python tab="Python 3" linenums="1"
-{!enterprise/hmac_.py!}
-```
+=== "NodeJS 6+"
 
+    ```{.js linenums="1"}
+    --8<--
+    ./enterprise/hmac_.js
+    --8<--
+    ```
 
-```php tab="PHP 5+" linenums="1"
-{!enterprise/hmac_.php!}
-```
+=== "Google Sheets (via Google Apps Script)"
 
-```csharp tab="C#" linenums="1"
-{!enterprise/csharp/hmac_.cs!}
-```
+    ```{.js linenums="1"}
+    --8<--
+    ./enterprise/hmac_.googlesheets.js
+    --8<--
+    ```
 
-```java tab="Java" linenums="1"
-{!enterprise/java/src/hmac_.java!}
-```
+=== "Python 3"
+    ```{.python linenums="1"}
+    --8<--
+    enterprise/hmac_.py
+    --8<--
+    ```
 
-```ruby tab="Ruby 2.x" linenums="1"
-{!enterprise/hmac_.rb!}
-```
+=== "PHP 5+"
+    ```{.php linenums="1"}
+    --8<--
+    enterprise/hmac_.php
+    --8<--
+    ```
 
-```ruby tab="C#" linenums="1"
-{!enterprise/csharp/hmac_.cs!}
-```
+=== "C#"
+    ```{.csharp linenums="1"}
+    --8<--
+    enterprise/csharp/hmac_.cs
+    --8<--
+    ```
+
+=== "Java"
+    ```{.java linenums="1"}
+    --8<--
+    enterprise/java/src/hmac_.java
+    --8<--
+    ```
+
+=== "Ruby 2.x"
+    ```{.ruby linenums="1"}
+    --8<--
+    enterprise/hmac_.rb
+    --8<--
+    ```
+
+=== "C#"
+    ```{.ruby linenums="1"}
+    --8<--
+    enterprise/csharp/hmac_.cs
+    --8<--
+    ```
+
+=== "Salesforce/Apex"
+    ```{.java linenums="1"}
+    --8<--
+    ./enterprise/hmac_.cls
+    --8<--
+    ```
 
 !!! tip "Want more?"
     Don't see your favorite language here? [Just ask us :angel:](mailto:support@image-charts.com) !

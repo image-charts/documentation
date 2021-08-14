@@ -2,7 +2,7 @@
 
 .PHONY: build
 
-DOCKER_IMAGE=imagecharts/documentation:2021-02-15-1
+DOCKER_IMAGE=imagecharts/documentation:2021-08-14-1
 
 ifeq (, $(shell which docker))
 MAKE_DOCS = mkdocs
