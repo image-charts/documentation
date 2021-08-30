@@ -223,7 +223,7 @@ Supported values for `textAlign`:
 - `'right'`: alias of `'end'`
 
 ```
-chlps=textAlign=center
+chlps=textAlign,center
 ```
 
 ### Positionning
