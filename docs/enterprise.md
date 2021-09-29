@@ -121,4 +121,4 @@ The easiest way to generate a watermark-free Image-Charts — that is, to sign g
 
 ## Custom domain
 
-Please contact our [support](mailto:support@image-charts.com) that will give you a `CNAME` to point to. Please also note that Image-Charts custom domain does not support SSL/TLS, it must be done on the custom domain end.
+Please contact our [support](mailto:support@image-charts.com) that will give you a `CNAME` to point to. Please also note that Image-Charts custom domain does not support SSL/TLS, must of our customers leverage services like AWS Cloudfront to handle that part.
