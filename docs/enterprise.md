@@ -117,3 +117,8 @@ Here are some code examples in various programming languages that rely mainly on
 ## Online static chart generator
 
 The easiest way to generate a watermark-free Image-Charts — that is, to sign generated URL with HMAC algorithm — is to use our [online url generator](https://editor.image-charts.com/?tab_editor=enterprise#https:/image-charts.com/chart?chd=a:30010,-30000,50000,80000,20000&chdl=Income&chf=b0,lg,90,EA469EFF,1,03A9F47C,0.4&chl=2014|2015|2016|2017|2018&chof=1535403433426&chs=700x300&cht=bvs&chxs=0N*cEURs*&chxt=y).
+
+
+## Custom domain
+
+Please contact our [support](mailto:support@image-charts.com) that will give you a `CNAME` to point to. Please also note that Image-Charts custom domain does not support SSL/TLS, it must be done on the custom domain end.
