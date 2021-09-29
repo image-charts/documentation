@@ -122,3 +122,12 @@ The easiest way to generate a watermark-free Image-Charts — that is, to sign g
 ## Custom domain
 
 Please contact our [support](mailto:support@image-charts.com) that will give you a `CNAME` to point to. Please also note that Image-Charts custom domain does not support SSL/TLS, must of our customers leverage services like AWS Cloudfront to handle that part.
+
+### Editor's custom domain support
+
+In [Image-Charts editor's environment tab](https://editor.image-charts.com/?tab_editor=environments):
+- click `Add new environment` 
+- set your environment name (e.g. `My Company`) and custom domain (e.g. `http://charts.my-domain.com`)
+- click `Save`
+
+The editor will now display both Image-Charts `Production` environment and `My Company` environment everywhere. Uncheck `Production` to only display charts using `http://charts.my-domain.com` custom domain.
