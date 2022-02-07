@@ -106,17 +106,18 @@ chm=D,0033FF,1,0,5,1
 #### Syntax
 ```
 chm=
-  D,<color>,<series_index>,<which_points>,<width>,<opt_z_order>
+  D,<color>,<series_index>,<which_points>,<width>,<opt_z_order>,<opt_axis_index>
 ```
 
-- **`D`** Indicates that this is a line marker.
+- **`D`** Indicates that this is a line chart on top of the current chart.
 - **`<color>`** The color of the line, in RRGGBB hexadecimal format.
 - **`<series_index>`** The index of the data series used to draw the line. The data series index is 0 for the first data series, 1 for the second data series, and so on.
 - **`<which_points>`** Which points in a series to use to draw the line. Use one of the following values:
     - `0` - Use all the points in the series.
     - `start:end` - Use a specific range of points in the series, from the start to end, inclusive (zero-based index). You can also use floating point values to specify intermediate points, or leave start or end blank to indicate the first or last data point, respectively. start and end can be negative, as a reverse index from the last value. If both start and end are negative, be sure to write them in increasing value (for example, -6:-1).
-- **`<size>`** The width of the line in pixels.
-<!--- **`<opt_z_order>`** [Optional] The layer on which to draw the marker, compared to other markers and all other chart elements. This is a floating point number from -1.0 to 1.0, inclusive, where -1.0 is the bottom and 1.0 is the top. Chart elements (lines and bars) are just lower than zero. If two markers have the same value, they are drawn in the order given by the URL. Default value is 0.0 (just above the chart elements).-->
+- **`<width>`** The width of the line in pixels.
+- **`<opt_z_order>`** [Optional] unsupported for now, set it to `0`
+- **`<opt_axis_index>`** [Optional] Which axis to use for this line chart labels to. This is an index into the [chxt](/reference/chart-axis/#axis-range) parameter array. For example, if you have `chxt=x,x,y,y` then index 0 would be the first x-axis, 1 would be the second x-axis.
 
 To add multiple lines (or combine this with any other `chm` markers), separate the `chm` parameter sets using a pipe ( | ) delimiter. You cannot make a dashed line marker with this parameter.
 
