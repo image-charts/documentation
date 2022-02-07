@@ -62,6 +62,14 @@ Here are some code examples in various programming languages that rely mainly on
     --8<--
     ```
 
+=== "JavaScript (vanilla ES6 env, no require)"
+
+    ```{.js linenums="1"}
+    --8<--
+    ./enterprise/hmac_vanillajs_.js
+    --8<--
+    ```
+
 === "Python 3"
     ```{.python linenums="1"}
     --8<--
