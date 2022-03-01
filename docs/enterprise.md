@@ -140,7 +140,8 @@ Please contact our [support](mailto:support@image-charts.com) that will give you
 
 ### Editor's custom domain support
 
-In [Image-Charts editor's environment tab](https://editor.image-charts.com/?tab_editor=environments):
+In [Image-Charts editor's]((https://editor.image-charts.com) environment tab:
+
 - click `Add new environment` 
 - set your environment name (e.g. `My Company`) and custom domain (e.g. `http://charts.my-domain.com`)
 - click `Save`
