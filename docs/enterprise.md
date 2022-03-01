@@ -119,6 +119,13 @@ Here are some code examples in various programming languages that rely mainly on
     --8<--
     ```
 
+=== "SQL/Athena"
+    ```{.sql linenums="1"}
+    --8<--
+    ./enterprise/hmac_.sql
+    --8<--
+    ```
+
 !!! tip "Want more?"
     Don't see your favorite language here? [Just ask us :angel:](mailto:support@image-charts.com) !
 
