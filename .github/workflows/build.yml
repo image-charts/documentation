@@ -19,6 +19,10 @@ jobs:
 
       - name: Build website
         run: make build
+        env:
+          ACCOUNT_ID: ${{ secrets.ACCOUNT_ID }}
+          SECRET_KEY: ${{ secrets.SECRET_KEY }}
+          GOOGLE_ANALYTICS_TOKEN: ${{ secrets.GOOGLE_ANALYTICS_TOKEN }}
 
       - name: Deploy to Netlify 🚀
         if: github.ref == 'refs/heads/master'
