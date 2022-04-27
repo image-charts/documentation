@@ -33,7 +33,7 @@ make test
 
 ### deployment
 
-Deployment is done through Netlify ([admin](https://app.netlify.com/sites/image-charts-documentation/overview)), when master branch is updated.
+Deployment is done through Github Actions to Netlify ([admin](https://app.netlify.com/sites/image-charts-documentation/overview)), when master branch is updated.
 
 ### Credits
 

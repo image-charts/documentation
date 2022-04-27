@@ -21,7 +21,8 @@ build: build-gallery
 	curl -s https://image-charts.com/swagger.json | jq -r '.paths[].get.parameters[] | select(.name == "icff").enum | reduce .[] as $$item ([]; . + ["`" + $$item + "`"]) | join(", ")' > docs/GENERATED-google-fonts.md
 	curl -s https://image-charts.com/errors.json | jq -r 'reduce .[] as $$item ([]; . + ["- `" + $$item.code + "`: " + $$item.description]) | join("\n")' > docs/GENERATED-error-codes.md
 
-	$(MAKE_DOCS) build
+	mkdir -p site
+	$(MAKE_DOCS) build --site-dir site/
 
 	# don't forget to copy the robots.txt file to the publish "site/" folder
 	cp -v robots.txt site/
