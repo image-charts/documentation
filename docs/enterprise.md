@@ -24,7 +24,8 @@ You will need to sign the url using `HMAC-SHA256` hash algorithm. Before hashing
     If you want to use special characters like `%` or `&` in chart title, labels, legends... You will need to update our code examples below to encode every query parameter values before signing the query string. Image Charts API will detect that the signature (`ichm`) was computed against the already encoded query string and will work as expected.
 
 
-Note that Image-Chart supports `ichm` parameter both at the end of the query string (e.g. `https://image-charts.com/chart?{QUERY_STRING}&ichm=GENERATED_HASH`) and at the beginning (e.g `https://image-charts.com/chart?ichm=GENERATED_HASH&{QUERY_STRING}`).
+Note that Image-Chart supports `ichm` parameter anywhere in the query string. It can be at the beginning (e.g. `https://image-charts.com/chart?{QUERY_STRING}&ichm=GENERATED_HASH`), in the middle (e.g. `https://image-charts.com/chart?{QUERY_STRING_CHUNK}&ichm=GENERATED_HASH&{REST_OF_QUERY_STRING}`) or at the end (e.g `https://image-charts.com/chart?ichm=GENERATED_HASH&{QUERY_STRING}`).
+
 
 As an example, here is a graph signed without watermark:
 
