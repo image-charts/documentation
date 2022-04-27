@@ -10,7 +10,7 @@ function qs_stringify(obj){
 }
 
 function sign(secretKey, query) {
-  return exports.enc.Hex.stringify(exports.HmacSHA256(query, secretKey));
+  return CryptoJS.enc.Hex.stringify(exports.HmacSHA256(query, secretKey));
 }
 
 // Now let's generate a chart url that will be sent inside an email or a bot message
