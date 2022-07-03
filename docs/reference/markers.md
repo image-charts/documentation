@@ -296,7 +296,7 @@ chm=
             - `f` - *[Default]* Floating point format. Consider specifying precision as well with the <decimal_places> value.
             - `p` - Percentage format. A % sign is appended automatically. Note: When using this format, data values from 0.0 — 1.0 map to 0 — 100% (for example, 0.43 will be shown as 43%).
             - `e` - Scientific notation format.
-            - `c*<CUR>*` - Format the number in the currency specified, with the appropriate currency marker. Replace <CUR> with a three-letter currency code. Example: cEUR for Euros. You can find a list of codes on the [ISO web site](http://www.iso.org/iso/home/store/catalogue_tc/catalogue_detail.htm?csnumber=46121), although not all symbols are supported.
+            - `c*<CUR>*` - Format the number in the currency specified, with the appropriate currency marker. Replace <CUR> with a three-letter currency code. Example: cEUR for Euros. You can find a list of codes on the [ISO 4217 wikipedia page](https://en.wikipedia.org/wiki/ISO_4217), although not all symbols are supported.
         - `<decimal_places>` - An integer specifying how many decimal places to show. The value is rounded (not truncated) to this length. *Default is 2*.
         - `z` -  Display trailing zeros. *Default is no*.
         - `s` -  Display group separators. *Default is no*.
