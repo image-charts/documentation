@@ -2,13 +2,7 @@
 
 .PHONY: build
 
-DOCKER_IMAGE=imagecharts/documentation:2021-08-14-1
-
-ifeq (, $(shell which docker))
 MAKE_DOCS = mkdocs
-else
-MAKE_DOCS = docker run -v ${PWD}:/docs -t -p 8000:8000 ${DOCKER_IMAGE}
-endif
 
 deploy: setup build
 
