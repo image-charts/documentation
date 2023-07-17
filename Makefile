@@ -7,7 +7,7 @@ DOCKER_IMAGE=imagecharts/documentation:2021-08-14-1
 ifeq (, $(shell which docker))
 MAKE_DOCS = mkdocs
 else
-MAKE_DOCS = docker run -v ${PWD}:/docs -it -p 8000:8000 ${DOCKER_IMAGE}
+MAKE_DOCS = docker run -v ${PWD}:/docs -t -p 8000:8000 ${DOCKER_IMAGE}
 endif
 
 deploy: setup build
@@ -21,6 +21,7 @@ build: build-gallery
 	curl -s https://image-charts.com/swagger.json | jq -r '.paths[].get.parameters[] | select(.name == "icff").enum | reduce .[] as $$item ([]; . + ["`" + $$item + "`"]) | join(", ")' > docs/GENERATED-google-fonts.md
 	curl -s https://image-charts.com/errors.json | jq -r 'reduce .[] as $$item ([]; . + ["- `" + $$item.code + "`: " + $$item.description]) | join("\n")' > docs/GENERATED-error-codes.md
 
+	mkdir -p site
 	$(MAKE_DOCS) build
 
 	# don't forget to copy the robots.txt file to the publish "site/" folder

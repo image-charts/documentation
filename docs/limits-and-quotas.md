@@ -18,6 +18,15 @@ The following quotas apply to Image-Charts API;
     Please [contact our support team](mailto:support@image-charts.com) if you have special needs.
 
 
+## Free API usage quota limits
+
+The following quotas apply to Image-Charts API calls without authentication (`ichm` and `icac`)
+
+- 60 queries per 1 minute per **IP address** (thus 1 query per second (QPS)) 
+
+!!! tip 
+    If you wish to get higher throughput [please subscribe](https://www.image-charts.com/pricing).
+
 ## Exceeding quota limits
 
 If the quota of requesting Image-Charts API is exceeded, the API returns an error code `429` and a message that the account has exceeded the quota. When the threshold is met, the client will be blocked **for 1 minute**. 
