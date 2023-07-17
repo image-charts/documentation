@@ -40,29 +40,29 @@ The easiest way to make a JavaScript POST request is to create a page that hosts
 
 **post_chart.html**
 
-```js
-<html xmlns="http://www.w3.org/1999/xhtml">
+```text
+<html>
   <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <script type='application/javascript'>
-    // Send the POST when the page is loaded,
-    // which will replace this whole page with the retrieved chart.
-    function loadGraph() {
-      var frm = document.getElementById('post_form');
-      if (frm) {
-       frm.submit();
-      }
-    }
-  </script>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <script>
+        // Send the POST when the page is loaded,
+        // which will replace this whole page with the retrieved chart.
+        function loadGraph() {
+          var frm = document.getElementById('post_form');
+          if (frm) {
+           frm.submit();
+          }
+        }
+      </script>
   </head>
-  <body onload="loadGraph()">
+  < body onload="loadGraph()">
     <form action='https://image-charts.com/chart' method='POST' id='post_form'>
       <input type='hidden' name='cht' value='lc'/>
       <input type='hidden' name='chtt' value='This is my chart'/>
       <input type='hidden' name='chs' value='300x200'/>
       <input type='hidden' name='chxt' value='x'/>
       <input type='hidden' name='chd' value='t:40,20,50,20,100'/>
-      <input type='submit'/>
+      <input type='submit'>
     </form>
   </body>
 </html>
@@ -119,5 +119,5 @@ Embedding this chart is easier than the JavaScript example, because you can simp
 **another_page.html**
 
 ```html
-<img width='600' height='200' src='chartserver-image.php'>
+<img width='600' height='200' src='chartserver-image.php' />
 ```
