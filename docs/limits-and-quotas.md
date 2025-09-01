@@ -22,7 +22,7 @@ The following quotas apply to Image-Charts API;
 
 The following quotas apply to Image-Charts API calls without authentication (`ichm` and `icac`)
 
-- 60 queries per 1 minute per **IP address** (thus 1 query per second (QPS)) 
+- 10 queries per 1 minute per **IP address**
 
 !!! tip 
     If you wish to get higher throughput [please subscribe](https://www.image-charts.com/pricing).
