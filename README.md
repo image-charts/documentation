@@ -1,40 +1,48 @@
-Image-Charts documentation
---------------------------
+# Image-Charts Documentation
 
 Read the documentation [online](https://documentation.image-charts.com/).
 
+## Development
 
-### Start local dev environment
+### Requirements
 
-Requirements:
-- docker
+- Node.js 18+
 
-```
-make serve
-```
+### Install dependencies
 
-### update
-
-Update:
-
-- image-charts logo versions
-
-```
-make update
+```bash
+npm install
 ```
 
-### tests
+### Start local dev server
 
-We want that much of our code examples are tested through unit-tests.
-
-```
-make test
+```bash
+npm run start
 ```
 
-### deployment
+This will start a local development server at `http://localhost:3000`.
 
-Deployment is done through Github Actions to Netlify ([admin](https://app.netlify.com/sites/image-charts-documentation/overview)), when master branch is updated.
+### Build
 
-### Credits
+```bash
+npm run build
+```
 
-Image-charts documentation is built upon [mkdocs](https://www.mkdocs.org) and [mkdocs-material](https://github.com/squidfunk/mkdocs-material/).
+### Serve production build locally
+
+```bash
+npm run serve
+```
+
+## Deployment
+
+Deployment is done through Netlify when the master branch is updated.
+
+- [Netlify Admin](https://app.netlify.com/sites/image-charts-documentation/overview)
+
+## Tech Stack
+
+- [Docusaurus 3.x](https://docusaurus.io/)
+- [React 19](https://react.dev/)
+- [@easyops-cn/docusaurus-search-local](https://github.com/easyops-cn/docusaurus-search-local) for search
+- [@docusaurus/theme-mermaid](https://docusaurus.io/docs/markdown-features/diagrams) for diagrams

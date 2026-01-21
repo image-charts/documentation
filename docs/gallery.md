@@ -1,5 +1,9 @@
 ---
-meta_description: "Discover the best image charts generated from our HTTP chart API"
+title: Gallery
+description: "Discover the best image charts generated from our HTTP chart API"
+sidebar_position: 12
 ---
 
-{!GENERATED-gallery.md!}
+import GeneratedGallery from './GENERATED-gallery.md';
+
+<GeneratedGallery />

@@ -1,6 +1,9 @@
 ---
-meta_description: "Generate polar charts as image using Image-charts API. From simple, slice gradient fill or display axis label pie charts to series colors, we handle everything!"
+title: Polar Area Charts
+description: "Generate polar charts as image using Image-charts API. From simple, slice gradient fill or display axis label pie charts to series colors, we handle everything!"
+sidebar_position: 5
 ---
+
 # Polar Area Charts
 
 This section describes how to create polar area charts using the Image-Chart API.
@@ -147,25 +150,13 @@ chco=EA469E|03A9F4|FFC00C
 ```
 
 
-<!--Finally, here's a overlayed polar chart that includes both series colors and individual slice colors. The chart has two concentric data series. In human-readable form, the colors are chco=blue|yellow|green,blue|pink. The comma breaks this into two series:
-
-- orange|yellow|green - One color defined for each slice.
-- blue|pink - Alternating blue and yellow slices.
-
-[![](https://image-charts.com/https://image-charts.com/chart?chco=FF80087C%7CFFBF0C7C%7C11B11B7C%2C03A9F47C%7CEA469E7C&chd=s%3AeYY%2CORVM&chdl=1%7C2%7C3%7C4%7C5%7C6%7C7&chs=700x200&cht=pa&icac=documentation&icretina=1&ichm=55bdd654be23e776658ee4e5a93029df4bd3d7ff9668dcc138e9cbc3582235c4)](https://editor.image-charts.com/chart?chco=FF80087C%7CFFBF0C7C%7C11B11B7C%2C03A9F47C%7CEA469E7C&chd=s%3AeYY%2CORVM&chdl=1%7C2%7C3%7C4%7C5%7C6%7C7&chs=700x200&cht=pa&icac=documentation&icretina=1&ichm=55bdd654be23e776658ee4e5a93029df4bd3d7ff9668dcc138e9cbc3582235c4)
-
-```
-chd=s:eYY,ORVM
-chco=FF8008|FFBF0C|11B11B,03A9F4|EA469E
-```-->
-
-
 ## Legend
 
 You can display a legend for each individual polar chart slices using the `chdl` parameter, one legend entry per slice.
 
-!!! note
-    Only URL-safe characters are permitted in label strings. To be safe, you should URL-encode any strings containing characters not in the character set `0-9a-zA-Z`.
+:::note
+Only URL-safe characters are permitted in label strings. To be safe, you should URL-encode any strings containing characters not in the character set `0-9a-zA-Z`.
+:::
 
 #### Syntax
 
@@ -189,5 +180,5 @@ Let specify legends for a simple animated polar chart.
 ```
 cht=pa
 chd=t:20,20,30,40,50
-chdl=20°|20°|30°|40°|50°
+chdl=20deg|20deg|30deg|40deg|50deg
 ```

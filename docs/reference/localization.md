@@ -1,8 +1,14 @@
 ---
-meta_description: "Learn how to customize your chart localization, like price format."
+title: Localization
+description: "Learn how to customize your chart localization, like price format."
+sidebar_position: 10
 ---
-!!! info "Enterprise subscription only"
-    Language localization is only enabled in **Enterprise** subscriptions
+
+# Localization
+
+:::info Enterprise subscription only
+Language localization is only enabled in **Enterprise** subscriptions
+:::
 
 #### Localization
 
@@ -21,7 +27,7 @@ iclocale=<locale>
 
 #### Example
 
-In the example below, the position of the `€` currency sign will be first with `iclocale=en` and behind with `iclocale=fr` and `iclocale=de`. Also not the variations in thousands and decimal separators.
+In the example below, the position of the currency sign will be first with `iclocale=en` and behind with `iclocale=fr` and `iclocale=de`. Also not the variations in thousands and decimal separators.
 
 The chart below has a english locale:
 

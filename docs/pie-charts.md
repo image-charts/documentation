@@ -1,6 +1,9 @@
 ---
-meta_description: "Generate pie charts as image using Image-charts API. From basic or pie charts to labels or legend, we handle everything!"
+title: Pie Charts
+description: "Generate pie charts as image using Image-charts API. From basic or pie charts to labels or legend, we handle everything!"
+sidebar_position: 4
 ---
+
 # Pie Charts
 
 This section describes how to create pie charts using the Image-Chart API.
@@ -35,11 +38,11 @@ chdl=January|February|March|April
 
 ```
 chl=January|February|March|April
-chdl=30°|40°|50°|60°
+chdl=30deg|40deg|50deg|60deg
 ```
 
 
-Values are displayed relative to each other: so a chart with values 1,2,3 will look the same as a chart with values 100,200,300. **However**, when using text format data, values greater than 100 are trimmed to 100, so you will need to use text format with custom scaling to display slices greater than 100 properly (use the chds parameter with min/max values of chds=0,<max-slice-size>).
+Values are displayed relative to each other: so a chart with values 1,2,3 will look the same as a chart with values 100,200,300. **However**, when using text format data, values greater than 100 are trimmed to 100, so you will need to use text format with custom scaling to display slices greater than 100 properly (use the chds parameter with min/max values of `chds=0,<max-slice-size>`).
 
 Negative values display as empty slices of the appropriate size.
 
@@ -61,8 +64,6 @@ Where `<chart_type>` is one of the the following types:
 
 By default, pie segment colors are interpolated from pink to pale yellow. Specify other colors as described in [Series Colors](#series-colors). Specify labels with `chl` as described in Pie chart labels.
 
-<!-- The Image-Charts API calculates the circle's radius from the minimum of width and height specified in the chart size (chs) parameter. If you are including labels, you probably need to specify the size of the width to be twice the size of the height, to ensure that your labels are fully visible. -->
-
 [![chart](https://image-charts.com/chart?chd=s%3AUf9a&chf=b0%2Clg%2C0%2Cffeb3b%2C0.2%2Cf443367C%2C0.8&chl=Jan%7CFeb%7CMar%7CApr&chs=700x200&cht=p&icac=documentation&icretina=1&ichm=8bbb5f86962fd92be437bf898965d41fbcf8a5201135b3c6e02a87714965cd80)](https://editor.image-charts.com/chart?chd=s%3AUf9a&chf=b0%2Clg%2C0%2Cffeb3b%2C0.2%2Cf443367C%2C0.8&chl=Jan%7CFeb%7CMar%7CApr&chs=700x200&cht=p&icac=documentation&icretina=1&ichm=8bbb5f86962fd92be437bf898965d41fbcf8a5201135b3c6e02a87714965cd80)
 
 ```
@@ -70,9 +71,9 @@ cht=p
 chs=200x100
 ```
 
-- **`p3`**: A three-dimensional pie chart. :checkered_flag: this type of chart is not planned to be supported and will automatically falls back to the flat pie chart **`p`** type.
+- **`p3`**: A three-dimensional pie chart. This type of chart is not planned to be supported and will automatically falls back to the flat pie chart **`p`** type.
 
-- **`pc`**: A concentric pie chart. Once more than 1 data serie is specified, a concentric chart is automatically selected by Image-Charts, the first serie will be displayed on the border while the last serie will be displayed in the center.
+- **`pc`**: A concentric pie chart. Once more than 1 data serie is specified, a concentric chart is automatically selected by Image-Charts, the first serie will be displayed on the border while the last serie will be displayed in the center.
 
 [![chart](https://image-charts.com/chart?chd=s%3AHelo%2CWrld&chs=700x200&cht=pc&icac=documentation&icretina=1&ichm=f189ee981b08f785d69200a5f5c6e1e1aef7f96ff034876ff8158396f8b9ee08)](https://editor.image-charts.com/chart?chd=s%3AHelo%2CWrld&chs=700x200&cht=pc&icac=documentation&icretina=1&ichm=f189ee981b08f785d69200a5f5c6e1e1aef7f96ff034876ff8158396f8b9ee08)
 
@@ -92,21 +93,9 @@ chd=s:Helo,Wrld
 cht=pd
 chd=t:10,40,45
 chdl=Expansion|Payroll|Equipment
-chli=95K€
-chl=10K€|40K€|45K€
+chli=95K
+chl=10K|40K|45K
 ```
-
-<!-- Note that for all types, negative numbers in data cause "blank" slices.
-
-[![chart](https://image-charts.com/chart?chd=t%3A10%2C-10%2C10%2C-10%7C5%2C-5%2C5%2C-5%2C5%2C-5%2C5%2C-5%2C5%2C-5&chs=700x200&cht=pc&icac=documentation&icretina=1&ichm=23981c65558c975c4c477d174320f52e44e82da70661b32807a8c1d101161a2c)](https://editor.image-charts.com/chart?chd=t%3A10%2C-10%2C10%2C-10%7C5%2C-5%2C5%2C-5%2C5%2C-5%2C5%2C-5%2C5%2C-5&chs=700x200&cht=pc&icac=documentation&icretina=1&ichm=23981c65558c975c4c477d174320f52e44e82da70661b32807a8c1d101161a2c)
-
-```
-cht=pc
-chd=t:10,-10,10,-10|5,-5,5,-5,5,-5,5,-5,5,-5
-```
-
-
-Google Image 3D charts and concentric pie chart are not supported and automatically fallback on flat pie chart. -->
 
 ## Series Colors
 
@@ -192,8 +181,8 @@ It's always nice to display the overall data summary directly inside the doughnu
 cht=pd
 chd=t:10,40,45
 chdl=Expansion|Payroll|Equipment
-chli=95K€
-chl=10K€|40K€|45K€
+chli=95K
+chl=10K|40K|45K
 ```
 
 Now, let's animate it. Note how nicely the `easeOutBounce` animation easing is applied to the inside label!
@@ -204,7 +193,7 @@ Now, let's animate it. Note how nicely the `easeOutBounce` animation easing is a
 cht=pd
 chd=t:10,40,45
 chdl=Expansion|Payroll|Equipment
-chli=95K€
-chl=10K€|40K€|45K€
+chli=95K
+chl=10K|40K|45K
 chan=1500,easeOutBounce
 ```

@@ -32,3 +32,10 @@
     }
   }```
   
+- `IC_EMAIL_NOT_SENT`: Could not send email
+- `IC_SEND_EMAIL_MISSING`: email attribute missing, could not sent email
+- `IC_CONTACT_NOT_UPDATED`: Could not update contact
+- `IC_METADATA_EMAIL_MISSING`: email attribute missing, could not create or update metadata
+- `IC_UPDATE_METADATA_FAILED`: Could not create or update Metadata
+- `IC_CUSTOMER_SEARCH_FAILED`: Customer search failed
+- `IC_DATA_LOADING_FAILED`: Data loading failed

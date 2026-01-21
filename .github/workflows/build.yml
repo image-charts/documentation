@@ -12,23 +12,28 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
-      - name: Tests
-        run: make test
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "18"
+          cache: "npm"
+
+      - name: Install dependencies
+        run: npm ci
 
       - name: Build website
-        run: make build
+        run: npm run build
         env:
           ACCOUNT_ID: ${{ secrets.ACCOUNT_ID }}
           SECRET_KEY: ${{ secrets.SECRET_KEY }}
-          GOOGLE_ANALYTICS_TOKEN: ${{ secrets.GOOGLE_ANALYTICS_TOKEN }}
 
-      - name: Deploy to Netlify 🚀
+      - name: Deploy to Netlify
         if: github.ref == 'refs/heads/master'
-        uses: nwtgck/actions-netlify@v1.2
+        uses: nwtgck/actions-netlify@v3
         with:
-          publish-dir: "./site"
+          publish-dir: "./build"
           production-branch: master
           github-token: ${{ secrets.GITHUB_TOKEN }}
           deploy-message: "Deploy from GitHub Actions"
@@ -39,4 +44,4 @@ jobs:
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-        timeout-minutes: 1
+        timeout-minutes: 5

@@ -1,6 +1,11 @@
 ---
-meta_description: "Learn how to specify a background color or gradient for your chart"
+title: Background Fill
+description: "Learn how to specify a background color or gradient for your chart"
+sidebar_position: 13
 ---
+
+# Background Fill
+
 You can specify fill colors and styles for the chart data area and/or the whole chart background. Fill types include solid color, image and gradients fills. You can specify different fills for different areas (for example, the whole chart area, or just the data area). The chart area fill overwrites the background fill. All fills are specified using the `chf` parameter, and you can mix different fill types (solids, stripes, gradients) in the same chart by separating values with pipe character (` | `). Chart area fills overwrite chart background fills.
 
 ### Solid Fills
@@ -15,9 +20,9 @@ chf=<fill_type>,s,<color>|...
 
 - **`<fill_type>`** The part of the chart being filled. Specify one of the following values:
   - `bg` - Background fill
-  - `c` - Chart area fill. (:checkered_flag:, currently same as `bg`, `bg` as precedence over `c`)
-  - `a` - Make the whole chart (including backgrounds) transparent. The first six digits of <color> are ignored, and only the last two (the transparency value) are applied to the whole chart and all fills.
-  - `b<index>` - Bar solid fills (bar charts only). Replace <index> with the series index of the bars to fill with a solid color. The effect is similar to specifying `chco` in a bar chart (note that `chf` has precedence over `chco` for each series). See Bar Chart Series Colors for an example.
+  - `c` - Chart area fill. (currently same as `bg`, `bg` as precedence over `c`)
+  - `a` - Make the whole chart (including backgrounds) transparent. The first six digits of `<color>` are ignored, and only the last two (the transparency value) are applied to the whole chart and all fills.
+  - `b<index>` - Bar solid fills (bar charts only). Replace `<index>` with the series index of the bars to fill with a solid color. The effect is similar to specifying `chco` in a bar chart (note that `chf` has precedence over `chco` for each series). See Bar Chart Series Colors for an example.
 - **`s`** Indicates a solid or transparency fill.
 - **`<color>`** The fill color, in [RRGGBB[AA] hexadecimal format](/reference/color-format). For transparencies, the first six digits are ignored, but must be included anyway.
 
@@ -34,8 +39,7 @@ chf=bg,s,EFEFEF
 
 This example applies a 50% transparency to the whole chart (80 in hexadecimal is 128, or about 50% transparency). Notice the table cell background showing through the chart.
 
-<!-- ![chart](https://image-charts.com/chart?cht=s&chd=s:pqokeYONOMEPOQVTXZdeca,Zcglprqxuuxztpoonkeggjp&chls=4.0,3.0,0.0&chs=700x125&chxt=x,y&chxl=0:%7CJun%7CJuly%7CAug%7C1:%7C%7C20%7C30%7C40%7C50&chf=a,s,00000080) -->
-![chart](https://image-charts.com/chart?cht=bvs&chd=s:pqokeYONOMEPOQVTXZdeca,Zcglprqxuuxztpoonkeggjp&chs=700x125&chxt=x,y&chxl=0:%7CJun%7CJuly%7CAug%7C1:%7C%7C20%7C30%7C40%7C50&chf=a,s,00000080) {.image-container--stripped}
+![chart](https://image-charts.com/chart?cht=bvs&chd=s:pqokeYONOMEPOQVTXZdeca,Zcglprqxuuxztpoonkeggjp&chs=700x125&chxt=x,y&chxl=0:%7CJun%7CJuly%7CAug%7C1:%7C%7C20%7C30%7C40%7C50&chf=a,s,00000080)
 
 ```
 chf=a,s,00000080
@@ -61,12 +65,12 @@ chf=<fill_type>,lg,<angle>,<color_1>,<color_centerpoint_1>
 
 - **`<fill_type>`** The chart area to fill. One of the following:
   - `bg` background fill
-  - `c` chart area fill. (:checkered_flag:, currently same as `bg`, `bg` as precedence over `c`)
-  - `b<index>` gradient fills (valid in bar, line, pie and bubble charts unlike Google Image Charts which only supported bar charts). Replace <index> with the series index of the bars to fill with a gradient. See Bar Chart Series Colors for an example.
+  - `c` chart area fill. (currently same as `bg`, `bg` as precedence over `c`)
+  - `b<index>` gradient fills (valid in bar, line, pie and bubble charts unlike Google Image Charts which only supported bar charts). Replace `<index>` with the series index of the bars to fill with a gradient. See Bar Chart Series Colors for an example.
     - **`lg`** Specifies a gradient fill.
     - **`<angle>`** a number specifying the angle of the gradient from 0 (horizontal) to 90 (vertical).
     - **`<color>`** the color of the fill, in [RRGGBB[AA] hexadecimal format](/reference/color-format).
-    - **`<color_centerpoint>`** specifies the anchor point for the color. The color will start to fade from this point as it approaches another anchor. The value range is from 0.0 (bottom or left edge) to 1.0 (top or right edge), tilted at the angle specified by <angle>.
+    - **`<color_centerpoint>`** specifies the anchor point for the color. The color will start to fade from this point as it approaches another anchor. The value range is from 0.0 (bottom or left edge) to 1.0 (top or right edge), tilted at the angle specified by `<angle>`.
   - `ps<index>-<sliceIndex>` (only valid in pie, polar area and bubble charts) same as `b<index>` but let you specify a gradient per pie slice. For pie charts, `b<index>` has precedence over `ps<index>-<sliceIndex>`, both can't be combined as would not make much sense.
 
 #### Examples
@@ -123,7 +127,7 @@ chf=bg,img,<image_url>
 
 #### Examples
 
-This example displays a [bar chart](/bar-charts/) with semi-transparent bars (`chco=FFFFFF90`) with an abstract image background (`chf=bg,img,https://i.imgur.com/ltXHn7L.png`): 
+This example displays a [bar chart](/bar-charts) with semi-transparent bars (`chco=FFFFFF90`) with an abstract image background (`chf=bg,img,https://i.imgur.com/ltXHn7L.png`):
 
 [![chart](https://image-charts.com/chart?chco=FFFFFF90&chd=t1%3A10%2C40%2C60%2C80%2C30%2C20%7C60%2C40%2C50%2C100%2C20%2C30&chf=bg%2Cimg%2Chttps%3A%2F%2Fi.imgur.com%2FltXHn7L.png&chm=D%2C03a9f4%2C1%2C0%2C5%2C1&chs=999x600&cht=bvs&chxl=0%3A%7CJan%7CMar%7CApr%7CMay%7CJun%7CJul&chxs=0%2CFFFFFF%2C15%2C-1%2Clt%2CFFFFFF%2CFFFFFF%7C1%2CFFFFFF%2C15%2C-1%2Clt%2CFFFFFF%2CFFFFFF&chxt=x%2Cy&icac=documentation&icretina=1&ichm=73ddea7c939f95e81123f3e4b26f95b35eb900c9b60cb18275602e9d16f29c1b)](https://editor.image-charts.com/chart?chco=FFFFFF90&chd=t1%3A10%2C40%2C60%2C80%2C30%2C20%7C60%2C40%2C50%2C100%2C20%2C30&chf=bg%2Cimg%2Chttps%3A%2F%2Fi.imgur.com%2FltXHn7L.png&chm=D%2C03a9f4%2C1%2C0%2C5%2C1&chs=999x600&cht=bvs&chxl=0%3A%7CJan%7CMar%7CApr%7CMay%7CJun%7CJul&chxs=0%2CFFFFFF%2C15%2C-1%2Clt%2CFFFFFF%2CFFFFFF%7C1%2CFFFFFF%2C15%2C-1%2Clt%2CFFFFFF%2CFFFFFF&chxt=x%2Cy&icac=documentation&icretina=1&ichm=73ddea7c939f95e81123f3e4b26f95b35eb900c9b60cb18275602e9d16f29c1b
 )

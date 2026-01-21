@@ -1,6 +1,9 @@
 ---
-meta_description: "Generate qr code charts as image using Image-charts API. From simple or custom qr charts to output format or background color, we handle everything!"
+title: QR Codes
+description: "Generate qr code charts as image using Image-charts API. From simple or custom qr charts to output format or background color, we handle everything!"
+sidebar_position: 10
 ---
+
 # QR Codes
 
 This section describes how to create a QR Code on the fly with a URL GET request using the Image-Chart QRCode web service generation.
@@ -12,10 +15,8 @@ QR codes are a popular type of two-dimensional barcode. They are also known as h
 #### Example
 
 [![chart](https://image-charts.com/chart?chs=150x150&cht=qr&chl=Hello%20world&choe=UTF-8)](https://editor.image-charts.com/?tab_viewer=image&tab_editor=form#https:/image-charts.com/chart?chs=150x150&cht=qr&chl=Hello%20world&choe=UTF-8)
-<center>
-[https://image-charts.com/chart?<br/>
-chs=150x150&cht=qr&chl=Hello%20world&choe=UTF-8](https://image-charts.com/chart?chs=150x150&cht=qr&chl=Hello%20world&choe=UTF-8)
-</center>
+
+[https://image-charts.com/chart?chs=150x150&cht=qr&chl=Hello%20world&choe=UTF-8](https://image-charts.com/chart?chs=150x150&cht=qr&chl=Hello%20world&choe=UTF-8)
 ```
 chs=150x150
 cht=qr
@@ -34,10 +35,8 @@ cht=qr
 The QR Code chart type (`cht=qr`), size parameter (`chs=<width>x<height>`) and data (`chl=<data>`) are all required parameters.
 
 [![chart](https://image-charts.com/chart?chs=200x200&cht=qr&chl=This%20is%20so%20awesome&choe=UTF-8)](https://editor.image-charts.com/?tab_viewer=image&tab_editor=form#https:/image-charts.com/chart?chs=200x200&cht=qr&chl=This%20is%20so%20awesome&choe=UTF-8)
-<center>
-[https://image-charts.com/chart?
-chs=200x200&cht=qr&chl=This%20is%20so%20awesome&choe=UTF-8](https://image-charts.com/chart?chs=200x200&cht=qr&chl=This%20is%20so%20awesome&choe=UTF-8)
-</center>
+
+[https://image-charts.com/chart?chs=200x200&cht=qr&chl=This%20is%20so%20awesome&choe=UTF-8](https://image-charts.com/chart?chs=200x200&cht=qr&chl=This%20is%20so%20awesome&choe=UTF-8)
 ```
 cht=qr
 chs=200x200
@@ -55,16 +54,12 @@ The data to encode. Data can be digits (0-9), alphanumeric characters, binary by
 
 How to encode the data in the QR code. Currently only UTF-8 is supported.
 
-<!-- * UTF-8 [Default]
-* Shift_JIS
-* ISO-8859-1 -->
-
 ## Output format
 
 QRCode image can be generated in two format:
 
-- (default) `png` bitmap image file format 
-- `svg` vector image file format 
+- (default) `png` bitmap image file format
+- `svg` vector image file format
 
 Select the output format you want with the query parameter `chof`:
 
@@ -89,7 +84,7 @@ Specify the background color for QRCode with the following syntax :
 
 `icqrb=<color>`
 
-`<color>` : QRCode background color, in [RRGGBB[AA] hexadecimal format](/reference/color-format). Default is `FFFFFF` (white)
+`<color>`: QRCode background color, in [RRGGBB\[AA\] hexadecimal format](/reference/color-format). Default is `FFFFFF` (white)
 
 [![chart](https://image-charts.com/chart?chs=200x200&cht=qr&chl=This%20is%20so%20awesome&choe=UTF-8&icqrb=CAF3C37C)](https://editor.image-charts.com/?tab_viewer=image&tab_editor=form#https:/image-charts.com/chart?chs=200x200&cht=qr&chl=This%20is%20so%20awesome&choe=UTF-8&icqrb=CAF3C37C)
 
@@ -101,7 +96,7 @@ Specify the foreground color for QRCode with the following syntax :
 
 `icqrf=<color>`
 
-`<color>` : QRCode foreground color, in [RRGGBB[AA] hexadecimal format](/reference/color-format). Default is `000000` (black)
+`<color>`: QRCode foreground color, in [RRGGBB\[AA\] hexadecimal format](/reference/color-format). Default is `000000` (black)
 
 [![chart](https://image-charts.com/chart?chs=200x200&cht=qr&chl=This%20is%20so%20awesome&choe=UTF-8&icqrf=0096887C)](https://editor.image-charts.com/?tab_viewer=image&tab_editor=form#https:/image-charts.com/chart?chs=200x200&cht=qr&chl=This%20is%20so%20awesome&choe=UTF-8&icqrf=0096887C)
 

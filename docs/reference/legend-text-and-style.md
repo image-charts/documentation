@@ -1,12 +1,16 @@
 ---
-meta_description: "Learn how to customize your chart legend, from format to positionning."
+title: Legend Text and Style
+description: "Learn how to customize your chart legend, from format to positionning."
+sidebar_position: 14
 ---
+
+# Legend Text and Style
+
 The legend is a side section of the chart that gives a small text description of each series. You can specify the text associated with each series in this legend, and specify where on the chart it should appear.
 
-<!-- See also `chma`, to learn how to set the margins around your legend. -->
-
-!!! note "A Note on String Values"
-    Only URL-safe characters are permitted in label strings. To be safe, you should URL-encode any strings containing characters not in the character set `0-9a-zA-Z`.
+:::note A Note on String Values
+Only URL-safe characters are permitted in label strings. To be safe, you should URL-encode any strings containing characters not in the character set `0-9a-zA-Z`.
+:::
 
 #### Syntax
 
@@ -22,22 +26,17 @@ chdls=<color>,<size>
 
 `chdlp` [Optional] The position of the legend, and order of the legend entries. You can specify *`<position>`* and/or *`<label_order>`*. If you specify both, separate them with a bar character. You can add an 's' to any value if you want empty legend entries in `chdl` to be skipped in the legend. Examples: `chdlp=bv`, `chdlp=r`, `chdlp=bv|r`, `chdlp=bvs|r`
 
-- **`<opt_position>`** [Optional] Specifies the position of the legend on the chart (:construction: partially supported). To specify additional padding between the legend and the chart area or the image border, use the chma parameter.
+- **`<opt_position>`** [Optional] Specifies the position of the legend on the chart (partially supported). To specify additional padding between the legend and the chart area or the image border, use the chma parameter.
   Choose one of the following values:
     - `b` - Legend at the bottom of the chart, legend entries in a horizontal row.
     - `t` - Legend at the top of the chart, legend entries in a horizontal row.
     - `r` - [Default] Legend to the right of the chart, legend entries in a vertical column.
     - `l` - Legend to the left of the chart, legend entries in a vertical column.
 
-<!-- - `bv` - Legend at the bottom of the chart, legend entries in a vertical column.
-  - `tv` - Legend at the top of the chart, legend entries in a vertical column.
- -->
-
 - **`<opt_label_order>`** [Optional] The order in which the labels are shown in the legend.
   Choose one of the following value:
     - `l` - [Default for vertical legends] Display labels in the order given to chdl.
     - `r` - Display labels in the reverse order as given to chdl. This is useful in stacked bar charts to show the legend in the same order as the bars appear.
-    <!-- - `a` - [Default for horizontal legends] Automatic ordering: roughly means sorting by length, shortest first, as measured in 10 pixel blocks. When two elements are the same length (divided into 10 pixel blocks), the one listed first will appear first. -->
     - `0,1,2`... - Custom label order. This is a list of zero-based label indexes from chdl, separated by commas.
 
 `chdls` - [Optional] Specifies the color and font size of the legend text.
@@ -105,8 +104,3 @@ Here is how to specify a chart with a top legend position:
 ```
 chdlp=t
 ```
-
-<!-- | The first chart demonstrates horizontal legend entries (chdlp=t, default layout is horizontal), and the second demonstrates bottom vertical legend entries (chdlp=bv). | ![chart](https://image-charts.com/chart?cht=p&chs=700x100&chd=t:100,20,20&chdl=First%7CSecond%7CThird&chco=2196F3,FF5722,9c27b0&chdlp=t) |
-| | ```chdl=First|Second|Third chco=2196F3,FF5722,9c27b0 chdlp=t``` |
-| | ![chart](https://image-charts.com/chart?cht=p&chs=700x100&chd=t:100,20,20&chdl=First%7CSecond%7CThird&chco=2196F3,FF5722,9c27b0&chdlp=bv) |
-| | ```chdl=First|Second|Third chco=2196F3,FF5722,9c27b0 chdlp=bv``` | -->

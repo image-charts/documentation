@@ -1,12 +1,16 @@
 ---
-meta_description: "Here is how to display a (dependency) graph inside Google Sheets thanks to Image-Charts API."
+title: Dependency Graph in Google Sheets
+description: "Here is how to display a (dependency) graph inside Google Sheets thanks to Image-Charts API."
+sidebar_position: 2
 ---
-<!-- How to setup a dependency graph in Google Sheets -->
+
+# Dependency Graph in Google Sheets
 
 ![Dependency graph in Google Sheets with Image-Charts](assets/dependency-graph-in-google-sheets-with-image-charts.png)
 
-!!! abstract "Use our Google Sheet add-on"
-    This tutorial is only there for educational purpose, use our [official  add-on](https://chrome.google.com/webstore/detail/bainjkfkhoipphfdlnlcnoddiggamjpd/) instead if you wish to embed dependency graphs into Google Sheet!
+:::info Use our Google Sheet add-on
+This tutorial is only there for educational purpose, use our [official add-on](https://chrome.google.com/webstore/detail/bainjkfkhoipphfdlnlcnoddiggamjpd/) instead if you wish to embed dependency graphs into Google Sheet!
+:::
 
 
 Google Sheets is sometimes used to let teams collaboratively build roadmaps (some other tools like Jira helps there too), it is sometime helpful to visualize interactions and dependencies between these roadmap items.
@@ -24,15 +28,15 @@ Put away jelly jar | Put jelly on 1 slice
 
 Try to visualize the dependencies between each step, it's hard right?
 
-Sadly, Google Spreadsheets does not offer any kind of graph representations and we are left with our own mental representation, which is not great. Furthermore we can’t easily extend Google Sheets with another chart representation.
+Sadly, Google Spreadsheets does not offer any kind of graph representations and we are left with our own mental representation, which is not great. Furthermore we can't easily extend Google Sheets with another chart representation.
 
 Hopefully there is a nice formula function called [IMAGE()](https://support.google.com/docs/answer/3093333?hl=en), that let's us insert image inside a cell.
 
-So we need to generate an image of a graph chart... Wait. That’s exactly what Image-Chart [can do](/graph-viz-charts), it let you generate charts and graphs from a simple URL and then embed it inside emails, bots and... Google Sheets!
+So we need to generate an image of a graph chart... Wait. That's exactly what Image-Chart [can do](/graph-viz-charts), it let you generate charts and graphs from a simple URL and then embed it inside emails, bots and... Google Sheets!
 
 How does it work?
 
-Image-charts graph viz format ([cht=gv](/graph-viz-charts/#chart-types)) is built upon the most well known standard to build graph: the [dot language](http://bit.ly/2OpHwtW) and as you will see, it’s quite easy to start with:
+Image-charts graph viz format ([cht=gv](/graph-viz-charts/#chart-types)) is built upon the most well known standard to build graph: the [dot language](http://bit.ly/2OpHwtW) and as you will see, it's quite easy to start with:
 
 ```
 https://image-charts.com/chart
@@ -72,26 +76,14 @@ https://image-charts.com/chart
 
 ![chart](https://image-charts.com/chart?cht=gv&chl=digraph%20%7Bsplines%3D%22line%22%3Brankdir%3DLR%3B%22Get%202%20slices%20of%20bread%22-%3E%7B%22Put%20peanut%20butter%20on%201%20slice%22%20%22Put%20jelly%20on%201%20slice%22%7D%3B%22Put%20peanut%20butter%20on%201%20slice%22-%3E%7B%22Put%20away%20peanut%20butter%20jar%22%20%22Put%20slices%20together%22%7D%3B%22Put%20jelly%20on%201%20slice%22-%3E%7B%22Put%20slices%20together%22%20%22Put%20away%20jelly%20jar%22%7D%7D)
 
-!!! Note
-    In dot language, `"a" -> {"b" "c"}` let you express that both `b` and `c` depend on `a`.
+:::note
+In dot language, `"a" -> {"b" "c"}` let you express that both `b` and `c` depend on `a`.
+:::
 
 So our custom function needs to generate the Image-Charts URL that we will then pass to google spreadsheet IMAGE() function. [Here it is!](https://github.com/image-charts/google-sheets-add-on-dependency-graph/blob/master/main.js#L13).
 
-Ok, now let’s run it:
+Ok, now let's run it:
 
-![YOUTUBE](#2T6oHo7FVdI)
+<iframe style={{width: '100%', height: '450px', border: '0px'}} frameBorder="0" allowFullScreen src="https://www.youtube.com/embed/2T6oHo7FVdI?rel=0&showinfo=0"></iframe>
 
-<script>
-Array.prototype.slice.call(document.querySelectorAll('img[alt="YOUTUBE"]')).forEach(function(el){
-var p;
-var id = (p = el.src.split('#'), p[p.length - 1])
-var iframe = document.createElement('iframe');
-iframe.style = 'width: 100%;height: 450px;border:0px;'
-iframe.frameborder = 0;
-iframe.allowfullscreen = true;
-iframe.src = 'https://www.youtube.com/embed/' + id + '?rel=0&amp;showinfo=0';
-el.replaceWith(iframe)
-});
-</script>
-
-Perfect! We've followed the single-source-of-truth principle from top to bottom, we've got no data duplicated and live graph reload for free, awesome! 🚀
+Perfect! We've followed the single-source-of-truth principle from top to bottom, we've got no data duplicated and live graph reload for free, awesome!

@@ -1,5 +1,7 @@
 ---
-meta_description: "Progress bar charts as image using Image-charts API. Generate progress bar images in email based on your customer behaviour."
+title: Progress Bar Charts
+description: "Progress bar charts as image using Image-charts API. Generate progress bar images in email based on your customer behaviour."
+sidebar_position: 9
 ---
 
 # Progress bar chart
@@ -39,7 +41,7 @@ chf=bg,s,FFFFFF00|b0,lg,0,03A9F4,0.5,EA469E,0.1
 ```
 
 - The first background fill `bg,s,FFFFFF00` tells our API to render the chart with a transparent background color.
-- The second background fill `b0,lg,0,03A9F4,0.5,EA469E,0.1`, tells that the first bar from our chart (`b0`), must have a linear gradient (`lg`) with a 0 degres angle (`0`) starting from color `03A9F4` to color `EA469E`. Read more about [gradients here](./reference/background-fill.md). 
+- The second background fill `b0,lg,0,03A9F4,0.5,EA469E,0.1`, tells that the first bar from our chart (`b0`), must have a linear gradient (`lg`) with a 0 degres angle (`0`) starting from color `03A9F4` to color `EA469E`. Read more about [gradients here](./reference/background-fill.md).
 
 [![progressbar image with gradient](https://image-charts.com/chart?chco=FFFFFF&chd=a%3A65%7C35&chf=bg%2Cs%2CFFFFFF00%7Cb0%2Clg%2C0%2C03A9F4%2C0.5%2CEA469E%2C0.1&chma=-10%2C0%2C0%2C-10&chs=700x80&cht=bhs&chxs=0%2CFFFFFF00%2C0%2C-1%2C_%2CFFFFFF00%2CFFFFFF00%7C1%2CFFFFFF00%2C0%2C-1%2C_%2CFFFFFF00%2CFFFFFF00&chxt=x%2Cy)](https://editor.image-charts.com/chart?chco=FFFFFF&chd=a%3A65%7C35&chf=bg%2Cs%2CFFFFFF00%7Cb0%2Clg%2C0%2C03A9F4%2C0.5%2CEA469E%2C0.1&chma=-10%2C0%2C0%2C-10&chs=700x80&cht=bhs&chxs=0%2CFFFFFF00%2C0%2C-1%2C_%2CFFFFFF00%2CFFFFFF00%7C1%2CFFFFFF00%2C0%2C-1%2C_%2CFFFFFF00%2CFFFFFF00&chxt=x%2Cy)
 
@@ -56,5 +58,3 @@ chco=CFB948,E3E3E3
 - `E3E3E3` is the gray [hexadecimal color](./reference/color-format.md) of the progress bar second part
 
 [![goldmembership email progressbar](https://image-charts.com/chart?chco=CFB948%2CE3E3E3&chd=a%3A65%7C35&chf=bg%2Cs%2CE3E3E300&chma=-10%2C0%2C0%2C-10&chs=700x80&cht=bhs&chxs=0%2CFFFFFF00%2C0%2C-1%2C_%2CFFFFFF00%2CFFFFFF00%7C1%2CFFFFFF00%2C0%2C-1%2C_%2CFFFFFF00%2CFFFFFF00&chxt=x%2Cy)](https://editor.image-charts.com/chart?chco=CFB948%2CE3E3E3&chd=a%3A65%7C35&chf=bg%2Cs%2CE3E3E300&chma=-10%2C0%2C0%2C-10&chs=700x80&cht=bhs&chxs=0%2CFFFFFF00%2C0%2C-1%2C_%2CFFFFFF00%2CFFFFFF00%7C1%2CFFFFFF00%2C0%2C-1%2C_%2CFFFFFF00%2CFFFFFF00&chxt=x%2Cy)
-
-

@@ -1,9 +1,10 @@
 ---
-meta_description: "Generate line charts as image using Image-charts API. From basic or multi axis line charts to circle, triangle or star, we handle everything!"
+title: Line Charts
+description: "Generate line charts as image using Image-charts API. From basic or multi axis line charts to circle, triangle or star, we handle everything!"
+sidebar_position: 3
 ---
-# Line Charts
 
-<!-- :wrench: we are currently implementing this feature. -->
+# Line Charts
 
 This section describes the various types of line charts that you can create using the Image Chart API.
 
@@ -17,7 +18,7 @@ There are a variety of line charts that you can create. Specify a line chart wit
 cht=<chart_type>
 ```
 
-Where <chart_type> is one of the following types:
+Where `<chart_type>` is one of the following types:
 
 ##### Line
 
@@ -183,5 +184,6 @@ chls=4|2
 
 ## Line Fills
 
-!!! info "Looking for line fills?"
-    Visit [line fills](/reference/markers/#line-fills) page to know how to use line fills
+:::info Looking for line fills?
+Visit [line fills](/reference/markers/#line-fills) page to know how to use line fills
+:::

@@ -1,9 +1,10 @@
 ---
-meta_description: "Generate bar charts as image using Image-charts API. From stacked or grouped bar charts to horizontal or vertical, we handle everything!"
+title: Bar Charts
+description: "Generate bar charts as image using Image-charts API. From stacked or grouped bar charts to horizontal or vertical, we handle everything!"
+sidebar_position: 2
 ---
-# Bar Charts
 
-<!-- :wrench: we are currently implementing this feature. -->
+# Bar Charts
 
 This section describes the various types of bar charts that you can create using the Image Chart API.
 
@@ -51,8 +52,9 @@ cht=bhs
 chd=t:5,5,5|10,10,10|15,15,15
 ```
 
-!!! missing
-    Google Image Charts supported the `bvo` chart type in which vertical bars were stacked in front of one another. This type of chart is not planned to be supported and will automatically falls back to the **`bvs`** type.
+:::caution Missing Feature
+Google Image Charts supported the `bvo` chart type in which vertical bars were stacked in front of one another. This type of chart is not planned to be supported and will automatically falls back to the **`bvs`** type.
+:::
 
 ## Rounded Bar
 
@@ -73,8 +75,9 @@ chbr=20
 
 ## Series Colors
 
-!!! tip
-    You can specify the colors of individual bars, individual series, or multiple series using the chco parameter. If you don't specify a different color for each series, all series will have the same color.
+:::tip
+You can specify the colors of individual bars, individual series, or multiple series using the chco parameter. If you don't specify a different color for each series, all series will have the same color.
+:::
 
 #### Syntax
 
@@ -88,7 +91,7 @@ chco=<series_1_bar_1>|<series_1_bar_2>|...|<series_1_bar_n>,<series_2>,...,<seri
 
 #### Examples
 
-One color per series, with comma-delimited colors. 
+One color per series, with comma-delimited colors.
 
 [![chart](https://image-charts.com/chart?chbh=20&chco=CFECF7%2C27c9c2&chd=a%3A10000%2C50000%2C60000%2C80000%2C40000%7C50000%2C60000%2C100000%2C40000%2C20000&chdl=N%7CN-1&chdlp=r&chl=10%7C50%7C60%7C80%7C40%7C50%7C60%7C100%7C40%7C20&chs=700x300&cht=bvs&chtt=Revenue%20per%20month&chxl=0%3A%7CJan%7CFev%7CMar%7CAvr%7CMay&chxs=1N%2AcUSD0sz%2A%2C000000%2C14&chxt=x%2Cy&icac=documentation&ichm=0d7d8ee03dc72403c3a1884405869e17a26e6df6f76f1558518db58fc5ef39f4)](https://editor.image-charts.com/chart?chbh=20&chco=CFECF7%2C27c9c2&chd=a%3A10000%2C50000%2C60000%2C80000%2C40000%7C50000%2C60000%2C100000%2C40000%2C20000&chdl=N%7CN-1&chdlp=r&chl=10%7C50%7C60%7C80%7C40%7C50%7C60%7C100%7C40%7C20&chs=700x300&cht=bvs&chtt=Revenue%20per%20month&chxl=0%3A%7CJan%7CFev%7CMar%7CAvr%7CMay&chxs=1N%2AcUSD0sz%2A%2C000000%2C14&chxt=x%2Cy&icac=documentation&ichm=0d7d8ee03dc72403c3a1884405869e17a26e6df6f76f1558518db58fc5ef39f4)
 
@@ -97,7 +100,7 @@ cht=bvs
 chco=CFECF7,27c9c2
 ```
 
-One color per value, with pipe-delimited colors.  
+One color per value, with pipe-delimited colors.
 
 [![chart](https://image-charts.com/chart?chbh=20&chco=FFC6A5%7CFFFF42%7CDEF3BD%7C00A5C6%7CDEBDDE&chd=a%3A10%2C50%2C60%2C80%2C40&chs=700x125&cht=bvs&chxt=y&icac=documentation&icretina=1&ichm=60e5de46e2dca57e7bd3dd9b3cab089cdd59cdf6c4085405d12d2774bd32e0b8)](https://editor.image-charts.com/?tab_viewer=image&tab_editor=form#https:/image-charts.com/chart?chbh=20&chco=FFC6A5%7CFFFF42%7CDEF3BD%7C00A5C6%7CDEBDDE&chd=a%3A10%2C50%2C60%2C80%2C40&chs=700x125&cht=bvs&chxt=y&icac=documentation&icretina=1&ichm=60e5de46e2dca57e7bd3dd9b3cab089cdd59cdf6c4085405d12d2774bd32e0b8)
 
@@ -143,4 +146,3 @@ chf=b0,ls,0,72BD60,.3,517D47,.1|b1,ls,0,2F5627,.3,E67233,.1
 ```
 
 There are a variety of bar charts that you can create, including vertical, horizontal, grouped, stacked versions of each.
-

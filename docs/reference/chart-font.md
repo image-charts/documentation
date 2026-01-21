@@ -1,8 +1,16 @@
 ---
-meta_description: "Learn how to customize your chart font, from a multitude of fonts."
+title: Chart Font
+description: "Learn how to customize your chart font, from a multitude of fonts."
+sidebar_position: 19
 ---
-!!! note "Enterprise+ plan only"
-    Custom fonts are only available to **Enterprise+** subscriptions
+
+import GeneratedGoogleFonts from '../GENERATED-google-fonts.md';
+
+# Chart Font
+
+:::note Enterprise+ plan only
+Custom fonts are only available to **Enterprise+** subscriptions
+:::
 
 Specify the font family and font style using `icfs` and `icff` query parameters.
 
@@ -62,4 +70,4 @@ A pie chart with `icfs=italic` font style
 
 #### Supported open-source fonts
 
-{!GENERATED-google-fonts.md!}
+<GeneratedGoogleFonts />

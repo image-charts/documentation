@@ -1,20 +1,25 @@
 ---
-meta_description: "How to send a radar chart by email from typeform response"
+title: Charts from Typeform
+description: "How to send a radar chart by email from typeform response"
+sidebar_position: 5
 ---
+
+# Charts from Typeform
 
 Typeform is a great app to make surveys. We'll see here how we can generate a form and send each respondent a custom-made radar chart.
 
 ### Create your form
 
 1. Go to [typeform.com](https://www.typeform.com/) and create an account (or login).
-2. Create a form asking the respondent email (type Email), and a series of Opinion Scale questions from 1 to 10. In our example we'll ask the user to rate his programming language skills, hopefully you'll be more creative than us! 😀
+2. Create a form asking the respondent email (type Email), and a series of Opinion Scale questions from 1 to 10. In our example we'll ask the user to rate his programming language skills, hopefully you'll be more creative than us!
 
 ![Typeform form](assets/typeform-form.jpg)
 
 ### Create the image with Zapier & Image-Charts
 
-!!! Note
-    We'll use Zapier in our guide, but you can also do this with [Make.com](https://www.make.com/) (Integromat).
+:::note
+We'll use Zapier in our guide, but you can also do this with [Make.com](https://www.make.com/) (Integromat).
+:::
 
 1. Go to [zapier.com](https://zapier.com/) and create an account (or login).
 2. [Create a new Zap](https://zapier.com/editor/sandbox/draft/1/setup)
@@ -85,10 +90,10 @@ Set the following values:
 ```html
 Hi, thanks for your answers! <br />
 <br />
-That's some great skills you have here 😲 <br />
+That's some great skills you have here <br />
 <img src="PLACEHOLDER_IMAGE_CHARTS_URL" /> <br />
 <br />
-See you 👋
+See you
 ```
 
 (don't forget to replace `PLACEHOLDER_TYPEFORM_USER_EMAIL` by the typeform user email and `PLACEHOLDER_IMAGE_CHARTS_URL` by the Zapier generated image url)
@@ -98,5 +103,3 @@ See you 👋
 Continue, test the action and you should receive an email like the following:
 
 ![Typeform form](assets/email-radar-chart.jpg)
-
-🎉🎉🎉

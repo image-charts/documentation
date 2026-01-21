@@ -1,13 +1,16 @@
 ---
-meta_description: "Learn how to customize your chart grid lines, from color to width grid."
+title: Grid Lines
+description: "Learn how to customize your chart grid lines, from color to width grid."
+sidebar_position: 15
 ---
+
+# Grid Lines
+
 You can specify solid or dotted grid lines on your chart using the `chg` parameter.
 
-This parameter doesn't let you specify the thickness of the lines, if you need this please [contact us](mailto:support@image-charts.com) with your requirements. 
+This parameter doesn't let you specify the thickness of the lines, if you need this please [contact us](mailto:support@image-charts.com) with your requirements.
 
 Grid lines are available on **[bar](/bar-charts)**, **[line](/line-charts)**, **[radar](/radar-charts)** and **[bubble](/bubble-charts)** charts.
-
- <!-- For more ways to make lines across your chart, see shape markers (chm type h, H, v, or V), range markers (chm), and axis tick marks (chxtc). -->
 
 #### Syntax
 
@@ -17,19 +20,16 @@ chg=
   <opt_dash_length>,<opt_space_length>,<opt_lines_color>
 ```
 
-<!-- <opt_x_offset>,<opt_y_offset> -->
-
 - **`<x_axis_enabled>`** if set to a number between 1 and 100 ([1;100]) enable vertical grid lines.
 - **`<y_axis_enabled>`** if set to a number between 1 and 100 ([1;100]) enable horizontal grid lines.
 
-!!! warning
-    Google Image charts use the two parameters above to calculate how many x or y grid lines to show on the chart, we decided not to implement this feature as it was **hard to use** and **error prone** when used with changing datasets. **However** the multiple axis feature can be leveraged to produce such result as demonstrated in the [customize grid lines number example](#customize-grid-lines-number).
+:::warning
+Google Image charts use the two parameters above to calculate how many x or y grid lines to show on the chart, we decided not to implement this feature as it was **hard to use** and **error prone** when used with changing datasets. **However** the multiple axis feature can be leveraged to produce such result as demonstrated in the [customize grid lines number example](#customize-grid-lines-number).
+:::
 
 
-- **`<opt_dash_length>, <opt_space_length>`** [Optional] Used to define dashed grid lines. The first parameter is the length of each line dash, in pixels. The second parameter is the spacing between dashes, in pixels. Specify 0 for *<opt_space_length>* for a solid line. Default values are `4,1`.
+- **`<opt_dash_length>, <opt_space_length>`** [Optional] Used to define dashed grid lines. The first parameter is the length of each line dash, in pixels. The second parameter is the spacing between dashes, in pixels. Specify 0 for `<opt_space_length>` for a solid line. Default values are `4,1`.
 - **`<opt_lines_color>`** [Optional] The [color](/reference/color-format/) of the grid lines (default color is black with 50% opacity: `0000001a`)
-
-<!-- - **`<opt_x_offset>,<opt_y_offset>`** [Optional] The number of units, according to the chart scale, to offset the x and y grid lines, respectively. Can be positive or negative values. If you specify this value, you must also specify all preceding values. Default values are 0,0. -->
 
 #### Examples
 
@@ -99,8 +99,9 @@ chxs=1,33333,14,-1,l,FFFFFF,7FA5F4
 
 ##### Customize grid lines number
 
-!!! info
-    This following example requires features only available in the [Enterprise+ subscriptions](https://www.image-charts.com/pricing)
+:::info
+This following example requires features only available in the [Enterprise+ subscriptions](https://www.image-charts.com/pricing)
+:::
 
 Let's start our example with this [compound chart](/reference/markers/#creating-a-compound-chart-mixed-charts):
 
@@ -108,10 +109,10 @@ Let's start our example with this [compound chart](/reference/markers/#creating-
 
 Let say we would like to display grid lines like this:
 
-[![compound chart with custom grid lines](https://image-charts.com/chart?chd=a1%3A%2C103.7%2C7.23%2C31.02%2C82.22%2C-123.74%2C43.71%2C84.22%2C164.59%2C31.26%2C69.91%2C90.59%2C20.9%2C-51.29%2C-44.29%2C-333.83%2C-452.37%2C35.41%2C24.4%7C1500%2C1603%2C1610%2C1641%2C1723%2C1599%2C1642%2C1726%2C1890%2C1921%2C1990%2C2080%2C2100%2C2048%2C2003%2C1669%2C1216%2C1251%2C1275&chg=20%2C50&chlps=textAlign%2Cright%7Calign%2Cbottom%7Cfont.size%2C8&chm=D%2C00AAFF%2C1%2C0%2C5%2C1&chs=800x600&cht=bvs&chxl=0%3A%7C%7C103%7C7%7C31%7C82%7C-124%7C43%7C84%7C164%7C31%7C69%7C90%7C20%7C-52%7C-45%7C-334%7C-453%7C35%7C24&chxr=1%2C-500%2C2500%2C100%7C2%2C-500%2C2500&chxs=1%2C000000%2C0%2C_&chxt=x%2Cy%2Cy&icac=documentation&icretina=1&ichm=d00bdfacef326272a9c110c0c19e269af44422416864ca5762e6e63a5ad59a30)](https://editor.image-charts.com/chart?chd=a1%3A%2C103.7%2C7.23%2C31.02%2C82.22%2C-123.74%2C43.71%2C84.22%2C164.59%2C31.26%2C69.91%2C90.59%2C20.9%2C-51.29%2C-44.29%2C-333.83%2C-452.37%2C35.41%2C24.4%7C1500%2C1603%2C1610%2C1641%2C1723%2C1599%2C1642%2C1726%2C1890%2C1921%2C1990%2C2080%2C2100%2C2048%2C2003%2C1669%2C1216%2C1251%2C1275&chg=20%2C50&chlps=textAlign%2Cright%7Calign%2Cbottom%7Cfont.size%2C8&chm=D%2C00AAFF%2C1%2C0%2C5%2C1&chs=800x600&cht=bvs&chxl=0%3A%7C%7C103%7C7%7C31%7C82%7C-124%7C43%7C84%7C164%7C31%7C69%7C90%7C20%7C-52%7C-45%7C-334%7C-453%7C35%7C24&chxr=1%2C-500%2C2500%2C100%7C2%2C-500%2C2500&chxs=1%2C000000%2C0%2C_&chxt=x%2Cy%2Cy&icac=documentation&icretina=1&ichm=d00bdfacef326272a9c110c0c19e269af44422416864ca5762e6e63a5ad59a30) 
- 
+[![compound chart with custom grid lines](https://image-charts.com/chart?chd=a1%3A%2C103.7%2C7.23%2C31.02%2C82.22%2C-123.74%2C43.71%2C84.22%2C164.59%2C31.26%2C69.91%2C90.59%2C20.9%2C-51.29%2C-44.29%2C-333.83%2C-452.37%2C35.41%2C24.4%7C1500%2C1603%2C1610%2C1641%2C1723%2C1599%2C1642%2C1726%2C1890%2C1921%2C1990%2C2080%2C2100%2C2048%2C2003%2C1669%2C1216%2C1251%2C1275&chg=20%2C50&chlps=textAlign%2Cright%7Calign%2Cbottom%7Cfont.size%2C8&chm=D%2C00AAFF%2C1%2C0%2C5%2C1&chs=800x600&cht=bvs&chxl=0%3A%7C%7C103%7C7%7C31%7C82%7C-124%7C43%7C84%7C164%7C31%7C69%7C90%7C20%7C-52%7C-45%7C-334%7C-453%7C35%7C24&chxr=1%2C-500%2C2500%2C100%7C2%2C-500%2C2500&chxs=1%2C000000%2C0%2C_&chxt=x%2Cy%2Cy&icac=documentation&icretina=1&ichm=d00bdfacef326272a9c110c0c19e269af44422416864ca5762e6e63a5ad59a30)](https://editor.image-charts.com/chart?chd=a1%3A%2C103.7%2C7.23%2C31.02%2C82.22%2C-123.74%2C43.71%2C84.22%2C164.59%2C31.26%2C69.91%2C90.59%2C20.9%2C-51.29%2C-44.29%2C-333.83%2C-452.37%2C35.41%2C24.4%7C1500%2C1603%2C1610%2C1641%2C1723%2C1599%2C1642%2C1726%2C1890%2C1921%2C1990%2C2080%2C2100%2C2048%2C2003%2C1669%2C1216%2C1251%2C1275&chg=20%2C50&chlps=textAlign%2Cright%7Calign%2Cbottom%7Cfont.size%2C8&chm=D%2C00AAFF%2C1%2C0%2C5%2C1&chs=800x600&cht=bvs&chxl=0%3A%7C%7C103%7C7%7C31%7C82%7C-124%7C43%7C84%7C164%7C31%7C69%7C90%7C20%7C-52%7C-45%7C-334%7C-453%7C35%7C24&chxr=1%2C-500%2C2500%2C100%7C2%2C-500%2C2500&chxs=1%2C000000%2C0%2C_&chxt=x%2Cy%2Cy&icac=documentation&icretina=1&ichm=d00bdfacef326272a9c110c0c19e269af44422416864ca5762e6e63a5ad59a30)
 
-To customize the number of grid lines add first one more axis to the chart, leveraging the [multiple axis (`chxt`)](/reference/chart-axis/#visible-axes) feature. `chxt=x,y` becomes `chxt=x,y,y`: 
+
+To customize the number of grid lines add first one more axis to the chart, leveraging the [multiple axis (`chxt`)](/reference/chart-axis/#visible-axes) feature. `chxt=x,y` becomes `chxt=x,y,y`:
 
 [![compound chart with multiple axis](https://image-charts.com/chart?chd=a1%3A%2C103.7%2C7.23%2C31.02%2C82.22%2C-123.74%2C43.71%2C84.22%2C164.59%2C31.26%2C69.91%2C90.59%2C20.9%2C-51.29%2C-44.29%2C-333.83%2C-452.37%2C35.41%2C24.4%7C1500%2C1603%2C1610%2C1641%2C1723%2C1599%2C1642%2C1726%2C1890%2C1921%2C1990%2C2080%2C2100%2C2048%2C2003%2C1669%2C1216%2C1251%2C1275&chg=20%2C50&chlps=textAlign%2Cright%7Calign%2Cbottom%7Cfont.size%2C8&chm=D%2C00AAFF%2C1%2C0%2C5%2C1&chs=800x600&cht=bvs&chxl=0%3A%7C%7C103%7C7%7C31%7C82%7C-124%7C43%7C84%7C164%7C31%7C69%7C90%7C20%7C-52%7C-45%7C-334%7C-453%7C35%7C24&chxt=x%2Cy%2Cy&icac=documentation&iclocale=en&icretina=1&ichm=461b1bf5f68201b9256dc274010c2f5bc40c78421504701c5508527e21d02bac)](https://editor.image-charts.com/chart?chd=a1%3A%2C103.7%2C7.23%2C31.02%2C82.22%2C-123.74%2C43.71%2C84.22%2C164.59%2C31.26%2C69.91%2C90.59%2C20.9%2C-51.29%2C-44.29%2C-333.83%2C-452.37%2C35.41%2C24.4%7C1500%2C1603%2C1610%2C1641%2C1723%2C1599%2C1642%2C1726%2C1890%2C1921%2C1990%2C2080%2C2100%2C2048%2C2003%2C1669%2C1216%2C1251%2C1275&chg=20%2C50&chlps=textAlign%2Cright%7Calign%2Cbottom%7Cfont.size%2C8&chm=D%2C00AAFF%2C1%2C0%2C5%2C1&chs=800x600&cht=bvs&chxl=0%3A%7C%7C103%7C7%7C31%7C82%7C-124%7C43%7C84%7C164%7C31%7C69%7C90%7C20%7C-52%7C-45%7C-334%7C-453%7C35%7C24&chxt=x%2Cy%2Cy&icac=documentation&iclocale=en&icretina=1&ichm=461b1bf5f68201b9256dc274010c2f5bc40c78421504701c5508527e21d02bac)
 
@@ -121,7 +122,7 @@ Use [axis ranges (`chxr`)](/reference/chart-axis/#axis-range) to align the secon
 
 Now let's customize the grid line numbers of the first `y` axis. In order to do that we will use again the [axis ranges (`chxr`)](/reference/chart-axis/#axis-range) feature and specify a count step of `100`. `chxr=2,-500,2500` becomes `chxr=2,-500,2500|1,-500,2500,100`:
 
-[![compound chart with multiple axis and custom grid lines number](https://image-charts.com/chart?chd=a1%3A%2C103.7%2C7.23%2C31.02%2C82.22%2C-123.74%2C43.71%2C84.22%2C164.59%2C31.26%2C69.91%2C90.59%2C20.9%2C-51.29%2C-44.29%2C-333.83%2C-452.37%2C35.41%2C24.4%7C1500%2C1603%2C1610%2C1641%2C1723%2C1599%2C1642%2C1726%2C1890%2C1921%2C1990%2C2080%2C2100%2C2048%2C2003%2C1669%2C1216%2C1251%2C1275&chg=20%2C50&chlps=textAlign%2Cright%7Calign%2Cbottom%7Cfont.size%2C8&chm=D%2C00AAFF%2C1%2C0%2C5%2C1&chs=800x600&cht=bvs&chxl=0%3A%7C%7C103%7C7%7C31%7C82%7C-124%7C43%7C84%7C164%7C31%7C69%7C90%7C20%7C-52%7C-45%7C-334%7C-453%7C35%7C24&chxr=2%2C-500%2C2500%7C1%2C-500%2C2500%2C100&chxt=x%2Cy%2Cy&icac=documentation&iclocale=en&icretina=1&ichm=523a6d14c418721906103a45205aa394a015d1be7e8b7a890677d2989318f264)](https://editor.image-charts.com/chart?chd=a1%3A%2C103.7%2C7.23%2C31.02%2C82.22%2C-123.74%2C43.71%2C84.22%2C164.59%2C31.26%2C69.91%2C90.59%2C20.9%2C-51.29%2C-44.29%2C-333.83%2C-452.37%2C35.41%2C24.4%7C1500%2C1603%2C1610%2C1641%2C1723%2C1599%2C1642%2C1726%2C1890%2C1921%2C1990%2C2080%2C2100%2C2048%2C2003%2C1669%2C1216%2C1251%2C1275&chg=20%2C50&chlps=textAlign%2Cright%7Calign%2Cbottom%7Cfont.size%2C8&chm=D%2C00AAFF%2C1%2C0%2C5%2C1&chs=800x600&cht=bvs&chxl=0%3A%7C%7C103%7C7%7C31%7C82%7C-124%7C43%7C84%7C164%7C31%7C69%7C90%7C20%7C-52%7C-45%7C-334%7C-453%7C35%7C24&chxr=2%2C-500%2C2500%7C1%2C-500%2C2500%2C100&chxt=x%2Cy%2Cy&icac=documentation&iclocale=en&icretina=1&ichm=523a6d14c418721906103a45205aa394a015d1be7e8b7a890677d2989318f264) 
+[![compound chart with multiple axis and custom grid lines number](https://image-charts.com/chart?chd=a1%3A%2C103.7%2C7.23%2C31.02%2C82.22%2C-123.74%2C43.71%2C84.22%2C164.59%2C31.26%2C69.91%2C90.59%2C20.9%2C-51.29%2C-44.29%2C-333.83%2C-452.37%2C35.41%2C24.4%7C1500%2C1603%2C1610%2C1641%2C1723%2C1599%2C1642%2C1726%2C1890%2C1921%2C1990%2C2080%2C2100%2C2048%2C2003%2C1669%2C1216%2C1251%2C1275&chg=20%2C50&chlps=textAlign%2Cright%7Calign%2Cbottom%7Cfont.size%2C8&chm=D%2C00AAFF%2C1%2C0%2C5%2C1&chs=800x600&cht=bvs&chxl=0%3A%7C%7C103%7C7%7C31%7C82%7C-124%7C43%7C84%7C164%7C31%7C69%7C90%7C20%7C-52%7C-45%7C-334%7C-453%7C35%7C24&chxr=2%2C-500%2C2500%7C1%2C-500%2C2500%2C100&chxt=x%2Cy%2Cy&icac=documentation&iclocale=en&icretina=1&ichm=523a6d14c418721906103a45205aa394a015d1be7e8b7a890677d2989318f264)](https://editor.image-charts.com/chart?chd=a1%3A%2C103.7%2C7.23%2C31.02%2C82.22%2C-123.74%2C43.71%2C84.22%2C164.59%2C31.26%2C69.91%2C90.59%2C20.9%2C-51.29%2C-44.29%2C-333.83%2C-452.37%2C35.41%2C24.4%7C1500%2C1603%2C1610%2C1641%2C1723%2C1599%2C1642%2C1726%2C1890%2C1921%2C1990%2C2080%2C2100%2C2048%2C2003%2C1669%2C1216%2C1251%2C1275&chg=20%2C50&chlps=textAlign%2Cright%7Calign%2Cbottom%7Cfont.size%2C8&chm=D%2C00AAFF%2C1%2C0%2C5%2C1&chs=800x600&cht=bvs&chxl=0%3A%7C%7C103%7C7%7C31%7C82%7C-124%7C43%7C84%7C164%7C31%7C69%7C90%7C20%7C-52%7C-45%7C-334%7C-453%7C35%7C24&chxr=2%2C-500%2C2500%7C1%2C-500%2C2500%2C100&chxt=x%2Cy%2Cy&icac=documentation&iclocale=en&icretina=1&ichm=523a6d14c418721906103a45205aa394a015d1be7e8b7a890677d2989318f264)
 
 For the final touch, hide the first `y` axis that we used to customize our grid lines number. [Axis styles (`chxs`)](/reference/chart-axis/#axis-label-styles) can hide both axis line and tick marks when `<opt_axis_or_tick>` optional parameter is set to `_` for the first `y` axis. `chxs=1,000000,0,_`:
 

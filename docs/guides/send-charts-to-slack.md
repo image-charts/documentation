@@ -1,6 +1,9 @@
 ---
-meta_description: "How to send image charts in slack channels using Image-Charts API."
+title: Send Charts to Slack
+description: "How to send image charts in slack channels using Image-Charts API."
+sidebar_position: 3
 ---
+
 # Slack
 
 Image-Charts can be integrated with every tool. Slack is a well-known communication tool for teams.

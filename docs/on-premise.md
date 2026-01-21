@@ -1,6 +1,9 @@
 ---
-meta_description: "Deploy and host Image-Charts inside your own infrastructure with our On-Premise docker container."
+title: On Premise Virtual Appliance
+description: "Deploy and host Image-Charts inside your own infrastructure with our On-Premise docker container."
+sidebar_position: 15
 ---
+
 # On Premise Virtual Appliance
 
 This section is dedicated to the [Image-Charts paying On Premise version](https://www.image-charts.com/pricing). This virtual appliance is a special docker image that can be deployed on your own server(s) in your own datacenter(s) or infrastructure.
@@ -10,7 +13,6 @@ This section is dedicated to the [Image-Charts paying On Premise version](https:
 - No **[rate-limits (quotas)](https://documentation.image-charts.com/limits-and-quotas/)**, you have full control over your deployment
 - Every Enterprise and Enterprise+ plan features :
     - [retina mode](/reference/retina/)
-    - [compound charts](/reference/compound-charts/)
     - [multiple axis](/reference/chart-axis/#visible-axes)
 - **Removes** the need to sign URL with `ichm` and `icac` that exists for SaaS [Enterprise plans](/enterprise).
 
@@ -27,8 +29,9 @@ First contact [our support](mailto:support@image-charts.com) with your needs in 
 curl "[download_link]" | docker load
 ```
 
-!!! info "Download link expiration"
-    Image-Charts download link will only be active for **7 days**
+:::info Download link expiration
+Image-Charts download link will only be active for **7 days**
+:::
 
 ## Run the Image Charts service
 
@@ -46,7 +49,7 @@ docker run -it \
 ## Monitor the API
 
 - Health check is available at `http://localhost:8080/_health`
-- If the container receive a `SIGTERM` (e.g. `docker stop {container_id}`) `http://localhost:8080/_health` will yield a `500` HTTP error code but will still serve chart generation requests
+- If the container receive a `SIGTERM` (e.g. `docker stop {container_id}`) `http://localhost:8080/_health` will yield a `500` HTTP error code but will still serve chart generation requests
 
 ## Stop the container
 

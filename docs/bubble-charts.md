@@ -1,13 +1,16 @@
 ---
-meta_description: "Generate bubble charts as image and embed them inside your email or pdf reports"
+title: Bubble Charts
+description: "Generate bubble charts as image and embed them inside your email or pdf reports"
+sidebar_position: 7
 ---
+
 # Bubble Charts
 
 This section describes how to create bubble charts using Image-Chart API.
 
 ## Overview
 
-The bubble chart is designed to visually convey three or four dimensions of data. This means your data needs to have at least three fields on your record that you’ll want to convey graphically all at once. This could be a date field (x-axis), a cost figure (y-axis), and the ROI of the project (bubble size).
+The bubble chart is designed to visually convey three or four dimensions of data. This means your data needs to have at least three fields on your record that you'll want to convey graphically all at once. This could be a date field (x-axis), a cost figure (y-axis), and the ROI of the project (bubble size).
 
 Each series describe a set of bubbles, and each bubble is defined by a `x` value, `y` value and an optional `r` radius.
 
@@ -77,8 +80,9 @@ The second and last series (`50,30,5,_,5,5,_,20,20,6`) has 3 bubbles:
 
 ## Series Colors
 
-!!! tip
-    You can specify the colors of individual bubbles, individual series, or multiple series using the `chco` parameter. If you don't specify a different color for each series, all series will have the same color.
+:::tip
+You can specify the colors of individual bubbles, individual series, or multiple series using the `chco` parameter. If you don't specify a different color for each series, all series will have the same color.
+:::
 
 #### Syntax
 

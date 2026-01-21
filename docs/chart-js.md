@@ -1,18 +1,20 @@
 ---
-meta_description: "How to use Chart.js server-side and generate images of chart.js charts."
+title: Chart.js
+description: "How to use Chart.js server-side and generate images of chart.js charts."
+sidebar_position: 11
 ---
 
 # Chart.js
 
 ## Overview
 
-On this page, you’ll learn:
+On this page, you'll learn:
 
 - [x] What is Chart.js
 - [x] How to use Chart.js configuration object as input for Image-Charts
 - [x] How to customize your Chart.js image chart
 
-Chart.js is most popular open-source charting library. Image Charts supports [Chart.js configuration object](https://www.chartjs.org/docs/2.8.0) as input in the URL. 
+Chart.js is most popular open-source charting library. Image Charts supports [Chart.js configuration object](https://www.chartjs.org/docs/2.8.0) as input in the URL.
 
 
 A Chart.js definition like the one below is represented in JavaScript Object Notation (JSON). Take a look at [Chart.js documentation](https://www.chartjs.org/docs/2.8.0/charts/) to discover all the available parameters.
@@ -80,8 +82,9 @@ https://image-charts.com/chart.js/2.8.0?bkg=white&c={%20%22type%22:%20%22pie%22,
 
 [![pie chart as chart url](https://image-charts.com/chart.js/2.8.0?bkg=white&c={%20%22type%22:%20%22pie%22,%20%22data%22:%20{%20%22datasets%22:%20[%20{%20%22data%22:%20[84,%2028,%2057,%2019,%2097],%20%22backgroundColor%22:%20[%20%22rgba(255,99,132,0.5)%22,%20%22rgba(255,159,64,0.5)%22,%20%22rgba(255,205,86,0.5)%22,%20%22rgba(75,192,192,0.5)%22,%20%22rgba(54,162,235,0.5)%22%20],%20%22label%22:%20%22Dataset%201%22%20}%20],%20%22labels%22:%20[%22Red%22,%20%22Orange%22,%20%22Yellow%22,%20%22Green%22,%20%22Blue%22]%20}%20})](https://editor.image-charts.com/chart.js/2.8.0?bkg=white&c={%20%22type%22:%20%22pie%22,%20%22data%22:%20{%20%22datasets%22:%20[%20{%20%22data%22:%20[84,%2028,%2057,%2019,%2097],%20%22backgroundColor%22:%20[%20%22rgba(255,99,132,0.5)%22,%20%22rgba(255,159,64,0.5)%22,%20%22rgba(255,205,86,0.5)%22,%20%22rgba(75,192,192,0.5)%22,%20%22rgba(54,162,235,0.5)%22%20],%20%22label%22:%20%22Dataset%201%22%20}%20],%20%22labels%22:%20[%22Red%22,%20%22Orange%22,%20%22Yellow%22,%20%22Green%22,%20%22Blue%22]%20}%20})
 
-!!! info
-    Some JSON character (like `#`) do not work well inside URLs. It's recommended to **always URL-encode the chart definition**.
+:::info
+Some JSON character (like `#`) do not work well inside URLs. It's recommended to **always URL-encode the chart definition**.
+:::
 
 
 ## Chart.js version
@@ -95,7 +98,7 @@ https://image-charts/chart.js/{version}
 With `version` being one of:
 
 - `2.8.0` ([documentation](https://www.chartjs.org/docs/2.8.0/)
-- Need another version for your project? [Contact us 📨](mailto:support@image-charts.com)
+- Need another version for your project? [Contact us](mailto:support@image-charts.com)
 
 ## Chart size
 
@@ -280,7 +283,7 @@ Bar chart below has 3 datasets and each bar has 10px rounded corners:
   "type": "bar",
   ...
   "options": {
-    ... 
+    ...
     "rectangleRadius": 10,
   }
 }
@@ -290,12 +293,13 @@ Bar chart below has 3 datasets and each bar has 10px rounded corners:
 
 ### Background image
 
-!!! info "Enterprise and Enterprise+ subscription only"
-    Background image are only available with **Enterprise** and **Enterprise+** subscriptions
+:::info Enterprise and Enterprise+ subscription only
+Background image are only available with **Enterprise** and **Enterprise+** subscriptions
+:::
 
 #### Syntax
 
-Defining a background image for a chart in Chart.js is done through a `backgroundImage` plugin that requires an `url` attribute. The image will take up all the available space. 
+Defining a background image for a chart in Chart.js is done through a `backgroundImage` plugin that requires an `url` attribute. The image will take up all the available space.
 
 ```
 {
@@ -316,12 +320,12 @@ The example below displays a bar charts with two series and a full size backgrou
 ```
 {
   type: 'bar',
-  
-  ... 
-  
-  options: {  
+
+  ...
+
+  options: {
     ...
-     
+
     plugins: {
       backgroundImage: {
         url: 'https://i.imgur.com/bQcg21b.jpg'

@@ -1,13 +1,18 @@
 ---
-meta_description: "Learn how to customize your chart post request, from using curl, JavaScript or PHP."
+title: POST Requests
+description: "Learn how to customize your chart post request, from using curl, JavaScript or PHP."
+sidebar_position: 9
 ---
+
+# POST Requests
+
 Specifying your chart as a URL in your browser or an `<img>` tag is called a `GET` request. Making a GET request is simple, but GET URLs are limited to 2K characters. What if you have more data than that?
 
 Luckily, the Chart API supports HTTP POST for chart requests up to 300 Kilobytes long (*Google Image Charts API limit was 16Ko*). The trade-off is the added complexity of using POST.
 
 Here's an example of the most basic kind of POST request: using a `<form>` element:
 
-```
+```html
 <form action='https://image-charts.com/chart' method='POST'>
     <input type="hidden" name="cht" value="lc"  />
     <input type="hidden" name="chtt" value="This is my chart"  />
@@ -40,7 +45,7 @@ The easiest way to make a JavaScript POST request is to create a page that hosts
 
 **post_chart.html**
 
-```text
+```html
 <html>
   <head>
       <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -55,7 +60,7 @@ The easiest way to make a JavaScript POST request is to create a page that hosts
         }
       </script>
   </head>
-  < body onload="loadGraph()">
+  <body onload="loadGraph()">
     <form action='https://image-charts.com/chart' method='POST' id='post_form'>
       <input type='hidden' name='cht' value='lc'/>
       <input type='hidden' name='chtt' value='This is my chart'/>
@@ -70,7 +75,7 @@ The easiest way to make a JavaScript POST request is to create a page that hosts
 
 [Demo on JSFiddle](https://jsfiddle.net/FGRibreau/8ctwd87n/).
 
-If you use a <form> element, you do not need to URL-encode your strings.).
+If you use a `<form>` element, you do not need to URL-encode your strings.).
 
 This chart can then be loaded into another page by using an `<iframe>` in your host page, such as this:
 

@@ -1,13 +1,16 @@
 ---
-meta_description: "Learn how to generate animated gif charts."
+title: Animation
+description: "Learn how to generate animated gif charts."
+sidebar_position: 4
 ---
+
+# Animation
+
 Animated charts are awesome right? Sadly chart generated images are simple PNGs and our team at Image-Charts was quite sad with that status quo. But then we thought, why don't we generate animated gif? They will perfectly fit inside emails and IM bot and will give **the final wow effect everyone is waiting for**!
 
 So we did it and we were like:
 
-<center>
-![woot](https://i.imgur.com/BQXuCnf.gif){style="width:200px;"}
-</center>
+<img src="https://i.imgur.com/BQXuCnf.gif" alt="woot" style={{width: '200px'}} />
 
 #### Syntax
 
@@ -29,8 +32,9 @@ The other way is to specify `duration` and `easing`:
 
 #### Examples
 
-!!! tip
-    If you missed the animation, copy the image URL, paste it into another tab and then hit reload any time you want to replay the gif animation.
+:::tip
+If you missed the animation, copy the image URL, paste it into another tab and then hit reload any time you want to replay the gif animation.
+:::
 
 Let's start with a simple chart that we animate just by adding `chan` to the URL:
 

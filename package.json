@@ -1,26 +1,52 @@
 {
-  "name": "documentation",
-  "version": "2.0.1",
-  "description": "Image-Charts documentation",
-  "main": "index.js",
+  "name": "image-charts-documentation",
+  "version": "1.0.0",
   "private": true,
-  "directories": {
-    "doc": "docs"
+  "scripts": {
+    "docusaurus": "docusaurus",
+    "start": "docusaurus start",
+    "build": "npm run generate && docusaurus build",
+    "build:docs-only": "docusaurus build",
+    "swizzle": "docusaurus swizzle",
+    "deploy": "docusaurus deploy",
+    "clear": "docusaurus clear",
+    "serve": "docusaurus serve",
+    "write-translations": "docusaurus write-translations",
+    "write-heading-ids": "docusaurus write-heading-ids",
+    "generate": "npm run generate:error-codes && npm run generate:google-fonts && npm run generate:gallery",
+    "generate:error-codes": "node scripts/generate-error-codes.js",
+    "generate:google-fonts": "node scripts/generate-google-fonts.js",
+    "generate:gallery": "node scripts/generate-gallery.js"
   },
   "dependencies": {
-    "custom-env": "^2.0.1",
-    "lodash": "^4.17.19"
+    "@docusaurus/core": "^3.9.2",
+    "@docusaurus/preset-classic": "^3.9.2",
+    "@docusaurus/theme-mermaid": "^3.9.2",
+    "@easyops-cn/docusaurus-search-local": "^0.52.2",
+    "@mdx-js/react": "^3.0.0",
+    "clsx": "^2.0.0",
+    "prism-react-renderer": "^2.3.0",
+    "react": "^19.2.3",
+    "react-dom": "^19.2.3"
   },
-  "devDependencies": {},
-  "scripts": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/image-charts/documentation.git"
+  "devDependencies": {
+    "@docusaurus/module-type-aliases": "^3.9.2",
+    "@docusaurus/types": "^3.9.2",
+    "raw-loader": "^4.0.2"
   },
-  "author": "",
-  "license": "Image-Charts©",
-  "bugs": {
-    "url": "https://github.com/image-charts/documentation/issues"
+  "browserslist": {
+    "production": [
+      ">0.5%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 3 chrome version",
+      "last 3 firefox version",
+      "last 5 safari version"
+    ]
   },
-  "homepage": "https://github.com/image-charts/documentation#readme"
+  "engines": {
+    "node": ">=18.0"
+  }
 }

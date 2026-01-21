@@ -1,6 +1,9 @@
 ---
-meta_description: "Generate radar charts as image using Image-charts API. From simple or custom radar charts to series colors, we handle everything!"
+title: Radar Charts
+description: "Generate radar charts as image using Image-charts API. From simple or custom radar charts to series colors, we handle everything!"
+sidebar_position: 6
 ---
+
 # Radar Charts
 
 This section describes how to create radar charts using the Image-Chart API.
@@ -14,7 +17,7 @@ cht=r
 chxt=r
 ```
 
-In a radar chart, data points are drawn evenly spaced, clockwise around the chart. The value of the point is represented as the distance from the center of the chart, where the center represents the minimum value, and the chart edge is the maximum value. Each series is drawn as one complete circuit of the chart. <!--The chart connects these points with straight or curved lines, as you specify.--> 
+In a radar chart, data points are drawn evenly spaced, clockwise around the chart. The value of the point is represented as the distance from the center of the chart, where the center represents the minimum value, and the chart edge is the maximum value. Each series is drawn as one complete circuit of the chart.
 
 So, a radar chart is essentially a line chart wrapped into a circle, where the y-axis goes from the center of the chart to the perimeter, and the x-axis is the perimeter of the chart, starting and ending at the 12:00 line.
 
@@ -24,8 +27,6 @@ A chart is divided evenly into equal segments; the number of segments is the gre
 - the number of data values
 
 For instance, a chart with 8 data points and no labels will have its data points spaced `45` degrees apart (`360 / 8 = 45`).
-
-<!-- If you have multiple series, the series with the most point is counted. The minimum number of segments is four; if you have fewer than four labels or data points, the chart will default to four segments. You need n+1 data points to make a complete circuit of the chart, where n is the number of segments. More data points will increase the granularity of the chart. Your data will never go around the chart more than once. -->
 
 A radar chart can support multiple series. Each series is a line in the chart.
 
@@ -51,8 +52,9 @@ chxt=r
 chd=t:81,65,50,67,59|77,67,10,79,65
 ```
 
-!!! info
-     Unlike in Google Image Charts, Image-Charts will always connect series points even if first and last point of a series are different so you won't have 
+:::info
+Unlike in Google Image Charts, Image-Charts will always connect series points even if first and last point of a series are different so you won't have
+:::
 
 ## Series Colors
 Optionally specify the colors of the lines using the `chco` parameter.

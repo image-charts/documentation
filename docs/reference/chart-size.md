@@ -1,6 +1,11 @@
 ---
-meta_description: "Learn how to customize your chart size, from width or height."
+title: Chart Size
+description: "Learn how to customize your chart size, from width or height."
+sidebar_position: 3
 ---
+
+# Chart Size
+
 All charts require the size to be specified. This parameter determines the total width and height of the chart image, including legends, margins, and titles. Legends, margins, and titles are clipped to fit within the total chart size.
 
 Maximum chart size for all charts except maps is 998,001 pixels total (Google Image Charts was limited to 300,000), and maximum width or height is 999 pixels.
@@ -29,5 +34,6 @@ Here is a 700 pixel x 200 pixel chart.
 chs=700x200
 ```
 
-!!! info "Want high-resolution, retina-ready charts?"
-    Enterprise+ subscriptions enable [high resolution](/reference/retina/) Image Chart.
+:::info Want high-resolution, retina-ready charts?
+Enterprise+ subscriptions enable [high resolution](/reference/retina/) Image Chart.
+:::

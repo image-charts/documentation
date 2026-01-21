@@ -1,10 +1,16 @@
 ---
-meta_description: "Learn how to customize your chart label, from format to positionning."
+title: Chart Label
+description: "Learn how to customize your chart label, from format to positionning."
+sidebar_position: 17
 ---
+
+# Chart Label
+
 You can specify labels for individual slices (in bar, pie, doughnut or polar chart) or bar using the `chl` parameter. You can also display a legend with the same or different values, one legend entry per slice. Use `\n` for multi-line labels.
 
-!!! note "A Note on String Values"
-    Only URL-safe characters are permitted in label strings. To be safe, you should URL-encode any strings containing characters not in the character set `0-9a-zA-Z`.
+:::note A Note on String Values
+Only URL-safe characters are permitted in label strings. To be safe, you should URL-encode any strings containing characters not in the character set `0-9a-zA-Z`.
+:::
 
 #### Syntax
 
@@ -26,7 +32,7 @@ Let specify labels for a simple animated pie chart.
 ```
 cht=p3
 chd=t:20,20,30,40,50
-chl=20°|20°|30°|40°|50°
+chl=20|20|30|40|50
 ```
 
 Same as the previous chart but this time as an animated donught chart.
@@ -235,10 +241,10 @@ The `align` option defines the position of the label relative to the anchor poin
 - `'center'` (default): the label is centered on the anchor point
 - `'start'`: the label is positioned before the anchor point, following the same direction
 - `'end'`: the label is positioned after the anchor point, following the same direction
-- `'right'`: the label is positioned to the right of the anchor point (0°)
-- `'bottom'`: the label is positioned to the bottom of the anchor point (90°)
-- `'left'`: the label is positioned to the left of the anchor point (180°)
-- `'top'`: the label is positioned to the top of the anchor point (270°)
+- `'right'`: the label is positioned to the right of the anchor point (0)
+- `'bottom'`: the label is positioned to the bottom of the anchor point (90)
+- `'left'`: the label is positioned to the left of the anchor point (180)
+- `'top'`: the label is positioned to the top of the anchor point (270)
 
 ```
 chlps=align,top
@@ -288,8 +294,9 @@ chlps=clamp,true
 ![image charts clamp](https://i.imgur.com/JSma3IC.png)
 
 
-!!! tip
-    If the element is fully hidden (i.e. entirely outside the chart area), anchor points will **not** be adjusted and thus will also be outside the viewport.
+:::tip
+If the element is fully hidden (i.e. entirely outside the chart area), anchor points will **not** be adjusted and thus will also be outside the viewport.
+:::
 
 #### Clipping
 

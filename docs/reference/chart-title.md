@@ -1,6 +1,11 @@
 ---
-meta_description: "Learn how to customize your chart title, from format to alignement."
+title: Chart Title
+description: "Learn how to customize your chart title, from format to alignement."
+sidebar_position: 6
 ---
+
+# Chart Title
+
 You can specify the title text, color, and font size for your chart.
 
 #### Syntax
@@ -22,10 +27,9 @@ chts=<font_color>,<font_size>[,<opt_alignment>,<opt_font_family>,<opt_font_style
 - **`<opt_font_family>`** [Optional] one of the [supported open-source font](/reference/chart-font/#supported-open-source-fonts).
 - **`<opt_font_style>`** [Optional] one of `normal` or `italic`. Default value used is `normal`.
 
-!!! info "Enterprise+ subscription only"
-    **Font-family** and **Font-style** are only enabled in **Enterprise+** subscriptions
-
-<!-- - **`<opt_alignment>`** [Optional] Alignment of the title. Choose one of the following case-sensitive string values: "l" (left), "c" (centered) "r" (right). Default is "c". -->
+:::info Enterprise+ subscription only
+**Font-family** and **Font-style** are only enabled in **Enterprise+** subscriptions
+:::
 
 #### Examples
 
