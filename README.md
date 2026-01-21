@@ -6,7 +6,7 @@ Read the documentation [online](https://documentation.image-charts.com/).
 
 ### Requirements
 
-- Node.js 18+
+- Node.js 20+
 
 ### Install dependencies
 
