@@ -90,6 +90,7 @@ const sidebars = {
       items: [
         "enterprise",
         "sdk-and-libraries",
+        "mcp-server",
         "on-premise",
         "errors",
         "limits-and-quotas",
