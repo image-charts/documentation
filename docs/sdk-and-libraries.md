@@ -15,3 +15,5 @@ Image-Charts offers SDK in the following languages:
 - [Ruby](https://github.com/image-charts/ruby)
 - [PHP](https://github.com/image-charts/php)
 - [Python 3.6+](https://github.com/image-charts/python)
+
+Building for an AI agent or MCP client? See the [Image-Charts MCP server](/mcp-server) — it returns a permanent, hosted chart URL that embeds anywhere an `<img>` works.
