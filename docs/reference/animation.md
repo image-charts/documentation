@@ -1,6 +1,7 @@
 ---
-title: Animation
-description: "Learn how to generate animated gif charts."
+title: Animated Chart GIFs from a URL
+sidebar_label: Animation
+description: "Turn a chart URL into an animated GIF chart by adding &chan or chan=<duration>,<easing>. Duration 10–1500 ms (default 1200), 30 easing functions, examples."
 sidebar_position: 4
 ---
 
