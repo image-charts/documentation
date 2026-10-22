@@ -1,6 +1,7 @@
 ---
-title: Data Format
-description: "Learn how to customize your chart data format, from text format to encoding."
+title: "Chart Data Format (chd): Text, Awesome, Simple and Extended Encoding"
+sidebar_label: Data Format
+description: "How to send chart data with the chd parameter. Awesome format (a:), basic text, text with scaling, simple (0–61) and extended (0–4095) encoding, with examples."
 sidebar_position: 12
 ---
 
