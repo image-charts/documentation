@@ -104,6 +104,8 @@ With `version` being one of:
 
 Both the width and height of the chart output image can be specified in pixel using `width` and `height` query parameters. Default values are `width=400` and `height=300`.
 
+`width` and `height` each accept a value from 1 to 999 pixels, the same per-side maximum as [`chs`](/reference/chart-size) on `/chart`. A larger value is rejected with a `400` HTTP status code and the `IS_VALIDATION_ERROR` [error code](/errors#error-codes) in the `x-ic-error-code` response header.
+
 Here is a 300x200 chart:
 
 ```
@@ -115,6 +117,25 @@ https://image-charts.com/chart.js/2.8.0
 ```
 
 [![chart.js as image](https://image-charts.com/chart.js/2.8.0?width=300&height=200&bkg=white&c=%7B%22type%22%3A%22bar%22%2C%22data%22%3A%7B%22labels%22%3A%5B%22January%22%2C%22February%22%2C%22March%22%2C%22April%22%2C%22May%22%2C%22June%22%2C%22July%22%5D%2C%22datasets%22%3A%5B%7B%22backgroundColor%22%3A%22rgba(54%2C162%2C235%2C0.5)%22%2C%22borderColor%22%3A%22rgb(54%2C162%2C235)%22%2C%22borderWidth%22%3A1%2C%22data%22%3A%5B73%2C41%2C29%2C61%2C-65%2C59%2C38%5D%7D%5D%7D%2C%22options%22%3A%7B%22legend%22%3A%7B%22display%22%3Afalse%7D%7D%7D)](https://editor.image-charts.com/chart.js/2.8.0?width=300&height=200&bkg=white&c=%7B%22type%22%3A%22bar%22%2C%22data%22%3A%7B%22labels%22%3A%5B%22January%22%2C%22February%22%2C%22March%22%2C%22April%22%2C%22May%22%2C%22June%22%2C%22July%22%5D%2C%22datasets%22%3A%5B%7B%22backgroundColor%22%3A%22rgba(54%2C162%2C235%2C0.5)%22%2C%22borderColor%22%3A%22rgb(54%2C162%2C235)%22%2C%22borderWidth%22%3A1%2C%22data%22%3A%5B73%2C41%2C29%2C61%2C-65%2C59%2C38%5D%7D%5D%7D%2C%22options%22%3A%7B%22legend%22%3A%7B%22display%22%3Afalse%7D%7D%7D)
+
+### Pixel ratio
+
+Charts are drawn with a device pixel ratio of `2`: the output image is twice the requested size, so the 300x200 chart above is a 600x400 pixel image.
+
+The Chart.js [`devicePixelRatio`](https://www.chartjs.org/docs/2.8.0/general/device-pixel-ratio.html) option can lower this ratio. For instance, `devicePixelRatio: 1` produces an image of exactly `width` x `height` pixels:
+
+```json
+{
+  "type": "bar",
+  ...
+  "options": {
+    ...
+    "devicePixelRatio": 1
+  }
+}
+```
+
+The option is applied only when it is a number no greater than `2` that leaves at least one pixel on each side of the image. Any other value is ignored and the chart is drawn with a ratio of `2`.
 
 ## Background color
 
@@ -241,6 +262,16 @@ encoding=url
 ```
 
 [![chart](https://image-charts.com/chart.js/2.8.0?bkg=white&c=%7B%0A%20%20%22type%22%3A%20%22radar%22%2C%0A%20%20%22data%22%3A%20%7B%0A%20%20%20%20%22labels%22%3A%20%5B%0A%20%20%20%20%20%20%22January%22%2C%0A%20%20%20%20%20%20%22February%22%2C%0A%20%20%20%20%20%20%22March%22%2C%0A%20%20%20%20%20%20%22April%22%2C%0A%20%20%20%20%20%20%22May%22%2C%0A%20%20%20%20%20%20%22June%22%2C%0A%20%20%20%20%20%20%22July%22%0A%20%20%20%20%5D%2C%0A%20%20%20%20%22datasets%22%3A%20%5B%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%22label%22%3A%20%22Dataset%201%22%2C%0A%20%20%20%20%20%20%20%20%22data%22%3A%20%5B%0A%20%20%20%20%20%20%20%20%20%20-31%2C%0A%20%20%20%20%20%20%20%20%20%20-70%2C%0A%20%20%20%20%20%20%20%20%20%20-30%2C%0A%20%20%20%20%20%20%20%20%20%20-33%2C%0A%20%20%20%20%20%20%20%20%20%20-9%2C%0A%20%20%20%20%20%20%20%20%20%2014%2C%0A%20%20%20%20%20%20%20%20%20%20-41%0A%20%20%20%20%20%20%20%20%5D%0A%20%20%20%20%20%20%7D%2C%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%22label%22%3A%20%22Dataset%202%22%2C%0A%20%20%20%20%20%20%20%20%22data%22%3A%20%5B%0A%20%20%20%20%20%20%20%20%20%2073%2C%0A%20%20%20%20%20%20%20%20%20%2041%2C%0A%20%20%20%20%20%20%20%20%20%2029%2C%0A%20%20%20%20%20%20%20%20%20%2061%2C%0A%20%20%20%20%20%20%20%20%20%20-65%2C%0A%20%20%20%20%20%20%20%20%20%2059%2C%0A%20%20%20%20%20%20%20%20%20%2038%0A%20%20%20%20%20%20%20%20%5D%2C%0A%20%20%20%20%20%20%20%20%20%22datalabels%22%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%22labels%22%3A%20null%2C%0A%20%20%20%20%20%20%20%20%20%20%22font%22%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%22size%22%3A%20%2250%22%0A%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%5D%0A%20%20%7D%2C%0A%20%20%22options%22%3A%20%7B%0A%20%20%20%20%22datalabels%22%3A%20%5B%0A%20%20%20%20%20%20%5B%0A%20%20%20%20%20%20%20%20%22one%22%0A%20%20%20%20%20%20%5D%2C%0A%20%20%20%20%20%20%5B%0A%20%20%20%20%20%20%20%20%22two%22%0A%20%20%20%20%20%20%5D%2C%0A%20%20%20%20%20%20%5B%0A%20%20%20%20%20%20%20%20%22three%22%0A%20%20%20%20%20%20%5D%2C%0A%20%20%20%20%20%20%5B%0A%20%20%20%20%20%20%20%20%22four%22%0A%20%20%20%20%20%20%5D%2C%0A%20%20%20%20%20%20%5B%0A%20%20%20%20%20%20%20%20%22five%22%0A%20%20%20%20%20%20%5D%0A%20%20%20%20%5D%2C%0A%20%20%20%20%22responsive%22%3A%20true%2C%0A%20%20%20%20%22legend%22%3A%20%7B%0A%20%20%20%20%20%20%22position%22%3A%20%22top%22%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D)](https://editor.image-charts.com/chart.js/2.8.0?bkg=white&c=%7B%0A%20%20%22type%22%3A%20%22radar%22%2C%0A%20%20%22data%22%3A%20%7B%0A%20%20%20%20%22labels%22%3A%20%5B%0A%20%20%20%20%20%20%22January%22%2C%0A%20%20%20%20%20%20%22February%22%2C%0A%20%20%20%20%20%20%22March%22%2C%0A%20%20%20%20%20%20%22April%22%2C%0A%20%20%20%20%20%20%22May%22%2C%0A%20%20%20%20%20%20%22June%22%2C%0A%20%20%20%20%20%20%22July%22%0A%20%20%20%20%5D%2C%0A%20%20%20%20%22datasets%22%3A%20%5B%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%22label%22%3A%20%22Dataset%201%22%2C%0A%20%20%20%20%20%20%20%20%22data%22%3A%20%5B%0A%20%20%20%20%20%20%20%20%20%20-31%2C%0A%20%20%20%20%20%20%20%20%20%20-70%2C%0A%20%20%20%20%20%20%20%20%20%20-30%2C%0A%20%20%20%20%20%20%20%20%20%20-33%2C%0A%20%20%20%20%20%20%20%20%20%20-9%2C%0A%20%20%20%20%20%20%20%20%20%2014%2C%0A%20%20%20%20%20%20%20%20%20%20-41%0A%20%20%20%20%20%20%20%20%5D%0A%20%20%20%20%20%20%7D%2C%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%22label%22%3A%20%22Dataset%202%22%2C%0A%20%20%20%20%20%20%20%20%22data%22%3A%20%5B%0A%20%20%20%20%20%20%20%20%20%2073%2C%0A%20%20%20%20%20%20%20%20%20%2041%2C%0A%20%20%20%20%20%20%20%20%20%2029%2C%0A%20%20%20%20%20%20%20%20%20%2061%2C%0A%20%20%20%20%20%20%20%20%20%20-65%2C%0A%20%20%20%20%20%20%20%20%20%2059%2C%0A%20%20%20%20%20%20%20%20%20%2038%0A%20%20%20%20%20%20%20%20%5D%2C%0A%20%20%20%20%20%20%20%20%20%22datalabels%22%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%22labels%22%3A%20null%2C%0A%20%20%20%20%20%20%20%20%20%20%22font%22%3A%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%22size%22%3A%20%2250%22%0A%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%5D%0A%20%20%7D%2C%0A%20%20%22options%22%3A%20%7B%0A%20%20%20%20%22datalabels%22%3A%20%5B%0A%20%20%20%20%20%20%5B%0A%20%20%20%20%20%20%20%20%22one%22%0A%20%20%20%20%20%20%5D%2C%0A%20%20%20%20%20%20%5B%0A%20%20%20%20%20%20%20%20%22two%22%0A%20%20%20%20%20%20%5D%2C%0A%20%20%20%20%20%20%5B%0A%20%20%20%20%20%20%20%20%22three%22%0A%20%20%20%20%20%20%5D%2C%0A%20%20%20%20%20%20%5B%0A%20%20%20%20%20%20%20%20%22four%22%0A%20%20%20%20%20%20%5D%2C%0A%20%20%20%20%20%20%5B%0A%20%20%20%20%20%20%20%20%22five%22%0A%20%20%20%20%20%20%5D%0A%20%20%20%20%5D%2C%0A%20%20%20%20%22responsive%22%3A%20true%2C%0A%20%20%20%20%22legend%22%3A%20%7B%0A%20%20%20%20%20%20%22position%22%3A%20%22top%22%0A%20%20%20%20%7D%0A%20%20%7D%0A%7D)
+
+## Fonts
+
+:::info Enterprise+ subscription only
+Custom fonts are only available with **Enterprise+** subscriptions
+:::
+
+Custom fonts are the font families and font styles set in the Chart.js configuration: every `fontFamily` and `fontStyle` option (including `defaultFontFamily` and `defaultFontStyle`) at any level (global, title, legend, ticks), as well as `font.family` and `font.style` of datalabels.
+
+On other plans these options are ignored and the chart is drawn with the default font. The request still succeeds, whereas the [`icff` and `icfs`](/reference/chart-font) parameters of `/chart` answer `401`. Font sizes and colors apply on every plan.
 
 ## Remove the watermark
 

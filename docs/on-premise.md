@@ -14,7 +14,7 @@ This section is dedicated to the [Image-Charts paying On Premise version](https:
 - Every Enterprise and Enterprise+ plan features :
     - [retina mode](/reference/retina/)
     - [multiple axis](/reference/chart-axis/#visible-axes)
-- **Removes** the need to sign URL with `ichm` and `icac` that exists for SaaS [Enterprise plans](/enterprise).
+- **Removes** the need to sign URL with `ichm` and `icac` that exists for SaaS [Enterprise plans](/enterprise), for `/chart` and [`/chart.js`](/chart-js) charts alike.
 
 ## Limitation
 
