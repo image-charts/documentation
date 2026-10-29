@@ -102,7 +102,7 @@ With `version` being one of:
 
 ## Chart size
 
-Both the width and height of the chart output image can be specified in pixel using `width` and `height` query parameters. Default values are `width=400` and `height=300`.
+Both the width and height of the chart output image can be specified in pixel using `width` and `height` query parameters. Default values are `width=500` and `height=300`.
 
 `width` and `height` each accept a value from 1 to 999 pixels, the same per-side maximum as [`chs`](/reference/chart-size) on `/chart`. A larger value is rejected with a `400` HTTP status code and the `IS_VALIDATION_ERROR` [error code](/errors#error-codes) in the `x-ic-error-code` response header.
 
@@ -120,7 +120,7 @@ https://image-charts.com/chart.js/2.8.0
 
 ### Pixel ratio
 
-Charts are drawn with a device pixel ratio of `2`: the output image is twice the requested size, so the 300x200 chart above is a 600x400 pixel image.
+Charts are drawn with a device pixel ratio of `2`, so the output image is twice the requested size. The 300x200 chart above is a 600x400 pixel image.
 
 The Chart.js [`devicePixelRatio`](https://www.chartjs.org/docs/2.8.0/general/device-pixel-ratio.html) option can lower this ratio. For instance, `devicePixelRatio: 1` produces an image of exactly `width` x `height` pixels:
 
@@ -136,6 +136,30 @@ The Chart.js [`devicePixelRatio`](https://www.chartjs.org/docs/2.8.0/general/dev
 ```
 
 The option is applied only when it is a number no greater than `2` that leaves at least one pixel on each side of the image. Any other value is ignored and the chart is drawn with a ratio of `2`.
+
+## Axis ticks
+
+Each numeric, logarithmic, time or radial axis renders at most 1000 ticks. A configuration that needs more is rejected with a `400` HTTP status code and the `IS_VALIDATION_ERROR` [error code](/errors#error-codes) in the `x-ic-error-code` response header. The `x-ic-error-validation` header names the axis, for instance `The y-axis-0 axis would render more than 1000 ticks`.
+
+This y axis goes from 0 to 1000 in steps of 10, so it renders 101 ticks. With `"stepSize": 1` it would need 1001 ticks and be rejected.
+
+```json
+{
+  "type": "line",
+  ...
+  "options": {
+    "scales": {
+      "yAxes": [{ "ticks": { "min": 0, "max": 1000, "stepSize": 10 } }]
+    }
+  }
+}
+```
+
+To stay under the limit:
+
+- on numeric and radial axes, raise `ticks.stepSize`, narrow `ticks.min` and `ticks.max`, or set `ticks.maxTicksLimit`
+- on time axes, raise `time.stepSize` or use a larger `time.unit`
+- on logarithmic axes, narrow the range: they render 9 ticks per power of ten
 
 ## Background color
 
@@ -269,7 +293,7 @@ encoding=url
 Custom fonts are only available with **Enterprise+** subscriptions
 :::
 
-Custom fonts are the font families and font styles set in the Chart.js configuration: every `fontFamily` and `fontStyle` option (including `defaultFontFamily` and `defaultFontStyle`) at any level (global, title, legend, ticks), as well as `font.family` and `font.style` of datalabels.
+Custom fonts are the font families and font styles set in the Chart.js configuration. This covers every `fontFamily` and `fontStyle` option (including `defaultFontFamily` and `defaultFontStyle`) at any level (global, title, legend, ticks), as well as `font.family` and `font.style` of datalabels.
 
 On other plans these options are ignored and the chart is drawn with the default font. The request still succeeds, whereas the [`icff` and `icfs`](/reference/chart-font) parameters of `/chart` answer `401`. Font sizes and colors apply on every plan.
 
