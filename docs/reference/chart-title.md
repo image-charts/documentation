@@ -19,6 +19,8 @@ chts=<font_color>,<font_size>[,<opt_alignment>,<opt_font_family>,<opt_font_style
 
 - **`<chart_title>`** Title to show for the chart. You cannot specify where this appears, but you can optionally specify the font size and color. Currently basic latin and latin supplement characters are supported (need more? Ask our support). Use a `+` sign to indicate spaces, and a pipe character ` | ` to indicate line breaks.
 
+The limits on the length of the title are in [Chart complexity limits](/limits-and-quotas#get-and-post-chart).
+
 `chts` [Optional] - Colors and font size for the chtt parameter.
 
 - **`<font_color>`** The title color, in [RRGGBB[AA] hexadecimal format](/reference/color-format). Default color is black.

@@ -24,6 +24,8 @@ chdls=<color>,<size>
 
 - **`<data_series_label>`** The text for the legend entries. Each label applies to the corresponding series in the chd array. Use a + mark for a space. If you do not specify this parameter, the chart will not get a legend. There is no way to specify a line break in a label. The legend will typically expand to hold your legend text, and the chart area will shrink to accommodate the legend.
 
+The limits on the length of the legend texts are in [Chart complexity limits](/limits-and-quotas#get-and-post-chart).
+
 `chdlp` [Optional] The position of the legend, and order of the legend entries. You can specify *`<position>`* and/or *`<label_order>`*. If you specify both, separate them with a bar character. You can add an 's' to any value if you want empty legend entries in `chdl` to be skipped in the legend. Examples: `chdlp=bv`, `chdlp=r`, `chdlp=bv|r`, `chdlp=bvs|r`
 
 - **`<opt_position>`** [Optional] Specifies the position of the legend on the chart (partially supported). To specify additional padding between the legend and the chart area or the image border, use the chma parameter.

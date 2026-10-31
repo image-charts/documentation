@@ -86,6 +86,8 @@ https://image-charts.com/chart.js/2.8.0?bkg=white&c={%20%22type%22:%20%22pie%22,
 Some JSON character (like `#`) do not work well inside URLs. It's recommended to **always URL-encode the chart definition**.
 :::
 
+A definition with too many datasets, points, labels or texts is refused with a `400` HTTP status code. The limits are listed in [Chart complexity limits](/limits-and-quotas#get-chartjs).
+
 
 ## Chart.js version
 
@@ -159,7 +161,11 @@ To stay under the limit:
 
 - on numeric and radial axes, raise `ticks.stepSize`, narrow `ticks.min` and `ticks.max`, or set `ticks.maxTicksLimit`
 - on time axes, raise `time.stepSize` or use a larger `time.unit`
+- on time axes whose `ticks.source` is `labels` or `data`, send fewer labels or points, or set `ticks.source` to `auto`
 - on logarithmic axes, narrow the range: they render 9 ticks per power of ten
+- on category axes, send fewer labels, or narrow `ticks.min` and `ticks.max`
+
+A category axis renders one tick per label between `ticks.min` and `ticks.max`. It has no limit of its own, but its labels are limited (see [Chart complexity limits](/limits-and-quotas#get-chartjs)). All the axes of a chart render at most 11,000 ticks together. Past that, the `x-ic-error-validation` header reads `The axes would render more than 11000 ticks together` and names the axis that crossed the limit. Remove axes, or apply the remedies above.
 
 ## Background color
 

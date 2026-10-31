@@ -312,6 +312,8 @@ chm=
 
 - **`<opt_font_style>`** [Optional] one of `normal` or `italic`. Default value used is `normal`
 
+The limits on the text drawn at each point are in [Chart complexity limits](/limits-and-quotas#get-and-post-chart).
+
 :::tip -1 for *series_index* not implemented yet
 Do you want this feature ? [Just ask us :angel:](mailto:support@image-charts.com) !
 :::

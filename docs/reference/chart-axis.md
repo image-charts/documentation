@@ -226,6 +226,8 @@ chxl=
 - **`<axis_index>`** Which axis to apply labels to. This is an index into the chxt parameter array. For example, if you have `chxt=x,x,y,y` then index 0 would be the first x-axis, 1 would be the second x-axis. *Currently only customizing the x-axis is supported*.
 - **`<label_1>| ... |<label_n>`** One or more labels to place along this axis. These can be string or number values; strings do not need to be in quotes. label_1 is displayed at the lowest position on the axis, and label_n is displayed at the highest position. Additional labels are spaced evenly between them. Indicate spaces with a + mark. There is no way to specify a line break in a label. Separate labels with a pipe character. Note: Do not place a pipe after the final label in the `chxl` parameter.
 
+The limits on the length of the axis labels are in [Chart complexity limits](/limits-and-quotas#get-and-post-chart).
+
 #### Example
 
 This example shows how to add custom labels to two axes. Note how the values are evenly spaced, and how the last `chxl` value does not end with a pipe.
@@ -347,6 +349,8 @@ chxs=
 - **`<opt_axis_color>`** *[Optional]* (not supported, please contact our support) The color of this axis line, in RRGGBB hexadecimal format.
 - **`<opt_skip_labels>`** *[Optional]*  Specify `s` if labels on this axis should be hidden in case there are too many
 - **`<opt_min_max_rotation>`** *[Optional]* Specify the mininum (e.g. `min10`) or the maximum (e.g. `max45`) or both (`min10max45`) rotation degree labels on this axis could have. Default value is `0` (no rotation at all) for both parameters.
+
+The limits on the number format and the text drawn at each tick are in [Chart complexity limits](/limits-and-quotas#get-and-post-chart).
 
 
 #### Example

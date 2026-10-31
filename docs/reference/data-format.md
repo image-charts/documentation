@@ -22,6 +22,8 @@ The data values are scaled to fit the format used; see Data Scaling and Axis Sca
 
 We provide [JavaScript](#javascript-encoding-script) and [Python](#python-encoding-script) snippets for encoding data into simple encoding or extended encoding formats.
 
+The limits on the number of series and points are in [Chart complexity limits](/limits-and-quotas#get-and-post-chart).
+
 ### Awesome Text Format
 
 The awesome text format is the easiest text format available. It was not defined in Google Image Charts and we've implemented it due to high demand and usage.

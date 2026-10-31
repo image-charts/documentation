@@ -47,6 +47,7 @@ These errors fall into three major categories:
 
 Content errors are the result of the contents of an API request being invalid and return an HTTP response with a `4xx` error code.
 For example, the API servers might return a 401 if an invalid [account_id or signature](/enterprise) was provided, or a `400` if a required parameter was missing.
+A chart that holds too many series, points, texts or ticks also returns a `400`, with the `IS_VALIDATION_ERROR` error code. See [chart complexity limits](/limits-and-quotas#chart-complexity-limits).
 Integrations should correct the original request, and try again.
 Depending on the type of user error (e.g., a malformed data parameter), it may be possible to handle the problem programmatically.
 In these cases, include a code field to help an integration react appropriately. See [error codes](#error-codes) for more details.
