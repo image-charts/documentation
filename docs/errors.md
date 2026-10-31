@@ -39,9 +39,9 @@ Regarding the error code an additional `x-ic-error-validation` http header param
 Your Image-Charts integration might have to deal with errors at some point when making requests to the Image-Charts API.
 These errors fall into three major categories:
 
-- [Content error](#content-errors) -- Invalid content in the API request
-- [Network error](#network-errors) -- Intermittent communication problems between client and server.
-- [Server error](#server-errors) -- A problem on Image-Charts's servers.
+- [Content error](#content-errors): Invalid content in the API request
+- [Network error](#network-errors): Intermittent communication problems between client and server.
+- [Server error](#server-errors): A problem on Image-Charts's servers.
 
 ### Content Errors
 
