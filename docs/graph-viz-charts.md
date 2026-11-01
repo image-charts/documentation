@@ -255,7 +255,7 @@ digraph G {
 
 ## Chart Types
 
-Specifies a GraphViz chart. You can optionally specify a GraphViz engine (default is `dot` layout engine).
+Add an engine to `gv` to choose the layout of the graph. The default is the `dot` layout engine.
 
 #### Syntax
 
@@ -263,7 +263,7 @@ Specifies a GraphViz chart. You can optionally specify a GraphViz engine (defaul
 cht=gv[:<opt_engine>]
 ```
 
-If you want to specify a layout engine, include the semicolon : mark and specify one of the following strings for `<opt_engine>`:
+To choose a layout engine, add a colon after `gv` and one of the following strings for `<opt_engine>`:
 
 - `dot`: "hierarchical" or layered drawings of directed graphs. This is the default tool to use if edges have directionality.
 
@@ -274,6 +274,8 @@ If you want to specify a layout engine, include the semicolon : mark and specify
 - `twopi`: radial layouts, after Graham Wills 97. Nodes are placed on concentric circles depending their distance from a given root node.
 
 - `circo`: circular layout, after Six and Tollis 99, Kauffman and Wiese 02. This is suitable for certain diagrams of multiple cyclic structures, such as certain telecommunications networks.
+
+- `osage`: draws clustered graphs by packing their clusters in rectangles.
 
 ## Output format
 
@@ -290,13 +292,137 @@ Here is the same graph generated as an svg image:
 
 ![Dependency graph as a svg image](https://image-charts.com/chart?chl=graph%20%7Ba%20--%20b%3Bb%20--%20c%3Bc%20--%20d%3Bd%20--%20e%3Be%20--%20f%3Ba%20--%20f%3Ba%20--%20c%3Ba%20--%20d%3Ba%20--%20e%3Bb%20--%20d%3Bb%20--%20e%3Bb%20--%20f%3Bc%20--%20e%3Bc%20--%20f%3Bd%20--%20f%3B%7D&chof=.svg&chs=700x200&cht=gv&icac=documentation&ichm=6eb410d0b3e6ff40053520157edbf202458ed812ba9d030000d572b62a00b4b7)
 
+## Limits
+
+A graph over one of the limits below is refused with the `400` HTTP status code.
+
+The `x-ic-error-code` response header names the error. The `x-ic-error-validation` response header gives the reason, as a JSON list of messages.
+
+The limits are the same on `GET /chart` and `POST /chart`.
+
+### Engines
+
+`cht` accepts `gv`, `gv:dot`, `gv:neato`, `gv:circo`, `gv:fdp`, `gv:osage` and `gv:twopi`.
+
+`gv` alone draws with the `dot` engine.
+
+### Nodes and edges
+
+A graph holds at most 200 nodes and 400 edges, whatever its engine.
+
+A graph over them is refused with the `IC_GRAPHVIZ_MAX_NODES_REACHED` or the `IC_GRAPHVIZ_MAX_EDGES_REACHED` error code:
+
+```
+Maximum number of nodes reached (max: 200, current: 201)
+Maximum number of edges reached (max: 400, current: 401)
+```
+
+Some engines take fewer:
+
+| Engine | Nodes | Edges |
+|---|---|---|
+| `neato` | 70 | 200 |
+| `twopi` | 70 | 200 |
+| `osage` | 75 | 200 |
+| `fdp` | 60 | 200 |
+| `circo` | 55 | 110 |
+
+`dot` has no limit of its own.
+
+A graph over the limits of its engine is refused with the `IC_GRAPHVIZ_SVG_RENDER_FAILED` error code:
+
+```
+The circo layout engine takes at most 55 nodes and 110 edges, and this graph has 56 nodes and 0 edges. Reduce its number of nodes or edges, or choose another engine.
+```
+
+Send fewer nodes or edges, or choose another engine.
+
+#### Layout in the DOT
+
+A `layout` attribute at the root of the DOT replaces the engine of `cht` for the limits of the engine.
+
+Write it as `layout=circo;` or as `graph [layout=circo];`.
+
+When the DOT sets it several times, the last one counts.
+
+With `cht=gv:dot`, a DOT that sets `layout=circo` is limited as `circo` to 55 nodes and 110 edges.
+
+With `cht=gv:circo`, a DOT that sets `layout=dot` has no limit of the engine.
+
+The message names the engine that was used.
+
+### PNG size
+
+A PNG holds at most 16,000,000 pixels, its width times its height.
+
+The limit applies to the PNG that the API answers. With [retina mode](/reference/retina), each side counts twice.
+
+A larger PNG is refused with the `IC_GRAPHVIZ_SVG_RENDER_FAILED` error code:
+
+```
+The dot layout of this graph needs a PNG of 4015 x 4060 pixels (max: 16000000 pixels). Reduce its number of nodes and edges, choose another engine, or request the SVG output with the chof parameter set to .svg.
+```
+
+Send fewer nodes and edges, choose another engine, or set `chof=.svg`.
+
+The SVG output has no pixel limit.
+
+### Graph attributes
+
+These attributes of the graph accept the following values only:
+
+| Attribute | Accepted values |
+|---|---|
+| `mclimit` | 0 to 5 |
+| `maxiter` | 0 to 1000 |
+| `normalize` | -1e11 to 1e11, or `true`, `false`, `yes` or `no` |
+| `esep` | 0 or more |
+
+The ranges apply to the attributes of the graph and of its subgraphs, for instance `mclimit=3;` or `graph [mclimit=3];`.
+
+An attribute of the same name on a node or an edge is ignored.
+
+A value that is not a plain decimal number is refused. This covers `inf`, `nan`, hexadecimal numbers, numbers followed by text, and numbers too large to be finite.
+
+A value out of its range is refused with the `IC_GRAPHVIZ_SVG_RENDER_FAILED` error code:
+
+```
+The `mclimit` attribute of the graph is 6, above its maximum of 5. Lower it, or remove it to use the default.
+The `maxiter` attribute of the graph is -1, below its minimum of 0. Raise it, or remove it to use the default.
+The `esep` attribute of the graph must be a finite number. Remove it to use the default.
+```
+
+Set the attribute within its range, or remove it to use the default.
+
+### Graphs that cannot be drawn
+
+A DOT that cannot be read is refused with the `IC_GRAPHVIZ_INVALID_SYNTAX` error code.
+
+The message starts with ``In `chl` parameter,`` and gives the reason, for instance `syntax error in line 1 near '->'`.
+
+An attribute with no value, as in `label=`, cannot be read. HTML-like labels, as in `label=<...>`, are not supported either:
+
+```
+In `chl` parameter, an attribute value could not be read (empty values and HTML-like labels are not supported)
+```
+
+Fix the DOT, give each attribute a value, and write labels as quoted text.
+
+A graph that is too large or too complex for its engine is refused with the `IC_GRAPHVIZ_SVG_RENDER_FAILED` error code:
+
+```
+The graph is too large or too complex for the dot layout engine. Reduce its number of nodes and edges, drop layout attributes such as overlap, splines or nodesep, or choose another engine.
+```
+
+Follow the remedies of the message.
+
 ## Known limitations
 
 Here are some tips and known limitations in the current GraphViz charts:
 
 - Animation through `chan` is not supported
 - The `graph` attribute size should be not be used; `chs` is also not supported
-- The maximum number of nodes is 200, and the maximum for edges is 400. [Contact us if you need more](mailto:support@image-charts.com)
+- The maximum number of nodes is 200, and the maximum for edges is 400. Some layout engines take fewer, see [limits](#limits). [Contact us if you need more](mailto:support@image-charts.com)
 - Anti-aliasing, transparency, and alternate fonts are not supported
 - The `node` attributes `image` and `shapefile` are not supported and will be silently ignored if present
 - The graph attributes ratio, margin, and pad are not supported and will be ignored if present
