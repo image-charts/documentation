@@ -64,8 +64,8 @@ x-ic-error-validation: [{"message":"The chart has 1001 series, more than 1000. M
 | [`chtt`](/reference/chart-title), [`chdl`](/reference/legend-text-and-style), [`chl`](/reference/chart-label) and [`chxl`](/reference/chart-axis#custom-axis-labels) | At most 10,000 characters per text. Pipe characters separate the texts of one parameter. | Shorten the text. |
 | [`chli`](/pie-charts) | At most 3,000 characters. | Shorten the text. |
 | [`chxs`](/reference/chart-axis#axis-label-styles) and `chm` | At most 10,000 characters per number format. In `chxs` the format follows the `N` after the axis index. In `chm` it follows the `N` of an `N` marker. | Shorten the format. |
-| `chm` | The last `N` marker of a series draws its text at each point of the series. The text, its `N` included, times the number of points of the series, added up over all series, is at most 500,000 characters. | Shorten the format, or send fewer points. |
-| `chxs` | An axis draws its format at each tick. The format length times the number of ticks, added up over all axes, is at most 800,000 characters. An axis counts the ticks of its [`chxr`](/reference/chart-axis#axis-range) step, or 11 without a step. It counts at least as many ticks as the longest series has points or as `chxl` has labels, and at most 11,000. | Shorten the format, or send fewer points. |
+| `chm` | The last `N` marker of a series draws its text at each point of the series. Each drawn label counts the text, its `N` included, plus 20 characters. A character in a font larger than 14 pixels counts once per 14 pixels of font size, which is the fifth field of the marker. The labels of all series add up to at most 60,000 characters. | Shorten the format, shrink the font, or send fewer points. |
+| `chxs` | An axis draws its format at each tick. The format length times the number of ticks, added up over all axes, is at most 60,000 characters. A character in a font larger than 14 pixels counts once per 14 pixels of font size, which is the third field of the style. An axis counts the ticks of its [`chxr`](/reference/chart-axis#axis-range) step, or 11 without a step. It counts at least as many ticks as the longest series has points or as `chxl` has labels, and at most 11,000. | Shorten the format, shrink the font, or send fewer points. |
 | [`chxt`](/reference/chart-axis#visible-axes) | At most 100 axes. | Remove axes. |
 | `chxs` | At most 100 styles, one per axis. | Style each axis once. |
 | [`chf`](/reference/background-fill#gradient-fills) | At most 100 gradient stops, counted over all fills. A stop is one color and its anchor in an `lg` or `ls` fill. | Use fewer color stops. |
@@ -78,17 +78,24 @@ x-ic-error-validation: [{"message":"The chart has 1001 series, more than 1000. M
 
 Some examples of how to stay under a limit:
 
-- An `N` marker whose text holds 51 characters, its `N` included, on a series of 10,000 points would draw 510,000 characters, so it is refused. A text of 50 characters draws exactly 500,000 characters and is accepted.
-- A `chxs` format of 100 characters on a chart whose longest series holds 10,000 points would draw 1,000,000 characters. A format of 80 characters draws 800,000 and is accepted.
+- An empty `N` label, as in `chm=N,000000,0,-1,11`, counts 21 characters: the `N` and the 20 of the label. A single series takes up to 2,857 points, which count 59,997 characters. With 2,858 points the marker counts 60,018 characters and is refused.
+- An `N` marker whose text holds 40 characters, its `N` included, counts 60 characters per label. On a series of 1,000 points that is exactly 60,000 characters and it is accepted. A text of 41 characters counts 61,000 and is refused.
+- In a font of 70 pixels, each character of an `N` marker counts 5 times. On a series of 1,000 points a text of 8 characters, its `N` included, counts 60,000 characters and is accepted. A text of 9 characters counts 65,000 and is refused.
+- A `chxs` format of 7 characters on a chart whose longest series holds 10,000 points would draw 70,000 characters, so it is refused. A format of 6 characters draws exactly 60,000 and is accepted.
+- A `chxs` format of 10,000 characters, the longest accepted, fits only an axis of 6 ticks or fewer. Set the step of the axis with `chxr`, and send at most 6 points or `chxl` labels.
 - `chls=10,1,1` is refused. A 10 pixel line needs a dash plus a space of at least 5 pixels. `chls=10,3,2` is accepted.
 
-The messages of the axis and gradient limits read:
+The messages of the axis, gradient and drawn text limits read:
 
 ```
 chxt lists 101 axes, more than 100. Remove axes.
 chxs holds 101 styles, more than 100. Style each axis once.
 chf holds 101 gradient stops, more than 100. Use fewer color stops.
+chm would draw 61000 characters of 14 pixels, more than 60000. Shorten the text, shrink the font or draw fewer points.
+chxs would draw 70000 characters of 14 pixels, more than 60000. Shorten the text, shrink the font or draw fewer points.
 ```
+
+The message counts characters of 14 pixels. It rounds up a count that is not whole.
 
 ### Graphviz charts
 
