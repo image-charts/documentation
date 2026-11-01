@@ -163,6 +163,8 @@ chls=
 - **`<line_1_thickness>`** Thickness of the line, in pixels.
 - **`<opt_dash_length>, <opt_space_length>`** [Optional] Used to define dashed grid lines. The first parameter is the length of each line dash, in pixels. The second parameter is the spacing between dashes, in pixels. For a solid line, specify neither value. If you only specify `<opt_dash_length>`, then `<opt_space_length>` will be set to `<opt_dash_length>`. Default is `1,0` (a solid line).
 
+The limits on dashed lines are in [Chart complexity limits](/limits-and-quotas#get-and-post-chart).
+
 #### Examples
 
 Here the dashed line is specified by `3,6,3` and the thicker, solid line is specified by `5`:

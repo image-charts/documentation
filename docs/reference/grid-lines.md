@@ -31,6 +31,8 @@ Google Image charts use the two parameters above to calculate how many x or y gr
 - **`<opt_dash_length>, <opt_space_length>`** [Optional] Used to define dashed grid lines. The first parameter is the length of each line dash, in pixels. The second parameter is the spacing between dashes, in pixels. Specify 0 for `<opt_space_length>` for a solid line. Default values are `4,1`.
 - **`<opt_lines_color>`** [Optional] The [color](/reference/color-format/) of the grid lines (default color is black with 50% opacity: `0000001a`)
 
+The limits on dashed grid lines are in [Chart complexity limits](/limits-and-quotas#get-and-post-chart).
+
 #### Examples
 
 These examples use only the `<x_axis_step_size>` and `<y_axis_step_size>` parameters. The Chart API displays a dashed grid line by default.

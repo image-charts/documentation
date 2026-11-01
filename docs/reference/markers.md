@@ -65,7 +65,7 @@ chm=s,E4061C,0,-1,15.0|B,FCECF4,0,0,0
 Compound charts are only enabled in **Enterprise+** subscriptions
 :::
 
-You can combine several chart types with line markers to highlight data trends or show variance. When you add line markers onto bar, scatter, or other chart types, the resulting chart is called a **compound chart**. Some compound charts look like a combination of two chart types—for instance, a bar chart with a tracking line:
+You can combine several chart types with line markers to highlight data trends or show variance. When you add line markers onto bar, scatter, or other chart types, the resulting chart is called a **compound chart**. Some compound charts look like a combination of two chart types, for instance a bar chart with a tracking line:
 
 
 [![chart](https://image-charts.com/chart?chbh=5%2C2&chco=4D89F9%2CC6D9FD&chd=s2%3A1XQbnf4%2CEWoQMUB%2C9halxp9&chm=D%2C0033FF%2C2%2C0%2C5%2C1&chs=700x200&cht=bvs&icac=documentation&icretina=1&ichm=7ff6491f8d1f793aa20714709d714989e9fdd344497e2775270b96e1985f7b5f)](https://editor.image-charts.com/chart?chbh=5%2C2&chco=4D89F9%2CC6D9FD&chd=s2%3A1XQbnf4%2CEWoQMUB%2C9halxp9&chm=D%2C0033FF%2C2%2C0%2C5%2C1&chs=700x200&cht=bvs&icac=documentation&icretina=1&ichm=7ff6491f8d1f793aa20714709d714989e9fdd344497e2775270b96e1985f7b5f)
@@ -282,7 +282,7 @@ chm=
     - `*...*` - An optional block wrapped in literal asterisks, in which you can specify formatting details for numbers. The following values are supported, and are all optional:
         - `<number_type>` - The number format, for numeric values. Choose one of the following:
             - `f` - *[Default]* Floating point format. Consider specifying precision as well with the `<decimal_places>` value.
-            - `p` - Percentage format. A % sign is appended automatically. Note: When using this format, data values from 0.0 — 1.0 map to 0 — 100% (for example, 0.43 will be shown as 43%).
+            - `p` - Percentage format. A % sign is appended automatically. Note: When using this format, data values from 0.0 to 1.0 map to 0 to 100% (for example, 0.43 will be shown as 43%).
             - `e` - Scientific notation format.
             - `c*<CUR>*` - Format the number in the currency specified, with the appropriate currency marker. Replace `<CUR>` with a three-letter currency code. Example: cEUR for Euros. You can find a list of codes on the [ISO 4217 wikipedia page](https://en.wikipedia.org/wiki/ISO_4217#Active_codes), although not all symbols are supported.
         - `<decimal_places>` - An integer specifying how many decimal places to show. The value is rounded (not truncated) to this length. *Default is 2*.
@@ -311,6 +311,8 @@ chm=
 - **`<opt_font_family>`** [Optional] one of the [supported open-source font](/reference/chart-font#supported-open-source-fonts). Don't forget to checkout the [font gallery](https://fonts.google.com/)
 
 - **`<opt_font_style>`** [Optional] one of `normal` or `italic`. Default value used is `normal`
+
+The limits on the text drawn at each point are in [Chart complexity limits](/limits-and-quotas#get-and-post-chart).
 
 :::tip -1 for *series_index* not implemented yet
 Do you want this feature ? [Just ask us :angel:](mailto:support@image-charts.com) !
