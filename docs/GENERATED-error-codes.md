@@ -12,9 +12,9 @@
 - `IC_UNAUTHORIZED_BACKGROUND_IMAGE_CHART_ERROR`: Background images are only available on [Enterprise and Enterprise+ subscriptions](https://www.image-charts.com/pricing)
 - `IS_VALIDATION_ERROR`: There is one or more request parameters that are malformed. Check the associated `x-ic-error-validation` response http header for details.
 - `IC_GRAPHVIZ_INVALID_SYNTAX`: The GraphViz chart could not be generated because of invalid syntax. Check that the [chl](https://documentation.image-charts.com/graph-viz-charts/) request parameter is valid.
-- `IC_GRAPHVIZ_ERROR`: The GraphViz chart could not be generated due to internal GraphViz error.
 - `IC_GRAPHVIZ_MAX_EDGES_REACHED`: The requested Graph has reached the maximum allowed number of edges (`400`). See GraphViz [known limitations](https://documentation.image-charts.com/graph-viz-charts/#known-limitations) for more details.
 - `IC_GRAPHVIZ_MAX_NODES_REACHED`: The requested Graph has reached the maximum allowed number of nodes (`200`). See GraphViz [known limitations](https://documentation.image-charts.com/graph-viz-charts/#known-limitations) for more details.
+- `IC_GRAPHVIZ_SVG_RENDER_FAILED`: The GraphViz chart is over a limit of this service, or its image could not be made. The `x-ic-error-validation` response http header names the limit and what to change. A source too long or too deeply nested, a layout engine given too many nodes or edges or too complex a graph, and an attribute out of its range are refused whatever the output: reduce the graph, choose another layout engine or change the attribute. The limits on the image size and on the drawn text, and a failed rasterization, only concern the PNG output: request the SVG output with `chof=.svg`. See GraphViz [known limitations](https://documentation.image-charts.com/graph-viz-charts/#known-limitations) for the figures.
 - `IC_QRCODE_TOO_MUCH_DATA`: QRCode maximum data size exceeded
 - `IC_BAD_JSON_ERROR`: Value passed in query parameter `chart` (or `c'`) must be a json, ES5 json or a base64 encoded json
 - `IC_BAD_BACKGROUND_COLOR_ERROR`: Background color must be a valid rgba, rgb, hex or text color

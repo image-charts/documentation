@@ -300,11 +300,36 @@ The `x-ic-error-code` response header names the error. The `x-ic-error-validatio
 
 The limits are the same on `GET /chart` and `POST /chart`.
 
+The limits on the source, the nodes and edges, the engines and the attributes apply to both output formats.
+
+The limits on the PNG size and on the text of a PNG do not apply to the SVG output. Set `chof=.svg` to lift them.
+
 ### Engines
 
 `cht` accepts `gv`, `gv:dot`, `gv:neato`, `gv:circo`, `gv:fdp`, `gv:osage` and `gv:twopi`.
 
 `gv` alone draws with the `dot` engine.
+
+### Graph source
+
+The DOT in `chl` holds at most 50,000 characters.
+
+It nests at most 6 levels of braces. The brace of the graph itself is the first level. Each subgraph or edge group inside it adds one.
+
+Braces in quoted text and in comments do not count.
+
+The source is checked before the graph is read.
+
+A source over a limit is refused with the `IC_GRAPHVIZ_SVG_RENDER_FAILED` error code:
+
+```
+The graph source has 50001 characters (max: 50000). Shorten the labels and attributes, or draw fewer nodes and edges.
+The graph source nests braces 7 levels deep (max: 6). Flatten the nested subgraphs and edge groups.
+```
+
+Very long labels can reach the first limit alone. A graph of fewer than 200 nodes and 400 edges is refused when its source is too long.
+
+Shorten the labels and attributes, or flatten the nested subgraphs and edge groups.
 
 ### Nodes and edges
 
@@ -316,6 +341,10 @@ A graph over them is refused with the `IC_GRAPHVIZ_MAX_NODES_REACHED` or the `IC
 Maximum number of nodes reached (max: 200, current: 201)
 Maximum number of edges reached (max: 400, current: 401)
 ```
+
+An edge group joins every node of one side to every node of the other. In `{a; b} -> {c; d}`, the groups draw 4 edges.
+
+A graph whose edge groups join too many pairs of nodes is refused before it is built, with the `IC_GRAPHVIZ_MAX_EDGES_REACHED` error code and the message above. Its `current` number is the number of pairs.
 
 Some engines take fewer:
 
@@ -412,7 +441,7 @@ The ranges apply to the attributes of the graph and of its subgraphs, for instan
 
 An attribute of the same name on a node or an edge is ignored.
 
-A value that is not a plain decimal number is refused. This covers `inf`, `nan`, hexadecimal numbers, numbers followed by text, and numbers too large to be finite.
+A value that is not a plain decimal number is refused. This covers `inf`, `nan`, hexadecimal numbers, numbers followed by text, numbers longer than 64 characters, and numbers too large to be finite.
 
 A value out of its range is refused with the `IC_GRAPHVIZ_SVG_RENDER_FAILED` error code:
 
@@ -420,6 +449,7 @@ A value out of its range is refused with the `IC_GRAPHVIZ_SVG_RENDER_FAILED` err
 The `mclimit` attribute of the graph is 6, above its maximum of 5. Lower it, or remove it to use the default.
 The `maxiter` attribute of the graph is -1, below its minimum of 0. Raise it, or remove it to use the default.
 The `esep` attribute of the graph must be a finite number. Remove it to use the default.
+The `normalize` attribute of the graph must be a finite number, or one of true, false, yes, no. Remove it to use the default.
 The `dpi` attribute of the graph is -96, below its minimum of 0. Raise it, or remove it to use the default.
 ```
 
@@ -453,7 +483,7 @@ Here are some tips and known limitations in the current GraphViz charts:
 
 - Animation through `chan` is not supported
 - The `graph` attribute size should be not be used; `chs` is also not supported
-- The maximum number of nodes is 200, and the maximum for edges is 400. Some layout engines take fewer, see [limits](#limits). [Contact us if you need more](mailto:support@image-charts.com)
+- The maximum number of nodes is 200, and the maximum for edges is 400. Some layout engines take fewer. The graph source, the PNG size, the text of a PNG and some graph attributes have limits too, see [limits](#limits). [Contact us if you need more](mailto:support@image-charts.com)
 - Anti-aliasing, transparency, and alternate fonts are not supported
 - The `node` attributes `image` and `shapefile` are not supported and will be silently ignored if present
 - The graph attributes ratio, margin, and pad are not supported and will be ignored if present. A PNG whose size they push out of range is refused, see [PNG size](#png-size)
