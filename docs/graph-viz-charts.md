@@ -365,7 +365,36 @@ The dot layout of this graph needs a PNG of 4015 x 4060 pixels (max: 16000000 pi
 
 Send fewer nodes and edges, choose another engine, or set `chof=.svg`.
 
-The SVG output has no pixel limit.
+A PNG whose size cannot be written is refused with the same error code, for instance with a very large `pad`, `margin`, `ratio` or `dpi`:
+
+```
+The dot layout of this graph has a size that cannot be drawn. Lower its pad, margin, ratio or dpi attribute, or reduce its number of nodes and edges.
+```
+
+Lower the attribute, or send fewer nodes and edges.
+
+The SVG output has neither of these limits.
+
+### Text in a PNG
+
+A PNG draws at most 20,000 characters of text in total.
+
+One line of text holds at most 500 characters.
+
+Every text of the drawing counts, whether it is a node name, a node label, an edge label, a graph label, or a label that nodes and edges take from `node [...]` or `edge [...]`. Each line of a label is a text of its own for the line limit.
+
+A PNG over a limit is refused with the `IC_GRAPHVIZ_SVG_RENDER_FAILED` error code:
+
+```
+The dot layout of this graph draws 20001 characters of text (max: 20000). Shorten the labels, or label fewer nodes and edges.
+The dot layout of this graph draws a line of 501 characters (max: 500). Split the long label in several lines.
+```
+
+Shorten the labels, label fewer nodes and edges, split a long label in several lines, or set `chof=.svg`.
+
+The SVG output has no text limit.
+
+HTML-like labels are refused before the drawing, see [Graphs that cannot be drawn](#graphs-that-cannot-be-drawn).
 
 ### Graph attributes
 
@@ -377,6 +406,7 @@ These attributes of the graph accept the following values only:
 | `maxiter` | 0 to 1000 |
 | `normalize` | -1e11 to 1e11, or `true`, `false`, `yes` or `no` |
 | `esep` | 0 or more |
+| `dpi` and `resolution` | 0 or more |
 
 The ranges apply to the attributes of the graph and of its subgraphs, for instance `mclimit=3;` or `graph [mclimit=3];`.
 
@@ -390,6 +420,7 @@ A value out of its range is refused with the `IC_GRAPHVIZ_SVG_RENDER_FAILED` err
 The `mclimit` attribute of the graph is 6, above its maximum of 5. Lower it, or remove it to use the default.
 The `maxiter` attribute of the graph is -1, below its minimum of 0. Raise it, or remove it to use the default.
 The `esep` attribute of the graph must be a finite number. Remove it to use the default.
+The `dpi` attribute of the graph is -96, below its minimum of 0. Raise it, or remove it to use the default.
 ```
 
 Set the attribute within its range, or remove it to use the default.
@@ -425,4 +456,4 @@ Here are some tips and known limitations in the current GraphViz charts:
 - The maximum number of nodes is 200, and the maximum for edges is 400. Some layout engines take fewer, see [limits](#limits). [Contact us if you need more](mailto:support@image-charts.com)
 - Anti-aliasing, transparency, and alternate fonts are not supported
 - The `node` attributes `image` and `shapefile` are not supported and will be silently ignored if present
-- The graph attributes ratio, margin, and pad are not supported and will be ignored if present
+- The graph attributes ratio, margin, and pad are not supported and will be ignored if present. A PNG whose size they push out of range is refused, see [PNG size](#png-size)
