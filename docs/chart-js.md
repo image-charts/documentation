@@ -167,6 +167,8 @@ To stay under the limit:
 
 A category axis renders one tick per label between `ticks.min` and `ticks.max`. It has no limit of its own, but its labels are limited (see [Chart complexity limits](/limits-and-quotas#get-chartjs)). All the axes of a chart render at most 11,000 ticks together. Past that, the `x-ic-error-validation` header reads `The axes would render more than 11000 ticks together` and names the axis that crossed the limit. Remove axes, or apply the remedies above.
 
+A numeric axis whose step is finer than its rounding repeats its ticks. That is refused with a `400` too, and the `x-ic-error-validation` header reads `The y-axis-0 axis step is too fine to tell its ticks apart. Raise its step size.` Raise `ticks.stepSize`.
+
 ## Background color
 
 Chart background color can be defined with the `backgroundColor` (or `bkg`) query parameter. Image charts accepts multiple color format:
@@ -331,7 +333,7 @@ Image-Charts does not support Chart.js JavaScript function as value feature for 
 
 ## Extensions
 
-Image-Charts comes bundled with production battle-tested extensions.
+Each extension below is bundled with the service and battle-tested.
 
 ### Rounded bar charts
 

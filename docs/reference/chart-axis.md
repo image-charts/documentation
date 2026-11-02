@@ -46,6 +46,8 @@ chxt=
 You can specify multiple axes of the same type, for example: `cht=x,x,y`. This will stack two sets of x-axes along the bottom of the chart. This is useful when adding custom labels along an axis that shows numeric values (see the example below). Axes are drawn from the inside out, so if you have `x,x`, the first x refers to the innermost copy, the next x refers to the next outwards copy, and so on.
 :::
 
+A chart takes at most 100 axes in `chxt`. See [Chart complexity limits](/limits-and-quotas#get-and-post-chart).
+
 
 #### Example
 
@@ -164,7 +166,7 @@ chxr=
 
 #### Example
 
-This example shows both x and y axes (`chxt`).
+Both the x and the y axes appear here, set with `chxt`.
 
 Each axis has a defined range. Because no step is specified, values are taken from the given range and are evenly spaced within that range. In the line chart, values are evenly spread along the x-axis.
 
@@ -340,7 +342,7 @@ chxs=
 - **`<opt_label_color>`** *[Optional]* The color to apply to the axis text (but not axis line), in RRGGBB hexadecimal format. Axis line color is specified separately using `<opt_axis_color>`. *Default is black*.
 - **`<opt_font_size>`** *[Optional]* specifies the font size in pixels. This parameter is optional.
 - **`<opt_alignment>`** (not supported, please contact our support) Label alignment. Use `-1`.
-- **`<opt_axis_or_tick>`** *[Optional]* Whether to show tick marks and/or axis lines for this axis, note that [the axis visibility parameter (`chxt`)](#visible-axes) has precedence over this parameter for axis visibility.
+- **`<opt_axis_or_tick>`** *[Optional]* Show tick marks and/or axis lines for this axis. The [axis visibility parameter (`chxt`)](#visible-axes) has precedence over this parameter for axis visibility.
       - `l` (lowercase 'L') - Draw axis line only.
       - `t` - Draw tick marks only. Tick marks are the little lines next to axis labels.
       - `lt` - [Default] Draw both an axis line and tick marks for all labels.
@@ -350,7 +352,7 @@ chxs=
 - **`<opt_skip_labels>`** *[Optional]*  Specify `s` if labels on this axis should be hidden in case there are too many
 - **`<opt_min_max_rotation>`** *[Optional]* Specify the mininum (e.g. `min10`) or the maximum (e.g. `max45`) or both (`min10max45`) rotation degree labels on this axis could have. Default value is `0` (no rotation at all) for both parameters.
 
-The limits on the number format and the text drawn at each tick are in [Chart complexity limits](/limits-and-quotas#get-and-post-chart).
+The limits on the number of styles, the number format and the text drawn at each tick are in [Chart complexity limits](/limits-and-quotas#get-and-post-chart).
 
 
 #### Example
