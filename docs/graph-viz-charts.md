@@ -331,6 +331,14 @@ Very long labels can reach the first limit alone. A graph of fewer than 200 node
 
 Shorten the labels and attributes, or flatten the nested subgraphs and edge groups.
 
+A source that holds a NUL character (`%00` in the URL) is refused with the `IC_GRAPHVIZ_INVALID_SYNTAX` error code:
+
+```
+In `chl` parameter, the graph source holds a NUL character at position 12. Remove it.
+```
+
+The position counts from 1, and an emoji counts for 2. Remove the character and send the graph again.
+
 ### Nodes and edges
 
 A graph holds at most 200 nodes and 400 edges, whatever its engine.
