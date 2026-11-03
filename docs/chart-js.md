@@ -167,6 +167,52 @@ To stay under the limit:
 
 A category axis renders one tick per label between `ticks.min` and `ticks.max`. It has no limit of its own, but its labels are limited (see [Chart complexity limits](/limits-and-quotas#get-chartjs)). All the axes of a chart render at most 11,000 ticks together. Past that, the `x-ic-error-validation` header reads `The axes would render more than 11000 ticks together` and names the axis that crossed the limit. Remove axes, or apply the remedies above.
 
+A numeric axis whose step is finer than its rounding repeats its ticks. That is refused with a `400` too, and the `x-ic-error-validation` header reads `The y-axis-0 axis step is too fine to tell its ticks apart. Raise its step size.` Raise `ticks.stepSize`.
+
+### Radial axes
+
+A radial axis is `options.scale`, or an axis of `options.scales.xAxes` or `options.scales.yAxes` whose `type` is `radialLinear`. It draws one spoke per entry of `data.labels` when it displays its `angleLines` or its `pointLabels`. It draws one ring per tick, and a ring has one corner per spoke. A ring has no corner when `gridLines.circular` is set or `gridLines.display` is false.
+
+The radial axes of a chart share their drawing work. Their spokes, corners and ticks are added up, and the sums stay under these limits:
+
+| Sum over all radial axes | Limit |
+|---|---|
+| Spokes | At most 1,000 |
+| Corners (ticks times spokes) | At most 100,000 |
+| Ticks | At most 1,000 |
+
+An axis whose `display` is false counts for zero. With 501 labels, two radial axes draw 1,002 spokes together and are refused, although each one is under the limit alone.
+
+A chart over a limit is rejected with a `400` HTTP status code and the `IS_VALIDATION_ERROR` [error code](/errors#error-codes). The `x-ic-error-validation` header starts with one of these messages:
+
+```
+The radial scales would draw 1002 spokes together, more than 1000.
+The radial scales would draw up to 150000 corners together, more than 100000 corners.
+The radial scales would render 1001 ticks together, more than 1000.
+```
+
+To stay under the limits, send fewer labels, hide the `angleLines` and the `pointLabels`, raise `ticks.stepSize`, set `gridLines.circular`, or remove axes. On `/chart`, a [radar chart](/radar-charts#limits) draws one ring per `chxl` label.
+
+### Dashed axis lines
+
+The dashes of the lines of an axis are checked against the width of the line. A line is refused when its width is more than twice the length of its pattern, which is the sum of the entries, counted twice for an odd number of entries. See the dash rows of [Chart complexity limits](/limits-and-quotas#get-chartjs) for the other limits.
+
+These pairs are checked on every axis of `options.scales.xAxes`, `options.scales.yAxes` and `options.scale`:
+
+| Pattern | Width | Width left unset |
+|---|---|---|
+| `gridLines.borderDash` | `gridLines.lineWidth` | 1 pixel |
+| `gridLines.zeroLineBorderDash` | `gridLines.zeroLineWidth` | 1 pixel |
+| `angleLines.borderDash` | `angleLines.lineWidth` | 1 pixel |
+
+Only a radial axis draws `angleLines`. So `angleLines.borderDash` is checked on every axis whose `type` is not exactly `category`, `linear`, `logarithmic` or `time`. An axis of `options.scale` without a `type` is a radial axis and is checked. An axis of `options.scales.yAxes` without a `type` is a linear axis and is not. Nothing is checked when the axis or its `angleLines` sets `display` to false, because the lines are not drawn.
+
+A 50 pixel line with a pattern of `[1, 1]` is refused. The `x-ic-error-validation` header reads:
+
+```
+options.scale.angleLines.borderDash repeats every 2 pixels, too short for its 50 pixel line. Lengthen it to 25 pixels, or thin the line.
+```
+
 ## Background color
 
 Chart background color can be defined with the `backgroundColor` (or `bkg`) query parameter. Image charts accepts multiple color format:
@@ -331,7 +377,7 @@ Image-Charts does not support Chart.js JavaScript function as value feature for 
 
 ## Extensions
 
-Image-Charts comes bundled with production battle-tested extensions.
+Each extension below is bundled with the service and battle-tested.
 
 ### Rounded bar charts
 

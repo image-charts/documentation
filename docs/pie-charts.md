@@ -42,7 +42,7 @@ chdl=30deg|40deg|50deg|60deg
 ```
 
 
-Values are displayed relative to each other: so a chart with values 1,2,3 will look the same as a chart with values 100,200,300. **However**, when using text format data, values greater than 100 are trimmed to 100, so you will need to use text format with custom scaling to display slices greater than 100 properly (use the chds parameter with min/max values of `chds=0,<max-slice-size>`).
+Values are displayed relative to each other, so a chart with values 1,2,3 will look the same as a chart with values 100,200,300. **However**, when using text format data, values greater than 100 are trimmed to 100, so you will need to use text format with custom scaling to display slices greater than 100 properly (use the chds parameter with min/max values of `chds=0,<max-slice-size>`).
 
 Negative values display as empty slices of the appropriate size.
 
@@ -170,6 +170,8 @@ chli=<label_value>
 ```
 
 - **`<label_value>`** A string value to apply to the doughnut inside label.
+
+The inside label holds at most 3,000 characters. See [Chart complexity limits](/limits-and-quotas#get-and-post-chart).
 
 #### Example
 

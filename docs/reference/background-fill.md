@@ -51,7 +51,7 @@ This example fills the bar chart with a pale gray (**EFEFEF**). This was impleme
 
 ### Gradient Fills
 
-You can apply one or more gradient fills to chart areas or backgrounds. Gradient fills are fades from a one color to another color. (Pie: background only.)
+You can apply one or more gradient fills to chart areas or backgrounds. Gradient fills are fades from a one color to another color. (For a pie chart, background only.)
 
 Each gradient fill specifies an angle, and then two or more colors anchored to a specified location. The color varies as it moves from one anchor to another. You must have at least two colors with different `<color_centerpoint>` values, so that one can fade into the other. Each additional gradient is specified by a `<color>,<color_centerpoint>` pair.
 
@@ -72,6 +72,8 @@ chf=<fill_type>,lg,<angle>,<color_1>,<color_centerpoint_1>
     - **`<color>`** the color of the fill, in [RRGGBB[AA] hexadecimal format](/reference/color-format).
     - **`<color_centerpoint>`** specifies the anchor point for the color. The color will start to fade from this point as it approaches another anchor. The value range is from 0.0 (bottom or left edge) to 1.0 (top or right edge), tilted at the angle specified by `<angle>`.
   - `ps<index>-<sliceIndex>` (only valid in pie, polar area and bubble charts) same as `b<index>` but let you specify a gradient per pie slice. For pie charts, `b<index>` has precedence over `ps<index>-<sliceIndex>`, both can't be combined as would not make much sense.
+
+A chart takes at most 100 gradient stops over all its fills. See [Chart complexity limits](/limits-and-quotas#get-and-post-chart).
 
 #### Examples
 

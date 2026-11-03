@@ -65,3 +65,27 @@ chco=<color_1>,...,<color_n>
 ```
 
 - `<color>` Specify one or more line colors in [RRGGBB[AA] hexadecimal format](/reference/color-format) separated by commas. If there are more lines than colors, the extra lines will cycle through the color list from the beginning.
+
+## Limits
+
+A radar chart draws one ring per label of [`chxl`](/reference/chart-axis#custom-axis-labels). The labels are completed with blanks up to the longest `chd` series minus its last value. A short `chxl` with a long series therefore draws as many rings as the series has points, minus one.
+
+A spoke is one `chl` label. Without `chl`, it is one value of the longest series, minus the last one.
+
+The chart draws at most 1,000 rings, and at most 100,000 corners. The corners are the rings times the spokes. A chart over a limit is rejected with a `400` HTTP status code and the `IS_VALIDATION_ERROR` [error code](/errors#error-codes) in the `x-ic-error-code` response header.
+
+The `x-ic-error-validation` header names the limit that the chart crosses. With 1,001 `chxl` labels, it reads:
+
+```
+The scale axis would draw 1001 rings, more than 1000. The rings are its chxl labels, completed with blanks up to the longest chd series minus its last value. Send fewer chxl labels or chd values.
+```
+
+With 318 values in `chd`, no `chl` and two `chxl` labels, the chart draws 317 spokes and 317 rings. The header then reads:
+
+```
+The scale axis would draw 100489 corners, more than 100000, with 317 spokes and 317 rings. The rings are its chxl labels, completed with blanks up to the longest chd series minus its last value. Send fewer chl labels, chxl labels or chd values.
+```
+
+To stay under the limits, send fewer `chxl` labels, `chl` labels or `chd` values.
+
+Labels that repeat are accepted, blanks included. For instance, `chxl=0:||b` draws a radar chart.
