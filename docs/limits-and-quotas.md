@@ -67,6 +67,7 @@ x-ic-error-validation: [{"message":"The chart has 1001 series, more than 1000. M
 | [`chxs`](/reference/chart-axis#axis-label-styles) and `chm` | At most 10,000 characters per number format. In `chxs` the format follows the `N` after the axis index. In `chm` it follows the `N` of an `N` marker. | Shorten the format. |
 | `chm` | The last `N` marker of a series draws its text at each point of the series. Each drawn label counts the text, its `N` included, plus 20 characters. A character in a font larger than 14 pixels counts once per 14 pixels of font size, which is the fifth field of the marker. The labels of all series add up to at most 60,000 characters. | Shorten the format, shrink the font, or send fewer points. |
 | `chxs` | An axis draws its format at each tick. The format length times the number of ticks, added up over all axes, is at most 60,000 characters. A character in a font larger than 14 pixels counts once per 14 pixels of font size, which is the third field of the style. An axis counts the ticks of its [`chxr`](/reference/chart-axis#axis-range) step, or 11 without a step. It counts at least as many ticks as the longest series has points or as `chxl` has labels, and at most 11,000. | Shorten the format, shrink the font, or send fewer points. |
+| `chxl` on a [radar chart](/radar-charts#limits) | A radar draws one ring per `chxl` label. The labels are completed with blanks up to the longest `chd` series minus its last value. The chart draws at most 1,000 rings, and at most 100,000 corners, which is the rings times the spokes. | Send fewer `chxl` labels, `chl` labels or `chd` values. |
 | [`chxt`](/reference/chart-axis#visible-axes) | At most 100 axes. | Remove axes. |
 | `chxs` | At most 100 styles, one per axis. | Style each axis once. |
 | [`chf`](/reference/background-fill#gradient-fills) | At most 100 gradient stops, counted over all fills. A stop is one color and its anchor in an `lg` or `ls` fill. | Use fewer color stops. |
@@ -137,12 +138,14 @@ These limits apply to the Chart.js configuration sent in the `c` (or `chart`) pa
 | `padding` | At most 100 pixels. | Lower the value. |
 | `minRotation` and `maxRotation` | From -360 to 360 degrees. | Use an angle within one turn. |
 | `borderDash` and `zeroLineBorderDash` | At most 16 entries. The entries average at least 1 pixel. | Use a shorter pattern, or lengthen its entries. |
-| `borderDash` and `zeroLineBorderDash` | The line width is at most twice the length of the pattern. The length is the sum of the entries, counted twice for an odd number of entries. A line without a width counts as 3 pixels for a dataset line and 1 pixel for a grid line or an angle line. | Lengthen the pattern, or thin the line. |
+| `borderDash` and `zeroLineBorderDash` | The line width is at most twice the length of the pattern. The length is the sum of the entries, counted twice for an odd number of entries. A line without a width counts as 3 pixels for a dataset line and 1 pixel for a grid line or an angle line. The grid lines and the angle lines of every axis are checked, as [Dashed axis lines](/chart-js#dashed-axis-lines) explains. | Lengthen the pattern, or thin the line. |
 | Datasets with a `borderDash` | The dashed datasets hold at most 1,000 points together. | Send fewer points, or draw the lines solid. |
 | `datalabels` | At most 10 entries in `labels` per dataset. The entries of `options.plugins.datalabels.labels` count for every dataset, next to those of the dataset. | Name fewer labels. |
 | `datalabels` with `display` set to `'auto'` | The number of points times the number of `labels` entries is at most 3,000 over all datasets. A dataset without `labels` entries counts one label per point. | Show fewer labels, or set `display` to `true`. |
-| Radial scale (`options.scale`) | At most 1,000 labels when the scale displays its `angleLines` or its `pointLabels`. Each label draws a spoke. | Send fewer labels, or hide `angleLines` and `pointLabels`. |
-| Radial scale (`options.scale`) | The rings (one per tick) times the spokes (one per label) make at most 100,000 corners, unless `gridLines.circular` is set. | Raise `ticks.stepSize`, send fewer labels, or set `gridLines.circular`. |
+| [Radial axes](/chart-js#radial-axes) (`options.scale`, or an axis with the `radialLinear` type) | At most 1,000 spokes over all the radial axes. Each label draws a spoke on an axis that displays its `angleLines` or its `pointLabels`. | Send fewer labels, hide `angleLines` and `pointLabels`, or remove axes. |
+| Radial axes | The rings (one per tick) times the spokes (one per label) make at most 100,000 corners over all the radial axes. A ring draws no corner when `gridLines.circular` is set or `gridLines.display` is false. | Raise `ticks.stepSize`, send fewer labels, set `gridLines.circular`, or remove axes. |
+| Radial axes | At most 1,000 ticks over all the radial axes. | Raise `ticks.stepSize`, narrow `ticks.min` and `ticks.max`, or remove axes. |
+| Axes with `display` set to false | They count for zero in the three limits above. | None needed. |
 
 #### Data format
 
