@@ -7,10 +7,13 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const querystring = require('node:querystring');
+const { decodeHTMLStrict } = require('entities');
 const { sign } = require('./generate-gallery');
 
 // comply-ignore: node-no-process-env — single config read, like generate-gallery.js
 const { ACCOUNT_ID, SECRET_KEY } = process.env;
+const DOCUMENTATION_ACCOUNT = 'documentation';
+const KEYS = { accountId: DOCUMENTATION_ACCOUNT, secretKey: SECRET_KEY };
 
 const REPO_ROOT = path.join(__dirname, '..');
 const ROOTS = ['docs', 'src'].map(dir => path.join(REPO_ROOT, dir));
@@ -20,9 +23,12 @@ const MAX_DEPTH = 10;
 const MAX_FILE_BYTES = 2 * 1024 * 1024;
 const MAX_REPORTED = 200;
 
-// A chart URL start: `/chart?` or `/chart.js/<version>?`.
-// The lookbehind skips editor.image-charts.com and URLs nested in other URLs.
-const CHART_URL = /(?<![\w./%-])https:\/\/image-charts\.com\/chart(?:\.js\/[\w.]+)?\?/g;
+// A chart URL start, up to its query.
+// Editor links load a chart too.
+// They use the same path, or the URL as hash.
+// The lookbehind skips nested URLs.
+const CHART_URL =
+  /(?<![\w./%-])https:\/\/(?:editor\.image-charts\.com\/[^\s"'()#]*#https:\/\/?|(?:editor\.)?)image-charts\.com\/chart(?:\.js\/[\w.]+)?\?/g;
 // A fenced code block, up to its closing fence.
 // An unclosed one runs to the end of the text.
 const FENCED_CODE = /^[ \t]*(`{3,}|~{3,})[\s\S]*?(?:^[ \t]*\1|(?![\s\S]))/gm;
@@ -39,6 +45,9 @@ const REMARK_ENCODED = /%(?![0-9A-Za-z]{2})|[^!#$&-;=?-Z_a-z~%]/gu;
 // Characters the browser percent-encodes in a query.
 // Controls, space, quotes, angle brackets and non-ASCII.
 const BROWSER_ENCODED = /[\0- "'<>\u{7F}-\u{10FFFF}]/gu;
+// Characters the browser removes from a URL.
+const TAB_OR_NEWLINE = /[\t\n\r]/g;
+const SIGNATURE_PARAMS = new Set(['icac', 'ichm']);
 
 // The two characters before a URL tell where it sits.
 const URL_KINDS = new Map([
@@ -51,17 +60,18 @@ const FIX_LABELS = new Map([
   ['invalid', 're-signed'],
 ]);
 
-function listFiles(dir, depth = 0) {
+/** Files of `dir` with one of `extensions`, recursively. */
+function listFiles(dir, extensions, depth = 0) {
   if (depth > MAX_DEPTH) {
     throw new Error(`${dir} is nested deeper than ${MAX_DEPTH} levels`);
   }
-  // comply-ignore: security-detect-non-literal-fs-filename — dir is ROOTS or one of their subdirectories
+  // comply-ignore: security-detect-non-literal-fs-filename — dir is a root of the caller or one of its subdirectories
   return fs.readdirSync(dir, { withFileTypes: true }).flatMap(dirent => {
     const fullPath = path.join(dir, dirent.name);
     if (dirent.isDirectory()) {
-      return listFiles(fullPath, depth + 1);
+      return listFiles(fullPath, extensions, depth + 1);
     }
-    return EXTENSIONS.has(path.extname(dirent.name)) ? [fullPath] : [];
+    return extensions.has(path.extname(dirent.name)) ? [fullPath] : [];
   });
 }
 
@@ -97,15 +107,15 @@ function urlEnd(text, start, before) {
   return closingQuote === -1 ? text.length : closingQuote;
 }
 
-/** Query the browser sends for a source URL. */
+/**
+ * Query the browser sends for a source URL.
+ * Character references are decoded, as MDX does. A `#` stays: the browser cuts the URL there.
+ */
 function sentQuery(rawQuery, kind) {
-  const unescaped = rawQuery.replaceAll('&amp;', '&');
+  const decoded = decodeHTMLStrict(rawQuery);
   const query =
-    kind === 'markdown' ? unescaped.replaceAll(MARKDOWN_ESCAPE, '$1').replaceAll(REMARK_ENCODED, encodeURIComponent) : unescaped;
-  if (query.includes('#')) {
-    throw new Error('unencoded "#" in a chart URL query: the browser cuts the URL there');
-  }
-  return query.replaceAll(BROWSER_ENCODED, encodeURIComponent);
+    kind === 'markdown' ? decoded.replaceAll(MARKDOWN_ESCAPE, '$1').replaceAll(REMARK_ENCODED, encodeURIComponent) : decoded;
+  return query.replaceAll(TAB_OR_NEWLINE, '').replaceAll(BROWSER_ENCODED, encodeURIComponent);
 }
 
 /** The decoded query, re-joined without encoding. */
@@ -127,56 +137,71 @@ function isSignatureValid(ichm, secretKey, query) {
   ].some(candidate => sign(secretKey, candidate) === ichm);
 }
 
-/** Signature state; validity is only known with the secret key. */
-function signatureState(params, secretKey, query) {
-  if (!params.has('ichm')) {
-    return 'unsigned';
+/**
+ * State of the chart request the server receives.
+ * A problem is one the signer cannot fix.
+ * Validity is only known with the secret key.
+ */
+function urlState(query, { accountId, secretKey }) {
+  if (query.includes('#')) {
+    return { state: 'broken', problem: 'unencoded "#" in a chart URL query: the browser cuts the URL there, encode it as %23' };
+  }
+  const params = new URLSearchParams(query);
+  const icac = params.has('icac') ? params.get('icac') : '';
+  if (icac !== '' && icac !== accountId) {
+    return { state: 'foreign', problem: `chart URL signed by icac=${icac}, not ${accountId}` };
+  }
+  if (icac === '' || !params.get('ichm')) {
+    return { state: 'unsigned' };
   }
   const isInvalid = Boolean(secretKey) && !isSignatureValid(params.get('ichm'), secretKey, query);
-  return isInvalid ? 'invalid' : 'signed';
+  return { state: isInvalid ? 'invalid' : 'signed' };
 }
 
-function describeUrl(text, match, before, secretKey) {
+function describeUrl(text, match, before, keys) {
   const start = match.index;
   const kind = URL_KINDS.get(before);
   const end = urlEnd(text, start, before);
   const base = match.at(0);
   const rawQuery = text.slice(start + base.length, end);
-  const params = new URLSearchParams(rawQuery.replaceAll('&amp;', '&'));
   return {
     start,
     end,
     kind,
     rawQuery,
-    params,
     base,
     line: text.slice(0, start).split('\n').length,
     separator: rawQuery.includes('&amp;') ? '&amp;' : '&',
-    state: signatureState(params, secretKey, sentQuery(rawQuery, kind)),
+    ...urlState(sentQuery(rawQuery, kind), keys),
   };
 }
 
 /** Every chart URL of `text` that the browser requests. */
-function scan(text, secretKey) {
+function scan(text, keys) {
   const code = codeRanges(text);
   return [...text.matchAll(CHART_URL)].flatMap(match => {
     const before = text.slice(Math.max(0, match.index - 2), match.index);
     const isInCode = code.some(([from, to]) => match.index >= from && match.index < to);
-    return URL_KINDS.has(before) && !isInCode ? [describeUrl(text, match, before, secretKey)] : [];
+    return URL_KINDS.has(before) && !isInCode ? [describeUrl(text, match, before, keys)] : [];
   });
 }
 
 /** Source form of `url` with icac and a fresh ichm. */
-function signUrl(url, accountId, secretKey) {
-  const icac = url.params.get('icac');
-  if (url.params.has('icac') && icac !== accountId) {
-    throw new Error(`icac=${icac} is not the documentation account`);
-  }
-  const kept = url.rawQuery.split(url.separator).filter(segment => segment.split('=')[0] !== 'ichm');
-  const segments = url.params.has('icac') ? kept : [...kept, `icac=${accountId}`];
-  const query = segments.join(url.separator);
+function signUrl(url, { accountId, secretKey }) {
+  const kept = url.rawQuery.split(url.separator).filter(segment => !SIGNATURE_PARAMS.has(segment.split('=')[0]));
+  const query = [...kept, `icac=${accountId}`].join(url.separator);
   const signature = sign(secretKey, canonicalQuery(sentQuery(query, url.kind)));
   return `${url.base}${query}${url.separator}ichm=${signature}`;
+}
+
+/**
+ * Signs the unsigned and invalid chart URLs of `text`.
+ * Returns the new text and the URLs as found.
+ */
+function signText(text, keys) {
+  const urls = scan(text, keys);
+  const toSign = urls.filter(url => FIX_LABELS.has(url.state));
+  return { urls, text: replaceUrls(text, toSign, url => signUrl(url, keys)) };
 }
 
 /** `text` with each URL replaced by `replace(url)`. */
@@ -189,32 +214,38 @@ function replaceUrls(text, urls, replace) {
   return replaced.join('') + text.slice(previousEnd(urls.length));
 }
 
-function signFile(file, check) {
+function urlMessage(relative, url, rewrite) {
+  if (url.problem) {
+    return `${relative}:${url.line}: ${url.problem}${rewrite ? ', left as written' : ''}`;
+  }
+  const checkLabel = `${url.state} chart URL`;
+  return `${relative}:${url.line}: ${rewrite ? FIX_LABELS.get(url.state) : checkLabel}`;
+}
+
+/** What signing (or checking) `file` gives, without writing it. */
+function planFile(file, check) {
   const relative = path.relative(REPO_ROOT, file);
   // comply-ignore: security-detect-non-literal-fs-filename — file comes from listFiles(ROOTS)
   const text = fs.readFileSync(file, 'utf8');
   if (Buffer.byteLength(text) > MAX_FILE_BYTES) {
     throw new Error(`${relative} is larger than ${MAX_FILE_BYTES} bytes`);
   }
-  const urls = scan(text, SECRET_KEY);
-  const toFix = urls.filter(url => url.state !== 'signed');
   // Only their generator writes GENERATED-*.md files.
   const rewrite = !check && !path.basename(file).startsWith('GENERATED-');
-  if (rewrite && toFix.length > 0) {
-    // comply-ignore: security-detect-non-literal-fs-filename — file comes from listFiles(ROOTS)
-    fs.writeFileSync(file, replaceUrls(text, toFix, url => signUrl(url, ACCOUNT_ID, SECRET_KEY)));
-  }
+  const signed = rewrite ? signText(text, KEYS) : { urls: scan(text, KEYS), text };
+  const notSigned = signed.urls.filter(url => url.state !== 'signed');
   return {
-    states: urls.map(url => url.state),
-    messages: toFix.map(url => {
-      const label = rewrite ? FIX_LABELS.get(url.state) : `${url.state} chart URL`;
-      return `${relative}:${url.line}: ${label}`;
-    }),
+    file,
+    text: signed.text,
+    isChanged: signed.text !== text,
+    states: signed.urls.map(url => url.state),
+    leftUnsigned: notSigned.some(url => !rewrite || url.problem),
+    messages: notSigned.map(url => urlMessage(relative, url, rewrite)),
   };
 }
 
 function report(messages, states) {
-  const count = state => states.filter(urlState => urlState === state).length;
+  const count = state => states.filter(urlStateName => urlStateName === state).length;
   for (const message of messages.slice(0, MAX_REPORTED)) {
     console.log(message);
   }
@@ -222,32 +253,45 @@ function report(messages, states) {
     console.log(`... and ${messages.length - MAX_REPORTED} more`);
   }
   const scope = SECRET_KEY ? '' : ' (presence only, signatures not checked)';
-  console.log(`Chart URLs: ${count('signed')} signed, ${count('unsigned')} unsigned, ${count('invalid')} invalid${scope}`);
+  console.log(
+    `Chart URLs: ${count('signed')} signed, ${count('unsigned')} unsigned, ${count('invalid')} invalid, ` +
+      `${count('foreign')} of another account, ${count('broken')} cut by "#"${scope}`
+  );
 }
 
 function main() {
   const check = process.argv.includes('--check');
-  if (!check && (!ACCOUNT_ID || !SECRET_KEY)) {
-    console.error('Error: ACCOUNT_ID and SECRET_KEY environment variables are required to sign chart URLs');
+  const hasDocumentationKey = ACCOUNT_ID === DOCUMENTATION_ACCOUNT && Boolean(SECRET_KEY);
+  if (!check && !hasDocumentationKey) {
+    console.error(`Error: ACCOUNT_ID=${DOCUMENTATION_ACCOUNT} and its SECRET_KEY are required to sign chart URLs: source .envrc`);
     process.exit(1);
   }
-  const files = ROOTS.flatMap(root => listFiles(root));
+  const files = ROOTS.flatMap(root => listFiles(root, EXTENSIONS));
   if (files.length > MAX_FILES) {
     throw new Error(`More than ${MAX_FILES} files to scan`);
   }
-  const fileReports = files.map(file => signFile(file, check));
-  const states = fileReports.flatMap(fileReport => fileReport.states);
+  // Every file is planned before any write.
+  // An error then leaves the tree as it was.
+  const plans = files.map(file => planFile(file, check));
+  for (const plan of plans.filter(filePlan => filePlan.isChanged)) {
+    // comply-ignore: security-detect-non-literal-fs-filename — plan.file comes from listFiles(ROOTS)
+    fs.writeFileSync(plan.file, plan.text);
+  }
   report(
-    fileReports.flatMap(fileReport => fileReport.messages),
-    states
+    plans.flatMap(plan => plan.messages),
+    plans.flatMap(plan => plan.states)
   );
-  if (check && states.some(state => state !== 'signed')) {
-    console.error('Unsigned chart URLs count against the free rate limit: run `npm run sign:chart-urls`');
+  if (plans.some(plan => plan.leftUnsigned)) {
+    console.error(
+      check
+        ? 'Unsigned chart URLs count against the free rate limit: run `source .envrc && npm run sign:chart-urls`'
+        : 'Some chart URLs are left as written: fix them by hand (GENERATED-*.md: in their generator)'
+    );
     process.exit(1);
   }
 }
 
-module.exports = { scan, sentQuery };
+module.exports = { scan, signText, urlState, isSignatureValid, listFiles };
 
 if (require.main === module) {
   main();

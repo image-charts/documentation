@@ -5,7 +5,7 @@
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
-    "build": "npm run generate && npm run check:chart-urls && docusaurus build",
+    "build": "npm run generate && npm run check:chart-urls && docusaurus build && npm run check:built-chart-urls",
     "build:docs-only": "docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
@@ -18,7 +18,9 @@
     "generate:google-fonts": "node scripts/generate-google-fonts.js",
     "generate:gallery": "node scripts/generate-gallery.js",
     "sign:chart-urls": "node scripts/sign-chart-urls.js",
-    "check:chart-urls": "node scripts/sign-chart-urls.js --check"
+    "check:chart-urls": "node scripts/sign-chart-urls.js --check",
+    "check:built-chart-urls": "node scripts/check-built-chart-urls.js",
+    "test": "node --test scripts/sign-chart-urls.test.js scripts/check-built-chart-urls.test.js"
   },
   "dependencies": {
     "@docusaurus/core": "^3.9.2",
@@ -27,6 +29,8 @@
     "@easyops-cn/docusaurus-search-local": "^0.52.2",
     "@mdx-js/react": "^3.0.0",
     "clsx": "^2.0.0",
+    "entities": "^4.5.0",
+    "htmlparser2": "^8.0.2",
     "prism-react-renderer": "^2.3.0",
     "react": "^19.2.3",
     "react-dom": "^19.2.3"
