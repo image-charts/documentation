@@ -23,6 +23,7 @@ const MAX_DEPTH = 10;
 const MAX_FILE_BYTES = 2 * 1024 * 1024;
 const MAX_REPORTED = 200;
 const MAX_LISTED = 5;
+const CHECK_OPTION = '--check';
 
 // A chart URL start, up to its query.
 // Editor links load a chart too.
@@ -303,7 +304,13 @@ function report(title, lines, states) {
 }
 
 function main() {
-  const check = process.argv.includes('--check');
+  // Any other argument would sign in place of a check.
+  const unknown = process.argv.slice(2).filter(arg => arg !== CHECK_OPTION);
+  if (unknown.length > 0) {
+    console.error(`Error: unknown option ${unknown.join(' ')}: the only option is ${CHECK_OPTION}`);
+    process.exit(1);
+  }
+  const check = process.argv.includes(CHECK_OPTION);
   const hasDocumentationKey = ACCOUNT_ID === DOCUMENTATION_ACCOUNT && Boolean(SECRET_KEY);
   if (!check && !hasDocumentationKey) {
     console.error(`Error: ACCOUNT_ID=${DOCUMENTATION_ACCOUNT} and its SECRET_KEY are required to sign chart URLs: source .envrc`);

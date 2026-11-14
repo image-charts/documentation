@@ -5,7 +5,6 @@ const {
   chartRequestsInHtml,
   chartRequestsInCss,
   chartRequestsInJs,
-  renderedChartQueries,
 } = require('./check-built-chart-urls');
 const { urlState } = require('./sign-chart-urls');
 const { spawnScript } = require('./test-cli');
@@ -140,8 +139,7 @@ test('JS bundles: URL props and CSS url() are chart requests, text children are 
     '(0,i.jsx)("div",{style:{backgroundImage:"url(https://image-charts.com/chart?cht=p\\u0026chs=1x1)"}})',
     '(0,i.jsx)(n.code,{children:"https://image-charts.com/chart?cht=p&chs=1x1"})',
   ].join('\n');
-  const rendered = new Set(['cht=p&chs=1x1']);
-  const requests = chartRequestsInJs(js, 'https://documentation.image-charts.com/assets/js/main.js', rendered);
+  const requests = chartRequestsInJs(js, 'https://documentation.image-charts.com/assets/js/main.js');
   assert.deepEqual(
     requests.map(request => [request.line, request.query]),
     [
@@ -173,7 +171,7 @@ test('CSS image-set() candidates are chart requests: strings and url(), in style
   );
 });
 
-test('JS bundles: a chart URL only in the bundle is a chart request, one the pages render is not', () => {
+test('JS bundles: a chart URL in any string but a children text is a chart request', () => {
   const js = [
     '(0,i.jsx)(s.A,{children:()=>{const e="https://image-charts.com/chart?cht=p\\u0026chs=100x902";return(0,i.jsx)("img",{src:e})}})',
     String.raw`JSON.parse('{"u":"https:\\/\\/image-charts.com\\/chart?cht=p&chs=100x903"}')`,
@@ -182,13 +180,7 @@ test('JS bundles: a chart URL only in the bundle is a chart request, one the pag
     '(0,i.jsx)(n.code,{children:"https://image-charts.com/chart?{QUERY_STRING}&ichm=HASH"}),"), at the end"',
     'const q="https://image-charts.com/chart?cht=qr&chs=150x150&chl=Hello";',
   ].join('\n');
-  const html = [
-    '<pre><code>curl https://image-charts.com/chart?cht=p&amp;chs=100x905</code></pre>',
-    '<p>At the start (<code>https://image-charts.com/chart?{QUERY_STRING}&amp;ichm=HASH</code>), at the end</p>',
-    '<pre><code><span>curl https://image-charts.com/chart?cht=qr&amp;chs=150x150</span><span>&amp;chl=Hello%20world</span></code></pre>',
-  ].join('\n');
-  const rendered = new Set(renderedChartQueries(html, PAGE));
-  const requests = chartRequestsInJs(js, 'https://documentation.image-charts.com/assets/js/main.js', rendered);
+  const requests = chartRequestsInJs(js, 'https://documentation.image-charts.com/assets/js/main.js');
   assert.deepEqual(
     requests.map(request => [request.line, request.query]),
     [
@@ -255,4 +247,50 @@ test('a build whose pages, CSS and bundles are all signed passes with the key', 
   );
   assert.equal(run.status, 0, run.stderr);
   assert.match(run.stdout, /^Built chart requests: 3 signed, 0 unsigned, 0 invalid, 0 of another account, 0 cut by "#"$/m);
+});
+
+test('an unknown option fails on one line saying the gate takes none, before any check', () => {
+  for (const option of ['--chek', '--help']) {
+    const run = spawnScript('check-built-chart-urls.js', { 'build/index.html': '<p>ok</p>' }, [option], {});
+    assert.equal(run.status, 1, option);
+    assert.equal(run.stdout, '', option);
+    assert.match(run.stderr, /^Error: [^\n]*\n$/, option);
+    assert.ok(run.stderr.includes(`unknown option ${option}`) && run.stderr.includes('takes no option'), run.stderr);
+  }
+});
+
+test('a non-JS inline script is read as text: its chart URLs count, its syntax never stops the gate', () => {
+  const html = [
+    '<script type="application/ld+json">{"image":"https://image-charts.com/chart?cht=p&chs=100x801"}</script>',
+    "<script type=\"text/markdown\">It's ![c](https://image-charts.com/chart?cht=p&chs=100x802)</script>",
+    '<script type="importmap">{"imports":{}}</script>',
+    "<script type=\" Text/JavaScript \">var u={src:'https://image-charts.com/chart?cht=p&chs=100x804'}</script>",
+    "<script type=\"module\">var u={src:'https://image-charts.com/chart?cht=p&chs=100x805'}</script>",
+  ].join('\n');
+  assert.deepEqual(statesOfHtml(html), [
+    [1, 'unsigned'],
+    [2, 'unsigned'],
+    [4, 'unsigned'],
+    [5, 'unsigned'],
+  ]);
+});
+
+test('JS bundles: each chart URL string is checked on its own, a page showing the same URL as text hides none', () => {
+  const url = 'https://image-charts.com/chart?cht=p&chs=100x2008';
+  const run = runBuiltCli({
+    'build/index.html': `<pre><code>${url.replaceAll('&', '&amp;')}</code></pre>`,
+    'build/assets/js/a.js': [
+      `var o={src:\`${url}\`};`,
+      `var c="${url}";document.images[0].src=c;`,
+      `(0,i.jsx)(n.code,{children:"${url}"});`,
+      `(0,i.jsxs)(n.p,{children:["See ",(0,i.jsx)(n.code,{children:"${url}"}),"${url}"]});`,
+      `(0,i.jsx)("a",{href:"https://app.slack.com/block-kit-builder#%7B%22image_url%22:%22${url}%22%7D"});`,
+    ].join('\n'),
+  });
+  assert.equal(run.status, 1);
+  const reported = run.stdout.split('\n').filter(line => line.startsWith('build/'));
+  assert.deepEqual(
+    reported.map(line => line.split(': ', 1).at(0)),
+    ['build/assets/js/a.js:1', 'build/assets/js/a.js:2']
+  );
 });

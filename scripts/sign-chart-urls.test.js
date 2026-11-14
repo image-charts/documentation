@@ -236,3 +236,15 @@ test('sign mode with another ACCOUNT_ID fails on one line and writes nothing', (
   assert.match(run.stderr, /^Error: ACCOUNT_ID=documentation and its SECRET_KEY are required/m);
   assert.doesNotMatch(run.stderr + run.stdout, /\n\s+at /);
 });
+
+test('an unknown option fails on one line naming --check, and writes nothing', () => {
+  const unsigned = '![p](https://image-charts.com/chart?cht=p&chs=1x1)\n';
+  for (const option of ['--chek', '--check=true', '--CHECK', '-c']) {
+    const run = runCli({ 'docs/a.md': unsigned }, [option], { ACCOUNT_ID: KEYS.accountId, SECRET_KEY: KEYS.secretKey });
+    assert.equal(run.status, 1, option);
+    assert.equal(run.written['docs/a.md'], unsigned, option);
+    assert.equal(run.stdout, '', option);
+    assert.match(run.stderr, /^Error: [^\n]*\n$/, option);
+    assert.ok(run.stderr.includes(`unknown option ${option}`) && run.stderr.includes('--check'), run.stderr);
+  }
+});

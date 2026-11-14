@@ -5,6 +5,10 @@
  * Usage: see "Signed chart URLs" in CLAUDE.md.
  */
 
+// Scope: a chart someone forgot to sign.
+// Deliberate obfuscation is out of scope.
+// So: no escaped or full-width hosts, `srcdoc`, `<base href>`, `.svg`.
+
 const fs = require('node:fs');
 const path = require('node:path');
 const acorn = require('acorn');
@@ -51,16 +55,38 @@ const CHART_HOST_URL = /(?:https?:)?\/\/[\w.-]*image-charts\.com[^\s"'`<>\\]*/gi
 const JS_URL_PROPS = new Set(['src', 'href', 'poster', 'srcSet', 'srcset', 'imageSrcSet']);
 const JS_SRCSET_PROPS = new Set(['srcSet', 'srcset', 'imageSrcSet']);
 const JS_STRING_TOKENS = new Set([acorn.tokTypes.string, acorn.tokTypes.template]);
+const JS_OPENERS = new Set([acorn.tokTypes.bracketL, acorn.tokTypes.braceL, acorn.tokTypes.parenL, acorn.tokTypes.dollarBraceL]);
+const JS_CLOSERS = new Set([acorn.tokTypes.bracketR, acorn.tokTypes.braceR, acorn.tokTypes.parenR]);
+// React renders this prop's strings as text.
+// Its array's strings too.
+const JS_TEXT_PROP = 'children';
 const JS_OPTIONS = { ecmaVersion: 'latest' };
 // JSON held in a JS string escapes slashes.
 const JSON_SLASH = String.raw`\/`;
-// Highlighting spans split the text of a code block.
-const CODE_ELEMENTS = new Set(['code', 'pre']);
 const RAW_TEXT_ELEMENTS = new Set(['script', 'style']);
-
-function isRenderedText(node) {
-  return DomUtils.isText(node) && !RAW_TEXT_ELEMENTS.has(node.parent.name);
-}
+// Script types the browser runs as JS.
+// Compared trimmed and in lower case.
+// A script of another type is data, read as text.
+const JS_SCRIPT_TYPES = new Set([
+  '',
+  'module',
+  'text/javascript',
+  'application/javascript',
+  'application/ecmascript',
+  'application/x-ecmascript',
+  'application/x-javascript',
+  'text/ecmascript',
+  'text/javascript1.0',
+  'text/javascript1.1',
+  'text/javascript1.2',
+  'text/javascript1.3',
+  'text/javascript1.4',
+  'text/javascript1.5',
+  'text/jscript',
+  'text/livescript',
+  'text/x-ecmascript',
+  'text/x-javascript',
+]);
 
 function fail(message) {
   console.error(`Error: ${message}`);
@@ -158,34 +184,44 @@ function chartHostUrls(text) {
   return [...text.matchAll(CHART_HOST_URL)].map(match => ({ index: match.index, url: match.at(0) }));
 }
 
-/**
- * Chart queries a page renders.
- * They are in its text nodes, code blocks and attributes.
- * Each text is read alone.
- * No prose is glued to a URL.
- */
-function renderedChartQueries(html, base) {
-  const document = parseDocument(html);
-  const elements = DomUtils.findAll(() => true, document.children);
-  const texts = DomUtils.filter(isRenderedText, document.children).map(node => node.data);
-  const code = elements.filter(element => CODE_ELEMENTS.has(element.name)).map(element => DomUtils.textContent(element));
-  const attributes = elements.flatMap(element => Object.values(element.attribs));
-  return [...texts, ...code, ...attributes].flatMap(chartHostUrls).flatMap(hostUrl => chartQueries(hostUrl.url, base));
+/** Chart requests of the chart host URLs written in `text`. */
+function chartRequestsInText(text, base) {
+  return chartHostUrls(text).flatMap(hostUrl => requestsAt({ text, index: hostUrl.index, where: 'text' }, [hostUrl.url], base));
+}
+
+/** The prop whose value starts at token `index`, or none. */
+function propAt(tokens, index) {
+  // A template value starts at its backquote.
+  const start = index >= 1 && tokens[index - 1].type === acorn.tokTypes.backQuote ? index - 1 : index;
+  return start >= 2 && tokens[start - 1].type === acorn.tokTypes.colon ? String(tokens[start - 2].value) : '';
 }
 
 /**
  * String and template values of a script, decoded by acorn.
  * `prop` is the URL prop set to the value.
+ * `isText` tells a `children` string, rendered as text.
  */
 function jsStrings(js) {
   const tokens = [...acorn.tokenizer(js, JS_OPTIONS)];
+  // Prop of each open bracket, innermost last.
+  // Only an array has one.
+  const openProps = [];
   return tokens.flatMap((token, index) => {
+    if (JS_OPENERS.has(token.type)) {
+      // comply-ignore: no-mutating-methods — bracket stack of one linear pass over a bundle's tokens
+      openProps.push(token.type === acorn.tokTypes.bracketL ? propAt(tokens, index) : '');
+    }
+    if (JS_CLOSERS.has(token.type)) {
+      // comply-ignore: no-mutating-methods — bracket stack of one linear pass over a bundle's tokens
+      openProps.pop();
+    }
     if (!JS_STRING_TOKENS.has(token.type)) {
       return [];
     }
-    const key = index >= 2 && tokens[index - 1].type === acorn.tokTypes.colon ? String(tokens[index - 2].value) : '';
+    const prop = propAt(tokens, index);
+    const isText = prop === JS_TEXT_PROP || openProps.at(-1) === JS_TEXT_PROP;
     const text = typeof token.value === 'string' ? token.value.replaceAll(JSON_SLASH, '/') : '';
-    return [{ index: token.start, text, prop: JS_URL_PROPS.has(key) ? key : '' }];
+    return [{ index: token.start, text, prop: JS_URL_PROPS.has(prop) ? prop : '', isText }];
   });
 }
 
@@ -198,41 +234,40 @@ function propUrls(string) {
 
 /**
  * Chart requests of a JS bundle or inline script.
- * They are URL props, url() and image-set() in strings.
- * The browser sets a chart URL that no page renders.
- * `<BrowserOnly>` does that: such a URL counts too.
- * Text children are rendered, so they are not requests.
+ * A URL prop holds one URL.
+ * Others count each chart URL: `<BrowserOnly>` may set it.
+ * `children` strings are text.
  */
-function chartRequestsInJs(js, base, renderedQueries) {
+function chartRequestsInJs(js, base) {
   return jsStrings(js).flatMap(string => {
     const place = where => ({ text: js, index: string.index, where });
     const props = requestsAt(place('JS URL prop'), propUrls(string), base);
     const css = cssUrls(string.text);
     const styles = css.flatMap(cssUrl => requestsAt(place(`JS ${cssUrl.kind}`), [cssUrl.url], base));
-    const known = new Set([...props, ...styles].map(request => request.query));
-    const textUrls = chartHostUrls(string.text).filter(url => !css.some(cssUrl => url.index >= cssUrl.index && url.index < cssUrl.end));
-    const textRequests = textUrls.flatMap(url => requestsAt(place('JS string no page renders'), [url.url], base));
-    const clientOnly = textRequests.filter(request => !renderedQueries.has(request.query) && !known.has(request.query));
-    return [...props, ...styles, ...clientOnly];
+    const hostUrls = string.isText || string.prop !== '' ? [] : chartHostUrls(string.text);
+    const textUrls = hostUrls.filter(url => !css.some(cssUrl => url.index >= cssUrl.index && url.index < cssUrl.end));
+    const textRequests = textUrls.flatMap(url => requestsAt(place('JS string'), [url.url], base));
+    return [...props, ...styles, ...textRequests];
   });
 }
 
-// Nothing renders the text of an inline script.
-// So every chart URL in it counts.
-const NOTHING_RENDERED = new Set();
-const RAW_TEXT_CHECKERS = new Map([
-  ['style', chartRequestsInCss],
-  ['script', (js, base) => chartRequestsInJs(js, base, NOTHING_RENDERED)],
-]);
+/** What reads the text of an inline `<style>` or `<script>`. */
+function rawTextChecker(element) {
+  if (element.name === 'style') {
+    return chartRequestsInCss;
+  }
+  const type = Object.hasOwn(element.attribs, 'type') ? element.attribs.type.trim().toLowerCase() : '';
+  return JS_SCRIPT_TYPES.has(type) ? chartRequestsInJs : chartRequestsInText;
+}
 
 /** Chart requests of an inline `<style>` or `<script>`. */
 function rawTextRequests(html, element, base) {
-  const isRawText = RAW_TEXT_CHECKERS.has(element.name) && element.children.length > 0;
+  const isRawText = RAW_TEXT_ELEMENTS.has(element.name) && element.children.length > 0;
   if (!isRawText) {
     return [];
   }
   const lineOffset = lineAt(html, element.children.at(0).startIndex) - 1;
-  const requests = RAW_TEXT_CHECKERS.get(element.name)(DomUtils.textContent(element), base);
+  const requests = rawTextChecker(element)(DomUtils.textContent(element), base);
   return requests.map(request => ({ ...request, line: request.line + lineOffset, where: `<${element.name}> ${request.where}` }));
 }
 
@@ -285,9 +320,9 @@ function readFile(file) {
 }
 
 /** Chart requests of a file. Unparsable JS stops the check. */
-function fileRequests(built, renderedQueries) {
+function fileRequests(built) {
   try {
-    return CHECKERS.get(built.extension)(built.text, built.base, renderedQueries);
+    return CHECKERS.get(built.extension)(built.text, built.base);
   } catch (error) {
     if (!(error instanceof SyntaxError)) {
       throw error;
@@ -296,8 +331,8 @@ function fileRequests(built, renderedQueries) {
   }
 }
 
-function checkFile(built, renderedQueries) {
-  return fileRequests(built, renderedQueries).map(request => ({
+function checkFile(built) {
+  return fileRequests(built).map(request => ({
     ...request,
     ...urlState(request.query, KEYS),
     file: built.file,
@@ -305,6 +340,10 @@ function checkFile(built, renderedQueries) {
 }
 
 function main() {
+  const unknown = process.argv.slice(2);
+  if (unknown.length > 0) {
+    fail(`unknown option ${unknown.join(' ')}: ${path.basename(__filename)} takes no option`);
+  }
   const files = listFiles(BUILD_DIR, EXTENSIONS);
   if (!files.some(file => file.endsWith('.html'))) {
     fail('build/ has no HTML page: run `docusaurus build` first');
@@ -312,10 +351,7 @@ function main() {
   if (files.length > MAX_FILES) {
     fail(`More than ${MAX_FILES} files to check in build/`);
   }
-  const builtFiles = files.map(readFile);
-  const pages = builtFiles.filter(built => built.extension === '.html');
-  const renderedQueries = new Set(pages.flatMap(page => renderedChartQueries(page.text, page.base)));
-  const requests = builtFiles.flatMap(built => checkFile(built, renderedQueries));
+  const requests = files.map(readFile).flatMap(checkFile);
   const bad = requests.filter(request => request.state !== 'signed');
   const lines = bad.map(request => {
     const reason = Object.hasOwn(request, 'problem') ? request.problem : `${request.state} chart request`;
@@ -334,7 +370,7 @@ function main() {
   }
 }
 
-module.exports = { chartRequestsInHtml, chartRequestsInCss, chartRequestsInJs, renderedChartQueries };
+module.exports = { chartRequestsInHtml, chartRequestsInCss, chartRequestsInJs };
 
 if (require.main === module) {
   main();
