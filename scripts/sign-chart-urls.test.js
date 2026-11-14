@@ -230,3 +230,32 @@ test('sign mode signs every file, reports a foreign account with file:line and k
   assert.equal(run.written['docs/a.md'], foreign);
   assert.equal(signatures(run.written['docs/b.md']).length, 1);
 });
+
+test('--check closing message matches each category: the signer for unsigned, by hand with file:line for the rest', () => {
+  const run = runCli(
+    {
+      'docs/a.md': '![x](https://image-charts.com/chart?cht=p&chs=1x1)\n',
+      'docs/b.md': '# B\n![c](https://image-charts.com/chart?cht=p&chco=#ff0000)\n',
+      'docs/c.md': '![f](https://image-charts.com/chart?cht=p&icac=someone_else&ichm=abc)\n',
+      'docs/GENERATED-d.md': '![g](https://image-charts.com/chart?cht=p&chs=2x2)\n',
+    },
+    ['--check'],
+    {}
+  );
+  assert.equal(run.status, 1);
+  assert.match(run.stderr, /^Unsigned or invalid.*run `source \.envrc && npm run sign:chart-urls` \(docs\/a\.md:1\)$/m);
+  assert.match(run.stderr, /^Cut by "#".*%23 by hand \(docs\/b\.md:2\)$/m);
+  assert.match(run.stderr, /^Signed by another account.*by hand.*\(docs\/c\.md:1\)$/m);
+  assert.match(run.stderr, /^In GENERATED-\*\.md.*generator.*\(docs\/GENERATED-d\.md:1\)$/m);
+});
+
+test('sign mode never tells to run the signer for what it left as written', () => {
+  const run = runCli(
+    { 'docs/a.md': '![c](https://image-charts.com/chart?cht=p&chco=#ff0000)\n![p](https://image-charts.com/chart?cht=p)\n' },
+    [],
+    { ACCOUNT_ID: KEYS.accountId, SECRET_KEY: KEYS.secretKey }
+  );
+  assert.equal(run.status, 1);
+  assert.doesNotMatch(run.stderr, /npm run sign:chart-urls`/);
+  assert.match(run.stderr, /^Cut by "#".*\(docs\/a\.md:1\)$/m);
+});

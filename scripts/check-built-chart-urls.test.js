@@ -1,7 +1,17 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
 const crypto = require('node:crypto');
-const { chartRequestsInHtml, chartRequestsInCss, chartRequestsInJs } = require('./check-built-chart-urls');
+const fs = require('node:fs');
+const os = require('node:os');
+const path = require('node:path');
+const { spawnSync } = require('node:child_process');
+const {
+  chartRequestsInHtml,
+  chartRequestsInCss,
+  chartRequestsInJs,
+  renderedChartQueries,
+  isRenderedIn,
+} = require('./check-built-chart-urls');
 const { urlState } = require('./sign-chart-urls');
 
 const KEYS = { accountId: 'documentation', secretKey: 'test-secret-key' };
@@ -108,7 +118,9 @@ test('JS bundles: URL props and CSS url() are chart requests, text children are 
     '(0,i.jsx)("div",{style:{backgroundImage:"url(https://image-charts.com/chart?cht=p&chs=1x1)"}})',
     '(0,i.jsx)(n.code,{children:"https://image-charts.com/chart?cht=p&chs=1x1"})',
   ].join('\n');
-  const requests = chartRequestsInJs(js, 'https://documentation.image-charts.com/assets/js/main.js');
+  const rendered = new Set(['cht=p&chs=1x1']);
+  const isRendered = query => rendered.has(query);
+  const requests = chartRequestsInJs(js, 'https://documentation.image-charts.com/assets/js/main.js', isRendered);
   assert.deepEqual(
     requests.map(request => [request.line, request.query]),
     [
@@ -117,4 +129,93 @@ test('JS bundles: URL props and CSS url() are chart requests, text children are 
       [3, 'cht=p&chs=1x1'],
     ]
   );
+});
+
+test('CSS image-set() candidates are chart requests: strings and url(), in style attributes, <style> and CSS files', () => {
+  const html = [
+    '<div style="background:image-set(&quot;https://image-charts.com/chart?cht=p&amp;chs=100x411&quot; 1x)"></div>',
+    "<div style=\"background:-webkit-image-set('https://image-charts.com/chart?cht=p&amp;chs=100x412' 1x, &quot;/img/x.png&quot; 2x)\"></div>",
+    '<div style="background:image-set(url(&quot;https://image-charts.com/chart?cht=p&amp;chs=100x413&quot;) 1x)"></div>',
+    '<style>.x{background:image-set("https://image-charts.com/chart?cht=p&chs=100x414" 1x)}</style>',
+  ].join('\n');
+  assert.deepEqual(statesOfHtml(html), [
+    [1, 'unsigned'],
+    [2, 'unsigned'],
+    [3, 'unsigned'],
+    [4, 'unsigned'],
+  ]);
+  const css =
+    '.a{color:red}\n.b{background-image:image-set("https://image-charts.com/chart?cht=p&chs=1x1" type("image/png") 1x)}';
+  assert.deepEqual(
+    chartRequestsInCss(css, 'https://documentation.image-charts.com/assets/css/styles.css').map(request => request.line),
+    [2]
+  );
+});
+
+test('JS bundles: a chart URL only in the bundle is a chart request, one the pages render is not', () => {
+  const js = [
+    '(0,i.jsx)(s.A,{children:()=>{const e="https://image-charts.com/chart?cht=p\\u0026chs=100x902";return(0,i.jsx)("img",{src:e})}})',
+    String.raw`JSON.parse('{"u":"https:\\/\\/image-charts.com\\/chart?cht=p&chs=100x903"}')`,
+    String.raw`const t="https:\/\/image-charts.com\/chart?cht=p&chs=100x904\nsecond line";`,
+    '(0,i.jsx)(n.code,{children:"curl https://image-charts.com/chart?cht=p&chs=100x905"})',
+    '(0,i.jsx)(n.code,{children:"https://image-charts.com/chart?{QUERY_STRING}&ichm=HASH"}),"), at the end"',
+  ].join('\n');
+  const html = [
+    '<pre><code>curl https://image-charts.com/chart?cht=p&amp;chs=100x905</code></pre>',
+    '<p>At the start (<code>https://image-charts.com/chart?{QUERY_STRING}&amp;ichm=HASH</code>), at the end</p>',
+  ].join('\n');
+  const isRendered = isRenderedIn(renderedChartQueries(html, PAGE));
+  const requests = chartRequestsInJs(js, 'https://documentation.image-charts.com/assets/js/main.js', isRendered);
+  assert.deepEqual(
+    requests.map(request => [request.line, request.query]),
+    [
+      [1, 'cht=p&chs=100x902'],
+      [2, 'cht=p&chs=100x903'],
+      [3, 'cht=p&chs=100x904'],
+    ]
+  );
+});
+
+const BUILT_CLI_SCRIPTS = ['check-built-chart-urls.js', 'sign-chart-urls.js', 'generate-gallery.js'];
+
+/**
+ * Runs a copy of the built gate.
+ * Its temp build/ holds `pages`.
+ */
+function runBuiltCli(pages) {
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'test_check_built_chart_urls_'));
+  try {
+    // comply-ignore: security-detect-non-literal-fs-filename — script is one of BUILT_CLI_SCRIPTS
+    const scripts = BUILT_CLI_SCRIPTS.map(script => [`scripts/${script}`, fs.readFileSync(path.join(__dirname, script), 'utf8')]);
+    for (const [file, content] of Object.entries({ ...Object.fromEntries(scripts), ...pages })) {
+      // comply-ignore: security-detect-non-literal-fs-filename — file is under the test's own temp directory
+      fs.mkdirSync(path.dirname(path.join(root, file)), { recursive: true });
+      // comply-ignore: security-detect-non-literal-fs-filename — file is under the test's own temp directory
+      fs.writeFileSync(path.join(root, file), content);
+    }
+    fs.symlinkSync(path.join(__dirname, '..', 'node_modules'), path.join(root, 'node_modules'));
+    return spawnSync(process.execPath, [path.join(root, 'scripts', 'check-built-chart-urls.js')], {
+      env: { PATH: process.env.PATH },
+      encoding: 'utf8',
+      timeout: 30_000,
+    });
+  } finally {
+    // comply-ignore: security-detect-non-literal-fs-filename — root is the test's own temp directory
+    fs.rmSync(root, { recursive: true, force: true });
+  }
+}
+
+test('the closing message says what to change by hand, per category, with file:line, never to run the signer', () => {
+  const run = runBuiltCli({
+    'build/a/index.html': [
+      '<img src="https://image-charts.com/chart?cht=p&amp;chs=1x1"/>',
+      '<img src="https://image-charts.com/chart?cht=p&amp;chco=#ff0000"/>',
+      '<img src="https://image-charts.com/chart?cht=p&amp;icac=someone_else&amp;ichm=abc"/>',
+    ].join('\n'),
+  });
+  assert.equal(run.status, 1);
+  assert.doesNotMatch(run.stderr, /npm run sign:chart-urls`/);
+  assert.match(run.stderr, /^Unsigned or invalid.*by hand.*\(build\/a\/index\.html:1\)$/m);
+  assert.match(run.stderr, /^Cut by "#".*%23.*\(build\/a\/index\.html:2\)$/m);
+  assert.match(run.stderr, /^Signed by another account.*icac=documentation.*\(build\/a\/index\.html:3\)$/m);
 });

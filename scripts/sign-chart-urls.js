@@ -22,6 +22,7 @@ const MAX_FILES = 2000;
 const MAX_DEPTH = 10;
 const MAX_FILE_BYTES = 2 * 1024 * 1024;
 const MAX_REPORTED = 200;
+const MAX_LISTED = 5;
 
 // A chart URL start, up to its query.
 // Editor links load a chart too.
@@ -58,6 +59,13 @@ const URL_KINDS = new Map([
 const FIX_LABELS = new Map([
   ['unsigned', 'signed'],
   ['invalid', 're-signed'],
+]);
+// What to do for each kind of URL left unsigned.
+const SOURCE_FIXES = new Map([
+  ['signable', 'Unsigned or invalid, the signer fixes them: run `source .envrc && npm run sign:chart-urls`'],
+  ['generated', 'In GENERATED-*.md, never rewritten: fix their generator'],
+  ['broken', 'Cut by "#", the signer cannot rewrite them: encode "#" as %23 by hand'],
+  ['foreign', 'Signed by another account, the signer cannot rewrite them: remove icac and ichm by hand, then sign'],
 ]);
 
 /** Files of `dir` with one of `extensions`, recursively. */
@@ -231,17 +239,43 @@ function planFile(file, check) {
     throw new Error(`${relative} is larger than ${MAX_FILE_BYTES} bytes`);
   }
   // Only their generator writes GENERATED-*.md files.
-  const rewrite = !check && !path.basename(file).startsWith('GENERATED-');
+  const isGenerated = path.basename(file).startsWith('GENERATED-');
+  const rewrite = !check && !isGenerated;
   const signed = rewrite ? signText(text, KEYS) : { urls: scan(text, KEYS), text };
   const notSigned = signed.urls.filter(url => url.state !== 'signed');
+  const leftUnsigned = notSigned.filter(url => !rewrite || url.problem);
+  const fixOf = url => {
+    if (url.problem) {
+      return url.state;
+    }
+    return isGenerated ? 'generated' : 'signable';
+  };
   return {
     file,
     text: signed.text,
     isChanged: signed.text !== text,
     states: signed.urls.map(url => url.state),
-    leftUnsigned: notSigned.some(url => !rewrite || url.problem),
+    leftUnsigned: leftUnsigned.map(url => ({ fix: fixOf(url), location: `${relative}:${url.line}` })),
     messages: notSigned.map(url => urlMessage(relative, url, rewrite)),
   };
+}
+
+/**
+ * One line per kind of URL left unsigned.
+ * Each says what to change, then where.
+ */
+function fixLines(leftUnsigned, fixes) {
+  // Every fix of `leftUnsigned` is a key of `fixes`.
+  const locationsByFix = new Map(Array.from(fixes.keys(), fix => [fix, []]));
+  for (const url of leftUnsigned) {
+    // comply-ignore: no-mutating-methods — fills the local arrays of the line above, one pass instead of a filter per fix
+    locationsByFix.get(url.fix).push(url.location);
+  }
+  return [...fixes].flatMap(([fix, todo]) => {
+    const locations = locationsByFix.get(fix);
+    const more = locations.length > MAX_LISTED ? `, and ${locations.length - MAX_LISTED} more` : '';
+    return locations.length > 0 ? [`${todo} (${locations.slice(0, MAX_LISTED).join(', ')}${more})`] : [];
+  });
 }
 
 function report(messages, states) {
@@ -281,17 +315,15 @@ function main() {
     plans.flatMap(plan => plan.messages),
     plans.flatMap(plan => plan.states)
   );
-  if (plans.some(plan => plan.leftUnsigned)) {
-    console.error(
-      check
-        ? 'Unsigned chart URLs count against the free rate limit: run `source .envrc && npm run sign:chart-urls`'
-        : 'Some chart URLs are left as written: fix them by hand (GENERATED-*.md: in their generator)'
-    );
+  const leftUnsigned = plans.flatMap(plan => plan.leftUnsigned);
+  if (leftUnsigned.length > 0) {
+    const intro = 'Chart URLs left unsigned count against the free rate limit.';
+    console.error([intro, ...fixLines(leftUnsigned, SOURCE_FIXES)].join('\n'));
     process.exit(1);
   }
 }
 
-module.exports = { scan, signText, urlState, isSignatureValid, listFiles };
+module.exports = { scan, signText, urlState, isSignatureValid, listFiles, fixLines };
 
 if (require.main === module) {
   main();

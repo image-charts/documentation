@@ -8,7 +8,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const { parseDocument, DomUtils } = require('htmlparser2');
-const { urlState, listFiles } = require('./sign-chart-urls');
+const { urlState, listFiles, fixLines } = require('./sign-chart-urls');
 
 // comply-ignore: node-no-process-env — single config read, like sign-chart-urls.js
 const { SECRET_KEY } = process.env;
@@ -37,6 +37,22 @@ const SRCSET_ATTRIBUTES = new Set(['srcset', 'imagesrcset']);
 const SRCSET_CANDIDATE = /[\s,]*(\S*[^\s,])(?:,+(?=\s|$)|\s+[^,]*)?/g;
 // A CSS url(): double-quoted, single-quoted or bare.
 const CSS_URL = /url\(\s*(?:"([^"]*)"|'([^']*)'|([^)\s"']*))/gi;
+// The candidates of a CSS image-set(), -webkit- prefixed or not.
+// They may hold one level of parentheses: url(), type().
+const CSS_IMAGE_SET = /image-set\(((?:[^()"']|"[^"]*"|'[^']*'|\([^()]*\))*)\)/gi;
+// An image-set() candidate given as a string.
+const IMAGE_SET_STRING = /(^|,)\s*(?:"([^"]*)"|'([^']*)')/g;
+// A chart host URL in text.
+// It ends at a quote or a space.
+// Its slashes may be JS-escaped.
+const CHART_HOST_URL = /(?:https?:)?(?:\\*\/){2}[\w.-]*image-charts\.com[^\s"'`<>]*/gi;
+const MAX_UNESCAPES = 3;
+// What ends a URL once unescaped.
+const URL_END = /[\s"'`<>\\]/;
+// A bare CSS url() opening: its URL ends at `)`.
+const BARE_CSS_URL_OPENING = /url\(\s*$/i;
+const CSS_URL_END = ')';
+const MAX_CSS_URL_OPENING = 8;
 // A JS URL prop, up to its opening quote.
 const JS_URL_PROP = /\b(?:src|href|srcSet|srcset|poster|imageSrcSet)\s*:\s*["'`]/g;
 // A JS string literal at the text start.
@@ -74,7 +90,8 @@ function chartQueries(value, base) {
   const isChartHost = CHART_HOSTS.has(host) || host === EDITOR_HOST;
   if (isChartHost && isChartPath) {
     // The editor keeps a signed query byte for byte.
-    return [url.search.slice(1)];
+    // A `#` stays, so the check reports where the browser cuts.
+    return [`${url.search.slice(1)}${CHART_HOSTS.has(host) ? url.hash : ''}`];
   }
   // The editor requests the chart URL of its hash.
   // It sends the query as received.
@@ -88,8 +105,17 @@ function srcsetUrls(srcset) {
   return [...srcset.matchAll(SRCSET_CANDIDATE)].map(match => match[1]);
 }
 
+/** URLs of CSS url() and image-set() strings. */
 function cssUrls(css) {
-  return [...css.matchAll(CSS_URL)].map(match => ({ index: match.index, url: match.slice(1).join('') }));
+  const urls = [...css.matchAll(CSS_URL)].map(match => ({ index: match.index, url: match.slice(1).join(''), kind: 'url()' }));
+  const imageSetStrings = [...css.matchAll(CSS_IMAGE_SET)].flatMap(imageSet =>
+    [...imageSet[1].matchAll(IMAGE_SET_STRING)].map(candidate => ({
+      index: imageSet.index,
+      url: candidate.slice(2).join(''),
+      kind: 'image-set()',
+    }))
+  );
+  return [...urls, ...imageSetStrings];
 }
 
 function attributeUrls(tag, name, attribute) {
@@ -114,7 +140,7 @@ function requestsAt(place, urls, base) {
 }
 
 function chartRequestsInCss(css, base) {
-  return cssUrls(css).flatMap(found => requestsAt({ text: css, index: found.index, where: 'url()' }, [found.url], base));
+  return cssUrls(css).flatMap(found => requestsAt({ text: css, index: found.index, where: found.kind }, [found.url], base));
 }
 
 function unescapeJs(escape, sequence) {
@@ -130,12 +156,71 @@ function jsStringAt(js, quoteIndex) {
   return literal ? literal[1].replaceAll(JS_ESCAPE, unescapeJs) : '';
 }
 
+/** `text` with its JS escapes decoded, up to `MAX_UNESCAPES` levels. */
+function unescapeJsDeep(text, level = 0) {
+  const unescaped = text.replaceAll(JS_ESCAPE, unescapeJs);
+  return unescaped === text || level + 1 >= MAX_UNESCAPES ? unescaped : unescapeJsDeep(unescaped, level + 1);
+}
+
+/** Chart host URLs written anywhere in `text`, JS escapes decoded. */
+function chartHostUrls(text) {
+  return [...text.matchAll(CHART_HOST_URL)].map(match => {
+    const url = unescapeJsDeep(match.at(0)).split(URL_END, 1).at(0);
+    const isBareCssUrl = BARE_CSS_URL_OPENING.test(text.slice(Math.max(0, match.index - MAX_CSS_URL_OPENING), match.index));
+    return { index: match.index, url: isBareCssUrl ? url.split(CSS_URL_END, 1).at(0) : url };
+  });
+}
+
+/**
+ * Chart queries a page renders.
+ * They are in its text or its attributes.
+ * A bundle URL among them is already in the HTML.
+ */
+function renderedChartQueries(html, base) {
+  const document = parseDocument(html);
+  const attributes = DomUtils.findAll(() => true, document.children).flatMap(element => Object.values(element.attribs));
+  const rendered = [DomUtils.textContent(document), ...attributes].join('\n');
+  return chartHostUrls(rendered).flatMap(found => chartQueries(found.url, base));
+}
+
+function byCodeUnits(left, right) {
+  return left < right ? -1 : Number(left > right);
+}
+
+/**
+ * Index of the first of `sorted` not below `value`.
+ * It is found by binary search.
+ */
+function firstNotBelow(sorted, value, low = 0, high = sorted.length) {
+  if (low >= high) {
+    return low;
+  }
+  const middle = Math.floor((low + high) / 2);
+  return sorted[middle] < value ? firstNotBelow(sorted, value, middle + 1, high) : firstNotBelow(sorted, value, low, middle);
+}
+
+/**
+ * Whether a query is rendered by one of `queries`.
+ * Page text glues the next prose to a code URL.
+ * So a rendered query may extend `query`.
+ */
+function isRenderedIn(queries) {
+  const sorted = [...new Set(queries)].sort(byCodeUnits);
+  return query => {
+    // It extends `query` if any rendered query does.
+    const index = firstNotBelow(sorted, query);
+    return index < sorted.length && sorted[index].startsWith(query);
+  };
+}
+
 /**
  * Chart requests of a JS bundle.
  * They are URL props and CSS url() in strings.
- * Text children are not requests.
+ * The browser sets a chart URL that no page renders.
+ * `<BrowserOnly>` does that: such a URL counts too.
+ * Text children are rendered, so they are not requests.
  */
-function chartRequestsInJs(js, base) {
+function chartRequestsInJs(js, base, isRendered) {
   const props = [...js.matchAll(JS_URL_PROP)].flatMap(match => {
     const propString = jsStringAt(js, match.index + match.at(0).length - 1);
     const urls = match.at(0).toLowerCase().includes('srcset') ? srcsetUrls(propString) : [propString];
@@ -143,14 +228,21 @@ function chartRequestsInJs(js, base) {
   });
   const unquoted = js.replaceAll(JS_ESCAPED_QUOTE, '$1');
   const styles = cssUrls(unquoted).flatMap(found =>
-    requestsAt({ text: unquoted, index: found.index, where: 'JS url()' }, [found.url], base)
+    requestsAt({ text: unquoted, index: found.index, where: `JS ${found.kind}` }, [found.url], base)
   );
-  return [...props, ...styles];
+  const propAndStyleQueries = new Set([...props, ...styles].map(request => request.query));
+  const clientOnly = chartHostUrls(js).flatMap(url => {
+    const requests = requestsAt({ text: js, index: url.index, where: 'JS string no page renders' }, [url.url], base);
+    return requests.filter(request => !isRendered(request.query) && !propAndStyleQueries.has(request.query));
+  });
+  return [...props, ...styles, ...clientOnly];
 }
 
+// An inline script is in its page.
+// So it is rendered.
 const RAW_TEXT_CHECKERS = new Map([
   ['style', chartRequestsInCss],
-  ['script', chartRequestsInJs],
+  ['script', (js, base) => chartRequestsInJs(js, base, () => true)],
 ]);
 
 /** Chart requests of an inline `<style>` or `<script>`. */
@@ -186,18 +278,37 @@ const CHECKERS = new Map([
   ['.js', chartRequestsInJs],
 ]);
 
-function checkFile(file) {
+// What to change by hand, per built request state.
+const BUILT_FIXES = new Map([
+  [
+    'signable',
+    'Unsigned or invalid in the build only, the signer cannot rewrite them: ' +
+      'write each one as a markdown image or a quoted src/href attribute and sign it, or sign it by hand',
+  ],
+  ['broken', 'Cut by "#": encode "#" as %23 by hand'],
+  ['foreign', 'Signed by another account: use icac=documentation and its ichm by hand'],
+]);
+
+function readFile(file) {
   const relative = path.relative(BUILD_DIR, file);
   // comply-ignore: security-detect-non-literal-fs-filename — file comes from listFiles(BUILD_DIR)
   const text = fs.readFileSync(file, 'utf8');
   if (Buffer.byteLength(text) > MAX_FILE_BYTES) {
     throw new Error(`build/${relative} is larger than ${MAX_FILE_BYTES} bytes`);
   }
-  const base = `${SITE_URL}${relative.split(path.sep).join('/')}`;
-  return CHECKERS.get(path.extname(file))(text, base).map(request => ({
+  return {
+    file: `build/${relative}`,
+    extension: path.extname(file),
+    text,
+    base: `${SITE_URL}${relative.split(path.sep).join('/')}`,
+  };
+}
+
+function checkFile(built, isRendered) {
+  return CHECKERS.get(built.extension)(built.text, built.base, isRendered).map(request => ({
     ...request,
     ...urlState(request.query, KEYS),
-    file: `build/${relative}`,
+    file: built.file,
   }));
 }
 
@@ -209,7 +320,10 @@ function main() {
   if (files.length > MAX_FILES) {
     throw new Error(`More than ${MAX_FILES} files to check in build/`);
   }
-  const requests = files.flatMap(checkFile);
+  const builtFiles = files.map(readFile);
+  const pages = builtFiles.filter(built => built.extension === '.html');
+  const isRendered = isRenderedIn(pages.flatMap(page => renderedChartQueries(page.text, page.base)));
+  const requests = builtFiles.flatMap(built => checkFile(built, isRendered));
   const bad = requests.filter(request => request.state !== 'signed');
   for (const request of bad.slice(0, MAX_REPORTED)) {
     const reason = Object.hasOwn(request, 'problem') ? request.problem : `${request.state} chart request`;
@@ -226,15 +340,17 @@ function main() {
       `${count('foreign')} of another account${scope}`
   );
   if (bad.length > 0) {
-    console.error(
-      'The built site requests charts that count against the free rate limit: ' +
-        'run `source .envrc && npm run sign:chart-urls`, or sign by hand a shape it cannot rewrite (see CLAUDE.md)'
-    );
+    const leftUnsigned = bad.map(request => ({
+      fix: BUILT_FIXES.has(request.state) ? request.state : 'signable',
+      location: `${request.file}:${request.line}`,
+    }));
+    const intro = 'The built site requests charts that count against the free rate limit.';
+    console.error([intro, ...fixLines(leftUnsigned, BUILT_FIXES)].join('\n'));
     process.exit(1);
   }
 }
 
-module.exports = { chartRequestsInHtml, chartRequestsInCss, chartRequestsInJs };
+module.exports = { chartRequestsInHtml, chartRequestsInCss, chartRequestsInJs, renderedChartQueries, isRenderedIn };
 
 if (require.main === module) {
   main();
