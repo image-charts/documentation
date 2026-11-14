@@ -1,12 +1,9 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
 const crypto = require('node:crypto');
-const fs = require('node:fs');
-const os = require('node:os');
-const path = require('node:path');
 const querystring = require('node:querystring');
-const { spawnSync } = require('node:child_process');
 const { scan, signText } = require('./sign-chart-urls');
+const { spawnScript } = require('./test-cli');
 
 const KEYS = { accountId: 'documentation', secretKey: 'test-secret-key' };
 const SIGNATURE = /(?:&|&amp;)icac=documentation(?:&|&amp;)ichm=([0-9a-f]{64})/g;
@@ -62,6 +59,8 @@ const LOADED = [
     '[e](https://editor.image-charts.com/?tab_viewer=image&tab_editor=form#https:/image-charts.com/chart?chs=150x150&cht=qr&chl=Hello%20world&choe=UTF-8)',
     'chs=150x150&cht=qr&chl=Hello%20world&choe=UTF-8',
   ],
+  ['markdown image with a raw non-ASCII label', '![u](https://image-charts.com/chart?cht=p&chl=5€|20°C&chd=t:1,2)', 'cht=p&chl=5%E2%82%AC%7C20%C2%B0C&chd=t:1,2'],
+  ['markdown image with a +', '![p](https://image-charts.com/chart?cht=p&chl=a+b&chd=t:1,2)', 'cht=p&chl=a+b&chd=t:1,2'],
   [
     'editor link with the chart query in its path',
     '[e](https://editor.image-charts.com/chart?cht=gv&chl=graph%20%7Ba%20--%20b;%7D&chs=700x200)',
@@ -161,48 +160,9 @@ test('a URL of another account and a URL cut by "#" are reported and left as wri
   assert.match(urls[1].problem, /"#"/);
 });
 
-const CLI_SCRIPTS = ['sign-chart-urls.js', 'generate-gallery.js'];
-
-/** Writes each file of `tree` under `root`. */
-function writeTree(root, tree) {
-  for (const [file, content] of Object.entries(tree)) {
-    const target = path.join(root, file);
-    // comply-ignore: security-detect-non-literal-fs-filename — target is under the test's own temp directory
-    fs.mkdirSync(path.dirname(target), { recursive: true });
-    // comply-ignore: security-detect-non-literal-fs-filename — target is under the test's own temp directory
-    fs.writeFileSync(target, content);
-  }
-}
-
-/**
- * Runs a copy of the CLI on a temp tree.
- * Returns its output and the files afterwards.
- */
+/** Runs a copy of the signer on a temp tree. */
 function runCli(files, args, env) {
-  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'test_sign_chart_urls_'));
-  try {
-    const scripts = CLI_SCRIPTS.map(script => [
-      `scripts/${script}`,
-      // comply-ignore: security-detect-non-literal-fs-filename — script is one of CLI_SCRIPTS
-      fs.readFileSync(path.join(__dirname, script), 'utf8'),
-    ]);
-    writeTree(root, { ...Object.fromEntries(scripts), 'src/.keep': '', ...files });
-    fs.symlinkSync(path.join(__dirname, '..', 'node_modules'), path.join(root, 'node_modules'));
-    const run = spawnSync(process.execPath, [path.join(root, 'scripts', 'sign-chart-urls.js'), ...args], {
-      env: { PATH: process.env.PATH, ...env },
-      encoding: 'utf8',
-      timeout: 30_000,
-    });
-    const written = Object.keys(files).map(file => [
-      file,
-      // comply-ignore: security-detect-non-literal-fs-filename — file was written by writeTree under root
-      fs.readFileSync(path.join(root, file), 'utf8'),
-    ]);
-    return { ...run, written: Object.fromEntries(written) };
-  } finally {
-    // comply-ignore: security-detect-non-literal-fs-filename — root is the test's own temp directory
-    fs.rmSync(root, { recursive: true, force: true });
-  }
+  return spawnScript('sign-chart-urls.js', files, args, env);
 }
 
 test('--check names file:line, without a stack trace, and says how to sign without typing the secret', () => {
@@ -258,4 +218,21 @@ test('sign mode never tells to run the signer for what it left as written', () =
   assert.equal(run.status, 1);
   assert.doesNotMatch(run.stderr, /npm run sign:chart-urls`/);
   assert.match(run.stderr, /^Cut by "#".*\(docs\/a\.md:1\)$/m);
+});
+
+test('sign mode leaves a GENERATED-*.md file as written and names its generator', () => {
+  const generated = '![g](https://image-charts.com/chart?cht=p&chs=2x2)\n';
+  const run = runCli({ 'docs/GENERATED-d.md': generated }, [], { ACCOUNT_ID: KEYS.accountId, SECRET_KEY: KEYS.secretKey });
+  assert.equal(run.status, 1);
+  assert.equal(run.written['docs/GENERATED-d.md'], generated);
+  assert.match(run.stderr, /fix their generator \(docs\/GENERATED-d\.md:1\)$/m);
+});
+
+test('sign mode with another ACCOUNT_ID fails on one line and writes nothing', () => {
+  const unsigned = '![p](https://image-charts.com/chart?cht=p&chs=1x1)\n';
+  const run = runCli({ 'docs/a.md': unsigned }, [], { ACCOUNT_ID: 'other', SECRET_KEY: KEYS.secretKey });
+  assert.equal(run.status, 1);
+  assert.equal(run.written['docs/a.md'], unsigned);
+  assert.match(run.stderr, /^Error: ACCOUNT_ID=documentation and its SECRET_KEY are required/m);
+  assert.doesNotMatch(run.stderr + run.stdout, /\n\s+at /);
 });

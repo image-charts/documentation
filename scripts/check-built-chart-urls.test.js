@@ -1,18 +1,14 @@
 const test = require('node:test');
 const assert = require('node:assert/strict');
 const crypto = require('node:crypto');
-const fs = require('node:fs');
-const os = require('node:os');
-const path = require('node:path');
-const { spawnSync } = require('node:child_process');
 const {
   chartRequestsInHtml,
   chartRequestsInCss,
   chartRequestsInJs,
   renderedChartQueries,
-  isRenderedIn,
 } = require('./check-built-chart-urls');
 const { urlState } = require('./sign-chart-urls');
+const { spawnScript } = require('./test-cli');
 
 const KEYS = { accountId: 'documentation', secretKey: 'test-secret-key' };
 const PAGE = 'https://documentation.image-charts.com/chart-js/index.html';
@@ -55,13 +51,17 @@ const LOADED_SHAPES = [
   '<table background="https://image-charts.com/chart?cht=p&amp;chs=100x124"></table>',
   '<link rel="preload" as="image" imagesrcset="https://image-charts.com/chart?cht=p&amp;chs=100x125 1x"/>',
   '<video poster="https://image-charts.com/chart?cht=p&amp;chs=100x126"></video>',
+  '<script>var u="https://image-charts.com/chart?cht=p&chs=100x127";document.images[0].src=u</script>',
+  '<img data-src="https://image-charts.com/chart?cht=p&amp;chs=100x128"/>',
+  '<img data-srcset="/img/x.png 1x, https://image-charts.com/chart?cht=p&amp;chs=100x129 2x"/>',
 ];
 
 test('every shape the browser loads is a chart request, unsigned', () => {
   const html = LOADED_SHAPES.join('\n');
+  const lineOf = shape => html.slice(0, html.indexOf(shape)).split('\n').length;
   assert.deepEqual(
     statesOfHtml(html),
-    LOADED_SHAPES.map((shape, index) => [index + 1 + (index > 12 ? 1 : 0), 'unsigned'])
+    LOADED_SHAPES.map(shape => [lineOf(shape), 'unsigned'])
   );
 });
 
@@ -109,6 +109,17 @@ test('editor links are checked on the chart query the editor requests', () => {
   ]);
 });
 
+test('a "#" in an editor link is reported where the browser cuts', () => {
+  const html = [
+    '<a href="https://editor.image-charts.com/?a=1#https:/image-charts.com/chart?cht=p&amp;chco=#ff0000&amp;icac=documentation&amp;ichm=abc">e</a>',
+    '<a href="https://editor.image-charts.com/chart?cht=p&amp;chco=#ff0000&amp;icac=documentation&amp;ichm=abc">e</a>',
+  ].join('\n');
+  assert.deepEqual(statesOfHtml(html), [
+    [1, 'broken'],
+    [2, 'broken'],
+  ]);
+});
+
 test('a chart of another account is reported as foreign', () => {
   const html = '<img src="https://image-charts.com/chart?cht=p&amp;icac=someone_else&amp;ichm=abc"/>';
   assert.deepEqual(statesOfHtml(html), [[1, 'foreign']]);
@@ -126,12 +137,11 @@ test('JS bundles: URL props and CSS url() are chart requests, text children are 
   const js = [
     '(0,i.jsx)("img",{src:"https://image-charts.com/chart?cht=p\\u0026chs=1x1",alt:"chart"})',
     "(0,i.jsx)(n.a,{href:'https://editor.image-charts.com/chart?cht=p&chs=1x1',children:\"edit\"})",
-    '(0,i.jsx)("div",{style:{backgroundImage:"url(https://image-charts.com/chart?cht=p&chs=1x1)"}})',
+    '(0,i.jsx)("div",{style:{backgroundImage:"url(https://image-charts.com/chart?cht=p\\u0026chs=1x1)"}})',
     '(0,i.jsx)(n.code,{children:"https://image-charts.com/chart?cht=p&chs=1x1"})',
   ].join('\n');
   const rendered = new Set(['cht=p&chs=1x1']);
-  const isRendered = query => rendered.has(query);
-  const requests = chartRequestsInJs(js, 'https://documentation.image-charts.com/assets/js/main.js', isRendered);
+  const requests = chartRequestsInJs(js, 'https://documentation.image-charts.com/assets/js/main.js', rendered);
   assert.deepEqual(
     requests.map(request => [request.line, request.query]),
     [
@@ -170,50 +180,29 @@ test('JS bundles: a chart URL only in the bundle is a chart request, one the pag
     String.raw`const t="https:\/\/image-charts.com\/chart?cht=p&chs=100x904\nsecond line";`,
     '(0,i.jsx)(n.code,{children:"curl https://image-charts.com/chart?cht=p&chs=100x905"})',
     '(0,i.jsx)(n.code,{children:"https://image-charts.com/chart?{QUERY_STRING}&ichm=HASH"}),"), at the end"',
+    'const q="https://image-charts.com/chart?cht=qr&chs=150x150&chl=Hello";',
   ].join('\n');
   const html = [
     '<pre><code>curl https://image-charts.com/chart?cht=p&amp;chs=100x905</code></pre>',
     '<p>At the start (<code>https://image-charts.com/chart?{QUERY_STRING}&amp;ichm=HASH</code>), at the end</p>',
+    '<pre><code><span>curl https://image-charts.com/chart?cht=qr&amp;chs=150x150</span><span>&amp;chl=Hello%20world</span></code></pre>',
   ].join('\n');
-  const isRendered = isRenderedIn(renderedChartQueries(html, PAGE));
-  const requests = chartRequestsInJs(js, 'https://documentation.image-charts.com/assets/js/main.js', isRendered);
+  const rendered = new Set(renderedChartQueries(html, PAGE));
+  const requests = chartRequestsInJs(js, 'https://documentation.image-charts.com/assets/js/main.js', rendered);
   assert.deepEqual(
     requests.map(request => [request.line, request.query]),
     [
       [1, 'cht=p&chs=100x902'],
       [2, 'cht=p&chs=100x903'],
       [3, 'cht=p&chs=100x904'],
+      [6, 'cht=qr&chs=150x150&chl=Hello'],
     ]
   );
 });
 
-const BUILT_CLI_SCRIPTS = ['check-built-chart-urls.js', 'sign-chart-urls.js', 'generate-gallery.js'];
-
-/**
- * Runs a copy of the built gate.
- * Its temp build/ holds `pages`.
- */
-function runBuiltCli(pages) {
-  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'test_check_built_chart_urls_'));
-  try {
-    // comply-ignore: security-detect-non-literal-fs-filename — script is one of BUILT_CLI_SCRIPTS
-    const scripts = BUILT_CLI_SCRIPTS.map(script => [`scripts/${script}`, fs.readFileSync(path.join(__dirname, script), 'utf8')]);
-    for (const [file, content] of Object.entries({ ...Object.fromEntries(scripts), ...pages })) {
-      // comply-ignore: security-detect-non-literal-fs-filename — file is under the test's own temp directory
-      fs.mkdirSync(path.dirname(path.join(root, file)), { recursive: true });
-      // comply-ignore: security-detect-non-literal-fs-filename — file is under the test's own temp directory
-      fs.writeFileSync(path.join(root, file), content);
-    }
-    fs.symlinkSync(path.join(__dirname, '..', 'node_modules'), path.join(root, 'node_modules'));
-    return spawnSync(process.execPath, [path.join(root, 'scripts', 'check-built-chart-urls.js')], {
-      env: { PATH: process.env.PATH },
-      encoding: 'utf8',
-      timeout: 30_000,
-    });
-  } finally {
-    // comply-ignore: security-detect-non-literal-fs-filename — root is the test's own temp directory
-    fs.rmSync(root, { recursive: true, force: true });
-  }
+/** Runs a copy of the built gate on `pages`. */
+function runBuiltCli(pages, env = {}) {
+  return spawnScript('check-built-chart-urls.js', pages, [], env);
 }
 
 test('the closing message says what to change by hand, per category, with file:line, never to run the signer', () => {
@@ -229,4 +218,41 @@ test('the closing message says what to change by hand, per category, with file:l
   assert.match(run.stderr, /^Unsigned or invalid.*by hand.*\(build\/a\/index\.html:1\)$/m);
   assert.match(run.stderr, /^Cut by "#".*%23.*\(build\/a\/index\.html:2\)$/m);
   assert.match(run.stderr, /^Signed by another account.*icac=documentation.*\(build\/a\/index\.html:3\)$/m);
+  assert.match(run.stdout, /^Built chart requests: 0 signed, 1 unsigned, 0 invalid, 1 of another account, 1 cut by "#"/m);
+});
+
+test('a build without pages fails on one line, without a stack trace', () => {
+  const run = runBuiltCli({ 'build/assets/js/a.js': 'var a=1;' });
+  assert.equal(run.status, 1);
+  assert.match(run.stderr, /^Error: build\/ has no HTML page: run `docusaurus build` first$/m);
+  assert.doesNotMatch(run.stderr + run.stdout, /\n\s+at /);
+});
+
+test('a bundle or inline script that does not parse fails on one line naming its file, never skipped', () => {
+  const page = '<p>ok</p>';
+  for (const [files, file] of [
+    [{ 'build/index.html': page, 'build/assets/js/bad.js': 'var u = "https://image-charts.com/chart?cht=p' }, 'build/assets/js/bad.js'],
+    [{ 'build/index.html': '<script>var u = "unclosed</script>' }, 'build/index.html'],
+  ]) {
+    const run = runBuiltCli(files);
+    assert.equal(run.status, 1);
+    const escapedFile = file.replaceAll('.', String.raw`\.`);
+    assert.match(run.stderr, new RegExp(`^Error: ${escapedFile}: .*JS.*$`, 'm'));
+    assert.doesNotMatch(run.stderr + run.stdout, /\n\s+at /);
+  }
+});
+
+test('a build whose pages, CSS and bundles are all signed passes with the key', () => {
+  const query = signedQuery('cht=p&chd=t:1,2&chs=100x100');
+  const url = `https://image-charts.com/chart?${query}`;
+  const run = runBuiltCli(
+    {
+      'build/index.html': `<img src="${url.replaceAll('&', '&amp;')}"/>`,
+      'build/assets/css/a.css': `.a{background:url("${url}")}`,
+      'build/assets/js/a.js': `(0,i.jsx)("img",{src:"${url}"})`,
+    },
+    { SECRET_KEY: KEYS.secretKey }
+  );
+  assert.equal(run.status, 0, run.stderr);
+  assert.match(run.stdout, /^Built chart requests: 3 signed, 0 unsigned, 0 invalid, 0 of another account, 0 cut by "#"$/m);
 });

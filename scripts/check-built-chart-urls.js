@@ -7,19 +7,16 @@
 
 const fs = require('node:fs');
 const path = require('node:path');
+const acorn = require('acorn');
 const { parseDocument, DomUtils } = require('htmlparser2');
-const { urlState, listFiles, fixLines } = require('./sign-chart-urls');
-
-// comply-ignore: node-no-process-env — single config read, like sign-chart-urls.js
-const { SECRET_KEY } = process.env;
-const KEYS = { accountId: 'documentation', secretKey: SECRET_KEY };
+const valueParser = require('postcss-value-parser');
+const { KEYS, urlState, listFiles, fixLines, report, lineAt } = require('./sign-chart-urls');
 
 const BUILD_DIR = path.join(__dirname, '..', 'build');
 const SITE_URL = 'https://documentation.image-charts.com/';
 const EXTENSIONS = new Set(['.html', '.css', '.js']);
 const MAX_FILES = 5000;
 const MAX_FILE_BYTES = 8 * 1024 * 1024;
-const MAX_REPORTED = 200;
 const MAX_SHOWN_URL = 160;
 
 const CHART_HOSTS = new Set(['image-charts.com', 'www.image-charts.com']);
@@ -30,8 +27,9 @@ const CHART_PATH = /^\/chart(?:\.js\/[^/]+)?\/?$/i;
 const REPEATED_SLASHES = /\/{2,}/g;
 const TRAILING_DOT = /\.$/;
 // Attributes holding one URL, then attributes holding a srcset.
-const URL_ATTRIBUTES = new Set(['src', 'href', 'poster', 'data', 'background', 'action', 'formaction', 'xlink:href']);
-const SRCSET_ATTRIBUTES = new Set(['srcset', 'imagesrcset']);
+// A lazy loader copies `data-src` into `src`.
+const URL_ATTRIBUTES = new Set(['src', 'data-src', 'href', 'poster', 'data', 'background', 'action', 'formaction', 'xlink:href']);
+const SRCSET_ATTRIBUTES = new Set(['srcset', 'data-srcset', 'imagesrcset']);
 // `ping` holds URLs split by whitespace.
 const PING_ATTRIBUTE = 'ping';
 const WHITESPACE_RUN = /\s+/;
@@ -43,46 +41,31 @@ const REFRESH = 'refresh';
 // A srcset candidate: its URL, then trailing commas or descriptors.
 // The URL is a run of non-whitespace.
 const SRCSET_CANDIDATE = /[\s,]*(\S*[^\s,])(?:,+(?=\s|$)|\s+[^,]*)?/g;
-// A CSS url(): double-quoted, single-quoted or bare.
-const CSS_URL = /url\(\s*(?:"([^"]*)"|'([^']*)'|([^)\s"']*))/gi;
-// The candidates of a CSS image-set(), -webkit- prefixed or not.
-// They may hold one level of parentheses: url(), type().
-const CSS_IMAGE_SET = /image-set\(((?:[^()"']|"[^"]*"|'[^']*'|\([^()]*\))*)\)/gi;
-// An image-set() candidate given as a string.
-const IMAGE_SET_STRING = /(^|,)\s*(?:"([^"]*)"|'([^']*)')/g;
+const CSS_URL_FUNCTION = 'url';
+const CSS_IMAGE_SET_FUNCTIONS = new Set(['image-set', '-webkit-image-set']);
+const CSS_URL_NODES = new Set(['word', 'string']);
 // A chart host URL in text.
-// It ends at a quote or a space.
-// Its slashes may be JS-escaped.
-const CHART_HOST_URL = /(?:https?:)?(?:\\*\/){2}[\w.-]*image-charts\.com[^\s"'`<>]*/gi;
-const MAX_UNESCAPES = 3;
-// What ends a URL once unescaped.
-const URL_END = /[\s"'`<>\\]/;
-// A bare CSS url() opening: its URL ends at `)`.
-const BARE_CSS_URL_OPENING = /url\(\s*$/i;
-const CSS_URL_END = ')';
-const MAX_CSS_URL_OPENING = 8;
-// A JS URL prop, up to its opening quote.
-const JS_URL_PROP = /\b(?:src|href|srcSet|srcset|poster|imageSrcSet)\s*:\s*["'`]/g;
-// A JS string literal at the text start.
-// The capture is its body, escapes included.
-const JS_STRING_LITERALS = new Map([
-  // A double-quoted string.
-  ['"', /^"((?:[^"\\]|\\[\s\S])*)"/],
-  // A single-quoted string.
-  ["'", /^'((?:[^'\\]|\\[\s\S])*)'/],
-  // A template string.
-  ['`', /^`((?:[^`\\]|\\[\s\S])*)`/],
-]);
-const JS_ESCAPED_QUOTE = /\\(["'])/g;
-// A JS escape: `\u{…}`, `\uXXXX`, `\xXX`, or one escaped character.
-const JS_ESCAPE = /\\(u\{[0-9a-fA-F]+\}|u[0-9a-fA-F]{4}|x[0-9a-fA-F]{2}|[\s\S])/g;
-// The marks around the hex digits of an escape.
-const JS_CODE_MARKS = /^u\{?|^x|\}$/g;
-const JS_SIMPLE_ESCAPES = new Map([
-  ['n', '\n'],
-  ['r', '\r'],
-  ['t', '\t'],
-]);
+// A quote, a space or a bracket ends it.
+const CHART_HOST_URL = /(?:https?:)?\/\/[\w.-]*image-charts\.com[^\s"'`<>\\]*/gi;
+// JS props holding one URL, then props holding a srcset.
+const JS_URL_PROPS = new Set(['src', 'href', 'poster', 'srcSet', 'srcset', 'imageSrcSet']);
+const JS_SRCSET_PROPS = new Set(['srcSet', 'srcset', 'imageSrcSet']);
+const JS_STRING_TOKENS = new Set([acorn.tokTypes.string, acorn.tokTypes.template]);
+const JS_OPTIONS = { ecmaVersion: 'latest' };
+// JSON held in a JS string escapes slashes.
+const JSON_SLASH = String.raw`\/`;
+// Highlighting spans split the text of a code block.
+const CODE_ELEMENTS = new Set(['code', 'pre']);
+const RAW_TEXT_ELEMENTS = new Set(['script', 'style']);
+
+function isRenderedText(node) {
+  return DomUtils.isText(node) && !RAW_TEXT_ELEMENTS.has(node.parent.name);
+}
+
+function fail(message) {
+  console.error(`Error: ${message}`);
+  process.exit(1);
+}
 
 /** The query the chart server receives for `value`, or none. */
 function chartQueries(value, base) {
@@ -99,11 +82,11 @@ function chartQueries(value, base) {
   if (isChartHost && isChartPath) {
     // The editor keeps a signed query byte for byte.
     // A `#` stays, so the check reports where the browser cuts.
-    return [`${url.search.slice(1)}${CHART_HOSTS.has(host) ? url.hash : ''}`];
+    return [`${url.search.slice(1)}${url.hash}`];
   }
   // The editor requests the chart URL of its hash.
   // It sends the query as received.
-  const hash = url.hash.slice(1).split('#', 1).at(0);
+  const hash = url.hash.slice(1);
   const isEditorHash = host === EDITOR_HOST && hash !== '' && chartQueries(hash, undefined).length > 0;
   return isEditorHash ? [hash.slice(hash.indexOf('?') + 1)] : [];
 }
@@ -113,17 +96,22 @@ function srcsetUrls(srcset) {
   return [...srcset.matchAll(SRCSET_CANDIDATE)].map(match => match[1]);
 }
 
-/** URLs of CSS url() and image-set() strings. */
+/** CSS function nodes of `nodes`, nested ones included. */
+function cssFunctions(nodes) {
+  return nodes.flatMap(node => (node.type === 'function' ? [node, ...cssFunctions(node.nodes)] : []));
+}
+
+/** CSS url() and image-set() URLs, with their place. */
 function cssUrls(css) {
-  const urls = [...css.matchAll(CSS_URL)].map(match => ({ index: match.index, url: match.slice(1).join(''), kind: 'url()' }));
-  const imageSetStrings = [...css.matchAll(CSS_IMAGE_SET)].flatMap(imageSet =>
-    [...imageSet[1].matchAll(IMAGE_SET_STRING)].map(candidate => ({
-      index: imageSet.index,
-      url: candidate.slice(2).join(''),
-      kind: 'image-set()',
-    }))
-  );
-  return [...urls, ...imageSetStrings];
+  return cssFunctions(valueParser(css).nodes).flatMap(node => {
+    const name = node.value.toLowerCase();
+    const place = { index: node.sourceIndex, end: node.sourceEndIndex };
+    if (name === CSS_URL_FUNCTION) {
+      return node.nodes.filter(child => CSS_URL_NODES.has(child.type)).map(child => ({ ...place, url: child.value, kind: 'url()' }));
+    }
+    const strings = CSS_IMAGE_SET_FUNCTIONS.has(name) ? node.nodes.filter(child => child.type === 'string') : [];
+    return strings.map(child => ({ ...place, url: child.value, kind: 'image-set()' }));
+  });
 }
 
 /** The URL a meta refresh navigates to, or none. */
@@ -151,123 +139,90 @@ function attributeUrls(element, name, attribute) {
   if (name === PING_ATTRIBUTE) {
     return attribute.split(WHITESPACE_RUN).filter(url => url !== '');
   }
-  return name === 'style' ? cssUrls(attribute).map(found => found.url) : [];
-}
-
-function lineAt(text, index) {
-  return text.slice(0, index).split('\n').length;
+  return name === 'style' ? cssUrls(attribute).map(cssUrl => cssUrl.url) : [];
 }
 
 /** Chart requests of `urls`, found at `place.index` of `place.text`. */
 function requestsAt(place, urls, base) {
-  const line = lineAt(place.text, place.index);
-  return urls.flatMap(url => chartQueries(url, base).map(query => ({ line, where: place.where, url, query })));
+  const requests = urls.flatMap(url => chartQueries(url, base).map(query => ({ where: place.where, url, query })));
+  // Bundles are large: compute the line for requests only.
+  return requests.length > 0 ? requests.map(request => ({ ...request, line: lineAt(place.text, place.index) })) : [];
 }
 
 function chartRequestsInCss(css, base) {
-  return cssUrls(css).flatMap(found => requestsAt({ text: css, index: found.index, where: found.kind }, [found.url], base));
+  return cssUrls(css).flatMap(cssUrl => requestsAt({ text: css, index: cssUrl.index, where: cssUrl.kind }, [cssUrl.url], base));
 }
 
-function unescapeJs(escape, sequence) {
-  if (sequence.length > 1) {
-    return String.fromCodePoint(Number.parseInt(sequence.replaceAll(JS_CODE_MARKS, ''), 16));
-  }
-  return JS_SIMPLE_ESCAPES.has(sequence) ? JS_SIMPLE_ESCAPES.get(sequence) : sequence;
-}
-
-/** Value of the JS string literal opening at `quoteIndex`. */
-function jsStringAt(js, quoteIndex) {
-  const literal = js.slice(quoteIndex).match(JS_STRING_LITERALS.get(js.at(quoteIndex)));
-  return literal ? literal[1].replaceAll(JS_ESCAPE, unescapeJs) : '';
-}
-
-/** `text` with its JS escapes decoded, up to `MAX_UNESCAPES` levels. */
-function unescapeJsDeep(text, level = 0) {
-  const unescaped = text.replaceAll(JS_ESCAPE, unescapeJs);
-  return unescaped === text || level + 1 >= MAX_UNESCAPES ? unescaped : unescapeJsDeep(unescaped, level + 1);
-}
-
-/** Chart host URLs written anywhere in `text`, JS escapes decoded. */
+/** Chart host URLs written in `text`. */
 function chartHostUrls(text) {
-  return [...text.matchAll(CHART_HOST_URL)].map(match => {
-    const url = unescapeJsDeep(match.at(0)).split(URL_END, 1).at(0);
-    const isBareCssUrl = BARE_CSS_URL_OPENING.test(text.slice(Math.max(0, match.index - MAX_CSS_URL_OPENING), match.index));
-    return { index: match.index, url: isBareCssUrl ? url.split(CSS_URL_END, 1).at(0) : url };
-  });
+  return [...text.matchAll(CHART_HOST_URL)].map(match => ({ index: match.index, url: match.at(0) }));
 }
 
 /**
  * Chart queries a page renders.
- * They are in its text or its attributes.
- * A bundle URL among them is already in the HTML.
+ * They are in its text nodes, code blocks and attributes.
+ * Each text is read alone.
+ * No prose is glued to a URL.
  */
 function renderedChartQueries(html, base) {
   const document = parseDocument(html);
-  const attributes = DomUtils.findAll(() => true, document.children).flatMap(element => Object.values(element.attribs));
-  const rendered = [DomUtils.textContent(document), ...attributes].join('\n');
-  return chartHostUrls(rendered).flatMap(found => chartQueries(found.url, base));
-}
-
-function byCodeUnits(left, right) {
-  return left < right ? -1 : Number(left > right);
+  const elements = DomUtils.findAll(() => true, document.children);
+  const texts = DomUtils.filter(isRenderedText, document.children).map(node => node.data);
+  const code = elements.filter(element => CODE_ELEMENTS.has(element.name)).map(element => DomUtils.textContent(element));
+  const attributes = elements.flatMap(element => Object.values(element.attribs));
+  return [...texts, ...code, ...attributes].flatMap(chartHostUrls).flatMap(hostUrl => chartQueries(hostUrl.url, base));
 }
 
 /**
- * Index of the first of `sorted` not below `value`.
- * It is found by binary search.
+ * String and template values of a script, decoded by acorn.
+ * `prop` is the URL prop set to the value.
  */
-function firstNotBelow(sorted, value, low = 0, high = sorted.length) {
-  if (low >= high) {
-    return low;
+function jsStrings(js) {
+  const tokens = [...acorn.tokenizer(js, JS_OPTIONS)];
+  return tokens.flatMap((token, index) => {
+    if (!JS_STRING_TOKENS.has(token.type)) {
+      return [];
+    }
+    const key = index >= 2 && tokens[index - 1].type === acorn.tokTypes.colon ? String(tokens[index - 2].value) : '';
+    const text = typeof token.value === 'string' ? token.value.replaceAll(JSON_SLASH, '/') : '';
+    return [{ index: token.start, text, prop: JS_URL_PROPS.has(key) ? key : '' }];
+  });
+}
+
+function propUrls(string) {
+  if (string.prop === '') {
+    return [];
   }
-  const middle = Math.floor((low + high) / 2);
-  return sorted[middle] < value ? firstNotBelow(sorted, value, middle + 1, high) : firstNotBelow(sorted, value, low, middle);
+  return JS_SRCSET_PROPS.has(string.prop) ? srcsetUrls(string.text) : [string.text];
 }
 
 /**
- * Whether a query is rendered by one of `queries`.
- * Page text glues the next prose to a code URL.
- * So a rendered query may extend `query`.
- */
-function isRenderedIn(queries) {
-  const sorted = [...new Set(queries)].sort(byCodeUnits);
-  return query => {
-    // It extends `query` if any rendered query does.
-    const index = firstNotBelow(sorted, query);
-    return index < sorted.length && sorted[index].startsWith(query);
-  };
-}
-
-/**
- * Chart requests of a JS bundle.
- * They are URL props and CSS url() in strings.
+ * Chart requests of a JS bundle or inline script.
+ * They are URL props, url() and image-set() in strings.
  * The browser sets a chart URL that no page renders.
  * `<BrowserOnly>` does that: such a URL counts too.
  * Text children are rendered, so they are not requests.
  */
-function chartRequestsInJs(js, base, isRendered) {
-  const props = [...js.matchAll(JS_URL_PROP)].flatMap(match => {
-    const propString = jsStringAt(js, match.index + match.at(0).length - 1);
-    const urls = match.at(0).toLowerCase().includes('srcset') ? srcsetUrls(propString) : [propString];
-    return requestsAt({ text: js, index: match.index, where: 'JS URL prop' }, urls, base);
+function chartRequestsInJs(js, base, renderedQueries) {
+  return jsStrings(js).flatMap(string => {
+    const place = where => ({ text: js, index: string.index, where });
+    const props = requestsAt(place('JS URL prop'), propUrls(string), base);
+    const css = cssUrls(string.text);
+    const styles = css.flatMap(cssUrl => requestsAt(place(`JS ${cssUrl.kind}`), [cssUrl.url], base));
+    const known = new Set([...props, ...styles].map(request => request.query));
+    const textUrls = chartHostUrls(string.text).filter(url => !css.some(cssUrl => url.index >= cssUrl.index && url.index < cssUrl.end));
+    const textRequests = textUrls.flatMap(url => requestsAt(place('JS string no page renders'), [url.url], base));
+    const clientOnly = textRequests.filter(request => !renderedQueries.has(request.query) && !known.has(request.query));
+    return [...props, ...styles, ...clientOnly];
   });
-  const unquoted = js.replaceAll(JS_ESCAPED_QUOTE, '$1');
-  const styles = cssUrls(unquoted).flatMap(found =>
-    requestsAt({ text: unquoted, index: found.index, where: `JS ${found.kind}` }, [found.url], base)
-  );
-  const propAndStyleQueries = new Set([...props, ...styles].map(request => request.query));
-  const clientOnly = chartHostUrls(js).flatMap(url => {
-    const requests = requestsAt({ text: js, index: url.index, where: 'JS string no page renders' }, [url.url], base);
-    return requests.filter(request => !isRendered(request.query) && !propAndStyleQueries.has(request.query));
-  });
-  return [...props, ...styles, ...clientOnly];
 }
 
-// An inline script is in its page.
-// So it is rendered.
+// Nothing renders the text of an inline script.
+// So every chart URL in it counts.
+const NOTHING_RENDERED = new Set();
 const RAW_TEXT_CHECKERS = new Map([
   ['style', chartRequestsInCss],
-  ['script', (js, base) => chartRequestsInJs(js, base, () => true)],
+  ['script', (js, base) => chartRequestsInJs(js, base, NOTHING_RENDERED)],
 ]);
 
 /** Chart requests of an inline `<style>` or `<script>`. */
@@ -319,7 +274,7 @@ function readFile(file) {
   // comply-ignore: security-detect-non-literal-fs-filename — file comes from listFiles(BUILD_DIR)
   const text = fs.readFileSync(file, 'utf8');
   if (Buffer.byteLength(text) > MAX_FILE_BYTES) {
-    throw new Error(`build/${relative} is larger than ${MAX_FILE_BYTES} bytes`);
+    fail(`build/${relative} is larger than ${MAX_FILE_BYTES} bytes`);
   }
   return {
     file: `build/${relative}`,
@@ -329,8 +284,20 @@ function readFile(file) {
   };
 }
 
-function checkFile(built, isRendered) {
-  return CHECKERS.get(built.extension)(built.text, built.base, isRendered).map(request => ({
+/** Chart requests of a file. Unparsable JS stops the check. */
+function fileRequests(built, renderedQueries) {
+  try {
+    return CHECKERS.get(built.extension)(built.text, built.base, renderedQueries);
+  } catch (error) {
+    if (!(error instanceof SyntaxError)) {
+      throw error;
+    }
+    return fail(`${built.file}: its JS does not parse, so its chart URLs cannot be checked (${error.message})`);
+  }
+}
+
+function checkFile(built, renderedQueries) {
+  return fileRequests(built, renderedQueries).map(request => ({
     ...request,
     ...urlState(request.query, KEYS),
     file: built.file,
@@ -340,30 +307,22 @@ function checkFile(built, isRendered) {
 function main() {
   const files = listFiles(BUILD_DIR, EXTENSIONS);
   if (!files.some(file => file.endsWith('.html'))) {
-    throw new Error('build/ has no HTML page: run `docusaurus build` first');
+    fail('build/ has no HTML page: run `docusaurus build` first');
   }
   if (files.length > MAX_FILES) {
-    throw new Error(`More than ${MAX_FILES} files to check in build/`);
+    fail(`More than ${MAX_FILES} files to check in build/`);
   }
   const builtFiles = files.map(readFile);
   const pages = builtFiles.filter(built => built.extension === '.html');
-  const isRendered = isRenderedIn(pages.flatMap(page => renderedChartQueries(page.text, page.base)));
-  const requests = builtFiles.flatMap(built => checkFile(built, isRendered));
+  const renderedQueries = new Set(pages.flatMap(page => renderedChartQueries(page.text, page.base)));
+  const requests = builtFiles.flatMap(built => checkFile(built, renderedQueries));
   const bad = requests.filter(request => request.state !== 'signed');
-  for (const request of bad.slice(0, MAX_REPORTED)) {
+  const lines = bad.map(request => {
     const reason = Object.hasOwn(request, 'problem') ? request.problem : `${request.state} chart request`;
     const url = request.url.length > MAX_SHOWN_URL ? `${request.url.slice(0, MAX_SHOWN_URL)}…` : request.url;
-    console.log(`${request.file}:${request.line}: ${reason} in ${request.where}: ${url}`);
-  }
-  if (bad.length > MAX_REPORTED) {
-    console.log(`... and ${bad.length - MAX_REPORTED} more`);
-  }
-  const count = state => requests.filter(request => request.state === state).length;
-  const scope = SECRET_KEY ? '' : ' (presence only, signatures not checked)';
-  console.log(
-    `Built chart requests: ${count('signed')} signed, ${count('unsigned')} unsigned, ${count('invalid')} invalid, ` +
-      `${count('foreign')} of another account${scope}`
-  );
+    return `${request.file}:${request.line}: ${reason} in ${request.where}: ${url}`;
+  });
+  report('Built chart requests', lines, requests.map(request => request.state));
   if (bad.length > 0) {
     const leftUnsigned = bad.map(request => ({
       fix: BUILT_FIXES.has(request.state) ? request.state : 'signable',
@@ -375,7 +334,7 @@ function main() {
   }
 }
 
-module.exports = { chartRequestsInHtml, chartRequestsInCss, chartRequestsInJs, renderedChartQueries, isRenderedIn };
+module.exports = { chartRequestsInHtml, chartRequestsInCss, chartRequestsInJs, renderedChartQueries };
 
 if (require.main === module) {
   main();

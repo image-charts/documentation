@@ -178,10 +178,15 @@ function describeUrl(text, match, before, keys) {
     kind,
     rawQuery,
     base,
-    line: text.slice(0, start).split('\n').length,
+    line: lineAt(text, start),
     separator: rawQuery.includes('&amp;') ? '&amp;' : '&',
     ...urlState(sentQuery(rawQuery, kind), keys),
   };
+}
+
+/** Line number of `index` in `text`. */
+function lineAt(text, index) {
+  return text.slice(0, index).split('\n').length;
 }
 
 /** Every chart URL of `text` that the browser requests. */
@@ -241,8 +246,8 @@ function planFile(file, check) {
   // Only their generator writes GENERATED-*.md files.
   const isGenerated = path.basename(file).startsWith('GENERATED-');
   const rewrite = !check && !isGenerated;
-  const signed = rewrite ? signText(text, KEYS) : { urls: scan(text, KEYS), text };
-  const notSigned = signed.urls.filter(url => url.state !== 'signed');
+  const planned = rewrite ? signText(text, KEYS) : { urls: scan(text, KEYS), text };
+  const notSigned = planned.urls.filter(url => url.state !== 'signed');
   const leftUnsigned = notSigned.filter(url => !rewrite || url.problem);
   const fixOf = url => {
     if (url.problem) {
@@ -252,9 +257,9 @@ function planFile(file, check) {
   };
   return {
     file,
-    text: signed.text,
-    isChanged: signed.text !== text,
-    states: signed.urls.map(url => url.state),
+    text: planned.text,
+    isChanged: planned.text !== text,
+    states: planned.urls.map(url => url.state),
     leftUnsigned: leftUnsigned.map(url => ({ fix: fixOf(url), location: `${relative}:${url.line}` })),
     messages: notSigned.map(url => urlMessage(relative, url, rewrite)),
   };
@@ -278,17 +283,21 @@ function fixLines(leftUnsigned, fixes) {
   });
 }
 
-function report(messages, states) {
+/**
+ * Prints the first `MAX_REPORTED` lines, then counts each state.
+ * Without the key, it says signatures were not checked.
+ */
+function report(title, lines, states) {
   const count = state => states.filter(urlStateName => urlStateName === state).length;
-  for (const message of messages.slice(0, MAX_REPORTED)) {
-    console.log(message);
+  for (const line of lines.slice(0, MAX_REPORTED)) {
+    console.log(line);
   }
-  if (messages.length > MAX_REPORTED) {
-    console.log(`... and ${messages.length - MAX_REPORTED} more`);
+  if (lines.length > MAX_REPORTED) {
+    console.log(`... and ${lines.length - MAX_REPORTED} more`);
   }
   const scope = SECRET_KEY ? '' : ' (presence only, signatures not checked)';
   console.log(
-    `Chart URLs: ${count('signed')} signed, ${count('unsigned')} unsigned, ${count('invalid')} invalid, ` +
+    `${title}: ${count('signed')} signed, ${count('unsigned')} unsigned, ${count('invalid')} invalid, ` +
       `${count('foreign')} of another account, ${count('broken')} cut by "#"${scope}`
   );
 }
@@ -312,6 +321,7 @@ function main() {
     fs.writeFileSync(plan.file, plan.text);
   }
   report(
+    'Chart URLs',
     plans.flatMap(plan => plan.messages),
     plans.flatMap(plan => plan.states)
   );
@@ -323,7 +333,7 @@ function main() {
   }
 }
 
-module.exports = { scan, signText, urlState, isSignatureValid, listFiles, fixLines };
+module.exports = { KEYS, scan, signText, urlState, listFiles, fixLines, report, lineAt };
 
 if (require.main === module) {
   main();
