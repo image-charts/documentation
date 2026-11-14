@@ -32,6 +32,14 @@ const TRAILING_DOT = /\.$/;
 // Attributes holding one URL, then attributes holding a srcset.
 const URL_ATTRIBUTES = new Set(['src', 'href', 'poster', 'data', 'background', 'action', 'formaction', 'xlink:href']);
 const SRCSET_ATTRIBUTES = new Set(['srcset', 'imagesrcset']);
+// `ping` holds URLs split by whitespace.
+const PING_ATTRIBUTE = 'ping';
+const WHITESPACE_RUN = /\s+/;
+// What precedes the URL of a meta refresh.
+// That is its delay, a separator and `url=`.
+const META_REFRESH_PREFIX = /^\s*[\d.]*\s*[;,]?\s*(?:url\s*=\s*)?/i;
+const QUOTES = new Set(['"', "'"]);
+const REFRESH = 'refresh';
 // A srcset candidate: its URL, then trailing commas or descriptors.
 // The URL is a run of non-whitespace.
 const SRCSET_CANDIDATE = /[\s,]*(\S*[^\s,])(?:,+(?=\s|$)|\s+[^,]*)?/g;
@@ -118,13 +126,30 @@ function cssUrls(css) {
   return [...urls, ...imageSetStrings];
 }
 
-function attributeUrls(tag, name, attribute) {
-  const isMetaContent = tag === 'meta' && name === 'content';
+/** The URL a meta refresh navigates to, or none. */
+function metaRefreshUrls(content) {
+  const rest = content.replace(META_REFRESH_PREFIX, '');
+  const quote = rest.at(0);
+  // A quoted URL ends at its closing quote.
+  const unquoted = QUOTES.has(quote) ? rest.slice(1).split(quote, 1) : [rest];
+  const url = unquoted.at(0).trim();
+  return url === '' ? [] : [url];
+}
+
+function attributeUrls(element, name, attribute) {
+  const isMetaContent = element.name === 'meta' && name === 'content';
+  const isRefresh = isMetaContent && String(element.attribs['http-equiv']).toLowerCase() === REFRESH;
+  if (isRefresh) {
+    return metaRefreshUrls(attribute);
+  }
   if (URL_ATTRIBUTES.has(name) || isMetaContent) {
     return [attribute];
   }
   if (SRCSET_ATTRIBUTES.has(name)) {
     return srcsetUrls(attribute);
+  }
+  if (name === PING_ATTRIBUTE) {
+    return attribute.split(WHITESPACE_RUN).filter(url => url !== '');
   }
   return name === 'style' ? cssUrls(attribute).map(found => found.url) : [];
 }
@@ -266,7 +291,7 @@ function chartRequestsInHtml(html, base) {
   return DomUtils.findAll(() => true, document.children).flatMap(element => {
     const attributeRequests = Object.entries(element.attribs).flatMap(([name, attribute]) => {
       const place = { text: html, index: element.startIndex, where: `<${element.name} ${name}>` };
-      return requestsAt(place, attributeUrls(element.name, name, attribute), base);
+      return requestsAt(place, attributeUrls(element, name, attribute), base);
     });
     return [...attributeRequests, ...rawTextRequests(html, element, base)];
   });

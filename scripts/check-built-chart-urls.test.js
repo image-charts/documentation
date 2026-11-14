@@ -47,6 +47,14 @@ const LOADED_SHAPES = [
   '<a href="https://image-charts.com/chart?cht=p&amp;chs=100x116">open</a>',
   '<style>.x{background:url("https://image-charts.com/chart?cht=p&chs=100x117")}</style>',
   '<script>window.x={src:"https://image-charts.com/chart?cht=p&chs=100x118"}</script>',
+  '<meta http-equiv="refresh" content="0;url=https://image-charts.com/chart?cht=p&amp;chs=100x119"/>',
+  '<meta http-equiv="Refresh" content="5; URL=\'https://image-charts.com/chart?cht=p&amp;chs=100x120\'"/>',
+  '<a href="/x" ping="/track https://image-charts.com/chart?cht=p&amp;chs=100x121">x</a>',
+  '<map name="m"><area href="/x" ping="https://image-charts.com/chart?cht=p&amp;chs=100x122"></map>',
+  '<object data="https://image-charts.com/chart?cht=p&amp;chs=100x123"></object>',
+  '<table background="https://image-charts.com/chart?cht=p&amp;chs=100x124"></table>',
+  '<link rel="preload" as="image" imagesrcset="https://image-charts.com/chart?cht=p&amp;chs=100x125 1x"/>',
+  '<video poster="https://image-charts.com/chart?cht=p&amp;chs=100x126"></video>',
 ];
 
 test('every shape the browser loads is a chart request, unsigned', () => {
@@ -66,6 +74,9 @@ test('text, code and other hosts are not chart requests', () => {
     '<a href="https://image-charts.com/pricing">pricing</a>',
     '<a href="https://editor.image-charts.com/">editor</a>',
     '<a href="https://editor.image-charts.com/?tab_viewer=image#https:/example.com/chart?cht=p">elsewhere</a>',
+    '<meta http-equiv="refresh" content="30"/>',
+    '<meta http-equiv="refresh" content="0;url=/chart-js/"/>',
+    '<a href="/x" ping="/track /count">x</a>',
   ].join('\n');
   assert.deepEqual(statesOfHtml(html), []);
 });
