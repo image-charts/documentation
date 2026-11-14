@@ -5,7 +5,7 @@
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
-    "build": "npm run generate && docusaurus build",
+    "build": "npm run generate && npm run check:chart-urls && docusaurus build",
     "build:docs-only": "docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
@@ -16,7 +16,9 @@
     "generate": "npm run generate:error-codes && npm run generate:google-fonts && npm run generate:gallery",
     "generate:error-codes": "node scripts/generate-error-codes.js",
     "generate:google-fonts": "node scripts/generate-google-fonts.js",
-    "generate:gallery": "node scripts/generate-gallery.js"
+    "generate:gallery": "node scripts/generate-gallery.js",
+    "sign:chart-urls": "node scripts/sign-chart-urls.js",
+    "check:chart-urls": "node scripts/sign-chart-urls.js --check"
   },
   "dependencies": {
     "@docusaurus/core": "^3.9.2",

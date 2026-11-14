@@ -24,7 +24,7 @@ GraphViz charts *support a different set of required parameters*:
 
 #### Simple Graph
 
-[![chart](https://image-charts.com/chart?chs=700x200&cht=gv&chl=graph%20%7Ba%20--%20b;b%20--%20c;a%20--%20c;d%20--%20c;e%20--%20c;e%20--%20a;%7D)](https://editor.image-charts.com/chart?chs=700x200&cht=gv&chl=graph%20%7Ba%20--%20b;b%20--%20c;a%20--%20c;d%20--%20c;e%20--%20c;e%20--%20a;%7D)
+[![chart](https://image-charts.com/chart?chs=700x200&cht=gv&chl=graph%20%7Ba%20--%20b;b%20--%20c;a%20--%20c;d%20--%20c;e%20--%20c;e%20--%20a;%7D&icac=documentation&ichm=53f9b2bc788829947c7d5f8798387b515c0786ed27a40b94aa912b0bb2909c02)](https://editor.image-charts.com/chart?chs=700x200&cht=gv&chl=graph%20%7Ba%20--%20b;b%20--%20c;a%20--%20c;d%20--%20c;e%20--%20c;e%20--%20a;%7D)
 
 ```
 cht=gv
@@ -40,7 +40,7 @@ chl=graph {
 
 #### K6
 
-[![chart](https://image-charts.com/chart?chs=700x200&cht=gv&chl=graph%20%7Ba%20--%20b;b%20--%20c;c%20--%20d;d%20--%20e;e%20--%20f;a%20--%20f;a%20--%20c;a%20--%20d;a%20--%20e;b%20--%20d;b%20--%20e;b%20--%20f;c%20--%20e;c%20--%20f;d%20--%20f;%7D)](https://editor.image-charts.com/chart?chs=700x200&cht=gv&chl=graph%20%7Ba%20--%20b;b%20--%20c;c%20--%20d;d%20--%20e;e%20--%20f;a%20--%20f;a%20--%20c;a%20--%20d;a%20--%20e;b%20--%20d;b%20--%20e;b%20--%20f;c%20--%20e;c%20--%20f;d%20--%20f;%7D)
+[![chart](https://image-charts.com/chart?chs=700x200&cht=gv&chl=graph%20%7Ba%20--%20b;b%20--%20c;c%20--%20d;d%20--%20e;e%20--%20f;a%20--%20f;a%20--%20c;a%20--%20d;a%20--%20e;b%20--%20d;b%20--%20e;b%20--%20f;c%20--%20e;c%20--%20f;d%20--%20f;%7D&icac=documentation&ichm=097e9a0df3a4f2d3e8d3175684bfc59af8c72d22ab16801ede0adc788fe91b61)](https://editor.image-charts.com/chart?chs=700x200&cht=gv&chl=graph%20%7Ba%20--%20b;b%20--%20c;c%20--%20d;d%20--%20e;e%20--%20f;a%20--%20f;a%20--%20c;a%20--%20d;a%20--%20e;b%20--%20d;b%20--%20e;b%20--%20f;c%20--%20e;c%20--%20f;d%20--%20f;%7D)
 
 ```
 cht=gv
@@ -65,7 +65,7 @@ chl=graph {
 
 #### Simple Digraph
 
-[![chart](https://image-charts.com/chart?chs=700x200&cht=gv&chl=digraph%7Ba%20-%3E%20b;b%20-%3E%20c;c%20-%3E%20d;d%20-%3E%20a;%7D)](https://editor.image-charts.com/chart?chs=700x200&cht=gv&chl=digraph%7Ba%20-%3E%20b;b%20-%3E%20c;c%20-%3E%20d;d%20-%3E%20a;%7D)
+[![chart](https://image-charts.com/chart?chs=700x200&cht=gv&chl=digraph%7Ba%20-%3E%20b;b%20-%3E%20c;c%20-%3E%20d;d%20-%3E%20a;%7D&icac=documentation&ichm=1c0bdf95564661b3a33db3283308fd3ad6ae6792c9dcc276456e8abbe4645139)](https://editor.image-charts.com/chart?chs=700x200&cht=gv&chl=digraph%7Ba%20-%3E%20b;b%20-%3E%20c;c%20-%3E%20d;d%20-%3E%20a;%7D)
 
 ```
 cht=gv
@@ -79,7 +79,7 @@ chl=digraph {
 
 #### Full Digraph
 
-[![chart](https://image-charts.com/chart?chs=700x200&cht=gv&chl=digraph%20%7Ba%20-%3E%20b%5Blabel=%220.2%22,weight=%220.2%22%5D;a%20-%3E%20c%5Blabel=%220.4%22,weight=%220.4%22%5D;c%20-%3E%20b%5Blabel=%220.6%22,weight=%220.6%22%5D;c%20-%3E%20e%5Blabel=%220.6%22,weight=%220.6%22%5D;e%20-%3E%20e%5Blabel=%220.1%22,weight=%220.1%22%5D;e%20-%3E%20b%5Blabel=%220.7%22,weight=%220.7%22%5D;%7D)](https://editor.image-charts.com/chart?chs=700x200&cht=gv&chl=digraph%20%7Ba%20-%3E%20b%5Blabel=%220.2%22,weight=%220.2%22%5D;a%20-%3E%20c%5Blabel=%220.4%22,weight=%220.4%22%5D;c%20-%3E%20b%5Blabel=%220.6%22,weight=%220.6%22%5D;c%20-%3E%20e%5Blabel=%220.6%22,weight=%220.6%22%5D;e%20-%3E%20e%5Blabel=%220.1%22,weight=%220.1%22%5D;e%20-%3E%20b%5Blabel=%220.7%22,weight=%220.7%22%5D;%7D)
+[![chart](https://image-charts.com/chart?chs=700x200&cht=gv&chl=digraph%20%7Ba%20-%3E%20b%5Blabel=%220.2%22,weight=%220.2%22%5D;a%20-%3E%20c%5Blabel=%220.4%22,weight=%220.4%22%5D;c%20-%3E%20b%5Blabel=%220.6%22,weight=%220.6%22%5D;c%20-%3E%20e%5Blabel=%220.6%22,weight=%220.6%22%5D;e%20-%3E%20e%5Blabel=%220.1%22,weight=%220.1%22%5D;e%20-%3E%20b%5Blabel=%220.7%22,weight=%220.7%22%5D;%7D&icac=documentation&ichm=9c120a955ec70ff13d039a16f28f6eb780ab71c3da345d33439230a266887b7b)](https://editor.image-charts.com/chart?chs=700x200&cht=gv&chl=digraph%20%7Ba%20-%3E%20b%5Blabel=%220.2%22,weight=%220.2%22%5D;a%20-%3E%20c%5Blabel=%220.4%22,weight=%220.4%22%5D;c%20-%3E%20b%5Blabel=%220.6%22,weight=%220.6%22%5D;c%20-%3E%20e%5Blabel=%220.6%22,weight=%220.6%22%5D;e%20-%3E%20e%5Blabel=%220.1%22,weight=%220.1%22%5D;e%20-%3E%20b%5Blabel=%220.7%22,weight=%220.7%22%5D;%7D)
 
 ```
 cht=gv
@@ -95,7 +95,7 @@ chl=digraph {
 
 #### Showing A Path
 
-[![chart](https://image-charts.com/chart?chs=700x200&cht=gv&chl=graph%20%7Ba%20--%20b%5Bcolor=red,penwidth=3.0%5D;b%20--%20c;c%20--%20d%5Bcolor=red,penwidth=3.0%5D;d%20--%20e;e%20--%20f;a%20--%20d;b%20--%20d%5Bcolor=red,penwidth=3.0%5D;c%20--%20f%5Bcolor=red,penwidth=3.0%5D;%7D)](https://editor.image-charts.com/chart?chs=700x200&cht=gv&chl=graph%20%7Ba%20--%20b%5Bcolor=red,penwidth=3.0%5D;b%20--%20c;c%20--%20d%5Bcolor=red,penwidth=3.0%5D;d%20--%20e;e%20--%20f;a%20--%20d;b%20--%20d%5Bcolor=red,penwidth=3.0%5D;c%20--%20f%5Bcolor=red,penwidth=3.0%5D;%7D)
+[![chart](https://image-charts.com/chart?chs=700x200&cht=gv&chl=graph%20%7Ba%20--%20b%5Bcolor=red,penwidth=3.0%5D;b%20--%20c;c%20--%20d%5Bcolor=red,penwidth=3.0%5D;d%20--%20e;e%20--%20f;a%20--%20d;b%20--%20d%5Bcolor=red,penwidth=3.0%5D;c%20--%20f%5Bcolor=red,penwidth=3.0%5D;%7D&icac=documentation&ichm=aaa27782ccd31665a5c5647481aceaa2bcbcaf20bd654a427b64c29e5cbc439d)](https://editor.image-charts.com/chart?chs=700x200&cht=gv&chl=graph%20%7Ba%20--%20b%5Bcolor=red,penwidth=3.0%5D;b%20--%20c;c%20--%20d%5Bcolor=red,penwidth=3.0%5D;d%20--%20e;e%20--%20f;a%20--%20d;b%20--%20d%5Bcolor=red,penwidth=3.0%5D;c%20--%20f%5Bcolor=red,penwidth=3.0%5D;%7D)
 
 
 ```
@@ -114,7 +114,7 @@ chl=graph {
 
 Note that there's also a shorthand method as follows:
 
-[![chart](https://image-charts.com/chart?chs=700x200&cht=gv&chl=graph%20%7Ba%20--%20b%20--%20d%20--%20c%20--%20f%5Bcolor=red,penwidth=3.0%5D;b%20--%20c;d%20--%20e;e%20--%20f;a%20--%20d;%7D)](https://editor.image-charts.com/chart?chs=700x200&cht=gv&chl=graph%20%7Ba%20--%20b%20--%20d%20--%20c%20--%20f%5Bcolor=red,penwidth=3.0%5D;b%20--%20c;d%20--%20e;e%20--%20f;a%20--%20d;%7D)
+[![chart](https://image-charts.com/chart?chs=700x200&cht=gv&chl=graph%20%7Ba%20--%20b%20--%20d%20--%20c%20--%20f%5Bcolor=red,penwidth=3.0%5D;b%20--%20c;d%20--%20e;e%20--%20f;a%20--%20d;%7D&icac=documentation&ichm=830e5825a4fd142d3647e3c3ff670ebf27e5f510cdab7437bfb60b8a8408abf8)](https://editor.image-charts.com/chart?chs=700x200&cht=gv&chl=graph%20%7Ba%20--%20b%20--%20d%20--%20c%20--%20f%5Bcolor=red,penwidth=3.0%5D;b%20--%20c;d%20--%20e;e%20--%20f;a%20--%20d;%7D)
 
 ```
 cht=gv
@@ -131,7 +131,7 @@ chl=graph {
 
 Please note there are some quirks here, First the name of the subgraphs are important, to be visually separated they must be prefixed with cluster_ as shown below, and second only the `cht=gv:dot` and `cht=gv:fdp` layout support subgraphs (See the graph generation page for more information on the layout methods)
 
-[![chart](https://image-charts.com/chart?chs=700x200&cht=gv&chl=digraph%20%7Bsubgraph%20cluster_0%20%7Blabel=%22Subgraph%20A%22;a%20-%3E%20b;b%20-%3E%20c;c%20-%3E%20d;%7Dsubgraph%20cluster_1%20%7Blabel=%22Subgraph%20B%22;a%20-%3E%20f;f%20-%3E%20c;%7D%7D)](https://editor.image-charts.com/chart?chs=700x200&cht=gv&chl=digraph%20%7Bsubgraph%20cluster_0%20%7Blabel=%22Subgraph%20A%22;a%20-%3E%20b;b%20-%3E%20c;c%20-%3E%20d;%7Dsubgraph%20cluster_1%20%7Blabel=%22Subgraph%20B%22;a%20-%3E%20f;f%20-%3E%20c;%7D%7D)
+[![chart](https://image-charts.com/chart?chs=700x200&cht=gv&chl=digraph%20%7Bsubgraph%20cluster_0%20%7Blabel=%22Subgraph%20A%22;a%20-%3E%20b;b%20-%3E%20c;c%20-%3E%20d;%7Dsubgraph%20cluster_1%20%7Blabel=%22Subgraph%20B%22;a%20-%3E%20f;f%20-%3E%20c;%7D%7D&icac=documentation&ichm=65f7486e4f496421484ee469175a7a9cfcd2a61bdf7d66490531e6a8c1bf6017)](https://editor.image-charts.com/chart?chs=700x200&cht=gv&chl=digraph%20%7Bsubgraph%20cluster_0%20%7Blabel=%22Subgraph%20A%22;a%20-%3E%20b;b%20-%3E%20c;c%20-%3E%20d;%7Dsubgraph%20cluster_1%20%7Blabel=%22Subgraph%20B%22;a%20-%3E%20f;f%20-%3E%20c;%7D%7D)
 
 ```
 cht=gv
@@ -154,7 +154,7 @@ chl=digraph {
 
 Another Example of a Subgraph, In this example I group nodes together seperately from their edges, And also uses the graph attribute splines=line; to specify that edges should be drawn only as straight lines, no curves allowed.
 
-[![chart](https://image-charts.com/chart?chs=700x200&cht=gv&chl=graph%20%7Bsplines=line;subgraph%20cluster_0%20%7Blabel=%22Subgraph%20A%22;a;%20b;%20c%7Dsubgraph%20cluster_1%20%7Blabel=%22Subgraph%20B%22;d;%20e;%7Da%20--%20e;a%20--%20d;b%20--%20d;b%20--%20e;c%20--%20d;c%20--%20e;%7D)](https://editor.image-charts.com/chart?chs=700x200&cht=gv&chl=graph%20%7Bsplines=line;subgraph%20cluster_0%20%7Blabel=%22Subgraph%20A%22;a;%20b;%20c%7Dsubgraph%20cluster_1%20%7Blabel=%22Subgraph%20B%22;d;%20e;%7Da%20--%20e;a%20--%20d;b%20--%20d;b%20--%20e;c%20--%20d;c%20--%20e;%7D)
+[![chart](https://image-charts.com/chart?chs=700x200&cht=gv&chl=graph%20%7Bsplines=line;subgraph%20cluster_0%20%7Blabel=%22Subgraph%20A%22;a;%20b;%20c%7Dsubgraph%20cluster_1%20%7Blabel=%22Subgraph%20B%22;d;%20e;%7Da%20--%20e;a%20--%20d;b%20--%20d;b%20--%20e;c%20--%20d;c%20--%20e;%7D&icac=documentation&ichm=e131081320f7f2a27ce6b1bccd2a5a1190f6f79e7d330b9deebc3e77e8f6c8cb)](https://editor.image-charts.com/chart?chs=700x200&cht=gv&chl=graph%20%7Bsplines=line;subgraph%20cluster_0%20%7Blabel=%22Subgraph%20A%22;a;%20b;%20c%7Dsubgraph%20cluster_1%20%7Blabel=%22Subgraph%20B%22;d;%20e;%7Da%20--%20e;a%20--%20d;b%20--%20d;b%20--%20e;c%20--%20d;c%20--%20e;%7D)
 
 ```
 cht=gv
@@ -183,7 +183,7 @@ chl=graph {
 
 A record node is a box with fields represented by alternating rows of horizontal or vertical subboxes. Flipping between horizontal and vertical layouts is done by nesting fields in braces `{...}`. ([Learn more about record nodes.](https://www.graphviz.org/doc/info/shapes.html#record))
 
-[![chart](https://image-charts.com/chart?chs=700x200&cht=gv&chl=digraph%20structs%20%7Bnode%20%5Bshape=record%5D;struct1%20%5Blabel=%22%3Cf0%3E%20left%7C%3Cf1%3E%20middle%7C%3Cf2%3E%20right%22%5D;struct2%20%5Blabel=%22%3Cf0%3E%20one%7C%3Cf1%3E%20two%22%5D;struct3%20%5Blabel=%22hello%20world%20%7C%7B%20b%20%7C%7Bc%7C%3Chere%3E%20d%7Ce%7D%7C%20f%7D%7C%20g%20%7C%20h%22%5D;struct1:f1%20-%3E%20struct2:f0;struct1:f2%20-%3E%20struct3:here;%7D)](https://editor.image-charts.com/chart?chs=700x200&cht=gv&chl=digraph%20structs%20%7Bnode%20%5Bshape=record%5D;struct1%20%5Blabel=%22%3Cf0%3E%20left%7C%3Cf1%3E%20middle%7C%3Cf2%3E%20right%22%5D;struct2%20%5Blabel=%22%3Cf0%3E%20one%7C%3Cf1%3E%20two%22%5D;struct3%20%5Blabel=%22hello%20world%20%7C%7B%20b%20%7C%7Bc%7C%3Chere%3E%20d%7Ce%7D%7C%20f%7D%7C%20g%20%7C%20h%22%5D;struct1:f1%20-%3E%20struct2:f0;struct1:f2%20-%3E%20struct3:here;%7D)
+[![chart](https://image-charts.com/chart?chs=700x200&cht=gv&chl=digraph%20structs%20%7Bnode%20%5Bshape=record%5D;struct1%20%5Blabel=%22%3Cf0%3E%20left%7C%3Cf1%3E%20middle%7C%3Cf2%3E%20right%22%5D;struct2%20%5Blabel=%22%3Cf0%3E%20one%7C%3Cf1%3E%20two%22%5D;struct3%20%5Blabel=%22hello%20world%20%7C%7B%20b%20%7C%7Bc%7C%3Chere%3E%20d%7Ce%7D%7C%20f%7D%7C%20g%20%7C%20h%22%5D;struct1:f1%20-%3E%20struct2:f0;struct1:f2%20-%3E%20struct3:here;%7D&icac=documentation&ichm=d91d9796936edad0e997b8ccb78d30a8f9b707c89b1ef776d812279315030d6e)](https://editor.image-charts.com/chart?chs=700x200&cht=gv&chl=digraph%20structs%20%7Bnode%20%5Bshape=record%5D;struct1%20%5Blabel=%22%3Cf0%3E%20left%7C%3Cf1%3E%20middle%7C%3Cf2%3E%20right%22%5D;struct2%20%5Blabel=%22%3Cf0%3E%20one%7C%3Cf1%3E%20two%22%5D;struct3%20%5Blabel=%22hello%20world%20%7C%7B%20b%20%7C%7Bc%7C%3Chere%3E%20d%7Ce%7D%7C%20f%7D%7C%20g%20%7C%20h%22%5D;struct1:f1%20-%3E%20struct2:f0;struct1:f2%20-%3E%20struct3:here;%7D)
 
 ```
 digraph structs {
@@ -200,7 +200,7 @@ digraph structs {
 
 To make it easier to input large graph descriptions, One may group edges together with a set of braces, It may also help to lay the graph out left to right instead of top to bottom.
 
-[![chart](https://image-charts.com/chart?chs=700x200&cht=gv&chl=graph%20%7Brankdir=LR;a%20--%20%7B%20b%20c%20d%20%7D;b%20--%20%7B%20c%20e%20%7D;c%20--%20%7B%20e%20f%20%7D;d%20--%20%7B%20f%20g%20%7D;e%20--%20h;f%20--%20%7B%20h%20i%20j%20g%20%7D;g%20--%20k;h%20--%20%7B%20o%20l%20%7D;i%20--%20%7B%20l%20m%20j%20%7D;j%20--%20%7B%20m%20n%20k%20%7D;k%20--%20%7B%20n%20r%20%7D;l%20--%20%7B%20o%20m%20%7D;m%20--%20%7B%20o%20p%20n%20%7D;n%20--%20%7B%20q%20r%20%7D;o%20--%20%7B%20s%20p%20%7D;p%20--%20%7B%20s%20t%20q%20%7D;q%20--%20%7B%20t%20r%20%7D;r%20--%20t;s%20--%20z;t%20--%20z;%7D)](https://editor.image-charts.com/chart?chs=700x200&cht=gv&chl=graph%20%7Brankdir=LR;a%20--%20%7B%20b%20c%20d%20%7D;b%20--%20%7B%20c%20e%20%7D;c%20--%20%7B%20e%20f%20%7D;d%20--%20%7B%20f%20g%20%7D;e%20--%20h;f%20--%20%7B%20h%20i%20j%20g%20%7D;g%20--%20k;h%20--%20%7B%20o%20l%20%7D;i%20--%20%7B%20l%20m%20j%20%7D;j%20--%20%7B%20m%20n%20k%20%7D;k%20--%20%7B%20n%20r%20%7D;l%20--%20%7B%20o%20m%20%7D;m%20--%20%7B%20o%20p%20n%20%7D;n%20--%20%7B%20q%20r%20%7D;o%20--%20%7B%20s%20p%20%7D;p%20--%20%7B%20s%20t%20q%20%7D;q%20--%20%7B%20t%20r%20%7D;r%20--%20t;s%20--%20z;t%20--%20z;%7D)
+[![chart](https://image-charts.com/chart?chs=700x200&cht=gv&chl=graph%20%7Brankdir=LR;a%20--%20%7B%20b%20c%20d%20%7D;b%20--%20%7B%20c%20e%20%7D;c%20--%20%7B%20e%20f%20%7D;d%20--%20%7B%20f%20g%20%7D;e%20--%20h;f%20--%20%7B%20h%20i%20j%20g%20%7D;g%20--%20k;h%20--%20%7B%20o%20l%20%7D;i%20--%20%7B%20l%20m%20j%20%7D;j%20--%20%7B%20m%20n%20k%20%7D;k%20--%20%7B%20n%20r%20%7D;l%20--%20%7B%20o%20m%20%7D;m%20--%20%7B%20o%20p%20n%20%7D;n%20--%20%7B%20q%20r%20%7D;o%20--%20%7B%20s%20p%20%7D;p%20--%20%7B%20s%20t%20q%20%7D;q%20--%20%7B%20t%20r%20%7D;r%20--%20t;s%20--%20z;t%20--%20z;%7D&icac=documentation&ichm=5fc49c48168d7c7adf7cac3be7b86ab486684fa23128318e977ae24504fa3345)](https://editor.image-charts.com/chart?chs=700x200&cht=gv&chl=graph%20%7Brankdir=LR;a%20--%20%7B%20b%20c%20d%20%7D;b%20--%20%7B%20c%20e%20%7D;c%20--%20%7B%20e%20f%20%7D;d%20--%20%7B%20f%20g%20%7D;e%20--%20h;f%20--%20%7B%20h%20i%20j%20g%20%7D;g%20--%20k;h%20--%20%7B%20o%20l%20%7D;i%20--%20%7B%20l%20m%20j%20%7D;j%20--%20%7B%20m%20n%20k%20%7D;k%20--%20%7B%20n%20r%20%7D;l%20--%20%7B%20o%20m%20%7D;m%20--%20%7B%20o%20p%20n%20%7D;n%20--%20%7B%20q%20r%20%7D;o%20--%20%7B%20s%20p%20%7D;p%20--%20%7B%20s%20t%20q%20%7D;q%20--%20%7B%20t%20r%20%7D;r%20--%20t;s%20--%20z;t%20--%20z;%7D)
 
 ```
 cht=gv
@@ -251,7 +251,7 @@ digraph G {
 }
 ```
 
-[![chart](https://image-charts.com/chart?chs=700x200&cht=gv&chl=digraph%20G%20%7Bsize%20%3D%224%2C4%22%3Bmain%20%5Bshape%3Dbox%5D%3Bmain%20-%3E%20parse%20%5Bweight%3D8%5D%3Bparse%20-%3E%20execute%3Bmain%20-%3E%20init%20%5Bstyle%3Ddotted%5D%3Bmain%20-%3E%20cleanup%3Bexecute%20-%3E%20%7B%20make_string%3B%20printf%7Dinit%20-%3E%20make_string%3Bedge%20%5Bcolor%3Dred%5D%3Bmain%20-%3E%20printf%20%5Bstyle%3Dbold%2Clabel%3D%22100%20times%22%5D%3Bmake_string%20%5Blabel%3D%22make%20a%0Astring%22%5D%3Bnode%20%5Bshape%3Dbox%2Cstyle%3Dfilled%2Ccolor%3D%22.7%20.3%201.0%22%5D%3Bexecute%20-%3E%20compare%3B%7D)](https://editor.image-charts.com/chart?chs=700x200&cht=gv&chl=digraph%20G%20%7Bsize%20%3D%224%2C4%22%3Bmain%20%5Bshape%3Dbox%5D%3Bmain%20-%3E%20parse%20%5Bweight%3D8%5D%3Bparse%20-%3E%20execute%3Bmain%20-%3E%20init%20%5Bstyle%3Ddotted%5D%3Bmain%20-%3E%20cleanup%3Bexecute%20-%3E%20%7B%20make_string%3B%20printf%7Dinit%20-%3E%20make_string%3Bedge%20%5Bcolor%3Dred%5D%3Bmain%20-%3E%20printf%20%5Bstyle%3Dbold%2Clabel%3D%22100%20times%22%5D%3Bmake_string%20%5Blabel%3D%22make%20a%0Astring%22%5D%3Bnode%20%5Bshape%3Dbox%2Cstyle%3Dfilled%2Ccolor%3D%22.7%20.3%201.0%22%5D%3Bexecute%20-%3E%20compare%3B%7D)
+[![chart](https://image-charts.com/chart?chs=700x200&cht=gv&chl=digraph%20G%20%7Bsize%20%3D%224%2C4%22%3Bmain%20%5Bshape%3Dbox%5D%3Bmain%20-%3E%20parse%20%5Bweight%3D8%5D%3Bparse%20-%3E%20execute%3Bmain%20-%3E%20init%20%5Bstyle%3Ddotted%5D%3Bmain%20-%3E%20cleanup%3Bexecute%20-%3E%20%7B%20make_string%3B%20printf%7Dinit%20-%3E%20make_string%3Bedge%20%5Bcolor%3Dred%5D%3Bmain%20-%3E%20printf%20%5Bstyle%3Dbold%2Clabel%3D%22100%20times%22%5D%3Bmake_string%20%5Blabel%3D%22make%20a%0Astring%22%5D%3Bnode%20%5Bshape%3Dbox%2Cstyle%3Dfilled%2Ccolor%3D%22.7%20.3%201.0%22%5D%3Bexecute%20-%3E%20compare%3B%7D&icac=documentation&ichm=4925b0ec907e331ed56a978ec9acd256a54c02d95e29b186d24f18cddd60eca0)](https://editor.image-charts.com/chart?chs=700x200&cht=gv&chl=digraph%20G%20%7Bsize%20%3D%224%2C4%22%3Bmain%20%5Bshape%3Dbox%5D%3Bmain%20-%3E%20parse%20%5Bweight%3D8%5D%3Bparse%20-%3E%20execute%3Bmain%20-%3E%20init%20%5Bstyle%3Ddotted%5D%3Bmain%20-%3E%20cleanup%3Bexecute%20-%3E%20%7B%20make_string%3B%20printf%7Dinit%20-%3E%20make_string%3Bedge%20%5Bcolor%3Dred%5D%3Bmain%20-%3E%20printf%20%5Bstyle%3Dbold%2Clabel%3D%22100%20times%22%5D%3Bmake_string%20%5Blabel%3D%22make%20a%0Astring%22%5D%3Bnode%20%5Bshape%3Dbox%2Cstyle%3Dfilled%2Ccolor%3D%22.7%20.3%201.0%22%5D%3Bexecute%20-%3E%20compare%3B%7D)
 
 ## Chart Types
 

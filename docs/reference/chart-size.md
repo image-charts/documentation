@@ -28,7 +28,7 @@ chs=<width>x<height>
 Here is a 700 pixel x 200 pixel chart.
 
 
-![chart](https://image-charts.com/chart?cht=bvs&chd=s:theresadifferencebetweenknowingthepathandwalkingthepath&chs=700x200&chxt=y&chf=b0,lg,90,03a9f4,0,3f51b5,1)
+![chart](https://image-charts.com/chart?cht=bvs&chd=s:theresadifferencebetweenknowingthepathandwalkingthepath&chs=700x200&chxt=y&chf=b0,lg,90,03a9f4,0,3f51b5,1&icac=documentation&ichm=d89f4f3ece3bc99c0a9337732257d9c0c836328738caf465c60e6ca6aa43868e)
 
 ```
 chs=700x200

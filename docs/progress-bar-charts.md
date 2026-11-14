@@ -29,7 +29,7 @@ chd=a:65|35
 ```
 
 
-[![progress bar image with linear gradient](https://image-charts.com/chart?chco=3B5F92%2CFFFFFF&chd=a%3A65%7C35&chf=bg%2Cs%2CFFFFFF00%7Cb0%2Clg%2C0%2C0CE858%2C0.9%2C05B142%2C0.2&chma=-10%2C0%2C0%2C-10&chs=700x80&cht=bhs&chxs=0%2CFFFFFF00%2C0%2C-1%2C_%2CFFFFFF00%2CFFFFFF00%7C1%2CFFFFFF00%2C0%2C-1%2C_%2CFFFFFF00%2CFFFFFF00&chxt=x%2Cy)](https://editor.image-charts.com/chart?chco=3B5F92%2CFFFFFF&chd=a%3A65%7C35&chf=bg%2Cs%2CFFFFFF00%7Cb0%2Clg%2C0%2C0CE858%2C0.9%2C05B142%2C0.2&chma=-10%2C0%2C0%2C-10&chs=700x80&cht=bhs&chxs=0%2CFFFFFF00%2C0%2C-1%2C_%2CFFFFFF00%2CFFFFFF00%7C1%2CFFFFFF00%2C0%2C-1%2C_%2CFFFFFF00%2CFFFFFF00&chxt=x%2Cy)
+[![progress bar image with linear gradient](https://image-charts.com/chart?chco=3B5F92%2CFFFFFF&chd=a%3A65%7C35&chf=bg%2Cs%2CFFFFFF00%7Cb0%2Clg%2C0%2C0CE858%2C0.9%2C05B142%2C0.2&chma=-10%2C0%2C0%2C-10&chs=700x80&cht=bhs&chxs=0%2CFFFFFF00%2C0%2C-1%2C_%2CFFFFFF00%2CFFFFFF00%7C1%2CFFFFFF00%2C0%2C-1%2C_%2CFFFFFF00%2CFFFFFF00&chxt=x%2Cy&icac=documentation&ichm=0f2b8393b1fe81f3536c1c36bab80b506743dbb7bf05878948e8f64e9250c26c)](https://editor.image-charts.com/chart?chco=3B5F92%2CFFFFFF&chd=a%3A65%7C35&chf=bg%2Cs%2CFFFFFF00%7Cb0%2Clg%2C0%2C0CE858%2C0.9%2C05B142%2C0.2&chma=-10%2C0%2C0%2C-10&chs=700x80&cht=bhs&chxs=0%2CFFFFFF00%2C0%2C-1%2C_%2CFFFFFF00%2CFFFFFF00%7C1%2CFFFFFF00%2C0%2C-1%2C_%2CFFFFFF00%2CFFFFFF00&chxt=x%2Cy)
 
 
 #### Gradient background
@@ -43,7 +43,7 @@ chf=bg,s,FFFFFF00|b0,lg,0,03A9F4,0.5,EA469E,0.1
 - The first background fill `bg,s,FFFFFF00` tells our API to render the chart with a transparent background color.
 - The second background fill `b0,lg,0,03A9F4,0.5,EA469E,0.1`, tells that the first bar from our chart (`b0`), must have a linear gradient (`lg`) with a 0 degres angle (`0`) starting from color `03A9F4` to color `EA469E`. Read more about [gradients here](./reference/background-fill.md).
 
-[![progressbar image with gradient](https://image-charts.com/chart?chco=FFFFFF&chd=a%3A65%7C35&chf=bg%2Cs%2CFFFFFF00%7Cb0%2Clg%2C0%2C03A9F4%2C0.5%2CEA469E%2C0.1&chma=-10%2C0%2C0%2C-10&chs=700x80&cht=bhs&chxs=0%2CFFFFFF00%2C0%2C-1%2C_%2CFFFFFF00%2CFFFFFF00%7C1%2CFFFFFF00%2C0%2C-1%2C_%2CFFFFFF00%2CFFFFFF00&chxt=x%2Cy)](https://editor.image-charts.com/chart?chco=FFFFFF&chd=a%3A65%7C35&chf=bg%2Cs%2CFFFFFF00%7Cb0%2Clg%2C0%2C03A9F4%2C0.5%2CEA469E%2C0.1&chma=-10%2C0%2C0%2C-10&chs=700x80&cht=bhs&chxs=0%2CFFFFFF00%2C0%2C-1%2C_%2CFFFFFF00%2CFFFFFF00%7C1%2CFFFFFF00%2C0%2C-1%2C_%2CFFFFFF00%2CFFFFFF00&chxt=x%2Cy)
+[![progressbar image with gradient](https://image-charts.com/chart?chco=FFFFFF&chd=a%3A65%7C35&chf=bg%2Cs%2CFFFFFF00%7Cb0%2Clg%2C0%2C03A9F4%2C0.5%2CEA469E%2C0.1&chma=-10%2C0%2C0%2C-10&chs=700x80&cht=bhs&chxs=0%2CFFFFFF00%2C0%2C-1%2C_%2CFFFFFF00%2CFFFFFF00%7C1%2CFFFFFF00%2C0%2C-1%2C_%2CFFFFFF00%2CFFFFFF00&chxt=x%2Cy&icac=documentation&ichm=adbcd21c0e4ab7d1046bce0f68bbc614e96ed55a99650222e2e9388c2c670f61)](https://editor.image-charts.com/chart?chco=FFFFFF&chd=a%3A65%7C35&chf=bg%2Cs%2CFFFFFF00%7Cb0%2Clg%2C0%2C03A9F4%2C0.5%2CEA469E%2C0.1&chma=-10%2C0%2C0%2C-10&chs=700x80&cht=bhs&chxs=0%2CFFFFFF00%2C0%2C-1%2C_%2CFFFFFF00%2CFFFFFF00%7C1%2CFFFFFF00%2C0%2C-1%2C_%2CFFFFFF00%2CFFFFFF00&chxt=x%2Cy)
 
 
 #### Multiple colors
@@ -57,4 +57,4 @@ chco=CFB948,E3E3E3
 - `CFB948` is the gold [hexadecimal color](./reference/color-format.md) of the progress bar first part
 - `E3E3E3` is the gray [hexadecimal color](./reference/color-format.md) of the progress bar second part
 
-[![goldmembership email progressbar](https://image-charts.com/chart?chco=CFB948%2CE3E3E3&chd=a%3A65%7C35&chf=bg%2Cs%2CE3E3E300&chma=-10%2C0%2C0%2C-10&chs=700x80&cht=bhs&chxs=0%2CFFFFFF00%2C0%2C-1%2C_%2CFFFFFF00%2CFFFFFF00%7C1%2CFFFFFF00%2C0%2C-1%2C_%2CFFFFFF00%2CFFFFFF00&chxt=x%2Cy)](https://editor.image-charts.com/chart?chco=CFB948%2CE3E3E3&chd=a%3A65%7C35&chf=bg%2Cs%2CE3E3E300&chma=-10%2C0%2C0%2C-10&chs=700x80&cht=bhs&chxs=0%2CFFFFFF00%2C0%2C-1%2C_%2CFFFFFF00%2CFFFFFF00%7C1%2CFFFFFF00%2C0%2C-1%2C_%2CFFFFFF00%2CFFFFFF00&chxt=x%2Cy)
+[![goldmembership email progressbar](https://image-charts.com/chart?chco=CFB948%2CE3E3E3&chd=a%3A65%7C35&chf=bg%2Cs%2CE3E3E300&chma=-10%2C0%2C0%2C-10&chs=700x80&cht=bhs&chxs=0%2CFFFFFF00%2C0%2C-1%2C_%2CFFFFFF00%2CFFFFFF00%7C1%2CFFFFFF00%2C0%2C-1%2C_%2CFFFFFF00%2CFFFFFF00&chxt=x%2Cy&icac=documentation&ichm=b8a8926eda0e01a088f3682f711fd1b40652de7d45967a31e30097d0b85bcfd8)](https://editor.image-charts.com/chart?chco=CFB948%2CE3E3E3&chd=a%3A65%7C35&chf=bg%2Cs%2CE3E3E300&chma=-10%2C0%2C0%2C-10&chs=700x80&cht=bhs&chxs=0%2CFFFFFF00%2C0%2C-1%2C_%2CFFFFFF00%2CFFFFFF00%7C1%2CFFFFFF00%2C0%2C-1%2C_%2CFFFFFF00%2CFFFFFF00&chxt=x%2Cy)

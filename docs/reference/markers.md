@@ -41,7 +41,7 @@ chm=
 
 Here's an example using diamonds for one data series, and circles for the other data series.
 
-![shape markers](https://image-charts.com/chart?cht=lc&chd=s:Hello,world&chs=700x200&chm=o,ff9900,0,-1,15.0|d,ff0000,1,-1,10.0&chco=ff9900|ff0000&chma=0,15,0,0&chxt=x,y&chxs=1N*cUSD0sz*Mil,dddddd|0N**,dddddd)
+![shape markers](https://image-charts.com/chart?cht=lc&chd=s:Hello,world&chs=700x200&chm=o,ff9900,0,-1,15.0|d,ff0000,1,-1,10.0&chco=ff9900|ff0000&chma=0,15,0,0&chxt=x,y&chxs=1N*cUSD0sz*Mil,dddddd|0N**,dddddd&icac=documentation&ichm=9e81c12cf34491660978b9fc354b4bb41310225e87ad1ae13aa4db5c66955475)
 
 ```
 chm=o,ff9900,0,-1,15.0|d,ff0000,1,-1,10.0
@@ -49,7 +49,7 @@ chm=o,ff9900,0,-1,15.0|d,ff0000,1,-1,10.0
 
 This second example square diamond markers on data point as well as under the line filling:
 
-![diamond shape markers](https://image-charts.com/chart?chs=700x200&cht=lc&chd=t:0,20,20,50,40,70,70,90,85,45,40,50,50,40,70,70,90,85,45,40,50&chxt=x,y&chxs=0N*f0z*,000000,10|1N*f0z*,000000,10&chm=s,E4061C,0,-1,15.0|B,FCECF4,0,0,0&chco=E4061C)
+![diamond shape markers](https://image-charts.com/chart?chs=700x200&cht=lc&chd=t:0,20,20,50,40,70,70,90,85,45,40,50,50,40,70,70,90,85,45,40,50&chxt=x,y&chxs=0N*f0z*,000000,10|1N*f0z*,000000,10&chm=s,E4061C,0,-1,15.0|B,FCECF4,0,0,0&chco=E4061C&icac=documentation&ichm=68b0015574d8a9dd4b08d3c2421a663b1e4a538cc675a573c618a0ae9c0556eb)
 
 ```
 chm=s,E4061C,0,-1,15.0|B,FCECF4,0,0,0

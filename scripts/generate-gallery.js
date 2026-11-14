@@ -98,7 +98,11 @@ ${categoryCharts}
   console.log(`Generated ${OUTPUT_FILE} with ${charts.length} charts in ${Object.keys(chartByCategory).length} categories`);
 }
 
-main().catch(err => {
-  console.error('Error:', err.message);
-  process.exit(1);
-});
+module.exports = { sign };
+
+if (require.main === module) {
+  main().catch(err => {
+    console.error('Error:', err.message);
+    process.exit(1);
+  });
+}

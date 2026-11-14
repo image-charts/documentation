@@ -175,7 +175,7 @@ Note: unlike Google Image Charts you won't need to [anticipate how much room you
 
 Let specify legends for a simple animated polar chart.
 
-[![chart](https://image-charts.com/chart?cht=pa&chs=700x200&chd=t:20,20,30,40,50&chdl=20°|20°|30°|40°|50°&chxt=x&chco=FF80087C&chan)](https://editor.image-charts.com/chart?cht=pa&chs=700x200&chd=t:20,20,30,40,50&chdl=20°|20°|30°|40°|50°&chxt=x&chco=FF80087C&chan)
+[![chart](https://image-charts.com/chart?cht=pa&chs=700x200&chd=t:20,20,30,40,50&chdl=20°|20°|30°|40°|50°&chxt=x&chco=FF80087C&chan&icac=documentation&ichm=a5a39c624d8f3229ee6fabf4e0845b2b24bde47638e8cbfe6391e6b82db3c8bc)](https://editor.image-charts.com/chart?cht=pa&chs=700x200&chd=t:20,20,30,40,50&chdl=20°|20°|30°|40°|50°&chxt=x&chco=FF80087C&chan)
 
 ```
 cht=pa
