@@ -48,7 +48,7 @@ The gallery script signs chart URLs using HMAC-SHA256 with the `SECRET_KEY`.
 
 - Docusaurus 3.x
 - React 19
-- Node.js 18+
+- Node.js 20+
 
 ## Deployment
 
