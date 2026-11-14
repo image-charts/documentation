@@ -53,7 +53,7 @@ https://image-charts.com/chart
 }
 ```
 
-![chart](https://image-charts.com/chart?cht=gv&chl=digraph%20G%20{%20main%20-%3E%20parse%20-%3E%20execute;%20main%20-%3E%20init;%20main%20-%3E%20cleanup;%20execute%20-%3E%20make_string;%20execute%20-%3E%20printf%20init%20-%3E%20make_string;%20main%20-%3E%20printf;%20execute%20-%3E%20compare;%20})
+![chart](https://image-charts.com/chart?cht=gv&chl=digraph%20G%20{%20main%20-%3E%20parse%20-%3E%20execute;%20main%20-%3E%20init;%20main%20-%3E%20cleanup;%20execute%20-%3E%20make_string;%20execute%20-%3E%20printf%20init%20-%3E%20make_string;%20main%20-%3E%20printf;%20execute%20-%3E%20compare;%20}&icac=documentation&ichm=3d96c7e39bd4e2cdafd93cbd3936f6d09de32f0fa41d8b63c29faf1d24249766)
 
 The next step we need is create a custom formula function `DEPENDENCY_GRAPH_URL(itemRows, dependsOnRows)` that will require two parameters:
 
@@ -74,7 +74,7 @@ https://image-charts.com/chart
 }
 ```
 
-![chart](https://image-charts.com/chart?cht=gv&chl=digraph%20%7Bsplines%3D%22line%22%3Brankdir%3DLR%3B%22Get%202%20slices%20of%20bread%22-%3E%7B%22Put%20peanut%20butter%20on%201%20slice%22%20%22Put%20jelly%20on%201%20slice%22%7D%3B%22Put%20peanut%20butter%20on%201%20slice%22-%3E%7B%22Put%20away%20peanut%20butter%20jar%22%20%22Put%20slices%20together%22%7D%3B%22Put%20jelly%20on%201%20slice%22-%3E%7B%22Put%20slices%20together%22%20%22Put%20away%20jelly%20jar%22%7D%7D)
+![chart](https://image-charts.com/chart?cht=gv&chl=digraph%20%7Bsplines%3D%22line%22%3Brankdir%3DLR%3B%22Get%202%20slices%20of%20bread%22-%3E%7B%22Put%20peanut%20butter%20on%201%20slice%22%20%22Put%20jelly%20on%201%20slice%22%7D%3B%22Put%20peanut%20butter%20on%201%20slice%22-%3E%7B%22Put%20away%20peanut%20butter%20jar%22%20%22Put%20slices%20together%22%7D%3B%22Put%20jelly%20on%201%20slice%22-%3E%7B%22Put%20slices%20together%22%20%22Put%20away%20jelly%20jar%22%7D%7D&icac=documentation&ichm=84858c9e37d7b5c28fc2f456460f4c9fbc55936f034a75e8bcbb934f70e8deaf)
 
 :::note
 In dot language, `"a" -> {"b" "c"}` let you express that both `b` and `c` depend on `a`.

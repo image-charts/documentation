@@ -87,7 +87,7 @@ chd=s:Helo,Wrld
 - **`pd`**: A doughnut pie chart is a good option when you need to display data at its center.
 
 
-[![chart](https://image-charts.com/chart?chan=1200&chd=t%3A10%2C40%2C45&chdl=Expansion%7CPayroll%7CEquipment&chdlp=b&chf=b0%2Clg%2C90%2C68cefd%2C0%2C96a6ff%2C1&chl=10K%E2%82%AC%7C40K%E2%82%AC%7C45K&chli=95K%E2%82%AC&chma=0%2C0%2C0%2C10&chs=700x300&cht=pd&chtt=Expenses&icac=documentation&icretina=1&ichm=94ea33795e5ea142ee704b8a073c87903b52e3d0431afb5170ba5584b8ed33c0)](https://editor.image-charts.com/?tab_editor=form&tab_viewer=image#https:/image-charts.comchart?chan=1200&chd=t%3A10%2C40%2C45&chdl=Expansion%7CPayroll%7CEquipment&chdlp=b&chf=b0%2Clg%2C90%2C68cefd%2C0%2C96a6ff%2C1&chl=10K%E2%82%AC%7C40K%E2%82%AC%7C45K&chli=95K%E2%82%AC&chma=0%2C0%2C0%2C10&chs=700x300&cht=pd&chtt=Expenses&icac=documentation&icretina=1&ichm=94ea33795e5ea142ee704b8a073c87903b52e3d0431afb5170ba5584b8ed33c0)
+[![chart](https://image-charts.com/chart?chan=1200&chd=t%3A10%2C40%2C45&chdl=Expansion%7CPayroll%7CEquipment&chdlp=b&chf=b0%2Clg%2C90%2C68cefd%2C0%2C96a6ff%2C1&chl=10K%E2%82%AC%7C40K%E2%82%AC%7C45K&chli=95K%E2%82%AC&chma=0%2C0%2C0%2C10&chs=700x300&cht=pd&chtt=Expenses&icac=documentation&icretina=1&ichm=94ea33795e5ea142ee704b8a073c87903b52e3d0431afb5170ba5584b8ed33c0)](https://editor.image-charts.com/?tab_editor=form&tab_viewer=image#https:/image-charts.com/chart?chan=1200&chd=t%3A10%2C40%2C45&chdl=Expansion%7CPayroll%7CEquipment&chdlp=b&chf=b0%2Clg%2C90%2C68cefd%2C0%2C96a6ff%2C1&chl=10K%E2%82%AC%7C40K%E2%82%AC%7C45K&chli=95K%E2%82%AC&chma=0%2C0%2C0%2C10&chs=700x300&cht=pd&chtt=Expenses&icac=documentation&icretina=1&ichm=94ea33795e5ea142ee704b8a073c87903b52e3d0431afb5170ba5584b8ed33c0)
 
 ```
 cht=pd

@@ -23,7 +23,7 @@ The Image-Charts API returns a chart image in response to a URL GET or POST requ
 
 To make the simplest chart possible, all your URL needs to specify is the chart type, data, and size. You can type this URL directly in your browser, or point to it with an `<img>` tag in your web page. For example, follow this link for a pie chart:
 
-[https://image-charts.com/chart?chs=700x190&chd=t:60,40&cht=p3&chl=Hello%7CWorld&chan&chf=...](https://image-charts.com/chart?chs=700x190&chd=t:60,40&cht=p3&chl=Hello%7CWorld&chan&chf=ps0-0,lg,45,ffeb3b,0.2,f44336,1|ps0-1,lg,45,8bc34a,0.2,009688,1)
+[https://image-charts.com/chart?chs=700x190&chd=t:60,40&cht=p3&chl=Hello%7CWorld&chan&chf=...](https://image-charts.com/chart?chs=700x190&chd=t:60,40&cht=p3&chl=Hello%7CWorld&chan&chf=ps0-0,lg,45,ffeb3b,0.2,f44336,1|ps0-1,lg,45,8bc34a,0.2,009688,1&icac=documentation&ichm=1c8f2725e022e2c93f1510b2c13010996b1ded9e5199c15cbb75ab1ded96dc81)
 
 
 The preceding link is an example of a basic Chart API URL. All Chart URLs have the following format:

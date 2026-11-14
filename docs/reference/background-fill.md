@@ -30,7 +30,7 @@ chf=<fill_type>,s,<color>|...
 
 This example fills the chart background with pale gray (**EFEFEF**).
 
-![chart](https://image-charts.com/chart?cht=lc&chd=s:pqokeYONOMEBAKPOQVTXZdecaZcglprqxuux393ztpoonkeggjp&chco=FF0000&chls=4.0,3.0,0.0&chs=700x125&chxt=x,y&chxl=0:%7CJun%7CJuly%7CAug%7C1:%7C%7C20%7C30%7C40%7C50&chf=bg,s,EFEFEF)
+![chart](https://image-charts.com/chart?cht=lc&chd=s:pqokeYONOMEBAKPOQVTXZdecaZcglprqxuux393ztpoonkeggjp&chco=FF0000&chls=4.0,3.0,0.0&chs=700x125&chxt=x,y&chxl=0:%7CJun%7CJuly%7CAug%7C1:%7C%7C20%7C30%7C40%7C50&chf=bg,s,EFEFEF&icac=documentation&ichm=3a5d985d2271fe7b5714b567155539e98252e1886298db32a763151ac5614c22)
 
 ```
 chf=bg,s,EFEFEF
@@ -39,7 +39,7 @@ chf=bg,s,EFEFEF
 
 This example applies a 50% transparency to the whole chart (80 in hexadecimal is 128, or about 50% transparency). Notice the table cell background showing through the chart.
 
-![chart](https://image-charts.com/chart?cht=bvs&chd=s:pqokeYONOMEPOQVTXZdeca,Zcglprqxuuxztpoonkeggjp&chs=700x125&chxt=x,y&chxl=0:%7CJun%7CJuly%7CAug%7C1:%7C%7C20%7C30%7C40%7C50&chf=a,s,00000080)
+![chart](https://image-charts.com/chart?cht=bvs&chd=s:pqokeYONOMEPOQVTXZdeca,Zcglprqxuuxztpoonkeggjp&chs=700x125&chxt=x,y&chxl=0:%7CJun%7CJuly%7CAug%7C1:%7C%7C20%7C30%7C40%7C50&chf=a,s,00000080&icac=documentation&ichm=47df771034ea2501065699ea6fd7a0320c21952f3b8ef5cbe6b88b08e3a7a3d9)
 
 ```
 chf=a,s,00000080
@@ -47,7 +47,7 @@ chf=a,s,00000080
 
 This example fills the bar chart with a pale gray (**EFEFEF**). This was implemented for compatibility with Google Image Charts but we recommend you to use `chco` for series colors.
 
-![chart](https://image-charts.com/chart?cht=bvs&chd=t:10,10,40&chs=700x125&chxt=x,y&chxl=0:%7CJun%7CJuly%7CAug%7C1:%7C%7C20%7C30%7C40%7C50&chf=b0,s,EFEFEF)
+![chart](https://image-charts.com/chart?cht=bvs&chd=t:10,10,40&chs=700x125&chxt=x,y&chxl=0:%7CJun%7CJuly%7CAug%7C1:%7C%7C20%7C30%7C40%7C50&chf=b0,s,EFEFEF&icac=documentation&ichm=0923aa4995844e3b336aca98a8179bb1b1fe589e52d75dbd548c511bf741b0b0)
 
 ### Gradient Fills
 
@@ -77,7 +77,7 @@ chf=<fill_type>,lg,<angle>,<color_1>,<color_centerpoint_1>
 
 This example displays a chart area with an horizontal linear gradient, specified with an angle of zero degrees (0). The colors are peach (FFE7C6), centered on the left side (position 0.0) and blue (76A4FB) centered on the right side (position 1.0). The chart background is drawn in gray (EFEFEF).
 
-![chart](https://image-charts.com/chart?cht=lc&chd=s:pqokeYONOMEBAKPOQVTXZdecaZcglprqxuux393ztpoonkeggjp&chco=676767&chls=4.0,3.0,0.0&chs=700x125&chxt=x,y&chxl=0:|1|2|3|4|5|1:|0|50|100&chf=c,lg,0,FFE7C6,0,76A4FB,1|bg,s,EFEFEF)
+![chart](https://image-charts.com/chart?cht=lc&chd=s:pqokeYONOMEBAKPOQVTXZdecaZcglprqxuux393ztpoonkeggjp&chco=676767&chls=4.0,3.0,0.0&chs=700x125&chxt=x,y&chxl=0:|1|2|3|4|5|1:|0|50|100&chf=c,lg,0,FFE7C6,0,76A4FB,1|bg,s,EFEFEF&icac=documentation&ichm=d5b3af9cf6822aaad23485acad765df37dfb17facf615e7e2dba4cc1221b0699)
 
 ```
 chf=
@@ -91,7 +91,7 @@ Peach (FFE7C6) is the first color specified. The bottom left of the chart is pur
 Blue (6A4FB) is the second color specified. The top right of the chart is pure blue. Note how we specify an offset of 0.75, to provide a peak of blue that fades away towards the top right corner.
 The chart background is drawn in gray (EFEFEF).
 
-![chart](https://image-charts.com/chart?cht=lc&chd=s:pqokeYONOMEBAKPOQVTXZdecaZcglprqxuux393ztpoonkeggjp&chco=676767&chls=4.0,3.0,0.0&chxt=x,y&chxl=0:%7C1%7C2%7C3%7C4%7C5%7C1:%7C0%7C50%7C100&chs=700x125&chf=c,lg,45,FFE7C6,0,76A4FB,0.75%7Cbg,s,EFEFEF)
+![chart](https://image-charts.com/chart?cht=lc&chd=s:pqokeYONOMEBAKPOQVTXZdecaZcglprqxuux393ztpoonkeggjp&chco=676767&chls=4.0,3.0,0.0&chxt=x,y&chxl=0:%7C1%7C2%7C3%7C4%7C5%7C1:%7C0%7C50%7C100&chs=700x125&chf=c,lg,45,FFE7C6,0,76A4FB,0.75%7Cbg,s,EFEFEF&icac=documentation&ichm=733d85039f5ec61a14ab5f97f32f7bf74c2fc542219a45ceac422ac168782df0)
 
 ```
 chf=
@@ -102,7 +102,7 @@ chf=
 
 The example shows how to use gradient fills in chart series.
 
-![chart](https://image-charts.com/chart?cht=bvs&chs=700x180&chd=t:10,40,60,80,30,20&chf=b0,lg,90,03a9f4,0,3f51b5,1&chan)
+![chart](https://image-charts.com/chart?cht=bvs&chs=700x180&chd=t:10,40,60,80,30,20&chf=b0,lg,90,03a9f4,0,3f51b5,1&chan&icac=documentation&ichm=939fba6649fc29ea4896d156eacbbfde357e34564811689b2d6939433221bbbe)
 
 ```
 chd=

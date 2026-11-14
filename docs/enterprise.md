@@ -479,7 +479,7 @@ Don't see your favorite language here? [Just ask us](mailto:support@image-charts
 
 ## Online static chart generator
 
-The easiest way to generate a watermark-free Image-Charts -- that is, to sign generated URL with HMAC algorithm -- is to use our [online url generator](https://editor.image-charts.com/?tab_editor=enterprise#https:/image-charts.com/chart?chd=a:30010,-30000,50000,80000,20000&chdl=Income&chf=b0,lg,90,EA469EFF,1,03A9F47C,0.4&chl=2014|2015|2016|2017|2018&chof=1535403433426&chs=700x300&cht=bvs&chxs=0N*cEURs*&chxt=y).
+The easiest way to generate a watermark-free Image-Charts -- that is, to sign generated URL with HMAC algorithm -- is to use our [online url generator](https://editor.image-charts.com/?tab_editor=enterprise#https:/image-charts.com/chart?chd=a:30010,-30000,50000,80000,20000&chdl=Income&chf=b0,lg,90,EA469EFF,1,03A9F47C,0.4&chl=2014|2015|2016|2017|2018&chof=1535403433426&chs=700x300&cht=bvs&chxs=0N*cEURs*&chxt=y&icac=documentation&ichm=bb29550cc7a9809ce9c89f13f450e723ee3df43a115a2b96db27790859176a26).
 
 
 ## Custom domain

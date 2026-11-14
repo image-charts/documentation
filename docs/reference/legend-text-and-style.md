@@ -51,14 +51,14 @@ The limits on the length of the legend texts are in [Chart complexity limits](/l
 
 How to specify legend text in the same order as your data series:
 
-![chart](https://image-charts.com/chart?cht=ls&chd=t:0,30,60,70,90,95,100\|20,30,40,50,60,70,80\|10,30,40,45,52&chco=2196F3,FF5722,9c27b0&chs=700x150&chdl=NASDAQ|FTSE100|DOW)
+![chart](https://image-charts.com/chart?cht=ls&chd=t:0,30,60,70,90,95,100\|20,30,40,50,60,70,80\|10,30,40,45,52&chco=2196F3,FF5722,9c27b0&chs=700x150&chdl=NASDAQ|FTSE100|DOW&icac=documentation&ichm=e9bbb1ae46e3eaa0d4155b2cc7d4616bdb9606d5b3aacb784b5c07ca051a34e8)
 
 ```
 chdl=NASDAQ|FTSE100|DOW
 chco=FF0000,00FF00,0000FF
 ```
 
-![chart](https://image-charts.com/chart?cht=p&chs=700x200&chd=t:100,20,20&chdl=First%7CSecond%7CThird&chco=2196F3,FF5722,9c27b0)
+![chart](https://image-charts.com/chart?cht=p&chs=700x200&chd=t:100,20,20&chdl=First%7CSecond%7CThird&chco=2196F3,FF5722,9c27b0&icac=documentation&ichm=901dbb37f75a153cab66fc5df43eddd91b0a5c5c203b677f3e410bbae141b558)
 
 ```
 chdl=First|Second|Third
@@ -68,7 +68,7 @@ chco=2196F3,FF5722,9c27b0
 How to change legend font color and size:
 
 
-![chart](https://image-charts.com/chart?cht=p&chs=700x200&chd=t:100,20,20&chdl=First\|Second\|Third&chco=2196F3,FF5722,9c27b0&chdls=9e9e9e,17)
+![chart](https://image-charts.com/chart?cht=p&chs=700x200&chd=t:100,20,20&chdl=First\|Second\|Third&chco=2196F3,FF5722,9c27b0&chdls=9e9e9e,17&icac=documentation&ichm=079ab180ede37adb55242e5321a73cb5adb01cc687441f22ebbfdaa39e046f5a)
 
 
 ```
@@ -77,7 +77,7 @@ chdls=9e9e9e,17
 
 Here is how to specify a chart with a right legend position:
 
-![a](https://image-charts.com/chart?cht=ls&chd=t:0,30,60,70,90,95,100|20,30,40,50,60,70,80|10,30,40,45,52&chco=2196F3,FF5722,9c27b0&chs=700x150&chdl=NASDAQ|FTSE100|DOW&chdlp=r&chma=0,0,10)
+![a](https://image-charts.com/chart?cht=ls&chd=t:0,30,60,70,90,95,100|20,30,40,50,60,70,80|10,30,40,45,52&chco=2196F3,FF5722,9c27b0&chs=700x150&chdl=NASDAQ|FTSE100|DOW&chdlp=r&chma=0,0,10&icac=documentation&ichm=43d1065325fa8cc86a86fac32d8b82674b2e7882bb29441c142c292243dc9905)
 
 ```
 chdlp=r
@@ -85,7 +85,7 @@ chdlp=r
 
 Here is how to specify a chart with a left legend position:
 
-![a](https://image-charts.com/chart?cht=ls&chd=t:0,30,60,70,90,95,100|20,30,40,50,60,70,80|10,30,40,45,52&chco=2196F3,FF5722,9c27b0&chs=700x150&chdl=NASDAQ|FTSE100|DOW&chdlp=l&chma=10,0,10)
+![a](https://image-charts.com/chart?cht=ls&chd=t:0,30,60,70,90,95,100|20,30,40,50,60,70,80|10,30,40,45,52&chco=2196F3,FF5722,9c27b0&chs=700x150&chdl=NASDAQ|FTSE100|DOW&chdlp=l&chma=10,0,10&icac=documentation&ichm=c176bcf6de5e1b341cafb3595c5faf7dc40a2a3ba837f377df71de29e3246cc4)
 
 ```
 chdlp=l
@@ -93,7 +93,7 @@ chdlp=l
 
 Here is how to specify a chart with a bottom legend position:
 
-![a](https://image-charts.com/chart?cht=ls&chd=t:0,30,60,70,90,95,100|20,30,40,50,60,70,80|10,30,40,45,52&chco=2196F3,FF5722,9c27b0&chs=700x150&chdl=NASDAQ|FTSE100|DOW&chdlp=b)
+![a](https://image-charts.com/chart?cht=ls&chd=t:0,30,60,70,90,95,100|20,30,40,50,60,70,80|10,30,40,45,52&chco=2196F3,FF5722,9c27b0&chs=700x150&chdl=NASDAQ|FTSE100|DOW&chdlp=b&icac=documentation&ichm=39b8d3b9e416eea25dab003de96d5543310598b1b44cd71dca1c9ca09888ed4f)
 
 ```
 chdlp=b
@@ -101,7 +101,7 @@ chdlp=b
 
 Here is how to specify a chart with a top legend position:
 
-![a](https://image-charts.com/chart?cht=ls&chd=t:0,30,60,70,90,95,100|20,30,40,50,60,70,80|10,30,40,45,52&chco=2196F3,FF5722,9c27b0&chs=700x150&chdl=NASDAQ|FTSE100|DOW&chdlp=t)
+![a](https://image-charts.com/chart?cht=ls&chd=t:0,30,60,70,90,95,100|20,30,40,50,60,70,80|10,30,40,45,52&chco=2196F3,FF5722,9c27b0&chs=700x150&chdl=NASDAQ|FTSE100|DOW&chdlp=t&icac=documentation&ichm=482ff55ba095b4d642706c7db82697110e03fafb20e9518e9b6f1e664fbddcf9)
 
 ```
 chdlp=t

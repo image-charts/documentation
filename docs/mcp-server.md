@@ -90,7 +90,7 @@ Common fields: `title`, `series` (`{ name?, data: number[] }`, or `{ name?, poin
 
 returns:
 
-[![Quarterly revenue bar chart](https://image-charts.com/chart?cht=bvg&chd=a%3A120%2C90%2C140%7C80%2C130%2C100&chs=700x400&chxt=x%2Cy&chxl=0%3A%7CQ1%7CQ2%7CQ3&chco=4285F4%2CDB4437&chdl=EU%7CUS&chdlp=b&chtt=Quarterly+revenue)](https://editor.image-charts.com/chart?cht=bvg&chd=a%3A120%2C90%2C140%7C80%2C130%2C100&chs=700x400&chxt=x%2Cy&chxl=0%3A%7CQ1%7CQ2%7CQ3&chco=4285F4%2CDB4437&chdl=EU%7CUS&chdlp=b&chtt=Quarterly+revenue)
+[![Quarterly revenue bar chart](https://image-charts.com/chart?cht=bvg&chd=a%3A120%2C90%2C140%7C80%2C130%2C100&chs=700x400&chxt=x%2Cy&chxl=0%3A%7CQ1%7CQ2%7CQ3&chco=4285F4%2CDB4437&chdl=EU%7CUS&chdlp=b&chtt=Quarterly+revenue&icac=documentation&ichm=2923b13edc1bb8fb7b7b22fc514ab7bdcfd6d0eb5548b59b37da6267a9a6e7d3)](https://editor.image-charts.com/chart?cht=bvg&chd=a%3A120%2C90%2C140%7C80%2C130%2C100&chs=700x400&chxt=x%2Cy&chxl=0%3A%7CQ1%7CQ2%7CQ3&chco=4285F4%2CDB4437&chdl=EU%7CUS&chdlp=b&chtt=Quarterly+revenue&icac=documentation&ichm=2923b13edc1bb8fb7b7b22fc514ab7bdcfd6d0eb5548b59b37da6267a9a6e7d3)
 
 ```
 https://image-charts.com/chart?cht=bvg&chd=a:120,90,140|80,130,100&chs=700x400&chxt=x,y&chxl=0:|Q1|Q2|Q3&chco=4285F4,DB4437&chdl=EU|US&chdlp=b&chtt=Quarterly+revenue
@@ -110,7 +110,7 @@ https://image-charts.com/chart?cht=bvg&chd=a:120,90,140|80,130,100&chs=700x400&c
 
 returns:
 
-[![Traffic sources pie chart](https://image-charts.com/chart?cht=p&chd=a%3A40%2C35%2C25&chs=500x400&chl=Search%7CDirect%7CSocial&chco=4285F4%2C0F9D58%2CF4B400&chtt=Traffic+sources)](https://editor.image-charts.com/chart?cht=p&chd=a%3A40%2C35%2C25&chs=500x400&chl=Search%7CDirect%7CSocial&chco=4285F4%2C0F9D58%2CF4B400&chtt=Traffic+sources)
+[![Traffic sources pie chart](https://image-charts.com/chart?cht=p&chd=a%3A40%2C35%2C25&chs=500x400&chl=Search%7CDirect%7CSocial&chco=4285F4%2C0F9D58%2CF4B400&chtt=Traffic+sources&icac=documentation&ichm=f2cbc5cf6f0680cd720fd548c0ee33e107313f80687b91715ee1370b3deb4696)](https://editor.image-charts.com/chart?cht=p&chd=a%3A40%2C35%2C25&chs=500x400&chl=Search%7CDirect%7CSocial&chco=4285F4%2C0F9D58%2CF4B400&chtt=Traffic+sources&icac=documentation&ichm=f2cbc5cf6f0680cd720fd548c0ee33e107313f80687b91715ee1370b3deb4696)
 
 ```
 https://image-charts.com/chart?cht=p&chd=a:40,35,25&chs=500x400&chl=Search|Direct|Social&chco=4285F4,0F9D58,F4B400&chtt=Traffic+sources
@@ -128,7 +128,7 @@ https://image-charts.com/chart?cht=p&chd=a:40,35,25&chs=500x400&chl=Search|Direc
 
 returns:
 
-[![QR code](https://image-charts.com/chart?cht=qr&chl=https%3A%2F%2Fwww.image-charts.com&choe=UTF-8&chld=M%7C4&chs=300x300)](https://editor.image-charts.com/chart?cht=qr&chl=https%3A%2F%2Fwww.image-charts.com&choe=UTF-8&chld=M%7C4&chs=300x300)
+[![QR code](https://image-charts.com/chart?cht=qr&chl=https%3A%2F%2Fwww.image-charts.com&choe=UTF-8&chld=M%7C4&chs=300x300&icac=documentation&ichm=a72ff5b02fa2cedb585d170ed08c3fc43661fc0ca1506e4e4ad92870e721cb93)](https://editor.image-charts.com/chart?cht=qr&chl=https%3A%2F%2Fwww.image-charts.com&choe=UTF-8&chld=M%7C4&chs=300x300&icac=documentation&ichm=a72ff5b02fa2cedb585d170ed08c3fc43661fc0ca1506e4e4ad92870e721cb93)
 
 ```
 https://image-charts.com/chart?cht=qr&chl=https://www.image-charts.com&choe=UTF-8&chld=M|4&chs=300x300
@@ -146,7 +146,7 @@ The escape hatch. Pass raw Image-Charts parameters ([`cht`](/reference/chart-typ
 
 returns:
 
-[![Line chart with area fill](https://image-charts.com/chart?cht=lc&chd=a%3A10%2C40%2C25%2C60&chs=600x300&chco=4285F4&chm=B%2C4285F433%2C0%2C0%2C0)](https://editor.image-charts.com/chart?cht=lc&chd=a%3A10%2C40%2C25%2C60&chs=600x300&chco=4285F4&chm=B%2C4285F433%2C0%2C0%2C0)
+[![Line chart with area fill](https://image-charts.com/chart?cht=lc&chd=a%3A10%2C40%2C25%2C60&chs=600x300&chco=4285F4&chm=B%2C4285F433%2C0%2C0%2C0&icac=documentation&ichm=17f499bcef9fb02d79223c359301e3efabc023e824343130db5d13e2df797b03)](https://editor.image-charts.com/chart?cht=lc&chd=a%3A10%2C40%2C25%2C60&chs=600x300&chco=4285F4&chm=B%2C4285F433%2C0%2C0%2C0&icac=documentation&ichm=17f499bcef9fb02d79223c359301e3efabc023e824343130db5d13e2df797b03)
 
 ### `list_chart_types`: discovery
 
