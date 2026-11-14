@@ -39,7 +39,7 @@ chl=20|20|30|40|50
 
 Same as the previous chart but this time as an animated donught chart.
 
-[![chart](https://image-charts.com/chart?chan&chd=t%3A20%2C20%2C30%2C40%2C50&chl=20%C2%B0%7C20%C2%B0%7C30%C2%B0%7C40%C2%B0%7C50%C2%B0&chs=700x200&cht=pd&icac=documentation&icretina=1&ichm=969f404edef096ef8444d3bdbc36cfcc6b696bb9dc183bfe4c7ac1cde6d3e923)](https://editor.image-charts.com/chart?chan&chd=t%3A20%2C20%2C30%2C40%2C50&chl=20%C2%B0%7C20%C2%B0%7C30%C2%B0%7C40%C2%B0%7C50%C2%B0&chs=700x200&cht=pd&icac=documentation&icretina=1&ichm)
+[![chart](https://image-charts.com/chart?chan&chd=t%3A20%2C20%2C30%2C40%2C50&chl=20%C2%B0%7C20%C2%B0%7C30%C2%B0%7C40%C2%B0%7C50%C2%B0&chs=700x200&cht=pd&icac=documentation&icretina=1&ichm=969f404edef096ef8444d3bdbc36cfcc6b696bb9dc183bfe4c7ac1cde6d3e923)](https://editor.image-charts.com/chart?chan&chd=t%3A20%2C20%2C30%2C40%2C50&chl=20%C2%B0%7C20%C2%B0%7C30%C2%B0%7C40%C2%B0%7C50%C2%B0&chs=700x200&cht=pd&icretina=1&icac=documentation&ichm=b4cbe8ffe60f37c83cc7cda9b7401be6c2c364e817b95a9ef2c85c62fbdf3fb3)
 
 ```
 cht=pd
