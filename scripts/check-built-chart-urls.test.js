@@ -283,7 +283,7 @@ test('JS bundles: each chart URL string is checked on its own, a page showing th
       `var o={src:\`${url}\`};`,
       `var c="${url}";document.images[0].src=c;`,
       `(0,i.jsx)(n.code,{children:"${url}"});`,
-      `(0,i.jsxs)(n.p,{children:["See ",(0,i.jsx)(n.code,{children:"${url}"}),"${url}"]});`,
+      `(0,i.jsxs)(n.p,{children:["See ",(0,i.jsx)(n.code,{children:"${url}"})," at the end"]});`,
       `(0,i.jsx)("a",{href:"https://app.slack.com/block-kit-builder#%7B%22image_url%22:%22${url}%22%7D"});`,
     ].join('\n'),
   });
@@ -292,5 +292,30 @@ test('JS bundles: each chart URL string is checked on its own, a page showing th
   assert.deepEqual(
     reported.map(line => line.split(': ', 1).at(0)),
     ['build/assets/js/a.js:1', 'build/assets/js/a.js:2']
+  );
+});
+
+test('JS bundles: a children string the browser may load is a chart request, only a whole children value is text', () => {
+  const url = chs => `https://image-charts.com/chart?cht=p&chd=t:1,2&chs=100x${chs}`;
+  const js = [
+    `jsx("div",{children:["${url(404)}"].map(function(u){return jsx("img",{src:u})})});`,
+    `jsx("div",{children:[\`${url(405)}\`].map(function(u){return jsx("img",{src:u})})});`,
+    `var p411={children:["${url(411)}"]};p411.children.forEach(function(u){new Image().src=u});`,
+    `var e412={children:"x"};var i412=new Image();i412.src=window.__no?e412.children:"${url(412)}";`,
+    `var e413={children:"x"};jsx("img",{src:window.__no?e413.children:"${url(413)}"});`,
+    `jsx("div",{children:["https://image-charts.com/chart?${signedQuery('cht=p&chs=100x414')}"].map(function(u){return jsx("img",{src:u})})});`,
+    `jsx(n.code,{className:"language-bash",children:"curl ${url(416)}"});jsx(n.code,{children:\`${url(417)}\`});`,
+  ].join('\n');
+  const requests = chartRequestsInJs(js, 'https://documentation.image-charts.com/assets/js/main.js');
+  assert.deepEqual(
+    requests.map(request => [request.line, urlState(request.query, KEYS).state]),
+    [
+      [1, 'unsigned'],
+      [2, 'unsigned'],
+      [3, 'unsigned'],
+      [4, 'unsigned'],
+      [5, 'unsigned'],
+      [6, 'signed'],
+    ]
   );
 });

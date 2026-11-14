@@ -55,10 +55,11 @@ const CHART_HOST_URL = /(?:https?:)?\/\/[\w.-]*image-charts\.com[^\s"'`<>\\]*/gi
 const JS_URL_PROPS = new Set(['src', 'href', 'poster', 'srcSet', 'srcset', 'imageSrcSet']);
 const JS_SRCSET_PROPS = new Set(['srcSet', 'srcset', 'imageSrcSet']);
 const JS_STRING_TOKENS = new Set([acorn.tokTypes.string, acorn.tokTypes.template]);
-const JS_OPENERS = new Set([acorn.tokTypes.bracketL, acorn.tokTypes.braceL, acorn.tokTypes.parenL, acorn.tokTypes.dollarBraceL]);
-const JS_CLOSERS = new Set([acorn.tokTypes.bracketR, acorn.tokTypes.braceR, acorn.tokTypes.parenR]);
-// React renders this prop's strings as text.
-// Its array's strings too.
+// Tokens before an object key.
+const JS_KEY_STARTS = new Set([acorn.tokTypes.braceL, acorn.tokTypes.comma]);
+// Tokens after a whole value.
+const JS_VALUE_ENDS = new Set([acorn.tokTypes.braceR, acorn.tokTypes.comma]);
+// React renders its whole string value as text.
 const JS_TEXT_PROP = 'children';
 const JS_OPTIONS = { ecmaVersion: 'latest' };
 // JSON held in a JS string escapes slashes.
@@ -189,37 +190,39 @@ function chartRequestsInText(text, base) {
   return chartHostUrls(text).flatMap(hostUrl => requestsAt({ text, index: hostUrl.index, where: 'text' }, [hostUrl.url], base));
 }
 
-/** The prop whose value starts at token `index`, or none. */
+/** The key whose value starts at token `index`, or none. */
 function propAt(tokens, index) {
   // A template value starts at its backquote.
   const start = index >= 1 && tokens[index - 1].type === acorn.tokTypes.backQuote ? index - 1 : index;
-  return start >= 2 && tokens[start - 1].type === acorn.tokTypes.colon ? String(tokens[start - 2].value) : '';
+  const key = start - 2;
+  const isKey = key >= 1 && tokens[key + 1].type === acorn.tokTypes.colon && JS_KEY_STARTS.has(tokens[key - 1].type);
+  return isKey ? String(tokens[key].value) : '';
+}
+
+/**
+ * Whether token `index` is the whole value of its key.
+ * A template must have no `${}`.
+ */
+function isWholeValue(tokens, index) {
+  const isTemplate = tokens[index].type === acorn.tokTypes.template;
+  const end = isTemplate ? index + 2 : index + 1;
+  const isClosed = !isTemplate || tokens[index + 1].type === acorn.tokTypes.backQuote;
+  return isClosed && end < tokens.length && JS_VALUE_ENDS.has(tokens[end].type);
 }
 
 /**
  * String and template values of a script, decoded by acorn.
  * `prop` is the URL prop set to the value.
- * `isText` tells a `children` string, rendered as text.
+ * `isText` tells the whole value of a `children` key.
  */
 function jsStrings(js) {
   const tokens = [...acorn.tokenizer(js, JS_OPTIONS)];
-  // Prop of each open bracket, innermost last.
-  // Only an array has one.
-  const openProps = [];
   return tokens.flatMap((token, index) => {
-    if (JS_OPENERS.has(token.type)) {
-      // comply-ignore: no-mutating-methods — bracket stack of one linear pass over a bundle's tokens
-      openProps.push(token.type === acorn.tokTypes.bracketL ? propAt(tokens, index) : '');
-    }
-    if (JS_CLOSERS.has(token.type)) {
-      // comply-ignore: no-mutating-methods — bracket stack of one linear pass over a bundle's tokens
-      openProps.pop();
-    }
     if (!JS_STRING_TOKENS.has(token.type)) {
       return [];
     }
     const prop = propAt(tokens, index);
-    const isText = prop === JS_TEXT_PROP || openProps.at(-1) === JS_TEXT_PROP;
+    const isText = prop === JS_TEXT_PROP && isWholeValue(tokens, index);
     const text = typeof token.value === 'string' ? token.value.replaceAll(JSON_SLASH, '/') : '';
     return [{ index: token.start, text, prop: JS_URL_PROPS.has(prop) ? prop : '', isText }];
   });
