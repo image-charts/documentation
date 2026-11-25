@@ -20,7 +20,7 @@
     "sign:chart-urls": "node scripts/sign-chart-urls.js",
     "check:chart-urls": "node scripts/sign-chart-urls.js --check",
     "check:built-chart-urls": "node scripts/check-built-chart-urls.js",
-    "test": "node --test scripts/sign-chart-urls.test.js scripts/check-built-chart-urls.test.js"
+    "test": "node --test scripts/sign-chart-urls.test.js scripts/check-built-chart-urls.test.js scripts/generate-gallery.test.js"
   },
   "dependencies": {
     "@docusaurus/core": "^3.9.2",
