@@ -164,8 +164,7 @@ Learn more in [bubble charts](/bubble-charts/).
 An animated chart is a plain image, so it goes anywhere an `<img>` goes:
 
 ```html
-<img src="https://image-charts.com/chart?cht=bvg&chs=600x250&chd=t:10,40,25,60&chan=1200,easeOutQuad&chof=.gif"
-     width="600" height="250" alt="Monthly sign-ups, bar chart">
+<img alt="Monthly sign-ups, bar chart" width="600" height="250" src="https://image-charts.com/chart?cht=bvg&chs=600x250&chd=t:10,40,25,60&chan=1200,easeOutQuad&chof=.gif">
 ```
 
 - **Add `&chof=.gif` at the end of the URL** for email and chat clients that decide whether a link is an image by looking at its extension. It changes nothing on our side, the output is a GIF anyway.
