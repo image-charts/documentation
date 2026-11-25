@@ -102,6 +102,8 @@ With `version` being one of:
 - `2.8.0` ([documentation](https://www.chartjs.org/docs/2.8.0/)
 - Need another version for your project? [Contact us](mailto:support@image-charts.com)
 
+Need Chart.js 3 or 4 rendered on your own servers instead? [Server-side chart rendering: library or hosted API](https://www.image-charts.com/server-side-chart-rendering) compares chartjs-node-canvas, the Highcharts export server, AG Charts and Image-Charts, with their licences and requirements.
+
 ## Chart size
 
 Both the width and height of the chart output image can be specified in pixel using `width` and `height` query parameters. Default values are `width=500` and `height=300`.
