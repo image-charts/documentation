@@ -31,28 +31,20 @@ Animated charts are part of every plan, the free one included (the free plan add
 &chan=<duration_ms>,<easing>
 ```
 
-| Parameter | Type | Accepted values | Default |
-|---|---|---|---|
-| `duration_ms` | integer, milliseconds | `10` to `1500` | `1200` |
-| `easing` | string, case-sensitive | one of the 30 easing names below | built-in default curve |
+- **`duration_ms`** (optional, integer in milliseconds, default `1200`): how long the bars, lines or slices take to reach their final value. Keep it between `10` and `1500`: `1500` is the documented maximum. The API does not reject a larger number, but do not rely on it.
+- **`easing`** (optional, case-sensitive string): the speed curve of the animation. It must be one of these values, written exactly like this:
+  - **Quad**: `easeInQuad`, `easeOutQuad`, `easeInOutQuad`
+  - **Cubic**: `easeInCubic`, `easeOutCubic`, `easeInOutCubic`
+  - **Quart**: `easeInQuart`, `easeOutQuart`, `easeInOutQuart`
+  - **Quint**: `easeInQuint`, `easeOutQuint`, `easeInOutQuint`
+  - **Sine**: `easeInSine`, `easeOutSine`, `easeInOutSine`
+  - **Expo**: `easeInExpo`, `easeOutExpo`, `easeInOutExpo`
+  - **Circ**: `easeInCirc`, `easeOutCirc`, `easeInOutCirc`
+  - **Elastic**: `easeInElastic`, `easeOutElastic`, `easeInOutElastic`
+  - **Back**: `easeInBack`, `easeOutBack`, `easeInOutBack`
+  - **Bounce**: `easeInBounce`, `easeOutBounce`, `easeInOutBounce`
 
-- **`duration_ms`** (optional): how long the bars, lines or slices take to reach their final value. Keep it between `10` and `1500`: `1500` is the documented maximum. The API does not reject a larger number, but do not rely on it.
-- **`easing`** (optional): the speed curve of the animation. It must be one of these values, written exactly like this:
-
-| Family | In | Out | In and out |
-|---|---|---|---|
-| Quad | `easeInQuad` | `easeOutQuad` | `easeInOutQuad` |
-| Cubic | `easeInCubic` | `easeOutCubic` | `easeInOutCubic` |
-| Quart | `easeInQuart` | `easeOutQuart` | `easeInOutQuart` |
-| Quint | `easeInQuint` | `easeOutQuint` | `easeInOutQuint` |
-| Sine | `easeInSine` | `easeOutSine` | `easeInOutSine` |
-| Expo | `easeInExpo` | `easeOutExpo` | `easeInOutExpo` |
-| Circ | `easeInCirc` | `easeOutCirc` | `easeInOutCirc` |
-| Elastic | `easeInElastic` | `easeOutElastic` | `easeInOutElastic` |
-| Back | `easeInBack` | `easeOutBack` | `easeInOutBack` |
-| Bounce | `easeInBounce` | `easeOutBounce` | `easeInOutBounce` |
-
-`In` curves start slowly and speed up, `Out` curves start fast and slow down at the end, `In and out` do both. `Back` overshoots the final value a little, `Elastic` wobbles around it and `Bounce` bounces on it.
+`easeIn…` curves start slowly and speed up, `easeOut…` curves start fast and slow down at the end, `easeInOut…` do both. `Back` overshoots the final value a little, `Elastic` wobbles around it and `Bounce` bounces on it.
 
 ## Examples
 
@@ -140,16 +132,14 @@ Learn more in [bubble charts](/bubble-charts/).
 
 ## Which charts can be animated?
 
-| Chart | `cht` values | Animated with `chan` |
-|---|---|---|
-| [Bar charts](/bar-charts/) | `bvs`, `bvg`, `bhs`, `bhg`, `bvo` | yes |
-| [Line charts](/line-charts/) | `lc`, `ls`, `lxy` | yes |
-| [Pie and doughnut charts](/pie-charts/) | `p`, `p3`, `pc`, `pd` | yes |
-| [Polar area charts](/polar-charts/) | `pa` | yes |
-| [Radar charts](/radar-charts/) | `r` | yes |
-| [Bubble charts](/bubble-charts/) | `bb` | yes |
-| [QR codes](/qr-codes/) | `qr` | no, `chan` is ignored and the output stays a PNG |
-| [GraphViz charts](/graph-viz-charts/) | `gv`, `gv:*` | no, see [known limitations](/graph-viz-charts/#known-limitations) |
+- [Bar charts](/bar-charts/) (`bvs`, `bvg`, `bhs`, `bhg`, `bvo`): yes
+- [Line charts](/line-charts/) (`lc`, `ls`, `lxy`): yes
+- [Pie and doughnut charts](/pie-charts/) (`p`, `p3`, `pc`, `pd`): yes
+- [Polar area charts](/polar-charts/) (`pa`): yes
+- [Radar charts](/radar-charts/) (`r`): yes
+- [Bubble charts](/bubble-charts/) (`bb`): yes
+- [QR codes](/qr-codes/) (`qr`): no, `chan` is ignored and the output stays a PNG
+- [GraphViz charts](/graph-viz-charts/) (`gv`, `gv:*`): no, see [known limitations](/graph-viz-charts/#known-limitations)
 
 ## How the GIF behaves
 

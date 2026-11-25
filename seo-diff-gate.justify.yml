@@ -1,0 +1,4 @@
+- page: docs/reference/animation.md
+  type: tableaux
+  count: 3
+  reason: the three tables overflowed the page by 203 px on 375 px screens; the same parameters, the 30 easings grouped by family and the chart support matrix are kept as nested lists with identical content
