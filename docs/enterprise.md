@@ -1,6 +1,6 @@
 ---
 title: Enterprise version
-description: "Generate watermark-free chart image by signing request URLs with HMAC."
+description: "Paid plans (Business, Enterprise, Enterprise+): generate watermark-free chart images by signing request URLs with HMAC."
 sidebar_position: 14
 ---
 
@@ -9,9 +9,9 @@ import TabItem from '@theme/TabItem';
 
 # Enterprise version
 
-This section is dedicated to the paying enterprise version. This plan uses the same API but is **watermark free** and you can setup your **own sub-domain** for the perfect integration.
+This section covers every paid plan: Business, Enterprise and Enterprise+ (see [pricing](https://www.image-charts.com/pricing)). Paid plans use the same API, **without the watermark**, and you can set up your **own sub-domain**. The Zapier and Make connectors come with the Business plan and every plan above it.
 
-Once subscribed to the enterprise plan you will receive an `account id` and a `secret key`. These two keys are mandatory to sign your request and remove the watermark.
+Once subscribed to a paid plan you will receive an `account id` and a `secret key`. These two keys are mandatory to sign your request and remove the watermark.
 
 ## Remove Image-Charts watermark by signing URLs
 
