@@ -156,6 +156,14 @@ body {
    Navbar Styles
    ============================================ */
 
+/* The navbar sits in a <header> (src/theme/Navbar): the header carries the sticky
+   position, since a sticky child only sticks inside its parent's box. */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: var(--ifm-z-index-fixed);
+}
+
 .navbar {
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
