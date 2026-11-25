@@ -25,7 +25,7 @@ Jump to a chart type, or read its documentation:
 | GraphViz diagrams | [examples](#graphviz-charts) | [GraphViz charts](/graph-viz-charts) |
 | Chart.js charts | most charts below | [Chart.js](/chart-js) |
 
-Most charts below (48 of 60 on 25 November 2026) are [Chart.js](/chart-js) configurations rendered at `/chart.js/2.8.0`; the others use the Google Image Charts compatible `/chart` endpoint.
+Most charts below are [Chart.js](/chart-js) configurations rendered at `/chart.js/2.8.0`; the others use the Google Image Charts compatible `/chart` endpoint.
 
 <GeneratedGallery />
 
