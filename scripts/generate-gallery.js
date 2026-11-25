@@ -21,6 +21,26 @@ function sign(secretKey, query) {
     .digest('hex');
 }
 
+function escapeHtml(text) {
+  return String(text)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
+// gallery.json names categories "Bar Chart's", "QR Codes chart's"...: show "Bar charts", "QR codes".
+function categoryHeading(categoryName) {
+  const heading = String(categoryName).trim().replace(/\s+chart's$/i, ' charts');
+  if (/^qr codes charts$/i.test(heading)) return 'QR codes';
+  return heading.charAt(0).toUpperCase() + heading.slice(1).replace(/ Charts$/, ' charts');
+}
+
+// Text alternative of a gallery image, read by screen readers, search engines and AI agents.
+function galleryAlt(chartTitle, heading) {
+  return `${chartTitle} - ${heading} example made with Image-Charts`;
+}
+
 function groupBy(array, keyFn) {
   return array.reduce((result, item) => {
     const key = keyFn(item);
@@ -51,6 +71,7 @@ async function main() {
 
   const html = Object.keys(chartByCategory)
     .map(categoryName => {
+      const heading = categoryHeading(categoryName);
       const categoryCharts = chartByCategory[categoryName]
         .map(chart => {
           const url = new URL(chart.url);
@@ -83,11 +104,11 @@ async function main() {
             publicUrl = chart.url;
           }
 
-          return `<a class="gallery-items" href="${publicUrl}"><img class="gallery-items__img" src="${publicUrl}" /><p class="gallery-label">${chart.title}</p></a>`;
+          return `<a class="gallery-items" href="${publicUrl}"><img class="gallery-items__img" src="${publicUrl}" alt="${escapeHtml(galleryAlt(chart.title, heading))}" loading="lazy" /><p class="gallery-label">${escapeHtml(chart.title)}</p></a>`;
         })
         .join('\n');
 
-      return `## ${categoryName}
+      return `## ${heading}
 <div class="gallery-flex">
 ${categoryCharts}
 </div>`;
@@ -98,7 +119,7 @@ ${categoryCharts}
   console.log(`Generated ${OUTPUT_FILE} with ${charts.length} charts in ${Object.keys(chartByCategory).length} categories`);
 }
 
-module.exports = { sign };
+module.exports = { sign, categoryHeading, galleryAlt, escapeHtml };
 
 if (require.main === module) {
   main().catch(err => {
