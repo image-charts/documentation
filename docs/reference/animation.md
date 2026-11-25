@@ -161,7 +161,7 @@ Learn more in [bubble charts](/bubble-charts/).
 
 ## GIF charts in emails and chat
 
-An animated chart is a plain image, so it goes anywhere an `<img>` goes:
+An animated chart is a plain image, so it goes anywhere an HTML image tag goes:
 
 ```html
 <img alt="Monthly sign-ups, bar chart" width="600" height="250" src="https://image-charts.com/chart?cht=bvg&chs=600x250&chd=t:10,40,25,60&chan=1200,easeOutQuad&chof=.gif">
@@ -169,7 +169,7 @@ An animated chart is a plain image, so it goes anywhere an `<img>` goes:
 
 - **Add `&chof=.gif` at the end of the URL** for email and chat clients that decide whether a link is an image by looking at its extension. It changes nothing on our side, the output is a GIF anyway.
 - **Outlook for Windows**: some desktop versions do not play GIF animations and show only the first frame. Since the first frame of a chart animation is close to empty, send the static chart (the same URL without `chan`) to audiences that mostly read their mail in desktop Outlook.
-- **Set `width`, `height` and `alt`** on the `<img>`: email clients that block images then reserve the space and show the text.
+- **Set `width`, `height` and `alt`** on the image tag: email clients that block images then reserve the space and show the text.
 - **Slack, Microsoft Teams and bots**: post the URL as an image attachment. See [send charts to Slack](/guides/send-charts-to-slack/).
 - **Signed URLs**: on paid plans, sign the URL with `chan` included, like any other parameter. See [enterprise](/enterprise/).
 
