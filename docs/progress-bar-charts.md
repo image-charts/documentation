@@ -6,6 +6,8 @@ sidebar_position: 9
 
 # Progress bar chart
 
+Build one without code: the [progress bar generator](https://www.image-charts.com/progress-bar-generator) lets you set the value, goal, colors, size and label, then copy the image URL.
+
 This section describes how to create a progress bar chart using the Image-Chart API.  Progress bar are excellent to show the progress of something associated with your customer, your product or anything else. We have made it really easy to setup.
 
 If you are already sending email including progress bars, but it takes a lot of resource to build and is not live, or, if you've thinking of ways to include a progress bar in your email - this is the solution.
